@@ -3,10 +3,10 @@ var OriginTitile = document.title;
 var titleTime;
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        document.title = '你与我以失联... - '+ OriginTitile;
+        document.title = '(๑òᆺó๑) 页面崩溃了';//+ OriginTitile;
         clearTimeout(titleTime);
     } else {
-        document.title = '连接成功，欢迎回家。！！！ - '+ OriginTitile;
+        document.title = '((((っ´θ`)っ 噫又好了';//+ OriginTitile;
         titleTime = setTimeout(function() {
             document.title = OriginTitile;
         }, 1000);
@@ -30,3 +30,4 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+
