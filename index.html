@@ -1,0 +1,97 @@
+
+<html lang="zh-CN"> 
+<head>
+<title>JIXIEJIDIGUAN</title>
+<meta charset="utf-8"/>
+<meta name="keywords" content="JIXIEJIDIGUAN,二次元" />
+<meta name="description" content="一个默默无闻的小白!破而后立，再度优化！" />
+<link rel="icon" href="../stalye/img/DHL.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP" crossorigin="anonymous"/>
+<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js" integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<style type="text/css">body { margin-top: 0px; padding-top: 0px;  } a {	text-decoration:none;	color:#1064A0;} a:hover {	color:#0078D2;}</style>
+</head>
+
+<body class="mdui-drawer-body-left">
+
+
+
+<div class="mdui-toolbar mdui-color-theme mdui-shadow-5 mdui-color-purple-a200">
+<a id="open" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+<span class="mdui-typo-title">画主页</span>
+<div class="mdui-toolbar-spacer"></div>
+</div>
+<div class="mdui-drawer" id="drawer">
+<div class="sideImg mdui-color-theme">
+<div class="mdui-grid-tile">
+<img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
+<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
+<div class="mdui-grid-tile-text"><h1>创极阁</h1></div></div></div>
+</div>
+<div class="mdui-container-fluid mdui-container">
+<div class="css-style-post"><br>
+<div class="mdui-panel-item css-style-post-cover mdui-color-white">
+<a class="mdui-list-item mdui-list-item-content"  href="../A2zml">导航</a>
+<a class="mdui-list-item mdui-list-item-content"  href="https://jixiejidiguan.baklib-free.com/">博客</a>
+<a class="mdui-list-item mdui-list-item-content"  href="../xiangmu.html">项目</a>
+<a class="mdui-list-item mdui-list-item-content"  href="../tuandui.html">关于</a>
+</div></div></div>
+<script>
+var inst = new mdui.Drawer('#drawer');
+// method
+document.getElementById('open').addEventListener('click', function () {
+  inst.open();
+});
+// event
+var drawer = document.getElementById('drawer');
+drawer.addEventListener('open.mdui.drawer', function () {
+  console.log('open');
+});
+</script>
+</div>
+
+<!--统计 -->
+<div class="mdui-panel-item-body"><script src="../stalye/js/zhucx.js"></script></div>
+
+<br><br>
+<div class="mdui-container mdui-row">
+<section>
+
+<div class="mdui-card">
+<div class="mdui-card-actions">
+<iframe src="https://mail.qq.com/" width="100%" height="100%" scrolling="no"></iframe>
+</div></div>
+
+<br><br>
+<div class="mdui-grid-tile">
+<img src="https://www.dmoe.cc/random.php"/>
+<div class="mdui-grid-tile-actions mdui-grid-tile-actions-transparent">
+<div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title"><div id="hitokoto"></div><!--   一言   --><script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</div></div></div></div>
+
+
+
+<footer class="mdui-card"><br><center>
+<b style="padding: 0px 0.8px 0px 0px;">Copyright &copy; 2020-
+<script>
+Date.prototype.format = function (fmt) {
+var o = {
+"y+": this.getFullYear, 
+};
+if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+for (var k in o)
+if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+return fmt;
+}
+setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy');", 1000);
+</script>
+<b id="dateTime"></b>JIXIEJIDIGUAN<b><br></center>
+</footer>
+
+</section></div>
+<!--鼠标点击效果-->
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+
+</body>
+</html>
