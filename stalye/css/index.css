@@ -1,1 +1,16 @@
-
+/* 圆角 */
+.mdui{
+  border-radius: 10px
+}
+.mdui-0 {
+  border-radius: 15px
+}
+.mdui-2 {
+  border-radius: 20px
+}
+.mdui-4 {
+  border-radius: 25px
+}
+.mdui-6 {
+  border-radius: 30px
+}

@@ -14,6 +14,8 @@ document.addEventListener('visibilitychange', function() {
 });
 
 //Log
+
+console.log ("%c 破而后立，再度优化！"," text-shadow: 0 1px 0 #ffff #304FFE,0 5px 0 #aaa,0 6px 1px,0 5px 10px,0 20px 20px;font-size:4em");
 console.log ("%c JIXIEJIDIGUAN"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em");
 console.log('%c 地址 http://jixiejidiguan.top','font-size:35px;color:#ff8400;');
 console.log('%c ','background-image:url("https://jixiejidiguan.top/stalye/img/google.gif");background-size:100% 100%;background-repeat:no-repeat;background-position:center center;line-height:100px;padding:100px 180px;font-size:46px;color:red;');
