@@ -52,20 +52,21 @@
 <script src="./stalye/mdui/js/mdui.js"></script>
 <style type="text/css">body { margin-top: 0px; padding-top: 0px;  } a {	text-decoration:none;	color:#1064A0;} a:hover {	color:#0078D2;}</style>
 </head>
-
-<body class="mdui-drawer-body-left mdui-bottom-nav-fixed">
+<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded" style="">
 <!--统计 -->
 <div class="mdui-panel-item-body"><script src="./stalye/js/zhucx.js"></script></div>
 
-
-<div class="mdui-toolbar mdui-color-theme mdui-color-purple-a400">
-<a id="open" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+<header class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-toolbar mdui-color-purple-a400">
+<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
 <span class="mdui-typo-title">画主页</span>
 <div class="mdui-toolbar-spacer"></div>
-<a href="https://w.mail.qq.com/">QQ邮箱</a>
+<a href="https://w.mail.qq.com/">QQ邮箱</a> 
 </div>
+</header>
 
-<div class="mdui-drawer mdui-color-purple-a400" id="drawer">
+
+<div class="mdui-drawer mdui-drawer-close mdui-color-purple-a400" id="main-drawer">
 
 <div class="mdui-grid-tile">
 <img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
@@ -80,35 +81,25 @@
 <a class="mdui-4 mdui-list-item mdui-table-fluid" href="../xiangmu.html">项目</a>
 <a class="mdui-4 mdui-list-item mdui-table-fluid" href="../tuandui.html">关于</a>
 </div>
-<script>
-var inst = new mdui.Drawer('#drawer');
-// method
-document.getElementById('open').addEventListener('click', function () {
-  inst.open();
-});
-// event
-var drawer = document.getElementById('drawer');
-drawer.addEventListener('open.mdui.drawer', function () {
-  console.log('open');
-});
-</script>
+
 </div>
 
 
-<br>
-<div class="mdui-container">
+
+
+
+<!--<div class="mdui-container">
 <section>
 <div class="mdui-grid-tile">
 <img src="https://www.dmoe.cc/random.php"/>
 <div class="mdui-grid-tile-actions mdui-grid-tile-actions-transparent">
 <div class="mdui-grid-tile-text">
 <div class="mdui-grid-tile-title"><div id="hitokoto"></div>
-<!--   一言   -->
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div></div></div></div>
-</section>
+</section> -->
 </div>
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=100% src="Workingcell/index.html"></iframe>
 
 <footer class="mdui-bottom-nav mdui-color-purple-a400">
 <b><br>&nbsp;&nbsp;&nbsp;Copyright &copy; 2020-
