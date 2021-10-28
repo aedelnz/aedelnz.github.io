@@ -2,7 +2,11 @@
 .mdui-grid-tile{
   border-radius: 6px
 }
-
+.mdui-appbar {
+padding: 2px 60px 2px 60px;
+border-radius: 12px;
+color: #99999F !important;
+}
 
 
 
