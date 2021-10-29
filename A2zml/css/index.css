@@ -7,267 +7,222 @@ padding: 2px 60px 2px 60px;
 border-radius: 12px;
 color: #99999F !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.index-box {
-    background-color: #fff;
-    margin-bottom: 4px
+body {
+	font-weight:900;
+	color: #99999F !important;
+}
+a {
+ text-decoration: none
+}
+p {
+	font-weight:900;
+}
+.ori-footer {
+  margin-top: 40px !important
+  padding: 0px 4px;
+  font-size: 10px
 }
 
-.index-box .suggestion {
-    border-top: 1px solid #eee;
-    top: 41px;
-    position: absolute;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+
+
+
+
+.css-style-rainbow a:nth-child(7n+1) {
+  background-color: rgba(255, 78, 106, .15);
+  color: #f76d2c
 }
 
-.header {
-    height: 168px;
-    width: 100%;
-    position: relative;
-    z-index: 110
+.css-style-rainbow a:nth-child(7n+2) {
+  background-color: rgba(255, 118, 30, .15);
+  color: #ff761e
 }
 
-.header {
-    height: auto
+.css-style-rainbow a:nth-child(7n+3) {
+  background-color: rgba(255, 185, 0, .15);
+  color: #ffb900
 }
 
-.sm-dialog-header[data-v-87a7ca4c] {
-    padding-top: 18px;
-    line-height: 26px
+.css-style-rainbow a:nth-child(7n+4) {
+  background-color: rgba(51, 213, 122, .15);
+  color: #33d57a
 }
 
-.sm-dialog-header .sm-dialog-title[data-v-87a7ca4c] {
-    font-size: 18px;
-    text-align: center;
-    color: #333
+.css-style-rainbow a:nth-child(7n+5) {
+  background-color: rgba(0, 219, 255, .15);
+  color: #00dbff
 }
 
-.logo {
-    width: 173px;
-    height: 45px;
-    display: block;
-    margin: 26% auto 15px;
-    position: relative;
-    clear: both;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+.css-style-rainbow a:nth-child(7n+6) {
+  background-color: rgba(26, 152, 255, .15);
+  color: #1a98ff
 }
 
-.logo img {
-    display: block;
-    width: 100%
+.css-style-rainbow a:nth-child(7n+7) {
+  background-color: rgba(144, 144, 255, .15);
+  color: #9090ff
 }
 
-.logo-daquan {
-    width: 191px;
-    height: 45px;
-    display: block;
-    margin: 20px auto 15px;
-    position: relative;
-    clear: both;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+
+
+
+
+
+
+
+/* æ‰‹æœº */
+@media screen and (max-width: 1200px) {
+	.main{
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:20px;
+		opacity:0.95;
+	}
+	.logo img{
+		width:60%;
+	}
+	#dtit{
+		display:none;
+	}
+	.user-card{
+		margin-left:0px;
+		margin-right:0px;
+	}
+	.mdui-typo-display-1{
+		font-size:24px;
+	}
+	body{
+		background-image: url(../img/bg_miku_mo.png);
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-attachment: fixed;
+		background-size: 100%;
+	}
+	#warner{
+		top: 48px;
+	}
+} 
+
+/* PC */
+@media screen and (min-width: 1201px) { 
+	.main{
+		margin: 30px 80px;
+	}
+	.btn{
+		margin-top:25px;
+		margin-bottom:20px;
+		text-align:center;
+	}
+	.datas.basic{
+		width:100%;
+		height:352px;
+	}
+	.vradio{
+		margin-left:250px;
+		margin-right:250px;
+		margin-top:30px;
+	}
+	.mdui-tab.mdui-tab-scrollable{
+		width:100%;
+		margin-left:0px;
+		margin-right:0px;
+	}
+	body{
+		background-image: url(../img/bg_miku_v2.png);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		background-attachment: fixed;
+		background-size: 30%;
+	}
+	#v{
+		opacity: 0.85;
+	}
+	#v:hover{
+		opacity: 0.95;
+	}
+	.mdui-textfield.mdui-textfield-floating-label{
+		margin-left:200px;
+		margin-right:200px;
+	}
+	.login{
+		margin-left:250px;
+		margin-right:250px;
+	}
+	.xcenter{
+		margin-left:250px;
+		margin-right:250px;
+	}
+	.user-main{
+		margin-left:280px;
+		margin-right:280px;
+	}
+	.adv{
+		margin-left:200px;
+		margin-right:200px;
+	}
+	.main-data-center{
+		margin-left:35%;
+		margin-right:35%;
+	}
+	.x-newest{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	.topdata{
+		margin-left:50px !important; 
+		margin-right:50px !important; 
+	}
+	.topdata_video{
+		margin-left:100px !important; 
+		margin-right:100px !important; 
+	}
+	#warner{
+		top: 64px;
+	}
 }
 
-.logo-daquan img {
-    display: block;
-    width: 100%
-}
 
-.logo-doodle {
-    width: 280px;
-    height: 90px;
-    margin: -10px auto 0
+.mdui-appbar-with-searchbar {
+  padding-top: 64px;
 }
-
-@media (orientation:landscape) {
-    .logo {
-        margin-top: 20px
-    }
+.search-bar {
+  display: flex;
+  margin: 7px 8px 8px;
+  height: 49px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .24);
+  background: #FAFAFA;
+  align-items: center;
+  border-radius: 2px;
 }
-
-.querybox {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    z-index: 2;
-    background-color: #fff;
-    border: 1px solid #333;
-    height: 42px;
-    border-radius: 0;
-    border-radius: 6px
+.search-bar > input {
+  flex: 1 1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 100%;
+  margin: 0 16px;
+  outline: none;
+  color: rgba(0, 0, 0, .87);
 }
-
-.querybox.sugg-open {
-    border-radius: 6px 6px 0 0
+.search-bar > input::placeholder {
+  color: rgba(0, 0, 0, .54);
 }
-
-.querybox a,
-.querybox input {
-    display: block;
-    height: 42px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
+.search-bar > .mdui-icon {
+  margin: 0 16px;
 }
-
-.querybox input {
-    border: 0;
-    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent
+.search-bar > .mdui-btn-icon {
+  margin: auto 11px;
 }
-
-.querybox .query {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    border: 0;
-    width: 100px;
-    height: 42px;
-    padding: 0 10px;
-    font-size: 18px;
-    color: #000
+/*暗色模式支持*/
+.mdui-theme-layout-dark .search-bar {
+  background: #424242;
 }
-
-.querybox .query::-webkit-input-placeholder {
-    line-height: 24px
+.mdui-theme-layout-dark .search-bar > input {
+  color: white;
 }
-
-.querybox .qbtn {
-    width: 79px;
-    color: #222;
-    font-size: 18px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #f8f8f8;
-    letter-spacing: 2px
-}
-
-.querybox .qbtn,
-.querybox .resetbtn {
-    font-family: iconfont !important;
-    font-weight: 700
-}
-
-.querybox .resetbtn {
-    color: #4d4d4d;
-    padding: 1px 16px 0;
-    font-size: 12px;
-    opacity: .9
-}
-
-.querybox .micIco {
-    text-align: center;
-    padding: 0 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    opacity: .9
-}
-
-.querybox .micIco:before {
-    content: "\e69e";
-    font-family: iconfont !important;
-    font-size: 20px;
-    display: block;
-    color: #4d4d4d;
-    position: relative;
-    line-height: 39px;
-    height: 39px
-}
-
-.querybox .micIco:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    line-height: 0;
-    border-color: #4d4d4d transparent transparent;
-    border-style: solid;
-    border-width: 4px 4px 0;
-    position: relative;
-    left: 1px
-}
-
-.querybox .micIco.up-rr:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg)
-}
-
-.querybox .qbtn-box,
-.querybox .rese-box {
-    position: relative;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    border-radius: 0 6px 6px 0
-}
-
-.querybox .qbtn-box {
-    overflow: hidden;
-    border-left: 1px solid #f1f1f1
-}
-
-.footer {
-    text-align: center;
-    padding-top: 9px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    line-height: 17px;
-    padding-bottom: 9px;
-    font-size: 12px;
-    color: #999;
-    z-index: 10
-}
-
-.footer a {
-    padding: 0 8px;
-    color: #999
-}
-
-.footer a,
-.footer i {
-    display: inline-block
-}
-
-.footer i {
-    height: 10px;
-    width: 1px;
-    position: relative;
-    background: #eee;
-    top: 1px
+.mdui-theme-layout-dark .search-bar > input::placeholder {
+  color: rgba(255, 255, 255, .70);
 }

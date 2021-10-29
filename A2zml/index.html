@@ -98,40 +98,33 @@ document.write(date);
 
 
 <!-- 这随便的 -->
-﻿<style>
-.css-style-posts .css-style-post-meta{margin:10px 0!important}.css-style-posts .css-style-post:last-child{margin-bottom:25px}.css-style-post .css-style-post-cover{width:100%;position:relative;overflow:hidden;border-radius:15px;min-height:35px;background-color:#eee}.css-style-post .css-style-post-cover img{width:100%;display:block;opacity:0;transition:opacity .4s ease-out;position:absolute;left:0;top:0;border-radius:15px;border:1px solid #eee}.css-style-post .css-style-post-cover img.lazyloaded{opacity:1}.css-style-post .css-style-post-cover h1{color:#fff;font-size:1.0em;font-weight:400;margin:0;margin-top:10px;padding-left:1px;position:absolute;bottom:0;width:100%;box-sizing:border-box;text-transform:none;z-index:1;margin:0;padding:10px}.css-style-post .css-style-post-cover h1:after{background-image:-moz-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:-webkit-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:-ms-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);-moz-pointer-events:none;-webkit-pointer-events:none;-ms-pointer-events:none;pointer-events:none;background-size:cover;content:'';display:block;height:100%;left:0;position:absolute;bottom:0;width:100%;z-index:-1}.css-style-post .css-style-post-meta{margin:25px 0;font-size:0}.css-style-post .css-style-post-meta a{border-radius:20px;padding:8px 24px;font-size:14px;display:inline-block;margin-bottom:10px;margin-right:10px}.css-style-post .css-style-post-meta a .css-stylefont{font-size:14px}.css-style-post .css-style-post-meta a:before,.css-style-post .css-style-post-meta i:before{margin-right:5px}.css-style-rainbow a:nth-child(7n+1){background-color:rgba(255,78,106,.15);color:#f76d2c}.css-style-rainbow a:nth-child(7n+2){background-color:rgba(255,118,30,.15);color:#ff761e}.css-style-rainbow a:nth-child(7n+3){background-color:rgba(255,185,0,.15);color:#ffb900}.css-style-rainbow a:nth-child(7n+4){background-color:rgba(51,213,122,.15);color:#33d57a}.css-style-rainbow a:nth-child(7n+5){background-color:rgba(0,219,255,.15);color:#00dbff}.css-style-rainbow a:nth-child(7n+6){background-color:rgba(26,152,255,.15);color:#1a98ff}.css-style-rainbow a:nth-child(7n+7){background-color:rgba(144,144,255,.15);color:#9090ff}@-moz-keyframes shake-it{0%{text-shadow:0 0 rgba(0,255,255,.5),0 0 rgba(255,0,0,.5)}css-style-content .css-style-post .css-style-post-cover{width:100%;position:relative;overflow:hidden;border-radius:15px;min-height:35px;background-color:#eee}.css-style-post .css-style-post-cover img{width:100%;display:block;opacity:0;transition:opacity .4s ease-out;position:absolute;left:0;top:0;border-radius:15px;border:1px solid #eee}.css-style-post .css-style-post-cover img.lazyloaded{opacity:1}.css-style-post .css-style-post-cover h1{color:#fff;font-size:1.0em;font-weight:400;margin:0;margin-top:10px;padding-left:1px;position:absolute;bottom:0;width:100%;box-sizing:border-box;text-transform:none;z-index:1;margin:0;padding:10px}.css-style-post .css-style-post-cover h1:after{background-image:-moz-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:-webkit-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:-ms-linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);background-image:linear-gradient(to top,rgba(16,16,16,.35) 25%,rgba(16,16,16,0) 100%);-moz-pointer-events:none;-webkit-pointer-events:none;-ms-pointer-events:none;pointer-events:none;background-size:cover;content:'';display:block;height:100%;left:0;position:absolute;bottom:0;width:100%;z-index:-1}img.lazyloaded{opacity:1}img{width:100%;height:100%;object-fit:cover}img{display:block;border-radius:6px;border:1px solid #eee}img.lazyload,img.lazyloading{opacity:0;transition:opacity .4s ease-out}img.lazyloaded{opacity:1}
-</style>
-
-
 
 
 <!-- 居中 -->
 <center class="mdui-container">
 
 <!-- 百度一下，你就知道 -->
-<div class="index-box">
-<div class="header mdui-container">
-<a href="https://www.google.com" class="logo"><img src="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="273"></a><br><br>
-<form id="s" action="https://www.baidu.com/s" method="GET" accept-charset="utf-8">
-<div class="querybox"><div>
+
+<a href="https://www.google.com" class="a"><img id="s_lg_img" src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white-d0c9fe2af5.png" width="270" height="129" onerror="this.src='https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white-d0c9fe2af5.png';this.onerror=null;" usemap="#mp" title="" cursor="default"></a>
+<form id="s" action="https://www.baidu.com/s" method="GET">
+<div class="search-bar">
+<i class="mdui-icon material-icons mdui-text-color-theme-icon">search</i>
+<input placeholder="百度一下，你就知道"  name="wd" value=""/>
+<button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon" mdui-tooltip="{content: '语音输入'}">
+<i class="mdui-icon material-icons">keyboard_voice</i>
+</button>
 </div>
-<input id="kw" name="wd" value="" maxlength="265" autocomplete="off" placeholder="输入内容" autocapitalize="off" data-log="stype:keyword" class="query">
-<div data-log="stype:btn_submit" class="qbtn-box">
-<input type="submit" id="su" value="百度一下" class="mdui-btn mdui-ripple mdui-ripple-white mdui-color-blue mdui-color-blue-600">
-</div></div>
 </form>
 
+<!-- 随机图片 --
 
-<br>
-<!-- 随机图片 -->
-<div class="css-style-post">
-<div class="css-style-post-cover mdui-ripple" style="padding-bottom:20%">
+<div class="mdui-ripple" style="padding-bottom:20%">
 <img  data-sizes="auto" alt="啊咧咧~图片找不到嘞~~" class="lazyloaded" style="sizes:100px" src="http://www.dmoe.cc/random.php">
 <h1 style="font-size: 1.5em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a>﻿</h1>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script><!-- 一言 -->
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
-</div>
-<!-- 随机图片 -->
+
+-- 随机图片 -->
 
 <!-- 公告 -->
 
@@ -139,23 +132,16 @@ document.write(date);
 
 
 <!-- 开始 -->
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">稳</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">稳</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.gov.cn/">中国政府网_中央人民政府门户网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nrta.gov.cn/">国家广播电视总局</a>
 </div>
 
-
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">动漫 - 番剧</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">动漫 - 番剧</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.agefans.cc/">免费-AGE动漫</a>
 <!-- <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.agefans.vip/">免费-AGE动漫</a> -->
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.dm233.cc/">免费-233动漫网</a>
@@ -174,14 +160,12 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.iqiyi.com/dongman/">官方-爱奇艺</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.mgtv.com/cartoon/">官方-芒果TV</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
+
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">漫画</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">漫画</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://dmzj.com/">官方-动漫之家</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.mangabz.com/">日本-Mangabz</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.517mh.net/">免费-517漫画网</a>
@@ -199,12 +183,9 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://manga.bilibili.com/">官方-哔哩哔哩漫画</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">小说 - FM - 音乐</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">小说 - FM - 音乐</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://writer.muyewx.com/stack-room?enter_from=menu">免费-番茄</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wtzw.com/">免费-梧桐-七猫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.biquge7.com/">免费-笔趣阁</a>
@@ -221,23 +202,17 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://netease-music.fe-mm.com/">音乐-mmPlayer</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">资源 - 影视</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">资源 - 影视</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ygdy8.com/">资源-阳光电影</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.cupfox.com/">影视-茶杯狐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://pianku.li/">影视-片库</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">图片</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">图片</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.pixiv.net/">翻墙-pixiv P站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://anime-pictures.net/">不稳定-anime-pic</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://pixivic.com/">pixiv</a>
@@ -246,12 +221,9 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://bz.zzzmh.cn/">极简壁纸</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">游戏</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">游戏</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://store.steampowered.com/">官方-STEAM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://store.ubi.com/cn/home">官方-Ubisoft</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.epicgames.com/">官方-EPIC</a>
@@ -260,12 +232,9 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wegame.com.cn/">官方-WeGame</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">技术 - 论坛 -工具</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">技术 - 论坛 -工具</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://github.com/">GitHub</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
@@ -278,23 +247,17 @@ document.write(date);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">系统镜像</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">系统镜像</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://msdn.itellyou.cn/">MSDN, 我告诉你 - 做一个安静的工具站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://mirrors.ustc.edu.cn/">中科大镜像</a>
 </div>
 
-<br><div class="css-style-post">
-<div class="mdui-panel-item css-style-post-cover mdui-ripple mdui-color-white">
-<p class="mdui-btn">数码</p>
-</div></div>
-<br>
-<div class="css-style-post-meta css-style-rainbow">
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">数码</p></div><br>
+<div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://ithome.com/">IT之家</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.36kr.com/">36氪</a>
@@ -305,7 +268,7 @@ document.write(date);
 <br>
 
 
-<footer class="ori-footer">
+<footer class="ori-footer a">
 <b>Copyright &copy; 2020-</b>
 <script>
 Date.prototype.format = function (fmt) {
@@ -326,9 +289,7 @@ A team that doesn' t do its job!<br>
 <!--统计 -->
 <script src="../stalye/js/zhucx.js"></script>
 </a>
-<style>
-.ori-footer{margin-top:40px!important}.ori-footer span{padding:0px 4px;color:#fff;font-size:10px}.ori-footer a{text-decoration:none}::selection{color:#ffffff;background:#5755D9}::-moz-selection{color:#ffffff;background:#5755D9}::-webkit-selection{color:#ffffff;background:#5755D9}body{font-family:"STKaiti"}
-</style>
+
 </footer>
 <!-- 结束 -->
 </center>
