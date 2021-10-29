@@ -64,122 +64,29 @@ p {
 
 
 
-
-
-
-
-
-/* æ‰‹æœº */
+/*  */
 @media screen and (max-width: 1200px) {
-	.main{
-		margin-left:10px;
-		margin-right:10px;
-		margin-top:20px;
-		opacity:0.95;
-	}
-	.logo img{
-		width:60%;
-	}
-	#dtit{
-		display:none;
-	}
-	.user-card{
-		margin-left:0px;
-		margin-right:0px;
-	}
-	.mdui-typo-display-1{
-		font-size:24px;
-	}
 	body{
 		background-image: url(../img/bg_miku_mo.png);
 		background-repeat: no-repeat;
 		background-position: top left;
 		background-attachment: fixed;
 		background-size: 100%;
-	}
-	#warner{
-		top: 48px;
+		opacity: 1.0;
 	}
 } 
 
-/* PC */
+/*  */
 @media screen and (min-width: 1201px) { 
-	.main{
-		margin: 30px 80px;
-	}
-	.btn{
-		margin-top:25px;
-		margin-bottom:20px;
-		text-align:center;
-	}
-	.datas.basic{
-		width:100%;
-		height:352px;
-	}
-	.vradio{
-		margin-left:250px;
-		margin-right:250px;
-		margin-top:30px;
-	}
-	.mdui-tab.mdui-tab-scrollable{
-		width:100%;
-		margin-left:0px;
-		margin-right:0px;
-	}
 	body{
 		background-image: url(../img/bg_miku_v2.png);
 		background-repeat: no-repeat;
 		background-position: bottom right;
 		background-attachment: fixed;
-		background-size: 30%;
-	}
-	#v{
-		opacity: 0.85;
-	}
-	#v:hover{
-		opacity: 0.95;
-	}
-	.mdui-textfield.mdui-textfield-floating-label{
-		margin-left:200px;
-		margin-right:200px;
-	}
-	.login{
-		margin-left:250px;
-		margin-right:250px;
-	}
-	.xcenter{
-		margin-left:250px;
-		margin-right:250px;
-	}
-	.user-main{
-		margin-left:280px;
-		margin-right:280px;
-	}
-	.adv{
-		margin-left:200px;
-		margin-right:200px;
-	}
-	.main-data-center{
-		margin-left:35%;
-		margin-right:35%;
-	}
-	.x-newest{
-		margin-left: 100px;
-		margin-right: 100px;
-	}
-	.topdata{
-		margin-left:50px !important; 
-		margin-right:50px !important; 
-	}
-	.topdata_video{
-		margin-left:100px !important; 
-		margin-right:100px !important; 
-	}
-	#warner{
-		top: 64px;
+		background-size: 32%;
+		opacity: 0.98;
 	}
 }
-
 
 
 
