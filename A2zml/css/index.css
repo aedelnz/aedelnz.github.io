@@ -4,7 +4,7 @@
 }
 .mdui-appbar {
 padding: 2px 60px 2px 60px;
-border-radius: 12px;
+border-radius: 18px;
 color: #99999F !important;
 }
 body {
@@ -16,11 +16,6 @@ a {
 }
 p {
 	font-weight:900;
-}
-.ori-footer {
-  margin-top: 40px !important
-  padding: 0px 4px;
-  font-size: 10px
 }
 
 
@@ -66,26 +61,26 @@ p {
 
 /*  */
 @media screen and (max-width: 1200px) {
-	body{
-		background-image: url(../img/bg_miku_mo.png);
-		background-repeat: no-repeat;
-		background-position: top left;
-		background-attachment: fixed;
-		background-size: 100%;
-		opacity: 1.0;
-	}
+body{
+	background-image: url(../img/bg_miku_mo.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: fixed;
+	background-size: 100%;
+	opacity: 1.0;
+}
 } 
 
 /*  */
 @media screen and (min-width: 1201px) { 
-	body{
-		background-image: url(../img/bg_miku_v2.png);
-		background-repeat: no-repeat;
-		background-position: bottom right;
-		background-attachment: fixed;
-		background-size: 32%;
-		opacity: 0.98;
-	}
+body{
+	background-image: url(../img/bg_miku_v2.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-attachment: fixed;
+	background-size: 32%;
+	opacity: 0.98;
+}
 }
 
 

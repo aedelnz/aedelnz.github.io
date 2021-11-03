@@ -1,11 +1,8 @@
 // ==UserScript==
-// @name         在线版 - 【电脑 && 手机 全网唯一全自动脚本】VIP会员视频自动解析  
+// @name         在线版 - VIP会员视频自动解析  
 // @namespace    https://jixiejidiguan.top/A2zml/
 // @version      1.0
-// @description  无用的脚本，多此一举。
-// @author       JIXIEJIDIGUAN
 // @icon         http://www.dmoe.cc/random.php
-// @namespace https://jixiejidiguan.top/%E8%84%9A%E6%9C%AC.js
 // @match *://v.youku.com/v_show/id_*
 // @match *://v.qq.com/x/cover/*
 // @match *://v.qq.com/*/p/topic/*
@@ -99,16 +96,6 @@
 // @match *://video.isyour.love/*
 // @include /^https?:\/\/[^\/]+?(?:\.bumimi|\/(?:.+?(?:\.mp3|video\/|\/upic\/20.+?\.mp4|\d+?&type=(?:ximalaya|1ting)|\.m(?:3u8|p4)\?\w+?=|(?:\w+?_\w+?|search|jx|url|id|v|&[^\/]+?|\w+?\.html\?\w+?)[#=\?]https?:\/\/[^\/]+?\.(?:youku|mgtv|sohu|pptv|1905|ixigua|iqiyi|le|qq|bilibili|acfun)\.)|[^\/]+?\/(?:tv|acg|mov)\/))/
 // @charset UTF-8
-// @grant GM_setValue
-// @grant GM.setValue
-// @grant GM_getValue
-// @grant GM.getValue
-// @grant GM_openInTab
-// @grant GM.openInTab
-// @grant GM_deleteValue
-// @grant GM.deleteValue
-// @grant GM_xmlhttpRequest
-// @grant GM.xmlhttpRequest
 // @grant window.open
 // @grant window.close
 // @connect qnsdk.com
@@ -124,7 +111,6 @@
 // @connect shouquan.laohutao.com
 // @connect *
 // @noframes
-// @run-at document-end
 // ==/UserScript==
 
 (function(){
