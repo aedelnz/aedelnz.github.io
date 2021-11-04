@@ -3,22 +3,35 @@
   border-radius: 6px
 }
 .mdui-appbar {
-padding: 2px 60px 2px 60px;
 border-radius: 18px;
 color: #99999F !important;
 }
+
 body {
 	font-weight:900;
 	color: #99999F !important;
 }
-a {
- text-decoration: none
-}
-p {
+body a{
+	text-decoration:none;/* outline:0; */
+	}
+body p {
 	font-weight:900;
 }
 
-
+footer{
+	padding:10px;
+	border-radius: 20px
+}
+.footer{
+    margin-top:0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.footer .copyright{
+	font-size:10px;
+	color:#6d7291;
+	text-align:center
+}
 
 
 
