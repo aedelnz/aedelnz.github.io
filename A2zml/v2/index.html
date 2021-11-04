@@ -45,6 +45,7 @@
 <link rel="icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="//jixiejidiguan.top/stalye/mdui/css/mdui.css" >
+<link rel="stylesheet" href="//jixiejidiguan.top/A2zml/css/mdui.css" >
 <link rel="stylesheet" href="//jixiejidiguan.top/css/index.css" >
 <script src="//jixiejidiguan.top/stalye/mdui/js/mdui.js"></script>
 </head>
@@ -120,6 +121,48 @@
 </div>
 
 <br><br>
+
+
+<footer clss="footer mdui-shadow-24">
+<b><a href="https://afdian.net/@JIXIEJIDIGUAN?tab=home">A team that doesn' t do its job!</a><br>
+<!--统计 -->
+<script src="../stalye/js/zhucx.js"></script><br>
+<script type="text/javascript">//运行时间
+function show_runtime() {
+window.setTimeout("show_runtime()", 1000);
+X = new Date("02/22/2020 22:20:20");
+Y = new Date();
+T = (Y.getTime() - X.getTime());
+M = 24 * 60 * 60 * 1000;
+a = T / M;
+A = Math.floor(a);
+b = (a - A) * 24;
+B = Math.floor(b);
+c = (b - B) * 60;
+C = Math.floor((b - B) * 60);
+D = Math.floor((c - C) * 60);
+runtime_span.innerHTML = "网站在各种灾难中运行了: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+}
+show_runtime();
+</script>
+<span id="runtime_span"></span>
+<div class="copyright">Copyright © 2020 - 
+
+<script>
+Date.prototype.format = function (fmt) {
+var o = {
+"y+": this.getFullYear, 
+};
+if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+for (var k in o)
+if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+return fmt;
+}
+setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy');", 1000);
+</script>
+<span id="dateTime"></span> JIXIEJIDIGUAN. All Rights Reserved. 机械极地馆 版权所有</div>
+</b>
+</footer><br>
 </body>
 <!-- body -->
 <noscript><meta http-equiv="refresh" content="0; URL=https://www.baidu.com/"></noscript><!-- 百度 -->

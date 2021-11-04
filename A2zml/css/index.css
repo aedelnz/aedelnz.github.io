@@ -19,8 +19,10 @@ body p {
 }
 
 footer{
-	padding:10px;
-	border-radius: 20px
+	padding:8px;
+	border-radius: 18px;
+    -webkit-box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
+    box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
 }
 .footer{
     margin-top:0;
@@ -32,6 +34,7 @@ footer{
 	color:#6d7291;
 	text-align:center
 }
+
 
 
 
@@ -97,7 +100,7 @@ body{
 }
 
 
-
+/*  */
 .mdui-appbar-with-searchbar {
   padding-top: 64px;
 }
@@ -142,4 +145,49 @@ body{
 }
 .mdui-theme-layout-dark .search-bar > input::placeholder {
   color: rgba(255, 255, 255, .70);
+}
+
+/*右侧悬浮栏*/
+.fixed-bar {
+    position: fixed;
+    right: 8px;
+    bottom: 50px;
+    width: 50px;
+    z-index: 100;
+}
+.fixed-bar .box-bar {
+    background-color: #ffffff;
+    padding:12px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.10);
+}
+.fixed-bar .box-bar .item {
+    background-image: url(https://gamer.qpic.cn/2021/09/23_1632389950740_47324.png);
+    background-repeat: no-repeat;
+    font-size: 14px;
+    color: #9497AB;
+    text-align: center;
+    padding-top: 45px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 43px;
+}
+.fixed-bar .box-bar .icon-app {
+    background-position: -169px -7px;
+}
+.fixed-bar .box-bar .icon-top {
+    background-position: -93px -11px;
+    padding-bottom: 8px;
+    padding-top: 40px;
+}
+.fixed-bar .box-bar .icon-top:hover {
+    background-position: -70px -63px;
+}
+.fixed-bar .item:hover {
+background-position-x: -100px;
+color: #e95a04;
 }
