@@ -45,29 +45,46 @@
 <link rel="icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="//jixiejidiguan.top/stalye/mdui/css/mdui.css" >
-<link rel="stylesheet" href="//jixiejidiguan.top/A2zml/css/mdui.css" >
+<link rel="stylesheet" href="//jixiejidiguan.top/A2zml/css/index.css" >
 <link rel="stylesheet" href="//jixiejidiguan.top/css/index.css" >
 <script src="//jixiejidiguan.top/stalye/mdui/js/mdui.js"></script>
 </head>
 
+
+
 <!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left mdui-container">
-<!--统计 -->
-<div class="mdui-panel-item-body"><script src="//jixiejidiguan.top/stalye/js/zhucx.js"></script></div>
+<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 
-
-<!-- 这随便的 -->
-<div class="mdui-appbar mdui-appbar-fixed mdui-color-light-blue-900 mdui-shadow-16">
+<!-- 顶部内容全部开始 -->
+<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50 mdui-container">
 <div class="mdui-toolbar"><span class="mdui-typo-title"><b>v 2</b></span>
-<div class="mdui-toolbar-spacer"></div><a href="/">首页</a>
+<div class="mdui-toolbar-spacer"></div>
+<span>
+<script language="JavaScript" type="text/javascript">
+<!--
+var enabled = 0; today = new Date();
+var day; var date;
+if(today.getDay()==0) day = " 星期日"
+if(today.getDay()==1) day = " 星期一"
+if(today.getDay()==2) day = " 星期二"
+if(today.getDay()==3) day = " 星期三"
+if(today.getDay()==4) day = " 星期四"
+if(today.getDay()==5) day = " 星期五"
+if(today.getDay()==6) day = " 星期六"
+date = (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日" + day +"";
+document.write(date);
+// -->
+</script></span>
+<div class="mdui-toolbar-spacer"></div>
+<a href="../">导航</a>|<a href="/">首页</a>
 </div>
 </div>
-<!-- 这随便的 -->
+<!-- 顶部内容全部结束 -->
 
 
-
+<br>
 <div class="mdui-container">
-<div class="mdui-card mdui-card-actions">
+<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <ol><b>
 <h1>订阅源</h1>
 <li><a href="https://jixiejidiguan.top/A2zml/v2/Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2021.10.29</li>
@@ -77,7 +94,7 @@
 </div></div><br>
 <h2>
 <div class="mdui-container">
-<div class="mdui-card mdui-card-actions">
+<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <ol>
 <li>v2rayN: <a href="https://github.com/2dust/v2rayN/releases">电脑版</a></li>
 <li>WinXray: <a href="https://github.com/TheMRLL/WinXray/releases">电脑版</a></li>
@@ -92,10 +109,10 @@
 </div>
 
 <br><br>
-<div class="mdui-container">
+<div class="mdui-container mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <div class="mdui-ripple mdui-container">
-<div class="mdui-container"><br>
-<p>欢迎大家留言.</p>
+<br>
+<p>欢迎大家留言分享.</p>
 
 <!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NDQ4Mi8zMDk1Mw==">
@@ -118,15 +135,16 @@
 
 </div>
 </div>
-</div>
 
 <br><br>
 
+<!-- 居中 -->
+<center class="mdui-container">
 
 <footer clss="footer mdui-shadow-24">
 <b><a href="https://afdian.net/@JIXIEJIDIGUAN?tab=home">A team that doesn' t do its job!</a><br>
 <!--统计 -->
-<script src="../stalye/js/zhucx.js"></script><br>
+<script src="//jixiejidiguan.top/stalye/js/zhucx.js"></script><br>
 <script type="text/javascript">//运行时间
 function show_runtime() {
 window.setTimeout("show_runtime()", 1000);
@@ -163,6 +181,9 @@ setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format
 <span id="dateTime"></span> JIXIEJIDIGUAN. All Rights Reserved. 机械极地馆 版权所有</div>
 </b>
 </footer><br>
+<!-- 居中 -->
+</center>
+
 </body>
 <!-- body -->
 <noscript><meta http-equiv="refresh" content="0; URL=https://www.baidu.com/"></noscript><!-- 百度 -->
