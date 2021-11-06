@@ -78,13 +78,16 @@ document.write(date);
 </div>
 <!-- 顶部内容全部结束 -->
 
-<!-- 居中 -->
-<center class="mdui-container">
 
+<div class="mdui-tab mdui-container" mdui-tab>
+<a href="#tab1">留言</a>
+<a href="#tab2"></a>
+</div>
 
-<br><br>
-<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
+<div class="mdui-container-fluid">
+<div id="tab1">
 <div class="mdui-container">
+<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NDQ4Mi8zMDk1Mw==">
 	<script type="text/javascript">
@@ -105,6 +108,50 @@ document.write(date);
 <!-- City版安装代码已完成 -->
 </div>
 </div>
+</div>
+
+<div id="tab2">
+<div class="mdui-container">
+<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
+<b>
+<script src="../A2zml/css/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
+new Valine({
+el: '#vcomments',
+appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',
+appKey: 'z27CGdACRU9SqaK38an2ie5L',
+avatar: '' ,// (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+placeholder: "欢迎留言(●'◡'●)",
+highlight: 'false',
+avatarForce: 'false',
+recordIP: 'false',
+});
+</script>
+<style>
+    .v .veditor{min-height: 1rem;
+        background-image: url(https://doge.zzzmh.cn/wallpaper/origin/505112fe57b746e8a593a0f375e0ea01.jpg?response-content-disposition=attachment);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255,255,255,0);
+        resize: none;} 
+    }
+img.vimg {
+     transition: all 7s   /* 旋转时间为 1s */
+}
+
+.v .vcards .vcard .vcontent frame, .v .vcards .vcard .vcontent iframe, .v .vcards .vcard .vcontent img {
+    max-width: 36;
+    border: none;
+}
+</style>
+</b>
+</div>
+</div>
+
+</div>
+</div>
 <br><br>
 
 
@@ -119,6 +166,8 @@ $(".top-link").click(function(){
      return false;
 });
 </script>
+<!-- 居中 -->
+<center class="mdui-container">
 <footer clss="footer mdui-shadow-24">
 <b><a href="https://afdian.net/@JIXIEJIDIGUAN?tab=home">A team that doesn' t do its job!</a><br>
 <!--统计 -->
