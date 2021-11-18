@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/videoApi.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+	<!-- MDUI CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous"/>
+	<!-- MDUI JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous" ></script>
+    <title>web-播放器</title>
+	<link rel="icon"  href="//s1.hdslb.com/bfs/static/jinkela/mstation-h5/assets/bannerTop_new.png">
+</head>
+
+<body class="padding-top">
+
+<div id="app">
+
+<div class="api-select mdui-appbar">
+<input type="text" v-model.String="videoSrc" v-focus>
+<div class="apiList mdui-color-grey-50">
+<span @click.stop="toggleList" style="font-weight:900; " class="mdui-color-transparent">接口{{ getNowApiName }}</span>
+<ul v-if="isShow">
+<li v-for="(item,index) in api" @click="selectApi(index)" style="font-weight:900; " >接口 {{ index+1 }}</li>
+</ul>
+</div>
+<p class="tips">{{api.length}}个接口任君选择，解析不了请切换接口</p>
+</div>
+
+
+<iframe id="videos" src="" frameborder="0" :width="width" :height="height" ></iframe>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            api:api,
+            nowIndex:0,
+            videoSrc:"https://v.qq.com/x/cover/mcv8hkc8zk8lnov/x0036x5qqsr.html?ptag=qqbrowser",
+            isShow:false,
+            width:"",
+            height:"",
+        },
+        methods: {
+            toggleList:function(){
+                if(this.isShow == false){
+                    this.isShow = true;
+                } else {
+                    this.isShow = false;
+                }
+            },
+            selectApi:function(index){
+                this.nowIndex = index;
+                this.toggleList();
+            },
+        },
+        computed: {
+            getNowApiName:function(){
+                return this.nowIndex +1 ;
+            },
+            getApi:function(){
+                return this.api[this.nowIndex] + this.videoSrc ;
+            }
+        },
+        watch:{
+            videoSrc:function(){
+                document.getElementById("videos").src = this.getApi;
+            },
+            nowIndex:function(){
+                document.getElementById("videos").src = this.getApi;
+            }
+        },
+        directives:{
+            focus:{
+                inserted:function(el){
+                    el.focus();
+                }
+            }
+        },
+        mounted:function(){
+            let that = this;
+            // 点击空白区域，列表消失
+            document.documentElement.addEventListener("click",function(){
+                that.isShow = false;
+            })
+            // 计算屏幕长宽
+            this.width = $(window).width()+ "px";
+            this.height = ($(window).height() - 50) + "px";
+            // 打开默认播放默认视频
+            document.getElementById("videos").src = this.getApi;
+        }
+    })
+</script>
+<style>
+* {
+	font-weight:900; 
+}
+</style>
+</body>
+</html>
