@@ -7,6 +7,11 @@ border-radius: 18px;
 color: #99999F !important;
 }
 
+.mdui-panel-item {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255 255 255 / 61%);
+	font-weight:900;
+}
 body {
 	font-weight:900;
 	color: #99999F !important;
