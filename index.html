@@ -57,14 +57,15 @@
 <div class="mdui-panel-item-body"><script src="./stalye/js/zhucx.js"></script></div>
 
 <header class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar mdui-color-blue-grey-400">
+<div class="mdui-toolbar mdui-hoverable">
 <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_left</i></span>
 <span class="mdui-typo-title" style="font-weight:900;">画主页</span>
 <div class="mdui-toolbar-spacer"></div>
+<a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
 </div>
 </header>
 
-<div class="mdui-drawer mdui-drawer-close mdui-color-blue-grey-400" id="main-drawer">
+<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
 <div class="mdui-grid-tile">
 <img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
 <div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
@@ -82,29 +83,50 @@
 
 
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=100% src="Workingcell/index.html"></iframe>
 
-<footer class="mdui-bottom-nav mdui-color-blue-grey-400">
-<b><br>&nbsp;&nbsp;&nbsp;Copyright &copy; 2020-
-<script>
-Date.prototype.format = function (fmt) {
-var o = {
-"y+": this.getFullYear, 
-};
-if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-for (var k in o)
-if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-return fmt;
-}
-setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy');", 1000);
-</script>
-<b id="dateTime"></b>&nbsp;&nbsp;&nbsp;JIXIEJIDIGUAN<b>
-</footer>
-
-</body>
 <style>
 body {
-	font-weight:900; 
-}
+font-weight:900; 
+margin-top: 0px; 
+padding-top: 0px;  
+} 
+a {	
+text-decoration:none;	
+color:#1064A0;
+} 
 </style>
+
+<div class="mdui-card-media">
+    <img class="img-slide mdui-img-fluid" src="https://w.wallhaven.cc/full/y8/wallhaven-y89del.png" alt="1">
+    <img class="img-slide mdui-img-fluid" src="https://w.wallhaven.cc/full/72/wallhaven-72lvqe.jpg" alt="2">
+    <img class="img-slide mdui-img-fluid" src="https://w.wallhaven.cc/full/v9/wallhaven-v9e8jm.png" alt="3">
+
+<div class="mdui-card-media-covered mdui-card-media-covered-transparent">
+<div class="mdui-card-primary-title">
+<h1 style="font-size: 1.50em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</div>
+</div>
+</div>
+
+
+
+
+<script>
+var index=0;
+function ChangeImg() {
+index++;
+var a=document.getElementsByClassName("img-slide");
+if(index>=a.length) index=0;
+for(var i=0;i<a.length;i++){
+a[i].style.display='none';
+}
+a[index].style.display='block';
+}
+setInterval(ChangeImg,5000);
+</script>
+
+
+
+</body>
 </html>
