@@ -1,0 +1,156 @@
+/* 圆角 */
+.mdui-grid-tile{
+  border-radius: 6px
+}
+
+.mdui-panel-item {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255 255 255 / 78%);
+	font-weight:900;
+}
+body {
+	font-weight:900;
+	color: #99999F !important;
+}
+body a{
+	text-decoration:none;/* outline:0; */
+	}
+body p {
+	font-weight:900;
+}
+
+footer{
+	padding:8px;
+	border-radius: 18px;
+    -webkit-box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
+    box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
+}
+.footer{
+    margin-top:0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.footer .copyright{
+	font-size:10px;
+	color:#6d7291;
+	text-align:center
+}
+
+
+
+
+.css-style-rainbow a:nth-child(7n+1) {
+  background-color: rgba(255, 78, 106, .21);
+  color: #f76d2c;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+2) {
+  background-color: rgba(255, 118, 30, .21);
+  color: #ff761e;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+3) {
+  background-color: rgba(255, 185, 0, .21);
+  color: #ffb900;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+4) {
+  background-color: rgba(51, 213, 122, .21);
+  color: #33d57a;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+5) {
+  background-color: rgba(0, 219, 255, .21);
+  color: #00dbff;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+6) {
+  background-color: rgba(26, 152, 255, .21);
+  color: #1a98ff;
+  font-weight:900;
+}
+
+.css-style-rainbow a:nth-child(7n+7) {
+  background-color: rgba(144, 144, 255, .21);
+  color: #9090ff;
+  font-weight:900;
+}
+
+
+
+/*  */
+@media screen and (max-width: 1000px) {
+body{
+	background-image: url(../img/bg_miku_mo.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: fixed;
+	background-size: 100%;
+	opacity: 0.98;
+}
+} 
+
+/*  */
+@media screen and (min-width: 1201px) { 
+body{
+	background-image: url(../img/bg_miku_v2.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-attachment: fixed;
+	background-size: 32%;
+	opacity: 0.98;
+}
+}
+
+
+/* 百度搜索 */
+.mdui-appbar-with-searchbar {
+  padding-top: 64px;
+}
+.search-bar {
+  display: flex;
+  margin: 7px 8px 8px;
+  height: 49px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .24);
+  background: #FAFAFA;
+  align-items: center;
+  border-radius: 2px;
+}
+.search-bar > input {
+  flex: 1 1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 100%;
+  margin: 0 16px;
+  outline: none;
+  color: rgba(0, 0, 0, .87);
+}
+.search-bar > input::placeholder {
+  color: rgba(0, 0, 0, .54);
+}
+.search-bar > .mdui-icon {
+  margin: 0 16px;
+}
+.search-bar > .mdui-btn-icon {
+  margin: auto 11px;
+}
+/*暗色模式支持*/
+.mdui-theme-layout-dark .search-bar {
+  background: #424242;
+}
+.mdui-theme-layout-dark .search-bar > input {
+  color: white;
+}
+.mdui-theme-layout-dark .search-bar > input::placeholder {
+  color: rgba(255, 255, 255, .70);
+}
