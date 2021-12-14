@@ -1,4 +1,5 @@
-html *{
+/* 全站灰色 */
+关html *{
 	-webkit-filter: grayscale(100%); /* webkit */
 	-moz-filter: grayscale(100%); /*firefox*/
 	-ms-filter: grayscale(100%); /*ie9*/
