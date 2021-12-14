@@ -55,6 +55,7 @@
 <div id="tongzhi" class="modal">
 <div class="modal-content mdui-card mdui-card-content">
 子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」
+
 </div>
 
 </div>
@@ -67,13 +68,13 @@ var time;
 * **/
 window.onload=function () {
     //var time =window.setInterval("imgblock()",2000);
-    window.setTimeout("imgblock()",2000);
+    window.setTimeout("imgblock()",1000);
 }
 function imgblock() {
     var img_idDIV=document.getElementById("tongzhi");
     img_idDIV.style.display="block";
     window.clearInterval(time);
-    window.setInterval("imgNone()",5000);
+    window.setInterval("imgNone()",8000);
 }
     function imgNone() {
     var img_idDIV=document.getElementById("tongzhi");
@@ -110,6 +111,8 @@ document.write(date);
 <!-- 顶部内容全部结束 -->
 <!-- 这随便的 -->
 <div class="mdui-tab mdui-container" mdui-tab>
+<div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电">
+<div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div></a></div>
 <a href="#tab1">トップページ</a>
 <a href="#tab2">外置</a>
 <a href="#tab3">留言.</a>
@@ -121,6 +124,8 @@ document.write(date);
 <div id="tab1"><br>
 <!-- 公告 -->
 <marquee behavior="scroll" direction="left"><p>可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
+
+
 <!-- 居中 -->
 <center>
 <!-- 百度一下，你就知道 -->
