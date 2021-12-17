@@ -51,38 +51,7 @@
 <script src="../stalye/mdui/js/mdui.js"></script>
 </head>
 
-<!-- 弹窗 -->
-<div id="tongzhi" class="modal">
-<div class="modal-content mdui-card mdui-card-content">
-子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」
 
-</div>
-
-</div>
-<script type="text/javascript">
-var time;
-/**
-* setInterval()方法会不断调用函数，直到clearInterval()被调用或者窗口被关闭。由setInterval()返回值的ID 值
-* 可用作clearInterval()方法的参数
-* 如果你只想执行一次可以使用setTimeout()方法
-* **/
-window.onload=function () {
-    //var time =window.setInterval("imgblock()",2000);
-    window.setTimeout("imgblock()",1000);
-}
-function imgblock() {
-    var img_idDIV=document.getElementById("tongzhi");
-    img_idDIV.style.display="block";
-    window.clearInterval(time);
-    window.setInterval("imgNone()",8000);
-}
-    function imgNone() {
-    var img_idDIV=document.getElementById("tongzhi");
-    img_idDIV.style.display="none";
-}
-// 获取弹窗
-var modal = document.getElementById('tongzhi');
-</script>
 
 <!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
@@ -105,10 +74,43 @@ date = (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.g
 document.write(date);
 </script></span></button>
 <div class="mdui-toolbar-spacer"></div>
-<a href="/Toolbox">工具箱</a>
+<a href="/Toolbox">工具箱</a>|<a href="/about.html">关于</a>
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
+
+<!-- 弹窗 -->
+<div id="tongzhi" class="modal">
+<div class="modal-content mdui-card mdui-card-content">
+子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」
+
+</div>
+</div>
+<script type="text/javascript">
+var time;
+/**
+* setInterval()方法会不断调用函数，直到clearInterval()被调用或者窗口被关闭。由setInterval()返回值的ID 值
+* 可用作clearInterval()方法的参数
+* 如果你只想执行一次可以使用setTimeout()方法
+* **/
+window.onload=function () {
+    //var time =window.setInterval("imgblock()",2000);
+    window.setTimeout("imgblock()",1000);
+}
+function imgblock() {
+    var img_idDIV=document.getElementById("tongzhi");
+    img_idDIV.style.display="block";
+    window.clearInterval(time);
+    window.setInterval("imgNone()",5000);
+}
+    function imgNone() {
+    var img_idDIV=document.getElementById("tongzhi");
+    img_idDIV.style.display="none";
+}
+// 获取弹窗
+var modal = document.getElementById('tongzhi');
+</script>
+
 <!-- 这随便的 -->
 <div class="mdui-tab mdui-container" mdui-tab>
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电">
@@ -446,7 +448,10 @@ recordIP: 'false',
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
 4.且无影响阅读体验的广告<br>
-申请格式：URL+网站名称<br><br>
+申请格式：URL+网站名称
+<a href="aedelnz@111.com"><li class="mdui-col-4"><img src="//static-gamecenter.biligame.net/images/contact/mail.2dfc9d83.svg">
+aedelnz@111.com</li></a><br>
+
 <div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <ol>友情链接</ol>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.arsrna.cn">Ar-Sr-Na</a>
@@ -459,6 +464,8 @@ recordIP: 'false',
 </div>
 </div>
 
+
+</div>
 </body>
 <!-- body -->
 <noscript><meta http-equiv="refresh" content="0; URL=https://www.baidu.com/"></noscript><!-- 百度 -->
