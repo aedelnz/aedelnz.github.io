@@ -1,10 +1,5 @@
-/**
- * refence form (https://github.com/fritx/silent) in 2016.03.25
- * fix by amen2020 in September 25, 2016
-*/
-
 (function () {
-  var pageBase = 'p/';
+  var pageBase = 'article/内容/';
   var pageExt = 'md';
   var mainPage = location.search.slice(1).replace(/&.*/, '') || 'aboutme';
   var mainTitle = '';
@@ -74,7 +69,7 @@
           if (isMain) {
             mainTitle = $el.find('h1:first').text();
             $('title').text(function (x, old) {
-              return mainTitle + ' - ' + old;
+              //return mainTitle + ' - ' + old;
             });
           }
 
@@ -90,7 +85,6 @@
   }
 
   function start() {
-    load('#sidebar-page', 'sidebar');
     load('#main-page', mainPage, true);
   }
 

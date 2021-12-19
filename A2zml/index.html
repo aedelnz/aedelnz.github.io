@@ -36,7 +36,7 @@
 
  -->
  <!-- 随随便便的开始 -->
-<html lang="zh-CN"> 
+<html lang="zh-CN" manifest="list.appcache">
 <head>
 <title>JIXIEJIDIGUAN ナビ姫.</title>
 <meta charset="utf-8"/>
@@ -57,7 +57,7 @@
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
-<a  href=""><span class="mdui-typo-title"><div class="mdui-toolbar"><img class="mdui-img-circle" src="img/icon.gif" width="60"></span></a>
+<a  href="./"><span class="mdui-typo-title"><div class="mdui-toolbar"><img class="mdui-img-circle" src="img/icon.gif" width="60"></span></a>
 <div class="mdui-toolbar-spacer"></div>
 <button  class="mdui-btn mdui-ripple"><span>
 <script language="JavaScript" type="text/javascript">
@@ -74,10 +74,23 @@ date = (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.g
 document.write(date);
 </script></span></button>
 <div class="mdui-toolbar-spacer"></div>
-<a href="/Toolbox">工具箱</a>|<a href="/about.html">关于</a>
+<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_right</i></span>
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
+
+<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
+<div class="mdui-grid-tile">
+<img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
+<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
+<h1>创极阁</h1>
+</div></div><br>
+<div class="mdui-card-content">
+<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/Toolbox">工具箱</a> 
+<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/MIUI">MIUI</a>
+<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/about.html">关于</a>
+</div>
+</div>
 
 <!-- 弹窗 -->
 <div id="tongzhi" class="modal">
@@ -116,9 +129,10 @@ var modal = document.getElementById('tongzhi');
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电">
 <div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div></a></div>
 <a href="#tab1">トップページ</a>
-<a href="#tab2">外置</a>
-<a href="#tab3">留言.</a>
-<a href="#tab4">友情链接</a>
+<a href="#tab2">文章</a>
+<a href="#tab3">外置</a>
+<a href="#tab4">留言.</a>
+<a href="#tab5">友情链接</a>
 </div>
 
 
@@ -128,7 +142,8 @@ var modal = document.getElementById('tongzhi');
 <marquee behavior="scroll" direction="left"><p>可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
 
 
-<!-- 居中 -->
+<h2>欢迎加入QQ频道：<a href="https://qun.qq.com/qunpro/passcheck/share?_wv=3&_wwv=128&passCode=13&senderUin=3549518275&guildId=99465721639877251&guildName=%E6%9C%BA%E6%A2%B0%E6%9E%81%E5%9C%B0%E9%A6%86%E5%AF%BC%E8%88%AA%E5%A7%AC.&sourceType=1&qqGroupUin=484878654&shareType=2">点我加入QQ频道</a>
+</h2><!-- 居中 -->
 <center>
 <!-- 百度一下，你就知道 -->
 <a target="_blank" href="https://www.google.com" class="a"><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="240" height="99"></a>
@@ -144,10 +159,13 @@ var modal = document.getElementById('tongzhi');
 
 <!-- 开始 -->
 <br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
-<p class="mdui-btn">稳</p></div><br>
+<p class="mdui-btn">国家级</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.gov.cn/">中国政府网_中央人民政府门户网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nrta.gov.cn/">国家广播电视总局</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.cnnvd.org.cn/">国家信息安全漏洞库</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nipc.org.cn/">国家计算机网络入侵防范中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.cert.org.cn/">国家互联网应急中心</a>
 </div>
 
 <br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -175,7 +193,7 @@ var modal = document.getElementById('tongzhi');
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://share.acgnx.se/">末日動漫資源庫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.nicovideo.jp/">翻墙-ニコニコ</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://animeseries.so/" title="建议开启广告屏蔽插件">广告屏蔽-animetv</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://animeseries.so/">强烈建议开启广告屏蔽插件-animetv</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://share.dmhy.org/">翻墙-动漫花园</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://nyaa.si/">翻墙-nyaa</a>
 </div>
@@ -281,26 +299,6 @@ var modal = document.getElementById('tongzhi');
 </div>
 
 <br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
-<p class="mdui-btn">技术&论坛&工具</p></div><br>
-<div class="css-style-rainbow">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://github.com/">GitHub</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.52pojie.cn/">吾爱破解 </a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.4hou.com/">嘶吼 </a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.csdn.net/">CSDN</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.google.cn/intl/zh-CN/chrome/">Google浏览器</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zarchiver.me/download-zarchiver/">解压-zarchiver</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.7-zip.org/">7-ZIP</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://geekuninstaller.com">程序卸载-geekuninstaller</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://telegram.org/" title="简体中文包:https://t.me/setlanguage/classic-zh-cn">翻墙-telegram</a>
-</div>
-
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">科技&数码</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
@@ -308,6 +306,79 @@ var modal = document.getElementById('tongzhi');
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.36kr.com/">36氪</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sspai.com/">少数派</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ifanr.com/">爱范儿</a>
+</div>
+
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">技术&论坛&工具</p></div><br>
+<div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://github.com/">GitHub</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.52pojie.cn/">吾爱破解 </a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.4hou.com/">嘶吼 </a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.sec-wiki.com/">SecWiki</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.freebuf.com/">FreeBuf</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.anquanke.com/">安全客</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.2cto.com/">红黑联盟</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.csdn.net/">CSDN</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zoomeye.org/">钟馗之眼 - 网络空间搜索引擎</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
+</div>
+
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">网络攻击</p>鼠标放置图标上可以查看更多</div><br>
+<div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://cybermap.kaspersky.com/" title="kaspersky：Find out where you are on the Cyberthreat map">CyberThreat</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.fireeye.com/cyber-map/threat-map.html" title="FireEye Cyber Threat Map">Cyber-map</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://threatmap.fortiguard.com/" title="Fortinet Threat Map">Fortiguard</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" title=">Live Cyber Attack Threat Map | Check Point Software">Checkpoint</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://botnet-cd.trendmicro.com/" title="BOTNET Connection Dashboard">Botnet-cd</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.damddos.com/networkattack.html#page2" title="云堤DDoS攻击流向图">云堤DDoS态势</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://isecurity.huawei.com/sec/web/index.do" title="华为安全中心平台-安全态势">华为安全态势</a>
+</div>
+
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">SRC平台</p></div><br>
+<div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sec.xiaomi.com/">小米安全中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://security.bilibili.com/">哔哩哔哩安全应急响应中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://security.tencent.com/">腾讯安全应急响应中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://security.alibaba.com/">阿里安全响应中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://security.alipay.com/">蚂蚁集团安全应急响应中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://bsrc.baidu.com/">百度安全应急响应中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://aq.163.com/">网易安全中心</a>
+</div>
+
+<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<p class="mdui-btn">工具平台</p>鼠标放置图标上可以查看更多</div><br>
+<div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.metasploit.com" title="开源的安全漏洞检测工具">metasploit-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://nmap.org" title="Linux下的网络扫描和嗅探工具包">nmap-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://sqlmap.org" title="自动化的SQL注入工具">sqlmap-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://portswigger.net" title="攻击web 应用程序的集成平台 ">burpsuite-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wireshark.org" title="网络封包分析软件">wireshark-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.telerik.com/fiddler" title="http协议调试代理工具">fiddler-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.ibm.com/developerworks/cn/downloads/r/appscan" title="web安全扫描工具">AppScan-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.tenable.com/products/nessus-vulnerability-scanner" title="系统漏洞扫描与分析软件">Nessus-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.rapid7.com/products/nexpose/download" title="性能极佳的漏洞扫描工具">Nexpose-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://rapid7.com/products/appspider/download" title="扫描网页和移动应用程序的漏洞 ">appspider-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://sectoolmarket.com" title="The Prices vs. Features of Web Application Vulnerability Scanners">Web扫描器功能比较</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://n0where.net" title="CyberPunk: Open Source CyberSecurity">CyberPunk</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.thc.org/thc-hydra" title="支持多种网络服务的网络登陆破解工具">THC-hydra</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://sectools.org" title="扫描器和工具大全">SecTools.Org</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://pentestbox.org/zh" title="PentestBox渗透利器">PentestBox渗透利器</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ngrok.cc" title="Sunny-Ngrok内网转发">Ngrok内网转发</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://ettercap.github.io/ettercap" title="Linux下一个强大的欺骗工具">Ettercap-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.openwall.com/john" title="快速的密码破解程序 ">John-官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.aircrack-ng.org" title="802.11标准的无线网络分析有关的安全软">Aircrack-ng官网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://demo.aisec.cn/" title="常见漏洞扫描器测试平台">漏洞扫描器测试平台</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://diannaobos.com/frp/" title="FRP内网穿透工具">FRP内网穿透工具</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.charlesproxy.com/" title="Charles抓包工具 ">Charles抓包工具</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sploitus.com/" title="Sploitus | Exploit &amp; Hacktool Search Engine">Sploitus|Exploit</a>
 </div>
 
 <br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -323,11 +394,12 @@ var modal = document.getElementById('tongzhi');
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://mirrors.163.com/">网易开源镜像站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://mirrors.cloud.tencent.com/">腾讯软件源</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://mirrors.huaweicloud.com">华为开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://developer.aliyun.com/mirror/">阿里巴巴开源镜像站-OPSX镜像站</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="?url?https://developer.aliyun.com/mirror/">阿里巴巴开源镜像站-OPSX镜像站</a>
 </div>
 
 <br>
 <br>
+
 
 <footer clss="footer mdui-shadow-24">
 <b>
@@ -373,7 +445,31 @@ setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format
 </center>
 <!-- 居中 -->
 </div>
-<div id="tab2"><br><p><h3>
+<div id="tab2">
+<br>
+<div class="mdui-card-actions mdui-shadow-6">
+ <!-- import vendor styles -->
+<link rel="stylesheet" href="article/vendor/blog.css">
+<script src="article/vendor/jquery-1.11.1.min.js"></script>
+<script src="article/vendor/marked-0.3.2.min.js"></script>
+<script src="article/vendor/blog.js"></script>
+  <!-- 居中 -->
+<div class="contents">
+  <!-- main -->
+<div class="main" id="main">
+<div class="main-inner">
+<div class="main-page" id="main-page"></div>
+</div></div>
+  <!-- main -->
+</div>
+  <!-- 居中 -->
+</div>
+
+<br>
+</div>
+
+<div id="tab3"><br><p><h3>
+<div class="mdui-card-actions mdui-shadow-6">
 开启广告屏蔽体验会更好！<br>
 电脑广告屏蔽插件:(<a href="https://adguard.com/zh_cn/products.html">AdGuard </a> , <a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a> 该两款为浏览器插件，自己的度娘搜索。)<br>
 第三方自定义屏蔽:<a href="https://cdn.jsdelivr.net/gh/o0HalfLife0o/list/ad3.txt">https://cdn.jsdelivr.net/gh/o0HalfLife0o/list/ad3.txt</a><br>
@@ -386,11 +482,10 @@ Tampermonkey（油猴）：<a href="https://greasyfork.org/zh-CN/help/installing
 <br>
 <div class="mdui-card-primary-title">v2&魔法网络：<a href="/A2zml/v2/">点击访问</a></div>
 测速网：<a target="_blank" href="https://myplugin.speedtest.cn/#/">https://myplugin.speedtest.cn</a><br>
-</h3></p></div>
-<div id="tab3"><br><p>
+</div></h3></p></div>
 
+<div id="tab4"><br><p>
 <div class="mdui-card-actions mdui-shadow-6">
-	
 <div class="mdui-tab mdui-container" mdui-tab>
 <a href="#luitab1">安全</a>
 <a href="#luitab2">稳定</a>
@@ -441,24 +536,23 @@ recordIP: 'false',
 </p></div>
 
 <!-- 友情链接 -->
-<div id="tab4"><p>
+<div id="tab5"><p>
+<div class="mdui-card-actions mdui-shadow-6">
 欢迎大家来申请友情链接。<br>
 申请条件：<br>
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
 4.且无影响阅读体验的广告<br>
-申请格式：URL+网站名称
-<a href="aedelnz@111.com"><li class="mdui-col-4"><img src="//static-gamecenter.biligame.net/images/contact/mail.2dfc9d83.svg">
-aedelnz@111.com</li></a><br>
-
+申请格式：URL+网站名称<br>
+<a href="mailto:aedelnz@111.com" class="mdui-col-4"><img src="//static-gamecenter.biligame.net/images/contact/mail.2dfc9d83.svg">
+aedelnz@111.com</a><br><br>
 <div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
 <ol>友情链接</ol>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.arsrna.cn">Ar-Sr-Na</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="https://srsg.moe/">白鹭学园</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="">待添加</a>
 
-</p></div>
+</div></p></div>
 <!-- 友情链接 -->
 
 </div>

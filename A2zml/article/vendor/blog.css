@@ -1,9 +1,12 @@
-html, body {
+.contents body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-size: 18px;
   font-family: "Microsoft YaHei", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(255 255 255 / 78%);
+  font-weight:900;
 }
 
 img {
@@ -62,22 +65,6 @@ blockquote {
 }
 
 /* TODO: be responsive, use grid instead of absolute */
-.sidebar {
-  color: #fff;
-  background-color: #2a2a2a;
-}
-.sidebar-inner {
-  padding: 2% 5%;
-}
-.sidebar a {
-  color: #fff;
-}
-.sidebar h1 a {
-  text-decoration: none;
-}
-.sidebar blockquote {
-  color: #999;
-}
 
 .main-inner {
   padding: 2% 5% 6%;
@@ -99,11 +86,6 @@ blockquote {
   table {
     font-size: 100%;
   }
-
-  .sidebar-inner {
-    padding: 2% 10%;
-  }
-
   .main-inner {
     padding-left: 10%;
     padding-right: 10%;
@@ -111,17 +93,6 @@ blockquote {
 }
 
 @media (min-width: 990px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 25%;
-  }
-  .sidebar-inner {
-    padding: 15%;
-  }
-
   .main {
     margin-left: 25%;
     width: 75%;
