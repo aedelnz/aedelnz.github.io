@@ -23,6 +23,7 @@ body p {
 .mdui-overlay-show {
   visibility: visible;
   opacity: 1;
+  background-color: #fff0; 
 }
 
 
