@@ -49,6 +49,7 @@
 <link rel="stylesheet" href="../stalye/mdui/css/mdui.css" >
 <link rel="stylesheet" href="./css/index.css" >
 <script src="../stalye/mdui/js/mdui.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 
@@ -78,6 +79,24 @@ document.write(date);
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
+
+
+<!--返回top的图片-->
+<a id="top"><div class="rocket-con" style=""></div></a>
+<script>
+$(window).scroll(function () {
+console.log($(window).scrollTop());
+var to =  $(window).scrollTop();
+if(to>=500){
+$("#top").fadeIn(200);
+}else {
+$("#top").fadeOut(200);
+}
+});
+$("#top").click(function () {
+$("html,body").animate({scrollTop:0},2000);
+});
+</script>
 
 <div class="mdui-drawer mdui-drawer-close" id="main-drawer">
 <div class="mdui-grid-tile">
@@ -459,7 +478,7 @@ Tampermonkey（油猴）：<a href="https://greasyfork.org/zh-CN/help/installing
 <div id="luitab1">
 <!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC81NDQ4Mi8zMDk1Mw==">
-	<script type="text/javascript">
+<script type="text/javascript">
    (function(d, s) {
        var j, e = d.getElementsByTagName(s)[0];
 
@@ -471,8 +490,7 @@ Tampermonkey（油猴）：<a href="https://greasyfork.org/zh-CN/help/installing
 
        e.parentNode.insertBefore(j, e);
    })(document, 'script');
-	</script>
-<noscript> 为正常使用论功能请激活JavaScript</noscript>
+</script>
 </div>
 <!-- City版安装代码已完成 -->
 </div>

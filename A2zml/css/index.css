@@ -44,6 +44,7 @@ footer{
 	text-align:center
 }
 
+.rocket-con{position:fixed;background:url(//static.hdslb.com/bl2se/images/rocket_top.png);width:150px;height:175px;cursor:pointer;z-index:99;bottom:0;left:50%;margin-left:490px;}.fly{animation:fly .4s steps(1) infinite;background-image:url(//static.hdslb.com/bl2se/images/rocket_frame.png)}@keyframes fly{0%{background-position-x:0}25%{background-position-x:-150px}50%{background-position-x:-300px}75%{background-position-x:-450px}to{background-position-x:-600px}}
 
 
 
