@@ -1,108 +1,262 @@
-<!--
- * @package JIXIEJIDIGUAN
- * @author 创极阁
- * @version 1.0
- * @link http://jixiejidiguan.top
- *￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
- 
- 请保留开发者信息，
- 没有绝对的安全性！
- 本站没有任何加密。
-
- 
- Hiーーーーー
-　☆ *　. 　☆
-　　. ∧＿∧　∩　* ☆
-* ☆ (・∀・)/ .
-　. ⊂　　 ノ* ☆
-☆ * (つ ノ .☆
-　   (ノ
-
-帅的人已经醒来~~~ 我派直升机去接你!
-　　　∩∩
-　　（´･ω･）
-　 ＿|　⊃／(＿＿_
-　／ └-(＿＿＿_／
-　￣￣￣￣￣￣￣
-　∧＿∧ =-
-（´･ω･`) =-　ｽﾀｯ
-　と´_,ノヾ =-
-　　(´ ヽ、＼ =-
-    ｀―'　＼_） =-
-　┌○┐
-　│求｜
-　│保｜
-　│留｜
-　└○┘
-
-
- -->
- <!-- 随随便便的开始 -->
-<html lang="zh-CN"> 
+<html>
 <head>
+<meta charset="utf-8">
 <title>JIXIEJIDIGUAN</title>
-<meta charset="utf-8"/>
-<meta name="keywords" content="JIXIEJIDIGUAN,二次元" />
-<meta name="description" content="一个默默无闻的小白!" />
+<meta name="keywords" content="JIXIEJIDIGUAN,机械极地馆">
+<meta name="description" content="一往无前！">
 <link rel="icon" href="./stalye/img/DHL.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="./stalye/index.css" >
 <link rel="stylesheet" href="./stalye/mdui/css/mdui.css" >
 <script src="./stalye/mdui/js/mdui.js"></script>
-<style type="text/css">body { margin-top: 0px; padding-top: 0px;  } a {	text-decoration:none;	color:#1064A0;} a:hover {	color:#0078D2;}</style>
-</head>
-<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto mdui-loaded" style="">
-<!--统计 -->
-<div class="mdui-panel-item-body"><script src="./stalye/js/zhucx.js"></script></div>
-
-<header class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar mdui-hoverable">
-<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_left</i></span>
-<span class="mdui-typo-title" style="font-weight:900;">画主页</span>
-<div class="mdui-toolbar-spacer"></div>
-<a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-</div>
-</header>
-
-<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
-<div class="mdui-grid-tile">
-<img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
-<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-<h1>创极阁</h1>
-</div></div><br>
-<div class="mdui-card-content">
-<a class="mdui-list-item mdui-table-fluid" href="../MIUI">MIUI</a>
-<a class="mdui-list-item mdui-table-fluid" href="https://jixiejidiguan.baklib-free.com/">博客</a>
-<a class="mdui-list-item mdui-table-fluid" href="https://jixiejidiguan.baklib-free.com/4956/5edb">友人</a>
-</div>
-</div>
 
 <style>
-body {
-font-weight:900; 
-margin-top: 0px; 
-padding-top: 0px;  
-} 
-a {	
-text-decoration:none;	
-color:#1064A0;
-} 
-</style>
+.logo {
+    height: 60px;
+    float: left;
+    margin-top: -2px;
+}
+.head-banner {
+    background-color: #000;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: fixed;
+}
+.head-text {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 182px;
+}
+.head-banner h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+.head-banner h2 {
+    text-align: center;
+    color: #FFFFFF;
+}
+h3 {
+    color: #FFFFFF;
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 20px;
+}
+body.startpage .feat-row {
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1560px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+body .sm-thumb {
+    padding: 4px 6px;
+}
 
-<div class="mdui-card-media">
-<img class="img-slide mdui-img-fluid" src="https://w.wallhaven.cc/full/y8/wallhaven-y89del.png" alt="1">
-<div class="mdui-card-media-covered mdui-card-media-covered-transparent">
-<div class="mdui-card-primary-title">
-<h1 style="font-size: 1.50em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
+.gift {
+    width: 100%;
+    background-color: #edf2f8;
+    padding: 68px 0;
+}
+/* about */
+.about {
+    width: 100%;
+    background-color: #000000;
+    padding: 68px 0;
+}
+.about p {
+    color: #717275;
+    text-align: center;
+    width: 100%;
+    margin: 8px auto;
+    font-size: 16px;
+    display: block;
+}
+
+/* footer */
+footer {
+    width: 100%; 
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: #EFEFEF solid 1px;
+    padding: 46px 0;
+}
+footer .nav {
+    display: inline-flex;
+}
+footer .left {
+    float: left; 
+}
+footer .left a.nav-link {
+    color: #FFF;
+    border-right: #b8c7bf solid 1px;
+    line-height: 16px;
+    font-size: 14px;
+    padding: 0 8px;
+}
+
+footer .right {
+    float: right;
+}
+footer .right a.nav-link {
+    color: #FFFFFF;
+    line-height: 16px;
+    font-size: 14px;
+    padding: 0 8px;
+}
+footer p {
+    text-align: center;
+    margin: 65px 0 0;
+}
+nav {
+    text-align: center;
+}
+
+nav.paginator ul.pagination li.active a {
+    color: #fff;
+    background: #000;
+}
+</style>
+</head>
+<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
+
+<!-- 顶部内容全部开始 -->
+<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
+<div class="mdui-toolbar">
+<a href="" class="mdui-typo-headline"><img class="logo"> JIXIEJIDIGUAN 中心</a>
+<div class="mdui-toolbar-spacer"></div>
+</div>
+</div>
+<!-- 顶部内容全部结束 -->
+<div class="head-banner" style="background-image: url(./stalye/img/bilibili.png);">
+<div class="head-text">
+<h1>JIXIEJIDIGUAN 中心</h1>
+<h2 style="font-size: 1.5em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a>﻿</h2>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
 </div>
+
+
+
+<section>
+<div class="head-banner" style="background-image: url(./stalye/img/blog.jpg);">
+<div class="head-text">
+<h1>机械极地馆博客</h1>
+<h2>致力于提供更好服务和体验</h2>
+<div class="mdui-card-primary mdui-valign">
+<a href="https://jixiejidiguan.baklib-free.com" class="mdui-card-primary-title mdui-center" style="text-decoration:none;color: #448AFF;">点击进入</a></div>
+</div>
 </div>
 
+</section>
+
+<section class="mdui-container">
+<br>
+<!-- 卡片的标题和副标题 -->
+<div class="mdui-card-primary mdui-valign">
+<div class="mdui-card-primary-title mdui-center" style="text-align: center; font-size: 50px;">其他内容</div>
+</div>
+<br><br>
+<div class="mdui-row">
+<!--卡片 -->
+<div class="mdui-col-sm-6 mdui-col-md-4">
+<div class="mdui-card"><a href="/A2zml">
+<div class="mdui-card-media">
+<img src="./stalye/img/A2zml.webp"/>
+<div class="mdui-card-media-covered mdui-card-media-covered-gradient mdui-card-primary">
+<div class="mdui-card-primary-title">JIXIEJIDIGUAN ナビ姫.</div>
+</div>
+</div>
+<div class="mdui-card-actions">
+<button class="mdui-btn mdui-ripple">点击进入</button>
+</div></a>
+</div>
+</div>
+<!--卡片 -->
+<!--卡片 -->
+<div class="mdui-col-sm-6 mdui-col-md-4">
+<div class="mdui-card"><a href="/Toolbox">
+<div class="mdui-card-media">
+<img src="./stalye/img/Toolbox.webp"/>
+<div class="mdui-card-media-covered mdui-card-media-covered-gradient mdui-card-primary">
+<div class="mdui-card-primary-title">工具箱</div>
+</div>
+</div>
+<div class="mdui-card-actions">
+<button class="mdui-btn mdui-ripple">点击进入</button>
+</div></a>
+</div>
+</div>
+<!--卡片 -->
+<!--卡片 -->
+<div class="mdui-col-sm-6 mdui-col-md-4">
+<div class="mdui-card"><a href="/MIUI">
+<div class="mdui-card-media">
+<img src="./stalye/img/MIUI.webp"/>
+<div class="mdui-card-media-covered mdui-card-media-covered-gradient mdui-card-primary">
+<div class="mdui-card-primary-title">小米 CC9e 个人 ROM 仓库</div>
+</div>
+</div>
+<div class="mdui-card-actions">
+<button class="mdui-btn mdui-ripple">点击进入</button>
+</div></a>
+</div>
+</div>
+<!--卡片 -->
+</div>
+
+<div class="mdui-card-content">
+<h2>实践是检验真理的唯一标准。</h2>
+</div>
+<br>
+</section>
+
+<section class="gift">
+<br><br>
 
 
+</section>
 
 
+<section class="about">
+<h3>关于我们</h3>
+<br><br>
+<p>我们将致力于更好的服务和体验，努力提升 JIXIEJIDIGUAN 的整体服务水平。</p>
+<p>JIXIEJIDIGUAN 现在仍然在不断的成长过程中，如果您有好的建议，请通过邮件告诉我们：aedelnz@111.com</p>
+</section>
+
+<footer>
+<div class="inner mdui-container">
+<nav class="nav left">
+<a class="nav-link" href="/about.html#lxwm">加入我们</a>
+<a class="nav-link last" href="#">合作伙伴</a>
+<a class="nav-link" href="https://jixiejidiguan.baklib-free.com/4956/5edb">友情链接</a>
+</nav>
+<nav class="nav right">
+<a class="nav-link" href="mailto:aedelnz@111.com">专用邮箱</a>
+</nav>
+</div>
+<p>Copyright © 2020 - 
+<script>
+Date.prototype.format = function (fmt) {
+var o = {
+"y+": this.getFullYear, 
+};
+if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+for (var k in o)
+if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+return fmt;
+}
+setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy');", 1000);
+</script>
+<span id="dateTime"></span> JIXIEJIDIGUAN. All Rights Reserved. 机械极地馆 版权所有</p>
+</footer>
 
 </body>
 </html>
+
