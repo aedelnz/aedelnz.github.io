@@ -53,7 +53,7 @@
 </head>
 
 
-
+ 
 <!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 <!-- 顶部内容全部开始 -->
@@ -79,9 +79,22 @@ document.write(date);
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
+<!--
+<div class="innerdiv">
+<div onclick="liaot()" style="width:100%;height:30px;background-color:#FFF0F5; color:#696969;text-align:right">
+<p  class="Hone" style="cursor:pointer;">点击隐藏聊天窗口</p></div>
+<iframe id="chartif" src="" width="100%" height="430" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+</div>
+</div>
+<script type="text/javascript" defer="defer">
+ gxgaodu = $("#zgengxin").height();
 
-
-<!--返回top的图片-->
+function liaot(){if($(".innerdiv p").hasClass("Hone")){$(".innerdiv p").text("点击显示聊天窗口");$(".innerdiv").height("20px");$(".innerdiv p").addClass("Hzero");$(".innerdiv p").removeClass("Hone")}else{$(".innerdiv").height("460px");$(".innerdiv p").text("点击隐藏聊天窗口");$(".innerdiv p").addClass("Hone");$(".innerdiv p").removeClass("Hzero")}};
+   function mzgengxin(){if($("#zgengxin").hasClass("Hone")) {$(".innerdivli a").text("点我收起");$("#zgengxin").animate({height:gxgaodu});$("#zgengxin").addClass("Hzero");$("#zgengxin").removeClass("Hone")} else {$("#zgengxin").animate({height:"0"});$(".innerdivli a").text("点我展开");$("#zgengxin").addClass("Hone");$("#zgengxin").removeClass("Hzero")}}
+   $("#zgengxin").height("0px");
+</script>
+<style>#zgengxin{overflow:hidden;max-height:1200px;}.innerdivli a{background-color: #09BB07 !important;}.screen{position:relative}.innerdiv{position:fixed;bottom:0;right:0;height:460px;width:40%;z-index:999;transition:height .7s}.hdphdp p{color:white}.Hone:hover{background-color:#84ffe8}</style>
+--><!--返回top的图片-->
 <a id="top"><div class="rocket-con" style=""></div></a>
 <script>
 $(window).scroll(function () {
@@ -105,9 +118,9 @@ $("html,body").animate({scrollTop:0},2000);
 <h1>创极阁</h1>
 </div></div><br>
 <div class="mdui-card-content">
-<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/Toolbox">工具箱</a> 
+<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/">首页</a>
+<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/Toolbox">工具箱</a>
 <a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/MIUI">MIUI</a>
-<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/about.html">关于</a>
 </div>
 </div>
 
@@ -123,11 +136,11 @@ $("html,body").animate({scrollTop:0},2000);
 </div>
 
 
+
 <div class="mdui-container-fluid mdui-container">
 <div id="tab1"><br>
 <!-- 公告 -->
 <marquee behavior="scroll" direction="left"><p>可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
-
 
 <h2>欢迎加入QQ频道：<a href="https://qun.qq.com/qunpro/passcheck/share?_wv=3&_wwv=128&passCode=13&senderUin=3549518275&guildId=99465721639877251&guildName=%E6%9C%BA%E6%A2%B0%E6%9E%81%E5%9C%B0%E9%A6%86%E5%AF%BC%E8%88%AA%E5%A7%AC.&sourceType=1&qqGroupUin=484878654&shareType=2">点我加入QQ频道</a>
 </h2><!-- 居中 -->
@@ -561,6 +574,18 @@ aedelnz@111.com</a><br><br>
 
 
 </div>
+
+
+
+
+
+<!-- 音乐播放器 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<div class="aplayer" data-id="3111626385" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.6" ></div>
+<script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script>
+<script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+<!-- 音乐播放器 -->
 </body>
 <!-- body -->
 <noscript><meta http-equiv="refresh" content="0; URL=https://www.baidu.com/"></noscript><!-- 百度 -->
