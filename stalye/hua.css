@@ -41,22 +41,33 @@ body.startpage .feat-row {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
 }
-.mdui-col-sm-6-{
+.mdui-col-sm-6 {
 	margin: 0 10px 20px 0;
 }
+
+
+
 img{
 width: 100px;
 -ms-interpolation-mode:bicubic;
 display:inline-block;
 vertical-align:bottom
 }
-	
+
+
 
 
 .dmsc {
     width: 100%;
     background-color: #E1F5FE;
     padding: 68px 0;
+}
+@media (min-width: 1024px){
+.dmsckpcg {
+    float: left;
+    width: 100%;
+    height: 50%;
+}
 }
 
 .gift {

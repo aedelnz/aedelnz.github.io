@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="./stalye/mdui/css/mdui.css" >
 <script src="./stalye/mdui/js/mdui.js"></script>
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script><!-- jquery -->
+
+<!-- Bootstrap --> 
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
 <style></style>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
@@ -23,9 +27,12 @@
 <div class="mdui-toolbar">
 <a href="" class="mdui-typo-headline">画的个人记录</a>
 <div class="mdui-toolbar-spacer"></div>
+<header style="height: 64px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;" data-booted="true">
+<div class="d-none d-md-flex">通行证</div>
+<div class="d-xs-flex d-md-none">底部</div>
+</header>
 </div>
 </div>
-
 
 <div class="head-banner" style="background-image: url(./stalye/img/01.jpg);">
 <div class="head-text">
@@ -34,8 +41,6 @@
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
 </div>
-
-
 
 
 <section class="gift">
@@ -344,7 +349,7 @@ loadlive2d('live2d', './Live2d/model/11/11.json');
             success: function(data){    
                 var str="<div class='mdui-container'><div class='mdui-row'>";    
                 $.each(data,function(i,n){    
-                    str+="<div class='mdui-col-sm-6 mdui-col-md-2'><div class='mdui-card'><div class='mdui-card-media'><img src='"+n.img+"'/>";  
+                    str+="<div class='mdui-col-sm-6 mdui-col-md-2'><div class='mdui-card dmsckpcg'><div class='mdui-card-media'><img src='"+n.img+"'/>";  
                     str+="<div class='mdui-card-media-covered mdui-card-media-covered-gradient mdui-card-primary'><div class='mdui-card-primary-title'>"+n.title+"</div></div></div>";  
                     str+="<div class='mdui-card-actions'>"+n.figure_desc+"<br>"; 
 					str+="<a class='mdui-card mdui-btn mdui-color-deep-orange-a400' href="+n.url+">立即观看</a></div></div></div>"; 
@@ -375,7 +380,7 @@ loadlive2d('live2d', './Live2d/model/11/11.json');
             success: function(data){    
                 var str="<div class='mdui-container'><div class='mdui-row'>";    
                 $.each(data,function(i,n){    
-                    str+="<div class='mdui-col-sm-6 mdui-col-md-2'><div class='mdui-card'><div class='mdui-card-media'><img src='"+n.img+"'/>";  
+                    str+="<div class='mdui-col-sm-6 mdui-col-md-2'><div class='mdui-card dmsckpcg'><div class='mdui-card-media'><img src='"+n.img+"'/>";  
                     str+="<div class='mdui-card-media-covered mdui-card-media-covered-gradient mdui-card-primary'><div class='mdui-card-primary-title'>"+n.title+"</div></div></div>";  
                     str+="<div class='mdui-card-actions'>"; 
 					str+="<a class='mdui-card mdui-btn mdui-color-deep-orange-a400' href="+n.url+">立即观看</a></div></div></div>"; 
