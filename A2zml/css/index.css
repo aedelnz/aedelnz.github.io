@@ -95,7 +95,7 @@ footer{
 /*  */
 @media screen and (max-width: 720px) {
 body{
-	background-image: url(../img/bg_miku_mo.png);
+	/*background-image: url(../img/bg_miku_mo.png);*/
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-attachment: fixed;
@@ -107,7 +107,7 @@ body{
 /*  */
 @media screen and (min-width: 721px) { 
 body{
-	background-image: url(../img/bg_miku_v2.png);
+	/*background-image: url(../img/bg_miku_v2.png);*/
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-attachment: fixed;
