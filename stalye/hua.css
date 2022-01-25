@@ -1,61 +1,4 @@
 
-.head-banner {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: 100%;
-
-}
-.head-text {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-top: 182px;
-}
-.head-banner h1 {
-    text-align: center;
-    color: #FFFFFF;
-    font-size: 50px;
-}
-.head-banner h2 {
-    text-align: center;
-    color: #FFFFFF;
-}
-h3 {
-    color: #FFFFFF;
-    font-size: 38px;
-    line-height: 38px;
-    text-align: center;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-/* 国漫收藏 */
-.dmsc {
-    width: 100%;
-    background-color: #E1F5FE;
-    padding: 68px 0;
-}
-.mdui-col-sm-6 {
-    border-top-width: 0;
-    padding: 3px 30px 5px;
-	margin: 0 18px 4px 0;
-    text-align: center;
-}
-.mdui-col-sm-6 {
-display: inline-block;
-}
-@media (min-width: 1024px){
-.mdui-col-sm-6 {
-    width: 100%;
-    height: 50%;
-}
-}
-
-
 
 /* about */
 .about {
@@ -109,9 +52,12 @@ footer p {
 nav {
     text-align: center;
 }
-
 nav.paginator ul.pagination li.active a {
     color: #fff;
     background: #000;
 }
+
+
+
+
 

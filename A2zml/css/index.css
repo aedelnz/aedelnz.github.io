@@ -26,26 +26,18 @@ body p {
   background-color: #fff0; 
 }
 
-
-footer{
-	padding:8px;
-	border-radius: 18px;
-    -webkit-box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
-    box-shadow: 0 -1px 28px -6px rgba(0,0,0,.9),0 36px 38px 9px rgba(0,4,0,.14),0 9px 58px 8px rgba(0,0,0,.14)!important;
+footer {
+    width: 100%; 
+    background-color: #ECEFF1;
+    /*color: #FFFFFF;*/
+    border-top: #EFEFEF solid 10px;
+    padding: 8px 0;
 }
-.footer{
-    margin-top:0;
-    margin-bottom: 20px;
-    margin-top: 10px;
+footer a {
+    line-height: 12px;
+    font-size: 10px;
+    color: #99999F !important;
 }
-.footer .copyright{
-	font-size:10px;
-	color:#6d7291;
-	text-align:center
-}
-
-.rocket-con{position:fixed;background:url(//static.hdslb.com/bl2se/images/rocket_top.png);width:150px;height:175px;cursor:pointer;z-index:99;bottom:0;left:50%;margin-left:490px;}.fly{animation:fly .4s steps(1) infinite;background-image:url(//static.hdslb.com/bl2se/images/rocket_frame.png)}@keyframes fly{0%{background-position-x:0}25%{background-position-x:-150px}50%{background-position-x:-300px}75%{background-position-x:-450px}to{background-position-x:-600px}}
-
 
 
 .css-style-rainbow a:nth-child(7n+1) {
@@ -53,46 +45,38 @@ footer{
   color: #f76d2c;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+2) {
   background-color: rgba(255, 118, 30, .21);
   color: #ff761e;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+3) {
   background-color: rgba(255, 185, 0, .21);
   color: #ffb900;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+4) {
   background-color: rgba(51, 213, 122, .21);
   color: #33d57a;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+5) {
   background-color: rgba(0, 219, 255, .21);
   color: #00dbff;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+6) {
   background-color: rgba(26, 152, 255, .21);
   color: #1a98ff;
   font-weight:900;
 }
-
 .css-style-rainbow a:nth-child(7n+7) {
   background-color: rgba(144, 144, 255, .21);
   color: #9090ff;
   font-weight:900;
 }
 
-
-
-/*  */
+/* 手机版 */
 @media screen and (max-width: 720px) {
 body{
 	/*background-image: url(../img/bg_miku_mo.png);*/
@@ -104,7 +88,7 @@ body{
 }
 } 
 
-/*  */
+/* 电脑版 */
 @media screen and (min-width: 721px) { 
 body{
 	/*background-image: url(../img/bg_miku_v2.png);*/
@@ -162,11 +146,6 @@ body{
 .mdui-theme-layout-dark .search-bar > input::placeholder {
   color: rgba(255, 255, 255, .70);
 }
-
-
-
-
-
 
 /* 爱发电 */
 .elec .elec-trigger-icon {

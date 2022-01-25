@@ -4,37 +4,7 @@
  * @version 1.0
  * @link http://jixiejidiguan.top
  *￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
- 请保留开发者信息，
- 没有绝对的安全性！
- 本站没有任何加密。
- 
- Hiーーーーー
-　☆ *　. 　☆
-　　. ∧＿∧　∩　* ☆
-* ☆ (・∀・)/ .
-　. ⊂　　 ノ* ☆
-☆ * (つ ノ .☆
-　   (ノ
-
-帅的人已经醒来~~~ 我派直升机去接你!
-　　　∩∩
-　　（´･ω･）
-　 ＿|　⊃／(＿＿_
-　／ └-(＿＿＿_／
-　￣￣￣￣￣￣￣
-　∧＿∧ =-
-（´･ω･`) =-　ｽﾀｯ
-　と´_,ノヾ =-
-　　(´ ヽ、＼ =-
-    ｀―'　＼_） =-
-　┌○┐
-　│求｜
-　│保｜
-　│留｜
-　└○┘
-
-
- -->
+  -->
  <!-- 随随便便的开始 -->
 <html lang="zh-CN" manifest="list.appcache">
 <head>
@@ -46,121 +16,98 @@
 <link rel="icon" href="../stalye/img/DHL.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../stalye/index.css" >
-<link rel="stylesheet" href="../stalye/mdui/css/mdui.css" >
 <link rel="stylesheet" href="./css/index.css" >
+<!-- MDUI -->
+<link rel="stylesheet" href="../stalye/mdui/css/mdui.css" >
 <script src="../stalye/mdui/js/mdui.js"></script>
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
-
- 
 <!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
+
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
-<a  href="./"><span class="mdui-typo-title"><div class="mdui-toolbar"><img class="mdui-img-circle" src="img/icon.gif" width="60"></span></a>
-<div class="mdui-toolbar-spacer"></div>
-<button  class="mdui-btn mdui-ripple"><span>
-<script language="JavaScript" type="text/javascript">
-var enabled = 0; today = new Date();
-var day; var date;
-if(today.getDay()==0) day = " 星期日"
-if(today.getDay()==1) day = " 星期一"
-if(today.getDay()==2) day = " 星期二"
-if(today.getDay()==3) day = " 星期三"
-if(today.getDay()==4) day = " 星期四"
-if(today.getDay()==5) day = " 星期五"
-if(today.getDay()==6) day = " 星期六"
-date = (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日" + day +"";
-document.write(date);
-</script></span></button>
+<div class="mdui-toolbar"><a  href="./"><span class="mdui-typo-title"><img class="mdui-img-circle" src="./img/icon.gif" width="60"></span></a>
 <div class="mdui-toolbar-spacer"></div>
 <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_right</i></span>
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
-<!--
-<div class="innerdiv">
-<div onclick="liaot()" style="width:100%;height:30px;background-color:#FFF0F5; color:#696969;text-align:right">
-<p  class="Hone" style="cursor:pointer;">点击隐藏聊天窗口</p></div>
-<iframe id="chartif" src="" width="100%" height="430" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-</div>
-</div>
-<script type="text/javascript" defer="defer">
- gxgaodu = $("#zgengxin").height();
 
-function liaot(){if($(".innerdiv p").hasClass("Hone")){$(".innerdiv p").text("点击显示聊天窗口");$(".innerdiv").height("20px");$(".innerdiv p").addClass("Hzero");$(".innerdiv p").removeClass("Hone")}else{$(".innerdiv").height("460px");$(".innerdiv p").text("点击隐藏聊天窗口");$(".innerdiv p").addClass("Hone");$(".innerdiv p").removeClass("Hzero")}};
-   function mzgengxin(){if($("#zgengxin").hasClass("Hone")) {$(".innerdivli a").text("点我收起");$("#zgengxin").animate({height:gxgaodu});$("#zgengxin").addClass("Hzero");$("#zgengxin").removeClass("Hone")} else {$("#zgengxin").animate({height:"0"});$(".innerdivli a").text("点我展开");$("#zgengxin").addClass("Hone");$("#zgengxin").removeClass("Hzero")}}
-   $("#zgengxin").height("0px");
-</script>
-<style>#zgengxin{overflow:hidden;max-height:1200px;}.innerdivli a{background-color: #09BB07 !important;}.screen{position:relative}.innerdiv{position:fixed;bottom:0;right:0;height:460px;width:40%;z-index:999;transition:height .7s}.hdphdp p{color:white}.Hone:hover{background-color:#84ffe8}</style>
---><!--返回top的图片-->
-<a id="top"><div class="rocket-con" ></div></a>
-<script>
-$(window).scroll(function () {
-console.log($(window).scrollTop());
-var to =  $(window).scrollTop();
-if(to>=500){
-$("#top").fadeIn(200);
-}else {
-$("#top").fadeOut(200);
-}
-});
-$("#top").click(function () {
-$("html,body").animate({scrollTop:0},2000);
-});
-</script>
-
-<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
-<div class="mdui-grid-tile">
-<img src="http://q1.qlogo.cn/g?b=qq&nk=3549518275&s=640"/>
+<!-- 侧栏 -->
+<div class="mdui-drawer mdui-drawer-close mdui-card-content" id="main-drawer">
+<div class="mdui-grid-tile "><br>
+<img src="./img/icon.gif"/>
 <div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-<h1>创极阁</h1>
-</div></div><br>
-<div class="mdui-card-content">
-<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/">首页</a>
-<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/Toolbox">工具箱</a>
-<a target="_blank" class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/MIUI">MIUI</a>
+<h1>小夜</h1>
+</div></div><b>
+<div class="">
+<a class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/">首页</a>
+<a class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/MIUI">MIUI</a>
+<a class="mdui-list-item mdui-btn" href="#国家级">国家级</a>
+<a class="mdui-list-item mdui-btn" href="#动漫&番剧">动漫&番剧</a>
+<a class="mdui-list-item mdui-btn" href="#插画&壁纸&图片">插画&壁纸&图片</a>
+<a class="mdui-list-item mdui-btn" href="#漫画">漫画</a>
+<a class="mdui-list-item mdui-btn" href="#小说&FM&音乐">小说&FM&音乐</a>
+<a class="mdui-list-item mdui-btn" href="#科技&数码">科技&数码</a>
+<a class="mdui-list-item mdui-btn" href="#资源&影视">资源&影视</a>
+<a class="mdui-list-item mdui-btn" href="#游戏">游戏</a>
+<a class="mdui-list-item mdui-btn" href="#技术&论坛&工具">技术&论坛&工具</a>
+<a class="mdui-list-item mdui-btn" href="#系统&镜像">系统&镜像</a>
+<a class="mdui-list-item mdui-btn" href="#SRC平台">SRC平台</a>
+<a class="mdui-list-item mdui-btn" href="#网络攻击">网络攻击</a>
+<a class="mdui-list-item mdui-btn" href="#工具平台">工具平台</a>
 </div>
 </div>
+<!-- 侧栏 -->
 
-<!-- 这随便的 -->
-<div class="mdui-tab mdui-container" mdui-tab>
-<div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电">
-<div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div></a></div>
-<a href="#tab1">トップページ</a>
-<a href="#tab2">文章</a>
-<a href="#tab3">外置</a>
-<a href="#tab4">留言.</a>
+<!-- 顶部分类 -->
+<div class="mdui-tab" mdui-tab>
+<div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div></a></div>
+<a href="#tab1">导航</a>
+<a href="#tab3">浏览器优化</a>
 <a href="#tab5">友情链接</a>
 </div>
+<!-- 顶部分类 -->
 
-
-
-<div class="mdui-container-fluid mdui-container">
-<div id="tab1"><br>
+<!-- 主要的内容 -->
+<div id="tab1">
+<!-- 图片 -->
+<div class="mdui-card-actions" style="width: 100%;height: 100%;position: fixed;background-image: url(https://w.wallhaven.cc/full/9m/wallhaven-9mex11.jpg);background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;">
 <!-- 公告 -->
-<marquee behavior="scroll" direction="left"><p>可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
+<marquee behavior="scroll" direction="left"><p class="mdui-container">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
+<!-- 特殊-->
+<div class="mdui-container mdui-card-primary-subtitle" style="font-size:1.3em;">特殊环境下的网络:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/A2zml/v2/">v2&魔法网络</a>, 腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div>
+<!-- 部分搜索引擎 -->
+<div class="mdui-container">
+<a href="https://google.jixiejidiguan.tk/" style="color: #99999F;">镜像Google搜索</a>｜
+<a target="_blank" href="https://www.google.com" style="color: #99999F;">Google搜索</a>｜
+<a target="_blank" href="https://cn.bing.com/" style="color: #99999F;">必应</a>
+</div>
+<!-- 部分搜索引擎 -->
 
-<h2><a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">点击加入QQ频道</a>
-</h2><!-- 居中 -->
-<center>
 <!-- 百度一下，你就知道 -->
-<a target="_blank" href="https://www.google.com" class="a"><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="240" height="99"></a>
 <form id="s" action="https://www.baidu.com/s" method="GET">
-<div class="search-bar">
+<div class="search-bar mdui-container">
 <i><a target="_blank" href="https://translate.google.cn/?op=translate"><img src="//ssl.gstatic.com/translate/favicon.ico" mdui-tooltip="{content: 'Google 翻译'}"></a></i>
 <input placeholder="百度一下，你就知道"  name="wd" value=""/>
 </div>
 </form>
-<h1 style="font-size: 1.5em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-<h2><a href="https://google.jixiejidiguan.tk/">Google镜像搜索</a></h2>
+<!-- 百度一下，你就知道 -->
 
-<!-- 开始 -->
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<!-- 随机一言 -->
+<h1 class="mdui-container" style="font-size:1.5em;bottom:0;position:absolute;" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</div>
+<!-- 图片 -->
+<br>
+
+<!-- 控制键离开边缘 -->
+<div class="mdui-container-fluid mdui-container">
+<!-- 导航内容 -->
+<div id="国家级" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">国家级</p></div><br>
-<div class="css-style-rainbow">
+<div class="css-style-rainbow" >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.gov.cn/">中国政府网_中央人民政府门户网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nrta.gov.cn/">国家广播电视总局</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.cnnvd.org.cn/">国家信息安全漏洞库</a>
@@ -168,10 +115,9 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.cert.org.cn/">国家互联网应急中心</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.12388.gov.cn/">中央纪委国家监委举报网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.12377.cn/">违法和不良信息举报中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://jubao.aq.163.com/">网易举报中心</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="动漫&番剧" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">动漫&番剧</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.bilibili.com/anime/">官方-哔哩哔哩</a>
@@ -181,8 +127,8 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.iqiyi.com/dongman/">官方-爱奇艺</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.mgtv.com/cartoon/">官方-芒果TV</a>
 
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.agefans.vip/">免费-AGE动漫</a>
-<!--<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.agefans.live/">免费-AGE动漫</a> -->
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.agemys.com/">免费-AGE动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.age.tv/">免费-AGE动漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.ysjdm.net/">免费-異世界動漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.dm233.cc/">免费-233动漫网</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.imomoe.ai/">免费-樱花动漫</a>
@@ -201,9 +147,10 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://nyaa.si/">翻墙-nyaa</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="插画&壁纸&图片" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">插画&壁纸&图片</p></div><br>
 <div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://petalica-paint.pixiv.dev/index_zh.html">Petalica paint -线稿自动上色服务-</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.pixiv.net/">翻墙-pixiv P站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://h.bilibili.com/">哔哩哔哩相簿，绘你所想，拍你所爱</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://space.bilibili.com/6823116#/album">哔哩哔哩壁纸站</a>
@@ -226,7 +173,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://safebooru.org/index.php?page=post&s=list">safebooru</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="漫画" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">漫画</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://dmzj.com/">官方-动漫之家</a>
@@ -246,7 +193,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://manga.bilibili.com/">官方-哔哩哔哩漫画</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="小说&FM&音乐" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">小说&FM&音乐</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://writer.muyewx.com/stack-room?enter_from=menu">免费-番茄</a>
@@ -269,7 +216,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://netease-music.fe-mm.com/">音乐-mmPlayer</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="科技&数码" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">科技&数码</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
@@ -279,7 +226,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ifanr.com/">爱范儿</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="资源&影视" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">资源&影视</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ygdy8.com/">资源-阳光电影</a>
@@ -303,11 +250,9 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.torlock2.com/">翻墙-torlock</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://pirateiro.eu">pirateiro</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://proxybb.com/">proxybb</a>
-
 </div>
 
-
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="游戏" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">游戏</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://store.steampowered.com/">官方-STEAM</a>
@@ -319,11 +264,10 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.shoutanhanhua.com/">手谈汉化组</a>
 </div>
 
-
-
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="技术&论坛&工具" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">技术&论坛&工具</p></div><br>
 <div class="css-style-rainbow">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://github.com/">GitHub</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
@@ -337,12 +281,11 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zoomeye.org/">钟馗之眼 - 网络空间搜索引擎</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="系统&镜像" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">系统&镜像</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://hellowindows.cn/">hellowindows</a>
@@ -358,7 +301,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="?url?https://developer.aliyun.com/mirror/">阿里巴巴开源镜像站-OPSX镜像站</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="SRC平台" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">SRC平台</p></div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sec.xiaomi.com/">小米安全中心</a>
@@ -370,7 +313,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://aq.163.com/">网易安全中心</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="网络攻击" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">网络攻击</p>鼠标放置图标上可以查看更多</div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://cybermap.kaspersky.com/" title="kaspersky：Find out where you are on the Cyberthreat map">CyberThreat</a>
@@ -382,7 +325,7 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://isecurity.huawei.com/sec/web/index.do" title="华为安全中心平台-安全态势">华为安全态势</a>
 </div>
 
-<br><div class="mdui-panel-item mdui-ripple mdui-grid-tile">
+<br><div id="工具平台" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">工具平台</p>鼠标放置图标上可以查看更多</div><br>
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.metasploit.com" title="开源的安全漏洞检测工具">metasploit-官网</a>
@@ -409,190 +352,95 @@ $("html,body").animate({scrollTop:0},2000);
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.charlesproxy.com/" title="Charles抓包工具 ">Charles抓包工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sploitus.com/" title="Sploitus | Exploit &amp; Hacktool Search Engine">Sploitus|Exploit</a>
 </div>
+<!-- 导航内容 -->
+</div>
+<!-- 控制键离开边缘 -->
 
-
-<br>
-<br>
-
-
-<footer clss="footer mdui-shadow-24">
-<b>
-<script type="text/javascript">//运行时间
-function show_runtime() {
-window.setTimeout("show_runtime()", 1000);
-X = new Date("02/22/2020 22:20:20");
-Y = new Date();
-T = (Y.getTime() - X.getTime());
-M = 24 * 60 * 60 * 1000;
-a = T / M;
-A = Math.floor(a);
-b = (a - A) * 24;
-B = Math.floor(b);
-c = (b - B) * 60;
-C = Math.floor((b - B) * 60);
-D = Math.floor((c - C) * 60);
-runtime_span.innerHTML = "网站在各种灾难中运行了: " + A + "天" + B + "小时" + C + "分" + D + "秒"
-}
-show_runtime();
-</script>
+<!-- footer -->
+<br><br>
+<footer class="mdui-container-fluid mdui-text-left">
+<script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("02/22/2020 22:20:20");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="网站在各种灾难中运行了: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
 <span id="runtime_span"></span><br>
 <!--统计 -->
 <script src="../stalye/js/zhucx.js"></script><br>
-<div class="copyright">Copyright © 2020 - 
-<script>
-Date.prototype.format = function (fmt) {
-var o = {
-"y+": this.getFullYear, 
-};
-if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-for (var k in o)
-if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-return fmt;
-}
-setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy');", 1000);
-</script>
-<span id="dateTime"></span> JIXIEJIDIGUAN ナビ姫. All Rights Reserved. 机械极地馆 版权所有</div>
-</b>
-</footer><br>
-<!-- 结束 -->
-</center>
-<!-- 居中 -->
+<div>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script> JIXIEJIDIGUAN ナビ姫. All Rights Reserved. 机械极地馆 版权所有</div>
+</footer>
+<!-- footer -->
 </div>
-<div id="tab2">
-<br>
-<div class="mdui-card-actions mdui-shadow-6">
- <!-- import vendor styles -->
-<link rel="stylesheet" href="article/vendor/blog.css">
-<script src="article/vendor/jquery-1.11.1.min.js"></script>
-<script src="article/vendor/marked-0.3.2.min.js"></script>
-<script src="article/vendor/blog.js"></script>
-<!-- main -->
-<div class="main" id="main">
-<div class="main-inner">
-<div class="main-page" id="main-page"></div>
-</div></div>
-<!-- main -->
-</div>
+<!-- 主要的内容 -->
 
-<br>
-</div>
+<!-- 浏览器优化 -->
+<div id="tab3" class="mdui-card-actions mdui-container"><br>
+<b class="mdui-color-pink">温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！</b><br><br>
+电脑版<br>
+电脑广告屏蔽插件推荐:(<a href="https://adguard.com/zh_cn/products.html">AdGuard </a> , <a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a> 该两款为浏览器插件，自己的度娘搜索。)<br>
+电脑脚本插件推荐:建议使用（Tampermonkey）插件<br><br>
+手机版<br>
+手机浏览器推荐：(<a href="https://viayoo.com/zh-cn/">via浏览器</a> 轻量级浏览器，支持JS脚本及广告屏蔽，推荐使用。), (<a href="http://b.mixiaba.com">米侠浏览器</a> 跟via浏览器一样，支持JS脚本及广告屏蔽。),（kiwibrowser浏览器 支持电脑插件，如:Tampermonkey ，使用起来还算可以。）<br><br>
+大众化脚本<br>
+<a href="https://tool.whgpc.com/Tools/viaPLUG/#/tabBar/home">via轻插件</a><br>
+<a href="https://greasyfork.org/zh-CN/help/installing-user-scripts">Tampermonkey（油猴）</a><br>
 
-<div id="tab3"><br><p><h3>
-<div class="mdui-card-actions mdui-shadow-6">
-开启广告屏蔽体验会更好！<br>
-电脑广告屏蔽插件:(<a href="https://adguard.com/zh_cn/products.html">AdGuard </a> , <a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a> 该两款为浏览器插件，自己的度娘搜索。)<br>
-第三方自定义屏蔽:<a href="https://cdn.jsdelivr.net/gh/o0HalfLife0o/list/ad3.txt">https://cdn.jsdelivr.net/gh/o0HalfLife0o/list/ad3.txt</a><br>
-手机浏览器推荐：(<a href="https://viayoo.com/zh-cn/">via浏览器</a> 支持广告屏蔽规则) <a href="http://b.mixiaba.com">米侠浏览器</a> （<a href="https://github.com/kiwibrowser/src/releases">kiwibrowser浏览器</a> 支持油猴插件）<br>
-<br>
-via轻插件(手机插件):<a href="https://tool.whgpc.com/Tools/viaPLUG/#/tabBar/home">官网地址</a><br>
-Tampermonkey（油猴）：<a href="https://greasyfork.org/zh-CN/help/installing-user-scripts">https://greasyfork.org</a><br>
-<br>
-<div class="mdui-card-primary-title">v2&魔法网络：<a href="/A2zml/v2/">点击访问</a></div>
-测速网：<a target="_blank" href="https://myplugin.speedtest.cn/#/">https://myplugin.speedtest.cn</a><br>
-<h2>网易云音乐下载</h2>
-<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6 mdui-container">
-<form id="s" action="http://music.163.com/song/media/outer/url" method="GET">
-<div class="mdui-textfield mdui-textfield-floating-label">
-<label class="mdui-textfield-label">网易云音乐 id</label>
-<input class="mdui-textfield-input"  name="id" value="" type="text"/>
-</div>
-</form>
+<!-- 浏览器优化内的其他内容 -->
+<div>
+<h1>其他内容</h1>
+一些还不错的查询工具：<a href="https://www.reg007.com/">你注册过哪些网站？一搜便知 - REG007</a>，
+<a href="https://monitor.firefox.com/" >Firefox Monitor</a>，
+<a href="https://haveibeenpwned.com/" >Have I been Pwned：检查您的电子邮件是否因数据泄露而受到损害</a>。<br><br>
 
+比较良心的临时网络传输工具：<a href="https://cowtransfer.com/">牛奶快传</a>，
+<a href="https://www.wenshushu.cn/">文件叔叔</a>，
+<a href="https://airportal.cn/">AirPortal 空投快传</a>，
+<a href="https://www.qsc.zju.edu.cn/box/">Box - 求是潮云U盘</a>,
+<a href="https://anonfiles.com">匿名文件上传</a>网络不稳定的。<br>
+<a href="https://www.lanzou.com/">蓝奏·云存储</a> 容量无限，上传下载不限速，只是上传文件限制大小。<br><br>
 
-</div>
+可以不需要特殊工具也可以使用的：<a href="https://coderschool.cn/1853.html" >谷歌镜像</a>，
+<a href="https://scholar.chongbuluo.com/" >学术搜索</a>，
+<a href="https://ac.scmor.com/" >谷歌学术镜像</a>。<br><br>
 
-</div></h3></p></div>
+如果你不想要自己的邮箱注册账号可以要以下的临时邮箱注册：
+<a href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a>，
+<a href="https://www.guerrillamail.com/zh/inbox" target="_blank">Guerrilla 临时邮件系统</a>，
+<a href="https://www.moakt.com/zh/" target="_blank">Moakt Email || 临时邮箱专业服务</a>，
+<a href="https://tempmail.cn/" target="_blank">临时邮箱 - 十秒钟内收到邮件</a>。<br><br>
 
-<div id="tab4"><br><p>
-<div class="mdui-card-actions mdui-shadow-6">
-<div class="mdui-tab mdui-container" mdui-tab>
-<a href="#luitab1">安全</a>
-<a href="#luitab2">稳定</a>
-</div>
-<br>
-<div class="mdui-container-fluid">
-<div id="luitab1">
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC81NDQ4Mi8zMDk1Mw==">
-<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-</script>
-</div>
-<!-- City版安装代码已完成 -->
-</div>
-
-<div id="luitab2">
-<script src="//jixiejidiguan.top/A2zml/css/Valine.min.js"></script>
-<div id="vcomments"></div>
-<script>
-new Valine({
-el: '#vcomments',
-appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',
-appKey: 'z27CGdACRU9SqaK38an2ie5L',
-avatar: '' ,// (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
-placeholder: "欢迎留言(●'◡'●)",
-highlight: 'false',
-avatarForce: 'false',
-recordIP: 'false',
-});
-</script>
-</div>
-</div>
-</div>
+一些实用的手机电脑软件：
+手机电脑版：<a target="_blank" href="https://www.google.cn/intl/zh-CN/chrome/">Google浏览器</a>，
+手机版:<a target="_blank" href="https://www.zarchiver.me/download-zarchiver/">解压-zarchiver</a>，
+电脑版:<a target="_blank" href="https://www.7-zip.org/">7-ZIP解压</a>，
+电脑程序卸载:<a target="_blank" href="https://geekuninstaller.com">geekuninstaller</a>，
+手机电脑版:<a target="_blank" href="https://telegram.org/" title="">telegram（电报）</a>需要翻墙<br>简体中文包:<a href="https://t.me/setlanguage/classic-zh-cn" target="_blank">https://t.me/setlanguage/classic-zh-cn</a>
 <br><br>
 
-</p></div>
+</div>
+<!-- 浏览器优化内的其他内容 -->
+</div>
+<!-- 浏览器优化 -->
 
 <!-- 友情链接 -->
-<div id="tab5"><p>
-<div class="mdui-card-actions mdui-shadow-6">
-欢迎大家来申请友情链接。<br>
+<div id="tab5" class="mdui-card-actions mdui-container"><br>
+欢迎大家来申请友情链接。<br><br>
 申请条件：<br>
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
 4.且无影响阅读体验的广告<br>
-申请格式：URL+网站名称<br>
-<a href="mailto:aedelnz@111.com" class="mdui-col-4"><img src="//static-gamecenter.biligame.net/images/contact/mail.2dfc9d83.svg">
-aedelnz@111.com</a><br><br>
-<div class="mdui-grid-tile mdui-card-actions mdui-shadow-6">
+申请格式：URL+网站名称<br><br>
+<div class="mdui-grid-tile mdui-card-actions mdui-shadow-2">
 <ol>友情链接</ol>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.arsrna.cn">Ar-Sr-Na</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://srsg.moe/">白鹭学园</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://srsg.moe">白鹭学园</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="">待添加</a>
-
-</div></p></div>
+</div>
+</div>
 <!-- 友情链接 -->
 
-</div>
-</div>
-
-
-
-</div>
 
 
 
 
 
-<!-- 音乐播放器 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<div class="aplayer" data-id="3111626385" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.6" ></div>
-<script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script>
-<script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
-<!-- 音乐播放器 -->
 </body>
 <!-- body -->
-<noscript><meta http-equiv="refresh" content="0; URL=https://www.baidu.com/"></noscript><!-- 百度 -->
 </html>
