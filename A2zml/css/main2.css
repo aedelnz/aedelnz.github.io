@@ -1,16 +1,4 @@
-a {
-	color:#585858;
-}
-body {
-	background-color:#f7f7f7;
-	color:#585858;
-	font-size:125%;
-	font-family:Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
-}
-body.safe-browsing {
-	background-color:rgb(206,52,38);
-	color:white;
-}
+
 button {
 	background:rgb(76,142,250);
 	border:0;
@@ -58,17 +46,6 @@ button:hover {
 #error-debugging-info {
 	font-size:0.8em;
 }
-h1 {
-	-webkit-margin-after:16px;
-	color:#585858;
-	font-size:1.6em;
-	font-weight:normal;
-	line-height:1.25em;
-}
-h2 {
-	font-size:1.2em;
-	font-weight:normal;
-}
 .hidden {
 	display:none;
 }
@@ -107,7 +84,7 @@ input[type=checkbox] {
 	-webkit-margin-start:32px;
 }
 .safe-browsing:-webkit-any(
-            a,#details,#details-button,h1,h2,p,.small-link) {
+            a,#details,#details-button,.small-link) {
 	color:white;
 }
 .safe-browsing button {
