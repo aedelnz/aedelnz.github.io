@@ -10,6 +10,7 @@
 <head>
 <title>JIXIEJIDIGUAN ナビ姫.</title>
 <meta charset="utf-8"/>
+<meta name="referrer" content="no-referrer" />
 <meta name="keywords" content="JIXIEJIDIGUAN ナビ姫." />
 <meta name="description" content="一切归于美好！" />
 <link rel="icon" href="./img/icon.gif" />
@@ -27,7 +28,7 @@
 
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
-<div class="mdui-toolbar"><a  href="./"><span class="mdui-typo-title"><img class="mdui-img-circle" src="./img/icon.gif" width="60"></span></a>
+<div class="mdui-toolbar"><a  href="./" class="mdui-typo-title"><img class="mdui-img-circle" src="./img/icon.gif" width="60"></a>
 <div class="mdui-toolbar-spacer"></div>
 <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_right</i></span>
 </div>
@@ -63,10 +64,11 @@
 
 <!-- 顶部分类 -->
 <div class="mdui-tab" mdui-tab>
-<div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger"><span class="elec-trigger-icon icon"></span>为TA充电</div></a></div>
+<div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
+<div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #285624;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
-<a href="#tab3">浏览器优化</a>
-<a href="#Game">T-Rex Game</a>
+<a href="#tab3">浏览优化</a>
+<a href="#Game">T-Rex</a>
 <a href="#tab5">友情链接</a>
 </div>
 <!-- 顶部分类 -->
@@ -78,13 +80,11 @@
 <div class="mdui-card-actions" style="width: 100%;height: 100%;position: fixed;background-image: url(https://w.wallhaven.cc/full/9m/wallhaven-9mex11.jpg);background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;">
 <!-- 公告 -->
 <marquee behavior="scroll" direction="left"><p class="mdui-container">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
-<!-- 特殊-->
-<div class="mdui-container mdui-card-primary-subtitle" style="font-size:1.3em;">特殊环境下的网络:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/A2zml/v2/">v2&魔法网络</a>, 腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div><br>
 <!-- 部分搜索引擎 -->
 <div class="mdui-container">
-<a href="https://google.jixiejidiguan.tk/" style="color: #99999F;">镜像Google搜索</a>｜
-<a target="_blank" href="https://www.google.com" style="color: #99999F;">Google搜索</a>｜
-<a target="_blank" href="https://cn.bing.com/" style="color: #99999F;">必应</a>
+<a href="https://google.jixiejidiguan.tk/" class="mdui-btn" style="color: #99999F;">镜像Google搜索</a>｜
+<a target="_blank" href="https://www.google.com" class="mdui-btn" style="color: #99999F;">Google搜索</a>｜
+<a target="_blank" href="https://cn.bing.com/" class="mdui-btn" style="color: #99999F;">必应</a>
 </div>
 <!-- 部分搜索引擎 -->
 
@@ -96,9 +96,11 @@
 </div>
 </form>
 <!-- 百度一下，你就知道 -->
+<!-- 特殊-->
+<div class="mdui-container" style="font-size:1.3em;color: #FFFFFF;">腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div><br>
 
 <!-- 随机一言 -->
-<h1 class="mdui-container mdui-container-fluid" style="font-size:1.5em;bottom:0;position:absolute;" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
+<div class="mdui-container"><h1 class="mdui-container-fluid" style="font-size:1.5em;bottom:10px;position:absolute;color: #FFFFFF;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
 <!-- 图片 -->
@@ -276,7 +278,6 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zoomeye.org/">钟馗之眼 - 网络空间搜索引擎</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
 </div>
 
