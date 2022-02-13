@@ -21,7 +21,7 @@
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 
 <!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-appbar mdui-appbar-fixed" style="background-color: #FFFFFF;">
 <div class="mdui-toolbar">
 <a href="" class="mdui-typo-headline">画的个人记录</a>
 <div class="mdui-toolbar-spacer"></div>
@@ -32,7 +32,7 @@
 
 
 <section class="mdui-grid-tile mdui-shadow-2" style="width: 100%;background-color: #000000;padding: 0px 0;">
-<div style="height: 99.8%;left: 0;width: 100%;background-position: 50%;background-repeat: no-repeat;background-size: cover;opacity: 0!important;transition: opacity .3s;z-index: 2;background-image: url(&quot;https://images.imfurry.com/&quot;); opacity: 1 !important; transition: opacity 0s ease 0s !important;">
+<div style="height: 99.8%;left: 0;width: 100%;background-position: 50%;background-repeat: no-repeat;background-size: cover;opacity: 0!important;transition: opacity .3s;z-index: 2;background-image: url(&quot;https://s.jixiejidiguan.top/Api/random.php&quot;); opacity: 1 !important; transition: opacity 0s ease 0s !important;">
 <div  class="mdui-center" style="top: 32%;width: 100%;font-size: 22px;height: 61.8%;z-index: 4;text-align: center;color: #FFFFFF;bottom: 0;position: absolute;"><h1>画的个人记录.</h1>
 <h2 style="font-size: 1.5em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h2>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
@@ -41,75 +41,56 @@
 
 
 <section style1="width: 100%;background-color: #89c2ff;padding: 8px 0;">
-<style>
+<style type="text/css">
+.slide-box::-webkit-scrollbar {display: none;}
+.slide-box{margin-top: 2px;display: -webkit-box;overflow-x: scroll;-webkit-overflow-scrolling:touch;padding-left: 10px;}
+.slide-item{width: 250px;height: 200px;border:2px solid #ccc;margin-right: 30px;border-radius: 6px;}
 .mdui-card-primary-title a {color: #FFFFff;}
-.mdui-hoverable {border-radius: 20px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;}
+.mdui-hoverable {font-size: 2.5em;border-radius: 6px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;}
 </style>
+
 <h3 style="text-align: center;font-family: YouYuan;font-size: 2.5em;">内置</h3>
-<div class="mdui-container mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5" style="word-wrap:break-word;word-break:break-all;">
-	
-<div class="mdui-col"><div class="mdui-card mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/4.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
+<div class="slide-box">
+
+<div class="slide-item"><div class="mdui-hoverable" style="width: 100%;height: 100%;background-image: url(./stalye/img/1.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
 <a href="/A2zml/" >
-<div class="mdui-color-theme mdui-typo-headline">JIXIEJIDIGUAN ナビ姫.<b class="mdui-card mdui-color-indigo-accent">导航</b></div></a>
-</div></div></div><br></div>
+<div class="mdui-card-primary mdui-color-theme mdui-typo-headline">JIXIEJIDIGUAN ナビ姫.<b class="mdui-card mdui-color-indigo-accent">导航</b></div></a>
+</div></div><br></div></div>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/5.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
+<div class="slide-item"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 100%;background-image: url(./stalye/img/2.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
 <a href="/MIUI/" >
-<div class="mdui-color-theme mdui-typo-headline">机小米 CC9e 个人 ROM 仓库<b class="mdui-card mdui-color-indigo-accent">刷机包</b></div></a>
-</div></div></div><br></div>
-</div>
+<div class="mdui-card-primary mdui-color-theme mdui-typo-headline">机小米 CC9e 个人 ROM 仓库<b class="mdui-card mdui-color-indigo-accent">刷机包</b></div></a>
+</div></div><br></div></div>
 
 </div>
+
 <h3 style="text-align: center;font-family: YouYuan;font-size: 2.5em;">外置</h3>
-<div class="mdui-container mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5" style="word-wrap:break-word;word-break:break-all;">
+<div class="slide-box">
+<ul class="mdui-list" mdui-collapse="{accordion: true}"><li class="mdui-collapse-item"><div class="mdui-collapse-item-header mdui-list-item mdui-ripple"><a href="https://jixiejidiguan.baklib-free.com" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">机械极地馆<b class="mdui-card mdui-color-indigo-accent">博客</b></div></a><i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i></div><ul class="mdui-collapse-item-body mdui-list mdui-list-dense"><a href="http://blog.jixiejidiguan.tk/" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline"><b class="mdui-card mdui-color-indigo-accent">备用博客</b></div></a></ul></li>
+</ul>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/1.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="https://jixiejidiguan.baklib-free.com" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">机械极地馆<b class="mdui-card mdui-color-indigo-accent">博客</b></div></a>
-</div></div></div><br></div>
-
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/3.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
+<ul class="mdui-list" mdui-collapse="{accordion: true}"><li class="mdui-collapse-item"><div class="mdui-collapse-item-header mdui-list-item mdui-ripple"><a href="http://yunpan.jixiejidiguan.tk/" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">JIXIEJIDIGUAN 云盘</div></a><i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i></div><ul class="mdui-collapse-item-body mdui-list mdui-list-dense"><a href="http://t-s.jixiejidiguan.top/" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">临时存储<b class="mdui-card mdui-color-indigo-accent">服务</b></div></a></ul></li>
+</ul>
 <a href="https://y.jixiejidiguan.top" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">异次元<b class="mdui-card mdui-color-indigo-accent">论坛</b></div></a>
-</div></div></div><br></div>
+<div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">异次元<b class="mdui-card mdui-color-indigo-accent">论坛</b></div></a>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/2.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
 <a href="http://s.jixiejidiguan.top" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">超自然的幻想异世界<b class="mdui-card mdui-color-indigo-accent">API</b></div></a>
-</div></div></div><br></div>
+<div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">超自然的幻想异世界<b class="mdui-card mdui-color-indigo-accent">API</b></div></a>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/3.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="http://t-s.jixiejidiguan.top/" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">临时存储<b class="mdui-card mdui-color-indigo-accent">服务</b></div></a>
-</div></div></div><br></div>
+<ul class="mdui-list" mdui-collapse="{accordion: true}"><li class="mdui-collapse-item"><div class="mdui-collapse-item-header mdui-list-item mdui-ripple"><a href="http://host.jixiejidiguan.top/" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">THE HEART <b class="mdui-card mdui-color-indigo-accent">主机</b></div></a><i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i></div><ul class="mdui-collapse-item-body mdui-list mdui-list-dense"><a href="http://sdnd.jixiejidiguan.top/" target="_blank"><div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline"><b class="mdui-card mdui-color-indigo-accent">域名分发</b></div></a></ul></li>
+</ul>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/1.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="http://yunpan.jixiejidiguan.tk/" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">JIXIEJIDIGUAN 云盘<b class="mdui-card mdui-color-indigo-accent">存储</b></div></a>
-</div></div></div><br></div>
-
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/2.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="http://blog.jixiejidiguan.tk/" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">JIXIEJIDIGUAN<b class="mdui-card mdui-color-indigo-accent">备用博客</b></div></a>
-</div></div></div><br></div>
-
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/3.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
 <a href="http://google.jixiejidiguan.tk/" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">Google<b class="mdui-card mdui-color-indigo-accent">镜像搜索</b></div></a>
-</div></div></div><br></div>
+<div class="mdui-card-primary mdui-card-primary-title mdui-typo-headline">Google<b class="mdui-card mdui-color-indigo-accent">镜像搜索</b></div></a>
 
-<div class="mdui-col"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 25%;background-image: url(./stalye/img/1.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="http://sdnd.jixiejidiguan.top/" target="_blank">
-<div class="mdui-card-primary-title mdui-typo-headline">视帝逆岛<b class="mdui-card mdui-color-indigo-accent">域名分发</b></div></a>
-</div></div></div><br></div>
+
 </div>
+
 
 <div class="mdui-card-content">
 <h2>实践是检验真理的唯一标准。</h2>
 </div>
 </section>
-
-
 
 
 <section style=" width: 100%;background-color: #9d9d9d;padding: 68px 0;color: #ffffff;">

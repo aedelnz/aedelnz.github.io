@@ -21,30 +21,22 @@
 <!-- MDUI -->
 <link rel="stylesheet" href="../stalye/mdui/css/mdui.css" >
 <script src="../stalye/mdui/js/mdui.js"></script>
+<style>
+</style>
 </head>
 
 <!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
-
-<!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
-<div class="mdui-toolbar"><a  href="./" class="mdui-typo-title"><img class="mdui-img-circle" src="./img/icon.gif" width="60"></a>
-<div class="mdui-toolbar-spacer"></div>
-<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_right</i></span>
-</div>
-</div>
-<!-- 顶部内容全部结束 -->
-
+<body class="mdui-appbar-with-toolbar mdui-loaded mdui-appbar-with-tab .mdui-drawer-body-left">
 <!-- 侧栏 -->
-<div class="mdui-drawer mdui-drawer-close mdui-card-content" id="main-drawer">
-<div class="mdui-grid-tile "><br>
+<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
+<div class="mdui-grid-tile mdui-card-content"><br>
 <img src="./img/icon.gif"/>
 <div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
 <h1>小夜</h1>
-</div></div><b>
+</div></div><br>
 <div class="">
-<a class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense"  href="/">首页</a>
-<a class="mdui-list-item mdui-table-fluid mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/MIUI">MIUI</a>
+<a class="mdui-card-primary-title mdui-list-item mdui-btn"  href="/">首页</a>
+<a class="mdui-card-primary-title mdui-list-item mdui-btn" href="/MIUI">MIUI</a>
 <a class="mdui-list-item mdui-btn" href="#国家级">国家级</a>
 <a class="mdui-list-item mdui-btn" href="#动漫&番剧">动漫&番剧</a>
 <a class="mdui-list-item mdui-btn" href="#插画&壁纸">插画&壁纸</a>
@@ -62,6 +54,8 @@
 </div>
 <!-- 侧栏 -->
 
+<!-- 顶部内容全部开始 -->
+<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
 <!-- 顶部分类 -->
 <div class="mdui-tab" mdui-tab>
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
@@ -72,16 +66,16 @@
 <a href="#tab5">友情链接</a>
 </div>
 <!-- 顶部分类 -->
+</div>
+<!-- 顶部内容全部结束 -->
 
 
 <!-- 主要的内容 -->
 <div id="tab1">
-<!-- 图片 -->
-<div class="mdui-card-actions" style="width: 100%;height: 100%;position: fixed;background-image: url(https://w.wallhaven.cc/full/9m/wallhaven-9mex11.jpg);background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;">
 <!-- 公告 -->
-<marquee behavior="scroll" direction="left"><p class="mdui-container">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</p></marquee>
+<p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 <!-- 部分搜索引擎 -->
-<div class="mdui-container">
+<div class="mdui-container-fluid">
 <a href="https://google.jixiejidiguan.tk/" class="mdui-btn" style="color: #99999F;">镜像Google搜索</a>｜
 <a target="_blank" href="https://www.google.com" class="mdui-btn" style="color: #99999F;">Google搜索</a>｜
 <a target="_blank" href="https://cn.bing.com/" class="mdui-btn" style="color: #99999F;">必应</a>
@@ -90,24 +84,23 @@
 
 <!-- 百度一下，你就知道 -->
 <form id="s" action="https://www.baidu.com/s" method="GET">
-<div class="search-bar mdui-container">
+<div class="search-bar mdui-container-fluid">
 <i><a target="_blank" href="https://translate.google.cn/?op=translate"><img src="//ssl.gstatic.com/translate/favicon.ico" mdui-tooltip="{content: 'Google 翻译'}"></a></i>
 <input placeholder="百度一下，你就知道"  name="wd" value=""/>
+<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">format_align_right</i></span>
 </div>
 </form>
 <!-- 百度一下，你就知道 -->
-<!-- 特殊-->
-<div class="mdui-container" style="font-size:1.3em;color: #FFFFFF;">腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div><br>
 
 <!-- 随机一言 -->
-<div class="mdui-container"><h1 class="mdui-container-fluid" style="font-size:1.5em;bottom:10px;position:absolute;color: #FFFFFF;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
+<div class="mdui-container-fluid"><h1 class="mdui-container-fluid" style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-</div>
-<!-- 图片 -->
+<!-- 特殊-->
+<div class="mdui-container-fluid" style="font-size:1.3em;">腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div><br>
 <br>
 
 <!-- 控制键离开边缘 -->
-<div class="mdui-container-fluid mdui-container">
+<div class="mdui-container-fluid">
 <!-- 导航内容 -->
 <div id="国家级" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">国家级</p></div><br>
@@ -119,6 +112,7 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.cert.org.cn/">国家互联网应急中心</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.12388.gov.cn/">中央纪委国家监委举报网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.12377.cn/">违法和不良信息举报中心</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nlc.cn/">中国国家图书馆</a>
 </div>
 
 <br><div id="动漫&番剧" class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -195,14 +189,24 @@
 <br><div id="小说&FM&音乐" class="mdui-panel-item mdui-ripple mdui-grid-tile">
 <p class="mdui-btn">小说&FM&音乐</p></div><br>
 <div class="css-style-rainbow">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://writer.muyewx.com/stack-room?enter_from=menu">免费-番茄</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wtzw.com/">免费-梧桐-七猫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.biquge7.com/">免费-笔趣阁</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.linovel.net/">免费-轻之文库</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.qidian.com/">官方-起点中文网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://book.qq.com/">官方-QQ阅读</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://faloo.com/">官方-飞卢</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.qidian.com/">官方-起点</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jjwxc.net/">腐女-晋江文学城</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.xxsy.net/">官方-潇湘书院</a><br>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.zongheng.com/">官方-纵横中文网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jjwxc.net/">晋江文学城</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.xxsy.net/">潇湘书院</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.linovel.net/">轻之文库</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://writer.muyewx.com/stack-room?enter_from=menu">免费-番茄小说网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wtzw.com/">免费-梧桐中文网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.biquge7.com/">免费-笔趣阁</a><br>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jiumodiary.com/">鸿摩搜索</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://shuge.org/">书格</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://pdfbook.cn/">云海电子图书馆</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.amazon.cn/Kindle%E5%85%8D%E8%B4%B9%E7%94%B5%E5%AD%90%E4%B9%A6/b/ref=amb_link_3?ie=UTF8&node=116175071&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-leftnav&pf_rd_r=QA09QX96YRZ5BVM6D6DF&pf_rd_r=QA09QX96YRZ5BVM6D6DF&pf_rd_t=101&pf_rd_p=047e4bfa-1996-4eba-bf3c-4dcb84fb6933&pf_rd_p=047e4bfa-1996-4eba-bf3c-4dcb84fb6933&pf_rd_i=116169071">亚马逊免费电子</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.huiyankan.com/">慧眼看</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.kgbook.com/">苦瓜书盘</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://haodoo.net/">好读</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.pdfzj.com/">PDF之家</a><br>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://m.missevan.com/">官方-猫耳FM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://fm.qq.com/">官方-企鹅FM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qingting.fm/">官方-蜻蜓FM</a>
@@ -212,6 +216,7 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://y.qq.com/">官方-QQ音乐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.kuwo.cn/">官方-酷我音乐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://netease-music.fe-mm.com/">音乐-mmPlayer</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.lalal.ai/zh-hans/">lalal.ai</a>
 </div>
 
 <br><div id="科技&数码" class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -219,9 +224,16 @@
 <div class="css-style-rainbow">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://ithome.com/">IT之家</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.feng.com/">威锋</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.guokr.com/">果壳</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.36kr.com/">36氪</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://sspai.com/">少数派</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ifanr.com/">爱范儿</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://readhub.cn/topics">readhub</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.zealer.com/">zealer</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.dgtle.com/">数字尾巴</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.pingwest.com/">品玩</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
 </div>
 
 <br><div id="资源&影视" class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -259,6 +271,7 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.origin.com/">官方-Origin</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.gog.com/">官方-GOG</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.wegame.com.cn/">官方-WeGame</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.taptap.com/">taptap</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.shoutanhanhua.com/">手谈汉化组</a>
 </div>
 
@@ -269,17 +282,18 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://github.com/">GitHub</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.csdn.net/">CSDN</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.52pojie.cn/">吾爱破解 </a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.4hou.com/">嘶吼 </a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.sec-wiki.com/">SecWiki</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.freebuf.com/">FreeBuf</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.anquanke.com/">安全客</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.anquanke.com/">安全客</a><br>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.2cto.com/">红黑联盟</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.csdn.net/">CSDN</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.jianshu.com/">简书</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ipip.net/ip.html">IP查询</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://img.top/">图片压缩</a>
 </div>
 
 <br><div id="系统&镜像" class="mdui-panel-item mdui-ripple mdui-grid-tile">
@@ -367,7 +381,7 @@
 <!-- 主要的内容 -->
 
 <!-- 浏览器优化 -->
-<div id="tab3" class="mdui-card-actions mdui-container"><br>
+<div id="tab3" class="mdui-card-actions"><br>
 <b class="mdui-color-pink">温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！</b><br><br>
 电脑版<br>
 电脑广告屏蔽插件推荐:(<a href="https://adguard.com/zh_cn/products.html">AdGuard </a> , <a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a> 该两款为浏览器插件，自己的度娘搜索。)<br>
@@ -416,7 +430,7 @@
 <!-- 浏览器优化 -->
 
 <!-- T-Rex Game -->
-<div id="Game" class="mdui-card-actions mdui-container"><br>
+<div id="Game" ><br>
 
 <script type="text/javascript" src="css/main.js?ver=1"></script>
 <link href='css/main.css' rel='stylesheet' type='text/css'>
@@ -452,7 +466,7 @@ hideClass("onlyforchrome");
 <!-- T-Rex Game -->
 
 <!-- 友情链接 -->
-<div id="tab5" class="mdui-card-actions mdui-container"><br>
+<div id="tab5" class="mdui-card-actions"><br>
 欢迎大家来申请友情链接。<br><br>
 申请条件：<br>
 1.不接受没有原创内容的站点<br>
@@ -465,6 +479,7 @@ hideClass("onlyforchrome");
 <ol>友情链接</ol>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.arsrna.cn">Ar-Sr-Na</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="https://srsg.moe">白鹭学园</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://xsear.ch">未知搜索</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn" href="">待添加</a>
 </div>
 </div>
