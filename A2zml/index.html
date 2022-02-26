@@ -25,7 +25,7 @@
 </head>
 
 <!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-loaded mdui-appbar-with-tab .mdui-drawer-body-left">
+<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-appbar-with-tab .mdui-drawer-body-left">
 <!-- 侧栏 -->
 <div class="mdui-drawer mdui-drawer-close" id="main-drawer">
 <div class="mdui-grid-tile mdui-card-content"><br>
@@ -60,6 +60,7 @@
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
 <div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #285624;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
+<a href="#zy">主页</a>
 <a href="#tab3">浏览优化</a>
 <a href="#Game">T-Rex</a>
 <a href="#tab5">友情链接</a>
@@ -68,14 +69,19 @@
 </div>
 <!-- 顶部内容全部结束 -->
 
-
+<div id="zy">
+<div style="display: flex;justify-content: center;align-items: center;z-index: 999999999;top: 0;">
+<iframe src="Home.html" border="none" scrolling="no" seamless="" width="100%" height="100%" style="border: none;box-shadow: 0 4px 16px rgba(0, 0, 0, .12);"></iframe>
+</div>
+</div>
 <!-- 主要的内容 -->
-<div id="tab1">
+<div id="tab1"><br>
 <!-- 公告 -->
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 
-<div style="width: 100%;text-align: center;padding-top: 15px;padding-bottom: 15px;">
-<a style="font-size: 2em;white-space: normal;word-wrap: break-word;text-decoration: none;color: #232323"><img style="width: 198px;height: 65px;max-width: 250px;animation: flipInX 4s;-webkit-animation: flipInX 4s;" src="https://www.baidu.com/img/PC_880906d2a4ad95f5fafb2e540c5cdad7.png"></a>
+<div style="max-height: 310px;position: relative;z-index: 0;text-align: center;">
+<img hidefocus="true" id="s_lg_img_aging" class="index-logo-aging-tools" src="//www.baidu.com/img/PC_880906d2a4ad95f5fafb2e540c5cdad7.png" width="270" height="129" onerror="this.src='//www.baidu.com/img/flexible/logo/pc/index@2.png';this.onerror=null;" usemap="#mp">
+<map name="mp"><area style="outline:none;" hidefocus="true" shape="rect" coords="0,0,270,129" href="//www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC%E5%86%AC%E5%A5%A5%E4%BC%9A&amp;sa=ire_dl_gh_logo_texing&amp;rsv_dl=igh_logo_pcs" onmousedown="return ns_c({fm: 'tab', tab: 'felogo', rsv_platform: 'wwwhome' })" target="_blank" title="看赛事 上百度"></map>
 </div>
 
 <!-- 部分搜索引擎 -->
@@ -292,8 +298,8 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.sec-wiki.com/">SecWiki</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.freebuf.com/">FreeBuf</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://freessl.cn/">FreeSSL</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.anquanke.com/">安全客</a><br>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.2cto.com/">红黑联盟</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.anquanke.com/">安全客</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.2cto.com/">红黑联盟</a><br>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://c.runoob.com/">菜鸟工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://tool.chinaz.com/">站长工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.ipip.net/ip.html">IP查询</a>
