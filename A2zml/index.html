@@ -27,11 +27,12 @@
 <!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-appbar-with-tab .mdui-drawer-body-left">
 <!-- 侧栏 -->
-<div class="mdui-drawer mdui-drawer-close" id="main-drawer">
+<div class="mdui-drawer mdui-drawer-close" id="main-drawer" style="background-color: var(--light-navbar);-webkit-transition: all .5s;-moz-transition: all .5s;-o-transition: all .5s;box-shadow: 0.15rem 0.15rem 0.3rem rgba(0,0,0,.08), 0 0 0 transparent;">
+
 <div class="mdui-grid-tile mdui-card-content"><br>
-<img src="./img/icon.gif"/>
+<img src="./img/wz.jpg">
 <div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-<h1>小夜</h1>
+<h1>嬴政</h1>
 </div></div><br>
 <div class="">
 <a class="mdui-card-primary-title mdui-list-item mdui-btn"  href="/">首页</a>
@@ -54,9 +55,10 @@
 <!-- 侧栏 -->
 
 <!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50">
+<div class="mdui-appbar mdui-appbar-fixed mdui-color-grey-50" >
+
 <!-- 顶部分类 -->
-<div class="mdui-tab" mdui-tab>
+<div class="mdui-tab" style="background-color: var(--light-navbar);-webkit-transition: all .5s;-moz-transition: all .5s;-o-transition: all .5s;box-shadow: 0.15rem 0.15rem 0.3rem rgba(0,0,0,.08), 0 0 0 transparent;" mdui-tab>
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
 <div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #285624;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
@@ -76,6 +78,16 @@
 </div>
 <!-- 主要的内容 -->
 <div id="tab1"><br>
+<div style="
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+	background:url(./img/wz.jpg);"></div>
 <!-- 公告 -->
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 
@@ -498,8 +510,13 @@ hideClass("onlyforchrome");
 
 
 
+<div class="mdui-fab-wrapper">
+<a href="#" ontouchstart=""><button class="mdui-fab mdui-fab-mini mdui-ripple"style="border-radius: 5%;"><i class="mdui-icon material-icons">&#xe316;</i></button></a>
+</div>
 
-
+<style>
+:root{--primary-light:#8abdff;--primary:#6d5dfc;--light-navbar:#E4EBF8;--dark-navbar:#191c23;--primary-dark:#2f2f32;--primary-dark-2:#39393c;--greyLight-1:#E4EBF8;--greyLight-2:#c8d0e7;--greyLight-3:#1c1c1d;--greyDark:#091318;--greyBodyDark:#1a1d24;--a-dark-hover:#68a7eb;--white:#ffffff;--darkorange:rgb(255,153,0)}body{color:#999;font-size:14px;-webkit-font-smoothing:antialiased;font-family:"Microsoft Yahei Light","Microsoft Yahei",PingFangSC-Regular,Helvetica,sans-serif;line-height:1.80857;background-color:var(--greyLight-1);letter-spacing:.1em;-o-user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none}body{-o-user-select:text;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;-khtml-user-select:text;user-select:text}a,body,code,h3,h3:hover,td,th{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}a{color:#1f1f1f;text-decoration:none !important;outline:0 !important}a:hover{color:var(--darkorange)}h1,h2,h3,h4,h5,h6{letter-spacing:0;font-weight:400;position:relative;padding:0 0 10px 0;font-weight:400;line-height:120% !important;color:#333;margin:0}h1{font-size:24px}h2{font-size:22px}h3{font-size:18px}h4{font-size:16px}h5{font-size:14px}h6{font-size:13px}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#212121;text-decoration:none !important;opacity:1}h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{opacity:.8}li,ol,ul{margin:0;list-style:none;padding:0}
+</style>
 </body>
 <!-- body -->
 </html>

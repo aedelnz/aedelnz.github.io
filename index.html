@@ -21,7 +21,7 @@
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 
 <!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-fixed" style="background-color: #FFFFFF;">
+<div class="mdui-appbar mdui-appbar-fixed" style="background-color: var(--light-navbar);-webkit-transition: all .5s;-moz-transition: all .5s;-o-transition: all .5s;box-shadow: 0.15rem 0.15rem 0.3rem rgba(0,0,0,.08), 0 0 0 transparent;">
 <div class="mdui-toolbar">
 <a href="" class="mdui-typo-headline">画的个人记录</a>
 <div class="mdui-toolbar-spacer"></div>
@@ -32,8 +32,16 @@
 
 
 <section class="mdui-grid-tile mdui-shadow-2" style="width: 100%;background-color: #000000;padding: 0px 0;">
-<div style="height: 99.8%;left: 0;width: 100%;background-position: 50%;background-repeat: no-repeat;background-size: cover;opacity: 0!important;transition: opacity .3s;z-index: 2;background-image: url(&quot;https://s.jixiejidiguan.top/Api/random.php&quot;); opacity: 1 !important; transition: opacity 0s ease 0s !important;">
-<div  class="mdui-center" style="top: 32%;width: 100%;font-size: 22px;height: 61.8%;z-index: 4;text-align: center;color: #FFFFFF;bottom: 0;position: absolute;"><h1>画的个人记录.</h1>
+<div style="
+border-radius: 2%;
+background: #e6eef4;
+box-shadow:  35px 35px 70px #dde4ea,-35px -35px 70px #eff8fe;
+height: 32.8%;left: 0;width: 100%;background-position: 50%;background-repeat: no-repeat;background-size: cover;opacity: 0!important;transition: opacity .3s;z-index: 2;background-image: url(&quot;https://s.jixiejidiguan.top/Api/random.php&quot;); opacity: 1 !important; transition: opacity 0s ease 0s !important;">
+<div  class="mdui-center" style="
+border-radius: 0px;
+background: #e6eef4c2;
+box-shadow:  5px 5px 0px#e6eef4b5,-5px -5px 0px #e6eef4b5;
+width: 100%;font-size: 22px;height: 100%;z-index: 4;text-align: center;color: #FFFFFF;bottom: 0;position: absolute;"><br><h1>画的个人记录.</h1>
 <h2 style="font-size: 1.5em" id="hitokoto"><a href="#" id="hitokoto_text"> 获取中...</a></h2>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div></div>
@@ -42,7 +50,6 @@
 
 <section style1="width: 100%;background-color: #89c2ff;padding: 8px 0;">
 <style type="text/css">
-.slide-box::-webkit-scrollbar {display: none;}
 .slide-box{margin-top: 2px;display: -webkit-box;overflow-x: scroll;-webkit-overflow-scrolling:touch;padding-left: 10px;}
 .slide-item{width: 250px;height: 200px;border:2px solid #ccc;margin-right: 30px;border-radius: 6px;}
 .mdui-card-primary-title a {color: #FFFFff;}
@@ -51,16 +58,16 @@
 
 <h3 style="text-align: center;font-family: YouYuan;font-size: 2.5em;">内置</h3>
 <div class="slide-box">
-
-<div class="slide-item"><div class="mdui-hoverable" style="width: 100%;height: 100%;background-image: url(./stalye/img/1.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="/A2zml/" >
-<div class="mdui-card-primary mdui-color-theme mdui-typo-headline">JIXIEJIDIGUAN ナビ姫.<b class="mdui-card mdui-color-indigo-accent">导航</b></div></a>
-</div></div><br></div></div>
-
-<div class="slide-item"><div class="mdui-card  mdui-hoverable" style="width: 100%;height: 100%;background-image: url(./stalye/img/2.webp);"><div class="mdui-card-primary"><div class="mdui-card-primary-title">
-<a href="/MIUI/" >
-<div class="mdui-card-primary mdui-color-theme mdui-typo-headline">机小米 CC9e 个人 ROM 仓库<b class="mdui-card mdui-color-indigo-accent">刷机包</b></div></a>
-</div></div><br></div></div>
+<ul class="mdui-list" mdui-collapse="{accordion: true}"><li class="mdui-collapse-item">
+<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i></div><ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+</ul></li></ul>
+<a href="/A2zml/" ><div class="mdui-card-primary mdui-color-theme mdui-typo-headline">JIXIEJIDIGUAN ナビ姫.<b class="mdui-card mdui-color-indigo-accent">导航</b></div></a>
+<ul class="mdui-list" mdui-collapse="{accordion: true}"><li class="mdui-collapse-item">
+<div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i></div><ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+</ul></li></ul>
+<a href="/MIUI/" ><div class="mdui-card-primary mdui-color-theme mdui-typo-headline">机小米 CC9e 个人 ROM 仓库<b class="mdui-card mdui-color-indigo-accent">刷机包</b></div></a>
 
 </div>
 
@@ -93,7 +100,7 @@
 </section>
 
 
-<section style=" width: 100%;background-color: #9d9d9d;padding: 68px 0;color: #ffffff;">
+<section style=" width: 100%;padding: 68px 0;">
 <!-- 卡片的副标题 -->
 <div class="mdui-card-primary mdui-valign">
 <div class="mdui-card-primary-title mdui-center" style="text-align: center;"><h2>国漫收藏</h2></div>
@@ -153,8 +160,8 @@ $("#bilibili").append(str);
 </script>
 </section>
 
-<section style="width: 100%;background-color: #b0eeff;padding: 68px 0;">
-<h1 class="mdui-container" style="color: #ffffff;">友情链接</h1>
+<section style="width: 100%;-background-color: #b0eeff;padding: 68px 0;">
+<h1 class="mdui-container">友情链接</h1>
 <div  style="overflow: hidden;">
 <div id="Links"></div>
 <script>
@@ -186,7 +193,7 @@ $("#Links").append(str);
 
 <section class="about">
 <!-- 卡片的副标题 -->
-<h3>关于我们</h3>
+<div class="mdui-card-actions"><h1>关于我们</h1></div>
 <!-- 卡片的副标题 -->
 <br><br>
 <p>我们将致力于更好的服务和体验，努力提升 JIXIEJIDIGUAN 的整体服务水平。</p>
@@ -194,9 +201,16 @@ $("#Links").append(str);
 </section>
 
 
-<footer id="底部">
+
+
+<div class="mdui-fab-wrapper">
+<a href="#" ontouchstart=""><button class="mdui-fab mdui-fab-mini mdui-ripple"style="border-radius: 5%;"><i class="mdui-icon material-icons">&#xe316;</i></button></a>
+</div>
+
+<footer id="底部" class="footer">
 <div class="inner mdui-container">
-<nav class="nav left">
+<nav class="nav left" style="color: #999;
+    font-size: 13px;">
 <a class="nav-link last" href="#">返回顶部</a>
 <a class="nav-link last" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
 <a class="nav-link last" target="_blank"  href="https://afdian.net/@JIXIEJIDIGUAN">爱发电</a>
@@ -204,13 +218,18 @@ $("#Links").append(str);
 <a class="nav-link last" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
 </nav>
 <nav class="nav right">
-<a target="_blank" class="nav-link mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.12377.cn/">违法和不良信息举报中心</a>
+<a target="_blank" class="nav-link mdui-grid-tile" href="https://www.12377.cn/">违法和不良信息举报中心</a>
 </nav>
 </div>
-<p><a  href="https://beian.miit.gov.cn" style="color: #FFFFFF; line-height: 16px; font-size: 14px; padding: 0 18px;">湘ICP备2022000040号</a>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录. </p>
+<p><a  href="https://beian.miit.gov.cn" style="line-height: 16px; font-size: 14px; padding: 0 18px;">湘ICP备2022000040号</a>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录. </p>
 <div class="mdui-panel-item-body"><script src="./stalye/js/zhucx.js"></script></div>
 </footer>
-
+<!-- 页脚 -->
 </body>
+
+
+<style>
+:root{--primary-light:#8abdff;--primary:#6d5dfc;--light-navbar:#E4EBF8;--dark-navbar:#191c23;--primary-dark:#2f2f32;--primary-dark-2:#39393c;--greyLight-1:#E4EBF8;--greyLight-2:#c8d0e7;--greyLight-3:#1c1c1d;--greyDark:#091318;--greyBodyDark:#1a1d24;--a-dark-hover:#68a7eb;--white:#ffffff;--darkorange:rgb(255,153,0)}body{color:#999;font-size:14px;-webkit-font-smoothing:antialiased;font-family:"Microsoft Yahei Light","Microsoft Yahei",PingFangSC-Regular,Helvetica,sans-serif;line-height:1.80857;background-color:var(--greyLight-1);letter-spacing:.1em;-o-user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none}body{-o-user-select:text;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;-khtml-user-select:text;user-select:text}a,body,code,h3,h3:hover,td,th{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}a{color:#1f1f1f;text-decoration:none !important;outline:0 !important}a:hover{color:var(--darkorange)}h1,h2,h3,h4,h5,h6{letter-spacing:0;font-weight:400;position:relative;padding:0 0 10px 0;font-weight:400;line-height:120% !important;color:#333;margin:0}h1{font-size:24px}h2{font-size:22px}h3{font-size:18px}h4{font-size:16px}h5{font-size:14px}h6{font-size:13px}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#212121;text-decoration:none !important;opacity:1}h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover{opacity:.8}li,ol,ul{margin:0;list-style:none;padding:0}
+</style>
 </html>
 

@@ -1,10 +1,14 @@
 
-
+body {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity
+}
 /* about */
 .about {
     width: 100%;
-    background-color: #000000;
     padding: 68px 0;
+	box-shadow: 0 0 0 transparent, -0.2rem -0.2rem 0.4rem rgba(255,255,255,.45);
 }
 .about p {
     color: #717275;
@@ -17,11 +21,16 @@
 
 /* footer */
 footer {
+    border: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    background: var(--greyLight-1);
+    border-radius: 1em;
     width: 100%; 
-    background-color: #000000;
-    color: #FFFFFF;
     border-top: #EFEFEF solid 1px;
     padding: 46px 0;
+	box-shadow: 0 0 0 transparent, -0.2rem -0.2rem 0.4rem rgba(255,255,255,.45);
 }
 footer .nav {
     display: inline-flex;
@@ -30,7 +39,6 @@ footer .left {
     float: left; 
 }
 footer .left a.nav-link {
-    color: #FFF;
     border-right: #b8c7bf solid 1px;
     line-height: 16px;
     font-size: 14px;
@@ -40,7 +48,6 @@ footer .right {
     float: right;
 }
 footer .right a.nav-link {
-    color: #FFFFFF;
     line-height: 16px;
     font-size: 14px;
     padding: 0 8px;
@@ -57,7 +64,19 @@ nav.paginator ul.pagination li.active a {
     background: #000;
 }
 
-
-
+/*拟态*/
+.mdui-card {
+    position: relative;
+    height: 100px;
+    margin: 20px 0 20px;
+    padding: 15px;
+    border-radius: 1em;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none
+}
 
 
