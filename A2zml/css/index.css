@@ -41,38 +41,31 @@ footer a {
 
 
 .css-style-rainbow a:nth-child(7n+1) {
-  background-color: rgba(255, 78, 106, .21);
-  color: #f76d2c;
+  background-color: rgba(255, 78, 106, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+2) {
-  background-color: rgba(255, 118, 30, .21);
-  color: #ff761e;
+  background-color: rgba(255, 118, 30, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+3) {
-  background-color: rgba(255, 185, 0, .21);
-  color: #ffb900;
+  background-color: rgba(255, 185, 0, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+4) {
-  background-color: rgba(51, 213, 122, .21);
-  color: #33d57a;
+  background-color: rgba(51, 213, 122, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+5) {
-  background-color: rgba(0, 219, 255, .21);
-  color: #00dbff;
+  background-color: rgba(0, 219, 255, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+6) {
-  background-color: rgba(26, 152, 255, .21);
-  color: #1a98ff;
+  background-color: rgba(26, 152, 255, .04);
   font-weight:900;
 }
 .css-style-rainbow a:nth-child(7n+7) {
-  background-color: rgba(144, 144, 255, .21);
-  color: #9090ff;
+  background-color: rgba(144, 144, 255, .04);
   font-weight:900;
 }
 -body {
@@ -161,15 +154,15 @@ opacity: 98%;
 
 /* 爱发电 */
 .elec .elec-trigger {
-    background: #0008ff;
-    border-radius: 6px;
+    background: #0008ff0f;
+    border-radius: 1px;
     box-shadow: 0 4px 4px rgba(255,112,159,.3);
-    color: #fff;
+    color: #20252f;
     cursor: pointer;
     display: inline-block;
-    font-size: 18px;
-    line-height: 50px;
-    padding: 0 24px;
+    font-size: 14px;
+    line-height: 35px;
+    padding: 0 10px;
 }
 
 

@@ -60,7 +60,7 @@
 <!-- 顶部分类 -->
 <div class="mdui-tab" style="background-color: var(--light-navbar);-webkit-transition: all .5s;-moz-transition: all .5s;-o-transition: all .5s;box-shadow: 0.15rem 0.15rem 0.3rem rgba(0,0,0,.08), 0 0 0 transparent;" mdui-tab>
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
-<div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #285624;" class="elec-trigger">魔法网络</div></a></div>
+<div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #2856244d;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
 <a href="#zy">主页</a>
 <a href="#tab3">浏览优化</a>
@@ -77,18 +77,26 @@
 </div>
 </div>
 <!-- 主要的内容 -->
-<div id="tab1"><br>
+<div id="tab1">
+<div style="background-color: #e4ebf88f;
+color: #4f545d;
+z-index: -1;
+left: 0;
+top: 0;
+width: 100%;
+height: 91%;">
 <div style="
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-position: center top !important;
-    background-repeat: no-repeat !important;
-	background:url(./img/wz.jpg);"></div>
-<!-- 公告 -->
+position: absolute;
+z-index: -1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-position: center top !important;
+background-repeat: no-repeat !important;
+background:url(./img/wz.jpg);"></div>
+
+<!-- 公告 --><br>
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 
 <div style="max-height: 310px;position: relative;z-index: 0;text-align: center;">
@@ -98,9 +106,9 @@
 
 <!-- 部分搜索引擎 -->
 <div class="mdui-container-fluid">
-<a href="https://google.jixiejidiguan.tk/" class="mdui-btn" style="color: #99999F;">镜像Google搜索</a>｜
-<a target="_blank" href="https://www.google.com" class="mdui-btn" style="color: #99999F;">Google搜索</a>｜
-<a target="_blank" href="https://cn.bing.com/" class="mdui-btn" style="color: #99999F;">必应</a>
+<a href="https://google.jixiejidiguan.tk/" class="mdui-btn" style="color: #464a4e;">镜像Google搜索</a>｜
+<a target="_blank" href="https://www.google.com" class="mdui-btn" style="color: #464a4e;">Google搜索</a>｜
+<a target="_blank" href="https://cn.bing.com/" class="mdui-btn" style="color: #464a4e;">必应</a>
 </div>
 <!-- 部分搜索引擎 -->
 
@@ -120,7 +128,15 @@
 <!-- 特殊-->
 <div class="mdui-container-fluid" style="font-size:1.3em;">腾讯新推出的:<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&inviteCode=1533BA&from=246610&biz=ka">QQ频道</a></div><br>
 <br>
-
+</div>
+<style>
+.mdui-container-fluid .mdui-panel-item {
+	background-color: #e4ebf8;
+}
+.css-style-rainbow a {
+	background-color: #e4ebf8;
+}
+</style>
 <!-- 控制键离开边缘 -->
 <div class="mdui-container-fluid">
 <!-- 导航内容 -->
@@ -391,7 +407,18 @@
 
 <!-- footer -->
 <br><br>
-<footer class="mdui-container-fluid mdui-text-left">
+<footer class="mdui-container-fluid mdui-text-left" style="
+border: none;
+cursor: pointer;
+background: rgba(0, 0, 0, 0);
+position: relative;
+background: var(--greyLight-1);
+border-radius: 1em;
+width: 100%; 
+border-top: #EFEFEF solid 1px;
+padding: 0px 0;
+box-shadow: 0 0 0 transparent, -0.2rem -0.2rem 0.4rem rgba(255,255,255,.45);">
+	
 <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("02/22/2020 22:20:20");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="网站在各种灾难中运行了: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
 <span id="runtime_span"></span><br>
 <!--统计 -->
