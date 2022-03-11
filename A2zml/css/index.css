@@ -1,30 +1,9 @@
 /* 圆角 */
-.mdui-grid-tile{
+.css-style-rainbo a {
   border-radius: 6px
 }
 
-.mdui-panel-item {
-    color: rgba(0, 0, 0, 0.87);
-    background-color: rgb(255 255 255 / 78%);
-	font-weight:900;
-}
-body {
-	font-weight:900;
-	color: #99999F !important;
-}
-body a{
-	text-decoration:none;/* outline:0; */
-	}
-body p {
-	font-weight:900;
-}
 
-/* 显示遮罩层 */
-.mdui-overlay-show {
-  visibility: visible;
-  opacity: 1;
-  background-color: #fff0; 
-}
 
 footer {
     width: 100%; 
@@ -68,6 +47,7 @@ footer a {
   background-color: rgba(144, 144, 255, .04);
   font-weight:900;
 }
+
 -body {
 width: 100%;
 height: 100%;
@@ -114,7 +94,7 @@ opacity: 98%;
   margin: 7px 8px 8px;
   height: 45px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .24);
-  background: #fafafa52;
+  background: #fff;
   align-items: center;
   border-radius: 2px;
 }
@@ -149,7 +129,7 @@ opacity: 98%;
   color: white;
 }
 .mdui-theme-layout-dark .search-bar > input::placeholder {
-  color: rgba(255, 255, 255, .70);
+  color: rgba(255, 255, 255, .90);
 }
 
 /* 爱发电 */
