@@ -94,7 +94,7 @@ opacity: 98%;
   margin: 7px 8px 8px;
   height: 45px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .24);
-  background: #fff;
+  background: rgba(255,255,255,.64);
   align-items: center;
   border-radius: 2px;
 }
@@ -136,12 +136,10 @@ opacity: 98%;
 .elec .elec-trigger {
     background: #0008ff0f;
     border-radius: 1px;
-    box-shadow: 0 4px 4px rgba(255,112,159,.3);
     color: #20252f;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
-    line-height: 35px;
     padding: 0 10px;
 }
 
