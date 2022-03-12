@@ -4,33 +4,16 @@ body {
     -moz-transition-property: -moz-transform, opacity;
     transition-property: transform, opacity
 }
-/* about */
-.about {
-    width: 100%;
-    padding: 68px 0;
-	box-shadow: 0 0 0 transparent, -0.2rem -0.2rem 0.4rem rgba(255,255,255,.45);
-}
-.about p {
-    color: #717275;
-    text-align: center;
-    width: 100%;
-    margin: 8px auto;
-    font-size: 16px;
-    display: block;
-}
 
 /* footer */
 footer {
-    border: none;
     cursor: pointer;
+    color: 000;
     background: rgba(0, 0, 0, 0);
     position: relative;
-    background: var(--greyLight-1);
-    border-radius: 1em;
     width: 100%; 
     border-top: #EFEFEF solid 1px;
-    padding: 46px 0;
-	box-shadow: 0 0 0 transparent, -0.2rem -0.2rem 0.4rem rgba(255,255,255,.45);
+    padding: 14px 0;
 }
 footer .nav {
     display: inline-flex;
@@ -42,7 +25,7 @@ footer .left a.nav-link {
     border-right: #b8c7bf solid 1px;
     line-height: 16px;
     font-size: 14px;
-    padding: 0 8px;
+    padding: 0 2px;
 }
 footer .right {
     float: right;
@@ -54,29 +37,9 @@ footer .right a.nav-link {
 }
 footer p {
     text-align: center;
-    margin: 65px 0 0;
+    margin: 6px 0 0;
 }
 nav {
     text-align: center;
 }
-nav.paginator ul.pagination li.active a {
-    color: #fff;
-    background: #000;
-}
-
-/*拟态*/
-.mdui-card {
-    position: relative;
-    height: 100px;
-    margin: 20px 0 20px;
-    padding: 15px;
-    border-radius: 1em;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none
-}
-
 
