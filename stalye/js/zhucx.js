@@ -36,8 +36,6 @@ document.write("<br><script id=\"LA-DATA-WIDGET\" crossorigin=\"anonymous\" src=
 //document.write("<div class=\"deng-box\"><div class=\"deng\"><div class=\"xian\"><\/div><div class=\"deng-a\"><div class=\"deng-b\"><div class=\"deng-t\">节<\/div><\/div><\/div><div class=\"shui shui-a\"><div class=\"shui-c\"><\/div><div class=\"shui-b\"><\/div><\/div><\/div><\/div>");
 //document.write("<div class=\"deng-box1\"><div class=\"deng\"><div class=\"xian\"><\/div><div class=\"deng-a\"><div class=\"deng-b\"><div class=\"deng-t\">春<\/div><\/div><\/div><div class=\"shui shui-a\"><div class=\"shui-c\"><\/div><div class=\"shui-b\"><\/div><\/div><\/div><\/div>");
 
-//Google接入
-document.write("<script async src=\"https:\/\/pagead2.googlesyndication.com\/pagead\/js\/adsbygoogle.js?client=ca-pub-1395760639983308\" crossorigin=\"anonymous\"><\/script>");
 (function() {
 if(document.getElementById('zgttyy')){
 rerurn;
