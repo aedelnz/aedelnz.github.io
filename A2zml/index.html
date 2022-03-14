@@ -44,8 +44,10 @@ background:#f0f0f0;
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
 <div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #2856244d;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
+<a href="#rs">热搜</a>
 <a href="#xc">宣传</a>
 <a href="#yy">音乐</a>
+<a href="#jx">解析</a>
 <a href="#tab3">浏览优化</a>
 <a href="#Game">T-Rex</a>
 <a href="#tab5">友情链接</a>
@@ -436,12 +438,21 @@ opacity: 98%;
 <br></div>
 <!-- 主要的内容 -->
 
+<div id="rs" class="mdui-container">
+<div style="text-align:center">
+
+<iframe src="https://top.baidu.com/board?platform=wise"  width="343.5157421289355px" height="100%" style="
+border-radius: 8px;background-color:#fff;padding: 0px 0;
+border: none;box-shadow: 0 4px 16px rgba(0, 0, 0, .12);"></iframe>
+
+</div></div>
+
 <!-- 宣传 -->
-<div id="xc" class="mdui-container"><br>
+<div id="xc" class="mdui-container">
 <div style="text-align:center">
 
 <iframe src="https://fzapph5.gjfzpt.cn/#/spread/spreadList"  width="343.5157421289355px" height="100%" style="
-border-radius: 8px;background-color:#fff;padding: 8px 0;
+border-radius: 8px;background-color:#fff;padding: 0px 0;
 border: none;box-shadow: 0 4px 16px rgba(0, 0, 0, .12);"></iframe>
 
 </div></div>
@@ -451,12 +462,11 @@ border: none;box-shadow: 0 4px 16px rgba(0, 0, 0, .12);"></iframe>
 <div style="text-align:center width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 
 <style>
-body {max-height: 100%;-webkit-overflow-scrolling: touch;-ms-overflow-scrolling: touch;overflow-scrolling: touch;}
+.content {max-height: 100%;-webkit-overflow-scrolling: touch;-ms-overflow-scrolling: touch;overflow-scrolling: touch;}
 .content {color: #525252;font-size: 15px;line-height: 1.5;font-weight: 400;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;text-rendering: geometricPrecision;-moz-osx-font-smoothing: grayscale;-webkit-font-smoothing: antialiased;-webkit-tap-highlight-color: transparent;font-family: -apple-system,'Helvetica Neue',Helvetica,'Nimbus Sans L',Arial,'Liberation Sans','PingFang SC','Hiragino Sans GB','Source Han Sans CN','Source Han Sans SC','Microsoft YaHei','Wenquanyi Micro Hei','WenQuanYi Zen Hei','ST Heiti',SimHei,'WenQuanYi Zen Hei Sharp',sans-serif;}
 .content {margin: 0 5%;padding: 10px 0 3px;}
 meting-js {background: #fff;}
 </style>
-
 <div class="content">
  <meting-js server="netease" type="playlist" id="3111626385" listmaxheight="450px" theme="orange"></meting-js>
 </div>
@@ -467,6 +477,94 @@ meting-js {background: #fff;}
 
 </div></div>
 <!-- 宣传 -->
+<div id="jx" class="mdui-container"><br>
+<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+<div class="mdui-container-fluid">
+<style>
+.lllll{filter:invert(100%);}
+.lllll{display:none;top:0;no-repeat center;background-color:rgba(255,255,255,0);-webkit-background-size:0.8rem;background-size:0.8rem;width:1.5rem;height:100%;right:0;position:absolute;cursor:pointer}
+.hdfgh{height:2.5rem;padding-bottom: 7rem;}
+.searchs{height:100%;width:100%;}
+.jdgds{    margin-bottom: 0.5rem;height:100%;width:100%;border-radius:0.3rem;padding:0 0.6rem}
+.searchs .from{margin-bottom: 0.5rem;height:100%;position:relative;display:inline-block;width:100%;}
+.searchs .text{    border: 1px solid var(--br);font-size:0.8rem;height:100%;padding:0 1.5rem 0 0.6rem;border-radius:0.3rem;width:100%}
+.dpppp{    height: 100%;display: flex;}
+.searchs .button,.searchs .button2{font-size:0.8rem;height:100%;    width: 100%;display:inline-block;white-space:nowrap;cursor:pointer;background-color:#67c23a;border:0;color:#fff;-webkit-appearance:none;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;margin:0;border-radius:0.3rem;filter:var(--brightness85)}
+.searchs .button2{margin-left:0.5rem;background-color:#e6a23c}
+.spiframe {height: 13rem;border: 0;}
+</style>
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<div class="centers">
+<div class="hdfgh">
+<select class="jdgds">
+		<option value="https://z1.m1907.cn/?jx=">M1907</option> 
+		<option value="https://okjx.cc/?url=">OK解析</option>
+		<option value=""></option>
+</select>
+<div class="searchs">
+<div class="from">
+<input name="url" id="url" type="text" class="text" placeholder="输入视频播放地址" autocomplete="off" value="">
+<div class="lllll"></div>
+</div>
+<div class="dpppp">
+<input name="doplayers" type="button" id="doplayers" class="button" onClick="jiexi()" value="立即播放">
+<input name="doplayers" type="button" id="doplayers" class="button2" onClick="adddd()" value="新窗口">
+</div>
+</div>
+</div>
+<div id="ckplays">
+<iframe class="spiframe" id="jiekou" name="jiekou" width="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="background-color:#000;" frameborder="0"></iframe>
+</div>                                                                                  
+</div>
+</main>
+<script type="text/javascript">
+$(".jdgds option[value='"+Storage.getItem('jxjiekou')+"']").attr('selected',true);
+$("#url").val(Storage.getItem('jxurl'));
+$("#doplayers").on("click", function() {
+    players();
+	kklljj();
+});
+function kklljj(){
+	jiekou=$(".jdgds").val();
+	url=$("#url").val();
+	Storage.setItem("jxjiekou",jiekou);
+	Storage.setItem("jxurl",url);
+}
+function players() {
+    var a = $('#url').val();
+    if ($('#url').val() == "") {
+        //alert('请输入视频网站网址！');
+        $('#url').focus();
+        return (false)
+    }
+}
+var jiekou = $(".jdgds").val();
+function jiexi(){
+	var url = $("#url").val();
+	jiekou=$(".jdgds").val();
+	
+	//if(url.indexOf("://")==-1){
+	//	url = "http://"+document.getElementById("url").value;
+	//}
+
+		document.getElementById("jiekou").src = jiekou + url;
+}
+function adddd(){
+	var url = $("#url").val();
+	jiekou=$(".jdgds").val();
+	kklljj();
+	window.open(jiekou + url); 
+}
+if($("#url").val()!='') $('.lllll').show();
+$(".lllll").click(function(){$("#url").val('');$(this).hide();$("#url").focus();Storage.setItem("jxurl",'');});
+$("#url").bind('input propertychange',function(event){
+$(".lllll").show();
+if($("#url").val()=='') $(".lllll").hide();
+});
+</script>
+</div></div></div>
+
+
 <!-- 浏览器优化 -->
 <div id="tab3" class="mdui-container"><br>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
