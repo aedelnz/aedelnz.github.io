@@ -31,26 +31,11 @@ console.log('%c 地址 http://jixiejidiguan.top','font-size:35px;color:#ff8400;'
 document.write(unescape("%3Cspan id='cnzz_stat_icon_1279931368'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1279931368%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));
 //我要拉
 document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=document,i=p,c=\"\".concat(\"https:\"===e.location.protocol?\"https://\":\"http://\",\"sdk.51.la/js-sdk-pro.min.js\"),n=e.createElement(\"script\"),r=e.getElementsByTagName(\"script\")[0];n.type=\"text/javascript\",n.setAttribute(\"charset\",\"UTF-8\"),n.async=!0,n.src=c,n.id=\"LA_COLLECT\",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:\"JMIJZqK4MvC0pOsF\",ck:\"JMIJZqK4MvC0pOsF\"});</script>")
-document.write("<br><script id=\"LA-DATA-WIDGET\" crossorigin=\"anonymous\" src=\"https:\/\/v6-widget.51.la\/v6\/JMIJZqK4MvC0pOsF\/quote.js?theme=0&f=12&display=0,1,1,1,1,1,1,0\"><\/script>");
+document.write("<br><script id=\"LA-DATA-WIDGET\" crossorigin=\"anonymous\" src=\"https:\/\/v6-widget.51.la\/v6\/JMIJZqK4MvC0pOsF\/quote.js?theme=0&f=8&display=0,1,1,1,1,1,1,0\"><\/script>");
 //春节
 //document.write("<div class=\"deng-box\"><div class=\"deng\"><div class=\"xian\"><\/div><div class=\"deng-a\"><div class=\"deng-b\"><div class=\"deng-t\">节<\/div><\/div><\/div><div class=\"shui shui-a\"><div class=\"shui-c\"><\/div><div class=\"shui-b\"><\/div><\/div><\/div><\/div>");
 //document.write("<div class=\"deng-box1\"><div class=\"deng\"><div class=\"xian\"><\/div><div class=\"deng-a\"><div class=\"deng-b\"><div class=\"deng-t\">春<\/div><\/div><\/div><div class=\"shui shui-a\"><div class=\"shui-c\"><\/div><div class=\"shui-b\"><\/div><\/div><\/div><\/div>");
 
-(function() {
-if(document.getElementById('zgttyy')){
-rerurn;
-}
-var font_style = document.createElement("style");
-    font_style.type = 'text/css';
-font_style.id="zgttyy";
-    str = " html,body,table,tr,td,th,tbody,form,article,div,dt,ul,ol,li,dl,dd,section,footer,nav,strong,aside,header,label,address,bdo,big,blockquote,caption,em,center,cite,dialog,dir,fieldset,figcaption,figure,main,pre,small,h1,h2,h3,h4,h5,h6:not([class*='icon']):not(.fa):not(.fas):not(i) {font-family: 'PingFang SC','Heiti SC','myfont','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','HanHei SC', 'sans-serif' ,'icomoon','Icons' ,'brand-icons' ,'FontAwesome','Material Icons','Material Icons Extended','Glyphicons Halflings'  !important;} *{text-shadow:1px 1px 10px #d0d0d0 !important; font-weight:bold !important;font-family: 'PingFang SC','Microsoft YaHei';}";
-font_style.appendChild(document.createTextNode(str));
-var head=document.getElementsByTagName("head");
-if(head.length>0&&head[0].appendChild(font_style)){
-}else{
-document.body.appendChild(font_style);
-}
-})();
 
 (function() {
 if(document.getElementById('toTopLikeKuAn')){
