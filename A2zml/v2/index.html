@@ -17,8 +17,6 @@
 <!-- MDUI -->
 <link rel="stylesheet" href="/stalye/mdui/css/mdui.css" >
 <script src="/stalye/mdui/js/mdui.js"></script>
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <style>
 body {
 background:#f0f0f0;
@@ -42,8 +40,7 @@ background:#f0f0f0;
 <!-- 顶部内容全部结束 -->
 <br>
 
-<script language="javascript">
-<!--
+<!--<script language="javascript">
 loopy();
 function loopy() {
 var sWord = prompt("此网页属于私密网页已经进行加密处理了。密码是:223(注意:如果点击取消网页将会空白。)");
@@ -64,8 +61,8 @@ location.replace("about:blank");
 window.close();
 }
 }
-//-->
-</script>
+
+</script>-->
 <div class="mdui-container">
 
 
@@ -83,7 +80,7 @@ window.close();
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
 <h1>订阅源</h1>
-<li><a href="https://jixiejidiguan.top/A2zml/v2/Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.1.10</li>
+<li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.3.19</li>
 可用于[v2rayN，WinXray，v2rayNG，Shadowrocket]。<br><br><hr>
 来自YouTube（工具大师i）的订阅<br>
 ➊ V2ray订阅:http://121.4.209.91:8888/down/BN5zl6LknQ1L<br>
@@ -97,11 +94,11 @@ window.close();
 1.速度问题根据个人网络而言，此为免费提供，不定时更新，节点存活随缘<br>
 2.工具建议使用V2ray相关工具，兼容协议种类较多<br>
 <br>
-<li>仅提供学习查阅资料使用，禁止进行任何违法行为</li>
-<li>速度因人而异，自行测试选择测试体验</li>
+<li>仅提供学习查阅资料使用，禁止进行任何违法行为，如果被请去喝茶🍵，不管该网站的事。</li>
+<li>所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</li>
 <li>节点中带有“CF”开头指的是使用知名减速器 Cloudflare（纯属防墙备用）</li>
 <br>
-<div id="Links"></div>
+<div id="v2"></div>
 <script>
 $(function(){    
 $.ajax({    
@@ -118,7 +115,7 @@ $.each(data,function(i,n){
 str+="<div class='mdui-card-actions mdui-shadow-2' style='border-radius: 6px;'><div class='mdui-card-primary-subtitle'>"+n.title+"</div><div class='mdui-textfield dy'>"+n.content+"</div></div><br>";
 });    
 str+="</div>";    
-$("#Links").append(str);
+$("#v2").append(str);
 }    
 });    
 });   

@@ -18,7 +18,6 @@
 <link rel="icon" href="./img/icon.gif" />
 <link rel="icon" href="../stalye/img/DHL.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../stalye/index.css" >
 <link rel="stylesheet" href="./css/index.css" >
 <!-- MDUI -->
 <link rel="stylesheet" href="../stalye/mdui/css/mdui.css?v=1.0" >
@@ -32,7 +31,12 @@ background:#f0f0f0;
 <!-- head -->
 <!-- body -->
 <body class="mdui-appbar-with-toolbar .mdui-loaded .mdui-appbar-with-tab .mdui-drawer-body-left">
-
+<!--统计 -->
+<div class="mdui-panel-item-body">
+<link rel="stylesheet" href="../stalye/index.css" >
+<script src="../stalye/js/zhucx.js"></script>
+</div>
+<!--统计 -->
 
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
@@ -42,7 +46,7 @@ background:#f0f0f0;
 <div class="elec"><a href="/JIXIEJIDIGUAN" title="爱发电"><div class="elec-trigger">为TA充电</div></a></div>
 <div class="elec"><a target="_blank" href="/A2zml/v2/"><div style="background: #285624;" class="elec-trigger">魔法网络</div></a></div>
 <a href="#tab1">导航</a>
-<a href="#xc">宣传</a>
+<a href="#xc" title="国家反诈中心">宣传</a>
 <a href="#yy">音乐</a>
 <a href="#jx">解析</a>
 <a href="#tab3">浏览优化</a>
@@ -56,40 +60,40 @@ background:#f0f0f0;
 <!-- 主要的内容 -->
 <div id="tab1" class="mdui-container">
 <!-- 百度搜索图标 -->
-<br><div class="mdui-progress">
-  <div class="mdui-progress-indeterminate"></div>
-</div>
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
-
-
+<br><div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <!-- 公告 -->
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 <!-- 公告 -->
-<div class="mdui-grid-tile">
-  <a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm"><img src="https://www.12377.cn/app/2/31.jpg"/></a>
-</div>
-<div style="max-height: 310px;position: relative;z-index: 0;text-align: center;">
-<img hidefocus="true" id="s_lg_img_aging" class="index-logo-aging-tools" src="//www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png" width="270" height="129" onerror="this.src='//www.baidu.com/img/flexible/logo/pc/index@2.png';this.onerror=null;" usemap="#mp">
-<map name="mp"><area style="outline:none;" hidefocus="true" shape="rect" coords="0,0,270,129" href="//www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C&amp;sa=ire_dl_gh_logo_texing&amp;rsv_dl=igh_logo_pcs" onmousedown="return ns_c({fm: 'tab', tab: 'felogo', rsv_platform: 'wwwhome' })" target="_blank" title="点击一下，了解更多"></map>
+<div class="mdui-list-item-content mdui-container mdui-grid-tile" style="max-height: 310px;position: relative;z-index: 0;text-align: center;">
+<a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm">
+<img class="mdui-img-rounded" src="https://www.12377.cn/app/2/31.jpg"/></a>
 </div>
 
 <!-- 百度搜索图标 -->
-<!-- 部分搜索引擎 -->
-<a href="https://google.jixiejidiguan.tk/" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" >镜像Google搜索</a>｜
-<a target="_blank" href="https://www.google.com" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" >Google搜索</a>｜
-<a target="_blank" href="https://cn.bing.com/" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" >必应</a>
-<!-- 部分搜索引擎 -->
  <script>
 </script>
 <!-- 百度一下，你就知道 -->
 <form class="mdui-container-fluid" id="s" action="https://www.baidu.com/s" method="GET">
+
+<li class="mdui-list-item mdui-ripple"><span class="mdui-list-item-content mdui-text-color-red">
+<!-- 部分搜索引擎 -->
+<a href="https://google.jixiejidiguan.tk/" class="mdui-btn mdui-btn-dense" >镜像</a>｜
+<a target="_blank" href="https://www.google.com" class="mdui-btn mdui-btn-dense" >谷歌</a>｜
+<a target="_blank" href="https://cn.bing.com/" class="mdui-btn mdui-btn-dense" >必应</a>
+<!-- 部分搜索引擎 -->
+</span></li>
 <div class="search-bar">
 <i><a target="_blank" href="https://translate.google.cn/?op=translate"><img src="//ssl.gstatic.com/translate/favicon.ico" mdui-tooltip="{content: 'Google 翻译'}"></a></i>
 <input placeholder="百度一下，你就知道"  name="wd" value=""/>
 </div>
-</form>
-<!-- 百度一下，你就知道 -->
 
+<li class="mdui-list-item mdui-ripple">
+<i class="mdui-list-item-icon mdui-text-color-red mdui-icon material-icons">whatshot</i>
+<a href="https://top.baidu.com/board"><span class="mdui-list-item-content mdui-text-color-red">百度热搜</span>
+</li></a>
+</form>
+
+<!-- 百度一下，你就知道 -->
 <!-- 一言 -->
 <div class="mdui-container-fluid"><h1 class="mdui-container-fluid" style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
@@ -363,16 +367,9 @@ background:#f0f0f0;
 <!-- 导航内容 -->
 
 <!-- footer -->
-<footer>
+<footer style="width: 100%; color: #000;padding: 3px 0;">
 <div class="mdui-container-fluid">
-<b href="javascript:void(0);" style="cursor: default;" alt="举报专区">网站有害信息举报专区</b>
-<a style="font-size: 15px;" target="_blank" href="http://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
-<a style="font-size: 15px;" target="_blank" href="http://pypt.rednet.cn/">湖南省互联网辟谣平台</a>
-<br><br><script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new Date("02/22/2020 22:20:20");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML="网站在各种灾难中运行了: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
-<span id="runtime_span"></span><br>
-<!--统计 -->
-<script src="../stalye/js/zhucx.js"></script>
-<br>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script> JIXIEJIDIGUAN ナビ姫.
+Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script> JIXIEJIDIGUAN ナビ姫.
 </div>
 </footer>
 <!-- footer -->
@@ -386,10 +383,10 @@ background:#f0f0f0;
 <iframe src="https://fzapph5.gjfzpt.cn/#/spread/spreadList"  width="343.5157421289355px" height="100%" style="
 border-radius: 8px;background-color:#fff;padding: 0px 0;
 border: none;box-shadow: 0 4px 16px rgba(0, 0, 0, .12);"></iframe>
-
+<br><br>
 </div></div>
 <!-- 宣传 -->
-<!-- 宣传 -->
+<!-- 音乐 -->
 <div id="yy" class="mdui-container"><br>
 <div style="text-align:center width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 
@@ -408,7 +405,7 @@ meting-js {background: #fff;}
 <script src="//cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
 </div></div>
-<!-- 宣传 -->
+<!-- 音乐 -->
 <div id="jx" class="mdui-container"><br>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">

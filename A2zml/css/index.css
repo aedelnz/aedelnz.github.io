@@ -5,20 +5,6 @@
 
 
 
-footer {
-    width: 100%; 
-    background-color: #ECEFF1;
-    /*color: #FFFFFF;*/
-    border-top: #EFEFEF solid 10px;
-    padding: 8px 0;
-}
-footer a {
-    line-height: 12px;
-    font-size: 10px;
-    color: #99999F !important;
-}
-
-
 .css-style-rainbow a:nth-child(7n+1) {
   background-color: rgba(255, 78, 106, .04);
   font-weight:900;
