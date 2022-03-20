@@ -64,14 +64,53 @@ background:#f0f0f0;
 <!-- 公告 -->
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 <!-- 公告 -->
-<div class="mdui-list-item-content mdui-container mdui-grid-tile" style="max-height: 310px;position: relative;z-index: 0;text-align: center;">
+
+<style>
+*{margin: 0;padding: 0}
+#box{height: 50px; border: solid 1px red: #fff; overflow: hidden;}
+</style>
+
+<div id="box">
+<ul id="ul1">
+<li class="mdui-container mdui-grid-tile">
+<a href="http://www.nrta.gov.cn/col/col3758/index.html">
+<img class="mdui-img-rounded" src="http://www.nrta.gov.cn/picture/0/2104291158352204358.png?0.11442004385213256"/></a>
+</li>
+<li class="mdui-container mdui-grid-tile">
 <a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm">
 <img class="mdui-img-rounded" src="https://www.12377.cn/app/2/31.jpg"/></a>
+</li>
+</ul>
+<ul id="ul2"></ul>
 </div>
 
-<!-- 百度搜索图标 -->
- <script>
+<script>
+window.onload = roll(60);
+
+function roll(t) {
+    var ul1 = document.getElementById("ul1");
+    var ul2 = document.getElementById("ul2");
+    var box = document.getElementById("box");
+    ul2.innerHTML = ul1.innerHTML;
+    box.scrollTop = 0;
+    var timer = setInterval(rollStart, t);
+    box.onmouseover = function () {
+        clearInterval(timer)
+    }
+    box.onmouseout = function () {
+        timer = setInterval(rollStart, t);
+    }
+}
+
+function rollStart() {
+    if (box.scrollTop >= ul1.scrollHeight) {
+box.scrollTop = 0;
+    } else {
+        box.scrollTop++;
+    }
+}
 </script>
+
 <!-- 百度一下，你就知道 -->
 <form class="mdui-container-fluid" id="s" action="https://www.baidu.com/s" method="GET">
 
