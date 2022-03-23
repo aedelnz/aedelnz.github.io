@@ -1,19 +1,12 @@
 /* 全站灰色 */
-
-html, html *{
-	filter: grayscale(100%);
-	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
-	filter:gray; /*ie9- */
+关html *{
 	-webkit-filter: grayscale(100%); /* webkit */
 	-moz-filter: grayscale(100%); /*firefox*/
 	-ms-filter: grayscale(100%); /*ie9*/
 	-o-filter: grayscale(100%); /*opera*/
+	filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
+	filter:gray; /*ie9- */
 }
-body
-{ 
-background: #B6B6B6 url() no-repeat fixed top;
-}
-
 
 html,
 body,
