@@ -9,6 +9,16 @@ border-radius: 8px;
 background-color:#ffffffdb;
 padding: 8px 0;
 }
+@media screen and (min-width: 721px) {
+#tms {
+   width: 890px;
+   margin: 0 auto;
+}
+	
+}
+
+
+
 
 .css-style-rainbow a:nth-child(7n+1) {
   background-color: rgba(255, 78, 106, .04);
