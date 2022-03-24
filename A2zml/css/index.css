@@ -3,7 +3,12 @@
   border-radius: 6px
 }
 
-
+#tms{
+width: 100%;
+border-radius: 8px;
+background-color:#ffffffdb;
+padding: 8px 0;
+}
 
 .css-style-rainbow a:nth-child(7n+1) {
   background-color: rgba(255, 78, 106, .04);
