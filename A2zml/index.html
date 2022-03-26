@@ -21,44 +21,33 @@
 <link rel="stylesheet" href="../stalye/mdui/css/mdui.css?v=1.0" >
 <script src="../stalye/mdui/js/mdui.js?v=1.0"></script>
 <style>
-body {
-background:#f0f0f0;
-background: url(//s1.hdslb.com/bfs/static/blive/blfe-message-web/static/img/infocenterbg.a1a0d152.jpg) top/cover no-repeat fixed;
-color: #666;
-margin: 0;	
-}
-
-#tms{
-width: 100%;
-border-radius: 8px;
-background-color:#ffffffcb;
-padding: 8px 0;
-}
+body {background: url(//s1.hdslb.com/bfs/static/blive/blfe-message-web/static/img/infocenterbg.a1a0d152.jpg) top/cover no-repeat fixed;
+color: #666;margin: 0;	}
+#tms{width: 100%;border-radius: 8px;background-color:#ffffffcb;padding: 8px 0;}
 /* 圆角 */
 .css-style-rainbow a {border-radius: 12px}
 /* 彩色 */
 .css-style-rainbow a:nth-child(7n+1) {
-  background-color: rgba(255, 78, 106, .15);
+  background-color: rgba(255, 78, 106, .45);
 }
 .css-style-rainbow a:nth-child(7n+2) {
-  background-color: rgba(255, 118, 30, .15);
+  background-color: rgba(255, 118, 30, .45);
 }
 .css-style-rainbow a:nth-child(7n+3) {
-  background-color: rgba(255, 185, 0, .15);
+  background-color: rgba(255, 185, 0, .45);
 }
 .css-style-rainbow a:nth-child(7n+4) {
-  background-color: rgba(51, 213, 122, .15);
+  background-color: rgba(51, 213, 122, .45);
 }
 .css-style-rainbow a:nth-child(7n+5) {
-  background-color: rgba(0, 219, 255, .15);
+  background-color: rgba(0, 219, 255, .45);
 }
 .css-style-rainbow a:nth-child(7n+6) {
-  background-color: rgba(26, 152, 255, .15);
+  background-color: rgba(26, 152, 255, .45);
 }
 .css-style-rainbow a:nth-child(7n+7) {
-  background-color: rgba(144, 144, 255, .15);
+  background-color: rgba(144, 144, 255, .45);
 }
-
 
 /* 手机版 */
 @media screen and (max-width: 720px) {
@@ -71,9 +60,9 @@ padding: 8px 0;
 	opacity: 100%;
 }
 } 
-
 /* 电脑版 */
 @media screen and (min-width: 721px) { 
+.mdui-container{width: 76%;}
 -body{
 	background-image: url(../img/bg_miku_v2.png);
 	background-repeat: no-repeat;
@@ -83,11 +72,8 @@ padding: 8px 0;
 	opacity: 100%;
 }
 }
-
-
 /* 爱发电 */
 .elec .elec-trigger {background: #fff0;border-radius: 1px;color: #20252f;cursor: pointer;display: inline-block;font-size: 14px;padding: 0 10px;}
-
 </style>
 
 
@@ -113,7 +99,6 @@ padding: 8px 0;
 <a href="#tab1">导航</a>
 <a href="#xc" title="国家反诈中心">宣传</a>
 <a href="#yy">音乐</a>
-<a href="#jx">解析</a>
 <a href="#tab3">浏览优化</a>
 <a href="#Game">T-Rex</a>
 <a href="#tab5">友情链接</a>
@@ -129,59 +114,14 @@ padding: 8px 0;
 <!-- 公告 -->
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
 <!-- 公告 -->
-
-<style>
-*{margin: 0;padding: 0}
-#box{height: 18%; border: solid 1px red: #fff; overflow: hidden;}
-</style>
-<span class="mdui-list-item-content mdui-text-color-red">
-<div id="box">
-<ul id="ul1">
-<li class="mdui-container mdui-grid-tile">
-<a href="http://www.nrta.gov.cn/col/col3758/index.html">
-<img class="mdui-img-rounded" src="http://www.nrta.gov.cn/picture/0/2104291158352204358.png?0.11442004385213256"/></a>
-</li>
-<li class="mdui-container mdui-grid-tile">
-<a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm">
-<img class="mdui-img-rounded" src="https://www.12377.cn/app/2/31.jpg"/></a>
-</li>
-<li class="mdui-container mdui-grid-tile">
+<li class="mdui-text-color-red mdui-container mdui-grid-tile">
 阿里云：<a href="https://www.aliyun.com/daily-act/ecs/activity_selection?source=5176.11533457&userCode=nlcfweh8">
 <span>云服务器 精选特惠</span><span>中国香港与海外服务器最低24元/月起</span></a>
 </li>
-</ul>
-<ul id="ul2"></ul>
-</div>
 </span>
-<script>
-window.onload = roll(60);
-
-function roll(t) {
-    var ul1 = document.getElementById("ul1");
-    var ul2 = document.getElementById("ul2");
-    var box = document.getElementById("box");
-    ul2.innerHTML = ul1.innerHTML;
-    box.scrollTop = 0;
-    var timer = setInterval(rollStart, t);
-    box.onmouseover = function () {
-        clearInterval(timer)
-    }
-    box.onmouseout = function () {
-        timer = setInterval(rollStart, t);
-    }
-}
-
-function rollStart() {
-    if (box.scrollTop >= ul1.scrollHeight) {
-box.scrollTop = 0;
-    } else {
-        box.scrollTop++;
-    }
-}
-</script>
 
 <!-- 百度一下，你就知道 -->
-
+<div class="mdui-container-fluid">
 <span class="mdui-list-item-content mdui-text-color-red">
 <!-- 部分搜索引擎 -->
 <a href="https://top.baidu.com/board"><span class="mdui-text-color-red"><i class="mdui-list-item-icon mdui-text-color-red mdui-icon material-icons">whatshot</i>百度热搜</span></a>｜
@@ -190,25 +130,27 @@ box.scrollTop = 0;
 <a target="_blank" href="https://cn.bing.com/" class="mdui-btn mdui-btn-dense" >必应</a>
 <!-- 部分搜索引擎 -->
 </span>
-
-
-<form id="form" name="f" action="//www.baidu.com/s" class="fm">
-<input type="hidden" name="ie" value="utf-8">
-<input type="hidden" name="f" value="8">
-<input type="hidden" name="rsv_bp" value="1">
-<input type="hidden" name="rsv_idx" value="1">
-<input type="hidden" name="tn" value="baidu">
-<span class="bg s_ipt_wr"><input id="kw" name="wd" class="s_ipt" value maxlength="" autocomplete="off" autofocus></span>
-<span class="bg s_btn_wr"><input type="submit" id="su" value="百度一下" class="mdui-btn mdui-btn-dense mdui-ripple"></span>
+<form id="form" name="f" action="https://www.baidu.com/s" class="fm  has-soutu">
+<input type="hidden" name="ie" value="utf-8">
+<input type="hidden" name="f" value="8">
+<input type="hidden" name="rsv_bp" value="1">
+<input type="hidden" name="rsv_idx" value="1">
+<input type="hidden" name="ch" value="">
+<input type="hidden" name="tn" value="baidu">
+<div class="mdui-textfield mdui-textfield-floating-label">
+<i class="mdui-icon material-icons" mdui-tooltip="{content: '搜索'}">language</i>
+<label class="mdui-textfield-label">百度一下，你就知道</label>
+<input class="mdui-textfield-input" type="text"  id="kw" name="wd" value="" maxlength="" autocomplete="off"/>
+<div class="mdui-textfield-helper"><a href="https://translate.google.cn/"  style="color: #FFFFFF;" title="Google 翻译">Google 翻译</a></div>
+</div>
 </form>
-<link rel="stylesheet" type="text/css" href="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/bdorz/baidu.min.css">
 
+</div>
 <!-- 百度一下，你就知道 -->
 <!-- 一言 -->
-<div class="mdui-container-fluid"><h1 class="mdui-container-fluid" style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
+<div class="mdui-container-fluid"><h1 style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <!-- 一言 -->
-
 </div>
 
 <!-- 导航内容 -->
@@ -517,93 +459,6 @@ meting-js {background: #fff;}
 
 </div></div>
 <!-- 音乐 -->
-<div id="jx" class="mdui-container"><br>
-<div id="tms">
-<div class="mdui-container-fluid">
-<style>
-.lllll{filter:invert(100%);}
-.lllll{display:none;top:0;no-repeat center;background-color:rgba(255,255,255,0);-webkit-background-size:0.8rem;background-size:0.8rem;width:1.5rem;height:100%;right:0;position:absolute;cursor:pointer}
-.hdfgh{height:2.5rem;padding-bottom: 7rem;}
-.searchs{height:100%;width:100%;}
-.jdgds{    margin-bottom: 0.5rem;height:100%;width:100%;border-radius:0.3rem;padding:0 0.6rem}
-.searchs .from{margin-bottom: 0.5rem;height:100%;position:relative;display:inline-block;width:100%;}
-.searchs .text{    border: 1px solid var(--br);font-size:0.8rem;height:100%;padding:0 1.5rem 0 0.6rem;border-radius:0.3rem;width:100%}
-.dpppp{    height: 100%;display: flex;}
-.searchs .button,.searchs .button2{font-size:0.8rem;height:100%;    width: 100%;display:inline-block;white-space:nowrap;cursor:pointer;background-color:#67c23a;border:0;color:#fff;-webkit-appearance:none;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;outline:0;margin:0;border-radius:0.3rem;filter:var(--brightness85)}
-.searchs .button2{margin-left:0.5rem;background-color:#e6a23c}
-.spiframe {height: 13rem;border: 0;}
-</style>
-<div class="centers">
-<div class="hdfgh">
-<select class="jdgds">
-		<option value="https://z1.m1907.cn/?jx=">M1907</option> 
-		<option value="https://jsap.attakids.com/?url=">高速</option>
-		<option value="https://jx.parwix.com:4433/player/?url=">综合</option>
-		<option value="https://okjx.cc/?url=">OK</option>
-		<option value="https://jx.blbo.cc:4433/?url=">人人</option>
-</select>
-<div class="searchs">
-<div class="from">
-<input name="url" id="url" type="text" class="text" placeholder="输入视频播放地址" autocomplete="off" value="">
-<div class="lllll"></div>
-</div>
-<div class="dpppp">
-<input name="doplayers" type="button" id="doplayers" class="button" onClick="jiexi()" value="立即播放">
-<input name="doplayers" type="button" id="doplayers" class="button2" onClick="adddd()" value="新窗口">
-</div>
-</div>
-</div>
-<div id="ckplays">
-<iframe class="spiframe" id="jiekou" name="jiekou" width="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="background-color:#000;" frameborder="0"></iframe>
-</div>                                                                                  
-</div>
-</main>
-<script type="text/javascript">
-$(".jdgds option[value='"+Storage.getItem('jxjiekou')+"']").attr('selected',true);
-$("#url").val(Storage.getItem('jxurl'));
-$("#doplayers").on("click", function() {
-    players();
-	kklljj();
-});
-function kklljj(){
-	jiekou=$(".jdgds").val();
-	url=$("#url").val();
-	Storage.setItem("jxjiekou",jiekou);
-	Storage.setItem("jxurl",url);
-}
-function players() {
-    var a = $('#url').val();
-    if ($('#url').val() == "") {
-        //alert('请输入视频网站网址！');
-        $('#url').focus();
-        return (false)
-    }
-}
-var jiekou = $(".jdgds").val();
-function jiexi(){
-	var url = $("#url").val();
-	jiekou=$(".jdgds").val();
-	
-	//if(url.indexOf("://")==-1){
-	//	url = "http://"+document.getElementById("url").value;
-	//}
-
-		document.getElementById("jiekou").src = jiekou + url;
-}
-function adddd(){
-	var url = $("#url").val();
-	jiekou=$(".jdgds").val();
-	kklljj();
-	window.open(jiekou + url); 
-}
-if($("#url").val()!='') $('.lllll').show();
-$(".lllll").click(function(){$("#url").val('');$(this).hide();$("#url").focus();Storage.setItem("jxurl",'');});
-$("#url").bind('input propertychange',function(event){
-$(".lllll").show();
-if($("#url").val()=='') $(".lllll").hide();
-});
-</script>
-</div></div></div>
 
 
 <!-- 浏览器优化 -->
@@ -622,6 +477,18 @@ if($("#url").val()=='') $(".lllll").hide();
 <!-- 浏览器优化内的其他内容 -->
 <div>
 <h1>其他内容</h1>
+
+<span class="mdui-list-item-content mdui-text-color-red">
+
+<li class="mdui-container mdui-grid-tile">
+<a href="http://www.nrta.gov.cn/col/col3758/index.html">
+<img class="mdui-img-rounded" src="http://www.nrta.gov.cn/picture/0/2104291158352204358.png?0.11442004385213256"/></a>
+</li>
+<li class="mdui-container mdui-grid-tile">
+<a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm">
+<img class="mdui-img-rounded" src="https://www.12377.cn/app/2/31.jpg"/></a>
+</li>
+</span>
 一些还不错的查询工具：<a href="https://www.reg007.com/">你注册过哪些网站？一搜便知 - REG007</a>，
 <a href="https://monitor.firefox.com/" >Firefox Monitor</a>，
 <a href="https://haveibeenpwned.com/" >Have I been Pwned：检查您的电子邮件是否因数据泄露而受到损害</a>。<br><br>
