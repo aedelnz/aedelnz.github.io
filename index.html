@@ -20,7 +20,7 @@ background:#f0f0f0;
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 <!--统计 -->
 <div class="mdui-panel-item-body">
-<link rel="stylesheet" href="/stalye/index.css" >
+<link rel="stylesheet" href="./stalye/index.css" >
 <script src="./stalye/js/zhucx.js"></script>
 </div>
 <!--统计 -->
@@ -205,7 +205,7 @@ dataType: "json",
 success: function(data){    
 var str="<div class='mdui-card-actions'><div class='mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5' style='word-wrap:break-word;word-break:break-all;'>";    
 $.each(data,function(i,n){    
-str+="<div class='mdui-col'><a style='color: #FFF;' target='_blank' href="+n.url+" data-pjax-state=''><div style='background-image: url(https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5);border-radius: 0px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;'><div class='mdui-card-primary'><div class='mdui-btn mdui-card-primary-title mdui-text-color-black-secondary'>"+n.title+"</div></div></div></a><br></div>";
+str+="<div class='mdui-col'><a style='color: #FFF;' target='_blank' href="+n.url+" data-pjax-state=''><div style='background-image: url(https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5);border-radius: 0px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;'><div class='mdui-card-primary'><div class='mdui-btn mdui-card-primary-subtitle mdui-text-color-black-secondary'>"+n.title+"</div></div></div></a><br></div>";
 });    
 str+="</div></div>";    
 $("#Links").append(str);
@@ -232,8 +232,7 @@ footer {width: 100%; padding: 14px 0;}footer .nav {display: inline-flex;}footer 
 <a class="nav-link last" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
 </nav>
 <nav class="nav right">
-<p style="padding: 1px 0;margin: 0;display: block;margin-block-start: 1em;margin-block-end: 1em;margin-inline-start: 0px;margin-inline-end: 0px;width: 100%;text-align: center;font-size: 12px;line-height: 2px;color: #888;padding-bottom: 1px;background-color: #fff;">
-<b href="javascript:void(0);" style="cursor: default;" alt="举报专区">网站有害信息举报专区</b>
+<p><b href="javascript:void(0);" style="cursor: default;" alt="举报专区">网站有害信息举报专区</b>
 <a target="_blank" href="http://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
 <a target="_blank" href="http://pypt.rednet.cn/">湖南省互联网辟谣平台</a>
 </p>
