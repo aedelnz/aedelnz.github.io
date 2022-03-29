@@ -39,7 +39,7 @@ body {background:#f0f0f0;}
 </div>
 
 <script language="javascript" type="text/javascript">
-var time = 10
+var time = 5
 var divLabel = document.getElementById("countdown")
 var label = "秒钟后系统将帮您自动跳转到导航站。"
 divLabel.innerHTML = time.toString() + label
@@ -48,8 +48,8 @@ function updateTime(){
     if(time>=0){ divLabel.innerHTML = time.toString() + label }
     else{ divLabel.innerHTML = "正在跳转到导航站，请稍后。。。" }
 }
-setInterval("updateTime()",1000);
-setTimeout("javascript:location.href=''", time*1000);
+setInterval("updateTime()",100);
+setTimeout("javascript:location.href=''/A2zml", time*100);
 </script>
 
 </body>
