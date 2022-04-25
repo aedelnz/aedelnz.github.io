@@ -11,23 +11,6 @@
 <!-- MDUI -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css?v=1.0"/>
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js?v=1.0"></script>
-<style>
-body {background:#f0f0f0;}
-#content  {text-align:center;background-color:#fff0;padding:20px 20px 12px 20px;}
-</style>
-</head>
-<!--body-->
-<body class="mdui-loaded .mdui-drawer-body-left">
-<!--统计 -->
-<div class="mdui-panel-item-body">
-<link rel="stylesheet" href="./stalye/index.css" >
-<script src="./stalye/js/zhucx.js"></script>
-</div>
-<!--统计 -->
-
-
-
-
 
 <style type="text/css">
 	html{
@@ -108,22 +91,15 @@ body {background:#f0f0f0;}
 	}
 	
 </script>
-<p><div id="content" class="mdui-img-fluid mdui-card-media">
-<div id="countdown"></div>
-</div></p>
-<script language="javascript" type="text/javascript">
-var time = 3
-var divLabel = document.getElementById("countdown")
-var label = "秒钟后系统将帮您自动跳转到导航站。"
-divLabel.innerHTML = time.toString() + label
-function updateTime(){
-    time = time-1
-    if(time>=0){ divLabel.innerHTML = time.toString() + label }
-    else{ divLabel.innerHTML = "正在跳转，请稍后。。。" }
-}
-setInterval("updateTime()",1000);
-setTimeout("javascript:location.href=''/A2zml");
-</script>
+</head>
+<!--body-->
+<body class="mdui-loaded .mdui-drawer-body-left">
+<!--统计 -->
+<div class="mdui-panel-item-body">
+<link rel="stylesheet" href="./stalye/index.css" >
+<script src="./stalye/js/zhucx.js"></script>
+</div>
+<!--统计 -->
 
 
 <div id="mainDiv">
@@ -135,7 +111,8 @@ setTimeout("javascript:location.href=''/A2zml");
 <div id="blankDiv"></div>
 
 <div id="contentDiv">
-<p>您要寻找的页面已过期</p>
+<p>您要寻找的页面已过期<br><br>
+<a class="mdui-btn mdui-ripple" style="text-decoration: none;color:#000000;" href="/"><i class="mdui-icon material-icons">arrow_upward</i>返回首页</a></p>
 </div>
 
 </div>

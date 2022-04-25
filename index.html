@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="keywords" content="画的个人记录">
 <meta name="description" content="一往无前！">
-<link rel="icon" href="./stalye/img/DHL.png" />
+<link rel="icon" href="./stalye/img/DHL.png?v=1.0" />
 <!-- MDUI -->
-<link rel="stylesheet" href="./stalye/mdui/css/mdui.css?v=1.0" >
-<script src="./stalye/mdui/js/mdui.js?v=1.0"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css?v=1.0"/>
+<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js?v=1.0"></script>
 <style>
 body {background:#f0f0f0;}
 </style>
@@ -22,9 +22,10 @@ body {background:#f0f0f0;}
 <script src="./stalye/js/zhucx.js"></script>
 </div>
 <!--统计 -->
-<div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 45px;height: 45px;z-index: 99;">
+<div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 65px;height: 65px;z-index: 99;">
 <a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="" style="width:100%;height:100%"></a>
 </div>
+
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
 <div class="mdui-toolbar mdui-color-theme mdui-color-light-blue-a700">
@@ -96,6 +97,7 @@ width: 100%;font-size: 18px;height: 100%;z-index: 1;text-align: center;color: #F
 </div>
 </section>
 <!-- 更多页面 -->
+
 <!-- 收藏 -->
 <section class="mdui-container">
 <h3>来自腾讯视频的国漫收藏</h3>
@@ -151,6 +153,7 @@ $("#bilibili").append(str);
 </script>
 </section>
 <!-- 收藏 -->
+
 <!-- 友情链接 -->
 <section class="mdui-container">
 <h3>友情链接</h3>
@@ -182,7 +185,7 @@ dataType: "json",
 success: function(data){    
 var str="<div class='mdui-card-actions'><div class='mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5' style='word-wrap:break-word;word-break:break-all;'>";    
 $.each(data,function(i,n){    
-str+="<div class='mdui-col'><a style='color: #FFF;' target='_blank' href="+n.url+" data-pjax-state=''><div style='background-image: url(https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5);border-radius: 0px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;'><div class='mdui-card-primary'><div class='mdui-btn mdui-card-primary-subtitle mdui-text-color-black-secondary'>"+n.title+"</div></div></div></a><br></div>";
+str+="<div class='mdui-col'><a style='color: #FFF;' target='_blank' href="+n.url+" data-pjax-state=''><div style='background-image: url(https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5);border-radius: 0px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;'><div class='mdui-card-primary'><div class='mdui-btn mdui-card-primary-title mdui-text-color-whiet'>"+n.title+"</div></div></div></a><br></div>";
 });    
 str+="</div></div>";    
 $("#Links").append(str);
@@ -198,6 +201,7 @@ $("#Links").append(str);
 <footer id="di" class="mdui-container">
 <style>
 footer {width: 100%; padding: 14px 0;}footer .nav {display: inline-flex;}footer .left {float: left; }footer .left a.nav-link {border-right: #b8c7bf solid 1px;line-height: 16px;font-size: 14px;padding: 0 2px;}footer .right {float: right;}footer .right a.nav-link {line-height: 16px;font-size: 14px;padding: 0 8px;}
+footer a {text-decoration: none;}
 </style>
 <div style="text-align: center;width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="inner mdui-card-actions">
