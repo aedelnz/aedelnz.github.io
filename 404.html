@@ -2,17 +2,18 @@
 
 <html>
 <head>
-<title>404</title>
+<title>您要寻找的页面已过期</title>
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!-- MDUI -->
-<link rel="stylesheet" href="./stalye/mdui/css/mdui.css?v=1.0" >
-<script src="./stalye/mdui/js/mdui.js?v=1.0"></script>
+<link rel="icon" href="./stalye/img/404.png?v=1.0" />
+<!-- MDUI -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css?v=1.0"/>
+<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js?v=1.0"></script>
 <style>
 body {background:#f0f0f0;}
 #content  {text-align:center;background-color:#fff0;padding:20px 20px 12px 20px;}
-.tips {margin:2em 0 2em 0; font-size:18px;  }
 </style>
 </head>
 <!--body-->
@@ -25,31 +26,119 @@ body {background:#f0f0f0;}
 <!--统计 -->
 
 
-<div style="height: 300px;background: url(//s1.hdslb.com/bfs/static/judgement/static/img/fjw-banner2.bfc9986.png) 50% no-repeat;position: relative;"></div> 
 
-<div class="tips" align="center"> [这是什么节奏？] 服务器君目前很忙，刷新下看看？<br>
-额数据丢失，无法找回……
-</div>
-<div style="text-align: center!important;">
-<img style="width: 320px;" src="//s1.hdslb.com/bfs/static/judgement/static/img/img_success.283f79b.png" alt=""> 
-</div>
-<div id="content" class="mdui-img-fluid mdui-card-media">
-<h2><div id="countdown"></div></h2>
-</div>
 
+
+<style type="text/css">
+	html{
+		height:100%;
+	}
+	body{
+		background-color:#f0f0f0;
+		height:100%;
+		margin:0;
+		/*display:flex;
+		display:-webkit-flex;
+		align-items:center;*/
+	}
+	#mainDiv{
+		width:100%;
+		
+		position:absolute;
+		top:50%;
+	}
+	#imageDiv{
+		width:161pt;
+		text-align:center;
+		margin:0 auto;
+	}
+	#contentDiv{
+		width:100%;
+		color:#000000;
+		opacity:0.5;
+		font-family:PingFang3C-Regular;
+		letter-spacing:0;
+		text-align:center;
+	}
+	#contentDiv p{
+		margin:auto;
+	}
+	#blankDiv{
+		width:100%;
+	}
+</style>
+
+<script type="text/javascript">	
+	function adaptScreen() {	
+		var imgRatio = 375/161;
+		var blankRatio = 603/32;
+		var contentRatio = 375/26;
+		var fontRatio = 375/19;
+		var topRatio = 603/153;
+		
+		var mainWidth = document.getElementById("mainDiv").offsetWidth;
+		var screenHeight = document.body.offsetHeight;
+		
+		var imageWidth = mainWidth/imgRatio;
+		var blankHeight = screenHeight/blankRatio;
+		var contentHeight = mainWidth/contentRatio;
+		var fontSize = mainWidth/fontRatio;
+		var mainNewHeight = imageWidth+blankHeight+contentHeight;
+		
+		var imageDiv = document.getElementById("imageDiv");
+		imageDiv.style.width = imageWidth+"px";
+		imageDiv.style.height = imageWidth+"px";
+		
+		var contentDiv = document.getElementById("contentDiv");
+		contentDiv.style.fontSize = fontSize+"px";
+		contentDiv.style.height = contentHeight+"px";
+		
+		var blankDiv = document.getElementById("blankDiv");
+		blankDiv.style.height = blankHeight+"px";
+		
+		var mainDiv =  document.getElementById("mainDiv");
+		mainDiv.style.height = mainNewHeight+"px";
+		mainDiv.style.top = (screenHeight/topRatio)+"px";
+	}
+	window.onload = function() {
+		adaptScreen();
+	}
+	window.onresize = function() {
+		adaptScreen();
+	}
+	
+</script>
+<p><div id="content" class="mdui-img-fluid mdui-card-media">
+<div id="countdown"></div>
+</div></p>
 <script language="javascript" type="text/javascript">
-var time = 5
+var time = 3
 var divLabel = document.getElementById("countdown")
 var label = "秒钟后系统将帮您自动跳转到导航站。"
 divLabel.innerHTML = time.toString() + label
 function updateTime(){
     time = time-1
     if(time>=0){ divLabel.innerHTML = time.toString() + label }
-    else{ divLabel.innerHTML = "正在跳转到导航站，请稍后。。。" }
+    else{ divLabel.innerHTML = "正在跳转，请稍后。。。" }
 }
-setInterval("updateTime()",100);
-setTimeout("javascript:location.href=''/A2zml", time*100);
+setInterval("updateTime()",1000);
+setTimeout("javascript:location.href=''/A2zml");
 </script>
+
+
+<div id="mainDiv">
+
+<div id="imageDiv" style="">
+<img src="./stalye/img/404.png?v=1.0" style="width:100%;height:100%;"></img>
+</div>
+
+<div id="blankDiv"></div>
+
+<div id="contentDiv">
+<p>您要寻找的页面已过期</p>
+</div>
+
+</div>
 
 </body>
 </html>
