@@ -55,9 +55,9 @@ h4,
 h5,
 h6:not([class*='icon']):not(.fa):not(.fas):not(i) 
 {
-font-family: '楷体','黑体'  !important;
+font-family: '楷体'  !important;
 } 
 *{
-text-shadow:0.6px 0.4px 0px #d0d0d0 !important; 
+text-shadow:0.1px 0.2px 0px #d0d0d0 !important; 
 font-weight:bold !important;
 }
