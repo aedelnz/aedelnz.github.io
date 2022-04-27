@@ -24,7 +24,7 @@
 body {background:#f0f0f0;}
 #tms{width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;}
 /* 圆角 */
-.css-style-rainbow a {border-radius: 12px}
+.css-style-rainbow a {border-radius: 6px}
 /* 彩色 */
 .css-style-rainbow a:nth-child(7n+1) {
   background-color: rgba(255, 78, 106, .25);
@@ -52,7 +52,7 @@ body {background:#f0f0f0;}
 <!-- head -->
 
 <!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-appbar-with-tab">
+<body class="mdui-drawer-full-height .mdui-appbar-with-toolbar mdui-loaded mdui-appbar-with-tab">
 <!--统计 -->
 <div class="mdui-panel-item-body">
 <link rel="stylesheet" href="../stalye/index.css" >
@@ -72,7 +72,7 @@ body {background:#f0f0f0;}
 </div>
 <!-- 顶部内容全部结束 -->
 
-<div class="mdui-drawer" id="left-drawer">
+<div class="mdui-drawer mdui-drawer-close mdui-color-white" id="left-drawer">
 
 <div class="mdui-card-media">
 <video autoplay="autoplay" controlsList="nodownload" class="mdui-video-fluid" controls>
@@ -156,24 +156,24 @@ body {background:#f0f0f0;}
 <h3><i id="ssyq" class="mdui-text-color-pink mdui-icon material-icons">my_location</i>搜索引擎</h3>
 <div id="tms">
 <div class="mdui-container-fluid">
-<div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">
+<div class="mdui-row-xs-3 mdui-row-sm-3 mdui-row-md-3 mdui-row-lg-3 mdui-row-xl-3 mdui-grid-list">
 <div class="mdui-col">
 <a class="mdui-btn" href="https://top.baidu.com/board"><span class="mdui-text-color-red"><i class="mdui-icon material-icons">whatshot</i>百度热搜</span></a>
 </div>
 <div class="mdui-col">
-<a target="_blank" class="mdui-btn" href="https://www.baidu.com/">百度一下</a>
+<a target="_blank" class="mdui-btn" href="https://www.baidu.com/"><i class="mdui-icon material-icons">pets</i>百度一下</a>
 </div>
 <div class="mdui-col">
-<a target="_blank" class="mdui-btn" href="https://so.toutiao.com/">头条搜索</a>
+<a target="_blank" class="mdui-btn" href="https://so.toutiao.com/"><i class="mdui-icon material-icons">gesture</i>头条搜索</a>
 </div>
 <div class="mdui-col">
-<a target="_blank" class="mdui-btn" href="https://www.google.com/">谷歌搜索</a>
+<a href="https://translate.google.cn/?hl=zh-CN&tab=TT"><i class="mdui-icon material-icons">translate</i></a><a target="_blank" class="mdui-btn" href="https://www.google.com/">谷歌搜索</a>
 </div>
 <div class="mdui-col">
-<a target="_blank" class="mdui-btn" href="https://www.bing.com/">必应搜索</a>
+<a target="_blank" class="mdui-btn" href="https://www.bing.com/"><i class="mdui-icon material-icons">public</i>必应搜索</a>
 </div>
 <div class="mdui-col">
-<a target="_blank" class="mdui-btn" href="https://yandex.com/">yandex</a>
+<a target="_blank" class="mdui-btn" href="https://yandex.com/"><i class="mdui-icon material-icons">https</i>yandex</a>
 </div>
 </div>
 </div></div>
@@ -458,7 +458,7 @@ Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date 
 <!-- 浏览器优化 -->
 <div id="tab3" class="mdui-container"><br>
 <div id="tms">
-<div class="mdui-container-fluid"><b class="mdui-color-pink">温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！</b><br><br>
+<div class="mdui-container-fluid"><b class="mdui-text-color-pink">温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！</b><br><br>
 电脑版<br>
 电脑广告屏蔽插件推荐:(<a href="https://adguard.com/zh_cn/products.html">AdGuard </a> , <a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a> 该两款为浏览器插件，自己的度娘搜索。)<br>
 电脑脚本插件推荐:建议使用（Tampermonkey）插件<br><br>
@@ -587,26 +587,69 @@ hideClass("onlyforchrome");
 <!-- T-Rex Game -->
 
 <!-- 友情链接 -->
-<div id="tab5" class="mdui-container">
+<div id="tab5" class="mdui-container mdui-ripple ss">
+<style>.ss a {text-decoration: none;}</style>
 <div id="tms">
 <div class="mdui-container-fluid">
-欢迎大家来申请友情链接。<br><br>
-申请条件：<br>
+申请条件<br>
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
 4.且无影响阅读体验的广告<br>
-申请格式：URL+网站名称<br>
-<a href="" class="mdui-icon material-icons mdui-btn" style="background-color: rgba(51, 213, 122, .21);color: #33d57a;font-weight:900;" title="没人申请，留着也没用，还不如不留">联系方式:暂无</a><br><br>
-<b>友情链接</b>
-<div class="mdui-card-actions" style="width: 100%;border-radius: 8px;padding: 8px 10px 1;">
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.arsrna.cn">Ar-Sr-Na</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://srsg.moe">白鹭学园</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://xsear.ch">未知搜索</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://blog.utermux.dev/">Utermux博客</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="">待添加</a>
+<div class="mdui-textfield">
+<textarea class="mdui-textfield-input mdui-text-color-blue" rows="6">
+申请格式
+名称：
+链接：
+介绍：
+头像：
+</textarea>
 </div>
-</div></div></div>
+<a href="" style="color: #33d57a;" title="没人申请，留着也没用，还不如不留">联系方式:暂无</a>
+
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-row-md-3 mdui-row-lg-3 mdui-row-xl-3 mdui-grid-list">
+<h3>友情链接</h3>
+<div class="mdui-col">
+<li class="mdui-list-item">
+<div class="mdui-list-item-avatar">
+<img src="https://cdn.jsdelivr.net/gh/ArSrNa/CDN/linkv_img/cop/arsrna.webp"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><a target="_blank" href="https://www.arsrna.cn">Ar-Sr-Na个人网站</a></div>
+<div class="mdui-list-item-text mdui-list-item-one-line">女装只有cos90°次和tan90°次</div>
+</div></li></div>
+<div class="mdui-col">
+<li class="mdui-list-item">
+<div class="mdui-list-item-avatar">
+<img src="https://srsg.moe/wp-content/uploads/2021/05/app-iPhone@3x.png"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><a target="_blank" href="https://srsg.moe">白鹭学园</a></div>
+<div class="mdui-list-item-text mdui-list-item-one-line">ACG社区</div>
+</div></li></div>
+<div class="mdui-col">
+<li class="mdui-list-item">
+<div class="mdui-list-item-avatar">
+<img src="https://xsear.ch/favicon.ico"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><a target="_blank" href="https://xsear.ch">未知搜索</a></div>
+<div class="mdui-list-item-text mdui-list-item-one-line">影视动漫资讯聚合搜索引擎</div>
+</div></li></div>
+<div class="mdui-col">
+<li class="mdui-list-item">
+<div class="mdui-list-item-avatar">
+<img src="https://blog.utermux.dev/favicon.ico"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><a target="_blank" href="https://blog.utermux.dev/">Utermux博客</a></div>
+<div class="mdui-list-item-text mdui-list-item-one-line"></div>
+</div></li></div>
+
+
+</div>
+</div>
+</div></div><br>
 <!-- 友情链接 -->
 
 
