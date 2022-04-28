@@ -7,15 +7,16 @@
  *￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
   -->
 <!-- 随随便便的开始 -->
-<html lang="zh-CN" manifest="list.appcache">
+<html lang="zh-CN" manifest="demo.appcache">
 <!-- head -->
 <head>
 <title>JIXIEJIDIGUAN ナビ姫.</title>
 <meta charset="utf-8"/>
 <meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="author" content="JIXIEJIDIGUAN.TOP">
 <meta name="keywords" content="JIXIEJIDIGUAN ナビ姫." />
 <meta name="description" content="一切归于美好！" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="./stalye/img/DHL.png?v=1.0" />
 <!-- MDUI -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css?v=1.0"/>
@@ -52,7 +53,7 @@ body {background:#f0f0f0;}
 <!-- head -->
 
 <!-- body -->
-<body class="mdui-drawer-full-height .mdui-appbar-with-toolbar mdui-loaded mdui-appbar-with-tab">
+<body class=".mdui-appbar-with-toolbar mdui-loaded mdui-appbar-with-tab">
 <!--统计 -->
 <div class="mdui-panel-item-body">
 <link rel="stylesheet" href="../stalye/index.css" >
@@ -71,6 +72,8 @@ body {background:#f0f0f0;}
 </div>
 </div>
 <!-- 顶部内容全部结束 -->
+
+
 
 <div class="mdui-drawer mdui-drawer-close mdui-color-white" id="left-drawer">
 
@@ -177,6 +180,70 @@ body {background:#f0f0f0;}
 </div>
 </div>
 </div></div>
+
+
+<h3 mdui-dialog="{target: '#zdywz'}"><i class='mdui-text-color-light-blue-accent mdui-icon material-icons'>add</i>自定义网站</h3>
+<div id='tms'>
+<div class='mdui-container-fluid'>
+<div class="mdui-dialog mdui-drawer-full-height" id="zdywz">
+<div class="mdui-dialog-title">
+<div class="mdui-textfield">
+  <label class="mdui-textfield-label">名称</label>
+  <input class="mdui-textfield-input" type="text" id="sitename" name="sitename" class="text"/>  
+</div>
+<div class="mdui-textfield">
+  <label class="mdui-textfield-label">链接</label>
+  <input class="mdui-textfield-input" placeholder="请加上http://或https://" type="text" id="siteurl" name="siteurl"/>  
+</div>
+</div>
+<div class="mdui-dialog-actions">
+<button class="mdui-btn mdui-ripple" mdui-dialog-close><input class="mdui-btn mdui-text-color-theme-accent" type="button" onclick="save()" value="添加"/></button>
+</div>
+</div>
+
+
+<div id="list">
+
+</div></div></div>
+<script>
+// 载入所有存储在localStorage的数据
+loadAll(); 	
+		
+//保存数据  
+function save(){  
+var siteurl = document.getElementById("siteurl").value;  
+var sitename = document.getElementById("sitename").value;  
+localStorage.setItem(sitename, siteurl);
+alert("添加成功");
+}
+
+//删除数据   
+function del(name) {
+  localStorage.removeItem(name);
+  alert("删除成功!");
+  loadAll();
+}
+
+//将所有存储在localStorage中的对象提取出来，并展现到界面上
+function loadAll(){  
+var list = document.getElementById("list");  
+if(localStorage.length>0){  
+var result = "";  
+result += "<div class='mdui-row-xs-3 mdui-row-sm-3 mdui-row-md-3 mdui-row-lg-3 mdui-row-xl-3 mdui-grid-list'>";  
+for(var i=0;i<localStorage.length;i++){  
+var sitename = localStorage.key(i);  
+var siteurl = localStorage.getItem(sitename);  
+result += "<div class='mdui-col'><div class='mdui-pane' mdui-panel><div class='mdui-panel-item'><div class='mdui-panel-item-header'><a target='_blank' href="+siteurl+">"+sitename+"</a></div><div class='mdui-panel-item-body'><p><input class='mdui-btn mdui-ripple' type=button value=删除 onclick=del("+"'"+sitename+"','"+siteurl+"'"+") ></p></div></div></div></div>";  
+}  
+result += "</div>";  
+list.innerHTML = result;  
+}else{  
+list.innerHTML = "未添加任何……";  
+}  
+}      
+</script>
+
+
 <!-- 导航内容 -->
 <h3><i id="aq" class="mdui-text-color-light-blue-accent mdui-icon material-icons">security</i>安全</h3>
 <div class="css-style-rainbow" id="tms">
