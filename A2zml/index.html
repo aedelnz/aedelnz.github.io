@@ -17,7 +17,7 @@
 <meta name="author" content="JIXIEJIDIGUAN.TOP">
 <meta name="keywords" content="JIXIEJIDIGUAN ナビ姫." />
 <meta name="description" content="一切归于美好！" />
-<link rel="icon" href="./stalye/img/DHL.png?v=1.0" />
+<link rel="icon" href="../stalye/img/DHL.png?v=1.0" />
 <!-- MDUI -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css?v=1.0"/>
 <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js?v=1.0"></script>
@@ -159,7 +159,6 @@ body {background:#f0f0f0;}
 <div class="mdui-container-fluid"><h1 style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <!-- 一言 -->
-<a href="https://snapdrop.net/">局域网传输</a>
 </div>
 
 <h3><i id="ssyq" class="mdui-text-color-pink mdui-icon material-icons">my_location</i>搜索引擎</h3>
@@ -265,15 +264,23 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="http://www.nlc.cn/">中国国家图书馆</a>
 </div></div>
 
-<h3><i id="fj" class="mdui-text-color-blue-grey mdui-icon material-icons">terrain</i>番剧</h3>
+
+<div id="fj" class="mdui-tab mdui-color-theme" mdui-tab>
+<a href="#fjdm" class="mdui-ripple mdui-ripple-white"><i class="mdui-icon material-icons">terrain</i>动漫</a>
+<a href="#fjmf" class="mdui-ripple mdui-ripple-white">番剧</a>
+<a href="#fjzmz" class="mdui-ripple mdui-ripple-white">字幕组</a>
+</div>
 <div class="css-style-rainbow" id="tms">
 <div class="mdui-container-fluid">
+<div id=fjdm >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.bilibili.com/anime/">官方-哔哩哔哩</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.acfun.cn/bangumilist">官方-AcFun </a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://v.qq.com/channel/cartoon">官方-腾讯视频</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://comic.youku.com/">官方-优酷</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.iqiyi.com/dongman/">官方-爱奇艺</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.mgtv.com/cartoon/">官方-芒果TV</a><br>
+</div>
+<div id=fjmf >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.agemys.com/">免费-AGE动漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.age.tv/">免费-AGE动漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.ysjdm.net/">免费-異世界動漫</a>
@@ -281,16 +288,26 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.imomoe.ai/">免费-樱花动漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.zzzfun.com/">免费-ZzzFun</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://qimiqimi.com/">免费-奇米奇米</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.66dongman.com">免费-溜溜动漫</a>
+</div>
+<div id=fjzmz >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://mikanani.me/">推送-蜜柑计划</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://bgmlist.com/">推送-番组放送</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://bangumi.moe/">免费-萌番组</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.tokyotosho.info">免费-东京图书馆</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://bangumi.moe/">萌番组</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://nc.raws.dev/0:/">NC-Raws</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.hysub.net/mobile#/">幻樱字幕组</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://acg.rip/">ACG.RIP</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.acg23.com/">acg23</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://fitacg.com/">菲特动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://comicat.org/">漫猫动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.tokyotosho.info">东京图书馆</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://share.acgnx.se/">末日動漫資源庫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://share.dmhy.org/">翻墙-动漫花园</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://nyaa.si/">翻墙-nyaa</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.nicovideo.jp/">翻墙-ニコニコ</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://animeseries.so/">国外-animetv</a>
+</div>
 </div></div>
 
 <h3><i id="tp" class="mdui-text-color-blue-grey mdui-icon material-icons">terrain</i>图片</h3>
@@ -318,9 +335,15 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://safebooru.org/index.php?page=post&s=list">safebooru</a>
 </div></div>
 
-<h3><i id="mh" class="mdui-text-color-blue-grey mdui-icon material-icons">terrain</i>漫画</h3>
+
+<div id="mh" class="mdui-tab mdui-color-theme" mdui-tab>
+<a href="#mhgf" class="mdui-ripple mdui-ripple-white"><i class="mdui-icon material-icons">terrain</i>漫画</a>
+<a href="#mhmf" class="mdui-ripple mdui-ripple-white">免费</a>
+</div>
+
 <div class="css-style-rainbow" id="tms">
 <div class="mdui-container-fluid">
+<div id=mhgf >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://dmzj.com/">官方-动漫之家</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://manga.bilibili.com/">官方-哔哩哔哩漫画</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://ac.qq.com/">官方-腾讯漫画</a>
@@ -330,25 +353,47 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://dongmanmanhua.cn/">官方-咚漫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://manmanapp.com/">官方-漫漫漫画</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://kuaikanmanhua.com/">伪免费-快看</a><br>
+</div>
+<div id=mhmf >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.mangabz.com/">日本-Mangabz</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.517mh.net/">免费-517漫画网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.733.so/">免费-733动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.omyschool.com/">免费-木马动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://36manhua.com/">36漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.gufengmh9.com/">古风漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.7stary.com/">7漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.517mh.net/">我要去漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://m.laimanhua.net/">来漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://dogemanga.com/">漫画狗</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.imitui.com/">爱米推</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.qimiaomh.com/">奇妙漫画</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.517mh.net/">517漫画网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.733.so/">733动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.omyschool.com/">木马动漫</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.manhuadb.com/">漫画DB</a>
+</div>
 </div></div>
-
-<h3><i id="xsyy" class="mdui-text-color-blue-grey mdui-icon material-icons">terrain</i>小说音乐</h3>
+<div id="xsyy" class="mdui-tab mdui-color-theme" mdui-tab>
+<a href="#xsyyxs" class="mdui-ripple mdui-ripple-white"><i class="mdui-icon material-icons">terrain</i>小说</a>
+<a href="#xsyydzs" class="mdui-ripple mdui-ripple-white">电子书</a>
+<a href="#xsyyyy" class="mdui-ripple mdui-ripple-white">音乐</a>
+</div>
 <div class="css-style-rainbow" id="tms">
 <div class="mdui-container-fluid">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://book.qq.com/">官方-QQ阅读</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.qidian.com/">官方-起点中文网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://faloo.com/">官方-飞卢</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.zongheng.com/">官方-纵横中文网</a>
+<div id=xsyyxs >
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://book.qq.com/">QQ阅读</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.qidian.com/">起点中文网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://faloo.com/">飞卢</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://www.zongheng.com/">纵横中文网</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.jjwxc.net/">晋江文学城</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.xxsy.net/">潇湘书院</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.linovel.net/">轻之文库</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://writer.muyewx.com/stack-room?enter_from=menu">免费-番茄小说网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.wtzw.com/">免费-梧桐中文网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.biquge7.com/">免费-笔趣阁</a><br>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://writer.muyewx.com/stack-room?enter_from=menu">番茄小说网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.wtzw.com/">梧桐中文网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.biquge7.com/">笔趣阁</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.linovelib.com/">哔哩轻小说</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://qinxiaoshuo.com/">亲小说网</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.esjzone.cc/"> ESJ Zone</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://kakuyomu.jp/">カクヨム</a><br>
+</div>
+<div id=xsyydzs >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.jiumodiary.com/">鸿摩搜索</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://shuge.org/">书格</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=http://pdfbook.cn/">云海电子图书馆</a>
@@ -361,12 +406,15 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://fm.qq.com/">官方-企鹅FM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://qingting.fm/">官方-蜻蜓FM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://ximalaya.com/">官方-喜马拉雅</a><br>
+</div>
+<div id=xsyyyy >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://music.163.com/">官方-网易云</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.kugou.com/">官方-酷狗音乐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://y.qq.com/">官方-QQ音乐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.kuwo.cn/">官方-酷我音乐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://netease-music.fe-mm.com/">音乐-mmPlayer</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.lalal.ai/zh-hans/">lalal.ai</a>
+</div>
 </div></div>
 
 <h3><i id="smkj" class="mdui-text-color-blue-grey mdui-icon material-icons">terrain</i>数码科技</h3>
@@ -393,6 +441,7 @@ list.innerHTML = "未添加任何……";
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.dianyinggou.com/">搜索-电影狗搜索</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.cupfox.app/">搜索-茶杯狐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.btnull.re/">影视-BTNull - 原片库</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://ddrk.me/">影视-低端影视</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.naifei.org/">影视-奈飞中文</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://yanetflix.com/">影视-奈飞电影</a><br>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.ygdy8.com/">资源-阳光电影</a>
@@ -592,7 +641,7 @@ meting-js {background: #fff;}
 <a href="https://monitor.firefox.com/" >Firefox Monitor</a>，
 <a href="https://haveibeenpwned.com/" >Have I been Pwned：检查您的电子邮件是否因数据泄露而受到损害</a>。<br><br>
 
-比较良心的临时网络传输工具：<a href="https://cowtransfer.com/">牛奶快传</a>，
+比较良心的临时网络传输工具：<a href="https://snapdrop.net/">局域网传输</a> <a href="https://cowtransfer.com/">牛奶快传</a>，
 <a href="https://www.wenshushu.cn/">文件叔叔</a>，
 <a href="https://airportal.cn/">AirPortal 空投快传</a>，
 <a href="https://www.qsc.zju.edu.cn/box/">Box - 求是潮云U盘</a>,
