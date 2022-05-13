@@ -209,7 +209,7 @@ var url = window.location.href;
 // 截取传递的url参数
 url = url.match(/tpurl=(\S*)/)[1];
 document.getElementById("UrlId").href = url;
-var urls = document.getElementById("urls");
+document.getElementById("urls");
 urls.innerText = url;
 // 获取秒数显示id
 var seconds = document.getElementById("seconds");
@@ -221,7 +221,7 @@ seconds.innerText = num;
 if(num == 0){
 window.location.href = url;
 }
-},1000)
+},60)
 </script>
 </body>
 </html>
