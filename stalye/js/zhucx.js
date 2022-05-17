@@ -24,7 +24,7 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 
 
 //Jquery
-document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/jquery\/3.6.0\/jquery.min.js\"><\/script>");
+document.write("<script src=\"https:\/\/jixiejidiguan.top\/stalye\/js\/jquery.min.js\"><\/script>");
 
 
 //我要拉
