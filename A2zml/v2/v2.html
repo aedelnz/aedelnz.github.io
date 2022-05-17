@@ -34,35 +34,62 @@ body {background:#f0f0f0;}
 </div></div>
 <!-- 顶部内容全部结束 -->
 
-<br><div class="mdui-container">
+<br>
+<div class="mdui-container">
+
+
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid"><ol>
 <li>v2rayN: <a href="https://github.com/2dust/v2rayN/releases">电脑版</a></li>
-<li>WinXray: <a href="https://github.com/TheMRLL/WinXray/releases">电脑版</a></li>
+<li>clash_for_windows_pkg: <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">电脑版</a>（汉化补丁<a href="https://github.com/BoyceLig/Clash_Chinese_Patch/releases">下载</a>）</li>
 <li>v2rayNG: <a href="https://github.com/2dust/v2rayNG/releases">Android版</a></li>
-<li>Shadowrocket: <a href="https://apps.apple.com/us/app/shadowrocket/id932747118">IOS版</a>（付费下载切需要国外账号）</li>
-<li>小牛: <a href="https://www.aoxvpn.com/zhs">Android，电脑</a></li>
-<li>火箭: <a href="https://m.rocket110.com/">Android，Mac，电脑</a>（需要注册账号）</li>
+<li>ClashForAndroid: <a href="https://github.com/Kr328/ClashForAndroid/releases">Android版</a></li>
+<li>SagerNet: <a href="https://github.com/SagerNet/SagerNet/releases">Android版</a></li>
+<li>Shadowrocket: <a href="https://apps.apple.com/us/app/shadowrocket/id932747118">IOS版</a>App Store （需要国外账号）</li>
+<li>Potatso Lite: <a href="https://apps.apple.com/us/app/potatso-lite/id1239860606">IOS版</a>App Store （需要国外账号）</li>
+<li>V2rayU: <a href="https://github.com/yanue/V2rayU/releases/tag/3.2.0">MacOS版</a></li>
+<li>clash_for_windows_pkg: <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">MacOS版</a></li>
+<li>clash_for_windows_pkg: <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Linux版</a></li>
+<li>OneClick: <a href="https://oneclick.earth/#/">官网</a>（Android，iOS）</li>
 </ol>
+
+<br>
+<div class="mdui-text-color-blue-grey-500">
+<b class="mdui-color-theme-accent" id="aqyh">关于安全隐患</b>
+<script>  
+var $ = mdui.$;
+$('#aqyh').on('click', function () {
+  mdui.snackbar({
+    message: '<ul style="width: 100%;height: 100%;" class="mdui-list"><div style="vertical-align: middle; display: inline-block;text-align: center;" class="mdui-dialog-subtitle"><details><summary><span class="mdui-text-color-red">老王VPN</span>（点击查看详情）</summary><p>有读者和我说对这款老王VPN的安全性有疑虑，据我的了解和调查，老王VPN可能存在钓鱼风险，网上查得到有人因为在手机上使用老王VPN被请喝茶的消息。我自己在手机上测试了一下，下载的最新版，连接方式选择快速连接，显示连上了，已经翻墙状态了哇，结果一查IP笑死我，原本的IP纹丝不动，依然和本地IP一样，这就存在安全隐患了。</p></details><details><summary><span class="mdui-text-color-red">佛跳墙VPN</span>（点击查看详情）</summary><p>稳定性和安全性都不太好，不建议使用。这款虽然名字叫VPN，但我觉得底层还是基于SS的，而且DNS会有泄漏，对隐私数据的保护不好。不推荐佛跳墙VPN，看到的避免入坑。</p></details><details><summary><span class="mdui-text-color-red">蓝灯VPN</span>（点击查看详情）</summary><p>目前网上流传的蓝灯VPN安全性有漏洞，虽然名字叫蓝灯VPN，但它是基于socks5代理，并不具备传统OpenVPN、L2TP/IPSec、IKEV2等VPN协议的安全性。另外有人使用蓝灯(Latern Pro)软件翻墙上P站，被行政处罚了。总之，能不用就尽量避免吧。</p></details><details><summary><span class="mdui-text-color-red">小牛VPN</span>（点击查看详情）</summary><p>小牛VPN被同行查过，有个专门窃取你个人隐私的后门，比老王VPN这种钓鱼的还要恶心。如果你不想被偷窥，那么最好不要入坑。</p></details><p>其他国产的私人或者小型VPN避免使用，这些大部分都是名字叫VPN，只有翻墙的功能，并无安全性可言。其中不少涉嫌钓鱼，用户使用的时候被ISP发现并上报的，已经有记录的就有<strong>极光加速器、QuickQ、佛跳墙加速器、老王VPN、IP精灵、旋风加速器、坚果加速器、蚂蚁加速器、快连VPN、神风加速器</strong>等。</p><p>总的来说，<strong>像谷歌商店里面的很多国产翻墙软件最好不要碰</strong>，尤其是不要在手机上安装，手机上隐私信息太多，存在隐私数据被截获的风险。而且目前网上因为翻墙出问题的，一般都是使用这种野路子VPN翻车的，这种翻墙软件我是不会使用的，测试都不敢。当然如果只是上网查查学习资料，不涉及账号登录和敏感信息，像<strong>老王VPN</strong>这种类型的可以也最好只在电脑上(Windows/Mac)使用，因为手机上的隐私信息太多并且容易泄露。最好是使用<strong>国外知名的VPN服务</strong>，虽然有时会被封锁，但一年中绝大部分时间都是可以连接的，<strong>最重要的是安全，不泄漏隐私信息</strong>。</p></div></ul>',
+    position: 'top',
+    timeout: '100000',
+    buttonColor: 'rgba(255, 255, 255, 0.3)'
+  });
+});
+</script>
+<p>翻墙这种事，国家睁一只眼闭一只眼，就大陆来看，就有几百万“违法人员”，可是网警没这么多功夫陪这么多人喝茶，但是时不时抓几个杀鸡儆猴还是可以做到的，所以小心为妙，梯子安全一般不会有事。</p>
+快捷方式:
+<a class="mdui-btn mdui-text-color-light-blue" href="#jdfx">节点分享</a>
+<a class="mdui-btn mdui-text-color-light-blue" href="#jlwd">交流问答</a>
+<a class="mdui-btn mdui-text-color-light-blue" href="#cjwt">常见问题</a>
+</div>
+
 </div></div><br>
 
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
 <h1>订阅源</h1>
-<li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.3.26几乎全部失效。</li>
+<li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：未更新。</li>
 可用于V2ray相关等工具<br><br><hr>
-来自YouTube（工具大师i）的订阅<br>
-➊ V2ray订阅
-http://121.4.209.91:8888/down/T35Wnk4uhsyj<br>
-➋Clash订阅
-http://121.4.209.91:8888/down/b7JIgMShhaeW<br>
- 更新时间2022.4.22<br>
+来自其他分享的订阅<br>
+暂无
+<br>
 
 </div></div><br>
 
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
-<div class='mdui-card-primary-title'>节点分享</div>
+<h2 id="jdfx">节点分享</h2>
 1、速度问题根据个人网络而言，此为免费提供，不定时更新，节点存活随缘<br>
 2、工具建议使用V2ray相关工具，兼容协议种类较多<br>
 3、所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验<br>
@@ -101,6 +128,7 @@ $("#v2").append(str);
 <br>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
+<h2 id="jlwd">交流问答</h2>
 <!-- 验证 -->
 <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
@@ -178,6 +206,33 @@ if (onIsOff == true){
 </script>
 </div></div><br>
 
+<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+<div class="mdui-container-fluid"><h2 id="cjwt">常见问题</h2></div>
+<ol>
+<li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
+<p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：MIUI重启解决99%的问题。</p>
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">为什么连不上？</strong></li>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</p>
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">速度太慢怎么办？</strong></li>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源无法保证速度，同上。</p>
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">不会用怎么办？</strong></li>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：别人都会，就你不会。</p>
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">看不懂怎么办？</strong></li>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别看。</p>
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">找不到怎么办？</strong></li>
+<code class="mdui-color-grey-400">答</code></strong>：去看一下眼科。
+
+<li><strong class="mdui-text-color-red mdui-typo-body-2">太麻烦了吧。</strong></li>
+<p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
+</ol>
+</div>
+<p><code class="mdui-text-color-green-600">声明：</code>所有资源均来源于网络搜集，如有侵权请联系我们删除。</p>
 </div>
 </body>
 <!--body-->
