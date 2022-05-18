@@ -1,3 +1,8 @@
+//mdui
+document.write("<script src=\"https:\/\/jixiejidiguan.top\/stalye\/mdui\/js\/mdui.min.js?v=1.0\"><\/script>");
+//Jquery
+document.write("<script src=\"https:\/\/jixiejidiguan.top\/stalye\/js\/jquery.min.js?v=1.0\"><\/script>");
+
 //Title
 var OriginTitile = document.title;
 var titleTime;
@@ -23,8 +28,6 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 //Log
 
 
-//Jquery
-document.write("<script src=\"https:\/\/jixiejidiguan.top\/stalye\/js\/jquery.min.js\"><\/script>");
 
 
 //我要拉
