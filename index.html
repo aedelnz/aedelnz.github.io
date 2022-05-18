@@ -6,13 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="keywords" content="画的个人记录">
 <meta name="description" content="一往无前！">
-<link rel="icon" href="./stalye/img/DHL.png?v=1.0" />
-<!-- MDUI -->
-<link rel="stylesheet" href="./stalye/mdui/css/mdui.min.css?v=1.0"/>
-<script src="./stalye/mdui/js/mdui.min.js?v=1.0"></script>
-<style>
-body {background:#f0f0f0;}
-</style>
+<link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.png?v=1.0" />
 </head>
 <!--body-->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
@@ -119,9 +113,9 @@ url:"stalye/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-card-actions'><div class='mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5' style='word-wrap:break-word;word-break:break-all;'>";    
+var str="<div class='mdui-card-actions'><div class='mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col' ><a href="+n.url+"><div class='.mdui-card' style='background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;height: 60%;background-image: url(&quot;"+n.img+"&quot;);'><div class='mdui-card-primary mdui-card-media-covered'><div class='mdui-card-primary-title'>"+n.title+"</div></div></div></a><br></div>";  
+str+="<div class='mdui-col'><div class='mdui-grid-tile mdui-card'><a style='color: #FFF;' target='_blank' href="+n.url+"><div class='mdui-ripple'><div class='mdui-card-media'><img src="+n.img+" /><div class='mdui-card-media-covered'><div class='mdui-card-primary'><div class='mdui-card-primary-title mdui-text-color-white'>"+n.title+"</div></div></div></div></div></a></div></div>";
 });    
 str+="</div></div>";    
 $("#cartoon").append(str);
@@ -145,9 +139,9 @@ url:"stalye/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-card-actions'><div class='mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5' style='word-wrap:break-word;word-break:break-all;'>";    
+var str="<div class='mdui-card-actions'><div class='mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col' ><a href="+n.url+"><div class='.mdui-card' style='background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;height: 60%;background-image: url(&quot;"+n.img+"&quot;);'><div class='mdui-card-primary mdui-card-media-covered'><div class='mdui-card-primary-title'>"+n.title+"</div></div></div></a><br></div>";  
+str+="<div class='mdui-col'><div class='mdui-grid-tile mdui-card'><a style='color: #FFF;' target='_blank' href="+n.url+"><div class='mdui-ripple'><div class='mdui-card-media'><img src="+n.img+" /><div class='mdui-card-media-covered'><div class='mdui-card-primary'><div class='mdui-card-primary-title mdui-text-color-white'>"+n.title+"</div></div></div></div></div></a></div></div>";
 });    
 str+="</div></div>";    
 $("#bilibili").append(str);
@@ -162,20 +156,8 @@ $("#bilibili").append(str);
 <section class="mdui-container">
 <h3>友情链接</h3>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 2px 0;">
-<br>
-<div class="mdui-panel" mdui-panel>
-<div class="mdui-panel-item"><div class="mdui-panel-item-header">
-<div class="mdui-panel-item-subtitle"><i class="mdui-icon material-icons">warning</i>友情链接详细操作</div><i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-</div>
-<div class="mdui-panel-item-body">
-<p>
-<ul><li>链接失效会下架，如站点跟换或恢复请联系管理员更换。</li>
-<li>申请友情链接请找管理员去</li></ul></p>
-<div class="mdui-panel-item-actions"><button class="mdui-btn mdui-ripple" mdui-panel-item-close>关闭</button></div>
-</div></div></div>
-
 <div id="Links"></div>
-</div><br>
+
 <script>
 $(function(){    
 $.ajax({    
@@ -187,9 +169,9 @@ url:"stalye/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-card-actions'><div class='mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-4 mdui-row-lg-5' style='word-wrap:break-word;word-break:break-all;'>";    
+var str="<div class='mdui-card-actions'><div class='mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col'><a style='color: #FFF;' target='_blank' href="+n.url+" data-pjax-state=''><div style='background-image: url(https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5);border-radius: 0px;background-repeat: no-repeat;background-position: center center;background-size:cover;position: relative;'><div class='mdui-card-primary'><div class='mdui-btn mdui-card-primary-title mdui-text-color-whiet'>"+n.title+"</div></div></div></a><br></div>";
+str+="<div class='mdui-col'><div class='mdui-grid-tile mdui-card'><a style='color: #FFF;' target='_blank' href="+n.url+"><div class='mdui-ripple'><div class='mdui-card-media'><img src='https://q1.qlogo.cn/g?b=qq&nk="+n.QQ+"&s=5'/><div class='mdui-card-media-covered'><div class='mdui-card-primary'><div class='mdui-card-primary-title mdui-text-color-white'>"+n.title+"</div></div></div></div></div></a></div></div>";
 });    
 str+="</div></div>";    
 $("#Links").append(str);
@@ -197,6 +179,18 @@ $("#Links").append(str);
 });    
 });   
 </script>
+<div class="mdui-card-actions">
+<div class="mdui-color-theme-accent" id="shenqing">去申请友情链接</div>
+</div>
+<script>
+var $ = mdui.$;
+$('#shenqing').on('click', function () {
+  mdui.snackbar({
+    message: '<div class="mdui-container-fluid">申请条件<br>1.不接受没有原创内容的站点<br>2.不接受版权问题严重的站点<br>3.全站 (强制) 使用HTTPS协议<br>4.且无影响阅读体验的广告<br><div class="mdui-textfield"><textarea class="mdui-textfield-input mdui-text-color-blue" rows="4">申请格式\n名称：\n链接：\nQQ：\n</textarea>为什么是QQ呢？<br> 答:QQ可以当头像又可以联系。</div>'
+  });
+});
+</script>
+</div><br>
 </section>
 <!-- 友情链接 -->
 
@@ -204,12 +198,17 @@ $("#Links").append(str);
 <!-- 页脚 -->
 <footer id="di" class="mdui-container">
 <style>
-footer {width: 100%; padding: 14px 0;}footer .nav {display: inline-flex;}footer .left {float: left; }footer .left a.nav-link {border-right: #b8c7bf solid 1px;line-height: 16px;font-size: 14px;padding: 0 2px;}footer .right {float: right;}footer .right a.nav-link {line-height: 16px;font-size: 14px;padding: 0 8px;}
+footer {width: 100%; padding: 14px 0;}
+footer .nav {display: inline-flex;}
+footer .left {float: left; }
+footer .left a.nav-link {border-right: #b8c7bf solid 2px;line-height: 16px;font-size: 16px;padding: 0 4px;}
+footer .right {float: right;}
+footer .right a.nav-link {line-height: 16px;font-size: 16px;padding: 10 10px 8px;}
 footer a {text-decoration: none;}
 </style>
 <div style="text-align: center;width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="inner mdui-card-actions">
-<nav class="nav left" style="color: #999;font-size: 13px;">
+<nav class="nav left mdui-text-color-light-blue-a700" style="color: #999;font-size: 13px;">
 <a class="nav-link" href="#din">返回顶部</a>
 <a class="nav-link last" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
 <a class="nav-link last" target="_blank"  href="https://afdian.net/@JIXIEJIDIGUAN">爱发电</a>
@@ -217,10 +216,10 @@ footer a {text-decoration: none;}
 <a class="nav-link last" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
 </nav>
 <nav class="nav right">
-<a target="_blank" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
+<a class="nav-link" target="_blank" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
 </nav>
 </div>
-<a  href="https://beian.miit.gov.cn" style="line-height: 16px; font-size: 14px; padding: 0 18px;">湘ICP备2022000040号</a>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录. </p>
+<a class="mdui-text-color-light-blue" href="https://beian.miit.gov.cn" style="line-height: 16px; font-size: 18px; padding: 0 18px;">湘ICP备2022000040号</a>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录. </p>
 </div>
 </footer>
 <!-- 页脚 -->
