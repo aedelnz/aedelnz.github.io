@@ -1,120 +1,69 @@
-
-
 <html lang="zh-CN" manifest="demo.appcache">
 <head>
 <title>您要寻找的页面已过期</title>
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<!-- MDUI -->
-<link rel="icon" href="/stalye/img/404.png?v=1.0" />
-<!-- MDUI -->
-<link rel="stylesheet" href="/stalye/mdui/css/mdui.min.css?v=1.0"/>
-<script src="/stalye/mdui/js/mdui.min.js?v=1.0"></script>
-
+<link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.png?v=1.0" />
 <style type="text/css">
-	html{
-		height:100%;
-	}
-	body{
-		background-color:#f0f0f0;
-		height:100%;
-		margin:0;
-		/*display:flex;
-		display:-webkit-flex;
-		align-items:center;*/
-	}
-	#mainDiv{
-		width:100%;
-		
-		position:absolute;
-		top:50%;
-	}
-	#imageDiv{
-		width:161pt;
-		text-align:center;
-		margin:0 auto;
-	}
-	#contentDiv{
-		width:100%;
-		color:#000000;
-		opacity:0.5;
-		font-family:PingFang3C-Regular;
-		letter-spacing:0;
-		text-align:center;
-	}
-	#contentDiv p{
-		margin:auto;
-	}
-	#blankDiv{
-		width:100%;
-	}
+html{height:100%}body{background-color:#f0f0f0;height:100%;margin:0}#mainDiv{width:100%;position:absolute;top:50%}#imageDiv{width:161pt;text-align:center;margin:0 auto}#contentDiv{width:100%;color:#000000;opacity:0.5;font-family:PingFang3C-Regular;letter-spacing:0;text-align:center}#contentDiv p{margin:auto}#blankDiv{width:100%}
 </style>
 
-<script type="text/javascript">	
-	function adaptScreen() {	
-		var imgRatio = 375/161;
-		var blankRatio = 603/32;
-		var contentRatio = 375/26;
-		var fontRatio = 375/19;
-		var topRatio = 603/153;
-		
-		var mainWidth = document.getElementById("mainDiv").offsetWidth;
-		var screenHeight = document.body.offsetHeight;
-		
-		var imageWidth = mainWidth/imgRatio;
-		var blankHeight = screenHeight/blankRatio;
-		var contentHeight = mainWidth/contentRatio;
-		var fontSize = mainWidth/fontRatio;
-		var mainNewHeight = imageWidth+blankHeight+contentHeight;
-		
-		var imageDiv = document.getElementById("imageDiv");
-		imageDiv.style.width = imageWidth+"px";
-		imageDiv.style.height = imageWidth+"px";
-		
-		var contentDiv = document.getElementById("contentDiv");
-		contentDiv.style.fontSize = fontSize+"px";
-		contentDiv.style.height = contentHeight+"px";
-		
-		var blankDiv = document.getElementById("blankDiv");
-		blankDiv.style.height = blankHeight+"px";
-		
-		var mainDiv =  document.getElementById("mainDiv");
-		mainDiv.style.height = mainNewHeight+"px";
-		mainDiv.style.top = (screenHeight/topRatio)+"px";
-	}
-	window.onload = function() {
-		adaptScreen();
-	}
-	window.onresize = function() {
-		adaptScreen();
-	}
-	
+<script type="text/javascript">
+function adaptScreen() {
+var imgRatio = 375/161;
+var blankRatio = 603/32;
+var contentRatio = 375/26;
+var fontRatio = 375/19;
+var topRatio = 603/153;
+var mainWidth = document.getElementById("mainDiv").offsetWidth;
+var screenHeight = document.body.offsetHeight;
+var imageWidth = mainWidth/imgRatio;
+var blankHeight = screenHeight/blankRatio;
+var contentHeight = mainWidth/contentRatio;
+var fontSize = mainWidth/fontRatio;
+var mainNewHeight = imageWidth+blankHeight+contentHeight;
+var imageDiv = document.getElementById("imageDiv");
+imageDiv.style.width = imageWidth+"px";
+imageDiv.style.height = imageWidth+"px";
+var contentDiv = document.getElementById("contentDiv");
+contentDiv.style.fontSize = fontSize+"px";
+contentDiv.style.height = contentHeight+"px";
+var blankDiv = document.getElementById("blankDiv");
+blankDiv.style.height = blankHeight+"px";
+var mainDiv =  document.getElementById("mainDiv");
+mainDiv.style.height = mainNewHeight+"px";
+mainDiv.style.top = (screenHeight/topRatio)+"px";
+}
+window.onload = function() {
+adaptScreen();
+}
+window.onresize = function() {
+adaptScreen();
+}
 </script>
 </head>
 <!--body-->
-<body class="mdui-loaded .mdui-drawer-body-left">
+<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 <!--统计 -->
 <div class="mdui-panel-item-body">
-<link rel="stylesheet" href="/stalye/index.css" >
-<script src="/stalye/js/zhucx.js"></script>
+<link rel="stylesheet" href="./stalye/index.css" >
+<script src="./stalye/js/zhucx.js"></script>
 </div>
 <!--统计 -->
+
+
 
 
 <div id="mainDiv">
-
 <div id="imageDiv" style="">
 <img src="/stalye/img/404.png?v=1.0" style="width:100%;height:100%;"></img>
 </div>
-
 <div id="blankDiv"></div>
-
 <div id="contentDiv">
 <p>您要寻找的页面已过期<br><br>
 <a class="mdui-btn mdui-ripple" style="text-decoration: none;color:#000000;" href="/"><i class="mdui-icon material-icons">arrow_upward</i>返回首页</a></p>
 </div>
-
 </div>
 
 </body>

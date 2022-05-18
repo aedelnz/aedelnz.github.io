@@ -16,9 +16,12 @@
 <script src="./stalye/js/zhucx.js"></script>
 </div>
 <!--统计 -->
+
+
 <div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 65px;height: 65px;z-index: 99;">
 <a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="" style="width:100%;height:100%"></a>
 </div>
+
 
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
@@ -26,10 +29,29 @@
 <a href="" class="mdui-typo-headline">画的个人记录</a>
 <div class="mdui-toolbar-spacer"></div>
 <a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+<i class="mdui-icon material-icons" mdui-menu="{target: '#example-attrcd'}">menu</i>
+<ul class="mdui-menu" id="example-attrcd">
+<li class="mdui-menu-item">
+<a href="#lb" class="mdui-ripple">列表</a>
+</li>
+<li class="mdui-menu-item">
+<a href="#txsp" class="mdui-ripple">腾讯视频</a>
+</li>
+<li class="mdui-menu-item">
+<a href="#blbl">哔哩哔哩</a>
+</li>
+<li class="mdui-menu-item">
+<a href="#yqlj" class="mdui-ripple">友情链接</a>
+</li>
+<li class="mdui-divider"></li>
+<li class="mdui-menu-item">
 <a href="#di">底部</a>
+</li>
+</ul>
 </div>
 </div>
 <!-- 顶部内容全部开始 -->
+
 
 <!-- 图片 -->
 <section id="din" class="mdui-container">
@@ -57,9 +79,10 @@ width: 100%;font-size: 18px;height: 100%;z-index: 1;text-align: center;color: #F
 </section>
 <!-- 图片 -->
 
+
 <!-- 更多页面 -->
 <section class="mdui-container">
-<h3>列表</h3>
+<h3 id="lb">列表</h3>
 
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <ul class="mdui-list" mdui-collapse="{accordion: true}">
@@ -96,9 +119,10 @@ width: 100%;font-size: 18px;height: 100%;z-index: 1;text-align: center;color: #F
 </section>
 <!-- 更多页面 -->
 
+
 <!-- 收藏 -->
 <section class="mdui-container">
-<h3>来自腾讯视频的国漫收藏</h3>
+<h3 id="txsp">来自腾讯视频的国漫收藏</h3>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div id="cartoon"></div>    
 </div>
@@ -122,9 +146,10 @@ $("#cartoon").append(str);
 }    
 });    
 });   
-	
 </script>
-<h3>来自BILIBILI的国漫收藏</h3>
+
+
+<h3 id="blbl">来自BILIBILI的国漫收藏</h3>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div id="bilibili"></div>    
 </div>
@@ -152,9 +177,10 @@ $("#bilibili").append(str);
 </section>
 <!-- 收藏 -->
 
+
 <!-- 友情链接 -->
 <section class="mdui-container">
-<h3>友情链接</h3>
+<h3 id="yqlj" >友情链接</h3>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 2px 0;">
 <div id="Links"></div>
 
@@ -223,7 +249,6 @@ footer a {text-decoration: none;}
 </div>
 </footer>
 <!-- 页脚 -->
-
 
 
 </body>
