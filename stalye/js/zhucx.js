@@ -26,9 +26,13 @@ document.write("<script src=\"https:\/\/jixiejidiguan.top\/stalye\/js\/jquery.mi
 //}
 
 
+
 //Title
 var OriginTitile = document.title;
 var titleTime;
+hitokoto = "花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰与世长存。";
+document.title = OriginTitile + '｜' + hitokoto;
+
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         document.title = '(๑òᆺó๑) 页面崩溃了';//+ OriginTitile;
@@ -40,6 +44,8 @@ document.addEventListener('visibilitychange', function() {
         }, 1000);
     }
 });
+
+
 
 if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
   alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
