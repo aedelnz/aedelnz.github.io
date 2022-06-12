@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN,机械极地馆,机械极地馆工作室">
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。">
+<link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
 <link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.png?v=1.0" alt="JIXXIEJIDIGUAN"/>
 <link rel="stylesheet" href="./stalye/mdui/css/mdui.min.css?v=1.0"/>
 <script src="./stalye/mdui/js/mdui.min.js?v=1.0"></script>
@@ -18,7 +19,7 @@
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
 
 <div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 65px;height: 65px;z-index: 99;">
-<a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="" style="width:100%;height:100%"></a>
+<a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="安全" style="width:100%;height:100%"></a>
 </div>
 
 <!-- 顶部内容全部开始 -->
@@ -46,7 +47,7 @@
 <div class="mdui-container-fluid">
 <!-- 图片 -->
 <div class="mdui-grid-tile">
-<img style="height: 200px;width: 100%;background-position: 100%;background-size: cover;background-image: url(&quot;https://s.jixiejidiguan.top/Api/random.php&quot;); opacity: 1 !important;">
+<img style="height: 200px;width: 100%;background-position: 100%;background-size: cover;background-image: url(&quot;https://s.jixiejidiguan.top/Api/random.php&quot;); opacity: 1 !important;" alt="HuaOS">
 <div class="mdui-grid-tile-actions">
 <div class="mdui-grid-tile-text">
 <h1 style="font-size: 1.0em">画的个人记录.</h1>
@@ -129,7 +130,7 @@ dataType: "json",
 success: function(data){    
 var str="<div class='mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+" alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
 });    
 str+="</div>";
 $("#cartoon").append(str);
@@ -157,7 +158,7 @@ dataType: "json",
 success: function(data){    
 var str="<div class='mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+" alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
 });    
 str+="</div>";
 $("#bilibili").append(str);
@@ -201,7 +202,7 @@ dataType: "json",
 success: function(data){    
 var str="<div class='mdui-row-xs-3 mdui-row-sm-6 mdui-row-md-7 mdui-row-lg-8 mdui-row-xl-8 mdui-grid-list'>";
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media' ><div style='width: 100%;height: 120px;'><img src="+n.img+" class='mdui-img-circle'></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media' ><div style='width: 100%;height: 120px;'><img src="+n.img+" class='mdui-img-circle' alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
 });    
 str+="</div>";
 $("#Links").append(str);
