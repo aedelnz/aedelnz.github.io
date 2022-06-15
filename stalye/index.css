@@ -1,12 +1,12 @@
 /* mdui */
-@import url(https://jixiejidiguan.top/stalye/mdui/css/mdui.min.css?v=1.0);
+@import url("https://jixiejidiguan.top/stalye/mdui/css/mdui.min.css?v=1.0");
+/* 字体 */
+@import url("https://fonts.loli.net/css?family=ZCOOL+KuaiLe");
+/* */
+* {margin: 0;padding: 0;box-sizing: border-box;}
 /* 主题颜色 */
 body {background:#ECEFF1; }
-body{margin:0;position:relative;min-height:100%;font-family:Fredoka,Pailou;-webkit-tap-highlight-color:transparent}
 /* 全站灰色 */
 关html *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
 /* 字体 */
-html,body,a,table,tr,td,th,tbody,form,article,div,dt,ul,ol,li,dl,dd,section,footer,nav,strong,aside,header,label,address,bdo,big,blockquote,caption,em,center,cite,dialog,dir,fieldset,figcaption,figure,main,pre,small,h1,h2,h3,h4,h5,h6 {font-family:"KaiTi","LiSu","Play","Microsoft Yahei","Open Sans" !important;} 
-/* 字体美化 */
-html,body,a,table,tr,td,th,tbody,form,article,div,dt,ul,ol,li,dl,dd,section,footer,nav,strong,aside,header,label,address,bdo,big,blockquote,caption,em,center,cite,dialog,dir,fieldset,figcaption,figure,main,pre,small,h1,h2,h3,h4,h5,h6 {text-shadow:0.4px 0.8px 0.6px #f0f0f0 !important; }
-
+body {font-family: 'ZCOOL KuaiLe', cursive;}
