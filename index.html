@@ -89,7 +89,6 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <!-- 更多页面 -->
 <section id="fujian" class="mdui-container">
 <h3>附件</h3>
-
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-3 mdui-row-xl-3 mdui-grid-list">
 
@@ -113,16 +112,17 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <div class="mdui-list-item-content mdui-valign"><a class="mdui-center mdui-card-primary-title" href="https://google.jixiejidiguan.tk">镜像</a></div>
 </li></div>
 </ul>
-
 </div></div>
 </section>
 <!-- 更多页面 -->
+
 
 <!-- 收藏 -->
 <section id="guoman" class="mdui-container">
 <h3>来自腾讯视频的国漫收藏</h3>
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
+
 <div id="cartoon"></div>
 </div></div>
 <script>
@@ -152,7 +152,6 @@ $("#cartoon").append(str);
 <div class="mdui-container-fluid">
 <div id="bilibili"></div>
 </div></div>
-
 <script>    
 $(function(){    
 $.ajax({    
@@ -174,7 +173,6 @@ $("#bilibili").append(str);
 });
 });
 </script>
-
 </section>
 <!-- 收藏 -->
 
@@ -185,15 +183,26 @@ $("#bilibili").append(str);
 <div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
 <div class="mdui-container-fluid">
 
-<div class="mdui-color-theme-accent" id="shenqing">去申请友情链接</div>
-<script>
-var $ = mdui.$;
-$('#shenqing').on('click', function () {
-  mdui.snackbar({
-    message: '<div class="mdui-container-fluid">申请条件<br>1.不接受没有原创内容的站点<br>2.不接受版权问题严重的站点<br>3.全站 (强制) 使用HTTPS协议<br>4.且无影响阅读体验的广告<br><div class="mdui-textfield"><textarea class="mdui-textfield-input mdui-text-color-blue" rows="4">申请格式\n名称：\n链接：\nQQ：\n</textarea>为什么是QQ呢？<br> 答:QQ可以当头像又可以联系。</div>'
-  });
-});
-</script>
+<div class="mdui-panel" mdui-panel>
+<div class="mdui-grid-tile mdui-panel-item">
+<div class="mdui-panel-item-header mdui-text-color-orange-900">友情链接申请规则</div>
+<div class="mdui-panel-item-body">
+申请条件<br>
+1.不接受没有原创内容的站点<br>
+2.不接受版权问题严重的站点<br>
+3.全站 (强制) 使用HTTPS协议<br>
+4.且无影响阅读体验的广告<br><br>
+<div class="mdui-text-color-red-accent">
+友链申请示例<br>
+本站名称：JIXIEJIDIGUAN<br>
+本站介绍：其实没有你们想的那么复杂！<br>
+本站链接：jixiejidiguan.top<br>
+本站图片：jixiejidiguan.top/stalye/img/DHL.png
+</div>
+<p><span class="mdui-text-color-light-blue">PS:</span>链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！</p>
+<div class="mdui-panel-item-actions"><a class="mdui-btn mdui-text-color-indigo-a200" href="mailto:root@jixiejidiguan.top?subject=友情链接申请" mdui-panel-item-close>去申请友情链接</a></div>
+</div></div>
+</div>
 
 <div id="Links"></div>
 </div></div>
@@ -246,10 +255,14 @@ footer a {text-decoration: none;}
 <a class="nav-link" target="_blank" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
 </nav>
 </div>
-<a class="mdui-text-color-light-blue" href="https://beian.miit.gov.cn" style="line-height: 16px; font-size: 18px; padding: 0 18px;">湘ICP备2022000040号</a>Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录. </p>
+<div class="mdui-container-fluid">
+<a class="mdui-text-color-light-blue" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>&nbsp;
+Copyright © 2020 - <span><script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录.
+</div>
 </div>
 </footer>
 <!-- 页脚 -->
+
 
 </body>
 <!--body-->
