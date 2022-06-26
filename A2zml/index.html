@@ -1,10 +1,9 @@
 
 <!--
  * @package JIXIEJIDIGUAN
- * @author 创极阁
  * @version 1.0
  * @link http://jixiejidiguan.top
- *￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
+ *￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
   -->
 <!-- 随随便便的开始 -->
 <html lang="zh-CN" manifest="list.appcache" manifest="demo.appcache">
@@ -54,61 +53,30 @@
 <!-- head -->
 
 <!-- body -->
-<body>
+<body class="mdui-appbar-with-toolbar mdui-appbar-with-tab">
 
-<!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-scroll-toolbar-hide">
-<div class="mdui-tab mdui-tab-centered mdui-color-red" style='height: 10px;' mdui-tab>
-<div style="cursor: pointer;display: inline-block;font-size: 8px;padding: 2 2px;"><a mdui-drawer="{target: '#left-drawer'}">侧栏</a></div>
+<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
+<div class="mdui-toolbar">
+<a class="mdui-typo-title" href="/" >首页</a>
+<div class="mdui-toolbar-spacer"></div>
+<a href="/JIXIEJIDIGUAN" title="爱发电">为TA充电</a>
+<a href="/A2zml/v2/">魔法禁書.</a>
+<a href="/#yqlj">友情链接</a>
+</div>
+<div class="mdui-tab"  mdui-tab>
 <a href="#tab1">导航</a>
 <a href="#tab3">浏览优化</a>
 </div>
 </div>
-<!-- 顶部内容全部结束 -->
 
 
 
-<div class="mdui-drawer mdui-drawer-close mdui-color-white" id="left-drawer">
-<div class="mdui-card-media">
-<img src="http://p.qlogo.cn/gh/707126150/707126150/0" />
-<div class="mdui-card-menu"><a class="mdui-text-color-deep-orange" mdui-drawer-close>关闭</a></div>
-</div>
-<ul class="mdui-list">
-<div class="mdui-card-content">
-<div class="mdui-card">
-<li class="mdui-list-item mdui-ripple"><a href="/" >首页</a></li>
-<li class="mdui-list-item mdui-ripple"><a href="/JIXIEJIDIGUAN" title="爱发电">为TA充电</a></li>
-<li class="mdui-list-item mdui-ripple"><a href="/A2zml/v2/">魔法禁書.</a></li>
-<li class="mdui-list-item mdui-ripple"><a href="/#yqlj">友情链接</a></li>
-
-</div><br>
-<div class="mdui-card">
-<a href="#ssyq"><li class="mdui-list-item mdui-ripple">搜索引擎</li></a>
-<a href="#aq"><li class="mdui-list-item mdui-ripple">安全</li></a>
-<a href="#fj"><li class="mdui-list-item mdui-ripple">番剧</li></a>
-<a href="#tp"><li class="mdui-list-item mdui-ripple">图片</li></a>
-<a href="#mh"><li class="mdui-list-item mdui-ripple">漫画</li></a>
-<a href="#xsyy"><li class="mdui-list-item mdui-ripple">小说音乐</li></a>
-<a href="#smkj"><li class="mdui-list-item mdui-ripple">数码科技</li></a>
-<a href="#yszy"><li class="mdui-list-item mdui-ripple">影视资源</li></a>
-<a href="#yxpt"><li class="mdui-list-item mdui-ripple">游戏平台</li></a>
-<a href="#jslt"><li class="mdui-list-item mdui-ripple">技术论坛</li></a>
-<a href="#xtjx"><li class="mdui-list-item mdui-ripple">系统镜像</li></a>
-<a href="#srcpt"><li class="mdui-list-item mdui-ripple">SRC平台</li></a>
-<a href="#wl"><li class="mdui-list-item mdui-ripple">网络</li></a>
-<a href="#gjpt"><li class="mdui-list-item mdui-ripple">工具平台</li></a>
-</div>
-
-</div>
-</ul>
-</div>
 
 <!-- 主要的内容 -->
 <section id="tab1" class="mdui-container">
 <br><div id="tms">
 <!-- 公告 
 <p class="mdui-container"><marquee behavior="scroll" direction="left">可能更新速度会比较慢，请大佬们见谅😊，有什么问题和建议大家可以提出来，我们会尽力去完成。</marquee></p>
--->
 <!-- 一言 -->
 <div class="mdui-container-fluid"><h1 style="font-size:1.5em;" id="hitokoto"><a href="#" id="hitokoto_text" style="color: #FFFFFF;"> 获取中...</a></h1></div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
@@ -178,7 +146,9 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://v.qq.com/channel/cartoon">腾讯视频</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://comic.youku.com/">优酷</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.iqiyi.com/dongman/">爱奇艺</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.mgtv.com/cartoon/">芒果TV</a><br>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.mgtv.com/cartoon/">芒果TV</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.nicovideo.jp/">翻墙-ニコニコ</a><br>
 </div>
 <div id=fjmf >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.agemys.com/">免费-AGE动漫</a>
@@ -204,8 +174,6 @@
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://share.acgnx.se/">末日動漫資源庫</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://share.dmhy.org/">翻墙-动漫花园</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://nyaa.si/">翻墙-nyaa</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://www.nicovideo.jp/">翻墙-ニコニコ</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-btn-raised mdui-btn-dense" href="/go.html#tpurl=https://animeseries.so/">国外-animetv</a>
 </div>
 </div></div>
@@ -493,28 +461,6 @@ Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date 
 <!-- 浏览器优化内的其他内容 -->
 <div>
 <h1>其他内容</h1>
-<div class="mdui-row mdui-list-item-content mdui-text-color-red">
-
-
-<div class="mdui-col-sm-8 mdui-col-md-6"><div class="mdui-card"><div class="mdui-card-media">
-<a href="http://www.nrta.gov.cn/col/col3758/index.html">
-<img class="mdui-img-rounded" src="http://www.nrta.gov.cn/picture/0/2104291158352204358.png?0.11442004385213256"/></a>
-</div></div><br></div>
-
-<div class="mdui-col-sm-8 mdui-col-md-6"><div class="mdui-card"><div class="mdui-card-media">
-<a href="http://www.cac.gov.cn/gzzt/ztzl/zt/news/A0920010816index_1.htm">
-<img class="mdui-img-rounded" src="https://www.12377.cn/app/2/31.jpg"/></a>
-</div></div><br></div>
-
-<div class="mdui-col-sm-8 mdui-col-md-6">
-<div class="mdui-card">
-<div class="mdui-card-media">
-</div><div class="mdui-card-primary">
-<div class="mdui-card-primary-title"><a href="https://fzapph5.gjfzpt.cn/#/spread/spreadList">国家反诈中心</a></div>
-</div></div><br></div>
-
-
-</div>
 
 
 一些还不错的查询工具：<a href="https://www.reg007.com/">你注册过哪些网站？一搜便知 - REG007</a>，
