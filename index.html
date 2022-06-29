@@ -3,17 +3,19 @@
 <title>画的个人记录</title>
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer" />
-<meta name="msvalidate.01" content="8E4231793633E9B27DE8A14D072B75F9" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN,机械极地馆,机械极地馆工作室">
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。">
-<link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
-<link rel="icon" href="https://jixiejidiguan.top/stalye/img/DHL.png?v=1.0" alt="JIXXIEJIDIGUAN"/>
-<link rel="stylesheet" href="./stalye/mdui/css/mdui.min.css?v=1.0"/>
-<script src="./stalye/mdui/js/mdui.min.js?v=1.0"></script>
-<link rel="stylesheet" href="./stalye/index.css?v=1.0" >
-<script src="./stalye/js/zhucx.js?v=1.0"></script>
-<script src="./stalye/js/jquery.min.js?v=1.0"></script>
+<!-- 图标 -->
+<link rel="icon" href="./favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
+<!-- mdui -->
+<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0"/>
+<script src="./start/mdui/js/mdui.min.js?v=1.0"></script>
+<!-- jQuery -->
+<script src="./start/jquery.min.js?v=1.0"></script>
+<!-- 注 -->
+<link rel="stylesheet" href="./start/index.css?v=1.0" >
+<script src="./start/origin.js?v=1.0"></script>
 </head>
 <!--body-->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
@@ -60,9 +62,6 @@
 <!-- 图片 -->
 <!-- 信息 -->
 <div class="mdui-panel" mdui-panel>
-<script src="https://cdn.jsdelivr.net/gh/travellings-link/travellings/assets/travelling.min.js"></script>
-<a href="javascript:travelling()" title="开往-友链接力"><img src="https://cdn.jsdelivr.net/gh/travellings-link/travellings/assets/logo.gif" alt="开往-友链接力" width="120"></a>
-<a class="mdui-text-color-blue-a700" href="https://stats.uptimerobot.com/0M2zqUkp83">网站监控服务</a><br>
 <span id = "runtime_span"></span>
 <script type = "text/javascript">
 function show_runtime()
@@ -77,9 +76,8 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 </div>
 <div class="mdui-panel-item-body">
 <p>非常抱歉，本站长由于可能以下原因导致无法正常活跃：
-<li>站长过气了</li>
-<li>站长不和谐</li>
-<li>站长为生活而苦脑</li></p>
+<li>站长正在搬砖中</li>
+<li><a class="mdui-text-color-blue-a700" href="https://stats.uptimerobot.com/0M2zqUkp83">网站监控服务</a></li></p>
 <div class="mdui-panel-item-actions"><b class="mdui-text-color-indigo-a200" mdui-panel-item-close>关闭</b></div>
 </div></div></div>
 <!-- 信息 -->
@@ -133,7 +131,7 @@ $.ajax({
 //请求方式    
  type:"GET",    
 //文件位置    
-url:"stalye/json/cartoon.json",  
+url:"./start/json/cartoon.json",  
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
@@ -160,7 +158,7 @@ $.ajax({
 //请求方式    
 type:"GET",    
 //文件位置
-url:"stalye/json/bilibili.json",  
+url:"./start/json/bilibili.json",  
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
@@ -214,7 +212,7 @@ $.ajax({
 //请求方式    
 type:"GET",    
 //文件位置    
-url:"stalye/json/Links.json",  
+url:"./start/json/Links.json",  
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    

@@ -12,11 +12,14 @@
 <meta name="keywords" content="MIUI,CC9E,cc9e,小米，小米CC9E" />
 <meta name="description" content="小米CC9e个人ROM仓库" />
 <link rel="icon" type="image/x-icon" href="https://cdn.cnbj1.fds.api.mi-img.com/miui-13/favicon.ico">
-<link rel="stylesheet" href="../stalye/mdui/css/mdui.min.css?v=1.0"/>
-<script src="../stalye/mdui/js/mdui.min.js?v=1.0"></script>
-<link rel="stylesheet" href="../stalye/index.css?v=1.0" >
-<script src="../stalye/js/zhucx.js?v=1.0"></script>
-<script src="../stalye/js/jquery.min.js?v=1.0"></script>
+<!-- mdui -->
+<link rel="stylesheet" href="../start/mdui/css/mdui.min.css?v=1.0"/>
+<script src="../start/mdui/js/mdui.min.js?v=1.0"></script>
+<!-- jQuery -->
+<script src="../start/jquery.min.js?v=1.0"></script>
+<!-- 注 -->
+<link rel="stylesheet" href="../start/index.css?v=1.0" >
+<script src="../start/origin.js?v=1.0"></script>
 <style type="text/css">
 a {text-decoration:none;/* outline:0; */}
 </style>
@@ -29,12 +32,12 @@ a {text-decoration:none;/* outline:0; */}
 <!-- 顶部 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
 <div class="mdui-toolbar mdui-color-red">
-<span class="mdui-typo-title">小米CC9E个人ROM仓库</span>
+<a href="/" class="mdui-typo-title">小米CC9E个人ROM仓库</a>
 <div class="mdui-toolbar-spacer"></div>
 <a href="" class="mdui-btn">刷新</a>
 </div>
 <!-- 这随便的 -->
-<div class="mdui-tab mdui-color-red" mdui-tab>
+<div class="mdui-tab" mdui-tab>
   <a href="#shouye" class="mdui-ripple">首页</a>
   <a href="#cc9e" class="mdui-ripple">CC9E</a>
 </div>
@@ -165,7 +168,7 @@ $.ajax({
 //请求方式    
 type:"GET",    
 //文件位置    
-url:"../stalye/json/practical.json",  
+url:"../start/json/practical.json",  
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
@@ -230,11 +233,11 @@ $("#con").append(str);
 
 <div id="官方稳定版" class="mdui-card-primary-subtitle">小米cc9e稳定版官方刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table mdui-table-selectable">
+<table class="mdui-table">
 <thead>
 <tr>
 <th>版本</th>
-<th class="mdui-table-col-numeric" mdui-tooltip="{content: '分为卡刷跟线刷'}">刷机包</th>
+<th mdui-tooltip="{content: '分为卡刷跟线刷'}">刷机包</th>
 </tr>
 </thead>
 <tbody>
@@ -301,7 +304,7 @@ $("#con").append(str);
 
 <div id="官方开发版" class="mdui-card-primary-subtitle">小米cc9e开发版官方刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table mdui-table-selectable">
+<table class="mdui-table">
 <thead> 
 <tr> 
 <th>版本</th> 
@@ -444,7 +447,7 @@ $("#con").append(str);
 
 <div id="欧盟稳定版" class="mdui-card-primary-subtitle">小米cc9e欧盟稳定版刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table mdui-table-selectable">
+<table class="mdui-table">
 <thead>
 <tr>
 <th>版本</th>
@@ -491,7 +494,7 @@ $("#con").append(str);
 
 <div id="欧盟开发版" class="mdui-card-primary-subtitle">小米cc9e欧盟开发板刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table mdui-table-selectable">
+<table class="mdui-table">
 <thead>
 <tr>
 <th>版本</th>
