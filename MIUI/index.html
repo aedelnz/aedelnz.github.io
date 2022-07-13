@@ -80,13 +80,13 @@ a {text-decoration:none;/* outline:0; */}
 </div>
 
 </div>
+<div class="mdui-card-content">
 <ol>博客:<a href="https://jixiejidiguan.baklib-free.com/068e/d33f">[教程] 小米手机解BL锁、线刷详细教程</a><br>
 CSDN:<a href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_source=app&app_version=5.3.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a><br>
 小米论坛:<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=17936575&app_version=dev.10085&ori_version=dev.10085&ori_miui_version=20.1.4&ori_android_version=10&ori_front_version=112&ref=share&channel=Share">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a>
 <li>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="http://www.miui.com/unlock">传送门</a></li> 
 <li>感谢<a href="https://weibo.com/ilrteam">LRTeam官微</a>以及<a href="https://www.weibo.com/u/6033736159">wzsx150</a></li> </ol> 
-
-<!-- 卡片的标题和副标题 -->
+</div>
 </div>
 
 
@@ -158,31 +158,120 @@ CSDN:<a href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_so
 <!--表格-->
 
 <div class="mdui-card-primary-title">实用网址推荐</div>
-<ul class='mdui-list'>
-<div id="con"></div>
-</ul>
+<div class="mdui-card mdui-container-fluid">
+<br><h4>Magisk</h4>
+<a href="https://magiskmanager.com/">Magisk Manager官网</a><br>
+<a href="https://github.com/topjohnwu/Magisk/releases">Magisk Manager：Github下载网址</a><br>
+<a href="https://topjohnwu.github.io/Magisk/guides.html">Magisk Developer Guides（开发人员指南）</a><br>
+<a href="https://topjohnwu.github.io/Magisk/install.html">Magisk 安装说明</a>
 
-<script>
-$(function(){    
-$.ajax({    
-//请求方式    
-type:"GET",    
-//文件位置    
-url:"../start/json/practical.json",  
-//返回数据格式为json,也可以是其他格式如    
-dataType: "json",    
-//请求成功后要执行的函数，拼接html    
-success: function(data){    
-var str="<div>";
-$.each(data,function(i,n){    
-str+="<a href="+n.url+"><li class='mdui-color-white mdui-list-item'><b class='mdui-icon mdui-color-yellow-600 mdui-text-color-white'>□</b><div class='mdui-list-item-content  mdui-text-truncate'>"+n.title+"</div><b class='mdui-text-color-grey-400'>＞</b></li></a>";
-});    
-str+="</div>";
-$("#con").append(str);
-}    
-});    
-});
-</script>
+<br><br><h4>Xposed</h4>
+<a href="https://github.com/RikkaApps/Riru/releases">Riru（Riru - Code)：Github</a><br>
+<a href="https://github.com/LSPosed/LSPosed/releases">Riru LSPosed：Github发布页<br>
+需下载Riru搭配使用！然后下载LSPosed Manager.apk进行模块管理</a>
+<a href="https://github.com/ElderDrivers/EdXposed/releases/">Riru EdXposed：Github发布页<br>
+需下载Riru搭配使用！然后下载EdXposed Manager.apk进行模块管理</a>
+<a href="https://ci.appveyor.com/project/ElderDrivers/edxposed/build/artifacts">Riru EdXposed：Snapshot Versions（非官方版本）<br>
+需下载Riru搭配使用！然后下载EdXposed Manager.apk进行模块管理</a>
+<a href="https://github.com/ElderDrivers/EdXposedManager/releases">EdXposed Manager Github</a><br>
+<a href="https://github.com/canyie/Dreamland/releases">Riru 梦境框架</a><br>
+<a href="https://github.com/canyie/DreamlandManager/releases">梦境框架管理器</a><br>
+<a href="https://taichi.cool/zh/">太极官网</a><br>
+<a href="https://repo.xposed.info/module-overview">Xposed Module Repository（Xposed模块存储库）</a><br>
+<a href="https://www.xda.im/">XDA.IM - Xposed与Magisk仓库</a><br>
+<a href="https://taichi.cool/zh/module/">模块下载 | 太极</a>
+
+<br><br><h4>Recovery</h4>
+<a href="https://m.weibo.cn/u/6033736159">wzsx150 新浪微博地址<br>
+LR.Team定制版TWRP下载地址</a>
+<a href="https://twrp.me/Devices/">TWRP官方网址</a><br>
+<a href="https://sourceforge.net/projects/orangefox/files/">橙狐rec下载网址①</a><br>
+<a href="https://orangefox.download/zh-CN">橙狐rec下载网址②</a><br>
+<a href="https://pitchblackrecovery.com/">PBRP Recovery</a><br>
+<a href="https://sourceforge.net/projects/shrp/files/">SHRP Recovery</a><br>
+<a href="https://forum.xda-developers.com/c/general-development.11974/">general-development</title>
+
+<br><br><h4>MIUI</h4>
+<a href="http://www.manosp.com/">mandfx 炫设置官改MIUI</a><br>
+<a href="https://www.lt2333.com/index">LittleTurtle网络科技官改MIUI</a><br>
+<a href="http://www.miui.com/shuaji-393.html">小米官方提供的线刷包下载地址</a><br>
+<a href="https://www.miui.com/download.html">小米官方提供的卡刷包下载地址</a><br>
+<a href="https://github.com/mooseIre/update_miui_ota/">MIUI OTA 更新地址<br>
+内含卡刷包线刷包</a>
+<a href="https://xiaomirom.com/">XiaomiROM.com<br>
+XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米机型其国行版、全球版、欧洲版（欧版）、印度版、印度尼西亚版、俄罗斯版（俄版）、土耳其版、台湾版（台版）的小米 ROM。刷机包下载链接来自小米ROM官网地址，您始终可以获得全速下载。固件均为小米官方ROM，当前没有第三方 ROM。</a>
+<a href="https://miuiver.com/">小米各机型 MIUI 历史版本分类索引<br>
+内含卡刷包、线刷包、增量包</a>
+<a href="https://miui.gq/">各机型小米设备 MIUI 版本索引<br>
+内含卡刷包、线刷包</a>
+<a href="https://roms.miuier.com/index.html">MIUI官方ROM仓库<br>
+内含卡刷包线刷包</a>
+
+<br><br><h4>刷机ROM网址</h4>
+<a href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org（Phone ROMS）<br>一个社区里面包含很多ROMs</a>
+<a href="https://theunlockr.com/roms/android-roms/">Android ROMs</a><br>
+<a href="https://mi.fiime.cn/">FiimeROM</a><br>
+<a href="https://download.pixelexperience.org/">PE官网地址</a><br>
+<a href="https://crdroid.net/">crDroid</a><br>
+<a href="https://syberiaos.com/">Syberia OS</a><br>
+<a href="https://www.droidontime.com/">dotOS</a><br>
+<a href="https://download.lineageos.org/">LineageOS</a><br>
+<a href="https://get.resurrectionremix.com/">Resurrection Remix OS</a><br>
+<a href="https://sourceforge.net/projects/illusionproject/files/">AOSiP</a><br>
+<a href="https://sourceforge.net/projects/posp/files/">Potato Open Sauce Project</a><br>
+<a href="http://srom.xyz/">XDA搬运工</a><br>
+<a href="https://downloads.aospextended.com/">AOSP Extended</a><br>
+<a href="https://sourceforge.net/projects/arrow-os/files/">Arrow OS</a><br>
+<a href="https://sourceforge.net/projects/pixys-os/files/">Pixys OS</a><br>
+<a href="https://sourceforge.net/projects/superioros/files/">Superior OS</a><br>
+<a href="https://sourceforge.net/projects/havoc-os/files/">Havoc-OS</a><br>
+<a href="http://dl.omnirom.org/">omnirom</a><br>
+<a href="https://miuipro.net/rom/miuipro-updating/">MIUI pro</a><br>
+<a href="https://sourceforge.net/projects/bootleggersrom/files/">Bootleggers</a><br>
+<a href="https://revengeos.com/">RevengeOS</a><br>
+<a href="https://download.mokeedev.com">魔趣</a><br>
+<a href="https://sourceforge.net/projects/evolution-x/files/">Evolution X</a><br>
+<a href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org</a><br>
+<a href="https://sourceforge.net/projects/coltos/files/">ColtOS</a><br>
+<a href="https://sourceforge.net/projects/i-o-n/files/device/">ion</a><br>
+<a href="https://sourceforge.net/projects/guzram-ports/files/">Guzram's Ports World</a><br>
+<a href="https://sourceforge.net/projects/nangis/files/">Nangis Project</a><br>
+<a href="https://sourceforge.net/projects/skylarkaurora/files/">SkylarkAurora</a><br>
+<a href="https://sourceforge.net/projects/candyroms/files/">CandyROMs</a><br>
+<a href="https://sourceforge.net/projects/kubilproject/files/">kubilproject</a><br>
+<a href="https://sourceforge.net/projects/posp/files/">Potato Open Sauce Project</a><br>
+<a href="https://sourceforge.net/projects/kubilproject/files/">kubilproject</a><br>
+<a href="https://sourceforge.net/projects/skylarkaurora/files/">SkylarkAurora</a><br>
+<a href="https://sourceforge.net/projects/bootleggersrom/files/builds/">Bootleggers ROM</a><br>
+<a href="https://sourceforge.net/projects/xtended/files/">MSM-Xtended</a><br>
+<a href="https://sourceforge.net/projects/neonrelease/files/">NeonOS</a><br>
+<a href="https://sourceforge.net/projects/cygnus-android/files/">Cygnus</a><br>
+<a href="https://sourceforge.net/projects/rebellion-os/files/">Rebellion-OS</a><br>
+<a href="https://sourceforge.net/projects/xyzuan/files/">a xyzuan`ROM</a><br>
+<a href="https://sourceforge.net/projects/stagos-10/files/">StagOS-10</a>
+
+<br><br><h4>其它</h4>
+<a href="https://f-droid.org/packages/com.termux/">下载Termux</a><br>
+<a href="https://forum.xda-developers.com/apps/magisk/module-url-here">XDA上的Magisk模块区</a><br>
+<a href="https://github.com/E7KMbb/AD-hosts/releases">AD-hosts<br>
+替换hosts来屏蔽广告</a>
+<a href="https://signup.jp.leagueoflegends.com/ja/signup/index?locale_referrer=en_US#/">拳头账号注册地址<br>
+推荐使用谷歌浏览器打开，自备VPN</a>
+<a href="http://www.miui.com/unlock/index.html">解锁小米手机</a><br>
+<a href="https://flash.mokeedev.com/">Flash MoKee (beta)<br>
+该网址类似OTG功能区的Recovery模式下Sideload线刷</a>
+<a href="https://xiaomifirmwareupdater.com/">Xiaomi Firmware Updater（小米固件更新程序）</a><br>
+<a href="https://dl-xda.xposed.info/framework/">Xposed官方网址</a><br>
+<a href="https://github.com/opengapps/opengapps">Open GApps（安装谷歌套件）①</a><br>
+<a href="https://opengapps.org/">Open GApps（安装谷歌套件）②</a><br>
+<a href="https://github.com/Pzqqt/Magisk_Manager_Recovery_Tool/releases">Magisk_Manager_Recovery_Tool<br>
+面具模块管理器，只限在Recovery里使用，可提供可视化操作触摸管理Magisk已安装模块</a>
+<a href="https://www.luckypatchers.com/">幸运破解器官方网址</a><br>
+<a href="https://checkra.in/">checkra1n</a><br>
+<a href="https://lsdy.top/">Windows版：「搞机助手」，以及更多实用软件</a><br>
+<a href="https://developer.android.com/studio/releases/platform-tools?hl=zh-CN">SDK Platform Tools<br>
+需要科学上网才可访问，Android SDK Platform Tools 是 Android SDK 的一个组件。它包含与 Android 平台进行交互的工具，例如 adb、fastboot 和 systrace。开发 Android 应用时需要使用这些工具。如果您想要解锁设备的引导加载程序并为其刷入新的系统映像，同样需要使用这些工具。</a>
+</div>
 </section><br>
 <!-- MIUI -->
 
