@@ -136,11 +136,11 @@ url:"./start/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
+var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+" alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card"><div class="mdui-card-media"><div style="object-fit: cover;height: 184px;"><img style="width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
 });    
-str+="</div>";
+str+='</div></div>';
 $("#cartoon").append(str);
 }    
 });    
@@ -163,11 +163,11 @@ url:"./start/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list'>";
+var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media'><div style='width: 100%;height: 175px;'><img src="+n.img+" alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card"><div class="mdui-card-media"><div style="object-fit: cover;height: 184px;"><img style="width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
 });    
-str+="</div>";
+str+='</div></div>';
 $("#bilibili").append(str);
 }    
 });
@@ -203,7 +203,7 @@ $("#bilibili").append(str);
 <div class="mdui-panel-item-actions"><a class="mdui-btn mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" mdui-panel-item-close>去申请友情链接</a></div>
 </div></div>
 </div>
-
+<br>
 <div id="Links"></div>
 </div></div>
 <script>
@@ -217,11 +217,11 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="<div class='mdui-row-xs-3 mdui-row-sm-6 mdui-row-md-7 mdui-row-lg-8 mdui-row-xl-8 mdui-grid-list'>";
+var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+="<div class='mdui-col mdui-ripple'><a style='text-decoration:none;' href="+n.url+" title="+n.title+" ><div class='mdui-grid-tile mdui-card'><div class='mdui-card-media' ><div style='width: 100%;height: 120px;'><img src="+n.img+" class='mdui-img-circle' alt="+n.title+"></div><div class='mdui-card-actions mdui-text-truncate mdui-color-grey-50'>"+n.title+"</div></div></div></a></div>";
+str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card"><div class="mdui-card-media"><div style="object-fit: cover;height: 120px;"><img style="width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
 });    
-str+="</div>";
+str+='</div></div>';
 $("#Links").append(str);
 }    
 });    
@@ -237,9 +237,9 @@ $("#Links").append(str);
 footer {width: 100%; padding: 14px 0;}
 footer .nav {display: inline-flex;}
 footer .left {float: left; }
-footer .left a.nav-link {border-right: #9E9E9E solid 2px;line-height: 16px;font-size: 16px;padding: 0 4px;}
+footer .left a.nav-link {border-right: #9E9E9E solid 2px;line-height: 16px;font-size: 12px;padding: 0 4px;}
 footer .right {float: right;}
-footer .right a.nav-link {line-height: 16px;font-size: 16px;padding: 10 10px 8px;}
+footer .right a.nav-link {line-height: 16px;font-size: 13px;padding: 10 10px 8px;}
 footer a {text-decoration: none;color: #9E9E9E;}
 </style>
 <div style="text-align: center;width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
@@ -256,7 +256,7 @@ footer a {text-decoration: none;color: #9E9E9E;}
 </nav>
 </div>
 <div class="mdui-container-fluid">
-<a class="mdui-text-color-indigo-accent" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>&nbsp;<a class="mdui-text-color-pink-accent" href="https://icp.gov.moe/?keyword=20220286" target="_blank">萌ICP备20220286号</a><br>
+<a class="mdui-text-color-indigo-accent" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a><br>
 Copyright © 2020 - <span><script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录.
 </div>
 </div>
