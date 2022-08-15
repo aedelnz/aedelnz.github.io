@@ -7,12 +7,12 @@ alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
 document.addEventListener('visibilitychange', function() {
 if (document.hidden) {
 document.title = '你还不关闭这个页面呢？';//+ OriginTitile;
-clearTimeout(titleTime);
+clearTimeout();
 } else {
 var text = "花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰与世长存。";
 document.title = text;//+ OriginTitile;
-titleTime = setTimeout(function() {
-document.title = OriginTitile;
+setTimeout(function() {
+document.title;// = OriginTitile;
 }, 12000);
 }
 });
