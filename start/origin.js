@@ -32,10 +32,7 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
-document.write("<style type=\"text\/css\">.video{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;position:fixed}.video video{width:100%;height:100%;object-fit:cover}<\/style>");
-document.write("<div class=\"video\">");
-document.write("<video onmouseover=\"play_v1(this)\" onmouseleave=\"stop_v1(this)\" src=\"\/\/api.xiao-xin.top\/API\/kuaishou.php?type=video\" muted autoplay loop><\/video>");
-document.write("<\/div>");
+document.write("<style type=\"text\/css\">@media screen and (max-width:720px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/mobil.girl);background-repeat:no-repeat;background-position:center 0}}@media screen and (min-width:721px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/girl);background-repeat:no-repeat;background-position:center 0}}<\/style>");
 
 
 (function() {
