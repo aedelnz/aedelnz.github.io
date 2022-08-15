@@ -34,7 +34,7 @@ document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",send
 
 document.write("<style type=\"text\/css\">.video{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;position:fixed}.video video{width:100%;height:100%;object-fit:cover}<\/style>");
 document.write("<div class=\"video\">");
-document.write("<video src=\"\/\/api.xiao-xin.top\/API\/kuaishou.php?type=video\" muted autoplay loop><\/video>");
+document.write("<video onmouseover=\"play_v1(this)\" onmouseleave=\"stop_v1(this)\" src=\"\/\/api.xiao-xin.top\/API\/kuaishou.php?type=video\" muted autoplay loop><\/video>");
 document.write("<\/div>");
 
 
