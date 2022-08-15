@@ -1,71 +1,37 @@
 //芜湖
-
-//获取浏览器页面可见高度和宽度
-//var _PageHeight = document.documentElement.clientHeight,
-//    _PageWidth = document.documentElement.clientWidth;
-//计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
-//var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
-//    _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
-//加载gif地址
-//var Loadimagerul="https://jixiejidiguan.top/stalye/img/加载.gif?v=1.0";
-//在页面未加载完毕之前显示的loading Html自定义内容
-//var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#f3f8ff;opacity:1;filter:alpha(opacity=50);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width:240px; height: 150px; background: #fff url('+Loadimagerul+') no-repeat; border: 1px solid #95B8E7;"></div></div>';
-//呈现loading效果
-//document.write(_LoadingHtml);
-//监听加载状态改变
-//document.onreadystatechange = completeLoading;
-//加载状态为complete时移除loading效果
-//function completeLoading() {
-//    if (document.readyState == "complete") {
-//        var loadingMask = document.getElementById('loadingDiv');
-//        loadingMask.parentNode.removeChild(loadingMask);
-//    }
-//}
-
-
+if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
+}
 
 //Title
-var OriginTitile = document.title;
-var titleTime;
-hitokoto = "";
-document.title = OriginTitile + '' + hitokoto;
-
 document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        document.title = '(๑òᆺó๑) 页面崩溃了';//+ OriginTitile;
-        clearTimeout(titleTime);
-    } else {
-        document.title = '((((っ´θ`)っ 噫又好了';//+ OriginTitile;
-        titleTime = setTimeout(function() {
-            document.title = OriginTitile;
-        }, 1000);
-    }
-});
-
-
-
-if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-  alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
+if (document.hidden) {
+document.title = '你还不关闭这个页面呢？';//+ OriginTitile;
+clearTimeout(titleTime);
+} else {
+var text = "花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰与世长存。";
+document.title = text;//+ OriginTitile;
+titleTime = setTimeout(function() {
+document.title = OriginTitile;
+}, 12000);
 }
+});
 
 //if (document.location.host != "jixiejidiguan.top") {
 //location.href = location.href.replace(document.location.host,'jixiejidiguan.top');
 //}
+
 //Log
-
-
+var log = { Host: "jixiejidiguan.top", Name: "机械极地馆"};
+console.log(log);
 
 //我要拉
-//主
 document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=document,i=p,c=\"\".concat(\"https:\"===e.location.protocol?\"https://\":\"http://\",\"sdk.51.la/js-sdk-pro.min.js\"),n=e.createElement(\"script\"),r=e.getElementsByTagName(\"script\")[0];n.type=\"text/javascript\",n.setAttribute(\"charset\",\"UTF-8\"),n.async=!0,n.src=c,n.id=\"LA_COLLECT\",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:\"JMIJZqK4MvC0pOsF\",ck:\"JMIJZqK4MvC0pOsF\",autoTrack:true,hashMode:true});</script>")
-//副
-document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=document,i=p,c=\"\".concat(\"https:\"===e.location.protocol?\"https://\":\"http://\",\"sdk.51.la/js-sdk-pro.min.js\"),n=e.createElement(\"script\"),r=e.getElementsByTagName(\"script\")[0];n.type=\"text/javascript\",n.setAttribute(\"charset\",\"UTF-8\"),n.async=!0,n.src=c,n.id=\"LA_COLLECT\",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:\"Jm6gayTTHl478uCW\",ck:\"Jm6gayTTHl478uCW\",autoTrack:true,hashMode:true});</script>")
+
+//数据挂件功能 beta
+document.write("<script id=\"LA-DATA-WIDGET\" crossorigin=\"anonymous\" charset=\"UTF-8\" src=\"https:\/\/v6-widget.51.la\/v6\/JMIJZqK4MvC0pOsF\/quote.js?theme=0&f=12&display=0,1,1,0,1,0,1,0\"><\/script>");
 
 //灵雀
-  !(function(c,i,e,b){
-  var h=i.createElement("script");
-  var f=i.getElementsByTagName("script")[0];
-  h.type="text/javascript";
-  h.crossorigin=true;
-  h.onload=function(){new c[b]["Monitor"]().init({id:"JiidMWrwn9WaSudr",sendSuspicious:true,ignoreVendor:false,sendSpaPv:true});};
-  f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");
+document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
+document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
+
