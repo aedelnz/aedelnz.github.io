@@ -3,10 +3,6 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
 }
 
-document.write("<link rel=\"stylesheet\" href=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/css\/mdui.min.css\"\/>");
-document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/js\/mdui.min.js\"><\/script>");
-document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/jquery\/3.6.0\/jquery.min.js\"><\/script>");
-
 //Title
 document.addEventListener('visibilitychange', function() {
 if (document.hidden) {
@@ -25,10 +21,6 @@ document.title;// = OriginTitile;
 //location.href = location.href.replace(document.location.host,'jixiejidiguan.top');
 //}
 
-//Log
-var log = { Host: "jixiejidiguan.top", Name: "机械极地馆"};
-console.log(log);
-
 //我要拉
 document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=document,i=p,c=\"\".concat(\"https:\"===e.location.protocol?\"https://\":\"http://\",\"sdk.51.la/js-sdk-pro.min.js\"),n=e.createElement(\"script\"),r=e.getElementsByTagName(\"script\")[0];n.type=\"text/javascript\",n.setAttribute(\"charset\",\"UTF-8\"),n.async=!0,n.src=c,n.id=\"LA_COLLECT\",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:\"JMIJZqK4MvC0pOsF\",ck:\"JMIJZqK4MvC0pOsF\",autoTrack:true,hashMode:true});</script>")
 
@@ -37,6 +29,9 @@ document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" cr
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
 document.write("<style type=\"text\/css\">@media screen and (max-width:720px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/mobil.girl);background-repeat:no-repeat;background-position:center 0}}@media screen and (min-width:721px){body{z-index:1;background-attachment:fixed;width:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/girl);background-repeat:no-repeat;background-position:center 0}}<\/style>");
+document.write("<link rel=\"stylesheet\" href=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/css\/mdui.min.css\"\/>");
+document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/js\/mdui.min.js\"><\/script>");
+document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/jquery\/3.6.0\/jquery.min.js\"><\/script>");
 
 
 (function() {
@@ -52,41 +47,5 @@ var head=document.getElementsByTagName("head");
 if(head.length>0&&head[0].appendChild(font_style)){
 }else{
 document.body.appendChild(font_style);
-}
-})();
-
-(function (){
-host=document.domain;
-var tt=window.mx_browser_obj.getTitle();
-tt=window.mx_browser_obj.getTitle();
-if(tt.indexOf('about:home')==0){
-aa="你若安好，便是晴天!";
-bb="天道酬勤!";
-var arr = [aa,bb];
-var random = getRandom(0, 3);
-if(random==0||random==1){
-window.mx_browser_obj.setTitle(arr[random]);
-return;
-}
-var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://v2.jinrishici.com/one.json');
-xhr.withCredentials = true;
-xhr.onreadystatechange = function () {
-if (xhr.readyState === 4) {
-var data = JSON.parse(xhr.responseText);
-showtxt(data.data.content);
-}
-};
-xhr.send();
-function showtxt(txt){
-txt=txt.replace('。','');
-window.mx_browser_obj.setTitle(txt);
-}
-function getRandom(min, max){
-var r = Math.random() * (max - min);
-var re = Math.round(r + min);
-re = Math.max(Math.min(re, max), min);
-return re;
-}
 }
 })();
