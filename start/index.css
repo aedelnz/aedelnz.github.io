@@ -1,7 +1,7 @@
 /* */
 * {margin: 0;padding: 0;box-sizing: border-box;}
 /* 主题颜色 */
-body {background:#ECEFF1;}
+body {background: #CFD8DC;}
 /* 全站灰色 */
 关html *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
 

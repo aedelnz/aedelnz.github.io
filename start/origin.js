@@ -28,10 +28,7 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
-document.write("<style type=\"text\/css\">@media screen and (max-width:720px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/mobil.girl);background-repeat:no-repeat;background-position:center 0}}@media screen and (min-width:721px){body{z-index:1;background-attachment:fixed;width:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/girl);background-repeat:no-repeat;background-position:center 0}}<\/style>");
-document.write("<link rel=\"stylesheet\" href=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/css\/mdui.min.css\"\/>");
-document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/js\/mdui.min.js\"><\/script>");
-document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/jquery\/3.6.0\/jquery.min.js\"><\/script>");
+//document.write("<style type=\"text\/css\">@media screen and (max-width:720px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/mobil.girl);background-repeat:no-repeat;background-position:center 0}}@media screen and (min-width:721px){body{z-index:1;background-attachment:fixed;width:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/girl);background-repeat:no-repeat;background-position:center 0}}<\/style>");
 
 
 (function() {
