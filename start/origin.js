@@ -3,6 +3,10 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
 }
 
+document.write("<link rel=\"stylesheet\" href=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/css\/mdui.min.css\"\/>");
+document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/mdui\/1.0.2\/js\/mdui.min.js\"><\/script>");
+document.write("<script src=\"https:\/\/cdn.bootcdn.net\/ajax\/libs\/jquery\/3.6.0\/jquery.min.js\"><\/script>");
+
 //Title
 document.addEventListener('visibilitychange', function() {
 if (document.hidden) {
