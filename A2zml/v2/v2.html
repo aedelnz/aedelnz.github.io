@@ -44,16 +44,17 @@ document.gata = "\n来了\nhttps://www.vpngate.net/cn/\n这个被墙了 ";
 <div class="mdui-toolbar mdui-color-red">
 <a href="/"><span class="mdui-typo-title">魔法禁書.</span></a>
 <div class="mdui-toolbar-spacer"></div>
-<a href="" class="mdui-btn">刷新</a>
+<a href="" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}"><i class="mdui-icon material-icons">replay</i></a>
 </div></div>
 <!-- 顶部内容全部结束 -->
-
 <br>
 <div class="mdui-container">
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+
+
+<div id="guan-btns">
+<div class="mdui-container-fluid">
 <!-- 可扩展面板 -->
 <div class="mdui-panel" mdui-panel>
-
 <div class="mdui-panel-item">
 <div class="mdui-panel-item-header mdui-text-color-indigo-a700">V2ray 相关工具</div>
 <div class="mdui-panel-item-body">
@@ -327,13 +328,9 @@ Base64编码或解码结果：
 <br><a href="https://xw.qq.com/c/coral/7789018844?pgv_ref=amp&ADTAG=amp" class="mdui-text-color-light-blue" title="评论">查看网友的精彩评论</a>
 </div>
 </div>
-
 </div>
 <!-- 可扩展面板 -->
-<br>
-<div class="mdui-container-fluid">
-<div class="mdui-text-color-blue-grey-700">
-
+<br><div class="mdui-text-color-blue-grey-700">
 网速测试：<a class="mdui-text-color-light-blue" href=https://www.speedtest.net/zh-Hans >speedtest.net</a> &nbsp; <a class="mdui-text-color-light-blue" href=https://fast.com/ >fast.com</a><br>
 IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/ >IPAddress.com</a> &nbsp; <a class="mdui-text-color-light-blue" href=https://www.ipaddress.my/ >IPAddress.my</a>
 </div>
@@ -341,11 +338,10 @@ IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/
 <script type="text/javascript">document.write(returnCitySN["cip"]+','+returnCitySN["cname"])</script>
 </div></div><br>
 
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+<div id="guan-btns">
 <div class="mdui-container-fluid">
 <h2>订阅源</h2>
 <div class="mdui-progress"><div class="mdui-color-red mdui-progress-indeterminate"></div></div>
-
 <li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.08.01 可能是最后一次更新</li>
 可用于V2ray相关等工具<br>
 <div class="mdui-divider"></div>
@@ -353,11 +349,9 @@ IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/
 <div class="mdui-text-color-cyan">
 暂无
 </div>
-<br>
-
 </div></div><br>
 
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+<div id="guan-btns">
 <div class="mdui-container-fluid">
 <h2 id="jdfx">节点分享</h2>
 此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验<br>
@@ -391,7 +385,7 @@ $("#v2").append(str);
 
 
 <br>
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
+<div id="guan-btns">
 <div class="mdui-container-fluid">
 <h2 id="jlwd">交流问答</h2>
 <!-- 验证 -->
@@ -475,8 +469,9 @@ if (onIsOff == true){
 </script>
 </div></div><br>
 
-<div style="width: 100%;border-radius: 8px;background-color:#fff;padding: 8px 0;">
-<div class="mdui-container-fluid"><h2 id="cjwt">常见问题</h2></div>
+<div id="guan-btns">
+<div class="mdui-container-fluid">
+<h2 id="cjwt">常见问题</h2>
 <ol class="mdui-container">
 <li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
 <p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
@@ -500,7 +495,8 @@ if (onIsOff == true){
 <li><strong class="mdui-text-color-red mdui-typo-body-2">太麻烦了吧。</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
 </ol>
-</div>
+</div></div>
+
 <p><br><code class="mdui-text-color-green-600">声明：</code>所有资源均来源于网络搜集，如有侵权请联系我们删除。</p>
 </div>
 </body>
