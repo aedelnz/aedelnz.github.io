@@ -28,7 +28,7 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
-document.write("<style type=\"text\/css\">@media screen and (max-width:720px){body{z-index:1;background-attachment:fixed;height:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/mobil.girl);background-repeat:no-repeat;background-position:center 0}}@media screen and (min-width:721px){body{z-index:1;background-attachment:fixed;width:100%;background-size:cover;background-image:url(https:\/\/api.vvhan.com\/api\/girl);background-repeat:no-repeat;background-position:center 0}}<\/style>");
+document.write("<style type=\"text\/css\"><\/style>");
 
 
 (function() {
