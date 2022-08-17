@@ -32,7 +32,7 @@ a {text-decoration:none;/* outline:0; */}
 <div class="mdui-toolbar mdui-color-red">
 <a href="/" class="mdui-typo-title">小米CC9E个人ROM仓库</a>
 <div class="mdui-toolbar-spacer"></div>
-<a href="" class="mdui-btn">刷新</a>
+<a href="" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}"><i class="mdui-icon material-icons">replay</i></a>
 </div>
 <!-- 这随便的 -->
 <div class="mdui-tab" mdui-tab>
@@ -45,7 +45,7 @@ a {text-decoration:none;/* outline:0; */}
 
 <!-- MIUI -->
 <section id="shouye" class="mdui-container"><br>
-<div class="mdui-card">
+<div id="guan-btns">
 <!-- 卡片头部，包含头像、标题、副标题 -->
 <div class="mdui-card-header">
 <img class="mdui-card-header-avatar" src="https://cdn.cnbj1.fds.api.mi-img.com/miui-13/favicon.ico"/>
@@ -85,78 +85,33 @@ CSDN:<a href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_so
 <li>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="http://www.miui.com/unlock">传送门</a></li> 
 <li>感谢<a href="https://weibo.com/ilrteam">LRTeam官微</a>以及<a href="https://www.weibo.com/u/6033736159">wzsx150</a></li> </ol> 
 </div>
+</div><br>
+
+
+
+
+<div id="guan-btns">
+<div class="mdui-container-fluid">
+<div class="mdui-card-primary-subtitle">第三方MIUI ROM 集合网站</div>
+<a href="https://www.miui.com/download.html">MIUI下载</a>
+<a href="https://xiaomifirmwareupdater.com/">固件更新程序</a>
+<a href="https://xiaomirom.com/">小米ROM</a>
+<a href="https://roms.miuier.com/">MIUI官方ROM仓库</a>
+<a href="https://mifirm.net/">MiFirm</a>
+
+<div class="mdui-card-primary-subtitle">小米TWRP集合</div>
+<br>小米 天翼云盘：<a href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）
+<br>小米 恒创互联云盘：<a href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150
+<br>红米 天翼云盘：<a href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）
+<br>红米 恒创互联云盘：<a href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150
+<br>天翼云盘：<a href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）
+<br>恒创互联云盘：<a href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150
+</div>
 </div>
 
-
-<!--表格-->
-<div class="mdui-card-primary-title">第三方MIUI ROM 集合网站</div>
-<table class="mdui-table">
-<thead>
-<tr><th>名称</th><th>地址</th></tr>
-</thead>
-<tbody>
-<tr>
-<td>MIUI下载</td>
-<td><a href="https://www.miui.com/download.html">https://www.miui.com/download.html</a></td>
-</tr>
-<tr>
-<td>固件更新程序</td>
-<td><a  href="https://xiaomifirmwareupdater.com/">https://xiaomifirmwareupdater.com</a></td>
-</tr>
-<tr>
-<td>小米ROM</td>
-<td><a href="https://xiaomirom.com/">https://xiaomirom.com</a></td>
-</tr>
-<tr>
-<td>MIUI官方ROM仓库</td>
-<td><a href="https://roms.miuier.com/">https://hroms.miuier.com</a></td>
-</tr>
-<tr>
-<td>MiFirm</td>
-<td><a href="https://mifirm.net/">https://mifirm.net</a></td>
-</tr>
-</tbody>
-</table>
-<!--表格-->
-
-<!--表格-->
-<div class="mdui-card-primary-title">小米TWRP集合</div>
-<table class="mdui-table">
-<thead>
-<tr>
-<th class="mdui-table-col-numeric">名称</th>
-<th>地址</th>
-</tr>
-<tr>
-<td>小米 天翼云盘</td>
-<td><a href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）</td>
-</tr>
-<tr>
-<td>小米 恒创互联云盘</td>
-<td><a href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150</td>
-</tr>
-<tr>
-<td>红米 天翼云盘</td>
-<td><a href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）</td>
-</tr>
-<tr>
-<td>红米 恒创互联云盘</td>
-<td><a href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150</td>
-</tr>
-<tr>
-<td>天翼云盘</td>
-<td><a href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）</td>
-</tr>
-<tr>
-<td>恒创互联云盘</td>
-<td><a href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150</td>
-</tr>
-</tbody>
-</table>
-<!--表格-->
-
 <div class="mdui-card-primary-title">实用网址推荐</div>
-<div class="mdui-card mdui-container-fluid">
+<div id="guan-btns">
+<div class="mdui-container-fluid">
 <br><h4>Magisk</h4>
 <a href="https://magiskmanager.com/">Magisk Manager官网</a><br>
 <a href="https://github.com/topjohnwu/Magisk/releases">Magisk Manager：Github下载网址</a><br>
@@ -268,21 +223,21 @@ XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米
 <a href="https://checkra.in/">checkra1n</a><br>
 <a href="https://lsdy.top/">Windows版：「搞机助手」，以及更多实用软件</a><br>
 <a href="https://developer.android.com/studio/releases/platform-tools?hl=zh-CN">SDK Platform Tools<br>
-需要科学上网才可访问，Android SDK Platform Tools 是 Android SDK 的一个组件。它包含与 Android 平台进行交互的工具，例如 adb、fastboot 和 systrace。开发 Android 应用时需要使用这些工具。如果您想要解锁设备的引导加载程序并为其刷入新的系统映像，同样需要使用这些工具。</a>
+需要科学上网才可访问，Android SDK Platform Tools 是 Android SDK 的一个组件。它包含与 Android 平台进行交互的工具，例如 adb、fastboot 和 systrace。开发 Android 应用时需要使用这些工具。如果您想要解锁设备的引导加载程序并为其刷入新的系统映像，同样需要使用这些工具。</a><br>
+</div>
 </div>
 </section><br>
 <!-- MIUI -->
 
 <section id="cc9e" class="mdui-container">
-<div class="mdui-card-actions mdui-color-white">
+<div id="guan-btns"><div class="mdui-card-actions">
 <h3>该网页最后更新时间为：2022.1.2</h3>
-</div>
+</div></div>
 <br>
 <div class="mdui-row">
 
 <div class="mdui-col-sm-6 mdui-col-md-6">
-<div class="mdui-card">
-
+<div id="guan-btns">
 <!-- 卡片头部，包含头像、标题、副标题 -->
 <div class="mdui-card-header"><a href="https://www.xiaomi.cn/board/5586615">
 <img class="mdui-card-header-avatar" src="https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/vip1569232518301?f=webp&thumb=1&w=450&h=836&quality=60"/>
@@ -320,7 +275,7 @@ XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米
 
 <div id="官方稳定版" class="mdui-card-primary-subtitle">小米cc9e稳定版官方刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table">
+<table class="mdui-table" style="background-color: rgba(255,255,255,0.5);">
 <thead>
 <tr>
 <th>版本</th>
@@ -391,7 +346,7 @@ XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米
 
 <div id="官方开发版" class="mdui-card-primary-subtitle">小米cc9e开发版官方刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table">
+<table class="mdui-table" style="background-color: rgba(255,255,255,0.5);">
 <thead> 
 <tr> 
 <th>版本</th> 
@@ -534,7 +489,7 @@ XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米
 
 <div id="欧盟稳定版" class="mdui-card-primary-subtitle">小米cc9e欧盟稳定版刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table">
+<table class="mdui-table" style="background-color: rgba(255,255,255,0.5);">
 <thead>
 <tr>
 <th>版本</th>
@@ -581,7 +536,7 @@ XiaomiROM.com 是一个站点，用于收集小米手机、小米平板等小米
 
 <div id="欧盟开发版" class="mdui-card-primary-subtitle">小米cc9e欧盟开发板刷机包合集</div>
 <div class="mdui-table-fluid">
-<table class="mdui-table">
+<table class="mdui-table" style="background-color: rgba(255,255,255,0.5);">
 <thead>
 <tr>
 <th>版本</th>
