@@ -30,6 +30,15 @@ document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",send
 
 document.write("<style type=\"text\/css\"><\/style>");
 
+//头条搜索
+(function(){
+var el = document.createElement("script");
+el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?bd791213a329a6ed753a4c5c9d6d2bf33c75043635d7209d88fab6de625ca34565e0a2ada1d5e86b11e7de7c1a83287d04743a02fd1ee8dd8558a8cad50e91cb354f8c6f3f78e5fd97613c481f678e6d";
+el.id = "ttzz";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(el, s);
+})(window)
+
 
 (function() {
 if(document.getElementById('zgttyy')){
