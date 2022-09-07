@@ -28,13 +28,11 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
-document.write("<style type=\"text\/css\"><\/style>");
-
 //头条搜索
 function createNode() {
-    var e_0 = document.createElement("script");
-    e_0.appendChild(document.createTextNode("(function(){var el=document.createElement(\"script\");el.src=\"https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?bd791213a329a6ed753a4c5c9d6d2bf33c75043635d7209d88fab6de625ca34565e0a2ada1d5e86b11e7de7c1a83287d04743a02fd1ee8dd8558a8cad50e91cb354f8c6f3f78e5fd97613c481f678e6d\";el.id=\"ttzz\";var s=document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(el,s)})(window)"));
-    return e_0;
+var e_0 = document.createElement("script");
+e_0.appendChild(document.createTextNode("(function(){var el=document.createElement(\"script\");el.src=\"https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?bd791213a329a6ed753a4c5c9d6d2bf33c75043635d7209d88fab6de625ca34565e0a2ada1d5e86b11e7de7c1a83287d04743a02fd1ee8dd8558a8cad50e91cb354f8c6f3f78e5fd97613c481f678e6d\";el.id=\"ttzz\";var s=document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(el,s)})(window)"));
+return e_0;
 }
 
 (function() {
@@ -52,3 +50,4 @@ if(head.length>0&&head[0].appendChild(font_style)){
 document.body.appendChild(font_style);
 }
 })();
+

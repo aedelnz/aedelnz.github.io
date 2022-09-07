@@ -7,15 +7,66 @@
 <meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN,机械极地馆,机械极地馆工作室">
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。">
 <!-- 图标 -->
-<link rel="icon" href="./favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
-<!-- mdui -->
-<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0"/>
-<script src="./start/mdui/js/mdui.min.js?v=1.0"></script>
-<!-- jQuery -->
-<script src="./start/jquery.min.js?v=1.0"></script>
-<!-- 注 -->
-<link rel="stylesheet" href="./start/index.css?v=1.0" >
-<script src="./start/origin.js?v=1.0"></script>
+<link rel="icon" href="./favicon.ico?v=1.0" />
+<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0" />
+<script type="text/javascript" src="./start/mdui/js/mdui.min.js?v=1.0"></script>
+<script type="text/javascript" src="./start/jquery.min.js?v=1.0"></script>
+<link rel="stylesheet" href="./start/index.css?v=1.0" />
+<script type="text/javascript" src="./start/origin.js?v=1.0" /></script>
+<style>
+.bangumi-list {
+text-align:center;
+}
+.bangumi-item {
+    height: 180px;
+    margin-right: 4px;
+    display: inline-block;
+  }
+  .bangumi-item .cover-wrapper {
+    position: relative;
+    display: block;
+    height: 170px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+    outline-width: 0;
+    outline-style: none;
+    outline-color: invert;
+  }
+
+  .common-lazy-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  img {
+    border: 0;
+  }
+  .bangumi-item .cover-wrapper .shadow {
+    position: absolute;
+    padding: 28px 10px 0;
+    color: #fff;
+    bottom: 0;
+    height: 50px;
+    white-space: nowrap;
+  }
+  .bangumi-item .cover-wrapper .corner-tag {
+    position: absolute;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 0 0 0 4px;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    text-align: center;
+    background-color: #ffa726;
+    color: #fff;
+  }
+</style>
 </head>
 <!--body-->
 <body class="mdui-appbar-with-toolbar mdui-loaded">
@@ -39,7 +90,7 @@
 <a mdui-menu="{target: '#example-attrcd'}"><i class="mdui-icon material-icons">format_align_right</i></a>
 <ul class="mdui-menu" id="example-attrcd">
 <li class="mdui-menu-item"><a href="#fujian" class="mdui-ripple">附件</a></li>
-<li class="mdui-menu-item"><a href="#guoman" class="mdui-ripple">國漫收藏</a></li>
+<li class="mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
 <li class="mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
 <li class="mdui-divider"></li>
 <li class="mdui-menu-item"><a href="#di" class="mdui-ripple">底部</a></li>
@@ -49,13 +100,14 @@
 <!-- 顶部内容全部开始 -->
 
 
+
 <!-- [] -->
 <section id="din" class="mdui-container"><br>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="mdui-container-fluid">
 <!-- 图片 -->
-<div class="mdui-grid-tile">
-<img style="height: 200px;width: 100%;background-position: 100%;background-size: cover;background-image: url(https://i0.hdslb.com/bfs/new_dyn/7a5fa4189b7b510c2049e17f8b99c2776823116.png);opacity: 0.8 !important;" alt="HuaOS">
+<div class="mdui-grid-tile" style="height: 320px;">
+<img src="https://i0.hdslb.com/bfs/new_dyn/7a5fa4189b7b510c2049e17f8b99c2776823116.png" alt="HuaOS">
 <div class="mdui-grid-tile-actions">
 <div class="mdui-grid-tile-text">
 <h1 style="font-size: 1.0em">画的个人记录.</h1>
@@ -90,37 +142,44 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <p>非常抱歉，本站长由于可能以下原因导致无法正常活跃：
 <li>站长正在搬砖中</li>
 <li><a class="mdui-text-color-blue-a700" href="https://stats.uptimerobot.com/0M2zqUkp83">网站监控服务</a></li></p>
-<div class="mdui-panel-item-actions"><b class="mdui-text-color-indigo-a200" mdui-panel-item-close>关闭</b></div>
 </div></div></div>
 <!-- 信息 -->
 </div></div>
 </section>
 <!-- [] -->
 
+
+
 <!-- 更多页面 -->
 <section id="fujian" class="mdui-container">
 <br><h3>附件</h3>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-3 mdui-row-xl-3 mdui-grid-list">
 
 <ul class="mdui-list">
-<div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="/A2zml">导航</a></div>
+<div class="mdui-col "><li class="mdui-list-item">
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/A2zml">导航站</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="/MIUI">MIUI</a></div>
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/System">System</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="https://s.jixiejidiguan.top">破站</a></div>
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/MIUI">MIUI</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="https://jixiejidiguan.baklib-free.com">博客</a></div>
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/Bg">文章</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="https://yunpan.jixiejidiguan.tk">云盘</a></div>
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="https://s.jixiejidiguan.top">茵昱动漫</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-center" href="https://google.jixiejidiguan.tk">镜像</a></div>
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="https://jixiejidiguan.baklib-free.com">博客</a></div>
+</li></div>
+<div class="mdui-col"><li class="mdui-list-item">
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="https://yunpan.jixiejidiguan.tk">云盘</a></div>
+</li></div>
+<div class="mdui-col"><li class="mdui-list-item">
+<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="https://google.jixiejidiguan.tk">镜像</a></div>
 </li></div>
 </ul>
 </div></div>
@@ -131,7 +190,7 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <!-- 收藏 -->
 <section id="guoman" class="mdui-container">
 <br><h3>来自腾讯视频的国漫收藏</h3>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="mdui-container-fluid">
 
 <div id="cartoon"></div>
@@ -147,19 +206,19 @@ url:"./start/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
+var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="bangumi-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card" style="background-color: rgba(255,255,255,0.5);"><div class="mdui-card-media"><div style="object-fit: cover;height: 184px;"><img style="opacity:0.7;width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
+str+='<li class="bangumi-item"><a href='+n.url+' title='+n.title+' class="cover-wrapper"><div class="common-lazy-img"><img src='+n.img+' alt='+n.title+' lazy="loaded"></div><div class="shadow">'+n.title+'</div><span class="corner-tag badge_0" style="background-color: rgb(251, 114, 153);">收藏</span></a></li>';
 });    
 str+='</div></div>';
 $("#cartoon").append(str);
-}    
+}
 });    
 });   
 </script>
 
 <br><h3>来自BILIBILI的国漫收藏</h3>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="mdui-container-fluid">
 <div id="bilibili"></div>
 </div></div>
@@ -174,9 +233,9 @@ url:"./start/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
+    var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="bangumi-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card" style="background-color: rgba(255,255,255,0.5);"><div class="mdui-card-media"><div style="object-fit: cover;height: 184px;"><img style="opacity:0.7;width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
+str+='<li class="bangumi-item"><a href='+n.url+' title='+n.title+' class="cover-wrapper"><div class="common-lazy-img"><img src='+n.img+' alt='+n.title+' lazy="loaded"></div><div class="shadow">'+n.title+'</div><span class="corner-tag badge_0" style="background-color: rgb(251, 114, 153);">收藏</span></a></li>';
 });    
 str+='</div></div>';
 $("#bilibili").append(str);
@@ -191,7 +250,7 @@ $("#bilibili").append(str);
 <!-- 友情链接 -->
 <section id="yqlj" class="mdui-container">
 <br><h3>友情链接</h3>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="mdui-container-fluid">
 
 <div class="mdui-panel" mdui-panel>
@@ -211,7 +270,7 @@ $("#bilibili").append(str);
 本站图片：jixiejidiguan.top/favicon.ico
 </div><br>
 <p><span class="mdui-text-color-light-blue">PS:</span>链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！</p>
-<div class="mdui-panel-item-actions"><a class="mdui-btn mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" mdui-panel-item-close>去申请友情链接</a></div>
+<a class="mdui-btn mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" mdui-panel-item-close>去申请友情链接</a>
 </div></div>
 </div>
 <br>
@@ -228,11 +287,11 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-6 mdui-grid-list">';
+var str='<div class="mdui-container-fluid mdui-text-center">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><a href='+n.url+' title='+n.title+'><div class="mdui-card" style="background-color: rgba(255,255,255,0.5);"><div class="mdui-card-media"><div style="opacity:0.7;object-fit: cover;height: 120px;"><img style="width: 100%;height: 100%;object-fit: cover;" src='+n.img+' alt='+n.title+'/></div></div><div class="mdui-card-actions mdui-card-actions-stacked mdui-text-truncate">'+n.title+'</div></div><br></div></a>';
+str+='<a href='+n.url+' title='+n.title+'><div class="mdui-col" style="display: inline-block;width: 200px;height: 200px;"><div class="mdui-card mdui-grid-tile"><img style="height: 90%;" src='+n.img+' alt='+n.title+'/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-transparent mdui-color-deep-orange-a700"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">'+n.title+'</div></div></div></div><br></div></a>';
 });    
-str+='</div></div>';
+str+='</div>';
 $("#Links").append(str);
 }    
 });    
@@ -243,17 +302,17 @@ $("#Links").append(str);
 
 
 <!-- 页脚 -->
-<footer id="di" class="mdui-container">
+<footer id="di" class="mdui-container"><br>
 <style>
 footer {width: 100%; padding: 6px 0;}
 footer .nav {display: inline-flex;}
 footer .left {float: left;}
-footer .left a.nav-link {border-right: #448AFF solid 1.5px;line-height: 10px;font-size: 8px;padding: 0 2px;}
+footer .left a.nav-link {border-right: #448AFF solid 1.5px;line-height: 10px;padding: 0 2px;}
 footer .right {float: right;}
-footer .right a.nav-link {line-height: 8px;font-size: 10px;padding: 14 1px 6px;}
+footer .right a.nav-link {line-height: 8px;padding: 14 1px 6px;}
 footer a {text-decoration: none;color: #000;}
 </style>
-<div id="guan-btns">
+<div id="guanui-btns">
 <div class="inner mdui-card-actions">
 <nav class="nav left">
 <a class="nav-link" href="#din">返回顶部</a>
@@ -269,7 +328,7 @@ footer a {text-decoration: none;color: #000;}
 <div class="mdui-container-fluid">
 <a class="mdui-text-color-indigo-accent" style="float: left;">Copyright © 2020 - <span><script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script></span> 画的个人记录.</a>
 &ensp;<a class="mdui-text-color-indigo-accent" style="float: right;" href="https://beian.miit.gov.cn"><i style="font-size: 14px;" class="mdui-icon material-icons">security</i>湘ICP备2022000040号</a>
-<a class="mdui-text-color-indigo-accent" style="float: left;">由<span class="mdui-text-color-yellow-900">GitHub</span>提供服务</a>
+<a class="mdui-text-color-indigo-accent" style="float: left;"> 由<span class="mdui-text-color-yellow-900">GitHub</span>提供服务</a>
 </div></div>
 </footer>
 <!-- 页脚 -->
