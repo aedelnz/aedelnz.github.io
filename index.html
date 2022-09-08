@@ -6,76 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN,机械极地馆,机械极地馆工作室">
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。">
-<!-- 图标 -->
 <link rel="icon" href="./favicon.ico?v=1.0" />
 <link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0" />
 <script type="text/javascript" src="./start/mdui/js/mdui.min.js?v=1.0"></script>
 <script type="text/javascript" src="./start/jquery.min.js?v=1.0"></script>
 <link rel="stylesheet" href="./start/index.css?v=1.0" />
 <script type="text/javascript" src="./start/origin.js?v=1.0" /></script>
-<style>
-.bangumi-list {
-text-align:center;
-}
-.bangumi-item {
-    height: 180px;
-    margin-right: 4px;
-    display: inline-block;
-  }
-  .bangumi-item .cover-wrapper {
-    position: relative;
-    display: block;
-    height: 170px;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  a {
-    text-decoration: none;
-    outline-width: 0;
-    outline-style: none;
-    outline-color: invert;
-  }
-
-  .common-lazy-img img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  img {
-    border: 0;
-  }
-  .bangumi-item .cover-wrapper .shadow {
-    position: absolute;
-    padding: 28px 10px 0;
-    color: #fff;
-    bottom: 0;
-    height: 50px;
-    white-space: nowrap;
-  }
-  .bangumi-item .cover-wrapper .corner-tag {
-    position: absolute;
-    width: 60px;
-    height: 24px;
-    line-height: 24px;
-    border-radius: 0 0 0 4px;
-    top: 0;
-    right: 0;
-    font-size: 12px;
-    text-align: center;
-    background-color: #ffa726;
-    color: #fff;
-  }
-</style>
 </head>
 <!--body-->
 <body class="mdui-appbar-with-toolbar mdui-loaded">
-<style>
-</style>
 
 <div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 35px;height: 35px;z-index: 99;">
 <a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="安全" style="width:100%;height:100%"></a>
 </div>
+
 <!--
 <style type="text/css">.video{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;position:fixed}.video video{width:100%;height:100%;object-fit:cover}</style>
 <div class="video">
@@ -105,18 +49,10 @@ text-align:center;
 <section id="din" class="mdui-container"><br>
 <div id="guanui-btns">
 <div class="mdui-container-fluid">
-<!-- 图片 -->
-<div class="mdui-grid-tile" style="height: 320px;">
-<img src="https://i0.hdslb.com/bfs/new_dyn/7a5fa4189b7b510c2049e17f8b99c2776823116.png" alt="HuaOS">
-<div class="mdui-grid-tile-actions">
 <div class="mdui-grid-tile-text">
-<h1 style="font-size: 1.0em">画的个人记录.</h1>
-<b id="hitokoto" class="mdui-text-truncate"><a href="#" id="hitokoto_text"> 获取中...</a></b>
+<h1 id="hitokoto" class="mdui-text-truncate"><a href="#" id="hitokoto_text"> 获取中...</a></h1>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
-</div>
-</div>
-<!-- 图片 -->
 <!-- 信息 -->
 <div class="mdui-panel" mdui-panel>
 <span id = "runtime_span"></span>
@@ -187,6 +123,7 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <!-- 更多页面 -->
 
 
+
 <!-- 收藏 -->
 <section id="guoman" class="mdui-container">
 <br><h3>来自腾讯视频的国漫收藏</h3>
@@ -206,16 +143,17 @@ url:"./start/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="bangumi-list">';
+var str='<div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<li class="bangumi-item"><a href='+n.url+' title='+n.title+' class="cover-wrapper"><div class="common-lazy-img"><img src='+n.img+' alt='+n.title+' lazy="loaded"></div><div class="shadow">'+n.title+'</div><span class="corner-tag badge_0" style="background-color: rgb(251, 114, 153);">收藏</span></a></li>';
-});    
-str+='</div></div>';
+str+='<div class="mdui-col mdui-row" style="margin-right: 8px;"><div class="mdui-card"><div class="mdui-card-media"><a style="position: relative;display: block;width: 100%;height: 214px;border-radius: 4px;overflow: hidden;" href='+n.url+' title='+n.title+'><img style="object-fit:cover;height: 100%;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered mdui-card-media-covered-gradient"><div class="mdui-card-primary"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div></div><br></div>';
+});
+str+='</div>';
 $("#cartoon").append(str);
 }
 });    
 });   
 </script>
+
 
 <br><h3>来自BILIBILI的国漫收藏</h3>
 <div id="guanui-btns">
@@ -233,11 +171,11 @@ url:"./start/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-    var str='<div class="mdui-container-fluid mdui-row mdui-row-gapless"><div class="bangumi-list">';
+var str='<div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<li class="bangumi-item"><a href='+n.url+' title='+n.title+' class="cover-wrapper"><div class="common-lazy-img"><img src='+n.img+' alt='+n.title+' lazy="loaded"></div><div class="shadow">'+n.title+'</div><span class="corner-tag badge_0" style="background-color: rgb(251, 114, 153);">收藏</span></a></li>';
-});    
-str+='</div></div>';
+str+='<div class="mdui-col mdui-row" style="margin-right: 8px;"><div class="mdui-card"><div class="mdui-card-media"><a style="position: relative;display: block;width: 100%;height: 214px;border-radius: 4px;overflow: hidden;" href='+n.url+' title='+n.title+'><img style="object-fit:cover;height: 100%;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered mdui-card-media-covered-gradient"><div class="mdui-card-primary"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div></div><br></div>';
+});
+str+='</div>';
 $("#bilibili").append(str);
 }    
 });
@@ -287,10 +225,10 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-container-fluid mdui-text-center">';
+  var str='<div class="mdui-row-xs-3 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<a href='+n.url+' title='+n.title+'><div class="mdui-col" style="display: inline-block;width: 200px;height: 200px;"><div class="mdui-card mdui-grid-tile"><img style="height: 90%;" src='+n.img+' alt='+n.title+'/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-transparent mdui-color-deep-orange-a700"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">'+n.title+'</div></div></div></div><br></div></a>';
-});    
+str+='<div class="mdui-col mdui-row" style="margin-right: 8px;"><div class="mdui-card"><div class="mdui-card-media"><a style="position: relative;display: block;width: 100%;height: 180px;border-radius: 4px;overflow: hidden;" href='+n.url+' title='+n.title+'><img style="object-fit:cover;height: 100%;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered mdui-card-media-covered-gradient"><div class="mdui-card-primary"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div></div><br></div>';
+});
 str+='</div>';
 $("#Links").append(str);
 }    
