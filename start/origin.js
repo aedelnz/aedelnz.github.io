@@ -28,26 +28,79 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" crossorigin=\"anonymous\"><\/script>");
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
-//头条搜索
-function createNode() {
-var e_0 = document.createElement("script");
-e_0.appendChild(document.createTextNode("(function(){var el=document.createElement(\"script\");el.src=\"https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?bd791213a329a6ed753a4c5c9d6d2bf33c75043635d7209d88fab6de625ca34565e0a2ada1d5e86b11e7de7c1a83287d04743a02fd1ee8dd8558a8cad50e91cb354f8c6f3f78e5fd97613c481f678e6d\";el.id=\"ttzz\";var s=document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(el,s)})(window)"));
-return e_0;
-}
+//
+document.write("<div id=\"sakana-widget-takina\"><\/div>");
+document.write("<style>#sakana-widget-takina {position: fixed;left: 0px;bottom: 0px;}<\/style>");
+document.write("<script>window.addEventListener('DOMContentLoaded', () => {new SakanaWidget({character: 'takina',}).mount('#sakana-widget-takina');});<\/script>");
+document.write("<script async onload=\"initSakanaWidget()\" src=\"https:\/\/cdn.jsdelivr.net\/npm\/sakana-widget@2.3.2\/lib\/sakana.min.js\"><\/script>");
 
-(function() {
-if(document.getElementById('zgttyy')){
-rerurn;
-}
-var font_style = document.createElement("style");
-font_style.type = 'text/css';
-font_style.id="zgttyy";
-str = " html,body,table,tr,td,th,tbody,form,article,div,dt,ul,ol,li,dl,dd,section,footer,nav,strong,aside,header,label,address,bdo,big,blockquote,caption,em,center,cite,dialog,dir,fieldset,figcaption,figure,main,pre,small,h1,h2,h3,h4,h5,h6:not([class*='icon']):not(.fa):not(.fas):not(i) {font-family: 'PingFang SC','Heiti SC','myfont','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','HanHei SC', 'sans-serif' ,'icomoon','Icons' ,'brand-icons' ,'FontAwesome','Material Icons','Material Icons Extended','Glyphicons Halflings'  !important;} *{text-shadow:1px 1px 10px #d0d0d0 !important; font-weight:bold !important;font-family: 'PingFang SC','Microsoft YaHei';}";
-font_style.appendChild(document.createTextNode(str));
-var head=document.getElementsByTagName("head");
-if(head.length>0&&head[0].appendChild(font_style)){
+
+
+
+
+// 为了防止第二次创建
+let playState= true
+function testAutoPlay () {
+// 返回一个promise以告诉调用者检测结果
+return new Promise(resolve => {
+if(playState){
+let audio = document.createElement('audio');
+audio.src = "./start/堕.mp3"
+//循环播放，如果不需要可注释
+audio.loop="loop"
+document.body.appendChild(audio);
+let autoplay = true;
+// play返回的是一个promise
+audio.play().then(() => {
+// 支持自动播放
+autoplay = true;
+console.log("正常播放")
+}).catch(err => {
+// 不支持自动播放
+console.log("不支持播放")
+autoplay = false;
+}).finally((e) => {
+resolve(autoplay);
+});
+playState=false
 }else{
-document.body.appendChild(font_style);
+resolve(false)
 }
-})();
+});
+}
 
+let audioInfo = {
+autoplay: false,
+testAutoPlay () {
+return testAutoPlay()
+},
+// 监听页面的点击事件，一旦点过了就能autoplay了
+setAutoPlayWhenClick () {
+function setAutoPlay () {
+// 设置自动播放为true
+audioInfo.autoplay = true;
+document.removeEventListener('click', setAutoPlay);
+document.removeEventListener('touchend', setAutoPlay);
+}
+document.addEventListener('click', setAutoPlay);
+document.addEventListener('touchend', setAutoPlay);
+},
+init () {
+// 检测是否能自动播放
+audioInfo.testAutoPlay().then(autoplay => {
+if (!audioInfo.autoplay) {
+audioInfo.autoplay = autoplay;
+}
+});
+// 用户点击交互之后，设置成能自动播放
+audioInfo.setAutoPlayWhenClick();
+}
+};
+// PC端
+document.addEventListener('click', ()=>{
+audioInfo.init();
+});
+// 移动端
+document.addEventListener('touchend', ()=>{
+audioInfo.init();
+});
