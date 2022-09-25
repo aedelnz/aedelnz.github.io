@@ -22,7 +22,7 @@ body,h1,p{margin:0;padding:0}a{text-decoration:none}button{padding:0;font-family
 </style>
 </head>
 <!--body-->
-<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left">
+<body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left" id="background">
 
 <div class="logo">
 <a href="https://jixiejidiguan.top/A2zml/" style="font-size: 32px;color: #000;margin-bottom: 12px;line-height: 2;">安全中心</a>
@@ -61,7 +61,7 @@ var num = 10;
 var timer = setInterval(function () {
 num--;
 seconds.innerText = num;
-if(num == 5){
+if(num == 9){
 window.location.href = url;
 }
 },1200)
