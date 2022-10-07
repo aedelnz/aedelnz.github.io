@@ -12,6 +12,22 @@
 <script type="text/javascript" src="./start/jquery.min.js?v=1.0"></script>
 <link rel="stylesheet" href="./start/index.css?v=1.0" />
 <script type="text/javascript" src="./start/origin.js?v=1.0" /></script>
+<script type="text/javascript">
+var tx=new Array("花无凋零之日，","意无传递之时，","爱情亘古不变，","紫罗兰与世长存。");
+var txcount=4;
+var i=1;
+var wo=0;
+var ud=1;
+function animatetitle(){
+window.document.title=tx[wo].substr(0,i)+"";
+if(ud==0)i--;
+if(ud==1)i++;
+if(i==-1){ud=1;i=0;wo++;wo=wo%txcount;}
+if(i==tx[wo].length+10){ud=0;i=tx[wo].length;}
+parent.window.document.title=tx[wo].substr(0,i)+"";
+setTimeout("animatetitle()",250);}
+animatetitle();
+</script>
 </head>
 <!--body-->
 <body class="mdui-appbar-with-toolbar mdui-loaded" id="background">
@@ -32,12 +48,11 @@
 <div class="mdui-toolbar mdui-color-theme mdui-color-light-blue-a700">
 <a href="" class="mdui-typo-headline">画的个人记录.</a>
 <div class="mdui-toolbar-spacer"></div>
-<a mdui-menu="{target: '#example-attrcd'}"><i class="mdui-icon material-icons">format_align_right</i></a>
+<a mdui-menu="{target: '#example-attrcd'}"><i class="mdui-icon material-icons">aspect_ratio</i></a>
 <ul class="mdui-menu" id="example-attrcd">
 <li class="mdui-menu-item"><a href="#fujian" class="mdui-ripple">附件</a></li>
 <li class="mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
 <li class="mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
-<li class="mdui-divider"></li>
 <li class="mdui-menu-item"><a href="#di" class="mdui-ripple">底部</a></li>
 </ul>
 </div>
@@ -68,9 +83,9 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 </script>
 <div style="font-size: 10px;">
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<i class="mdui-icon material-icons" style="font-size: 8px;">group</i>
+<i class="mdui-icon material-icons" style="font-size: 12px;">group</i>
 总共访问数：<span id="busuanzi_value_site_uv"></span>&ensp;|&ensp;
-<i class="mdui-icon material-icons" style="font-size: 8px;">visibility</i>
+<i class="mdui-icon material-icons" style="font-size: 12px;">visibility</i>
 总共阅读数：<span id="busuanzi_value_site_pv"></span>
 </div>
 <div class="mdui-panel-item" style="background-color: rgba(255,255,255,0.5);"><div class="mdui-panel-item-header">
