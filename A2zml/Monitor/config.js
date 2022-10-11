@@ -24,8 +24,8 @@ window.Config = {
   // 导航栏菜单
   Navi: [
     {
-      text: '',
-      url: ''
+      text: '主页',
+      url: 'jixiejidiguan.top'
     }
   ]
 };
