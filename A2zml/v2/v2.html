@@ -33,6 +33,26 @@ console.log('在command中输入特殊命令:document.gata');
 console.log('会有新的发现');
 console.log('[system]', 'foo'); 
 document.gata = "\n来了\nhttps://www.vpngate.net/cn/\n这个被墙了 ";
+
+
+function onCopyThis(e) {
+    var text = $(e).data("copy");
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(text).select();
+    document.execCommand("Copy");
+    $temp.remove();
+    $("body").append('<div><p>复制成功</p></div>')
+    this.timer = setTimeout(function() {
+        $(".notification ").toggleClass('show')
+    }, 50)
+    this.timer = setTimeout(function() {
+        $(".notification ").toggleClass('show')
+        this.time = setTimeout(function(){
+            $(".notification ").remove();
+        }, 500)
+    }, 2000)
+}
 </script>
 </head>
 <!-- body -->
@@ -44,19 +64,21 @@ document.gata = "\n来了\nhttps://www.vpngate.net/cn/\n这个被墙了 ";
 <div class="mdui-toolbar mdui-color-red">
 <a href="/"><span class="mdui-typo-title">魔法禁書.</span></a>
 <div class="mdui-toolbar-spacer"></div>
-<a href="" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '刷新'}"><i class="mdui-icon material-icons">replay</i></a>
 </div></div>
 <!-- 顶部内容全部结束 -->
 <br>
 <div class="mdui-container">
 
 
+<button data-copy="复制成功" onclick="onCopyThis(this)" >点击复制</button>
+   
+                
 <div id="guanui-btns">
 <div class="mdui-container-fluid">
 <!-- 可扩展面板 -->
 <div class="mdui-panel" mdui-panel>
 <div class="mdui-panel-item" style="background-color: rgba(255,255,255,0.5);">
-<div class="mdui-panel-item-header mdui-text-color-indigo-a700">V2ray 相关工具</div>
+<div class="mdui-panel-item-header mdui-text-color-indigo-a700"><i class="mdui-icon material-icons">bookmark_border</i> V2ray 相关工具</div>
 <div class="mdui-panel-item-body">
 <ol>
 <li>v2rayN: <a href="https://github.com/2dust/v2rayN/releases">电脑版</a> （<a href="https://github.com/XTLS/Xray-core/releaser">Xray内核</a>）</li>
