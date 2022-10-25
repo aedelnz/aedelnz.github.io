@@ -13,20 +13,15 @@
 <link rel="stylesheet" href="./start/index.css?v=1.0" />
 <script type="text/javascript" src="./start/origin.js?v=1.0" /></script>
 </head>
-<!--body-->
 
+<!--body-->
 <body class="mdui-appbar-with-toolbar">
 
-
-<div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 35px;height: 35px;z-index: 99;">
+<!--SSL-->
+<div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 45px;height: 45px;z-index: 99;">
 <a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="安全" style="width:100%;height:100%"></a>
 </div>
 
-<!--
-<style type="text/css">.video{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;position:fixed}.video video{width:100%;height:100%;object-fit:cover}</style>
-<div class="video">
-<video src="http://api.xiao-xin.top/API/kuaishou.php?type=video" muted autoplay loop></video>
-</div>-->
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed">
 <div class="mdui-toolbar mdui-color-theme mdui-color-light-blue-a700">
@@ -37,15 +32,14 @@
 <li class="mdui-menu-item"><a href="#fujian" class="mdui-ripple">附件</a></li>
 <li class="mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
 <li class="mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
-<li class="mdui-menu-item"><a href="#di" class="mdui-ripple">底部</a></li>
 <li class="mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
 </ul>
 </div>
 </div>
-<!-- 顶部内容全部开始 -->
 
-<!-- [] -->
-<section id="din" class="mdui-container"><br>
+<!--介绍-->
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card"><div class="mdui-card-content">
 <div style="font-size: 10px;">
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <i class="mdui-icon material-icons" style="font-size: 12px;">group</i>
@@ -53,9 +47,6 @@
 <i class="mdui-icon material-icons" style="font-size: 12px;">visibility</i>
 总共阅读数：<span id="busuanzi_value_site_pv"></span>
 </div>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<div class="mdui-card mdui-card-content" style="background-color: rgba(255,255,255,0.5);">
 <span id="runtime_span"></span>
 <script type="text/javascript">
 function show_runtime()
@@ -67,25 +58,18 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 </script>
 <div class="mdui-text-color-orange-900 mdui-card-primary-title">站长无法正常活跃</div>
 <img class="mdui-img-fluid" width="100%" src="https://s2.loli.net/2022/08/30/ZoiJQ5XwTEzvW8d.gif">
-
-<b class="mdui-text-truncate" id="hitokoto">D: 获取中...</b>
+<h4 id="hitokoto">D: 获取中...</h4>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-
 <p class="mdui-text-color-blue-grey-600">
-非常抱歉，本站长由于可能以下原因导致无法正常活跃：
-<li>站长正在搬砖中</li>
-<li><a class="mdui-text-color-blue-a700" href="https://stats.uptimerobot.com/0M2zqUkp83">网站监控服务</a></li></p>
-</div></div>
-
+非常抱歉，本站长无法正常活跃：
+<li>如何正确摆烂</li></p>
 </div></div>
 </section>
-<!-- [] -->
-
 
 <!-- 更多页面 -->
-<section id="fujian" class="mdui-container">
-<br><h2>附件</h2>
-<div id="guanui-btns">
+<section id="fujian" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">附件</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-4 mdui-grid-list">
 <ul class="mdui-list">
 <div class="mdui-col "><li class="mdui-list-item">
@@ -113,17 +97,14 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="https://google.jixiejidiguan.tk">镜像</a></div>
 </li></div>
 </ul>
+</div>
 </div></div>
 </section>
-<!-- 更多页面 -->
 
-
-
-<!-- 收藏 -->
-<section id="guoman" class="mdui-container">
-<br><h2>来自腾讯视频的国漫收藏</h2>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<!--来自腾讯视频的国漫收藏-->
+<section id="guoman" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">来自腾讯视频的国漫收藏</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <div id="cartoon"></div>
 </div></div>
 <script>
@@ -147,11 +128,12 @@ $("#cartoon").append(str);
 });    
 });   
 </script>
+</section>
 
-
-<br><h2>来自BILIBILI的国漫收藏</h2>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<!--来自BILIBILI的国漫收藏-->
+<section id="guoman" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">来自BILIBILI的国漫收藏</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <div id="bilibili"></div>
 </div></div>
 <script>    
@@ -176,34 +158,25 @@ $("#bilibili").append(str);
 });
 </script>
 </section>
-<!-- 收藏 -->
-
 
 <!-- 友情链接 -->
-<section id="yqlj" class="mdui-container">
-<br><h2>友情链接</h2>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-
-<div class="mdui-card mdui-card-content" style="background-color: rgba(255,255,255,0.5);">
+<section id="yqlj" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">友情链接</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <div class="mdui-text-color-orange-900 mdui-card-primary-title">友情链接申请规则</div>
-<p class="mdui-text-color-blue-grey-600">申请条件<br>
+<p class="mdui-text-color-blue-grey-600">
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
-4.且无影响阅读体验的广告<br>
-</p>
+4.且无影响阅读体验的广告<br></p>
 <p class="mdui-text-color-red-accent">
 友链申请示例<br>
 本站名称：JIXIEJIDIGUAN<br>
 本站介绍：其实没有你们想的那么复杂！<br>
 本站链接：jixiejidiguan.top<br>
-本站图片：jixiejidiguan.top/favicon.ico
-</p>
-<p><span class="mdui-text-color-light-blue">PS:</span>链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！</p>
-<a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请">去申请友情链接</a>
-
-</div>
+本站图片：jixiejidiguan.top/favicon.ico</p>
+<p><span class="mdui-text-color-light-blue">PS:</span>链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！
+<a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请">去申请友情链接</a></p>
 <br>
 <div id="Links"></div>
 </div></div>
@@ -229,33 +202,27 @@ $("#Links").append(str);
 });   
 </script>
 </section>
-<!-- 友情链接 -->
-
 
 <!-- 页脚 -->
-<footer id="di" class="mdui-container"><br>
-<style>footer {width: 100%; padding: 6px 0;}footer a {text-decoration: none;color: #000;}</style>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-
-<a href="#din">返回顶部</a>
-<a target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
-<a target="_blank"  href="https://afdian.net/@JIXIEJIDIGUAN">爱发电</a>
-<a target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
-<a target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
-<a class="mdui-text-color-red" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
-
-<div class="mdui-typo" style="text-align: center;">
-<b class="mdui-text-color-green" href="">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> 画的个人记录.</b><br>
-<a class="mdui-color-light-blue-a700"  style="border-radius: 3px;" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
-<a class="mdui-color-pink-accent" style="border-radius: 3px;" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
+<br><footer class="mdui-color-white mdui-card">
+<style>.divider {display: inline-block;height: 12px;width: 1px;vertical-align: middle;box-sizing: border-box;padding: 0;list-style: none;background: #1c212c;margin: 0 2px;}footer {padding: 40px 0;background: #eef5ff;margin-top: 20px;}footer a {text-decoration: none;color: #000;}</style>
+<div class="mdui-container mdui-typo">
+<div style="flex-direction: column;">
+<a class="mdui-text-color-black" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
+<div class="divider"></div>
+<a class="mdui-text-color-black" target="_blank"  href="https://afdian.net/@JIXIEJIDIGUAN">爱发电</a>
+<div class="divider"></div>
+<a class="mdui-text-color-black" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
+<div class="divider"></div>
+<a class="mdui-text-color-black" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
 </div>
-
-</div></div>
+<b class="mdui-text-color-green" href="">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> 画的个人记录.</b>
+<a class="mdui-text-color-light-blue-a700" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
+<a class="mdui-text-color-pink-accent" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
+<a class="mdui-text-color-red" style="float: right;" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
+</div>
 </footer>
-<!-- 页脚 -->
 
 </body>
-<!--body-->
 </html>
 
