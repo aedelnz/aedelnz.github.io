@@ -3,20 +3,6 @@ if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
 alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
 }
 
-//Title
-document.addEventListener('visibilitychange', function() {
-if (document.hidden) {
-document.title = '你还不关闭这个页面呢？';//+ OriginTitile;
-clearTimeout();
-} else {
-var text = "花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰与世长存。";
-document.title = text;//+ OriginTitile;
-setTimeout(function() {
-document.title;// = OriginTitile;
-}, 12000);
-}
-});
-
 //if (document.location.host != "jixiejidiguan.top") {
 //location.href = location.href.replace(document.location.host,'jixiejidiguan.top');
 //}
@@ -29,11 +15,6 @@ document.write("<script src=\"https:\/\/sdk.51.la\/perf\/js-sdk-perf.min.js\" cr
 document.write("<script>new LingQue.Monitor().init({id:\"JiidMWrwn9WaSudr\",sendSuspicious:true,sendSpaPv:true});<\/script>");
 
 //
-document.write("<div id=\"sakana-widget-takina\"><\/div>");
-document.write("<style>#sakana-widget-takina {position: fixed;left: 0px;bottom: 0px;}<\/style>");
-document.write("<script>window.addEventListener('DOMContentLoaded', () => {new SakanaWidget({character: 'takina',}).mount('#sakana-widget-takina');});<\/script>");
-document.write("<script async onload=\"initSakanaWidget()\" src=\"https:\/\/cdn.jsdelivr.net\/npm\/sakana-widget@2.3.2\/lib\/sakana.min.js\"><\/script>");
-
 
 
 
