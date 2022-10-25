@@ -5,12 +5,9 @@
 <meta charset="utf-8"/>
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!-- mdui -->
 <link rel="stylesheet" href="../../start/mdui/css/mdui.min.css?v=1.0"/>
 <script src="../../start/mdui/js/mdui.min.js?v=1.0"></script>
-<!-- jQuery -->
 <script src="../../start/jquery.min.js?v=1.0"></script>
-<!-- 注 -->
 <link rel="stylesheet" href="../../start/index.css?v=1.0" >
 <script src="../../start/origin.js?v=1.0"></script>
 <style type="text/css">
@@ -88,7 +85,6 @@ font-family:"Inter",sans-serif;
 .overlay[hidden]{
 display:none;
 }
-
 @media screen and (max-width:720px){
 .overlay{
 z-index:2;
@@ -127,9 +123,8 @@ video#video::-webkit-media-controls-enclosure{display:none !important}
 <!-- body -->
 <body>
 
-
 <div id="overlay" class="overlay">
-<div class="text-bg" style="backdrop-filter: blur(2px) saturate(1.8);">
+<div class="mdui-card text-bg" style="backdrop-filter: blur(2px) saturate(1.8);">
 <div class="overlay-body">
 <p class="overlay-title">您是否已满18岁</p>
 <p class="overlay-description">以下内容可能不适合<b>未满18岁</b>的人群观看，我们需要确认您的年龄。</p>
@@ -146,7 +141,6 @@ video#video::-webkit-media-controls-enclosure{display:none !important}
 <video id="video" class="video" src="" loop="loop"></video>
 </video>
 </div>
-
 
 <script type="text/javascript">
 const video = document.getElementById("video");
@@ -180,5 +174,6 @@ acceptButton.addEventListener("click", buttonClick1);
 declineButton.addEventListener("click", buttonClick2);
 video.addEventListener("click", videoClick);
 </script>
+
 </body>
 </html>

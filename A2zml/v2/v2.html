@@ -6,35 +6,11 @@
 <meta name="description" content="v2分享生活，留住感动!" />
 <link rel="icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- mdui -->
 <link rel="stylesheet" href="../../start/mdui/css/mdui.min.css?v=1.0"/>
 <script src="../../start/mdui/js/mdui.min.js?v=1.0"></script>
-<!-- jQuery -->
 <script src="../../start/jquery.min.js?v=1.0"></script>
-<!-- 注 -->
 <link rel="stylesheet" href="../../start/index.css?v=1.0" >
-<script src="../../start/origin.js?v=1.0"></script>
-<script type="text/javascript">
-(function (){
-if(document.getElementById('mxvConsole2')){
-}else{
-//https://www.w3cways.com/demo/vconsole/vconsole.min.js?v=2.2.0
-var version="3.2.0";function getCache(type){try{const local=JSON.parse(window.localStorage[type]);return local.data?local:null;}catch(e){return null;}}function setCache(type,data){if(!data){return;}window.localStorage[type]=JSON.stringify({version,data});}async function getVconsole(){const cache=getCache('vconsole');if(cache&&cache.version==version){return cache.data;}return window.fetch('//cdn.bootcss.com/vConsole/'+version+'/vconsole.min.js').then(res=>res.text()).then(data=>{setCache('vconsole',data);return data;});}async function buildVconsole(){const data=await getVconsole();writeJs(data);const vConsole=new VConsole();}function writeJs(text){var link=document.createElement("script");link.innerHTML=text;document.getElementsByTagName('head').item(0).appendChild(link);}function init(){getVconsole();buildVconsole();}init();
-}
-var pans= document.createElement('b');
-pans.id='mxvConsole2';
-document.body.appendChild(pans);
-})();
-</script>
-<script type="text/javascript">
-console.debug('itfhkc90816@chacuo.net');
-console.log('恭喜你找到了这个页面！');
-console.log('在command中输入特殊命令:document.gata');
-console.log('会有新的发现');
-console.log('[system]', 'foo'); 
-document.gata = "\n来了\nhttps://www.vpngate.net/cn/\n这个被墙了 ";
-
-
+<script src="../../start/origin.js?v=1.0"></script><script type="text/javascript">
 function onCopyThis(e) {
     var text = $(e).data("copy");
     var $temp = $("<input>");
@@ -58,23 +34,15 @@ function onCopyThis(e) {
 <!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded .mdui-drawer-body-left" id="background">
 
-
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide">
 <div class="mdui-toolbar mdui-color-red">
 <a href="/"><span class="mdui-typo-title">魔法禁書.</span></a>
 <div class="mdui-toolbar-spacer"></div>
 </div></div>
-<!-- 顶部内容全部结束 -->
-<br>
-<div class="mdui-container">
 
-
-<button data-copy="复制成功" onclick="onCopyThis(this)" >点击复制</button>
-   
-                
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card"><div class="mdui-card-content">
 <!-- 可扩展面板 -->
 <div class="mdui-panel" mdui-panel>
 <div class="mdui-panel-item" style="background-color: rgba(255,255,255,0.5);">
@@ -358,24 +326,28 @@ IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/
 </div>
 当前IP：<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript">document.write(returnCitySN["cip"]+','+returnCitySN["cname"])</script>
-</div></div><br>
+</div></div>
+</section>
 
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<h2>订阅源</h2>
-<div class="mdui-progress"><div class="mdui-color-red mdui-progress-indeterminate"></div></div>
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title ">订阅源</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.08.01 可能是最后一次更新</li>
-可用于V2ray相关等工具<br>
+可用于V2ray相关等工具<br><br>
 <div class="mdui-divider"></div>
 <h4>其它的分享</h4>
 <div class="mdui-text-color-cyan">
 <a href="https://sspool.herokuapp.com/">Provider</a>
 </div>
-</div></div><br>
 
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<h2 id="jdfx">节点分享</h2>
+</div></div>
+</section>
+
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title ">节点分享</div>
+<div class="mdui-card"><div class="mdui-card-content">
 此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验<br>
 <br>
 <div id="v2"></div>
@@ -403,13 +375,15 @@ $("#v2").append(str);
 <style>
 .dy {color: #EC407A;}
 </style>
-</div></div><br>
+
+</div></div>
+</section>
 
 
-<br>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<h2 id="jlwd">交流问答</h2>
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title ">交流问答</div>
+<div class="mdui-card"><div class="mdui-card-content">
 <!-- 验证 -->
 <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
@@ -489,12 +463,14 @@ if (onIsOff == true){
 }
 },1000);
 </script>
-</div></div><br>
+</div></div>
+</section>
 
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<h2 id="cjwt">常见问题</h2>
-<ol class="mdui-container">
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title ">常见问题</div>
+<div class="mdui-card"><div class="mdui-card-content">
+<ol>
 <li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
 <p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：MIUI重启解决99%的问题。</p>
@@ -517,12 +493,21 @@ if (onIsOff == true){
 <li><strong class="mdui-text-color-red mdui-typo-body-2">太麻烦了吧。</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
 </ol>
-</div></div>
 
-<p><br><code class="mdui-text-color-green-600">声明：</code>所有资源均来源于网络搜集，如有侵权请联系我们删除。</p>
+</div></div>
+</section>
+
+<!-- 页脚 -->
+<br><footer class="mdui-toolbar mdui-color-white">
+<style>footer {padding: 20px 0;margin-top: 20px;}footer a {text-decoration: none;color: #000;}</style>
+<div class="mdui-container mdui-typo">
+<div style="flex-direction: column;">
+<code class="mdui-text-color-green-600">声明：</code><a>所有资源均来源于网络搜集，如有侵权请联系我们删除。</a>
 </div>
+</div>
+</footer>
+
 </body>
-<!--body-->
 </html>
 
 
