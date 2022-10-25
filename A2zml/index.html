@@ -1,141 +1,112 @@
 <!-- 随随便便的开始 -->
 <html lang="zh-CN">
-<!-- head -->
 <head>
-<title>JIXIEJIDIGUAN ナビ姫.</title>
+<title>爱莫能助.</title>
 <meta charset="utf-8"/>
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="author" content="JIXIEJIDIGUAN.TOP">
 <meta name="keywords" content="JIXIEJIDIGUAN ナビ姫." />
 <meta name="description" content="好像是……" />
-<!-- 图标 -->
 <link rel="icon" href="../favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
-<!-- mdui -->
 <link rel="stylesheet" href="../start/mdui/css/mdui.min.css?v=1.0"/>
 <script src="../start/mdui/js/mdui.min.js?v=1.0"></script>
-<!-- jQuery -->
 <script src="../start/jquery.min.js?v=1.0"></script>
-<!-- 注 -->
 <link rel="stylesheet" href="../start/index.css?v=1.0" >
 <script src="../start/origin.js?v=1.0"></script>
 <style>
 /* 圆角 */
 .css-style-rainbow a {border-radius: 6px}
 /* 彩色 */
-.css-style-rainbow a:nth-child(7n+1) {
-  background-color: rgba(255, 78, 106, .25);
-}
-.css-style-rainbow a:nth-child(7n+2) {
-  background-color: rgba(255, 118, 30, .25);
-}
-.css-style-rainbow a:nth-child(7n+3) {
-  background-color: rgba(255, 185, 0, .25);
-}
-.css-style-rainbow a:nth-child(7n+4) {
-  background-color: rgba(51, 213, 122, .25);
-}
-.css-style-rainbow a:nth-child(7n+5) {
-  background-color: rgba(0, 219, 255, .25);
-}
-.css-style-rainbow a:nth-child(7n+6) {
-  background-color: rgba(26, 152, 255, .25);
-}
-.css-style-rainbow a:nth-child(7n+7) {
-  background-color: rgba(144, 144, 255, .25);
-}
+.css-style-rainbow a:nth-child(7n+1) {background-color: rgba(255, 78, 106, .25);}
+.css-style-rainbow a:nth-child(7n+2) {background-color: rgba(255, 118, 30, .25);}
+.css-style-rainbow a:nth-child(7n+3) {background-color: rgba(255, 185, 0, .25);}
+.css-style-rainbow a:nth-child(7n+4) {background-color: rgba(51, 213, 122, .25);}
+.css-style-rainbow a:nth-child(7n+5) {background-color: rgba(0, 219, 255, .25);}
+.css-style-rainbow a:nth-child(7n+6) {background-color: rgba(26, 152, 255, .25);}
+.css-style-rainbow a:nth-child(7n+7) {background-color: rgba(144, 144, 255, .25);}
 </style>
-<script type="text/javascript">
-var tx=new Array("花无凋零之日，","意无传递之时，","爱情亘古不变，","紫罗兰与世长存。");
-var txcount=4;
-var i=1;
-var wo=0;
-var ud=1;
-function animatetitle(){
-window.document.title=tx[wo].substr(0,i)+"";
-if(ud==0)i--;
-if(ud==1)i++;
-if(i==-1){ud=1;i=0;wo++;wo=wo%txcount;}
-if(i==tx[wo].length+10){ud=0;i=tx[wo].length;}
-parent.window.document.title=tx[wo].substr(0,i)+"";
-setTimeout("animatetitle()",250);}
-animatetitle();
-</script>
 </head>
-<!-- head -->
 
 <!-- body -->
-<body class="mdui-appbar-with-toolbar" id="background">
+<body class="mdui-appbar-with-toolbar">
 
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar mdui-color-pink-a200">
-<div class="mdui-color-theme-accent" mdui-menu="{target: '#example-1'}"><i class="mdui-icon material-icons">format_align_left</i></div>
-<ul class="mdui-menu" id="example-1">
-<div style="height: 260px;">
-<li class="mdui-menu-item"><a href=#ssyq >搜索引擎</a></li>
-<li class="mdui-menu-item"><a href=#aqsy >安全使用</a></li>
-<li class="mdui-menu-item"><a href=#dmsp >动漫视频</a></li>
-<li class="mdui-menu-item"><a href=#jxtp >精选图片</a></li>
-<li class="mdui-menu-item"><a href=#mhzy >漫画资源</a></li>
-<li class="mdui-menu-item"><a href=#xsyy >小说音乐</a></li>
-<li class="mdui-menu-item"><a href=#smkj >数码科技</a></li>
-<li class="mdui-menu-item"><a href=#yszy >影视资源</a></li>
-<li class="mdui-menu-item"><a href=#yxpt >游戏平台</a></li>
-<li class="mdui-menu-item"><a href=#jspt >技术平台</a></li>
-<li class="mdui-menu-item"><a href=#xtjx >系统镜像</a></li>
-<li class="mdui-menu-item"><a href=#srcpt >SRC平台</a></li>
-<li class="mdui-menu-item"><a href=#wlaq >网络安全</a></li>
-<li class="mdui-menu-item"><a href=#gjpt class="mdui-ripple">工具平台</a></li>
-</div>
-</ul>
-<a href="/" >首页</a>
+<div class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-toolbar mdui-color-white">
+<a href="javascript:;" class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#example-attrcd'}">爱莫能助.</a>
 <div class="mdui-toolbar-spacer"></div>
 <a href="/JIXIEJIDIGUAN">爱发电</a>
 <a href="/A2zml/v2/">魔法</a>
-<a href="/#yqlj">友链</a>
+<a href="/#yqlj">友连</a>
 </div>
 </div>
-<div class="mdui-drawer-body-left mdui-tab"  mdui-tab>
+
+<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="example-attrcd">
+<ul class="mdui-list">
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#ssyq >搜索引擎</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#aqsy >安全使用</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#dmsp >动漫视频</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#jxtp >精选图片</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#mhzy >漫画资源</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#xsyy >小说音乐</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#smkj >数码科技</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#yszy >影视资源</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#yxpt >游戏平台</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#jspt >技术平台</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#xtjx >系统镜像</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#srcpt >SRC平台</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href=#wlaq >网络安全</a></li>
+</ul>
+</div>
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card">
+<div class="mdui-tab" mdui-tab>
 <a href="#tab1" class="mdui-ripple">导航</a>
 <a href="#tab2" class="mdui-ripple">浏览优化</a>
 </div>
-
-
+</div>
+</section>
 
 <!-- 主要的内容 -->
-<section id="tab1" class="mdui-container"><br>
-<div id="guanui-btns">
-<!-- 公告 -->
-<p class="mdui-container"><marquee behavior="scroll" direction="left">该网站加载速度可以有点慢，如果之后遇到该网站加载失败时，可以刷新DNS或看起魔法即可解决。</marquee></p>
-<!-- 一言 -->
-<div class="mdui-container-fluid" id="hitokoto"><a id="hitokoto_text"> 获取中...</a></div>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-</div>
-
-<br><h4 id="ssyq" class="mdui-text-color-pink">搜索引擎</h4>
-<div style="font-size: 10px;">
+<main id="tab1">
+<section class="mdui-container-fluid"><br>
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<i class="mdui-icon material-icons" style="font-size: 8px;">group</i>
+<i class="mdui-icon material-icons" style="font-size: 12px;">group</i>
 总共访问数：<span id="busuanzi_value_site_uv"></span>&ensp;|&ensp;
-<i class="mdui-icon material-icons" style="font-size: 8px;">visibility</i>
+<i class="mdui-icon material-icons" style="font-size: 12px;">visibility</i>
 总共阅读数：<span id="busuanzi_value_site_pv"></span>
 </div>
-<div id="guanui-btns"><div class="mdui-container-fluid"><div class="mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-7 mdui-row-xl-7 mdui-grid-list">
-<a target="_blank" class="mdui-btn" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W7m1EB&businessType=9&from=246610&biz=ka">点击链接加入QQ频道【二次元领域】</a>
-<a class="mdui-col mdui-btn" href="https://translate.google.cn/?hl=zh-CN&tab=TT">谷歌翻译</a>
-<a class="mdui-col mdui-btn" href="https://top.baidu.com/board"><span class="mdui-text-color-red">百度热搜</span></a>
-<a target="_blank" class="mdui-col mdui-btn" href="https://www.baidu.com/">百度一下</a>
-<a target="_blank" class="mdui-col mdui-btn" href="https://so.toutiao.com/">头条搜索</a>
-<a target="_blank" class="mdui-col mdui-btn" href="https://www.google.com/">谷歌搜索</a>
-<a target="_blank" class="mdui-col mdui-btn" href="https://www.bing.com/">必应搜索</a>
-<a target="_blank" class="mdui-col mdui-btn" href="https://duckduckgo.com/">duckduckgo</a>
-</div></div></div>
+<div class="mdui-card"><div class="mdui-card-content">
+<marquee behavior="scroll" direction="left">该网站加载速度可以有点慢，如果之后遇到该网站加载失败时，可以刷新DNS或看起魔法即可解决。</marquee>
+<!-- 一言 -->
+<div class="mdui-card-primary-subtitle">
+<b class="mdui-text-truncate" id="hitokoto">D: 获取中...</b>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</div>
+</div></div>
+</section>
 
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="ssyq">搜索引擎</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
+<div class="mdui-row-xs-3 mdui-row-sm-5 mdui-row-md-6 mdui-row-lg-7 mdui-row-xl-7 mdui-grid-list">
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W7m1EB&businessType=9&from=246610&biz=ka">点击链接加入QQ频道【二次元领域】</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://translate.google.cn/?hl=zh-CN&tab=TT">谷歌翻译</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://top.baidu.com/board"><span class="mdui-text-color-red">百度热搜</span></a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.baidu.com/">百度一下</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://so.toutiao.com/">头条搜索</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.google.com/">谷歌搜索</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.bing.com/">必应搜索</a>
+<a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://duckduckgo.com/">duckduckgo</a>
+</div></div>
 
-<!-- 导航内容 -->
-<br><h4 id="aqsy" class="mdui-text-color-light-blue-accent">安全</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+</div></div>
+</section>
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="aqsy">安全</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="http://www.gov.cn/">中国政府网</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="http://www.nrta.gov.cn/">国家广播电视总局</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.cctv.com/">央视网</a>
@@ -146,15 +117,15 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://jbts.mct.gov.cn/">全国文化和旅游市场网上举报投诉处理系统网站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="http://www.nlc.cn/">中国国家图书馆</a>
 </div></div>
+</section>
 
-
-<div id="dmsp" class="mdui-tab mdui-color-theme" mdui-tab>
+<section class="mdui-container-fluid"><br>
+<div id="dmsp" class="mdui-tab mdui-card-primary-title" mdui-tab>
 <a href="#dmspdm" class="mdui-ripple mdui-ripple-white">动漫</a>
 <a href="#dmspmf" class="mdui-ripple mdui-ripple-white">番剧</a>
 <a href="#dmspzmz" class="mdui-ripple mdui-ripple-white">字幕组</a>
 </div>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <div id=dmspdm >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.bilibili.com/anime/">哔哩哔哩</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.acfun.cn/bangumilist">AcFun </a>
@@ -195,15 +166,16 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://nyaa.si/">nyaa</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.36dm.club/">简单动漫</a>
 </div>
-</div></div>
 
-<div id="jxtp" class="mdui-tab mdui-color-theme" mdui-tab>
+</div></div>
+</section>
+
+<section class="mdui-container-fluid"><br>
+<div id="jxtp" class="mdui-tab mdui-card-primary-title" mdui-tab>
 <a href="#jxtps" class="mdui-ripple mdui-ripple-white">图片</a>
 <a href="#jxtpcos" class="mdui-ripple mdui-ripple-white">COS</a>
 </div>
-
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <div id=jxtps >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://petalica-paint.pixiv.dev/index_zh.html">线稿自动上色服务</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.pixiv.net/">pixiv P站</a>
@@ -240,14 +212,15 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://worldcosplay.net/">world cos</a>
 </div>
 </div></div>
+</section>
 
 
-<div id="mhzy" class="mdui-tab mdui-color-theme" mdui-tab>
+<section class="mdui-container-fluid"><br>
+<div id="mhzy" class="mdui-tab mdui-card-primary-title" mdui-tab>
 <a href="#mhzygf" class="mdui-ripple mdui-ripple-white">漫画</a>
 <a href="#mhzymf" class="mdui-ripple mdui-ripple-white">免费</a>
 </div>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <div id=mhzygf >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://dmzj.com/">官方-动漫之家</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://manga.bilibili.com/">官方-哔哩哔哩漫画</a>
@@ -275,14 +248,15 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.manhuadb.com/">漫画DB</a>
 </div>
 </div></div>
+</section>
 
-<div id="xsyy" class="mdui-tab mdui-color-theme" mdui-tab>
+<section class="mdui-container-fluid"><br>
+<div id="xsyy" class="mdui-tab mdui-card-primary-title" mdui-tab>
 <a href="#xsyyxs" class="mdui-ripple mdui-ripple-white">小说</a>
 <a href="#xsyydzs" class="mdui-ripple mdui-ripple-white">电子书</a>
 <a href="#xsyyyy" class="mdui-ripple mdui-ripple-white">音乐</a>
 </div>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <div id=xsyyxs >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://book.qq.com/">QQ阅读</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.qidian.com/">起点中文网</a>
@@ -323,10 +297,11 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.lalal.ai/zh-hans/">lalal.ai</a>
 </div>
 </div></div>
+</section>
 
-<br><h4 id="smkj" class="mdui-text-color-blue-grey">数码科技</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="smkj" class="mdui-text-color-blue-grey">数码科技</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://ithome.com/">IT之家</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.feng.com/">威锋</a>
@@ -339,14 +314,15 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.dgtle.com/">数字尾巴</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.pingwest.com/">品玩</a>
 </div></div>
+</section>
 
-<div id="yszy" class="mdui-tab mdui-color-theme" mdui-tab>
+<section class="mdui-container-fluid"><br>
+<div id="yszy" class="mdui-tab mdui-card-primary-title" mdui-tab>
 <a href="#yszyzxys" class="mdui-ripple mdui-ripple-white">在线影视</a>
 <a href="#yszyzyxz" class="mdui-ripple mdui-ripple-white">资源下载</a>
 <a href="#yszyspjx" class="mdui-ripple mdui-ripple-white">视频解析</a>
 </div>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <div id=yszyzxys >
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.cupfox.app/">搜索-茶杯狐</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.dianyinggou.com/">搜索-电影狗搜索</a>
@@ -429,10 +405,12 @@ animatetitle();
   <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://jx.dj6u.com/?url=">听乐(B站)</a>
   </div>
 </div></div>
+</section>
 
-<br><h4 id="yxpt" class="mdui-text-color-blue-grey">游戏平台</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="yxpt" class="mdui-text-color-blue-grey">游戏平台</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://store.steampowered.com/">官方-STEAM</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://store.ubi.com/cn/home">官方-Ubisoft</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.epicgames.com/">官方-EPIC</a>
@@ -442,10 +420,12 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.taptap.com/">taptap</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://byrut.org/">byrut 俄罗斯</a>
 </div></div>
+</section>
 
-<br><h4 id="jspt" class="mdui-text-color-blue-grey">技术平台</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="jspt" class="mdui-text-color-blue-grey">技术平台</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://github.com/">GitHub</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://gitee.com/explore">Gitee</a>
@@ -465,10 +445,12 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.ipip.net/ip.html">IP查询</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://img.top/">图片压缩</a>
 </div></div>
+</section>
 
-<br><h4 id="xtjx" class="mdui-text-color-blue-grey">系统镜像</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="xtjx" class="mdui-text-color-blue-grey">系统镜像</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://hellowindows.cn/">hellowindows</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://msdn.itellyou.cn/">MSDN</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a>
@@ -481,10 +463,11 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://mirrors.huaweicloud.com">华为开源镜像站</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://developer.aliyun.com/mirror/">阿里巴巴开源镜像站-OPSX镜像站</a>
 </div></div>
+</section>
 
-<br><h4 id="srcpt" class="mdui-text-color-blue-grey">SRC平台</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="srcpt" class="mdui-text-color-blue-grey">SRC平台</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://sec.xiaomi.com/">小米安全中心</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://security.bilibili.com/">哔哩哔哩安全应急响应中心</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://security.tencent.com/">腾讯安全应急响应中心</a>
@@ -493,10 +476,12 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://bsrc.baidu.com/">百度安全应急响应中心</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://aq.163.com/">网易安全中心</a>
 </div></div>
+</section>
 
-<br><h4 id="wlaq" class="mdui-text-color-blue-grey">网络安全</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="wlaq" class="mdui-text-color-blue-grey">网络安全</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://cybermap.kaspersky.com/" title="kaspersky：Find out where you are on the Cyberthreat map">CyberThreat</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.fireeye.com/cyber-map/threat-map.html" title="FireEye Cyber Threat Map">Cyber-map</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://threatmap.fortiguard.com/" title="Fortinet Threat Map">Fortiguard</a>
@@ -505,10 +490,11 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.damddos.com/networkattack.html#page2" title="云堤DDoS攻击流向图">云堤DDoS态势</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="https://isecurity.huawei.com/sec/web/index.do" title="华为安全中心平台-安全态势">华为安全态势</a>
 </div></div>
+</section>
 
-<br><h4 id="gjpt" class="mdui-text-color-blue-grey">工具平台</h4>
-<div class="css-style-rainbow" id="guanui-btns">
-<div class="mdui-container-fluid">
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title" id="gjpt" class="mdui-text-color-blue-grey">工具平台</div>
+<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.metasploit.com" title="开源的安全漏洞检测工具">metasploit-官网</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://nmap.org" title="Linux下的网络扫描和嗅探工具包">nmap-官网</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://sqlmap.org" title="自动化的SQL注入工具">sqlmap-官网</a>
@@ -532,25 +518,15 @@ animatetitle();
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://diannaobos.com/frp/" title="FRP内网穿透工具">FRP内网穿透工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.charlesproxy.com/" title="Charles抓包工具 ">Charles抓包工具</a>
 <a target="_blank" class="mdui-grid-tile mdui-btn mdui-card mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://sploitus.com/" title="Sploitus | Exploit &amp; Hacktool Search Engine">Sploitus|Exploit</a>
-</div></div><br>
-<!-- 导航内容 -->
-
-<!-- footer -->
-<footer style="width: 100%; color: #000;padding: 3px 0;">
-<div class="mdui-container-fluid">
-<a class="mdui-text-color-light-blue-a700">Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script> JIXIEJIDIGUAN ナビ姫.</a>
-</div>
-</footer>
-<!-- footer -->
+</div></div>
 </section>
-<!-- 主要的内容 -->
-
+</main>
 
 
 <!-- 浏览器优化 -->
-<section id="tab2" class="mdui-container"><br>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<main id="tab2">
+<section class="mdui-container-fluid"><br>
+<div class="mdui-card"><div class="mdui-card-content">
 <div class="wyl">
 <style>
 .wyl div:nth-of-type(1){
@@ -608,14 +584,20 @@ background-color: rgba(255,255,255,0.5);
 <br><br>
 
 <!-- 浏览器优化内的其他内容 -->
-</div></div><br>
+
+</div></div>
 </section>
-<!-- 浏览器优化 -->
+</main>
 
+<!-- 页脚 -->
+<br><footer class="mdui-toolbar mdui-color-white">
+<style>footer {padding: 20px 0;margin-top: 20px;}footer a {text-decoration: none;color: #000;}</style>
+<div class="mdui-container mdui-typo">
+<div style="flex-direction: column;">
+<a class="mdui-text-color-black">Copyright © 2020 - <script>var enabled = 0; today = new Date(); var date; date = (today.getFullYear()); document.write(date);</script> JIXIEJIDIGUAN ナビ姫.</a>
+</div>
+</div>
+</footer>
 
-
-
-<div style="width: 100%;padding: 2px 0;"></div>
 </body>
-<!--body-->
 </html>
