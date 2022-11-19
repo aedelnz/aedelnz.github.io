@@ -54,8 +54,7 @@ Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
 a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
 runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
 </script>
-<div class="mdui-text-color-orange-900 mdui-card-primary-title">站长无法正常活跃</div>
-<img class="mdui-img-fluid" width="100%" src="https://s2.loli.net/2022/08/30/ZoiJQ5XwTEzvW8d.gif">
+<img class="mdui-img-rounded" width="100%" src="https://s2.loli.net/2022/08/30/ZoiJQ5XwTEzvW8d.gif">
 <h4 id="hitokoto">D: 获取中...</h4>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <p class="mdui-text-color-blue-grey-600">
@@ -67,7 +66,7 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <!-- 更多页面 -->
 <section id="fujian" class="mdui-container-fluid"><br>
 <div class="mdui-card-primary-title">更多附件</div>
-<div class="mdui-card"><div class="mdui-card-content">
+<div class="mdui-card">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-4 mdui-grid-list">
 <ul class="mdui-list">
 <div class="mdui-col "><li class="mdui-list-item">
@@ -96,7 +95,7 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 </li></div>
 </ul>
 </div>
-</div></div>
+</div>
 </section>
 
 <!--来自腾讯视频的国漫收藏-->
@@ -118,9 +117,9 @@ url:"./start/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-6 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 220px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
 str+='</div>';
 $("#cartoon").append(str);
@@ -144,9 +143,9 @@ url:"./start/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-6 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 220px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
 str+='</div>';
 $("#bilibili").append(str);
@@ -190,9 +189,9 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
 str+='</div>';
 $("#Links").append(str);
@@ -211,7 +210,7 @@ $("#Links").append(str);
 <div class="divider"></div>
 <a class="mdui-text-color-black" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
 <div class="divider"></div>
-<a class="mdui-text-color-black" target="_blank"  href="https://afdian.net/@JIXIEJIDIGUAN">爱发电</a>
+<a class="mdui-text-color-black" target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
 <div class="divider"></div>
 <a class="mdui-text-color-black" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
 <div class="divider"></div>
