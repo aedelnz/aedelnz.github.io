@@ -13,15 +13,12 @@
 <link rel="stylesheet" href="./start/index.css?v=1.0" />
 <script type="text/javascript" src="./start/origin.js?v=1.0" /></script>
 </head>
-
 <!--body-->
 <body class="mdui-appbar-with-toolbar">
-
 <!--SSL-->
 <div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 45px;height: 45px;z-index: 99;">
 <a href="https://myssl.com/jixiejidiguan.top?from=mysslid"><img src="https://static.myssl.com/res/images/myssl-id.png" alt="安全" style="width:100%;height:100%"></a>
 </div>
-
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed">
 <div class="mdui-toolbar mdui-color-theme mdui-color-light-blue-a700">
@@ -29,16 +26,15 @@
 <div class="mdui-toolbar-spacer"></div>
 </div>
 </div>
-
 <div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
 <ul class="mdui-list">
- <li class="mdui-card-primary-title mdui-menu-item"><a href="#fujian" class="mdui-ripple">附件</a></li>
- <li class="mdui-card-primary-title mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
- <li class="mdui-card-primary-title mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
- <li class="mdui-card-primary-title mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#fujian" class="mdui-ripple">更多附件</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
 </ul>
 </div>
-
 <!--介绍-->
 <section class="mdui-container-fluid"><br>
 <div class="mdui-card"><div class="mdui-card-content">
@@ -70,7 +66,7 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 
 <!-- 更多页面 -->
 <section id="fujian" class="mdui-container-fluid"><br>
-<div class="mdui-card-primary-title">附件</div>
+<div class="mdui-card-primary-title">更多附件</div>
 <div class="mdui-card"><div class="mdui-card-content">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-4 mdui-grid-list">
 <ul class="mdui-list">
@@ -105,10 +101,12 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 
 <!--来自腾讯视频的国漫收藏-->
 <section id="guoman" class="mdui-container-fluid"><br>
-<div class="mdui-card-primary-title">来自腾讯视频的国漫收藏</div>
+<div class="mdui-card-primary-title">国漫收藏</div>
 <div class="mdui-card"><div class="mdui-card-content">
+
+<div class="mdui-card-primary-title mdui-text-center">腾讯视频</div>
+<div class="mdui-divider"></div><br>
 <div id="cartoon"></div>
-</div></div>
 <script>
 $(function(){    
 $.ajax({
@@ -120,7 +118,7 @@ url:"./start/json/cartoon.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-3 mdui-row-sm-9 mdui-row-md-9 mdui-row-lg-9 mdui-row-xl-9 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-6 mdui-grid-list">';
 $.each(data,function(i,n){    
 str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
@@ -130,14 +128,11 @@ $("#cartoon").append(str);
 });    
 });   
 </script>
-</section>
 
-<!--来自BILIBILI的国漫收藏-->
-<section id="guoman" class="mdui-container-fluid"><br>
-<div class="mdui-card-primary-title">来自BILIBILI的国漫收藏</div>
-<div class="mdui-card"><div class="mdui-card-content">
+<div class="mdui-card-primary-title mdui-text-center">哔哩哔哩</div>
+<div class="mdui-divider"></div><br>
+
 <div id="bilibili"></div>
-</div></div>
 <script>    
 $(function(){    
 $.ajax({    
@@ -149,7 +144,7 @@ url:"./start/json/bilibili.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-3 mdui-row-sm-9 mdui-row-md-9 mdui-row-lg-9 mdui-row-xl-9 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-6 mdui-grid-list">';
 $.each(data,function(i,n){    
 str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
@@ -159,6 +154,8 @@ $("#bilibili").append(str);
 });
 });
 </script>
+
+</div></div>
 </section>
 
 <!-- 友情链接 -->
@@ -193,7 +190,7 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-3 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-row-md-6 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">';
 $.each(data,function(i,n){    
 str+='<div class="mdui-col"><div class="mdui-card"><div class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img style="object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-card-media-covered"><div class="mdui-card-primary-subtitle mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
 });
