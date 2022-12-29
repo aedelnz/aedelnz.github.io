@@ -5,7 +5,7 @@ window.Config = {
   SiteName: '网站监控',
 
   // 站点链接
-  SiteUrl: 'https://status.owomoe.net/',
+  SiteUrl: '//www.jixiejidiguan.top',
 
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only 两只 Api Key
@@ -24,8 +24,8 @@ window.Config = {
   // 导航栏菜单
   Navi: [
     {
-      text: '主页',
-      url: 'https://jixiejidiguan.top'
+      text: '原页',
+      url: 'https://stats.uptimerobot.com/0M2zqUkp83'
     }
   ]
 };
