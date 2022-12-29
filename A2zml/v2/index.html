@@ -9,160 +9,170 @@
 <script src="../../start/mdui/js/mdui.min.js?v=1.0"></script>
 <script src="../../start/jquery.min.js?v=1.0"></script>
 <link rel="stylesheet" href="../../start/index.css?v=1.0" >
-<script src="../../start/origin.js?v=1.0"></script><script type="text/javascript">
+<script src="../../start/origin.js?v=1.0"></script>
+<script type="text/javascript">
 function onCopyThis(e) {
-    var text = $(e).data("copy");
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val(text).select();
-    document.execCommand("Copy");
-    $temp.remove();
-    $("body").append('<div><p>复制成功</p></div>')
-    this.timer = setTimeout(function() {
-        $(".notification ").toggleClass('show')
-    }, 50)
-    this.timer = setTimeout(function() {
-        $(".notification ").toggleClass('show')
-        this.time = setTimeout(function(){
-            $(".notification ").remove();
-        }, 500)
-    }, 2000)
+var text = $(e).data("copy");
+var $temp = $("<input>");
+$("body").append($temp);
+$temp.val(text).select();
+document.execCommand("Copy");
+$temp.remove();
+$("body").append('')
+this.timer = setTimeout(function() {
+$(".notification ").toggleClass('show')
+}, 50)
+this.timer = setTimeout(function() {
+$(".notification ").toggleClass('show')
+this.time = setTimeout(function(){
+$(".notification ").remove();
+}, 500)
+}, 2000)
 }
 </script>
 </head>
-<!-- body -->
 <body class="mdui-appbar-with-toolbar mdui-loaded" >
 
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed">
 <div class="mdui-toolbar mdui-color-white">
-<a class="mdui-typo-title">魔法禁書.</a>
+<a class="mdui-typo-title" mdui-drawer="{target: '#left-drawer'}">魔法禁書.</a>
 <div class="mdui-toolbar-spacer"></div>
 </div>
+</div>
+
+<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
+<ul class="mdui-list">
+<li class="mdui-card-primary-title mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#vjiediandinyue" class="mdui-ripple">节点订阅</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#vjiedianfenxiang" class="mdui-ripple">节点分享</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#jiaoliuwenda" class="mdui-ripple">交流问答</a></li>
+<li class="mdui-card-primary-title mdui-menu-item"><a href="#changjianwenti" class="mdui-ripple">常见问题</a></li>
+</ul>
 </div>
 
 <section class="mdui-container-fluid"><br>
 <div class="mdui-card"><div class="mdui-card-content">
 <b>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">Windows</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/2dust/v2rayN/releases">v2rayN</a> 
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/shadowsocksr-rm/shadowsocksr-csharp/releases">ShadowsocksR</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/shadowsocks/shadowsocks-windows/releases">Shadowsocks</a> 
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases">clash 汉化版</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/2dust/clashN/releases">clashN</a> 
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/netchx/netch/releases">netch</a> 
 </strong>
 </div>
 </div>
 <br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">Android</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/SagerNet/SagerNet/releases">SagerNet</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/2dust/v2flyNG/releases">v2flyNG</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/2dust/v2rayNG/releases">v2rayNG</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
-<a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/HMBSbige/ShadowsocksR-Android/releases">ShadowsocksR-Android</a>
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/HMBSbige/ShadowsocksR-Android/releases">ShadowsocksR</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/Kr328/ClashForAndroid/releases">ClashForAndroid</a>
 </strong>
 </div>
 </div>
 <br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">IOS</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://apps.apple.com/us/app/quantumult/id1252015438">Quantumult</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://apps.apple.com/us/app/potatso-lite/id1239860606">Potatso Lite</a>
 </strong>
 </div>
 </div>
 <br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">Mac</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/yanue/V2rayU/releases">V2rayU</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/Fndroid/clash_for_windows_pkg/releases">clash</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/yichengchen/clashX/releases">clashX</a>
 </strong>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/shadowsocks/ShadowsocksX-NG/releases">ShadowsocksX-NG</a>
 </strong>
 </div>
 </div>
 <br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">Linux</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://github.com/Fndroid/clash_for_windows_pkg/releases">clash</a>
 </strong>
 </div>
 </div>
 <br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-title">其他</div>
 <div class="mdui-col">
-<strong class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-valign">
+<strong style="border-radius: 6px;" class="mdui-p-a-2 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-typo-headline-opacity" href="https://oneclick.earth/#/">OneClick</a>
 </strong>
 </div>
@@ -383,8 +393,8 @@ IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/
 </section>
 
 
-<section class="mdui-container-fluid"><br>
-<div class="mdui-card-primary-title ">订阅源</div>
+<section id="vjiediandinyue" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">节点订阅</div>
 <div class="mdui-card"><div class="mdui-card-content">
 <li><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a> 更新日期：2022.08.01 可能是最后一次更新</li>
 可用于V2ray相关等工具<br><br>
@@ -397,8 +407,8 @@ IP查询：<a class="mdui-text-color-light-blue" href=https://www.ipaddress.com/
 </section>
 
 
-<section class="mdui-container-fluid"><br>
-<div class="mdui-card-primary-title ">节点分享</div>
+<section id="vjiedianfenxiang" class="mdui-container-fluid"><br>
+<div class="mdui-card-primary-title">节点分享</div>
 <div class="mdui-card"><div class="mdui-card-content">
 此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验<br>
 <br>
@@ -432,8 +442,7 @@ $("#v2").append(str);
 </section>
 
 
-
-<section class="mdui-container-fluid"><br>
+<section id="jiaoliuwenda" class="mdui-container-fluid"><br>
 <div class="mdui-card-primary-title ">交流问答</div>
 <div class="mdui-card"><div class="mdui-card-content">
 <!-- 验证 -->
@@ -485,6 +494,31 @@ emojiMaps: {
         "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
         "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
         "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+        "tv_热词系列_三连": "21f15fe11b7a84d2f2121c16dec50a4e4556f865.png",
+        "tv_热词系列_知识增加": "5637557320fbfb3292307735f0b8acd53a791241.png",
+        "tv_热词表情_哎呦不错哦": "6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png",
+        "tv_热词系列_好耶": "ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png",
+        "tv_热词系列_你币有了": "84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png",
+        "tv_热词系列_对象": "a41763740a90c2b11bf282bf44ccee78066c98ff.png",
+        "tv_热词系列_不孤鸟": "7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png",
+        "tv_热词系列_洛水天依": "ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png",
+        "tv_热词系列_优雅": "d41bc3db2a0d5ac32eee0b454062c057e6198a21.png",
+        "tv_热词系列_吹爆": "9c78c14bd395d75afeecd20276ec71324e9b97df.png",
+        "tv_热词系列_秀": "1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png",
+        "tv_热词系列_妙啊": "3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png",
+        "tv_热词系列_标准结局": "6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png",
+        "tv_热词系列_B站有房": "e2aeda75690b72b49ebc82f12e340678f5fc47c0.png",
+        "tv_热词系列_破防了": "d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png",
+        "tv_热词系列_多谢款待": "a4789b0eceb8fb9719c3a214aa89180528369091.png",
+        "tv_白色情人节_555": "ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png",
+        "tv_白色情人节_555": "f0bde472c5b6490435e9f948500d3dca84407253.png",
+        "tv_白色情人节_chou你": "cde2941ac0653ded2499ed3c06c02513e021b594.png",
+        "tv_白色情人节_mua": "8a155f0df789f66d6af55a0f47456445211e2129.png",
+        "tv_白色情人节_ok": "cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png",
+        "tv_白色情人节_out": "2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png",
+        "tv_白色情人节_shot": "a746aab2877af0dd1688caa3b2e29982d3215778.png",
+        "tv_白色情人节_yyds": "e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png",
+        "tv_白色情人节_爱了爱了": "2918b857f228e4444e151b77bb6847167b8b1e21.png",
         // ... 更多表情
 } 
 });
@@ -493,20 +527,20 @@ emojiMaps: {
 onIsOff = true;//用来控制重复运行的定时器的开关
 window.callback = function(res){
 if(res.ret === 0){
-   window.clearInterval(t2);//如果验证成功就结束定时器
+window.clearInterval(t2);//如果验证成功就结束定时器
 }
 if(res.ret === 2){
-   onIsOff = true;//如果验证失败就继续运行定时器
+onIsOff = true;//如果验证失败就继续运行定时器
 }
 }
 var t2 = window.setInterval(function() {//重复运行的定时器，每一秒执行一次函数
 if (onIsOff == true){
-        act = document.activeElement.id;//获取当前焦点的id
-        if(act=="veditor")//判断评论输入框是否获得焦点
-        {
-        document.getElementById("TencentCaptcha").click();//触发id为TencentCaptcha的按钮
-        onIsOff = false;//触发过程中暂时关闭定时器
-        }
+act = document.activeElement.id;//获取当前焦点的id
+if(act=="veditor")//判断评论输入框是否获得焦点
+{
+document.getElementById("TencentCaptcha").click();//触发id为TencentCaptcha的按钮
+onIsOff = false;//触发过程中暂时关闭定时器
+}
 }
 },1000);
 </script>
@@ -514,42 +548,35 @@ if (onIsOff == true){
 </section>
 
 
-<section class="mdui-container-fluid"><br>
+<section id="changjianwenti" class="mdui-container-fluid"><br>
 <div class="mdui-card-primary-title ">常见问题</div>
-<div class="mdui-card"><div class="mdui-card-content">
-<ol>
+<div class="mdui-card"><div class="mdui-card-content mdui-typo">
 <li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
 <p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：MIUI重启解决99%的问题。</p>
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">为什么连不上？</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</p>
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">速度太慢怎么办？</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源无法保证速度，同上。</p>
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">不会用怎么办？</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：别人都会，就你不会。</p>
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">看不懂怎么办？</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别看。</p>
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">找不到怎么办？</strong></li>
 <code class="mdui-color-grey-400">答</code></strong>：去看一下眼科。
-
 <li><strong class="mdui-text-color-red mdui-typo-body-2">太麻烦了吧。</strong></li>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
-</ol>
-
 </div></div>
 </section>
 
+
 <!-- 页脚 -->
-<br><footer class="mdui-card mdui-color-white">
-<style>footer {padding: 20px 0;margin-top: 20px;}footer a {text-decoration: none;color: #000;}</style>
-<div class="mdui-container mdui-typo">
-<div style="flex-direction: column;">
-<code class="mdui-text-color-green-600">声明：</code><a>所有资源均来源于网络搜集，如有侵权请联系我们删除。</a>
+<br>
+<footer class="mdui-card mdui-color-white">
+<style>footer a {text-decoration: none;color: #000;}</style>
+<div class="mdui-container-fluid">
+<div class="mdui-card-content mdui-typo">
+<b><kbd>声明</kbd>：所有资源均来源于网络搜集，如有侵权请联系我们删除。</b>
 </div>
 </div>
 </footer>
