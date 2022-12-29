@@ -54,7 +54,6 @@ Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
 a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
 runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
 </script>
-<img class="mdui-img-rounded" width="100%" src="https://s2.loli.net/2022/08/30/ZoiJQ5XwTEzvW8d.gif">
 <h4 id="hitokoto">D: 获取中...</h4>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <p class="mdui-text-color-blue-grey-600">
@@ -74,9 +73,6 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 </li></div>
 <div class="mdui-col "><li class="mdui-list-item">
 <div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/A2zml/Monitor">监控</a></div>
-</li></div>
-<div class="mdui-col"><li class="mdui-list-item">
-<div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/System">System</a></div>
 </li></div>
 <div class="mdui-col"><li class="mdui-list-item">
 <div class="mdui-list-item-content mdui-valign"><a class="mdui-card-primary-title mdui-center" href="/MIUI">MIUI</a></div>
@@ -119,7 +115,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 220px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 220px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#cartoon").append(str);
@@ -145,7 +141,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 220px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 220px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#bilibili").append(str);
@@ -191,7 +187,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div class="mdui-card"><div style="height: 150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 150px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#Links").append(str);
