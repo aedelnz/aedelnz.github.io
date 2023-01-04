@@ -21,7 +21,7 @@
 </div>
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar mdui-color-theme mdui-color-light-blue-a700">
+<div class="mdui-toolbar mdui-color-white">
 <a class="mdui-typo-headline" mdui-drawer="{target: '#left-drawer'}">画的个人记录.</a>
 <div class="mdui-toolbar-spacer"></div>
 </div>
@@ -39,13 +39,6 @@
 <!--介绍-->
 <section class="mdui-container-fluid"><br>
 <div class="mdui-card"><div class="mdui-card-content">
-<div style="font-size: 10px;">
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<i class="mdui-icon material-icons" style="font-size: 12px;">group</i>
-总共访问数：<span id="busuanzi_value_site_uv"></span>&ensp;|&ensp;
-<i class="mdui-icon material-icons" style="font-size: 12px;">visibility</i>
-总共阅读数：<span id="busuanzi_value_site_pv"></span>
-</div>
 <span id="runtime_span"></span>
 <script type="text/javascript">
 function show_runtime()
@@ -58,7 +51,6 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <h4 id="hitokoto">D: 获取中...</h4>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <p class="mdui-text-color-blue-grey-600">
-非常抱歉，本站长无法正常活跃：
 <li>如何正确摆烂</li></p>
 </div></div>
 </section>
@@ -116,7 +108,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 220px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#cartoon").append(str);
@@ -142,7 +134,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 220px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#bilibili").append(str);
@@ -188,7 +180,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 150px;width:150px;" class="mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 $("#Links").append(str);
