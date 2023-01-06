@@ -1,3 +1,5 @@
+<!--修改此文件需要 review-->
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <title>安全中心</title>
@@ -5,7 +7,6 @@
 <meta name="robots" content="noindex">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
-<meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <link rel="icon" href="./favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
 <link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0"/>
@@ -14,177 +15,214 @@
 <link rel="stylesheet" href="./start/index.css?v=1.0" >
 <script src="./start/origin.js?v=1.0"></script>
 <style>
-body,h1,p {
-margin: 0;
-padding: 0
-}
-a {
-text-decoration: none
-}
-button {
-padding: 0;
-font-family: inherit;
-background: none;
-border: none;
-outline: none;
-cursor: pointer
-}
-body {
-background-color: #eff2f5;
-padding-top: 60px;
-color: #222;
-font-size: 13px;
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-line-height: 1.2;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-}
-@media (max-width:620px) {
-body {
-font-size: 15px
-}
-}
-.button {
-display: inline-block;
-padding: 8px 10px;
-color: #fff;
-font-size: 14px;
-line-height: 1;
-background-color: #0077d9;
-border-radius: 3px
-}
-@media (max-width:620px) {
-.button {
-font-size: 16px
-}
-}
-.button:hover {
-background-color: #0070cd
-}
-.button:active {
-background-color: #0077d9
-}
-.link-button {
-color: #105cb6;
-font-size: 13px
-}
-@media (max-width:620px) {
-.link-button {
-font-size: 15px
-}
-}
-.logo,.wrapper {
-margin: auto;
-padding-left: 20px;
-padding-right: 20px;
-}
-.wrapper {
-padding-top: 20px;
-padding-bottom: 20px;
-background-color: #f7f7f7;
-border: 1px solid #babbbc;
-border-radius: 8px
-}
-@media (max-width:620px) {
-.logo,.wrapper {
-margin: 0 10px
-}
-}
-h1 {
-margin-bottom: 12px;
-font-size: 16px;
-font-weight: 700;
-line-height: 1
-}
-@media (max-width:620px) {
-h1 {
-font-size: 18px
-}
-}
-.warning {
-color: #c33
-}
-.link {
-margin-top: 12px;
-word-wrap: normal;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-cursor: pointer
-}
-.link.is-expanded {
-word-wrap: break-word;
-white-space: normal
-}
-.actions {
-margin-top: 10px;
-padding-top: 10px;
-text-align: right;
-border-top: 4px solid #d8d8d8
-}
-.actions .link-button+.link-button {
-margin-left: 40px
-}
-.tip {
-position: relative;
-display: none;
-margin-top: 30px;
-padding-top: 18px;
-color: #999;
-text-align: left;
-background: #f7f7f7;
-border-top: 1px solid #d8d8d8;
-opacity: 0;
-transition: opacity .2s ease-out
-}
-.tip.is-visible {
-opacity: 1
-}
-.tip:after,.tip:before {
-position: absolute;
-bottom: 100%;
-right: 5em;
-content: " ";
-height: 0;
-width: 0;
-border: solid transparent;
-pointer-events: none
-}
-.tip:after {
-margin-right: -6px;
-border-color: rgba(247, 247, 247, 0);
-border-bottom-color: #f7f7f7;
-border-width: 6px
-}
-.tip:before {
-margin-right: -7px;
-border-color: rgba(216, 216, 216, 0);
-border-bottom-color: #d2d2d2;
-border-width: 7px
-}
+    body,
+    h1,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        padding: 0;
+        font-family: inherit;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+        background-color: #eff2f5;
+    }
+
+    body {
+        padding-top: 100px;
+        color: #222;
+        font-size: 13px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    @media (max-width: 620px) {
+        body {
+            font-size: 15px;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 16px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1;
+        background-color: #0077d9;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 620px) {
+        .button {
+            font-size: 16px;
+        }
+    }
+
+    .button:hover {
+        background-color: #0070cd;
+    }
+
+    .button:active {
+        background-color: #0077d9;
+    }
+
+    .link-button {
+        color: #105cb6;
+        font-size: 13px;
+    }
+
+    @media (max-width: 620px) {
+        .link-button {
+            font-size: 15px;
+        }
+    }
+    .logo {
+        font-size: 30px;
+    }
+
+    .logo,
+    .wrapper {
+        margin: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 540px;
+    }
+
+    .wrapper {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #f7f7f7;
+        border: 1px solid #babbbc;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 620px) {
+        .logo,
+        .wrapper {
+            margin: 0 10px;
+        }
+    }
+
+    h1 {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    @media (max-width: 620px) {
+        h1 {
+            font-size: 18px;
+        }
+    }
+
+    .warning {
+        color: #c33;
+    }
+
+    .link {
+        margin-top: 12px;
+        word-wrap: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+    .link.is-expanded {
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    .actions {
+        margin-top: 15px;
+        padding-top: 30px;
+        text-align: right;
+        border-top: 1px solid #d8d8d8;
+    }
+
+    .actions .link-button + .link-button {
+        margin-left: 30px;
+    }
+
+    .tip {
+        position: relative;
+        display: none;
+        margin-top: 30px;
+        padding-top: 18px;
+        color: #999;
+        text-align: left;
+        background: #f7f7f7;
+        border-top: 1px solid #d8d8d8;
+        opacity: 0;
+        transition: opacity .2s ease-out;
+    }
+
+    .tip.is-visible {
+        opacity: 1;
+    }
+
+    .tip:after, .tip:before {
+        position: absolute;
+        bottom: 100%;
+        right: 5em;
+        content: " ";
+        height: 0;
+        width: 0;
+        border: solid transparent;
+        pointer-events: none;
+    }
+
+    .tip:after {
+        margin-right: -6px;
+        border-color: rgba(247, 247, 247, 0);
+        border-bottom-color: #f7f7f7;
+        border-width: 6px;
+    }
+
+    .tip:before {
+        margin-right: -7px;
+        border-color: rgba(216, 216, 216, 0);
+        border-bottom-color: #d2d2d2;
+        border-width: 7px;
+    }
 </style>
 </head>
 <body>
-<div class="logo">
-<a href="/" style="font-size: 32px;color: #000;margin-bottom: 2px;line-height: 1.2;">安全中心</a>
-</div>
-<div class="mdui-card wrapper">
+<div class="logo">安全中心</div>
+<div class="wrapper">
 <div class="content">
-<h1><span id="seconds">0</span>即将离本站</h1>
-<p class="info">您即将离，请注意您的帐号和财产安全。</p>
+<h1><span id="seconds">0</span>即将离开该页面</h1>
+<p class="info warning">你访问的网站有未知风险，请注意您的帐号和财产安全。</p>
 <p class="link"><span id="urls">url</span></p>
 </div>
 <div class="actions">
 <a class="button" id="UrlId" href="">继续访问</a>
 </div>
-</div>
-<br>
-<div class="mdui-card wrapper">
+<div class="actions">
+<button class="link-button js-show-tip">为什么有404？</button>
+<div class="tip">
 当网页出现问题时可以通过以下办法解决：<br>
 ①多次刷新网页或者刷新DNS，这种办法只对加载超时有效。<br>
 ②可以通过开启科学上网解决。<br>
 ③以上两种办法解决不了可能是域名失效或其它原因，只能自行办法解决。<br><br>
-<span class="mdui-text-color-red">温馨提示：</span>第三方网站可能存有大量广告，可以通过开启广告屏蔽插件解决。
+<span class="mdui-text-color-red">温馨提示：</span>第三方网站可能存有大量广告，可以通过开启广告屏蔽插件解决。</div>
 </div>
+</div><br>
 <script>
 // 获取当前url地址
 var url = window.location.href;
@@ -196,14 +234,56 @@ urls.innerText = url;
 // 获取秒数显示id
 var seconds = document.getElementById("seconds");
 // 设置秒数
-var num = 10;
+var num = 3;
 var timer = setInterval(function () {
 num--;
 seconds.innerText = num;
-if(num == 9){
+if(num == 2){
 window.location.href = url;
 }
-},1200)
+},1000)
+</script>
+<script>
+var showTipButton = document.querySelector('.js-show-tip');
+var tipEl = document.querySelector('.tip');
+var showTip = function () {
+    tipEl.style.display = 'block';
+    tipEl.offsetWidth; // force reflow
+    tipEl.className = 'tip is-visible';
+    return false;
+};
+
+var linkEl = document.querySelector('.link');
+var selectLink = function () {
+    linkEl.className = 'link is-expanded';
+    if (document.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(linkEl);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.selectNodeContents(linkEl);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    };
+};
+
+if (window.addEventListener) {
+if (showTipButton) {
+    showTipButton.addEventListener('click', showTip);
+}
+if (linkEl) {
+    linkEl.addEventListener('click', selectLink);
+}
+}else{
+if (showTipButton) {
+    showTipButton.attachEvent('onclick', showTip);
+}
+if (linkEl) {
+    linkEl.attachEvent('onclick', selectLink);
+}
+}
 </script>
 </body>
 </html>
