@@ -6,19 +6,13 @@ background-color: #f3f4f7;
 /* 全站灰色 */
 关html *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
 
--body {
-z-index:1;
-background-attachment:fixed;
-height:100%;
-background-size:cover;
-background-image:url('//s.jixiejidiguan.top/Api/setu.php');
-background-repeat:no-repeat;
-background-position:center 0;
-}
-
 #guanui-btns {
 width: 100%;
 border-radius: 8px;
 background-color: rgba(255,255,255,0.9);
 padding: 8px 0;
+}
+
+.mdui-appbar {
+    backdrop-filter: saturate(180%) blur(10px);
 }
