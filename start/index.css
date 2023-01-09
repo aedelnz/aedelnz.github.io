@@ -14,5 +14,5 @@ padding: 8px 0;
 }
 
 .mdui-appbar {
-    backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(8px);
 }
