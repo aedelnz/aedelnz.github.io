@@ -33,8 +33,8 @@
 </ul>
 </div>
 <style>.carousel-item.active{z-index:1;opacity:1}.carousel-item{opacity:0;transition-property:opacity;transform:none}.carousel-item.active{display:block}.carousel-item{min-height:90vh}.carousel-item{overflow:hidden;height:100vh}.carousel-item{position:relative;display:none;width:100%;margin-right:-100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:transform .6s ease-in-out}.hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(40%) blur(4px)}.hdpicText{z-index:10;position:relative;color:white;padding-top:15vh;padding-left:6vw;padding-right:6vw}.headH1{background:linear-gradient( 75deg,rgba(255,12,204,1) 0%,rgb(0,217,255) 33.33%,rgba(255,255,255,0) 66.67%,rgba(255,255,255,0) 100% );background-size:300% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation-name:colorTitle;animation-duration:5s}.display-1{font-size:calc(1.625rem + 4.5vw);font-weight:300;line-height:1.2}.headInnerText{font-size:1.3rem;font-weight:100;animation-name:headTHc;animation-duration:0.5s;animation-delay:0.9s;display:inline-block;margin-bottom:10px;animation-fill-mode:both;transition:transform 0.5s cubic-bezier(0.86,0.29,0.1,0.66)}</style>
-<div class="carousel-item active" onload="run();">
-<img id="banner" alt="banner" src="https://img.moehu.org/pic.php?id=ys" class="hdpicEach" />
+<div class="carousel-item active">
+<img src="https://img.moehu.org/pic.php?id=ys" class="hdpicEach" />
 <div class="hdpicText">
 <div class="headH1 display-1">画的个人记录.</div>
 <p class="headInnerText">"<span id="hitokoto">D: 获取中...</span>
@@ -67,45 +67,28 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <!-- 更多页面 -->
 <section id="fujian" class="mdui-container-fluid"><br>
 <div class="mdui-card-primary-title">更多附件</div>
-<div class="mdui-card mdui-hoverable"><div class="mdui-card-content mdui-typo">
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-4 mdui-row-lg-4 mdui-row-xl-4 mdui-grid-list">
+<div class="mdui-card">
+<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-grid-list">
+<div class="mdui-list">
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="/A2zml">导航</a> 
-</strong>
-</div>
-<div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="/A2zml/Monitor">监控</a>
-</strong>
+<a href="/A2zml" class="mdui-list-item mdui-ripple mdui-typo-headline">导航</a>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="/MIUI">MIUI</a>
-</strong>
+<a href="/A2zml/Monitor" class="mdui-list-item mdui-ripple mdui-typo-headline">URL监控</a>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="/Bg">文章</a>
-</strong>
+<a href="/MIUI" class="mdui-list-item mdui-ripple mdui-typo-headline">MIUI</a>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="https://s.jixiejidiguan.top">茵昱动漫</a>
-</strong>
+<a href="/Bg" class="mdui-list-item mdui-ripple mdui-typo-headline">文章</a>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="https://yunpan.jixiejidiguan.top">云盘</a>
-</strong>
+<a href="https://s.jixiejidiguan.top/Anime" class="mdui-list-item mdui-ripple mdui-typo-headline">艺枔动漫</a>
 </div>
 <div class="mdui-col">
-<strong class="mdui-p-a-1 mdui-grid-tile mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-typo-title-opacity" href="https://google.jixiejidiguan.workers.dev">镜像</a>
-</strong>
+<a href="https://yunpan.jixiejidiguan.top" class="mdui-list-item mdui-ripple mdui-typo-headline">云盘</a>
 </div>
-</div>
-</div></div>
+</div></div></div>
 </section>
 
 
@@ -129,7 +112,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-24 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
@@ -154,7 +137,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-24 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
@@ -202,7 +185,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-shadow-24 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" class="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
