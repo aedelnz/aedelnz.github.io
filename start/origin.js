@@ -26,5 +26,7 @@ document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=
 
 
 
+document.write("<div style=\"width: 100%; height: auto; min-height: 7.5%; background: url(http:\/\/www.nlc.cn\/images\/2023cj_230116yyc_02.jpg) no-repeat top; background-size: 100%; margin: 0 auto; text-align: center; position: relative; z-index: 20\"><\/div>");
+
 
 
