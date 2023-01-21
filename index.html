@@ -1,3 +1,4 @@
+<!-- 开始html -->
 <html lang="zh-CN">
 <head>
 <title>画的个人记录</title>
@@ -37,8 +38,8 @@
 <img src="https://img.moehu.org/pic.php?id=ys" class="hdpicEach" />
 <div class="hdpicText">
 <div class="headH1 display-1">画的个人记录.</div>
-<p class="headInnerText">"<span id="hitokoto">D: 获取中...</span>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>"</p>
+<p class="headInnerText"><span id="hitokoto">D: 获取中...</span>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script></p>
 <hr><br>
 <a href="#s" class="headH1 headInnerText">点击预览</a>
 </div>
@@ -77,10 +78,10 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 <a href="/A2zml/Monitor" class="mdui-list-item mdui-ripple mdui-typo-headline">URL监控</a>
 </div>
 <div class="mdui-col">
-<a href="/MIUI" class="mdui-list-item mdui-ripple mdui-typo-headline">MIUI</a>
+<a href="/Lightblog" class="mdui-list-item mdui-ripple mdui-typo-headline">轻博客</a>
 </div>
 <div class="mdui-col">
-<a href="/Bg" class="mdui-list-item mdui-ripple mdui-typo-headline">文章</a>
+<a href="/MIUI" class="mdui-list-item mdui-ripple mdui-typo-headline">MIUI</a>
 </div>
 <div class="mdui-col">
 <a href="https://s.jixiejidiguan.top/Anime" class="mdui-list-item mdui-ripple mdui-typo-headline">艺枔动漫</a>
@@ -112,7 +113,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
@@ -137,7 +138,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
@@ -172,6 +173,7 @@ $("#bilibili").append(str);
 </div>
 <br>
 <div id="Links"></div>
+<style>.mdui-card-media-covered.mdui-card-menu {backdrop-filter: saturate(180%) blur(1px);}</style>
 <script>
 $(function(){    
 $.ajax({    
@@ -185,7 +187,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-shadow-6 mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-hoverable mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-drawer-full-height mdui-card-media-covered mdui-card-menu"><div class="mdui-m-t-5 mdui-text-center mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
 });
 str+='</div>';
 console.log(data)
