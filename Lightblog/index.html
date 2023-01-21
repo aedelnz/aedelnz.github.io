@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>轻博客</title>
+<meta charset="utf-8" />
+<meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="icon" href="../favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
+<link rel="stylesheet" href="../start/mdui/css/mdui.min.css?v=1.0"/>
+<script src="../start/mdui/js/mdui.min.js?v=1.0"></script>
+<script src="../start/jquery.min.js?v=1.0"></script>
+<script src="../start/marked.min.js"></script>
+<link rel="stylesheet" href="../start/index.css" >
+<script src="../start/origin.js"></script>
+<style>
+body{margin:0;padding:0;font-family:"Microsoft YaHei",sans-serif}img{max-width:100%;height:auto}pre,code{font-family:Consolas,"Liberation Mono",Courier,monospace;background-color:#f8f8f8;border:1px solid #ddd;border-radius:3px}pre{padding:6px 10px;overflow:auto;font-size:60%;line-height:160%}code{padding:2px 5px;margin:0 2px}pre > code{border:none;background-color:inherit;padding:0;margin:0}table{font-size:80%;width:100%;overflow:auto;display:block;margin:15px 0;border-collapse:collapse;border-spacing:0}table th,table td{border:1px solid #ddd;padding:6px 13px}table tr{border-top:1px solid #ccc;background-color:#fff}table tr:nth-child(2n){background-color:#f8f8f8}blockquote{margin:15px 0;border-left:4px solid #DDD;padding:0 15px;color:#777}h1 a{text-decoration:none}
+</style>
+<script>
+(function () {
+var pageBase = 'article/';
+var pageExt = 'md';
+var mainPage = location.search.slice(1).replace(/&.*/, '') || 'aboutme';
+var mainTitle = '';
+function config() {
+marked.setOptions({
+renderer: new marked.Renderer(),
+gfm: true,
+tables: true,
+breaks: false,
+pedantic: false,
+sanitize: false,
+smartLists: true,
+smartypants: false
+});
+}
+function render(data, options, callback) {
+marked(data, options, callback);
+}
+function load(sel, page, isMain, options, callback) {
+isMain = isMain || false;
+var url = pageBase + page + '.' + pageExt;
+$.ajax({
+url: url,
+error: onNotFound,
+success: function (data) {
+render(data, options, function (err, html) {
+if (err && callback) return callback(err);
+var $el = $(sel);
+$el.hide().html(html);
+$el.find('[src]').each(function () {
+var $el = $(this);
+$el.attr('src', function (x, old) {
+if (isAbsolute(old)) {
+return old;
+}
+return url.replace(
+new RegExp('[^\\/]*$', 'g'), ''
+) + old;
+});
+});
+$el.find('[href]').each(function () {
+var $el = $(this);
+$el.attr('href', function (x, old) {
+if (isAbsolute(old)) {
+$el.attr('target', '_blank');
+return old;
+}
+var prefixed = url.replace(
+new RegExp('^' + pageBase + '|[^\\/]*$', 'g'), ''
+) + old;
+var regExt = new RegExp('\\.' + pageExt + '$');
+if (!regExt.test(old)) {
+if (!/(^\.|\/\.?|\.html?)$/.test(old)) {
+$el.attr('target', '_blank');
+}
+return prefixed;
+}
+return '?' + prefixed.replace(regExt, '');
+});
+});
+$el.show();
+if (callback) callback();
+});
+}
+});
+}
+function onNotFound() {
+location.href = '.';
+}
+function start() {
+load('#sidebar-page', 'sidebar');
+load('#main-page', mainPage, true);
+}
+function isAbsolute(url) {
+return !url.indexOf('//') || !!~url.indexOf('://');
+}
+config();
+start();
+})();
+</script>
+</head>
+<body class="mdui-bottom-nav-fixed mdui-appbar-with-toolbar">
 
+<!-- 顶部内容全部开始 -->
+<div class="mdui-appbar mdui-appbar-fixed">
+<div class="mdui-toolbar">
+<div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">博客园</div>
+<div class="mdui-toolbar-spacer"></div>
+</div>
+</div>
+<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
+<ul class="mdui-list">
+<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
+</ul>
+</div>
+
+<div class="mdui-card mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide" mdui-tab>
+<a href="#Home" class="mdui-ripple mdui-bottom-nav-active">主页</a>
+<a href="#Article" class="mdui-ripple">关于</a>
+</div>
+
+<section id="Home" class="mdui-container-fluid">
+<div class="mdui-card-primary-title">文章</div>
+<div class="mdui-card"><div class="mdui-card-content">
+<div id="main-page"></div>
+</div></div><br>
+</section>
+<section id="Article" class="mdui-container-fluid">
+<div class="mdui-card-primary-title">关于</div>
+<div class="mdui-card"><div class="mdui-card-content">
+<div id="sidebar-page"></div>
+</div></div><br>
+</section>
+</body>
+</html>
