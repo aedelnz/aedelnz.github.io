@@ -187,7 +187,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-drawer-full-height mdui-card-media-covered mdui-card-menu"><div class="mdui-m-t-5 mdui-text-center mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/><div class="mdui-drawer-full-height mdui-card-media-covered mdui-card-menu"><div class="mdui-m-t-5 mdui-text-center mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></a><br></div>';
 });
 str+='</div>';
 console.log(data)
