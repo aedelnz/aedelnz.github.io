@@ -1,4 +1,3 @@
-<!-- 开始html -->
 <html lang="zh-CN">
 <head>
 <title>画的个人记录</title>
@@ -14,16 +13,14 @@
 <link rel="stylesheet" href="./start/index.css" />
 <script type="text/javascript" src="./start/origin.js" /></script>
 </head>
-<!--body-->
-<body>
-<!-- 顶部内容全部开始 -->
+<body class="mdui-drawer-body-right">
 <div class="mdui-appbar mdui-appbar-fixed">
 <div class="mdui-toolbar">
 <div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">画的个人记录.</div>
 <div class="mdui-toolbar-spacer"></div>
 </div>
 </div>
-<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
+<div class="mdui-drawer mdui-drawer-right mdui-appbar-with-toolbar" id="left-drawer">
 <ul class="mdui-list">
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#fujian" class="mdui-ripple">更多附件</a></li>
@@ -33,16 +30,6 @@
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
 </ul>
 </div>
-
-
-
-
-
-
-
-
-
-
 <div class="mdui-typo" style="height: 100vh;width: 100%;background-position: top center;background-repeat: no-repeat;background-attachment: scroll;background-size: cover;z-index: -9;">
 <div class="mdui-text-color-green-a700" style="top: 35%;position: relative;padding: 0 10px;">
 <h1 class="mdui-text-center mdui-typo-headline" style="font-weight: bold;">画的个人记录</h1>
@@ -50,26 +37,7 @@
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
 </div>
-
-
-<!--介绍-->
-<section class="mdui-container-fluid mdui-p-t-2"><br>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
-<b id="runtime_span"></b>
-<script type="text/javascript">
-function show_runtime()
-{window.setTimeout("show_runtime()",1000);X=new 
-Date("2/20/2020 00:00:00"); //初始建站时间修改此处
-Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
-a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
-runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
-</script>
-</div></div>
-</section>
-
-
-<!-- 更多页面 -->
-<section id="fujian" class="mdui-container-fluid"><br>
+<section id="fujian" class="mdui-container"><br>
 <div class="mdui-card-primary-title">更多附件</div>
 <div class="mdui-card">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-grid-list">
@@ -97,11 +65,14 @@ runtime_span.innerHTML="网站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}sh
 
 
 <!--来自腾讯视频的国漫收藏-->
-<section id="guoman" class="mdui-container-fluid"><br>
+<section id="guoman" class="mdui-container"><br>
 <div class="mdui-card-primary-title">国漫收藏</div>
 <div class="mdui-card"><div class="mdui-card-content"><br>
 <div class="mdui-typo-subheading mdui-text-center">腾讯视频</div>
 <div class="mdui-divider"></div><br>
+
+
+
 <div id="cartoon"></div>
 <script>
 $(function(){    
@@ -116,7 +87,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="margin-bottom: 4px;margin-top: 4px;padding-right: 4px;"><div class="mdui-hoverable mdui-card mdui-card-media" style="border-radius: 8px;"><a  href='+n.url+' title='+n.title+' ><div style="padding-top: 136.74%;height: 0;overflow: hidden;position: relative;"><img class="mdui-img-fluid" style="overflow: hidden;position: absolute;width: 100%;height: 100%;left: 0;top: 0;" src='+n.img+' alt='+n.title+' /></div><div class="mdui-card-media-covered mdui-text-truncate">'+n.title+'</div></div></a></div></div>';
 });
 str+='</div>';
 console.log(data)
@@ -141,7 +112,7 @@ dataType: "json",
 success: function(data){    
 var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 200px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/></a><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div><br></div>';
+str+='<div class="mdui-col"><div style="margin-bottom: 4px;margin-top: 4px;padding-right: 4px;"><div class="mdui-hoverable mdui-card mdui-card-media" style="border-radius: 8px;"><a  href='+n.url+' title='+n.title+' ><div style="padding-top: 136.74%;height: 0;overflow: hidden;position: relative;"><img class="mdui-img-fluid" style="overflow: hidden;position: absolute;width: 100%;height: 100%;left: 0;top: 0;" src='+n.img+' alt='+n.title+' /></div><div class="mdui-card-media-covered mdui-text-truncate">'+n.title+'</div></div></a></div></div>';
 });
 str+='</div>';
 console.log(data)
@@ -155,7 +126,7 @@ $("#bilibili").append(str);
 
 
 <!-- 友情链接 -->
-<section id="yqlj" class="mdui-container-fluid"><br>
+<section id="yqlj" class="mdui-container"><br>
 <div class="mdui-card-primary-title">友情链接</div>
 <div class="mdui-card"><div class="mdui-card-content mdui-typo">
 <div class="mdui-typo-caption mdui-text-color-deep-orange-a400">
@@ -176,7 +147,6 @@ $("#bilibili").append(str);
 </div>
 <br>
 <div id="Links"></div>
-<style>.mdui-card-media-covered.mdui-card-menu {backdrop-filter: saturate(180%) blur(1px);}</style>
 <script>
 $(function(){    
 $.ajax({    
@@ -206,7 +176,7 @@ $("#Links").append(str);
 <!-- footer -->
 <br>
 <footer class="mdui-card mdui-color-white">
-<div class="mdui-container-fluid">
+<div class="mdui-container">
 <div class="mdui-card-content mdui-typo">
 <div class="mdui-float-left mdui-typo-caption-opacity">
 <a class="mdui-text-color-black" href="#">返回顶部</a>
