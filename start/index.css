@@ -4,9 +4,12 @@ body {
 background-color: #f3f4f7;
 }
 /* 全站灰色 */
-关html *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
+开body *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
 
 .mdui-appbar {
-    backdrop-filter: saturate(180%) blur(8px);
+backdrop-filter:blur(8px);
+box-shadow:1 1px 20px 1px rgba(0,0,0,.3);
+border-bottom:0px solid rgba(255,255,255,0.4);
+border-left:0px solid rgba(255,255,255,0.4);
 }
 
