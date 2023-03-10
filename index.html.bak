@@ -14,8 +14,6 @@
 <script type="text/javascript" src="./start/origin.js" /></script>
 <style>.a {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
