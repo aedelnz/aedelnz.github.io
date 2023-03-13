@@ -26,7 +26,7 @@
   background-position: top center;
   background-repeat: no-repeat;
 }</style></head>
-<body class="mdui-drawer-body-right a">
+<body class="mdui-drawer-body-right">
 <div class="mdui-appbar mdui-appbar-fixed">
 <div class="mdui-toolbar">
 <div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">画的个人记录.</div>
@@ -43,7 +43,7 @@
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
 </ul>
 </div>
-<div class="mdui-typo" style="height: 100vh;width: 100%;background-position: top center;background-repeat: no-repeat;background-attachment: scroll;background-size: cover;z-index: -9;">
+<div class="mdui-typo a" style="height: 100vh;width: 100%;background-position: top center;background-repeat: no-repeat;background-attachment: scroll;background-size: cover;z-index: -9;">
 <div class="mdui-text-color-green-a700" style="top: 35%;position: relative;padding: 0 10px;">
 <h1 class="mdui-text-center mdui-typo-headline" style="font-weight: bold;">画的个人记录</h1>
 <p class="mdui-text-center mdui-typo-subheading-opacity"><span id="hitokoto">D: 获取中...</span></p>
@@ -140,22 +140,31 @@ $("#bilibili").append(str);
 <div class="mdui-card-primary-title">友情链接</div>
 <div class="mdui-card"><div class="mdui-card-content mdui-typo">
 <div class="mdui-typo-caption mdui-text-color-deep-orange-a400">
+<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-grid-list mdui-list">
+<div class="mdui-col">
 <b>友情链接申请规则</b>
 <p class="mdui-text-color-blue-grey-600">
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
 4.且无影响阅读体验的广告</p>
+</div>
+<div class="mdui-col">
 <b>友链申请示例</b>
 <p class="mdui-text-color-grey-500">
 本站名称：JIXIEJIDIGUAN<br>
 本站介绍：其实没有你们想的那么复杂！<br>
 本站链接：jixiejidiguan.top<br>
 本站图片：jixiejidiguan.top/favicon.ico</p>
-<p class="mdui-text-color-black"><b class="mdui-text-color-light-blue">PS:</b>链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！
+</div>
+<div class="mdui-col">
+<b class="mdui-text-color-light-blue">PS:</b>
+<p class="mdui-text-color-black">
+链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！
 <a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请">去申请友情链接</a></p>
 </div>
-<br>
+</div>
+</div>
 <div id="Links"></div>
 <script>
 $(function(){    
@@ -168,9 +177,9 @@ url:"./start/json/Links.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
+var str='<div class="mdui-row-xs-2 mdui-row-sm-3 mdui-grid-list mdui-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="height: 150px;width:150px;border-radius: 6px;" class="mdui-hoverable mdui-card mdui-card-media"><a href='+n.url+' title='+n.title+'><img class="mdui-img-fluid" style="height: 100%;object-fit:cover;" src='+n.img+' alt='+n.title+'/><div class="mdui-drawer-full-height mdui-card-media-covered mdui-card-menu"><div class="mdui-m-t-5 mdui-text-center mdui-grid-tile-title mdui-text-truncate">'+n.title+'</div></div></div></a><br></div>';
+str+='<div class="mdui-col"><li class="mdui-list-item mdui-ripple"><div class="mdui-list-item-avatar"><img src='+n.img+' alt='+n.title+' /></div><div class="mdui-list-item-content mdui-text-truncate"><a class="mdui-typo-caption" href='+n.url+' title='+n.title+'>'+n.title+'</a></div></li></div>';
 });
 str+='</div>';
 console.log(data)
@@ -189,12 +198,12 @@ $("#Links").append(str);
 <footer class="mdui-card mdui-color-white">
 <div class="mdui-container">
 <div class="mdui-card-content mdui-typo">
-<div class="mdui-float-left mdui-typo-caption-opacity">
-<a class="mdui-text-color-black" href="#">返回顶部</a>
-<a class="mdui-text-color-black" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
-<a class="mdui-text-color-black" target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
-<a class="mdui-text-color-black" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
-<a class="mdui-text-color-black" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
+<div class="mdui-float-left">
+<a href="#">返回顶部</a>
+<a target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
+<a target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
+<a target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
+<a target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
 </div><br>
 <b class="mdui-text-color-blue-a700">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> 画的个人记录.</b>
 <a class="mdui-text-color-light-blue-a700" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
