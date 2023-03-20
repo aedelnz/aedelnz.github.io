@@ -30,8 +30,21 @@ $(".notification ").remove();
 }, 2000)
 }
 </script>
+        <button type="button" onclick="show()">显示文本区域</button>
+
+        <div id="output">雪景</div>
+
+<script>
+var t = document.getElementById('output');
+t.style.display =  'none';
+function show(){
+t.style.display = 'block'; 
+t.style.visibility='hidden';
+}
+</script>
+
 </head>
-<body class="mdui-appbar-with-toolbar mdui-loaded" >
+<body class="mdui-appbar-with-toolbar mdui-loaded">
 
 <!-- 顶部内容全部开始 -->
 <div class="mdui-appbar mdui-appbar-fixed">
@@ -54,6 +67,7 @@ $(".notification ").remove();
 </ul>
 </div>
 
+<div id="output">
 <!--软件下载列表 -->
 <section id="ruanjianxiazai" class="mdui-container"><br>
 <div class="mdui-card-primary-title">软件下载</div>
@@ -104,7 +118,26 @@ $(".notification ").remove();
 </strong></div>
 </div>
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">IOS</div>
+<div class="mdui-card-primary-subtitle">IOS 客户端 (全区可下载,包括中区)</div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/23LA2tmX">Loon (支持Surge 3的 RULESET 规则)</a>
+</strong></div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/cn/app/outline-app/id1356177741">Outline (支持SS)</a>
+</strong></div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/IdFRwmNy">Kitsunebi (支持SS/Vmess)</a>
+</strong></div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/NkF46PRd">Potatso Lite</a>
+</strong></div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/3aArQFMQ">A.BIG.T IV</a>
+</strong></div>
+<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
+<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/742YC03J">NetShuttle</a>
+</strong></div>
+<div class="mdui-card-primary-subtitle">iOS 客户端 (仅国区下架,其他区可下载)</div>
 <div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a>
 </strong></div>
@@ -411,7 +444,7 @@ onIsOff = false;//触发过程中暂时关闭定时器
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
 </div></div>
 </section>
-
+</div>
 
 <!-- 页脚 -->
 <br>
