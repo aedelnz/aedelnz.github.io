@@ -3,10 +3,16 @@
 	"title": "来自<a class='mdui-text-color-cyan-accent' href=''>站长自营</a>的DE_德国",
 	"content": "协议: vmess或vless<br>地址: v2.jixiejidiguan.eu.org<br>端口: 443<br>uuid: c90e0db8-2527-41c4-b295-b380effc1271<br>传输: ws<br>host: v2.jixiejidiguan.eu.org<br>path: /vmess或vless<br><button data-copy='vmess://eyJhZGQiOiJ2Mi5qaXhpZWppZGlndWFuLmV1Lm9yZyIsImFpZCI6IjAiLCJob3N0IjoidjIuaml4aWVqaWRpZ3Vhbi5ldS5vcmciLCJpZCI6ImM5MGUwZGI4LTI1MjctNDFjNC1iMjk1LWIzODBlZmZjMTI3MSIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcyIsInBvcnQiOiI0NDMiLCJwcyI6IkRFX+W+t+WbvSIsInNjeSI6ImF1dG8iLCJzbmkiOiJ2Mi5qaXhpZWppZGlndWFuLmV1Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9' onclick='onCopyThis(this)'>点击复制</button>"
 	},{
-	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的直连OC日本",
-	"content": "dm1lc3M6Ly9leUpoWkdRaU9pSnZZMnB3TGpJeWNHbHVaekUxTlRjdWJHOXNJaXdpWVdsa0lqb2lNQ0lzSW1odmMzUWlPaUlpTENKcFpDSTZJbUV5WTJKbU5URm1MV05sTWpBdE5HTTFOeTFtWTJZMkxUSmhZbUpoTVRFek16aGxaU0lzSW01bGRDSTZJbmR6SWl3aWNHRjBhQ0k2SWk5aWFXeHBZbWxzYVNJc0luQnZjblFpT2lJME5ETWlMQ0p3Y3lJNkl1ZWJ0T2kvbms5RDVwZWw1cHlzSWl3aWMyTjVJam9pWVhWMGJ5SXNJbk51YVNJNklpSXNJblJzY3lJNkluUnNjeUlzSW5SNWNHVWlPaUlpTENKMklqb2lNaUo5"
+	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的直连JP日本",
+	"content": "vmess://eyJhZGQiOiJqcGdvLm9uaWNoYW5rYXdhaWkub25saW5lIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImViYjE1ZDc0LTZhMDUtNDc1Yi1lN2UyLTQ3NjVjZTNkOWRmNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9iaWxpYmlsaSIsInBvcnQiOiI0NDMiLCJwcyI6IkpQIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9"
 	},{
-	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的CF→OC日本",
-	"content": "dm1lc3M6Ly9leUpoWkdRaU9pSmpabTlqYW5BdU1qSndhVzVuTVRVMU55NXNiMndpTENKaGFXUWlPaUl3SWl3aWFHOXpkQ0k2SWlJc0ltbGtJam9pWVRKalltWTFNV1l0WTJVeU1DMDBZelUzTFdaalpqWXRNbUZpWW1FeE1UTXpPR1ZsSWl3aWJtVjBJam9pZDNNaUxDSndZWFJvSWpvaUwySnBiR2xpYVd4cElpd2ljRzl5ZENJNklqUTBNeUlzSW5Ceklqb2lRMGJpaHBKUFErYVhwZWFjckNJc0luTmplU0k2SW1GMWRHOGlMQ0p6Ym1raU9pSWlMQ0owYkhNaU9pSjBiSE1pTENKMGVYQmxJam9pSWl3aWRpSTZJaklpZlE9PQ=="
+	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的CF→JP日本",
+	"content": "vmess://eyJhZGQiOiJqcGNmLm9uaWNoYW5rYXdhaWkub25saW5lIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImViYjE1ZDc0LTZhMDUtNDc1Yi1lN2UyLTQ3NjVjZTNkOWRmNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9iaWxpYmlsaSIsInBvcnQiOiI0NDMiLCJwcyI6IkpQLUNGIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9"
+	},{
+	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的直连US美国",
+	"content": "vmess://eyJhZGQiOiJ1c2dvLm9uaWNoYW5rYXdhaWkub25saW5lIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImNlZTM4MDU5LWU5MzItNDg5NC1hOGM2LTg1Mzc3OGM1MDBhNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9iaWxpYmlsaSIsInBvcnQiOiI0NDMiLCJwcyI6IlVTIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9"
+	},{
+	"title": "来自<a href='https://srsg.moe/'>白鹭学院</a>的CF→US美国",
+	"content": "vmess://eyJhZGQiOiJ1c2NmLm9uaWNoYW5rYXdhaWkub25saW5lIiwiYWlkIjoiMCIsImFscG4iOiIiLCJmcCI6IiIsImhvc3QiOiIiLCJpZCI6ImNlZTM4MDU5LWU5MzItNDg5NC1hOGM2LTg1Mzc3OGM1MDBhNSIsIm5ldCI6IndzIiwicGF0aCI6Ii9iaWxpYmlsaSIsInBvcnQiOiI0NDMiLCJwcyI6IlVTLUNGIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9"
 	}	
 ]
