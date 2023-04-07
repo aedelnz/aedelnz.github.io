@@ -3,13 +3,19 @@
 <head>
 <title>魔法禁書</title>
 <meta charset="utf-8"/>
-<link rel="icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../start/mdui/css/mdui.min.css?v=1.0"/>
-<script src="../../start/mdui/js/mdui.min.js?v=1.0"></script>
-<script src="../../start/jquery.min.js?v=1.0"></script>
-<link rel="stylesheet" href="../../start/index.css?v=1.0" >
-<script src="../../start/origin.js?v=1.0"></script>
+<meta name="referrer" content="no-referrer"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!-- ico -->
+<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg0" type="image/x-icon"/>
+<!-- css -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<link href="https://jixiejidiguan.top/start/index.css?v=1.0" rel="stylesheet">
+<!-- js -->
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
+<script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
 <script type="text/javascript">
 function onCopyThis(e) {
 var text = $(e).data("copy");
@@ -30,19 +36,8 @@ $(".notification ").remove();
 }, 2000)
 }
 </script>
-        <button type="button" onclick="show()">显示文本区域</button>
-
-        <div id="output">雪景</div>
-
 <script>
-var t = document.getElementById('output');
-t.style.display =  'none';
-function show(){
-t.style.display = 'block'; 
-t.style.visibility='hidden';
-}
 </script>
-
 </head>
 <body class="mdui-appbar-with-toolbar mdui-loaded">
 
@@ -53,6 +48,7 @@ t.style.visibility='hidden';
 <div class="mdui-toolbar-spacer"></div>
 </div>
 </div>
+
 
 <!-- 抽屉式导航 -->
 <div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
@@ -67,7 +63,8 @@ t.style.visibility='hidden';
 </ul>
 </div>
 
-<div id="output">
+
+<main class="mdui-hidden" id="ymdui-hidden">
 <!--软件下载列表 -->
 <section id="ruanjianxiazai" class="mdui-container"><br>
 <div class="mdui-card-primary-title">软件下载</div>
@@ -137,6 +134,8 @@ t.style.visibility='hidden';
 <div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/742YC03J">NetShuttle</a>
 </strong></div>
+</div>
+<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-subtitle">iOS 客户端 (仅国区下架,其他区可下载)</div>
 <div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
 <a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a>
@@ -444,7 +443,96 @@ onIsOff = false;//触发过程中暂时关闭定时器
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
 </div></div>
 </section>
+</main>
+
+
+<div id="login-containers">
+<div id="login-container">
+<div class="mdui-container"><br>
+<h1>加密内容</h1>
+<p class="mdui-typo">善于发现新的内容(<a class="mdui-text-color-blue-accent">0ub0</a>)</p>
+<form>
+<input type="password" name="password" id="password" required>
+<button id="hide"><input type="submit" id="submit-btn"></button>
+</form>
 </div>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#login-containers").hide();
+  });
+  $("#show").click(function(){
+    $("#login-containers").show();
+  });
+});
+</script>
+<script>
+// 获取表单元素和按钮元素
+var form = document.querySelector('form');
+var submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', function (event) {
+// 阻止表单默认提交行为
+event.preventDefault();
+// 获取用户输入的用户名和密码
+var password = document.getElementById('password').value;
+if (password === '') {
+alert('密码不能为空');
+return false;
+}
+if (password === '0ub0') {
+// 登录成功，跳转到欢迎页面
+alert('登录成功');
+var element = document.getElementById("ymdui-hidden"); // 获取元素
+element.className = ""; // 切换元素的CSS
+var elements = document.getElementById("login-container"); // 获取元素
+elements.className = "mdui-invisible"; // 切换元素的CSS
+document.hide;
+return false;
+} else {
+// 登录失败，弹出提示框
+alert('密码错误');
+return false;
+}
+});
+</script>
+<style>
+.login-container {
+background: #ffffff;
+border-radius: 5px;
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+margin: auto;
+margin-top: 100px;
+padding: 30px;
+}
+
+input[type="password"] {
+border: none;
+border-bottom: 1px solid #cccccc;
+font-size: 16px;
+padding: 10px;
+width: 100%;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+#hide,
+input[type="submit"] {
+background: #0099ff;
+border: none;
+color: #ffffff;
+cursor: pointer;
+font-size: 16px;
+padding: 10px;
+width: 100%;
+border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+background: #0088cc;
+}
+</style>
+
 
 <!-- 页脚 -->
 <br>
