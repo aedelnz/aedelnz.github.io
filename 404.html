@@ -4,87 +4,79 @@
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<link rel="icon" href="/favicon.ico?v=1.0" alt="JIXXIEJIDIGUAN"/>
-<link rel="stylesheet" href="/start/mdui/css/mdui.min.css?v=1.0"/>
-<script src="/start/mdui/js/mdui.min.js?v=1.0"></script>
-<script src="/start/jquery.min.js?v=1.0"></script>
-<link rel="stylesheet" href="/start/index.css?v=1.0" >
-<script src="/start/origin.js?v=1.0"></script>
-<script>
-window.onload = function(){
-	var oTime = document.getElementById('time');
-	var time = 10;
-	var timer = setInterval(function(){
-	oTime.innerHTML = --time+"";
-	if(time==0){
-        location.href = "/";
-		clearInterval(timer);
-	}
-},1000);
-}
-</script>
+<!-- ico -->
+<link rel="shortcut icon" href="https://jixiejidiguan.top/favicon.ico?v=1.0" type="image/x-icon"/>
+<!-- css -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<link href="https://jixiejidiguan.top/start/index.css?v=1.0" rel="stylesheet">
+<!-- js -->
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
+<script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
 <style>
-    html,body,.notFindBox{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        min-width: 320px;
-    }
-    .notFindBox{
-        display: table;
-    }
-    .notFind{
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        text-align: center;
-        max-width:570px;
-    }
-    .notFind .notFindImg{
-        display: inline-block;
-    }
-    .notFind .notFindMsg{
-        margin-top:24px;
-        font-size: 24px;
-        color:#333333
-    }
-
-    .hrBtn {
-        display: inline-block;
-        font-size: 16px;
-        line-height: 1;
-        color: #fff;
-        padding: 11px 23px;
-        border: 0;
-        border-radius: 4px;
-        background-color: #ffa924;
-        cursor: pointer;
-        text-decoration: none;
-        margin-top: 24px;
-    }
-
-    .hrBtn:hover {
-        color: #fff;
-        background-color: #ff9600;
-    }
-    @media screen  and (max-width:570px){
-        .notFind,.notFindImg{
-            width: 100%;
-        }
-    }
+body{
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+min-width: 320px;
+}
+* {
+padding: 0;
+margin: 0;
+}
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+text-align: center;
+color: #303659;
+}
+a {
+text-decoration: none;
+color: #3464E0;
+}
+@media (max-width: 640px) {
+#pic {
+position: absolute;
+top: 20%;
+left: 50%;
+width: 320px;
+height: 208px;
+margin-left: -160px;
+background-image: url("https://static.interval.im/interval/Ff7QWrFzPyRiWnnZ.png");
+background-size: cover;
+}
+#intro {
+position: absolute;
+bottom: 6%;
+width: 100%;
+font-size: 12px;
+}
+}
+@media (min-width: 641px) {
+#pic {
+position: absolute;
+top: 32%;
+left: 50%;
+width: 320px;
+height: 208px;
+margin-left: -160px;
+background-image: url("https://static.interval.im/interval/Ff7QWrFzPyRiWnnZ.png");
+background-size: cover;
+}
+#intro {
+position: absolute;
+bottom: 14%;
+width: 100%;
+font-size: 14px;
+}
+}
 </style>
 </head>
 <body>
-<span id="time"></span>
-<div class="notFindBox">
-    <div class="main notFind">
-        <img class="notFindImg" src="https://cdnt.huorong.cn/assets/v5/images/404.png" alt="404 图片">
-        <div class="notFindMsg">抱歉，您所访问的页面不存在！</div>
-        <a class="hrBtn" href="/">返回首页</a>
-    </div>
-</div>
+<div id="pic"></div>
+<p id="intro">由「<a href="https://jixiejidiguan.top">画的个人记录</a>」提供技术服务</p>
 </body>
 </html>
-
 
