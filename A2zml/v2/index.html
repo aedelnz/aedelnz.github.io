@@ -10,12 +10,12 @@
 <!-- css -->
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
-<link href="https://jixiejidiguan.top/start/index.css?v=1.0" rel="stylesheet">
+<link href="../../start/index.css?v=1.0" rel="stylesheet">
 <!-- js -->
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
 <script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
-<script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
+<script src="../../start/origin.js?v=1.0"></script>
 <script type="text/javascript">
 function onCopyThis(e) {
 var text = $(e).data("copy");
@@ -39,19 +39,20 @@ $(".notification ").remove();
 <script>
 </script>
 </head>
-<body class="mdui-appbar-with-toolbar mdui-loaded">
-
-<!-- 顶部内容全部开始 -->
-<div class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar">
-<div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">魔法禁书.</div>
-<div class="mdui-toolbar-spacer"></div>
+<body>
+<nav class="navbar bg-body-tertiary fixed-top sticky-top border text-bg-light p-1">
+<div class="container-fluid">
+<a class="navbar-brand mdui-typo-headline mdui-text-color-blue-a700" href="#">魔法禁书.</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasNavbarLabel">列表</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
-</div>
-
-
-<!-- 抽屉式导航 -->
-<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
+<div class="offcanvas-body">
+<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 <ul class="mdui-list">
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
 <li class="mdui-divider"></li>
@@ -61,14 +62,20 @@ $(".notification ").remove();
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#jiaoliuwenda" class="mdui-ripple">交流问答</a></li>
 <li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#changjianwenti" class="mdui-ripple">常见问题</a></li>
 </ul>
+</ul>
 </div>
+</div>
+</div>
+</nav>
+
+
 
 
 <main class="mdui-hidden" id="ymdui-hidden">
 <!--软件下载列表 -->
 <section id="ruanjianxiazai" class="mdui-container"><br>
-<div class="mdui-card-primary-title">软件下载</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="card"><div class="card-body">
+<h5 class="card-title">软件下载</h5>
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
 <div class="mdui-card-primary-subtitle">Windows</div>
 <div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
@@ -247,8 +254,8 @@ Base64编码或解码结果：
 
 
 <section id="vjiediandinyue" class="mdui-container"><br>
-<div class="mdui-card-primary-title">节点订阅</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="card"><div class="card-body">
+<h5 class="card-title">节点订阅</h5>
 <ins><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a></ins> 更新日期：2022.08.01
 可用于V2ray相关等工具<br>
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
@@ -279,8 +286,8 @@ IP查询：<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui
 
 
 <section id="vjiedianfenxiang" class="mdui-container"><br>
-<div class="mdui-card-primary-title">节点分享</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="card"><div class="card-body">
+<h5 class="card-title">节点分享</h5>
 <u>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</u><br>
 <p class="mdui-typo-caption">
 <b>套CF加速</b><br>
@@ -318,8 +325,8 @@ $("#v2").append(str);
 
 
 <section id="jiaoliuwenda" class="mdui-container"><br>
-<div class="mdui-card-primary-title ">交流问答</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="card"><div class="card-body">
+<h5 class="card-title">交流问答</h5>
 <!-- 验证 -->
 <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
@@ -424,8 +431,8 @@ onIsOff = false;//触发过程中暂时关闭定时器
 
 
 <section id="changjianwenti" class="mdui-container"><br>
-<div class="mdui-card-primary-title ">常见问题</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="card"><div class="card-body">
+<h5 class="card-title">常见问题</h5>
 <li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
 <p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：MIUI重启解决99%的问题。</p>
@@ -443,18 +450,25 @@ onIsOff = false;//触发过程中暂时关闭定时器
 <p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
 </div></div>
 </section>
+<footer class="container"><br>
+<b class="mdui-text-color-blue-a700"><kbd>声明</kbd>：所有资源均来源于网络搜集，如有侵权请联系我们删除。</b>
+</footer>
 </main>
 
 
 <div id="login-containers">
-<div id="login-container">
-<div class="mdui-container"><br>
-<h1>加密内容</h1>
+<div class="container p-3">
+<div class="card-group">
+<div class="card" style="">
+<div class="card-header">加密内容</div>
+<div class="card-body">
 <p class="mdui-typo">善于发现新的内容(<a class="mdui-text-color-blue-accent">0ub0</a>)</p>
-<form>
-<input type="password" name="password" id="password" required>
-<button id="hide"><input type="submit" id="submit-btn"></button>
+<form class="input-group">
+<input type="password" name="password" id="password" class="form-control" required>
+<button id="hide" class="btn btn-primary">提交</button>
 </form>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -471,7 +485,7 @@ $(document).ready(function(){
 <script>
 // 获取表单元素和按钮元素
 var form = document.querySelector('form');
-var submitBtn = document.getElementById('submit-btn');
+var submitBtn = document.getElementById('hide');
 submitBtn.addEventListener('click', function (event) {
 // 阻止表单默认提交行为
 event.preventDefault();
@@ -486,65 +500,29 @@ if (password === '0ub0') {
 alert('登录成功');
 var element = document.getElementById("ymdui-hidden"); // 获取元素
 element.className = ""; // 切换元素的CSS
-var elements = document.getElementById("login-container"); // 获取元素
+var elements = document.getElementById("login-containers"); // 获取元素
 elements.className = "mdui-invisible"; // 切换元素的CSS
 document.hide;
 return false;
 } else {
 // 登录失败，弹出提示框
 alert('密码错误');
+location.reload(false);
 return false;
 }
 });
 </script>
 <style>
-.login-container {
-background: #ffffff;
-border-radius: 5px;
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-margin: auto;
-margin-top: 100px;
-padding: 30px;
-}
-
-input[type="password"] {
-border: none;
-border-bottom: 1px solid #cccccc;
-font-size: 16px;
-padding: 10px;
+#login-containers {
 width: 100%;
-margin-bottom: 20px;
-box-sizing: border-box;
-}
-#hide,
-input[type="submit"] {
-background: #0099ff;
-border: none;
-color: #ffffff;
-cursor: pointer;
-font-size: 16px;
-padding: 10px;
-width: 100%;
-border-radius: 5px;
-}
-
-input[type="submit"]:hover {
-background: #0088cc;
+height: 100%;
+background-image: url(https://image.coolapk.com/picture/2023/0414/05/1679927_3732ebf2_2822_6806_84@1920x1080.png.m.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: top center;
+background-repeat: no-repeat;
 }
 </style>
-
-
-<!-- 页脚 -->
-<br>
-<footer class="mdui-card mdui-color-white">
-<div class="mdui-container">
-<div class="mdui-card-content mdui-typo">
-<b class="mdui-text-color-blue-a700"><kbd>声明</kbd>：所有资源均来源于网络搜集，如有侵权请联系我们删除。</b>
-</div>
-</div>
-</footer>
-
 </body>
 </html>
-
 
