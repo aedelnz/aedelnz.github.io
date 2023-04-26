@@ -1,16 +1,16 @@
-<!-- 随随便便的开始 -->
-<html lang="zh-CN">
+<html>
 <head>
-<title>魔法禁書</title>
-<meta charset="utf-8"/>
-<meta name="referrer" content="no-referrer"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=11,minimum-scale=1," id="mixia_vpid">
+<meta name="theme-color" content="#0665d0">
+<title>魔法禁书｜Magic Forbidden Book</title>
 <!-- ico -->
 <link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg0" type="image/x-icon"/>
 <!-- css -->
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 <link href="../../start/index.css?v=1.0" rel="stylesheet">
+<link rel="stylesheet" href="./umi.css?v=1.7.4.1681103823832">
 <!-- js -->
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
@@ -36,201 +36,155 @@ $(".notification ").remove();
 }, 2000)
 }
 </script>
-<script>
-</script>
 </head>
-<body>
-<nav class="navbar bg-body-tertiary fixed-top sticky-top border text-bg-light p-1">
-<div class="container-fluid">
-<a class="navbar-brand mdui-typo-headline mdui-text-color-blue-a700" href="#">魔法禁书.</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-<span class="navbar-toggler-icon"></span>
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left">
+<!--###################### 登陆 ######################-->
+<div id="visible">
+<div id="page-container">
+<main id="main-container">
+<div class="v2board-background">
+</div>
+<div class="no-gutters v2board-auth-box">
+<div style="max-width: 450px; width: 100%; margin: auto;">
+<div class="mx-2 mx-sm-0">
+<div class="block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 0.5rem 2rem;">
+<div class="row no-gutters">
+<div class="col-md-12 order-md-1 bg-white">
+<div class="block-content block-content-full px-lg-4 py-md-4 py-lg-4">
+<div class="mb-3 text-center">
+<a class="font-size-h1" href="javascript:void(0);">
+<span class="text-dark">页面加密内容</span>
+</a>
+<p class="font-size-sm text-muted mb-3">善于发现新的内容(<b class="text-danger">0ub0</b>)</p>
+</div>
+<form id="loginForm" action="#" method="get">
+<div class="form-group">
+<input type="password" id="password" class="form-control form-control-alt" placeholder="密码">
+</div>
+<div class="form-group mb-0">
+<button type="submit" id="loginBtn" class="btn btn-block btn-primary font-w400">
+<span>登入</span>
 </button>
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-<div class="offcanvas-header">
-<h5 class="offcanvas-title" id="offcanvasNavbarLabel">列表</h5>
-<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
-<div class="offcanvas-body">
-<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-<ul class="mdui-list">
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
-<li class="mdui-divider"></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#ruanjianxiazai" class="mdui-ripple">软件下载</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#vjiediandinyue" class="mdui-ripple">节点订阅</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#vjiedianfenxiang" class="mdui-ripple">节点分享</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#jiaoliuwenda" class="mdui-ripple">交流问答</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#changjianwenti" class="mdui-ripple">常见问题</a></li>
+</form>
+</div>
+</div>
+</div>
+<div class="text-left bg-gray-lighter p-3 px-4">
+<a class="font-size-sm text-muted" href="javascript:myAlert('括号里的内容可能会有些用处');" title="不一样的颜色">密码提示</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!--###################### 成功 ######################-->
+<div id="invisible">
+<div id="page-container" class="main-content-boxed">
+<div class="mdui-drawer" id="left-drawer">
+<nav>
+<div class="content-side content-side-full">
+<ul class="nav-main">
+<li class="nav-main-heading">高级</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#执行工具">
+<span class="nav-main-link-name">执行工具</span>
+</a>
+</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#定制软件">
+<span class="nav-main-link-name">定制软件</span>
+</a>
+</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#机场订阅">
+<span class="nav-main-link-name">机场订阅</span>
+</a>
+</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#节点分享">
+<span class="nav-main-link-name">节点分享</span>
+</a>
+</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#评论留言">
+<span class="nav-main-link-name">评论留言</span>
+</a>
+</li>
+<li class="nav-main-item">
+<a class="nav-main-link false" href="#常见问题">
+<span class="nav-main-link-name">常见问题</span>
+</a>
+</li>
 </ul>
-</ul>
 </div>
-</div>
-</div>
+<div class="v2board-copyright">V2AirPort v1.0.1</div>
 </nav>
+</div>
+<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+<div class="mdui-toolbar text-white btn-primary">
+<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">apps</i></a>
+<div class="mdui-typo-title">仪表盘</div>
+<div class="mdui-toolbar-spacer"></div>
+<button type="button" class="btn btn-primary mr-1 ant-dropdown-trigger" onclick="clearCookie()">退出</button>
+</div>
+</div>
+<!--###################### 主体 ######################-->
+<main id="main-container">
+<div class="content content-full">
+<!--###################### 公告 ######################-->
+<div class="row mb-3 mb-md-0">
+<div class="col-12 mb-sm-4">
+<a class="block block-rounded bg-image mb-0 v2board-bg-pixels" href="javascript:void(0)" style="background-image: url(//image.coolapk.com/picture/2023/0425/13/2204681_8e7a1642_1527_675_860@1930x1080.jpeg.m.jpg); background-size: cover;">
+<div class="block-content bg-black-50">
+<div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
+<p><span class="badge badge-danger p-2 text-uppercase">公告</span></p>
+</div>
+<p class="font-size-lg text-white mb-1">Hello World!</p>
+<p class="font-w600 text-white-75" id="time">0000-00-00</p>
+<script>
+function updateTime() {
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+var seconds = currentTime.getSeconds();
+var year = currentTime.getFullYear();
+var month = currentTime.getMonth() + 1;
+var day = currentTime.getDate();
+if (hours < 10) {
+hours = '0' + hours;
+}
+if (minutes < 10) {
+minutes = '0' + minutes;
+}
+if (seconds < 10) {
+seconds = '0' + seconds;
+}
+var timeText = year +'-'+ month +'-'+ day +' '+ hours + ':' + minutes + ':' + seconds;
+var timeElement = document.getElementById('time');
+timeElement.innerHTML = timeText;
+}
+setInterval(updateTime, 1000);
+</script>
+</div>
+</a>
+</div>
+</div>
+<!--###################### 副体 ######################-->
 
-
-
-
-<main class="mdui-hidden" id="ymdui-hidden">
-<!--软件下载列表 -->
-<section id="ruanjianxiazai" class="mdui-container"><br>
-<div class="card"><div class="card-body">
-<h5 class="card-title">软件下载</h5>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">Windows</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/2dust/v2rayN/releases">v2rayN</a> 
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/shadowsocksr-rm/shadowsocksr-csharp/releases">ShadowsocksR</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/shadowsocks/shadowsocks-windows/releases">Shadowsocks</a> 
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases">clash 汉化版</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/2dust/clashN/releases">clashN</a> 
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/netchx/netch/releases">netch</a> 
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">Android</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/trojan-gfw/igniter/releases">Trojan</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/SagerNet/SagerNet/releases">SagerNet</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/2dust/v2flyNG/releases">v2flyNG</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/2dust/v2rayNG/releases">v2rayNG</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/HMBSbige/ShadowsocksR-Android/releases">ShadowsocksR</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Kr328/ClashForAndroid/releases">ClashForAndroid</a>
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">IOS 客户端 (全区可下载,包括中区)</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/23LA2tmX">Loon (支持Surge 3的 RULESET 规则)</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/cn/app/outline-app/id1356177741">Outline (支持SS)</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/IdFRwmNy">Kitsunebi (支持SS/Vmess)</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/NkF46PRd">Potatso Lite</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/3aArQFMQ">A.BIG.T IV</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://testflight.apple.com/join/742YC03J">NetShuttle</a>
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">iOS 客户端 (仅国区下架,其他区可下载)</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/quantumult/id1252015438">Quantumult</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/potatso-lite/id1239860606">Potatso Lite</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app-bundle/quantumult-x-upgrade/id1482985563">Quantumult X(upgrade)</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/loon/id1373567447">Loon</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/us/app/pharos-pro/id1456610173">Pharos Pro</a>
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">Mac</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/yanue/V2rayU/releases">V2rayU</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/yichengchen/clashX/releases">ClashX</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/WhoJave/clashX/releases">ClashXR</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public">ClashX Pro</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/mellow-io/mellow/releases">Mellow</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/shadowsocks/ShadowsocksX-NG/releases">ShadowsocksX-NG</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/shadowsocks/shadowsocks-iOS/releases">ShadowsocksX</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://apps.apple.com/cn/app/outline-secure-internet-access/id1356178125">Outline</a>
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">Linux</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Dreamacro/clash/releases">Clash</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://github.com/mellow-io/mellow/releases">Mellow</a>
-</strong></div>
-</div>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-card-primary-subtitle">其他</div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://oneclick.earth/#/">OneClick</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-light-blue-a700 mdui-typo-subheading mdui-text-truncate" href="https://nssurge.com/">Surge</a>
-</strong></div>
-</div>
-<br>
-
-<div class="mdui-card-primary-subtitle mdui-text-color-teal">Base64编码或解码</div>
+<div id="执行工具" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">执行工具</h3></div>
+<div class="block-content p-1 text-start">
 <script type="text/javascript" src="./Base64.js?v=1.0"></script>
 <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-typo mdui-grid-list">
 <form id="form1" name="form1" method="post" action>
 <div class="mdui-col">
-<label class="mdui-checkbox"></label><br>
+<div class="form-check disabled">
+<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+<label class="form-check-label">Base64编码或解码</label>
+</div>
 编码或解码的字符：
 <div class="mdui-textfield">
 <textarea class="mdui-textfield-input" name="src" id="src" cols="80" rows="6"></textarea>
@@ -239,7 +193,10 @@ $(".notification ").remove();
 <input onclick="doDecode();" type="button" value="解码" name="decode" class="mdui-btn">
 </div>
 <div class="mdui-col">
-<label class="mdui-checkbox"><input type="checkbox" checked value="hex" name="opt" id="opt"><i class="mdui-checkbox-icon"></i>16进制显示</label><br>
+<div class="form-check disabled">
+<input class="form-check-input" type="checkbox" checked value="hex" name="opt" id="opt">
+<label class="form-check-label"></i>16进制显示</label>
+</div>
 Base64编码或解码结果：
 <div class="mdui-textfield">
 <textarea class="mdui-textfield-input" name="dest" id="dest" cols="80" rows="6" ></textarea>
@@ -247,55 +204,317 @@ Base64编码或解码结果：
 </div>
 </form>
 </div>
-<br>
+<div class="p-2 mdui-text-color-blue-grey-700">
+网速测试：<a class="badge text-bg-secondary" href=https://speed.cloudflare.com/ >Speed Test</a>
+<a class="badge text-bg-secondary" href=https://fast.com/ >Fast</a>
+<a class="badge text-bg-secondary" href=https://www.speedtest.net/zh-Hans >Speedtest</a><br>
+IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.moe</a>
+<a class="badge text-bg-secondary" href=https://www.ipaddress.com/ >IPAddress.com</a>
+<a class="badge text-bg-secondary" href=https://www.ipaddress.my/ >IPAddress.my</a>
+</div>
+
+
+<div class="row">
+<div class="col-md-6 col-xl-4">
+<a class="block block-link-pop block-rounded  text-center" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');;">
+<div class="block-header">
+<h3 class="block-title">在这里求一杯奶茶</h3>
+</div>
+<div class="block-content bg-body-light"  style="background-image: url(https://pic1.afdiancdn.com/user/cc80b252e55311ebaa5352540025c377/common/b79a87e4228b897e6ebde3e56fcf58c6_w3556_h2000_s6221.jpg?imageView2/1/w/1500/h/750); background-size: cover;">
+<div class="py-2">
+<p class="h1 mb-2">爱发电</p>
+<p class="h6 text-muted">．</p>
+</div>
+</div>
+<div class="block-content">
+<div class="py-1">
+<ul class="v2board-plan-features">
+<div class="alert alert-success" role="alert">
+<b>Na Sheng 正在创作 中……</b>
+</div>
+<li></li>
+</ul>
+</div>
+</div>
+<div class="block-content block-content-full bg-body-light">
+<span class="btn mdui-color-deep-purple px-4">
+<i class="mdui-icon material-icons">monetization_on</i> 为TA发电</span>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-xl-4">
+<a class="block block-link-pop block-rounded  text-center" href="javascript:void(0);">
+<div class="block-header">
+<h3 class="block-title">SVIP | 高级会员</h3>
+</div>
+<div class="block-content bg-body-light">
+<div class="py-2">
+<p class="h1 mb-2">¥ 100.00</p>
+<p class="h6 text-muted">月付</p>
+</div>
+</div>
+<div class="block-content">
+<div class="py-1">
+<ul class="v2board-plan-features">
+<div class="alert alert-success" role="alert">
+<b>天劫余生</b>
+</div>
+<li></li>
+</ul>
+</div>
+</div>
+<div class="block-content block-content-full bg-body-light">
+<span class="btn mdui-color-orange-900 px-4">
+<i class="mdui-icon material-icons">battery_charging_full</i>充电</span>
+</div>
+</a>
+</div>
+</div>
+
+
+</div>
+</div></div></div>
+
+<div id="定制软件" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">定制软件</h3></div>
+<div class="block-content p-1 text-start"><div class="row">
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">Android</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://github.com/MatsuriDayo/Matsuri/releases">Matsuri</a></li>
+<li><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases">NekoBox</a></li>
+<li><a href="https://github.com/trojan-gfw/igniter/releases">Trojan</a></li>
+<li><a href="https://github.com/2dust/v2flyNG/releases">v2flyNG</a></li>
+<li><a href="https://github.com/2dust/v2rayNG/releases">v2rayNG</a></li>
+<li><a href="https://github.com/HMBSbige/ShadowsocksR-Android/releases">ShadowsocksR</a></li>
+<li><a href="https://github.com/Kr328/ClashForAndroid/releases">ClashForAndroid</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">Windows</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://github.com/MatsuriDayo/nekoray/releases">NekoRay</a></li>
+<li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
+<li><a href="https://github.com/2dust/v2rayN/releases">v2rayN</a></li>
+<li><a href="https://github.com/shadowsocksr-rm/shadowsocksr-csharp/releases">ShadowsocksR</a></li>
+<li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases">Shadowsocks</a></li>
+<li><a href="https://github.com/ender-zhao/Clash-for-Windows_Chinese/releases">clash 汉化版</a></li>
+<li><a href="https://github.com/2dust/clashN/releases">clashN</a></li>
+<li><a href="https://github.com/netchx/netch/releases">netch</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">iPhone</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://testflight.apple.com/join/23LA2tmX">Loon (支持Surge 3的 RULESET 规则)</a></li>
+<li><a href="https://apps.apple.com/cn/app/outline-app/id1356177741">Outline (支持SS)</a></li>
+<li><a href="https://testflight.apple.com/join/IdFRwmNy">Kitsunebi (支持SS/Vmess)</a></li>
+<li><a href="https://testflight.apple.com/join/NkF46PRd">Potatso Lite</a></li>
+<li><a href="https://testflight.apple.com/join/3aArQFMQ">A.BIG.T IV</a></li>
+<li><a href="https://testflight.apple.com/join/742YC03J">NetShuttle</a></li>
+<li><a href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a></li>
+<li><a href="https://apps.apple.com/us/app/quantumult/id1252015438">Quantumult</a></li>
+<li><a href="https://apps.apple.com/us/app/potatso-lite/id1239860606">Potatso Lite</a></li>
+<li><a href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X</a></li>
+<li><a href="https://apps.apple.com/us/app-bundle/quantumult-x-upgrade/id1482985563">Quantumult X(upgrade)</a></li>
+<li><a href="https://apps.apple.com/us/app/loon/id1373567447">Loon</a></li>
+<li><a href="https://apps.apple.com/us/app/pharos-pro/id1456610173">Pharos Pro</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">Mac</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
+<li><a href="https://github.com/yanue/V2rayU/releases">V2rayU</a></li>
+<li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash</a></li>
+<li><a href="https://github.com/yichengchen/clashX/releases">ClashX</a></li>
+<li><a href="https://github.com/WhoJave/clashX/releases">ClashXR</a></li>
+<li><a href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public">ClashX Pro</a></li>
+<li><a href="https://github.com/mellow-io/mellow/releases">Mellow</a></li>
+<li><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases">ShadowsocksX-NG</a></li>
+<li><a href="https://github.com/shadowsocks/shadowsocks-iOS/releases">ShadowsocksX</a></li>
+<li><a href="https://apps.apple.com/cn/app/outline-secure-internet-access/id1356178125">Outline</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">Linux</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
+<li><a href="https://github.com/Dreamacro/clash/releases">Clash</a></li>
+<li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash</a></li>
+<li><a href="https://github.com/mellow-io/mellow/releases">Mellow</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-2">
+<div class="card mdui-hoverable">
+<div class="text-center py-3 mdui-color-amber">
+<p class="h1 mb-2 text-white">其他</p>
+</div>
+<div class="bg-primary-subtle text-emphasis-primary">
+<ul class="v2board-plan-features">
+<li><a href="https://oneclick.earth/#/">OneClick</a></li>
+<li><a href="https://nssurge.com/">Surge</a></li>
+</ul>
+</div>
+</div>
+</div>
 
 </div></div>
-</section>
+</div></div></div>
 
-
-<section id="vjiediandinyue" class="mdui-container"><br>
-<div class="card"><div class="card-body">
-<h5 class="card-title">节点订阅</h5>
-<ins><a href="./Node/node">https://jixiejidiguan.top/A2zml/v2/Node/node</a></ins> 更新日期：2022.08.01
-可用于V2ray相关等工具<br>
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-typo mdui-grid-list">
-<div class="mdui-typo-subheading"><b>第三方机场</b></div>
-<div class="mdui-text-color-cyan">
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-blue-grey-900 mdui-typo-subheading mdui-text-truncate" href="https://pmsub.me/">Paimon Node</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-blue-grey-900 mdui-typo-subheading mdui-text-truncate" href="https://lncn.org/">免费节点 - Lncn.org</a>
-</strong></div>
-<div class="mdui-col"><strong style="border-radius: 6px;" class="mdui-p-a-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-valign">
-<a class="mdui-center mdui-text-color-blue-grey-900 mdui-typo-subheading mdui-text-truncate" href="https://free-ss.site/">免费上网账号</a>
-</strong></div>
+<div id="机场订阅" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">机场订阅</h3></div>
+<div class="block-content p-2 text-start">
+<ul class="v2board-plan-features">
+<li><a class="text-decoration-none" href="./Node/node">./Node/node</a> 更新日期：2022.08.01 以停更</li>
+<div class="alert alert-success" role="alert">
+<b>第三方机场</b>
 </div>
+<li><a class="text-decoration-none" href="https://pmsub.me/">Paimon Node</a></li>
+<li><a class="text-decoration-none" href="https://lncn.org/">免费节点 - Lncn.org</a></li>
+<li><a class="text-decoration-none" href="https://free-ss.site/">免费上网账号</a></li>
+<li>以上三个为免费</li>
+<div class="alert alert-success" role="alert">
+<b>广告列表(随机排序)</b>
 </div>
-<br>
-<div class="mdui-text-color-blue-grey-700">
-网速测试：<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://speed.cloudflare.com/ >Speed Test</a>
-<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://fast.com/ >Fast</a>
-<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://www.speedtest.net/zh-Hans >Speedtest</a><br>
-IP查询：<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://ip.skk.moe/ >ip.skk.moe</a>
-<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://www.ipaddress.com/ >IPAddress.com</a>
-<a class="mdui-p-x-1 mdui-grid-tile mdui-card mdui-text-truncate mdui-text-color-light-blue" href=https://www.ipaddress.my/ >IPAddress.my</a>
+</ul>
+<table class="table mdui-table mdui-table-hoverable">
+<tbody class="table-group-divider" id="adList"></tbody>
+</table>
 </div>
-</div></div>
-</section>
+<script>
+var adList = [
+{
+    "mon": 50, "url": "aHR0cHM6Ly9haXJwb3J0LmxpYW5waS54eXovIy9yZWdpc3Rlcj9jb2RlPTFlNkVZMGxl",
+    "desp": "[一日机场] 一个节点全靠运气 平均活一天的机场（瞎说的"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly91dWNsbS5uZXQvIy9yZWdpc3Rlcj9jb2RlPVVpa3l0Z2tZ",
+    "desp": "[冲浪猫] 高速中转机场，覆盖30+国家，土耳其-阿根廷-菲律宾等小众国家。晚高峰8K秒开，ChatGPT/流媒体全解锁。有不限时套餐。"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly9jaHl2cG4uY3lvdS9hdXRoL3JlZ2lzdGVyP2NvZGU9YVdmWg==",
+    "desp": "[Cherry VPN] 超高带宽，4K视频稳定秒开。使用公网隧道，IEPL内网转发，隐私保护，稳定高速，看视频无痕不卡顿。最低至0.4x 元/日，更有20%返现。"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly93d3cuZG1pdC5pby9hZmYucGhwP2FmZj01NjI0",
+    "desp": "[DMIT] 洛杉矶/香港/东京 CN2GIA/CMI 优化线路 1Gbps 大带宽不限流量 KVM 高端 VPS 云服务器 月付 6.9 美元"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly9wYW5lbC5kZzEudG9wLyMvcmVnaXN0ZXI/Y29kZT1MSGJpa3RkTA==",
+    "desp": "[狗狗加速] Hysteria 机场 集群负载均衡 不限速，无审计 解锁流媒体及ChatGPT 不限设备数，全平台通用"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly9yZWltdS53b3JrL2F1dGgvcmVnaXN0ZXI/Y29kZT1lRnky",
+    "desp": "[灵梦空间] 灵梦机场 专线节点加速 支持流媒体解锁 支持ChatGPT 晚高峰4k秒开 大多为x0.5倍节点 这一切，仅9.9元"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly93ZWwubG5hc3BpcmluZy5jb20vIy9yZWdpc3Rlcj9jb2RlPTJpSnh4NUl2",
+    "desp": "[Welink] 我们遵行联合国宪章及世界人权宣言，普遍保护基本人权。我们致力于构建自由、连通、去中心化的网络，因而我们不在节点当地 ISP 与 IDC 的基础上另设网络审计。"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly9hbG4ubG5hc3BpcmluZy5jb20vIy9yZWdpc3Rlcj9jb2RlPTNOSTByRG9B",
+    "desp": "[Alink] 我们拥抱去中心化的理念与架构，并允许用户透过我们的服务积极参与所有链上生态活动、使用 Bittorrent/eDonkey/IPFS 等去中心化服务及协议。"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly93d3cueWl5dWFuamljaGFuZy5jb20vIy9yZWdpc3Rlcj9jb2RlPVhsN0N3d1hG",
+    "desp": "[一元机场] 每月不到一元钱，稳定运营的老牌机场，全网性价比最高，线路多，速度快，延迟低，推广佣金60%"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly94bi0tNGdxNjJmNTJnZHNzLmNvbS8jL3JlZ2lzdGVyP2NvZGU9SG92dVJRRHA=",
+    "desp": "[一元机场] 一元机场是个负责任的机场，一定不会跑路"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly94bi0tc2pxMDJnZ3lmZG10LmNvbS8jL3JlZ2lzdGVyP2NvZGU9M1I4RTcwVDg=",
+    "desp": "[九分机场] 没有套路 不i限速 不限设备 可月付 可按量 返利可以提现！"
+},
+{
+    "mon": 50, "url": "aHR0cHM6Ly93d3cuamlzdXl1bi5tZS8jL3JlZ2lzdGVyP2NvZGU9aEYzVGlyeHQ=",
+    "desp": "[极速云机场] 高流量🟢不限速，流量🔥1元100G，覆盖60%全球节点+解锁流媒+ChatGPT 油管4K⚡️无压力，免费试用先上车后付钱"
+},
+];
 
+function loadMy(infoObj, addTo) {
+// for (item of infoObj) {
+//     item.mon = Random(0, item.mon);
+// }
+// var sortObj = infoObj.sort(compare("mon"));
+var sortObj = infoObj.sort(function () { return Math.random() - 0.5; })
+var out_li = '';
+for (item of sortObj) {
+out_li+='<tr><td class="ant-table-column-title"><p>'+item.desp+'</p><a class="text-danger" onClick="jsfun(\''+item.url+'\')">新页面打开</a>&nbsp;<a class="text-decoration-none" onClick="jsfunb(\''+item.url+'\');return false;">本页面打开</a></td></tr>';
+}
+document.getElementById(addTo).innerHTML = out_li;
+}
+function jsfun(a) {
+var url = window.atob(a);
+window.open(url, '_blank');
+}
+function jsfunb(a) {
+var url = window.atob(a);
+window.location.href = url;
+}
+function Random(min, max) {
+return Math.round(Math.random() * (max - min)) + min;
+}
+function compare(property) {
+return function (obj1, obj2) {
+    var value1 = obj1[property];
+    var value2 = obj2[property];
+    return value2 - value1;
+}
+}
+window.onload = loadMy(adList, "adList");
+</script>
+</div></div></div>
 
-<section id="vjiedianfenxiang" class="mdui-container"><br>
-<div class="card"><div class="card-body">
-<h5 class="card-title">节点分享</h5>
+<div id="节点分享" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">节点分享</h3></div>
+<div class="block-content p-2 text-start">
 <u>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</u><br>
-<p class="mdui-typo-caption">
+<div class="alert alert-warning mb-1">
 <b>套CF加速</b><br>
-在线 <a href="https://ai.exacg.cc/cf/ip.php">cloudflare 优选 ip</a> 每日自动更新<br>
-优选ip工具：<a href="https://github.com/XIU2/CloudflareSpeedTest">点击进入</a><br>
-cf的ip段：<a href="https://github.com/ip-scanner/cloudflare">点击进入</a><br>
-</p>
+优选ip工具：<a class="badge text-bg-primary" href="https://github.com/XIU2/CloudflareSpeedTest">点击进入</a><br>
+cf的ip段：<a class="badge text-bg-secondary" href="https://github.com/ip-scanner/cloudflare">点击进入</a><br>
+</div>
 <div id="v2"></div>
+
 <script>
 $(function(){    
 $.ajax({    
@@ -307,26 +526,22 @@ url:"../../start/json/v2.json",
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str="";    
+var str='<div class="row row-cols-1 row-cols-md-2 g-4">';    
 $.each(data,function(i,n){    
-str+="<pre><strong>"+n.title+"</strong><br><small>"+n.content+"</small></pre>";
+str+='<div class="col"><div class="card"><div class="card-body"><h5 class="card-title">'+n.title+'</h5><p class="card-text">'+n.content+'</p></div></div></div>';
 });    
-str+="";
+str+='</div>';
 $("#v2").append(str);
 }    
 });    
 });   
 </script>
-<style>
-.dy {color: #EC407A;}
-</style>
-</div></div>
-</section>
+</div>
+</div></div></div>
 
-
-<section id="jiaoliuwenda" class="mdui-container"><br>
-<div class="card"><div class="card-body">
-<h5 class="card-title">交流问答</h5>
+<div id="评论留言" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">评论留言</h3></div>
+<div class="block-content p-2 text-start">
 <!-- 验证 -->
 <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
@@ -337,6 +552,7 @@ $("#v2").append(str);
 <!-- or Default value -->
 <script src="//unpkg.com/valine"></script>
 <div id="vcomments"></div>
+</div>
 <script>
 new Valine({
 el: '#vcomments',
@@ -426,103 +642,109 @@ onIsOff = false;//触发过程中暂时关闭定时器
 }
 },1000);
 </script>
-</div></div>
-</section>
+</div></div></div>
 
+<div id="常见问题" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
+<div class="block-header block-header-default"><h3 class="block-title">常见问题</h3></div>
+<div class="block-content p-0"><div class="justify-content-md-between align-items-md-center"><div class="mb-3">
+<div class="v2board-shortcuts-item">
+<div>MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</div>
+<div class="description">网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。<br>MIUI重启解决99%的问题。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>为什么连不上？</div>
+<div class="description">免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>速度太慢怎么办？</div>
+<div class="description">免费资源无法保证速度，同上。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>不会用怎么办？</div>
+<div class="description">别人都会，就你不会。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>看不懂怎么办？</div>
+<div class="description">那就别看。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>找不到怎么办？</div>
+<div class="description">去看一下眼科。</div>
+</div>
+<div class="v2board-shortcuts-item">
+<div>太麻烦了怎么办？</div>
+<div class="description">那就别搞。</div>
+</div>
+</div></div></div>
+</div></div></div>
 
-<section id="changjianwenti" class="mdui-container"><br>
-<div class="card"><div class="card-body">
-<h5 class="card-title">常见问题</h5>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</strong></li>
-<p>网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。</p>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：MIUI重启解决99%的问题。</p>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">为什么连不上？</strong></li>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</p>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">速度太慢怎么办？</strong></li>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：免费资源无法保证速度，同上。</p>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">不会用怎么办？</strong></li>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：别人都会，就你不会。</p>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">看不懂怎么办？</strong></li>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别看。</p>
-<li><strong class="mdui-text-color-red mdui-typo-body-2">找不到怎么办？</strong></li>
-<code class="mdui-color-grey-400">答</code></strong>：去看一下眼科。
-<li><strong class="mdui-text-color-red mdui-typo-body-2">太麻烦了吧。</strong></li>
-<p><strong><code class="mdui-color-grey-400">答</code></strong>：那就别搞。</p>
-</div></div>
-</section>
-<footer class="container"><br>
-<b class="mdui-text-color-blue-a700"><kbd>声明</kbd>：所有资源均来源于网络搜集，如有侵权请联系我们删除。</b>
-</footer>
+</div>
 </main>
-
-
-<div id="login-containers">
-<div class="container p-3">
-<div class="card-group">
-<div class="card" style="">
-<div class="card-header">加密内容</div>
-<div class="card-body">
-<p class="mdui-typo">善于发现新的内容(<a class="mdui-text-color-blue-accent">0ub0</a>)</p>
-<form class="input-group">
-<input type="password" name="password" id="password" class="form-control" required>
-<button id="hide" class="btn btn-primary">提交</button>
-</form>
 </div>
 </div>
-</div>
-</div>
-</div>
+<!--###################### 计算 ######################-->
 <script>
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $("#login-containers").hide();
-  });
-  $("#show").click(function(){
-    $("#login-containers").show();
-  });
-});
-</script>
-<script>
-// 获取表单元素和按钮元素
-var form = document.querySelector('form');
-var submitBtn = document.getElementById('hide');
-submitBtn.addEventListener('click', function (event) {
-// 阻止表单默认提交行为
-event.preventDefault();
-// 获取用户输入的用户名和密码
-var password = document.getElementById('password').value;
-if (password === '') {
-alert('密码不能为空');
-return false;
+function myAlert(message) {
+  // 创建弹窗容器
+  var container = document.createElement('div');
+  container.className = 'fixed-top p-2 bg-body-tertiary rounded';
+  // 创建弹窗主体
+  var main = document.createElement('div');
+  main.className = 'alert alert-warning alert-dismissible fade show';
+  main.innerText = message;
+  // 创建关闭按钮
+  var close = document.createElement('span');
+  close.className = "btn-close";
+  close.innerText = '';
+  close.onclick = setTimeout(function() {
+    document.body.removeChild(container);
+  }, 500);
+  // 组装弹窗内容
+  main.appendChild(close);
+  container.appendChild(main);
+  // 将弹窗添加到页面
+  document.body.appendChild(container);
 }
-if (password === '0ub0') {
-// 登录成功，跳转到欢迎页面
-alert('登录成功');
-var element = document.getElementById("ymdui-hidden"); // 获取元素
-element.className = ""; // 切换元素的CSS
-var elements = document.getElementById("login-containers"); // 获取元素
-elements.className = "mdui-invisible"; // 切换元素的CSS
-document.hide;
-return false;
+const cookie = document.cookie;
+const substr = "password=0ub0";
+if (cookie.indexOf(substr) !== -1) {
+var element = document.getElementById("visible");
+element.className = "d-none";
+myAlert("已自动登录成功");
 } else {
-// 登录失败，弹出提示框
-alert('密码错误');
-location.reload(false);
-return false;
+console.log("自动登录失败");
+var elements = document.getElementById("invisible");
+elements.className = "d-none";
+myAlert("自动登录失败");
+}
+const loginForm = document.querySelector("#loginForm");
+const loginBtn = document.querySelector("#loginBtn");
+loginBtn.addEventListener("click", function (event) {
+event.preventDefault();
+const password = loginForm.elements["password"].value;
+if (!password) {
+myAlert("请填写密码！");
+return;
+} else {
+if (password=="0ub0") {
+myAlert("登录成功！");
+document.cookie = "password="+password+"; path=/";
+console.log("Cookie已写入");
+location.reload();
+return;
+} else {
+myAlert("密码错误！");
+return;
+}
 }
 });
-</script>
-<style>
-#login-containers {
-width: 100%;
-height: 100%;
-background-image: url(https://image.coolapk.com/picture/2023/0414/05/1679927_3732ebf2_2822_6806_84@1920x1080.png.m.jpg);
-background-size: cover;
-background-attachment: fixed;
-background-position: top center;
-background-repeat: no-repeat;
+function clearCookie() {
+document.cookie.split(";").forEach(function(cookie) {
+var name = cookie.split("=")[0].trim();
+document.cookie = name + "=; path=/;";
+});
+location.reload();
 }
-</style>
+</script>
 </body>
 </html>
-
