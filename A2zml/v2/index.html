@@ -5,17 +5,17 @@
 <meta name="theme-color" content="#0665d0">
 <title>魔法禁书｜Magic Forbidden Book</title>
 <!-- ico -->
-<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg0" type="image/x-icon"/>
+<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg?v=1.0.0.1000000" type="image/x-icon"/>
 <!-- css -->
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
-<link href="../../start/index.css?v=1.0" rel="stylesheet">
-<link rel="stylesheet" href="./umi.css?v=1.7.4.1681103823832">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css?v=1.0.0.1000000" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css?v=1.0.0.1000000" rel="stylesheet">
+<link href="../../start/index.css?v=1.0.0.1000000" rel="stylesheet">
+<link href="./Atros.css?v=1.0.0.1000000" rel="stylesheet">
 <!-- js -->
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
-<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
-<script src="../../start/origin.js?v=1.0"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js?v=1.0.0.1000000"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js?v=1.0.0.1000000"></script>
+<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0.0.1000000"></script>
+<script src="../../start/origin.js?v=1.0.0.1000000"></script>
 <script type="text/javascript">
 function onCopyThis(e) {
 var text = $(e).data("copy");
@@ -89,14 +89,27 @@ $(".notification ").remove();
 <ul class="nav-main">
 <li class="nav-main-heading">高级</li>
 <li class="nav-main-item">
-<a class="nav-main-link false" href="#执行工具">
-<span class="nav-main-link-name">执行工具</span>
-</a>
+<a class="nav-main-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="nav-main-link-name">执行工具</span></a>
+<ul class="dropdown-menu">
+<li class="nav-main-item"><a class="nav-main-link false" href="#执行工具"><span class="nav-main-link-name">执行工具</span></a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="#爱发电">爱发电</a></li>
+<li><a class="dropdown-item" href="#ACL4SSR">ACL4SSR</a></li>
+<li><a class="dropdown-item" href="#anti-AD">anti-AD</a></li>
+</ul>
 </li>
 <li class="nav-main-item">
-<a class="nav-main-link false" href="#定制软件">
-<span class="nav-main-link-name">定制软件</span>
-</a>
+<a class="nav-main-link false" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="nav-main-link-name">定制软件</span></a>
+<ul class="dropdown-menu">
+<li class="nav-main-item"><a class="nav-main-link false" href="#定制软件"><span class="nav-main-link-name">定制软件</span></a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a class="dropdown-item" href="#Android">Android</a></li>
+<li><a class="dropdown-item" href="#Windows">Windows</a></li>
+<li><a class="dropdown-item" href="#iPhone">iPhone</a></li>
+<li><a class="dropdown-item" href="#Mac">Mac</a></li>
+<li><a class="dropdown-item" href="#Linux">Linux</a></li>
+<li><a class="dropdown-item" href="#其他">其他</a></li>
+</ul>
 </li>
 <li class="nav-main-item">
 <a class="nav-main-link false" href="#机场订阅">
@@ -176,7 +189,7 @@ setInterval(updateTime, 1000);
 <div id="执行工具" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
 <div class="block-header block-header-default"><h3 class="block-title">执行工具</h3></div>
 <div class="block-content p-1 text-start">
-<script type="text/javascript" src="./Base64.js?v=1.0"></script>
+<script type="text/javascript" src="./Base64.js?v=1.0.0.1000000"></script>
 <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-typo mdui-grid-list">
 <form id="form1" name="form1" method="post" action>
 <div class="mdui-col">
@@ -212,8 +225,8 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 <a class="badge text-bg-secondary" href=https://www.ipaddress.my/ >IPAddress.my</a>
 </div>
 <div class="row">
-<div class="col-md-6 col-xl-4">
-<a class="block block-link-pop block-rounded  text-center" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');;">
+<div id="爱发电" class="col-md-6 mb-2">
+<a class="card block block-link-pop block-rounded  text-center" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');;">
 <div class="block-header">
 <h3 class="block-title">在这里求一杯奶茶</h3>
 </div>
@@ -239,33 +252,99 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </a>
 </div>
-<div class="col-md-6 col-xl-4">
-<a class="block block-link-pop block-rounded  text-center" href="javascript:void(0);">
-<div class="block-header">
-<h3 class="block-title">SVIP | 高级会员</h3>
-</div>
-<div class="block-content bg-body-light">
+<div id="ACL4SSR" class="col-md-6 mb-2">
+<div class="card block block-link-pop block-rounded">
+<div class="block-content bg-body-light text-center">
 <div class="py-2">
-<p class="h1 mb-2">¥ 100.00</p>
-<p class="h6 text-muted">月付</p>
+<p class="h1 mb-2">ACL4SSR</p>
+<p class="h6 text-muted">订阅转换</p>
 </div>
 </div>
 <div class="block-content">
 <div class="py-1">
 <ul class="v2board-plan-features">
-<div class="alert alert-success" role="alert">
-<b>天劫余生</b>
-</div>
-<li></li>
+<li><a href="https://acl4ssr-sub.github.io/">ACL4SSR 在线订阅转换</a></li>
+<li><a href="https://sub.xeton.dev/">Subscription Converter</a></li>
+<li><a href="https://sub.tsutsu.one/">つつの订阅转换 · 鲸歌</a></li>
 </ul>
 </div>
 </div>
-<div class="block-content block-content-full bg-body-light">
-<span class="btn mdui-color-orange-900 px-4">
-<i class="mdui-icon material-icons">battery_charging_full</i>充电</span>
 </div>
-</a>
 </div>
+<div id="anti-AD" class="col-md-12 mb-2">
+<div class="card block block-link-pop block-rounded">
+<div class="block-content bg-body-light text-center">
+<div class="py-2">
+<p class="h1 mb-2">anti-AD</p>
+<p class="h6 text-muted">致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。</p>
+</div>
+</div>
+<div class="block-content row">
+<div class="col-sm-6 mb-1">
+<h1>anti-AD Filters</h1>
+<p>anti-AD致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。现已支持AdGuardHome，dnsmasq， Surge，Pi-Hole等优秀的网络组件。</p>
+<p>使用anti-AD能够屏蔽广告域名，能屏蔽电视盒子广告，屏蔽app内置广告，同时屏蔽了一些日志收集、大数据统计等涉及个人隐私信息的站点，能够保护个人隐私不被偷偷上传。</p>
+<p>本工具是通过域名解析层（DNS服务）来屏蔽广告和保护隐私的，其将各大著名的hosts，ad filter lists，adblock list等的列表进行合并去重，再进行一系列的抽象化，例如主动剔除失效域名、easylist优化模糊匹配、增强的黑白名单机制等措施，最终生成期望的高命中率列表。</p>
+<p>不同格式的<strong>过滤列表文件</strong>会定期自动更新，其分别用于不同服务中的广告过滤规则:</p>
+<ul>
+<li><a href="https://anti-ad.net/anti-ad-for-dnsmasq.conf">https://anti-ad.net/anti-ad-for-dnsmasq.conf</a> </li>
+<li><a href="https://anti-ad.net/easylist.txt">https://anti-ad.net/easylist.txt</a></li>
+<li><a href="https://anti-ad.net/domains.txt">https://anti-ad.net/domains.txt</a> </li>
+<li><a href="https://anti-ad.net/surge.txt">https://anti-ad.net/surge.txt</a> </li>
+<li><a href="https://anti-ad.net/surge2.txt">https://anti-ad.net/surge2.txt</a>（据说更节省内存） </li>
+<li><a href="https://anti-ad.net/anti-ad-for-smartdns.conf">https://anti-ad.net/anti-ad-for-smartdns.conf</a> </li>
+<li><a href="https://anti-ad.net/adguard.txt">https://anti-ad.net/adguard.txt</a>(adguard专用规则)</li>
+</ul>
+</div>
+<div class="col-sm-6 mb-1">
+<div class="table-responsive">
+<table class="table table-borderless">
+<tbody class="table-light">
+<tr>
+<th>文件名</th>
+<th>操作参考</th>
+<th>适用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anti-ad-for-dnsmasq.conf</code></td>
+<td>1. 下载过滤列表文件后, 保存到你的dnsmasq配置的正确目录下；2. 重启dnsmasq服务；3. 已经生效了，enjoy it。</td>
+<td>dnsmasq及其衍生版本</td>
+</tr>
+<tr>
+<td><code>easylist.txt</code></td>
+<td>1. 进入AdGuardHome过滤器页面；<br />2. 选择添加过滤器输入名称 anti-AD，url地址填raw链接或者jsDelivr；<br>3. 点击确认后即生效</td>
+<td>AdGuardHome</td>
+</tr>
+<tr>
+<td><code>adguard.txt</code></td>
+<td>第一步下载adguard，第二步加载规则，第三步保存</td>
+<td>adguard专用，解决easylist误杀的问题</td>
+</tr>
+<tr>
+<td><code>domains.txt</code></td>
+<td>以Pi-Hole为例<br>1. 进入pi-hole设置界面<br>2. 添加本domains列表链接到pi-hole的过滤器列表中<br>3. 点击save &amp; update<br>4. 更新成功后即可生效</td>
+<td>Pi-Hole及其他。</td>
+</tr>
+<tr>
+<td><code>surge.txt</code></td>
+<td>直接订阅本条链接，保存后生效</td>
+<td>Surge或兼容服务。</td>
+</tr>
+<tr>
+<td><code>anti-ad-for-smartdns.conf</code></td>
+<td>下载链接后保存到合适位置</td>
+<td>SmartDNS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </div></div></div>
@@ -273,7 +352,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 <div id="定制软件" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
 <div class="block-header block-header-default"><h3 class="block-title">定制软件</h3></div>
 <div class="block-content p-1 text-start"><div class="row">
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="Android" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">Android</p>
@@ -292,7 +371,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="Windows" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">Windows</p>
@@ -311,7 +390,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="iPhone" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">iPhone</p>
@@ -335,7 +414,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="Mac" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">Mac</p>
@@ -356,7 +435,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="Linux" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">Linux</p>
@@ -371,7 +450,7 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-<div class="col-md-6 col-xl-4 mb-2">
+<div id="其他" class="col-md-6 col-xl-4 mb-2">
 <div class="card mdui-hoverable">
 <div class="text-center py-3 bg-body-light">
 <p class="h1 mb-2 mdui-text-color-amber">其他</p>
@@ -531,14 +610,14 @@ $("#v2").append(str);
 <div class="block-header block-header-default"><h3 class="block-title">评论留言</h3></div>
 <div class="block-content p-2 text-start">
 <!-- 验证 -->
-<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js?v=1.0.0.1000000"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
 <!-- do not set the version number -->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js?v=1.0.0"></script>
 <!-- or set latest -->
-<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<script src="//unpkg.com/valine@latest/dist/Valine.min.js?v=1.0.0"></script>
 <!-- or Default value -->
-<script src="//unpkg.com/valine"></script>
+<script src="//unpkg.com/valine?v=1.0.0"></script>
 <div id="vcomments"></div>
 </div>
 <script>
