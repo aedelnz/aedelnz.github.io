@@ -104,6 +104,7 @@ $(".notification ").remove();
 <li><a class="dropdown-item" href="#ACL4SSR">ACL4SSR</a></li>
 <li><a class="dropdown-item" href="#anti-AD">anti-AD</a></li>
 <li><a class="dropdown-item" href="#Proxy代理">Proxy代理</a></li>
+<li><a class="dropdown-item" href="#Telegram">Telegram</a></li>
 <li><a class="dropdown-item" href="#临时邮箱">临时邮箱</a></li>
 </ul>
 </li>
@@ -246,7 +247,6 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 <div class="alert alert-success" role="alert">
 <b>Na Sheng 正在创作 中……</b>
 </div>
-<li></li>
 </ul>
 </div>
 </div>
@@ -360,6 +360,45 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 <div class="block-content row">
 <article class="text-start text-break"><h4>1. Telegram Desktop 客户端</h4><p>Telegram Desktop 默认并没有勾选&quot;使用系统代理&quot;, 所以很多人觉得需要开全局才能用,  其实不然, 可以手动勾选&quot;使用系统代理&quot;或使用自定义代理.</p><p><strong>步骤:</strong></p><p>A: 未登录账号: 界面左下角按钮</p><p>B: 已登录账号: Telegram Desktop 客户端→左上角三短线→设置→高级→网络和代理→代理类型→勾选&quot;使用系统代理&quot;或&quot;使用自定义代理&quot;</p><p>使用自定义代理添加方法: 添加代理(Add proxy)→SOCKS5/HTTP→服务器: 127.0.0.1, 端口: 端口需查看你的代理软件(SS/SSR/Clash for Windows/V2RayN...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    Clash.NET: 主界面→右侧→混合端口(Mixe-Port)</em></p><p><em>    SS/SSD→右键状态栏SS/SSD图标→服务器→编辑服务器→本地端口(默认是: 1080)</em></p><p><em>    SSR→右键状态栏SSR图标→选项设置→本地端口(默认是: 1080)</em></p><p><em>    V2RayN: 主界面→左下角→SOCKS5(或者参数设置→本地监听端口)(默认是: 10808)</em></p><p><em>    Trojan-Qt5: 打开Trojan-Qt5主界面→双击一个节点→本地端口(默认是1080)</em></p><p><em>    Netch: 打开Netch主界面→设置→本地端口SOCKS5(默认是2801)</em></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram Desktop 连不上网络.</strong></p><blockquote>备注: Windows, macOS, Linux 系统的电脑都可以使用  Telegram Desktop 版本客户端.(macOS 上 Mac App Store 中的&quot;Telegram Desktop&quot;已更名为&quot;Telegram Lite&quot; )</blockquote><p><br></p><h4>2. Telegram macOS 客户端</h4><p>Telegram macOS 客户端不遵从系统代理, 所以需要设置自定义代理, 也可以用Surge/ClashX Pro 开启&quot;增强模式&quot;</p><p>(Surge/ClashX Pro 的&quot;增强模式&quot;就是针对这类不遵从系统代理的软件做的功能)</p><p><strong>自定义代理设置步骤:</strong> </p><p>A: 未登录账号: 界面右上角按钮→Use Proxy</p><p>B: 已登录账号: Telegram macOS 客户端→设置→数据→使用代理</p><p>添加代理→SOCKS5/HTTP→服务器(Server): 127.0.0.1, 端口(Port): 端口需查看你的代理软件(Surge/ClashX/ShadowsocksX...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Surge→点击状态栏Surge图标→显示主界面→SOCKS5(默认是: 6153)</em></p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    ClashX→点击状态栏</em>ClashX图标→帮助→端口<em>→Socks Port(默认是: 7891)</em></p><p><em>    ShadowsocksX: 点击状态栏ShadowsocksX</em>图标<em>→高级设置→本地Socks5监听端口(默认是: 1086)</em></p><p> <em>   V2RayX: 点击状态栏V2RayX图标→Configure→Local Socks5 Port(默认是: 1081)</em></p><p> <em>   V2rayU: 点击状态栏V2rayU图标→偏好设置→Advance→本机 Sock 监听端口(默认是: 1080)</em></p><p><strong>设置完成保存后, 记得重启 Telegram macOS 客户端&#33; 记得重启&#33; 记得重启&#33;</strong></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram macOS 连不上网络.</strong></p><p><br></p><h4>3. Telegram iOS/Android 客户端</h4><p>iOS/Android 设备上开启代理软件即可, 不需要单独在 Telegram 中设置代理.</p><p>Telegram iOS 端是IP直连访问服务器的, 所以需要代理软件做单独的规则处理才行; </p><p>iOS上有些代理软件并没有针对性的对此做处理, 所以即使开启了这类代理软件, Telegram iOS 也会提示无网络链接, 比如&quot;Wingy&quot;, <a href="#定制软件">点击查看代理软件</a>.</p><p><br></p><h4>4. 其他</h4><p>也可以自建SOCKS5/HTTP/MTProto代理, 只用于Telegram 上使用, 网络也有很多公开的SOCKS5/HTTP/MTProto代理, 个人不建议使用这种方式, 依然建议用代理软件, <a href="#定制软件">点击查看代理软件</a>.</p><p>更不要使用某些内置代理的 Telegram 第三方客户端软件, 存在安全隐患.</p></article>
+</div>
+</div>
+</div>
+
+<div id="Telegram" class="col-md-12 mb-2">
+<div class="card block block-link-pop block-rounded">
+<div class="block-content bg-body-light text-center">
+<div class="py-2">
+<p class="h1 mb-2">Telegram</p>
+<p class="h6 text-muted">Telegram 客户端</p>
+</div>
+</div>
+<div class="block-content row">
+<article class="text-start text-break">
+<p>
+<h5>直接点击链接汉化 Telegram 电报: <a href="https://t.me/setlanguage/zhcncc">https://t.me/setlanguage/zhcncc</a></h5>
+各个语言包:<br>
+* 中文(简体)-聪聪: https://t.me/setlanguage/zhcncc<br>
+* 中文(简体)-@zh_CN: https://t.me/setlanguage/classic-zh-cn<br>
+* 中文(简体)-简体: https://t.me/setlanguage/classic-zh<br>
+* 日语: https://t.me/setlanguage/ja-beta<br>
+* 韩语: https://t.me/setlanguage/ko<br>
+* 英语: https://t.me/setlanguage/en
+</p>
+<p>
+<h5>Telegram 官方客户端安装包下载↓</h5>
+* Android APK: https://telegram.org/dl/android/apk<br>
+* iOS 下载: https://apps.apple.com/cn/app/id686449807<br>
+* Windows 安装包: https://telegram.org/dl/desktop/win<br>
+* macOS Telegram 安装包: https://telegram.org/dl/macos<br>
+* macOS Telegram Desktop 安装包: https://telegram.org/dl/desktop/mac<br>
+* 官网: https://telegram.org/apps<br><br>
+<h6>第三方客户端</h6>
+iOS: <a href="https://apps.apple.com/us/app/ime-messenger-crypto-wallet/id1450480822">iMe Messenger</a>，<a href="https://apps.apple.com/app/nicegram-messenger-plus/id1608870673">Nicegram</a>，<a href="https://apps.apple.com/hk/app/revgram/id1469493013">Revgram</a><br>
+Android: <a href="https://github.com/NekoX-Dev/NekoX/releases">NekoX</a>，<a href="https://github.com/tehcneko/nekogram-files/releases">Nekogram APKs</a><a href="https://play.google.com/store/apps/details?id=org.telegram.mdgram">MDGramYou</a><br>
+Windows: <a href="https://www.microsoft.com/store/apps/9n97zckpd60q">Unigram</a>，<a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，<a href="https://github.com/kotatogram/kotatogram-desktop/releases">Kotatogram</a>，<a href="https://github.com/Forkgram/tdesktop/releases">Forkgram</a><br>
+macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，<a href="https://github.com/kotatogram/kotatogram-desktop/releases">Kotatogram</a>
+</p>
+</article>
 </div>
 </div>
 </div>
