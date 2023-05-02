@@ -1,4 +1,4 @@
-<!-- 随随便便的开始 -->
+<!--###################### 随随便便的开始 ######################-->
 <html lang="zh-CN">
 <head>
 <title>爱莫能助</title>
@@ -16,6 +16,7 @@
 <!-- js -->
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
 <script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
 <style>
@@ -31,622 +32,788 @@
 .css-style-rainbow a:nth-child(7n+7) {background-color: rgba(144, 144, 255, .25);}
 </style>
 </head>
-
 <!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-drawer-body-right">
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left fw-bold">
 
-<div class="mdui-appbar mdui-appbar-fixed">
+<main class="container">
+<div class="mdui-drawer" id="left-drawer">
+<div class="mdui-hidden-sm-up mb-2">
 <div class="mdui-toolbar">
-<div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#example-attrcd'}">爱莫能助.</div>
+<div class="mdui-typo-title">爱莫能助</div>
+<div class="mdui-toolbar-spacer"></div>
+<button class="mdui-btn" mdui-drawer-close><i class="mdui-icon material-icons">close</i></button>
+</div>
+</div>
+<div class="px-3">
+<div class="mdui-list" id="Navs"></div>
+<script id="Navs-tmp" type="text/x-handlebars-template">
+{{#each this}}
+<a href="#{{classification}}" class="mdui-list-item mdui-ripple">{{classification}}</a>
+{{/each}}
+</script>
+</div>
+<p class="fixed-bottom container">A2zml v1.0.0</p>
+</div>
+<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+<div class="mdui-toolbar mdui-color-blue-accent">
+<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">format_align_left</i></a>
+<div class="mdui-typo-title">爱莫能助</div>
 <div class="mdui-toolbar-spacer"></div>
 <a class="mdui-typo-caption-opacity" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
 <a class="mdui-typo-caption-opacity" href="/A2zml/v2/">魔法</a>
 <a class="mdui-typo-caption-opacity" href="/#yqlj">友连</a>
 </div>
 </div>
-
-<div class="mdui-drawer mdui-drawer-right" id="example-attrcd">
-<ul class="mdui-list">
-<img class="mdui-card-content mdui-img-fluid" src="../start/img/1677363810933.jpg"/>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=/ >回到首页</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#ssyq >搜索引擎</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#aqsy >安全使用</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#dmsp >动漫视频</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#jxtp >精选图片</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#mhzy >漫画资源</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#xsyy >小说音乐</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#smkj >数码科技</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#yszy >影视资源</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#yxpt >游戏平台</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#jspt >技术平台</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#srcpt >SRC平台</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#xtjx >系统镜像</a></li>
-<li class="mdui-color-white mdui-typo-headline-opacity mdui-menu-item"><a href=#wlaq >网络安全</a></li>
-</ul>
+<div class="mb-5"></div>
+<div class="text-center mb-3">
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Google</button>
+<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bing</button>
+<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">GitHub</button>
+<button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Baidu</button>
 </div>
-
-<div class="mdui-container"><br>
-<div class="mdui-card mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#tab1" class="mdui-ripple">导航</a>
-<a href="#tab2" class="mdui-ripple">浏览优化</a>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+<form action="https://www.google.com/search" method="get">
+<div class="input-group"><input type="text" class="form-control" name="q"></div>
+</form>
+</div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+<form action="https://www.bing.com/search" method="get">
+<div class="input-group"><input type="text" class="form-control" name="q"></div>
+</form>
+</div>
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+<form action="https://github.com/search" method="get">
+<div class="input-group"><input type="text" class="form-control" name="q"></div>
+</form>
+</div>
+<div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+<form action="https://kaifa.baidu.com/searchPage" method="get">
+<div class="input-group"><input type="text" class="form-control" name="wd"></div>
+</form>
 </div>
 </div>
-
-
-<!-- 主要的内容 -->
-<main id="tab1">
-<section class="mdui-container"><br>
-<div class="mdui-typo-caption-opacity mdui-text-truncate">
-<p id="hitokoto">D: 获取中...</p>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
-<marquee behavior="scroll" direction="left"><em>该网站加载速度可以有点慢，如果之后遇到该网站加载失败时，可以刷新DNS或看起魔法即可解决。</em></marquee>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="ssyq">搜索引擎</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://pd.qq.com/s/arexyjqwx">QQ频道【二次元领域】</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://translate.google.cn/?hl=zh-CN&tab=TT">谷歌翻译</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://top.baidu.com/board"><span class="mdui-text-color-red">百度热搜</span></a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.baidu.com/">百度一下</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://so.toutiao.com/">头条搜索</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.google.com/">谷歌搜索</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.bing.com/">必应搜索</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://duckduckgo.com/">duckduckgo</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="aqsy">安全</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://www.gov.cn/">中国政府网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://www.nrta.gov.cn/">国家广播电视总局</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.cctv.com/">央视网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://www.cnnvd.org.cn/">国家信息安全漏洞库</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://www.12388.gov.cn/">中央纪委国家监委举报网站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.12377.cn/">违法和不良信息举报中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jbts.mct.gov.cn/">全国文化和旅游市场网上举报投诉处理系统网站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://www.nlc.cn/">中国国家图书馆</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="dmsp" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#dmspdm" class="mdui-ripple mdui-ripple-white">动漫</a>
-<a href="#dmspmf" class="mdui-ripple mdui-ripple-white">番剧</a>
-<a href="#dmspzmz" class="mdui-ripple mdui-ripple-white">字幕组</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id=dmspdm >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.bilibili.com/anime/">哔哩哔哩</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.acfun.cn/bangumilist">AcFun </a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://v.qq.com/channel/cartoon">腾讯视频</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://comic.youku.com/">优酷</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.iqiyi.com/dongman/">爱奇艺</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.mgtv.com/cartoon/">芒果TV</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.youtube.com/">翻墙-youtube</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.nicovideo.jp/">翻墙-ニコニコ</a><br>
-</div>
-<div id=dmspmf >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://arlnigdm.com/">宫下动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.mgnacg.com/">橘子动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.age.tv/">AGE动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.ysjdm.net/">異世界動漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://anime1.me/">anime1.me</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://dmh8.me/">樱花动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.zzzfun.com/">ZzzFun</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://qimiqimi.com/">奇米奇米</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bangumi.online/">アニメ新番組</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://myself-bbs.com/">Myself 動漫</a>
-</div>
-<div id=dmspzmz >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://mikanani.me/">推送-蜜柑计划</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bgmlist.com/">推送-番组放送</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bangumi.moe/">萌番组</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://nc.raws.dev/0:/">NC-Raws</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.hysub.net/">幻樱字幕组</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.acg23.com/">acg23</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://fitacg.com/">菲特动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.tokyotosho.info">东京图书馆</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://share.acgnx.se/">末日動漫資源庫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://share.dmhy.org/">动漫花园</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://nyaa.si/">nyaa</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.36dm.club/">简单动漫</a>
-</div>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="jxtp" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#jxtps" class="mdui-ripple mdui-ripple-white">图片</a>
-<a href="#jxtpcos" class="mdui-ripple mdui-ripple-white">COS</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id=jxtps >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://petalica-paint.pixiv.dev/index_zh.html">线稿自动上色服务</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.pixiv.net/">pixiv P站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://space.bilibili.com/6823116#/album">哔哩哔哩壁纸站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.mihuashi.com/">米画师</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.vilipix.com/">插画世界</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://pixiv.moe/">pixiv萌え</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://pixivic.com/">虾萌</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://pixivel.moe/">pixivel</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bz.zzzmh.cn/">极简壁纸</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.mooyuu.com/">摸鱼网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://wallhaven.cc/">wallhaven</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://anime-pictures.net/">不稳定-anime-pic</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://konachan.net/post">Anime Wallpapers</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://wall.alphacoders.com/?lang=Chinese">Wallpaper Abyss</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://yande.re/post">yande</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://lolibooru.moe/post">lolibooru</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://beta.kemono.party/artists">kenono</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://someacg.vercel.app/">someacg</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://kawaiinyan.com/">kawaiinyan</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://konachan.wjcodes.com/">kawaiinyan中文站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://danbooru.donmai.us/">danbooru</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://safebooru.org/index.php?page=post&s=list">safebooru</a>
-</div>
-<div id=jxtpcos >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bcy.net/tag/399">半次元 cos</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://acg.178.com/list/cosplay/">178 CosPlay</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://t2cy.com/acg/cos/">推二次元</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.cosplayla.com/">cos play啦</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.evacg.cc/">E次元</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.coshezi.top/">cos盒子</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://worldcosplay.net/">world cos</a>
-</div>
-</div></div>
-</section>
-
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="mhzy" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#mhzygf" class="mdui-ripple mdui-ripple-white">漫画</a>
-<a href="#mhzymf" class="mdui-ripple mdui-ripple-white">免费</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id=mhzygf >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.dmzj.com/">动漫之家</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://manga.bilibili.com/">哔哩哔哩漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://ac.qq.com/">腾讯漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://manhua.weibo.cn/">微博动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.mkzhan.com/">漫客栈</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://dongmanmanhua.cn/">咚漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://manmanapp.com/">漫漫漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://kuaikanmanhua.com/">快看</a><br>
-</div>
-<div id=mhzymf >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.mangabz.com/">日本-Mangabz</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.gufengmh9.com/">古风漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.7stary.com/">7漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.517mh.net/">我要去漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://m.laimanhua.net/">来漫画</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://dogemanga.com/">漫画狗</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.imitui.com/">爱米推</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.517mh.net/">517漫画网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.733.so/">733动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.omyschool.com/">木马动漫</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.manhuadb.com/">漫画DB</a>
-</div>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="xsyy" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#xsyyxs" class="mdui-ripple mdui-ripple-white">小说</a>
-<a href="#xsyydzs" class="mdui-ripple mdui-ripple-white">电子书</a>
-<a href="#xsyyyy" class="mdui-ripple mdui-ripple-white">音乐</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id=xsyyxs >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://book.qq.com/">QQ阅读</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.qidian.com/">起点中文网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://faloo.com/">飞卢</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.zongheng.com/">纵横中文网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.jjwxc.net/">晋江文学城</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.xxsy.net/">潇湘书院</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.linovel.net/">轻之文库</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://writer.muyewx.com/stack-room?enter_from=menu">番茄小说网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.wtzw.com/">梧桐中文网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.biquge7.com/">笔趣阁</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.linovelib.com/">哔哩轻小说</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.esjzone.cc/"> ESJ Zone</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://kakuyomu.jp/">カクヨム</a><br>
-</div>
-<div id=xsyydzs >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.jiumodiary.com/">鸿摩搜索</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://shuge.org/">书格</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.amazon.cn/Kindle%E5%85%8D%E8%B4%B9%E7%94%B5%E5%AD%90%E4%B9%A6/b/ref=amb_link_3?ie=UTF8&node=116175071&pf_rd_m=A1AJ19PSB66TGU&pf_rd_s=merchandised-search-leftnav&pf_rd_r=QA09QX96YRZ5BVM6D6DF&pf_rd_r=QA09QX96YRZ5BVM6D6DF&pf_rd_t=101&pf_rd_p=047e4bfa-1996-4eba-bf3c-4dcb84fb6933&pf_rd_p=047e4bfa-1996-4eba-bf3c-4dcb84fb6933&pf_rd_i=116169071">亚马逊免费电子</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.huiyankan.com/">慧眼看</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.kgbook.com/">苦瓜书盘</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://haodoo.net/">好读</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.pdfzj.com/">PDF之家</a>
-</div>
-<div id=xsyyyy >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://m.missevan.com/">猫耳FM</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://fm.qq.com/">企鹅FM</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://qingting.fm/">蜻蜓FM</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://ximalaya.com/">喜马拉雅</a><br>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://music.163.com/">网易云</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.kugou.com/">酷狗音乐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://y.qq.com/">QQ音乐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.kuwo.cn/">酷我音乐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://open.spotify.com/">spotify</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://music.apple.com/">Apple Music</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://music.91q.com/">千千音乐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://netease-music.fe-mm.com/">mmPlayer</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.lalal.ai/zh-hans/">lalal.ai</a>
-</div>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="smkj">数码科技</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.zol.com.cn/">中关村在线</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://ithome.com/">IT之家</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.feng.com/">威锋</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.guokr.com/">果壳</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.36kr.com/">36氪</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://sspai.com/">少数派</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.ifanr.com/">爱范儿</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://readhub.cn/topics">readhub</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.zealer.com/">zealer</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.dgtle.com/">数字尾巴</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.pingwest.com/">品玩</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="yszy" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#yszyzxys" class="mdui-ripple mdui-ripple-white">在线影视</a>
-<a href="#yszyzyxz" class="mdui-ripple mdui-ripple-white">资源下载</a>
-<a href="#yszyspjx" class="mdui-ripple mdui-ripple-white">视频解析</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id=yszyzxys >
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.cupfox.app/">搜索-茶杯狐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.dianyinggou.com/">搜索-电影狗</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.bpzhe.com/">搜索-豌豆PRO</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.iizhi.cn/">毕方铺</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.alipansou.com/">猫浬盘搜</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.lgyy.cc/">蓝光影院</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.voflix.com/">voflix HD</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.novipnoad.com/">NO视频</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.naifei.org/">奈飞中文</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.llyady.cc/">利丽娅电影</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://yanetflix.com/">鸦奈飞影视</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.juhuang.tv/">剧荒TV</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.czspp.com/">厂长资源</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.libvio.me/">LIBVIO影视</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.hdmoli.com/">HDmoli</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.555dd5.com/">555电影</a>
-</div>
-<div id="yszyzyxz">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://yyets.dmesg.app/search">人人影视</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.ygdy8.com/">阳光电影</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.yinfans.me/">音范丝</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://m.gaoqing.fm/">高清电台</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.uump4.net/">悠悠MP4</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://thepiratebay.org/">海盗船</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://1337x.to/">1337x</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://eztv.re">eztv</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://yts.mx">yts</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://rarbg.to">rarbg</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.demonoid.is">demonoid</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bt4g.org/">bt4g</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.magnetdl.com/">magnetdl</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://glodls.to/">glodls</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.torlock2.com/">torlock</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://pirateiro.eu">pirateiro</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://proxybb.com/">proxybb</a>
-</div>
-<div id="yszyspjx">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://im1907.top/?jx=">纯净/B站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.bozrc.com:4433/player/?url=">综合/B站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.xmflv.com/?url=">虾米</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://okjx.cc/?url=">OK解析</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.yemu.xyz/?url=">夜幕</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.m3u8.tv/jiexi/?url=">M3U8.TV</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.blbo.cc:4433/?url=">人人迷</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.blbo.cc:4433/?url=">全民</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.nnxv.cn/tv.php?url=">七哥</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://api.qianqi.net/vip/?url=">冰豆</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.ckplayer.vip/jiexi/?url=">CK</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.ckmov.vip/api.php?url=">ckmov</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.playerjy.com/?url=">playerjy/B站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://ckmov.ccyjjd.com/ckmov/?url=">ccyjjd</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.ckmov.com/?url=">诺诺</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.h8jx.com/jiexi.php?url=">H8</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://vip.bljiex.com/?v=">BL</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://api.jiexi.la/?url=">解析la</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jiexi.janan.net/jiexi/?url=">MUTV</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.mtosz.com/m3u8.php?url=">MAO</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.pangujiexi.cc/jiexi.php?url=">盘古</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://go.yh0523.cn/y.cy?url=">0523</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.1717yun.com/jx/ty.php?url=">17云</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.4kdv.com/?url=">4K</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.8090g.cn/?url=">8090</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.nxflv.com/?url=">诺讯</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.dj6u.com/?url=">听乐</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://jx.000180.top/jx/?url=">180</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.administratorw.com/video.php?url=">无名</a>
-</div>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="yxpt">游戏平台</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://store.steampowered.com/">官方-STEAM</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://store.ubi.com/cn/home">官方-Ubisoft</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.epicgames.com/">官方-EPIC</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.origin.com/">官方-Origin</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.gog.com/">官方-GOG</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.wegame.com.cn/">官方-WeGame</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.taptap.com/">taptap</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://byrut.org/">byrut 俄罗斯</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div id="jspt" class="mdui-tab mdui-typo-caption" mdui-tab>
-<a href="#jsptjspt" class="mdui-ripple mdui-ripple-white">技术平台</a>
-<a href="#jsptdmtg" class="mdui-ripple mdui-ripple-white">代码托管</a>
-</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<div id="jsptjspt">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.huorong.cn/">火绒安全</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.oschina.net/">开源中国</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://www.csdn.net/">CSDN</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.52pojie.cn/">吾爱破解 </a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.4hou.com/">嘶吼 </a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.sec-wiki.com/">SecWiki</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.freebuf.com/">FreeBuf</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://freessl.cn/">FreeSSL</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.anquanke.com/">安全客</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.2cto.com/">红黑联盟</a><br>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://c.runoob.com/">菜鸟工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://tool.chinaz.com/">站长工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.test-ipv6.com/">IPV6 测试</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://speed.cloudflare.com">速度测试</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.ipip.net/ip.html">IP查询</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://img.top/">图片压缩</a>
-</div>
-<div id="jsptdmtg">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://github.com/">GitHub</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://coding.net/products/repo">Coding</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://gitee.com/">码云</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://bitbucket.org/">Bitbucket</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://about.gitlab.com/">GitLab</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://gitshell.com/">Gitshell</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.svnchina.com/">Svn China</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://codeup.aliyun.com/">云效代码管理Cod</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://git.code.tencent.com/">腾讯工蜂</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://codeberg.org/">Codeberg</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.sourcetreeapp.com/">Sourcetree</a>
-</div>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="srcpt">SRC平台</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://sec.xiaomi.com/">小米安全中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://security.bilibili.com/">哔哩哔哩安全应急响应中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://security.tencent.com/">腾讯安全应急响应中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://security.alibaba.com/">阿里安全响应中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://security.alipay.com/">蚂蚁集团安全应急响应中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://bsrc.baidu.com/">百度安全应急响应中心</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://aq.163.com/">网易安全中心</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="wlaq">网络安全</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://cybermap.kaspersky.com/" title="kaspersky：Find out where you are on the Cyberthreat map">CyberThreat</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.fireeye.com/cyber-map/threat-map.html" title="FireEye Cyber Threat Map">Cyber-map</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://threatmap.fortiguard.com/" title="Fortinet Threat Map">Fortiguard</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://threatmap.checkpoint.com/ThreatPortal/livemap.html" title=">Live Cyber Attack Threat Map | Check Point Software">Checkpoint</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://botnet-cd.trendmicro.com/" title="BOTNET Connection Dashboard">Botnet-cd</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.damddos.com/networkattack.html#page2" title="云堤DDoS攻击流向图">云堤DDoS态势</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="xtjx">系统镜像</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://hellowindows.cn/">hellowindows</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://msdn.itellyou.cn/">MSDN</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://mirror.kaiyuanshe.cn/"> 开源社</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://mirrors.163.com/">网易开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.cloud.tencent.com/">腾讯软件源</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.huaweicloud.com">华为开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://developer.aliyun.com/mirror/">阿里巴巴开源镜像站-OPSX镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.bfsu.edu.cn/">北京外国语大学开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.cqu.edu.cn/">重庆大学开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="http://mirrors.neusoft.edu.cn/">大连东软信息学院开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.hit.edu.cn/">哈尔滨工业大学开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirror.iscas.ac.cn/">ISCAS 镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirror.lzu.edu.cn/">兰州大学开源社区镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirror.nju.edu.cn/">南京大学开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.njupt.edu.cn/">南京邮电大学开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.nwafu.edu.cn/">Mirrors@NWAFU</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirror.nyist.edu.cn/">南阳理工学院开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.pku.edu.cn/">北京大学开源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.qlu.edu.cn/">齐鲁工业大学开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.sdu.edu.cn/">山东大学镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirror.sjtu.edu.cn/">SJTUG 思源镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.sjtug.sjtu.edu.cn/">SJTUG 致远镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.sustech.edu.cn/">南方科技大学开源软镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.ustc.edu.cn/">中国科学技术大学开源软件镜像</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.wsyu.edu.cn/">武昌首义学院开源软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.xjtu.edu.cn/">西安交通大学软件镜像站</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="https://mirrors.zju.edu.cn">浙江大学开源软件镜像站</a>
-</div></div>
-</section>
-
-<section class="mdui-container mdui-typo-caption"><br>
-<div class="mdui-card-primary-title" id="gjpt">工具平台</div>
-<div class="css-style-rainbow mdui-card"><div class="mdui-card-content">
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.metasploit.com" title="开源的安全漏洞检测工具">metasploit</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://nmap.org" title="Linux下的网络扫描和嗅探工具包">nmap</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://sqlmap.org" title="自动化的SQL注入工具">sqlmap</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://portswigger.net" title="攻击web 应用程序的集成平台 ">burpsuite</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.wireshark.org" title="网络封包分析软件">wireshark</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.telerik.com/fiddler" title="http协议调试代理工具">fiddler</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.ibm.com/developerworks/cn/downloads/r/appscan" title="web安全扫描工具">AppScan</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.tenable.com/products/nessus-vulnerability-scanner" title="系统漏洞扫描与分析软件">Nessus</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.rapid7.com/products/nexpose/download" title="性能极佳的漏洞扫描工具">Nexpose-/a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://rapid7.com/products/appspider/download" title="扫描网页和移动应用程序的漏洞 ">appspider</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://sectoolmarket.com" title="The Prices vs. Features of Web Application Vulnerability Scanners">Web扫描器功能比较</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://n0where.net" title="CyberPunk: Open Source CyberSecurity">CyberPunk</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.thc.org/thc-hydra" title="支持多种网络服务的网络登陆破解工具">THC-hydra</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://sectools.org" title="扫描器和工具大全">SecTools.Org</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://pentestbox.org/zh" title="PentestBox渗透利器">PentestBox渗透利器</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.ngrok.cc" title="Sunny-Ngrok内网转发">Ngrok内网转发</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://ettercap.github.io/ettercap" title="Linux下一个强大的欺骗工具">Ettercap-官网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.openwall.com/john" title="快速的密码破解程序 ">John-官网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://www.aircrack-ng.org" title="802.11标准的无线网络分析有关的安全软">Aircrack-ng官网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=http://demo.aisec.cn/" title="常见漏洞扫描器测试平台">漏洞扫描器测试平台</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://diannaobos.com/frp/" title="FRP内网穿透工具">FRP内网穿透工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://www.charlesproxy.com/" title="Charles抓包工具 ">Charles抓包工具</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn mdui-hoverable mdui-btn-dense" href="/go.html#tpurl=https://sploitus.com/" title="Sploitus | Exploit &amp; Hacktool Search Engine">Sploitus|Exploit</a>
-</div></div>
-</section>
-</main>
-
-
-
-
-<!-- 浏览器优化 -->
-<main id="tab2">
-<section class="mdui-container"><br>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
-<p class="mdui-typo-caption mdui-text-color-orange-accent">温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！</p>
-<p class="mdui-typo-caption">广告屏蔽插件推荐:(<mark><a href="https://adguard.com/zh_cn/products.html">AdGuard </a></mark>、<mark><a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a></mark> 度娘搜索。)</p>
-<script>
-$(document).ready(function(){
-$("#browserdesktop").click(function(){
-$("#desktopbrowser").fadeToggle(100);
-});
-$("#browserandroid").click(function(){
-$("#androidbrowser").fadeToggle(100);
-});
-$("#browserios").click(function(){
-$("#iosbrowser").fadeToggle(100);
-});
-});
-</script>
+<div class="mdui-float-right"><p>
+&nbsp; <a class="btn font-monospace btn-primary" data-bs-toggle="collapse" href="#浏览器优化" role="button" aria-expanded="false" aria-controls="浏览器优化">浏览器优化</a>
+</p></div>
+<div class="collapse" id="浏览器优化">
+<div class="card card-body">
 <style>
-div.browser,div.browse{
-padding: 5px;
-border: solid 1px #c3c3c3;
+.bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #087990;
+    background-color: #cff4fc;
+    border-left: 0.25rem solid #9eeaf9;
 }
-div.browser{
-display:none;
+.bd-callout-info {
+    --bd-callout-color: #087990;
+    --bd-callout-bg: #cff4fc;
+    --bd-callout-border: #9eeaf9;
 }
 </style>
-<p class="mdui-typo-caption">
-<a href="https://greasyfork.org/zh-CN/scripts">Tampermonkey（油猴）</a><a href="http://b.mixiaba.com/mxaddons.asp">用户分享脚本</a>
-<a href="https://tool.whgpc.com/Tools/viaPLUG/#/tabBar/home">via轻插件</a>
-<br>
-<mark><span class="browse" id="browserdesktop"> 桌面端</span></mark>
-<mark><span class="browse" id="browserandroid">手机端（Android）</span></mark>
-<mark><span class="browse" id="browserios">手机端（iOS）</span></mark><br>
-<div class="browser" id="desktopbrowser">
-<strong>桌面端</strong>
-<ul>
-<li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
-<li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
-<li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
-<li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
-<li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
-<li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
-<li>AdGuard: (no additional software required)</li>
-</ul><br>
+<div class="bd-callout bd-callout-info">
+温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！
+<strong>广告屏蔽插件推荐:(<mark><a href="https://adguard.com/zh_cn/products.html">AdGuard </a></mark>、<mark><a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a></mark> 度娘搜索。)</strong>
 </div>
-<div class="browser" id="androidbrowser">
-<strong>手机端（Android）</strong>
-<ul>
-<li>Firefox：<a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>、<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a> 或 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
-<li>Maxthon：<a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
-<li>Dolphin：<a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin">Tampermonkey</a></li>
-<li>UC：<a href="https://www.tampermonkey.net/?browser=ucweb&amp;ext=dhdg">Tampermonkey</a></li>
-<li>Kiwi：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> 或 <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
-<li>X浏览器</li>
-<li><a href="https://www.bookmarkearth.com/download/app">书签地球</a></li>
-<li><a href="http://mbrowser.nr19.cn/">M浏览器</a></li>
-<li><a href="https://www.lemurbrowser.com/">狐猴浏览器</a>：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li>
-</ul><br>
+<div class="dropdown px-2 mb-2 font-monospace">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">桌面端（PC）</button>
+  <ul class="dropdown-menu p-3">
+    <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+    <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+    <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+    <li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
+    <li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
+    <li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+    <li>AdGuard: (no additional software required)</li>
+  </ul>
 </div>
-<div class="browser" id="iosbrowser">
-<strong>手机端（IOS）</strong>
-<ul>
-<li>Safari：<a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> 或 <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
-<li><a href="https://gear4.app/">Gear</a>：（不需要其他软件）
-</ul><br>
+<div class="dropdown px-2 mb-2 font-monospace">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（Android）</button>
+  <ul class="dropdown-menu p-3">
+    <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+    <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+    <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+    <li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
+    <li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
+    <li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+    <li>AdGuard: (no additional software required)</li>
+  </ul>
 </div>
-</p>
+<div class="dropdown px-2 mb-2 font-monospace">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（iOS）</button>
+  <ul class="dropdown-menu p-3">
+    <li>Safari：<a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> 或 <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
+    <li><a href="https://gear4.app/">Gear</a>：（不需要其他软件）</li>
+  </ul>
+</div>
+<p class="mdui-typo-caption">
+    一些还不错的查询工具：
+    <kbd><a href="https://www.reg007.com/">REG007</a></kbd>
+    <kbd><a href="https://monitor.firefox.com/" >火狐监视器</a></kbd>
+    <kbd><a href="https://haveibeenpwned.com/" >我被骗了吗？</a></kbd>
+    </p>
+    <p class="mdui-typo-caption">
+    ChatGPT镜像：
+    <kbd><a href="https://supremes.pro/">1号镜像</a></kbd>
+    <kbd><a href="https://chat.bnu120.space/" >2号镜像</a></kbd>
+    <kbd><a href="http://chat.68686.ltd/" >3号镜像</a></kbd>
+    </p>
+    <p class="mdui-typo-caption">
+    临时网络传输工具：
+    <kbd><a href="https://snapdrop.net/">局域网传输</a></kbd>
+    <kbd><a href="https://www.wenshushu.cn/">文件叔叔</a></kbd>
+    <kbd><a href="https://airportal.cn/">AirPortal 空投快传</a></kbd>
+    <kbd><a href="https://anonfiles.com">匿名文件上传</a></kbd>
+    <kbd><a href="https://www.lanzou.com/">蓝奏·云存储</a></kbd>
+    </p>
+    <p class="mdui-typo-caption">
+    镜像：
+    <kbd><a href="https://scholar.chongbuluo.com/" >学术搜索</a></kbd>
+    <kbd><a href="https://ac.scmor.com/" >谷歌学术镜像</a></kbd>
+    </p>
+    <p class="mdui-typo-caption">
+    临时邮箱注册：
+    <kbd><a href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a></kbd>
+    <kbd><a href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a></kbd>
+    <kbd><a href="https://www.moakt.com/zh/" target="_blank">临时邮箱专业服务</a></kbd>
+    <kbd><a href="https://tempmail.cn/" target="_blank">临时邮箱</a></kbd>
+    <kbd><a href="https://smailpro.com/" target="_blank">临时邮箱</a></kbd>
+    <kbd><a href="https://mail.tm/zh/" target="_blank">临时邮箱</a></kbd>
+    <kbd><a href="https://bonds.id" target="_blank">临时电子邮箱</a></kbd>
+    <kbd><a href="https://etempmail.com/" target="_blank">临时邮箱</a></kbd>
+    <kbd><a href="https://www.emailnator.com/" target="_blank">临时邮箱</a></kbd>
+    
+    </p>
+</div>
+</div>
+<div id="Cote"></div>
+<script id="Cote-tmp" type="text/x-handlebars-template">
+{{#each this}}
+<div class="mb-4">
+<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">
+<ul id="{{classification}}" class="mdui-list">
+<p class="fs-3 text-start">{{classification}}</p>
+{{#each content}}
+<div class="mdui-col">
+<div class="mdui-hoverable">
+<div class="mdui-grid-tile">
+<li class="mdui-list-item bg-white mdui-ripple">
+<a target="_blank" class="nav-link active" href="/go.html#tpurl={{url}}" title="{{title}}">
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title mdui-list-item-one-line">{{title}}</div>
+<div class="mdui-list-item-text mdui-list-item-one-line">{{intro}}</div>
+</div>
+</a>
+</li>
+</div>
+</div>
+</div>
+{{/each}}
+</ul>
+</div>
+</div>
+{{/each}}
+</script>
+ <script type="text/javascript">
+var data = [{
+ classification: "搜索引擎",
+ content: [{
+  title: "二次元领域",
+  url: "https://pd.qq.com/s/arexyjqwx",
+  intro: "一个QQ频道"
+  },{
+  title: "热搜",
+  url: "https://top.baidu.com/board",
+  intro: "百度热搜"
+  },{
+  title: "翻译",
+  url: "https://fanyi.baidu.com/",
+  intro: "百度翻译"
+  },{
+  title: "头条",
+  url: "https://so.toutiao.com/",
+  intro: "头条搜索"
+  },{
+  title: "谷歌",
+  url: "https://www.google.com",
+  intro: "Google搜索"
+  },{
+  title: "必应",
+  url: "https://www.bing.com/",
+  intro: "Bing搜索"
+  },{
+  title: "DuckDuckGo",
+  url: "https://duckduckgo.com/",
+  intro: "隐私保护，化繁为简。"
+  }]
+ },{
+ classification: "国家应用",
+ content: [{
+  title: "政府网",
+  url: "http://www.gov.cn/",
+  intro: "中国政府网"
+  },{
+  title: "广播电视总局",
+  url: "http://www.nrta.gov.cn/",
+  intro: "国家广播电视总局"
+  },{
+  title: "央视网",
+  url: "https://www.cctv.com/",
+  intro: "世界就在眼前"
+  },{
+  title: "信息安全漏洞库",
+  url: "http://www.cnnvd.org.cn/",
+  intro: "国家信息安全漏洞库"
+  },{
+  title: "中央网信办",
+  url: "https://www.12377.cn/",
+  intro: "违法和不良信息举报中心"
+  },{
+  title: "12388",
+  url: "http://www.12388.gov.cn/",
+  intro: "中央纪委国家监委举报网站"
+  },{
+  title: "文化和旅游",
+  url: "https://jbts.mct.gov.cn/",
+  intro: "全国文化和旅游市场网上举报投诉处理系统网站"
+  },{
+  title: "国家图书馆",
+  url: "http://www.nlc.cn/",
+  intro: "中国国家图书馆"
+  }]
+ },{
+ classification: "动漫番剧",
+ content: [{
+  title: "哔哩哔哩",
+  url: "https://www.bilibili.com/anime/",
+  intro: " (゜-゜)つロ 干杯~-bilibili"
+  },{
+  title: "AcFun",
+  url: "https://www.acfun.cn/bangumilist",
+  intro: "弹幕视频网"
+  },{
+  title: "腾讯视频",
+  url: "https://v.qq.com/channel/cartoo",
+  intro: "动漫"
+  },{
+  title: "优酷",
+  url: "https://comic.youku.com",
+  intro: "动漫"
+  },{
+  title: "爱奇艺",
+  url: "https://www.iqiyi.com/dongman/",
+  intro: "动漫"
+  },{
+  title: "芒果TV",
+  url: "https://www.mgtv.com/cartoon/",
+  intro: "动漫"
+  },{
+  title: "YouTube",
+  url: "https://www.youtube.com/",
+  intro: "油管"
+  },{
+  title: "ニコニコ",
+  url: "https://www.nicovideo.jp/",
+  intro: "日本最大級の動画サービス"
+  },{
+  title: "OrAneFun弹幕视频网",
+  url: "https://www.oranefun.com/",
+  intro: "专注二次元的小站 - 一起加油吖(๑•̀ㅂ•́)و"
+  },{
+  title: "NyaFun",
+  url: "https://www.nyafun.net/",
+  intro: "专注于资源收集整理"
+  },{
+  title: "宫下动漫",
+  url: "https://arlnigdm.com/",
+  intro: "一个遗落的二次元世界"
+  },{
+  title: "橘子动漫",
+  url: "https://www.mgnacg.com/",
+  intro: "专注动漫的二次元小站"
+  },{
+  title: "異世界動漫",
+  url: "http://www.ysjdm.net/",
+  intro: "異世界動漫"
+  },{
+  title: "樱花动漫",
+  url: "http://dm88.me",
+  intro: "不知道真假"
+  },{
+  title: "ZzzFun",
+  url: "http://www.zzzfun.com",
+  intro: "ZzzFun动漫视频网 - (￣﹃￣)~zZZ"
+  },{
+  title: "奇米奇米",
+  url: "http://www.qimiqimi.com",
+  intro: "动漫迷的秘密花园"
+  },{
+  title: "アニメ新番組",
+  url: "https://bangumi.online/",
+  intro: "次世代新番站"
+  },{
+  title: "Myself 動漫",
+  url: "https://myself-bbs.com/",
+  intro: "日本在線動畫﹑免費任您收看"
+  },{
+  title: "蜜柑计划",
+  url: "https://mikanani.me/",
+  intro: "Mikan Project"
+  },{
+  title: "每日放送",
+  url: "https://bgmlist.com/",
+  intro: "番组放送"
+  },{
+  title: "萌番组",
+  url: "https://bangumi.moe/",
+  intro: "番組、萌え"
+  },{
+  title: "東京 図書館",
+  url: "https://www.tokyotosho.info",
+  intro: "Tokyo Toshokan"
+  },{
+  title: "Nyaa",
+  url: "https://nyaa.si",
+  intro: "Browse :: Nyaa"
+  },{
+  title: "ACG",
+  url: "https://acg.rip/",
+  intro: "ACG.RIP"
+  }]
+ },{
+ classification: "在线漫画",
+ content: [{
+  title: "动漫之家",
+  url: "https://www.dmzj.com/",
+  intro: ""
+  },{
+  title: "哔哩哔哩漫画",
+  url: "https://manga.bilibili.com/",
+  intro: ""
+  },{
+  title: "腾讯漫画",
+  url: "https://ac.qq.com/",
+  intro: ""
+  },{
+  title: "微博动漫",
+  url: "https://manhua.weibo.cn/",
+  intro: ""
+  },{
+  title: "漫客栈",
+  url: "https://www.mkzhan.com/",
+  intro: ""
+   },{
+  title: "咚漫",
+  url: "https://dongmanmanhua.cn/",
+  intro: ""
+  },{
+  title: "漫漫漫画",
+  url: "https://manmanapp.com/",
+  intro: ""
+  },{
+  title: "快看",
+  url: "/go.html#tpurl=https://kuaikanmanhua.com/",
+  intro: ""
+  },{
+  title: "日本-Mangabz",
+  url: "/go.html#tpurl=http://www.mangabz.com/",
+  intro: ""
+  },{
+  title: "古风漫画",
+  url: "/go.html#tpurl=https://www.gufengmh9.com/",
+  intro: ""
+  },{
+  title: "7漫画",
+  url: "/go.html#tpurl=https://www.7stary.com/",
+  intro: ""
+  },{
+  title: "我要去漫画",
+  url: "/go.html#tpurl=http://www.517mh.net/",
+  intro: ""
+  },{
+  title: "来漫画",
+  url: "/go.html#tpurl=https://m.laimanhua.net/",
+  intro: ""
+  },{
+  title: "漫画狗",
+  url: "/go.html#tpurl=https://dogemanga.com/",
+  intro: ""
+  },{
+  title: "爱米推",
+  url: "/go.html#tpurl=https://www.imitui.com/",
+  intro: ""
+  },{
+  title: "517漫画网",
+  url: "/go.html#tpurl=http://www.517mh.net/",
+  intro: ""
+  },{
+  title: "733动漫",
+  url: "/go.html#tpurl=https://www.733.so/",
+  intro: ""
+  },{
+  title: "木马动漫",
+  url: "/go.html#tpurl=https://www.omyschool.com/",
+  intro: ""
+  }]
+ },{
+ classification: "在线图片",
+ content: [{
+  title: "线稿自动上色服务",
+  url: "https://petalica-paint.pixiv.dev/index_zh.html",
+  intro: "用AI为你的画自动上色！"
+  },{
+  title: "pixiv",
+  url: "https://www.pixiv.net/",
+  intro: "P站"
+  },{
+  title: "米画师",
+  url: "https://www.mihuashi.com/",
+  intro: "找好画师，完成需求，就这么简单！"
+  },{
+  title: "插画世界",
+  url: "https://www.vilipix.com/",
+  intro: ""
+  },{
+  title: "虾萌",
+  url: "https://pixivic.com/",
+  intro: "虾萌是国内P站画师作品分享及学习交流网站"
+  },{
+  title: "pixivel",
+  url: "https://pixivel.moe/",
+  intro: ""
+  },{
+  title: "极简壁纸",
+  url: "https://bz.zzzmh.cn/index",
+  intro: "海量电脑桌面壁纸美图_4K超高清_最潮壁纸网站"
+  },{
+  title: "摸鱼网",
+  url: "https://www.mooyuu.com/",
+  intro: "让世界更萌~"
+  },{
+  title: "Wallpapers ",
+  url: "https://wallhaven.cc/",
+  intro: "Your source for the best high quality wallpapers on the Net!"
+  },{
+  title: "动漫图片和壁纸",
+  url: "https://anime-pictures.net/",
+  intro: "适合所有人的动漫图片和壁纸！"
+  },{
+  title: "Lolibooru",
+  url: "https://lolibooru.moe/post",
+  intro: ""
+  },{
+  title: "WALLPAPER ",
+  url: "https://wall.alphacoders.com/?lang=Chinese",
+  intro: "ABYSS 张壁纸的聚集地"
+  }]
+ },{
+ classification: "在线小说",
+ content: [{
+  title: "QQ阅读",
+  url: "https://book.qq.com/",
+  intro: "小说,小说网,最新热门小说-QQ阅读_阅文集团旗下网站"
+  },{
+  title: "起点中文网",
+  url: "https://www.qidian.com/",
+  intro: "小说,小说网,最新热门小说-起点中文网_阅文集团旗下网站"
+  },{
+  title: "飞卢小说",
+  url: "http://faloo.com/",
+  intro: "飞卢小说_免费小说阅读,精彩好看的小说网|创作无极限,阅读有精彩！"
+  },{
+  title: "纵横中文网",
+  url: "http://www.zongheng.com/",
+  intro: "小说,小说网-纵横中文网|最热门的免费小说网"
+  },{
+  title: "晋江文学城",
+  url: "https://www.jjwxc.net/",
+  intro: "晋江文学城(www.jjwxc.net)创立于2003年8月，是具备相当规模女性网络文学原创基地。站内作品题材多样，包括原创言情小说、都市小说、奇幻小说、纯爱小说、百合小说、轻小说以及衍生小说等，已诞生出《花千骨》《知否？知否？应是绿肥红瘦》《何以笙箫默》等上百部热门影视剧作品。晋江文学城已经从一个简单的文学爱好者集散地快速且稳健地成长为行业内的翘楚。"
+  },{
+  title: "潇湘书院",
+  url: "https://www.xxsy.net/",
+  intro: "好看的言情小说推荐_女生小说在线阅读"
+  },{
+  title: "番茄小说网",
+  url: "https://fanqienovel.com/",
+  intro: "小说,番茄小说网_好看的小说尽在番茄小说官网"
+  },{
+  title: "梧桐中文网",
+  url: "https://www.wtzw.com/",
+  intro: "七猫中文网-已有海量签约作者"
+  },{
+  title: "轻之文库轻小说",
+  url: "https://www.linovel.net/",
+  intro: "懂阅读更懂创作的轻小说平台丨发现和创造有趣的故事"
+  },{
+  title: "哔哩轻小说",
+  url: "https://www.linovelib.com/",
+  intro: "日本动漫轻小说在线阅读"
+  },{
+  title: "カクヨム",
+  url: "https://kakuyomu.jp/",
+  intro: "無料で小説を書ける、読める、伝えられる"
+  },{
+  title: "鸠摩搜索",
+  url: "https://www.jiumodiary.com/",
+  intro: "Jiumo Search 鸠摩搜索 - 文档搜索引擎"
+  }]
+ },{
+ classification: "在线音乐",
+ content: [{
+  title: "网易云音乐",
+  url: "https://music.163.com/",
+  intro: "网抑云"
+  },{
+  title: "酷狗音乐",
+  url: "https://www.kugou.com/",
+  intro: "就是歌多！小说相声也很多！"
+  },{
+  title: "QQ音乐",
+  url: "https://y.qq.com/",
+  intro: "千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！"
+  },{
+  title: "mmPlayer",
+  url: "https://netease-music.fe-mm.com/",
+  intro: "在线音乐播放器"
+  },{
+  title: "猫耳FM",
+  url: "https://www.missevan.com/",
+  intro: "来自二次元的声音_( :3」∠)_M站"
+  },{
+  title: "企鹅FM",
+  url: "https://fm.qq.com/",
+  intro: "收听独家全集有声小说在线播客，做最懂你的音乐相声评书广播剧电台"
+  },{
+  title: "喜马拉雅",
+  url: "https://www.ximalaya.com/",
+  intro: "有声小说,听书,听小说,听故事,听广播"
+  }]
+ },{
+ classification: "在线影视",
+ content: [{
+  title: "茶杯狐 Cupfox",
+  url: "https://www.cupfox.app/",
+  intro: "努力让找电影变得简单"
+  },{
+  title: "电影狗",
+  url: "https://www.dianyinggou.com/",
+  intro: "专业电影搜索引擎"
+  },{
+  title: "豌豆PRO",
+  url: "https://www.bpzhe.com/",
+  intro: "豌豆Pro是中国最大的影视资源聚合搜索引擎"
+  },{
+  title: "毕方铺",
+  url: "https://www.iizhi.cn/",
+  intro: "网盘搜索网盘资源搜索"
+  },{
+  title: "利丽娅电影",
+  url: "https://www.llyady.cc/",
+  intro: "不求人在线追剧_更新嘎嘎快"
+  },{
+  title: "人人影视分享下载站",
+  url: "https://yyets.dmesg.app/search",
+  intro: "搜索资源"
+  }]
+ },{
+ classification: "游戏平台",
+ content: [{
+  title: "Steam ",
+  url: "https://store.steampowered.com/",
+  intro: "欢迎来到 Steam"
+  },{
+  title: "ubisoft",
+  url: "https://store.ubisoft.com/cn/home",
+  intro: "欢迎访问育碧国际中文商城"
+  },{
+  title: "Epic Games",
+  url: "https://store.epicgames.com/zh-CN/",
+  intro: "Epic游戏商城 | 下载畅玩 PC 平台游戏、模组、DLC 和更多 – Epic Games"
+  },{
+  title: "PC Games",
+  url: "https://www.ea.com/games/library/pc-download?isLocalized=true",
+  intro: "PC Games and Computer Video Games for Download - Electronic Arts"
+  },{
+  title: "GOG",
+  url: "https://www.gog.com/",
+  intro: ""
+  },{
+  title: "WeGame",
+  url: "https://www.wegame.com.cn/",
+  intro: "WeGame游戏商店，致力于发现全球好游戏"
+  },{
+  title: "TapTap",
+  url: "https://www.taptap.cn/",
+  intro: "TapTap | 发现好游戏"
+  }]
+ },{
+ classification: "在线工具",
+ content: [{
+  title: "火绒安全",
+  url: "https://www.huorong.cn/",
+  intro: "专业尽职  极致低调  只为巩固安全防线"
+  },{
+  title: "CSDN",
+  url: "https://www.csdn.net/",
+  intro: "专业开发者社区"
+  },{
+  title: "吾爱破解",
+  url: "https://www.52pojie.cn/",
+  intro: "LCG - LSG|安卓破解|病毒分析"
+  },{
+  title: "GITHUB",
+  url: "https://gitee.com/",
+  intro: "让我们从这里开始构建"
+  },{
+  title: "GITEE",
+  url: "https://gitee.com/",
+  intro: "DevOps一站式研发效能平台"
+  },{
+  title: "CODING 代码托管",
+  url: "https://coding.net/products/repo",
+  intro: "安全、高速的 Git/SVN 代码仓库服务"
+  },{
+  title: "菜鸟工具",
+  url: "https://c.runoob.com/",
+  intro: "不止于工具"
+  },{
+  title: "站长工具",
+  url: "https://tool.chinaz.com/",
+  intro: "站长工具是站长的必备工具"
+  },{
+  title: "SPEEDTEST",
+  url: "https://www.speedtest.net/zh-Hans",
+  intro: ""
+  },{
+  title: "IP 地址查询",
+  url: "https://ip.skk.moe/",
+  intro: "查看我的 IP 地址 | 查询本机 IP 地址及归属地 | 查看 DNS 出口 IP | 测试 CDN 命中节点"
+  }]
+ },{
+ classification: "SRC平台",
+ content: [{
+  title: "小米安全中心",
+  url: "https://sec.xiaomi.com/#/",
+  intro: ""
+  },{
+  title: "哔哩哔哩安全",
+  url: "https://security.bilibili.com/",
+  intro: "哔哩哔哩安全应急响应中心"
+  },{
+  title: "腾讯安全应急响应中心",
+  url: "https://security.tencent.com/",
+  intro: ""
+  },{
+  title: "阿里安全响应中心",
+  url: "https://security.alibaba.com/",
+  intro: ""
+  },{
+  title: "蚂蚁集团安全应急响应中心官网",
+  url: "https://security.alipay.com/",
+  intro: ""
+  },{
+  title: "百度安全应急响应中心",
+  url: "https://bsrc.baidu.com/v2/#/home",
+  intro: ""
+  },{
+  title: "网易安全中心",
+  url: "https://aq.163.com/",
+  intro: ""
+  }]
+ },{
+ classification: "系统镜像",
+ content: [{
+  title: "HelloWindows.cn",
+  url: "https://hellowindows.cn/",
+  intro: "精校 完整 极致 Windows系统下载仓储站"
+  },{
+  title: "MSDN, 我告诉你",
+  url: "https://msdn.itellyou.cn/",
+  intro: " 做一个安静的工具站"
+  },{
+  title: "腾讯软件源",
+  url: "https://mirrors.cloud.tencent.com/",
+  intro: ""
+  },{
+  title: "北京外国语大学开源软件镜像站",
+  url: "https://mirrors.bfsu.edu.cn/",
+  intro: ""
+  },{
+  title: "校园网联合镜像站",
+  url: "https://mirrors.cernet.edu.cn/site",
+  intro: ""
+  },{
+  title: "清华大学开源软件镜像站",
+  url: "https://mirrors.tuna.tsinghua.edu.cn/",
+  intro: ""
+  }]
+ },{
+ classification: "工具平台",
+ content: [{
+  title: "Sunny-Ngrok",
+  url: "https://www.ngrok.cc/",
+  intro: "支持HTTPS、UDP转发"
+  },{
+  title: "FRP 内网穿透工具 ",
+  url: "https://diannaobos.com/frp/",
+  intro: "FRP服务可以分配给你一个域名让你本地的web项目提供给外网访问，特别适合向别人展示你本机的web demo 以及调试一些远程的API (比如微信公众号，企业号的开发)"
+  },{
+  title: "Nmap",
+  url: "https://nmap.org/",
+  intro: "Nmap（“网络映射器”）"
+  },{
+  title: "sqlmap",
+  url: "https://sqlmap.org/",
+  intro: "sqlmap 是一种开源渗透测试工具"
+  },{
+  title: "PentestBox",
+  url: "https://pentestbox.org/zh/",
+  intro: "PentestBox是一款Windows平台下预配置的便携式开源渗透测试环境 "
+  },{
+  title: "ETTERCAP",
+  url: "https://www.ettercap-project.org/",
+  intro: "Ettercap是一个全面的套件，适用于中间攻击的人。它具有嗅探实时连接，动态内容过滤和许多其他有趣的技巧。它支持许多协议的主动和被动剖析，并包括许多用于网络和主机分析的功能。"
+  },{
+  title: "Telerik Fiddler ",
+  url: "https://www.telerik.com/fiddler",
+  intro: "错误。发生。重新构想调试和故障排除"
+  },{
+  title: "网络威胁",
+  url: "https://cybermap.kaspersky.com/cn",
+  intro: "实时地图"
+  },{
+  title: "Live Cyber Threat Map ",
+  url: "https://threatmap.checkpoint.com/",
+  intro: " Check Point"
+  }]
+ }];
 
-<p class="mdui-typo-caption">
-一些还不错的查询工具：
-<kbd><a href="https://www.reg007.com/">REG007</a></kbd>
-<kbd><a href="https://monitor.firefox.com/" >火狐监视器</a></kbd>
-<kbd><a href="https://haveibeenpwned.com/" >我被骗了吗？</a></kbd>
-</p>
-<p class="mdui-typo-caption">
-ChatGPT镜像：
-<kbd><a href="https://supremes.pro/">1号镜像</a></kbd>
-<kbd><a href="https://chat.bnu120.space/" >2号镜像</a></kbd>
-<kbd><a href="http://chat.68686.ltd/" >3号镜像</a></kbd>
-</p>
-<p class="mdui-typo-caption">
-临时网络传输工具：
-<kbd><a href="https://snapdrop.net/">局域网传输</a></kbd>
-<kbd><a href="https://www.wenshushu.cn/">文件叔叔</a></kbd>
-<kbd><a href="https://airportal.cn/">AirPortal 空投快传</a></kbd>
-<kbd><a href="https://anonfiles.com">匿名文件上传</a></kbd>
-<kbd><a href="https://www.lanzou.com/">蓝奏·云存储</a></kbd>
-</p>
-<p class="mdui-typo-caption">
-镜像：
-<kbd><a href="https://scholar.chongbuluo.com/" >学术搜索</a></kbd>
-<kbd><a href="https://ac.scmor.com/" >谷歌学术镜像</a></kbd>
-</p>
-<p class="mdui-typo-caption">
-临时邮箱注册：
-<kbd><a href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a></kbd>
-<kbd><a href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a></kbd>
-<kbd><a href="https://www.moakt.com/zh/" target="_blank">临时邮箱专业服务</a></kbd>
-<kbd><a href="https://tempmail.cn/" target="_blank">临时邮箱</a></kbd>
-<kbd><a href="https://smailpro.com/" target="_blank">临时邮箱</a></kbd>
-<kbd><a href="https://mail.tm/zh/" target="_blank">临时邮箱</a></kbd>
-<kbd><a href="https://bonds.id" target="_blank">临时电子邮箱</a></kbd>
-<kbd><a href="https://etempmail.com/" target="_blank">临时邮箱</a></kbd>
-<kbd><a href="https://www.emailnator.com/" target="_blank">临时邮箱</a></kbd>
-
-</p>
-<p class="mdui-typo-caption">
-<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JMIJZqK4MvC0pOsF/quote.js?theme=#000000,#333333,#999999,#333333,#FFFFFF,#B880F5,14&f=14"></script>
-</p>
-</div></div>
-</section>
-</main>
-
-<!-- 页脚 -->
-<br>
+//注册索引+1的helper
+var handleHelper = Handlebars.registerHelper("addOne",function(index){
+//返回+1之后的结果
+return index+1;
+});
+//解析模版
+var Navstmp = Handlebars.compile($("#Navs-tmp").html());
+var Cotetmp = Handlebars.compile($("#Cote-tmp").html());
+//生成html
+var Navs = Navstmp(data);
+var Cote = Cotetmp(data);
+//插入到页面
+$("#Navs").append(Navs);
+$("#Cote").append(Cote);
+</script>
 <footer class="mdui-color-white">
-<div class="mdui-container">
-<div class="mdui-card-content mdui-typo">
+<div class="mdui-typo">
 <b class="mdui-text-color-blue-a700">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> JIXIEJIDIGUAN ナビ姫.</b>
 </div>
-</div>
 </footer>
+</main>
 </body>
 </html>
