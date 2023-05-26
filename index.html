@@ -1,144 +1,358 @@
 <html lang="zh-CN">
 <head>
 <title>画的个人记录</title>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta name="referrer" content="no-referrer" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN,机械极地馆">
-<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。">
-<link rel="icon" href="./favicon.ico?v=1.0" />
-<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0" />
-<script type="text/javascript" src="./start/mdui/js/mdui.min.js?v=1.0"></script>
-<script type="text/javascript" src="./start/jquery.min.js?v=1.0"></script>
-<link rel="stylesheet" href="./start/index.css" />
-<script type="text/javascript" src="./start/origin.js" /></script>
-<style>.a {
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="keywords" content="画的个人记录" />
+<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
+<!-- ico -->
+<link rel="icon" href="./favicon.ico?v=1.0000" type="image/png" />
+<!-- icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0000" />
+<link rel="stylesheet" href="./start/index.css?v=1.0000" />
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-uaZ0UXmB7NHxAxQawA8Ow2wWjdsedpRu7nJRSoI2mjnwtY8V5YiCWavoIpo1AhWPMLiW5iEeavmA3JJ2+1idUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.min.js" integrity="sha512-wOLiP6uL5tNrV1FiutKtAyQGGJ1CWAsqQ6Kp2XZ12/CvZxw8MvNJfdhh0yTwjPIir4SWag2/MHrseR7PRmNtvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./start/mdui/js/mdui.min.js?v=1.0000"></script>
+<script src="./start/jquery.min.js?v=1.0000"></script>
+<script src="./start/origin.js?v=1.0000"></script>
+<style>
+.nav-blur-dark {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(60, 60, 60, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  transition: all 0.5s;
+}
+.nav-blur-dark:hover {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(60, 60, 60, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+.sap {
+  font-size: 1.5rem;
+  font-weight: 100;
+  padding-bottom: 5px;
+  text-align: center;
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  color: white;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+}
+.hdpicEach {
+  justify-content: center, center;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  position: absolute;
+  filter: brightness(20%);
+}
+.carousel-item {
+  overflow: hidden;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-image: url(./start/img/1677363810933.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-}</style></head>
-<body class="mdui-drawer-body-right">
-<div class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar">
-<div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">画的个人记录.</div>
-<div class="mdui-toolbar-spacer"></div>
-</div>
-</div>
-<div class="mdui-drawer mdui-drawer-right mdui-appbar-with-toolbar" id="left-drawer">
-<ul class="mdui-list">
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="//jixiejidiguan.eu.org" class="mdui-ripple">回到首页</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#fujian" class="mdui-ripple">更多附件</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#guoman" class="mdui-ripple">国漫收藏</a></li>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="#yqlj" class="mdui-ripple">友情链接</a></li>
-<div class="mdui-divider"></div>
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="https://www.yuque.com/aedelnz/" class="mdui-ripple">语雀空间</a></li>
+}
+.carousel-inner {
+  margin-top: -60px;
+}
+.hdpicText {
+  z-index: 25;
+  position: relative;
+  color: white;
+  padding-top: 25vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+.ArProgress {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background-color: #AAAAAA;
+}
+.ArProgress>div {
+  position: relative;
+  height: 3px;
+  transition: width .5s ease-in-out;
+  background-color: green;
+}.hdpicCount {
+  animation-timing-function: linear;
+  animation-name: hdpicCount;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes hdpicCount {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+</style>
+</head>
+<body class="bg-dark bg-gradient text-white" style="padding-top: 60px;">
+
+<nav class="navbar navbar-expand-lg nav-blur-dark fixed-top" style="min-height: 60px;">
+<div class="container-fluid">
+<a class="navbar-brand fw-bold text-white" href="#"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+<span class="navbar-text">
+<ul class="navbar-nav me-auto mb-lg-0">
+<li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="#页面导航">页面导航</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#动漫收藏">动漫收藏</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="#友情链接">友情链接</a></li>
+<li class="nav-item"><a class="nav-link text-white" href="https://www.yuque.com/aedelnz/">语雀空间</a></li>
 </ul>
-</div>
-<div class="mdui-typo a" style="height: 100vh;width: 100%;background-position: top center;background-repeat: no-repeat;background-attachment: scroll;background-size: cover;z-index: -9;">
-<div class="mdui-text-color-green-a700" style="top: 35%;position: relative;padding: 0 10px;">
-<h1 class="mdui-text-center mdui-typo-headline" style="font-weight: bold;">画的个人记录</h1>
-<p class="mdui-text-center mdui-typo-subheading-opacity"><span id="hitokoto">D: 获取中...</span></p>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</span>
 </div>
 </div>
-<section id="fujian" class="mdui-container"><br>
-<div class="mdui-card-primary-title">更多附件</div>
-<div class="mdui-card">
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-grid-list">
-<div class="mdui-list">
-<div class="mdui-col">
-<a href="/A2zml" class="mdui-list-item mdui-ripple mdui-typo-headline">导航</a>
-</div>
-<div class="mdui-col">
-<a href="/A2zml/Monitor" class="mdui-list-item mdui-ripple mdui-typo-headline">网站监控</a>
-</div>
-<div class="mdui-col">
-<a href="/MIUI" class="mdui-list-item mdui-ripple mdui-typo-headline">MIUI</a>
-</div>
-<div class="mdui-col">
-<a href="https://s.jixiejidiguan.top/Anime" class="mdui-list-item mdui-ripple mdui-typo-headline">艺枔动漫</a>
-</div>
-<div class="mdui-col">
-<a href="https://alist.jixiejidiguan.top/" class="mdui-list-item mdui-ripple mdui-typo-headline">域小盘酱</a>
-</div>
-</div></div></div>
-</section>
+</nav>
 
 
-<!--来自腾讯视频的国漫收藏-->
-<section id="guoman" class="mdui-container"><br>
-<div class="mdui-card-primary-title">国漫收藏</div>
-<div class="mdui-card"><div class="mdui-card-content"><br>
-<div class="mdui-typo-subheading mdui-text-center">腾讯视频</div>
-<div class="mdui-divider"></div><br>
+<div class="fixed-bottom container" style="padding-top:60px"></div>
 
+<div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+<div class="carousel-inner" id="carousel-inner">
+<div class="carousel-item active">
+<img src="https://image.coolapk.com/picture/2023/0513/19/860675_39b192d0_6037_0786_248@930x2048.jpeg.m.jpg" class="hdpicEach" alt="...">
+<div class="hdpicText text-white">
+<div class="fs-1" style="background: linear-gradient(75deg,rgba(255, 12, 204, 1) 0%,rgb(0, 217, 255) 33.33%,rgba(255, 255, 255, 0) 66.67%,rgba(255, 255, 255, 0) 100%);background-size: 300% 100%;background-clip: text;-webkit-background-clip: text;color: transparent;animation-name: colorTitle;animation-duration: 5s;">
+画的个人记录</div>
+<p class="fs-4">中在不断的尝试中完善信息</p>
+<span id="hitokoto">获取中</span>
+<script src="https://v1.hitokoto.cn/?c=a&encode=js&select=%23hitokoto" defer></script>
+<div style="padding-top: 9%;"><div class="ArProgress"><div class="hdpicCount"></div></div></div>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://image.coolapk.com/picture/2023/0516/10/2519278_45e3f34f_4876_6055_364@1440x2569.jpeg.m.jpg" class="hdpicEach" alt="...">
+<div class="hdpicText text-white">
+<h2 class="fs-1" style="background: linear-gradient(75deg,rgba(255, 12, 204, 1) 0%,rgb(0, 217, 255) 33.33%,rgba(255, 255, 255, 0) 66.67%,rgba(255, 255, 255, 0) 100%);background-size: 300% 100%;background-clip: text;-webkit-background-clip: text;color: transparent;animation-name: colorTitle;animation-duration: 5s;">
+机械极地馆</h2>
+<p class="fs-4">这里是第一次相遇，也是最初的开始。</p>
+<div style="padding-top: 9%;"><div class="ArProgress"><div class="hdpicCount"></div></div></div>
+</div>
+</div>
+<style>
+.danmu {
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+  font-size: 20px;
+  color: white;
+}
 
+@keyframes move {
+  from {
+      right: 0;
+  }
 
+  to {
+      right: calc(100% + 200px);
+  }
+}
+</style>
+<script>
+  function randomMessage() {
+    var messages = [
+        "今天天气真好！",
+        "加油，明天会更好！",
+        "生命在于折腾，奋斗不止步！",
+        "万物皆可学，只要你肯花时间。",
+        "每一次努力，都不会白费。",
+        "有志者，事竟成，破釜沉舟，百二秦关终属楚。",
+        "成功源于自信，自信源于经验，经验源于失败。",
+        "人生就像一杯茶，不会苦一辈子，但总会苦一阵子。",
+        "不要担心一次失败，因为失败是成功之母。",
+        "坚持不懈，直至成功。",
+        "快乐和幸福不是因为拥有更多，而是因为计较的更少。",
+        "相信自己，你可以做到！",
+        "成功需要耐心，耐心需要信心，信心需要勇气。",
+        "勤奋是成功之母，懒惰是失败之父。",
+        "不管过去发生了什么，未来都是你的。",
+        "成功的关键在于坚持。",
+        "生活就像海洋，只有意志坚定的人才能到达彼岸。",
+        "不要因为失败而放弃，因为失败是通向成功的必经之路。",
+        "相信自己，你就能创造奇迹。",
+        "永远不要放弃你的梦想，因为梦想能够改变你的人生。",
+        "成功在于行动，不在于结果。",
+        "不要让过去的错误影响你的未来。",
+        "成功的秘密在于始终坚信自己。",
+        "只有敢于尝试，才能收获成功。"
+    ];
+    var randomIndex = Math.floor(Math.random() * messages.length);
+    return messages[randomIndex];
+}
+// 定义一个函数用来创建和插入弹幕
+function createDanmu(text) {
+    // 创建一个span元素
+    var danmu = document.createElement("span");
+    // 设置其文本内容为参数值
+    danmu.innerText = text;
+    // 设置其类名为danmu
+    danmu.className = "danmu";
+
+    // 设置其随机的高度
+    danmu.style.top = Math.random() * (container.clientHeight - danmu.clientHeight) + "px";
+    // 设置其随机的颜色
+    danmu.style.color = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," +
+        Math.floor(Math.random() * 256) + ")";
+    // 将span元素插入到容器元素中
+    container.appendChild(danmu);
+    // 使用CSS动画来让span元素从右向左移动
+    danmu.style.animation = "move " + (5 + Math.random() * 5) + "s linear infinite";
+}
+// 获取容器元素
+var container = document.getElementById("carousel-inner");
+// 定义一个定时器，每隔一秒创建并插入一条弹幕
+setInterval(function () {
+    // 随机选择一个弹幕内容
+    var text = randomMessage();
+    // 调用函数创建并插入弹幕
+    createDanmu(text);
+}, 3500);
+</script>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+</button>
+</div>
+
+<div class="sap mb-3">页面导航</div>
+<div id="页面导航" class="content content-full"><div class="card-group mb-2">
+
+<div class="card text-bg-dark">
+<div class="card-header lead text-white-50"><i class="bi bi-badge-8k-fill" width="30px" style="border-radius:30%;margin-right:5px"></i>页面</div>
+<div class="card-body">
+我不曾忘记 (游戏《原神》2023新春会同人曲)
+<audio class="btn mb-2 btn-light" src="http://music.163.com/song/media/outer/url?id=2014336709.mp3" ontimeupdate="" controls="" style="width: 100%"></audio>
+<a href="/A2zml" class="btn btn-lg mb-2 btn-outline-primary">爱莫能助</a>
+<a href="/MIUI" class="btn mb-2 btn-outline-secondary">MIUI</a>
+<a href="/MIUI/vivo" class="btn btn-sm mb-2 btn-outline-success">vivo & IQOO</a>
+<a href="/A2zml/Monitor" class="btn mb-2 btn-outline-danger">网站监控</a>
+<a href="/A2zml/v2" class="btn btn-lg mb-2 btn-outline-warning">魔法禁书</a>
+</div>
+</div>
+
+<div class="card text-bg-dark">
+<div class="card-header lead text-white-50"><i class="bi bi-ethernet" width="30px" style="border-radius:30%;margin-right:5px"></i>网络存储</div>
+<div class="card-body">
+<div class="fs-3">饕餮云盘</div>
+<small class="text-secondary">不稳定的链接</small><br>
+<a href="https://alist.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<hr>
+<div class="fs-3">Taotie Cloud Disk</div>
+<small class="text-secondary">第二地址链接</small><br>
+<a href="https://yunpan.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+</div>
+</div>
+
+<div class="card text-bg-dark">
+<div class="card-header lead text-white-50"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">旗下项目</div>
+<div class="card-body">
+<div class="fs-3">Zito 社区</div>
+<small class="text-secondary">一个简单不过的 Zito 社区</small><br>
+<a href="https://zito.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<hr>
+<div class="fs-3">狻猊云</div>
+<small class="text-secondary">为用户提供个性化的主机租用和网络应用解决方案</small><br>
+<a href="https://cloud.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<hr>
+<div class="fs-3">Outside 虚拟主机</div>
+<small class="text-secondary">免实名验证购买主机</small><br>
+<a href="http://outside.jixiejidiguan.eu.org" class="card-link" target="_blank">点击了解</a>
+</div>
+</div>
+</div></div>
+
+<div class="sap mb-3">动漫收藏</div>
+<div id="动漫收藏" class="content content-full"><div class="card-group mb-2">
+<div class="container-fluid mb-2 fs-4 text-white text-center">来着腾讯视频和哔哩哔哩的视频收藏</div>
+<div class="container-fluid p-3 card text-bg-dark mb-5">
 <div id="cartoon"></div>
+</div>
 <script>
 $(function(){    
 $.ajax({
 //请求方式    
  type:"GET",    
 //文件位置    
-url:"./start/json/cartoon.json",  
+url:"./start/json/cartoon.json",
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
+var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-6">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="margin-bottom: 4px;margin-top: 4px;padding-right: 4px;"><div class="mdui-hoverable mdui-card mdui-card-media" style="border-radius: 8px;"><a  href='+n.url+' title='+n.title+' ><div style="padding-top: 136.74%;height: 0;overflow: hidden;position: relative;"><img class="mdui-img-fluid" style="overflow: hidden;position: absolute;width: 100%;height: 100%;left: 0;top: 0;" src='+n.img+' alt='+n.title+' /></div><div class="mdui-card-media-covered mdui-text-truncate">'+n.title+'</div></div></a></div></div>';
+str+=`
+<div class="col">
+<div class="card mb-2">
+<a href="`+n.url+`" title="`+n.title+`">
+<img src="`+n.img+`" class="card-img-top">
+<div class="card-footer">
+<small class="fs-5 text-muted">`+n.title+`</small>
+</div>
+</a>
+</div>
+</div>
+`;
 });
 str+='</div>';
 console.log(data)
 $("#cartoon").append(str);
 }
-});    
-});   
-</script><br>
-<div class="mdui-typo-subheading mdui-text-center">哔哩哔哩</div>
-<div class="mdui-divider"></div><br>
-<div id="bilibili"></div>
-<script>    
-$(function(){    
-$.ajax({    
+});
+$.ajax({
 //请求方式    
-type:"GET",    
-//文件位置
-url:"./start/json/bilibili.json",  
+ type:"GET",    
+//文件位置    
+url:"./start/json/bilibili.json",
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-6 mdui-grid-list">';
+var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-6">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><div style="margin-bottom: 4px;margin-top: 4px;padding-right: 4px;"><div class="mdui-hoverable mdui-card mdui-card-media" style="border-radius: 8px;"><a  href='+n.url+' title='+n.title+' ><div style="padding-top: 136.74%;height: 0;overflow: hidden;position: relative;"><img class="mdui-img-fluid" style="overflow: hidden;position: absolute;width: 100%;height: 100%;left: 0;top: 0;" src='+n.img+' alt='+n.title+' /></div><div class="mdui-card-media-covered mdui-text-truncate">'+n.title+'</div></div></a></div></div>';
+str+=`
+<div class="col">
+<div class="card mb-2">
+<a href="`+n.url+`" title="`+n.title+`">
+<img src="`+n.img+`" class="card-img-top">
+<div class="card-footer">
+<small class="fs-5 text-muted">`+n.title+`</small>
+</div>
+</a>
+</div>
+</div>
+`;
 });
 str+='</div>';
 console.log(data)
-$("#bilibili").append(str);
-}    
+$("#cartoon").append(str);
+}
 });
 });
 </script>
 </div></div>
-</section>
 
-
-<!-- 友情链接 -->
-<section id="yqlj" class="mdui-container"><br>
-<div class="mdui-card-primary-title">友情链接</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
+<div class="sap mb-3">友情链接</div>
+<div id="友情链接" class="content content-full"><div class="card-group mb-2">
+<div class="container-fluid card text-bg-dark mb-3">
 <div class="mdui-typo-caption mdui-text-color-deep-orange-a400">
 <div class="mdui-row-xs-1 mdui-row-sm-3 mdui-grid-list mdui-list">
 <div class="mdui-col">
@@ -159,58 +373,94 @@ $("#bilibili").append(str);
 </div>
 <div class="mdui-col">
 <b class="mdui-text-color-light-blue">PS:</b>
-<p class="mdui-text-color-black">
+<p class="text-white">
 链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！
 <a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请">去申请友情链接</a></p>
 </div>
 </div>
 </div>
 <div id="Links"></div>
+</div>
 <script>
 $(function(){    
-$.ajax({    
+$.ajax({
 //请求方式    
-type:"GET",    
+ type:"GET",    
 //文件位置    
-url:"./start/json/Links.json",  
+url:"./start/json/Links.json",
 //返回数据格式为json,也可以是其他格式如    
 dataType: "json",    
 //请求成功后要执行的函数，拼接html    
 success: function(data){    
-var str='<div class="mdui-row-xs-2 mdui-row-sm-3 mdui-grid-list mdui-list">';
+var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 mdui-list">';
 $.each(data,function(i,n){    
-str+='<div class="mdui-col"><li class="mdui-list-item mdui-ripple"><div class="mdui-list-item-avatar"><img src='+n.img+' alt='+n.title+' /></div><div class="mdui-list-item-content mdui-text-truncate"><a class="mdui-typo-caption" href='+n.url+' title='+n.title+'>'+n.title+'</a></div></li></div>';
+str+=`
+<div class="col">
+<a href="`+n.url+`" title="`+n.title+`">
+<li class="mdui-list-item mdui-ripple">
+<div class="mdui-list-item-avatar">
+<img src="`+n.img+`" />
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title">`+n.title+`</div>
+</div>
+</li>
+<li class="mdui-divider-inset mdui-m-y-0"></li>
+</a>
+</div>
+`;
 });
 str+='</div>';
 console.log(data)
 $("#Links").append(str);
-}    
-});    
-});   
+}
+});
+});
 </script>
 </div></div>
-</section>
 
 
+<div class="sap mb-3">关于我们</div>
+<div class="content content-full"><div class="card-group mb-2">
+<div class="container-fluid"><div class="row">
 
-<!-- footer -->
-<br>
-<footer class="mdui-card mdui-color-white">
-<div class="mdui-container">
-<div class="mdui-card-content mdui-typo">
-<div class="mdui-float-left">
-<a href="#">返回顶部</a>
-<a target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a>
-<a target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
-<a target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
-<a target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
-</div><br>
-<b class="mdui-text-color-blue-a700">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> 画的个人记录.</b>
-<a class="mdui-text-color-light-blue-a700" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
+<div class="col-md-6 col-lg-4 p-1">
+<div class="card text-bg-dark">
+<div class="card-body">
+<h5 class="card-title"></h5>
+<h6 class="card-subtitle mb-2 small">
+</h6>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 p-1">
+<div class="card text-bg-dark">
+<div class="card-body">
+<h5 class="card-title"></h5>
+<h6 class="card-subtitle mb-2 small">
+<ul class="nav">
+<li class="nav-item"><a class="nav-link active" aria-current="page" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a></li>
+<li class="nav-item"><a class="nav-link" target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
+<li class="nav-item"><a class="nav-link" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a></li>
+<li class="nav-item"><a class="nav-link" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a></li>
+</ul>
+</h6>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 p-1">
+<div class="card text-bg-dark">
+<div class="card-body">
+<h5 class="card-title">备案号</h5>
+<h6 class="card-subtitle mb-2 small"><a href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></h6>
 <a class="mdui-text-color-pink-accent" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
 <a class="mdui-float-right mdui-text-color-red" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
 </div>
 </div>
-</footer>
-</body>
-</html>
+</div>
+
+
+</div></div>
+</div></div>
