@@ -1,0 +1,206 @@
+{
+  "codename": "moonstone",
+  "cnname": "POCO X5 5G",
+  "enname": "POCO X5 5G",
+  "attentions": [
+    {
+      "cn": "",
+      "en": ""
+    }
+  ],
+  "cdid": "",
+  "ccshow": "1",
+  "cbshow": "",
+  "csid": [],
+  "cbid": [],
+  "gdid": "",
+  "pcid": "86339",
+  "branches": [
+    {
+      "code":"moonstone_tw_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "cntw",
+      "show": "1",
+      "cnname": "中国台湾地区稳定版",
+      "enname": "China Taiwan Stable",
+      "links": [
+        {
+          "miui": "V13.0.5.0.SMPTWXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONETWGlobal_V13.0.5.0.SMPTWXM_0b0194c0ef_12.0.zip",
+          "fastboot": "moonstone_tw_global_images_V13.0.5.0.SMPTWXM_20230404.0000.00_12.0_global_d364037b0f.tgz"
+        },
+        {
+          "miui": "V13.0.1.0.SMPTWXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONETWGlobal_V13.0.1.0.SMPTWXM_5f4750fe04_12.0.zip",
+          "fastboot": "moonstone_tw_global_images_V13.0.1.0.SMPTWXM_20221227.0000.00_12.0_global_02033a1a68.tgz"
+        }
+      ]
+    },
+    {
+      "code":"moonstone_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "mgbs",
+      "show": "1",
+      "cnname": "国际稳定版",
+      "enname": "Global Stable",
+      "links": [
+        {
+          "miui": "V14.0.3.0.TMPMIXM",
+          "android": "13.0",
+          "recovery": "miui_MOONSTONEGlobal_V14.0.3.0.TMPMIXM_0920ca8fad_13.0.zip",
+          "fastboot": "moonstone_global_images_V14.0.3.0.TMPMIXM_20230503.0000.00_13.0_global_432fcf2f44.tgz"
+        },
+        {
+          "miui": "V14.0.2.0.TMPMIXM",
+          "android": "13.0",
+          "recovery": "miui_MOONSTONEGlobal_V14.0.2.0.TMPMIXM_d0839a6673_13.0.zip",
+          "fastboot": "moonstone_global_images_V14.0.2.0.TMPMIXM_20230412.0000.00_13.0_global_961b28eb5e.tgz"
+        },
+        {
+          "miui": "V13.0.7.0.SMPMIXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEGlobal_V13.0.7.0.SMPMIXM_e4e1771d4c_12.0.zip",
+          "fastboot": "moonstone_global_images_V13.0.7.0.SMPMIXM_20230324.0000.00_12.0_global_52e89d1c0f.tgz"
+        },
+        {
+          "miui": "V13.0.5.0.SMPMIXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEGlobal_V13.0.5.0.SMPMIXM_10c375ffe2_12.0.zip",
+          "fastboot": "moonstone_global_images_V13.0.5.0.SMPMIXM_20230208.0000.00_12.0_global_6eaaacf000.tgz"
+        },
+        {
+          "miui": "V13.0.3.0.SMPMIXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEGlobal_V13.0.3.0.SMPMIXM_e539872d99_12.0.zip",
+          "fastboot": "moonstone_global_images_V13.0.3.0.SMPMIXM_20230110.0000.00_12.0_global_4779e7c1a8.tgz"
+        },
+        {
+          "miui": "V13.0.2.0.SMPMIXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEGlobal_V13.0.2.0.SMPMIXM_48897ca7de_12.0.zip",
+          "fastboot": "moonstone_global_images_V13.0.2.0.SMPMIXM_20221217.0000.00_12.0_global_ad647ca438.tgz"
+        }
+      ]
+    },
+    {
+      "code":"moonstone_eea_global",
+      "btag":"F",
+      "region":"eea",
+      "carrier":[],
+      "branch": "eeas",
+      "show": "1",
+      "cnname": "欧洲EEA稳定版",
+      "enname": "Europe EEA Stable",
+      "links": [
+        {
+          "miui": "V14.0.2.0.TMPEUXM",
+          "android": "13.0",
+          "recovery": "miui_MOONSTONEEEAGlobal_V14.0.2.0.TMPEUXM_40f4ce6a6a_13.0.zip",
+          "fastboot": "moonstone_eea_global_images_V14.0.2.0.TMPEUXM_20230327.0000.00_13.0_eea_2f3259037d.tgz"
+        },
+        {
+          "miui": "V13.0.4.0.SMPEUXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEEEAGlobal_V13.0.4.0.SMPEUXM_abe32cb1f0_12.0.zip",
+          "fastboot": "moonstone_eea_global_images_V13.0.4.0.SMPEUXM_20230308.0000.00_12.0_eea_674a1ad179.tgz"
+        },
+        {
+          "miui": "V13.0.1.0.SMPEUXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEEEAGlobal_V13.0.1.0.SMPEUXM_eb220d7cfd_12.0.zip",
+          "fastboot": "moonstone_eea_global_images_V13.0.1.0.SMPEUXM_20221221.0000.00_12.0_eea_d197889d57.tgz"
+        }
+      ]
+    },
+    {
+      "code":"moonstone_ru_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "russ",
+      "show": "1",
+      "cnname": "俄罗斯稳定版",
+      "enname": "Russia Stable",
+      "links": [
+        {
+          "miui": "V13.0.4.0.SMPRUXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONERUGlobal_V13.0.4.0.SMPRUXM_03842e7ce9_12.0.zip",
+          "fastboot": "moonstone_ru_global_images_V13.0.4.0.SMPRUXM_20230322.0000.00_12.0_global_032a744e4d.tgz"
+        },
+        {
+          "miui": "V13.0.2.0.SMPRUXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONERUGlobal_V13.0.2.0.SMPRUXM_a36e181b7b_12.0.zip",
+          "fastboot": "moonstone_ru_global_images_V13.0.2.0.SMPRUXM_20230214.0000.00_12.0_global_fd5adf4c20.tgz"
+        },
+        {
+          "miui": "V13.0.1.0.SMPRUXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONERUGlobal_V13.0.1.0.SMPRUXM_4ff02fbdc0_12.0.zip",
+          "fastboot": "moonstone_ru_global_images_V13.0.1.0.SMPRUXM_20221207.0000.00_12.0_global_0b2ce6afdc.tgz"
+        }
+      ]
+    },
+    {
+      "code":"moonstone_in_global",
+      "btag":"F",
+      "region":"in",
+      "carrier":[],
+      "branch": "inds",
+      "show": "1",
+      "cnname": "印度稳定版",
+      "enname": "India Stable",
+      "links": [
+        {
+          "miui": "V14.0.2.0.TMPINXM",
+          "android": "13.0",
+          "recovery": "miui_MOONSTONEINGlobal_V14.0.2.0.TMPINXM_209d9aee4a_13.0.zip",
+          "fastboot": "moonstone_in_global_images_V14.0.2.0.TMPINXM_20230415.0000.00_13.0_in_fae78d540a.tgz"
+        },
+        {
+          "miui": "V13.0.3.0.SMPINXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEINGlobal_V13.0.3.0.SMPINXM_eca2b50868_12.0.zip",
+          "fastboot": "moonstone_in_global_images_V13.0.3.0.SMPINXM_20230321.0000.00_12.0_in_1741429bb4.tgz"
+        },
+        {
+          "miui": "V13.0.1.0.SMPINXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEINGlobal_V13.0.1.0.SMPINXM_7dc8df9f8b_12.0.zip",
+          "fastboot": "moonstone_in_global_images_V13.0.1.0.SMPINXM_20221230.0000.00_12.0_in_a71f7bfce0.tgz"
+        }
+      ]
+    },
+    {
+      "code":"moonstone_id_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "inns",
+      "show": "1",
+      "cnname": "印度尼西亚稳定版",
+      "enname": "Indonesia Stable",
+      "links": [
+        {
+          "miui": "V13.0.4.0.SMPIDXM",
+          "android": "12.0",
+          "recovery": "",
+          "fastboot": "moonstone_id_global_images_V13.0.4.0.SMPIDXM_20230329.0000.00_12.0_global_308946c1ca.tgz"
+        },
+        {
+          "miui": "V13.0.2.0.SMPIDXM",
+          "android": "12.0",
+          "recovery": "miui_MOONSTONEIDGlobal_V13.0.2.0.SMPIDXM_63c1b2e263_12.0.zip",
+          "fastboot": "moonstone_id_global_images_V13.0.2.0.SMPIDXM_20230214.0000.00_12.0_global_4eb6c5426f.tgz"
+        }
+      ]
+    }
+  ]
+}
