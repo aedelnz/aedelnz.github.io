@@ -1,0 +1,104 @@
+{
+  "codename": "sweet_k6a",
+  "cnname": "Redmi Note 12 Pro 4G",
+  "enname": "Redmi Note 12 Pro 4G",
+  "attentions": [
+    {
+      "cn": "",
+      "en": ""
+    }
+  ],
+  "cdid": "",
+  "ccshow": "",
+  "cbshow": "",
+  "csid": [],
+  "cbid": [],
+  "gdid": "583743",
+  "pcid": "",
+  "branches": [
+    {
+      "code":"sweet_k6a_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "mgbs",
+      "show": "1",
+      "cnname": "国际稳定版",
+      "enname": "Global Stable",
+      "links": [
+        {
+          "miui": "V13.0.3.0.RHGMIXM",
+          "android": "11.0",
+          "recovery": "miui_SWEETK6AGlobal_V13.0.3.0.RHGMIXM_be7ff1f3c9_11.0.zip",
+          "fastboot": ""
+        },
+        {
+          "miui": "V13.0.2.0.RHGMIXM",
+          "android": "11.0",
+          "recovery": "miui_SWEETK6AGlobal_V13.0.2.0.RHGMIXM_3b389f5f8f_11.0.zip",
+          "fastboot": "sweet_k6a_global_images_V13.0.2.0.RHGMIXM_20230217.0000.00_11.0_global_0c1c8b8e2c.tgz"
+        }
+      ]
+    },
+    {
+      "code":"sweet_k6a_eea_global",
+      "btag":"F",
+      "region":"eea",
+      "carrier":[],
+      "branch": "eeas",
+      "show": "1",
+      "cnname": "欧洲EEA稳定版",
+      "enname": "Europe EEA Stable",
+      "links": [
+        {
+          "miui": "V13.0.4.0.RHGEUXM",
+          "android": "11.0",
+          "recovery": "miui_SWEETK6AEEAGlobal_V13.0.4.0.RHGEUXM_cbfe2f77ed_11.0.zip",
+          "fastboot": "sweet_k6a_eea_global_images_V13.0.4.0.RHGEUXM_20230426.0000.00_11.0_eea_defe932d75.tgz"
+        },
+        {
+          "miui": "V13.0.3.0.RHGEUXM",
+          "android": "11.0",
+          "recovery": "miui_SWEETK6AEEAGlobal_V13.0.3.0.RHGEUXM_360cd64ee2_11.0.zip",
+          "fastboot": "sweet_k6a_eea_global_images_V13.0.3.0.RHGEUXM_20230223.0000.00_11.0_eea_c82aea89ef.tgz"
+        }
+      ]
+    },
+    {
+      "code":"sweet_k6a_ru_global",
+      "btag":"F",
+      "region":"global",
+      "carrier":[],
+      "branch": "russ",
+      "show": "1",
+      "cnname": "俄罗斯稳定版",
+      "enname": "Russia Stable",
+      "links": [
+        {
+          "miui": "V13.0.2.0.RHGRUXM",
+          "android": "11.0",
+          "recovery": "miui_SWEETK6ARUGlobal_V13.0.2.0.RHGRUXM_05906468e7_11.0.zip",
+          "fastboot": "sweet_k6a_ru_global_images_V13.0.2.0.RHGRUXM_20230302.0000.00_11.0_global_0ee99c0d9e.tgz"
+        }
+      ]
+    },
+    {
+      "code":"",
+      "btag":"F",
+      "region":"tr",
+      "carrier":[],
+      "branch": "trks",
+      "show": "1",
+      "cnname": "土耳其稳定版",
+      "enname": "Turkey Stable",
+      "links": [
+        {
+          "miui": "V13.0.2.0.RHGTRXM",
+          "android": "11.0",
+          "recovery": "",
+          "fastboot": "sweet_k6a_tr_global_images_V13.0.2.0.RHGTRXM_20230308.0000.00_11.0_global_16a46cc751.tgz"
+        }
+      ]
+    }
+  ]
+}
