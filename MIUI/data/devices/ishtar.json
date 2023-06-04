@@ -1,0 +1,194 @@
+{
+  "codename": "ishtar",
+  "cnname": "小米 13 Ultra",
+  "enname": "Xiaomi 13 Ultra",
+  "attentions": [
+    {
+      "cn": "",
+      "en": ""
+    }
+  ],
+  "cdid": "39283425",
+  "ccshow": "",
+  "cbshow": "",
+  "csid": [],
+  "cbid": [],
+  "gdid": "577308",
+  "pcid": "",
+  "branches": [
+    {
+      "code":"ishtar",
+      "btag":"X",
+      "region":"cn",
+      "carrier":["","chinatelecom","chinamobile","chinaunicom"],
+      "branch": "cnmp",
+      "show": "1",
+      "cnname": "开发版",
+      "enname": "China Beta",
+      "links": [
+        {
+          "miui": "V14.0.23.5.15.DEV",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.23.5.15.DEV_afb6999c27_13.0.zip",
+          "fastboot": ""
+        },
+        {
+          "miui": "V14.0.23.5.8.DEV",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.23.5.8.DEV_22ba2f292e_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.23.5.8.DEV_20230509.0000.00_13.0_cn_e55347aa81.tgz"
+        }
+      ]
+    },
+    {
+      "code":"ishtar",
+      "btag":"F",
+      "region":"cn",
+      "carrier":[],
+      "branch": "cnmo",
+      "show": "1",
+      "cnname": "中国大陆正式版",
+      "enname": "China Mainland Stable(MIUI14)",
+      "links": [
+        {
+          "miui": "V14.0.13.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.13.0.TMACNXM_0c4d6a81ab_13.0.zip",
+          "fastboot": ""
+        },
+        {
+          "miui": "V14.0.11.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.11.0.TMACNXM_c17912ee24_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.11.0.TMACNXM_20230427.0000.00_13.0_cn_5cae2e5e5a.tgz"
+        },
+        {
+          "miui": "V14.0.10.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.10.0.TMACNXM_2ec0d6548d_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.10.0.TMACNXM_20230423.0000.00_13.0_cn_29b7a98a6f.tgz"
+        },
+        {
+          "miui": "V14.0.8.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.8.0.TMACNXM_4621838527_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.8.0.TMACNXM_20230417.0000.00_13.0_cn_872f3abee8.tgz"
+        },
+        {
+          "miui": "V14.0.7.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.7.0.TMACNXM_73f8314233_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.7.0.TMACNXM_20230415.0000.00_13.0_cn_cd5ced4948.tgz"
+        },
+        {
+          "miui": "V14.0.4.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.4.0.TMACNXM_e956fb3677_13.0.zip",
+          "fastboot": ""
+        },
+        {
+          "miui": "V14.0.2.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.2.0.TMACNXM_932f512e4f_13.0.zip",
+          "fastboot": ""
+        }
+      ]
+    },
+    {
+      "code":"ishtar",
+      "btag":"F",
+      "region":"cn",
+      "carrier":["chinatelecom"],
+      "branch": "ctce",
+      "show": "1",
+      "cnname": "中国电信定制版",
+      "enname": "China Telecom Carrier Edition",
+      "links": [
+        {
+          "miui": "V14.0.11.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.11.0.TMACNXM_c17912ee24_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.11.0.TMACNXM_20230427.0000.00_13.0_cn_chinatelecom_23142e5da7.tgz"
+        },
+        {
+          "miui": "V14.0.10.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.10.0.TMACNXM_2ec0d6548d_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.10.0.TMACNXM_20230423.0000.00_13.0_cn_chinatelecom_02c80b3193.tgz"
+        },
+        {
+          "miui": "V14.0.8.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.8.0.TMACNXM_4621838527_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.8.0.TMACNXM_20230417.0000.00_13.0_cn_chinatelecom_f44456f24c.tgz"
+        },
+        {
+          "miui": "V14.0.7.0.TMACNXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAR_V14.0.7.0.TMACNXM_73f8314233_13.0.zip",
+          "fastboot": "ishtar_images_V14.0.7.0.TMACNXM_20230415.0000.00_13.0_cn_chinatelecom_97fbaa58f3.tgz"
+        }
+      ]
+    },
+    {
+      "code":"ishtar_demo",
+      "btag":"F",
+      "region":"cn",
+      "carrier":["","chinatelecom","chinamobile","chinaunicom"],
+      "branch": "cndm",
+      "show": "0",
+      "cnname": "中国大陆Demo",
+      "enname": "China Mainland Demo Stable",
+      "links": [
+        {
+          "miui": "V14.0.3.0.TMACNDM",
+          "android": "13.0",
+          "recovery": "miui_ISHTARDEMO_V14.0.3.0.TMACNDM_8bcf1e0f4e_13.0.zip",
+          "fastboot": "ishtar_demo_images_V14.0.3.0.TMACNDM_20230419.0000.00_13.0_cn_a19b7db974.tgz"
+        },
+        {
+          "miui": "V14.0.3.0.TMACNDM",
+          "android": "13.0",
+          "recovery": "miui_ISHTARDEMO_V14.0.3.0.TMACNDM_8bcf1e0f4e_13.0.zip",
+          "fastboot": "ishtar_demo_images_V14.0.3.0.TMACNDM_20230419.0000.00_13.0_cn_chinatelecom_1ffeec1c2d.tgz"
+        }
+      ]
+    },
+    {
+      "code":"ishtar_eea_global",
+      "btag":"F",
+      "region":"eea",
+      "carrier":[],
+      "branch": "eeas",
+      "show": "1",
+      "cnname": "欧洲EEA稳定版",
+      "enname": "Europe EEA Stable",
+      "links": [
+        {
+          "miui": "V14.0.1.0.TMAEUXM",
+          "android": "13.0",
+          "recovery": "miui_ISHTAREEAGlobal_V14.0.1.0.TMAEUXM_d95c367fbc_13.0.zip",
+          "fastboot": "ishtar_eea_global_images_V14.0.1.0.TMAEUXM_20230428.0000.00_13.0_eea_f23013cc7f.tgz"
+        }
+      ]
+    },
+    {
+      "code":"ishtar_ru_global",
+      "btag":"F",
+      "region":"ru",
+      "carrier":[],
+      "branch": "russ",
+      "show": "1",
+      "cnname": "俄罗斯稳定版",
+      "enname": "Russia Stable",
+      "links": [
+        {
+          "miui": "V14.0.1.0.TMARUXM",
+          "android": "13.0",
+          "recovery": "",
+          "fastboot": "ishtar_ru_global_images_V14.0.1.0.TMARUXM_20230428.0000.00_13.0_ru_8c47d3f07a.tgz"
+        }
+      ]
+    }
+  ]
+}
