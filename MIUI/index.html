@@ -1,51 +1,378 @@
-<!-- 随随便便的开始 -->
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MIUI</title>
+<title>MIUI ＆ ROM 集合</title>
 <meta name="referrer" content="no-referrer" />
 <meta name="robots" content="none|noindex|noarchive|nofollow">
 <meta name="format-detection"  content="mail=yes" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<link rel="icon" type="image/x-icon" href="https://cdn.cnbj1.fds.api.mi-img.com/miui-13/favicon.ico">
-<link rel="stylesheet" href="../start/mdui/css/mdui.min.css?v=1.0"/>
-<script src="../start/mdui/js/mdui.min.js?v=1.0"></script>
-<script src="../start/jquery.min.js?v=1.0"></script>
-<link rel="stylesheet" href="../start/index.css?v=1.0" >
-<script src="../start/origin.js?v=1.0"></script>
-<style type="text/css">a {text-decoration:none;}</style>
+<link rel="icon" type="image/x-icon" href="https://cia.sec.miui.com/miui-14-homepage/Group-427318442.png">
+<!-- icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../start/index.css?v=1.0000" />
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-uaZ0UXmB7NHxAxQawA8Ow2wWjdsedpRu7nJRSoI2mjnwtY8V5YiCWavoIpo1AhWPMLiW5iEeavmA3JJ2+1idUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.min.js" integrity="sha512-wOLiP6uL5tNrV1FiutKtAyQGGJ1CWAsqQ6Kp2XZ12/CvZxw8MvNJfdhh0yTwjPIir4SWag2/MHrseR7PRmNtvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../start/origin.js?v=1.0000"></script>
 </head>
-<!-- body -->
-<body class="mdui-appbar-with-toolbar mdui-appbar-with-tab" id="background">
-<!-- 这随便的 -->
-<div class="mdui-appbar mdui-appbar-fixed">
-<div class="mdui-toolbar">
-<div class="mdui-typo-headline mdui-text-color-blue-a700" mdui-drawer="{target: '#left-drawer'}">MIUI的ROM仓库</div>
+
+<body class="mdui-appbar-with-toolbar">
+<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+<div class="mdui-toolbar mdui-color-pink-accent">
+<a id="visibility" href="/MIUI" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">keyboard_backspace</i></a>
+<div class="mdui-typo-title">MIUI的ROM仓库</div>
 <div class="mdui-toolbar-spacer"></div>
 </div>
-<div class="mdui-tab" mdui-tab>
-<a href="#shouye" class="mdui-ripple">首页</a>
-<a href="#cc9e" class="mdui-ripple">CC9E</a>
+</div>
+
+<div class="mb-3"></div>
+<div id="visually-hidden">
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<!-- 目录开始 -->
+<div class="accordion" id="accordionExample">
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingOne">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+小米手机
+</button>
+</h2>
+<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<div class="series">小米系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mione_plus.json"> 小米手机1/1S(mione_plus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=aries.json"> 小米 2/2S(aries) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=taurus.json"> 小米 2A(taurus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pisces.json"> 小米3 移动版(pisces) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cancro.json"> 小米手机3 联通/电信/小米手机4 移动/联通/电信3G(cancro) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cancro_lte_ct.json"> 小米手机4 电信4G(cancro_lte_ct) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ferrari.json"> 小米 4i(ferrari) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=libra.json"> 小米 4C(libra) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=aqua.json"> 小米 4S(aqua) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=gemini.json"> 小米 5(gemini) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=capricorn.json"> 小米 5s(capricorn) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=natrium.json"> 小米 5s Plus(natrium) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=meri.json"> 小米 5C(meri) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tiffany.json"> 小米 5X(tiffany) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sagit.json"> 小米 6(sagit) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wayne.json"> 小米 6X(wayne) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=dipper.json"> 小米 8(dipper) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=equuleus.json"> 小米 8 屏幕指纹版(equuleus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ursa.json"> 小米 8 透明探索版(ursa) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=platina.json"> 小米 8 青春版(platina) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cepheus.json"> 小米 9/透明探索版(cepheus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=davinci.json"> 小米 9T(davinci) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=raphael.json"> 小米 9T Pro(raphael) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pyxis.json"> 小米 9 Lite(pyxis) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=crux.json"> 小米 9 Pro 5G(crux) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=umi.json"> 小米 10(umi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cmi.json"> 小米 10 Pro(cmi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=monet.json"> 小米 10 Lite(monet) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vangogh.json"> 小米 10 青春版(vangogh) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cas.json"> 小米 10 至尊纪念版(cas) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=apollo.json"> 小米 10T/Pro(apollo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=gauguin.json"> 小米 10T Lite/小米 10i(gauguin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=thyme.json"> 小米 10S(thyme) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=venus.json"> 小米 11(venus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=haydn.json"> 小米 11i/小米 11X Pro(haydn) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=alioth.json"> 小米 11X(alioth) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=courbet.json"> 小米 11 Lite 4G(courbet) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=star.json"> 小米 11 Pro/Ultra(star) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=renoir.json"> 小米 11 青春版(renoir) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=agate.json"> 小米 11T(agate) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vili.json"> 小米 11T Pro(vili) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lisa.json"> 小米 11 青春活力版(lisa) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pissarroin.json"> 小米 11i 5G 印度版(pissarroin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pissarro.json"> 小米 11i 印度快充版(pissarro) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cupid.json"> 小米 12(cupid) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=zeus.json"> 小米 12 Pro(zeus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=psyche.json"> 小米 12X(psyche) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=daumier.json"> 小米 12 Pro 天玑版(daumier) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mayfly.json"> 小米 12S(mayfly) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=unicorn.json"> 小米 12S Pro(unicorn) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=thor.json"> 小米 12S Ultra(thor) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=taoyao.json"> 小米 12 Lite(taoyao) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=plato.json"> 小米 12T(plato) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=diting.json"> 小米 12T Pro(diting) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=fuxi.json"> 小米 13(fuxi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=nuwa.json"> 小米 13 Pro(nuwa) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ishtar.json"> 小米 13 Ultra(ishtar) </a>
+<div class="series">小米SE系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sirius.json"> 小米 8 SE(sirius) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=grus.json"> 小米 9 SE(grus) </a>
+<div class="series">小米CC系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pyxis.json"> 小米 CC 9(pyxis) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vela.json"> 小米 CC 9 美图定制版(vela) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=laurus.json"> 小米 CC 9e(laurus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tucana.json"> 小米 CC9 Pro(tucana) </a>
+<div class="series">小米Note系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=virgo.json"> 小米 Note 双网通版(virgo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=virgo_lte_ct.json"> 小米 Note 全网通版(virgo_lte_ct) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=leo.json"> 小米 Note 顶配版(leo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=scorpio.json"> 小米 Note 2(scorpio) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=jason.json"> 小米 Note 3(jason) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tucana.json"> 小米 Note 10/Pro(tucana) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=toco.json"> 小米 Note 10 Lite(toco) </a>
+<div class="series">小米MAX系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=hydrogen.json"> 小米 MAX 标准版(hydrogen) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=helium.json"> 小米 MAX 高配版(helium) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=oxygen.json"> 小米 MAX 2(oxygen) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=nitrogen.json"> 小米 MAX 3(nitrogen) </a>
+<div class="series">小米MIX系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lithium.json"> 小米 MIX(lithium) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=chiron.json"> 小米 MIX 2(chiron) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=polaris.json"> 小米 MIX 2S(polaris) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=perseus.json"> 小米 MIX 3(perseus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=andromeda.json"> 小米 MIX 3 5G(andromeda) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cetus.json"> 小米 MIX FOLD(cetus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=odin.json"> 小米 MIX 4(odin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=zizhan.json"> 小米 MIX FOLD 2(zizhan) </a>
+<div class="series">小米Civi系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mona.json"> 小米 Civi(mona) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=zijin.json"> 小米 Civi 1S(zijin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ziyi.json"> 小米 Civi 2(ziyi) </a>
+<div class="series">小米A系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tissot.json"> 小米 A1(tissot) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=jasmine.json"> 小米 A2(jasmine) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=daisy.json"> 小米 A2 Lite(daisy) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=laurel.json"> 小米 A3(laurel) </a>
+<div class="series">小米平板系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mocha.json"> 小米平板 1(mocha) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=latte.json"> 小米平板 2(latte) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cappu.json"> 小米平板 3(cappu) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=clover.json"> 小米平板 4/Plus(clover) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=nabu.json"> 小米平板 5(nabu) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=elish.json"> 小米平板 5 Pro Wi-Fi(elish) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=enuma.json"> 小米平板 5 Pro 5G(enuma) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=dagu.json"> 小米平板 5 Pro 12.4(dagu) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pipa.json"> 小米平板 6(pipa) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=liuqin.json"> 小米平板 6 Pro(liuqin) </a>
+<div class="series">其他小米手机：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lotus.json"> 小米 Play(lotus) </a>
 </div>
 </div>
-<div class="mdui-drawer mdui-card mdui-drawer-close mdui-drawer-right" id="left-drawer">
-<ul class="mdui-list">
-<li class="mdui-typo-headline-opacity mdui-menu-item"><a href="/" class="mdui-ripple">回到首页</a></li>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingTwo">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Redmi 手机
+</button>
+</h2>
+<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<div class="series">Redmi系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt93007.json"> 红米 1 移动TD版(wt93007) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt98007.json"> 红米1 联通版(wt98007) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=armani.json"> 红米 1S 联通版/电信版(armani) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt93807.json"> 红米 1S 移动3G版(wt93807) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt96007.json"> 红米 1S 移动4G版(wt96007) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt86047.json"> 红米 2 移动3G版(wt86047) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt88047.json"> 红米 2 联通/电信3G版(wt88047) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt86047_pro.json"> 红米 2 移动增强版(wt86047_pro) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=wt88047_pro.json"> 红米 2 联通/电信增强版(wt88047_pro) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lte26007.json"> 红米 2A 标准版(lte26007) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ido_xhdpi.json"> 红米 3/Pro(ido_xhdpi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=land.json"> 红米 3S/X(land) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=prada.json"> 红米 4 标准版(prada) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=markw.json"> 红米 4 高配版(markw) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rolex.json"> 红米 4A(rolex) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=santoni.json"> 红米 4X(santoni) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rosy.json"> 红米 5(rosy) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=riva.json"> 红米5A(riva) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vince.json"> 红米 5 Plus(vince) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cereus.json"> 红米 6(cereus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cactus.json"> 红米 6A(cactus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sakura.json"> 红米 6 Pro(sakura) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=onclite.json"> Redmi 7(onclite) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pine.json"> Redmi 7A(pine) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=olive.json"> Redmi 8(olive) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=olivelite.json"> Redmi 8A(olivelite) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=olivewood.json"> Redmi 8A Pro/Dual(olivewood) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=merlin.json"> Redmi 10X 4G(merlin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=atom.json"> Redmi 10X 5G(atom) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=bomb.json"> Redmi 10X Pro(bomb) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lancelot.json"> Redmi 9/Prime(lancelot) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=dandelion.json"> Redmi 9A/9AT/9i/9A Sport(dandelion) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=angelica.json"> Redmi 9C(angelica) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=angelican.json"> Redmi 9C NFC(angelican) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lime.json"> Redmi 9T/9 Power(lime) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cattail.json"> Redmi 9/9 Activ(cattail) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=selene.json"> Redmi 10/Prime/10 2022(selene) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=dandelion_c3l2.json"> Redmi 10A/10A Sport(dandelion_c3l2) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=fog.json"> Redmi 10C(fog) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=light.json"> Redmi 10 5G/Redmi 11 Prime 5G(light) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rock.json"> Redmi 11 Prime 4G(rock) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=earth.json"> Redmi 12C(earth) </a>
+<div class="series">Redmi Note系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lcsh92_wet_xm_td.json"> 红米 Note 移动3G版(lcsh92_wet_xm_td) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lcsh92_wet_jb9.json"> 红米 Note 联通3G版(lcsh92_wet_jb9) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=dior.json"> 红米 Note 4G 单卡版(dior) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=gucci.json"> 红米 Note 4G 双卡版(gucci) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=hermes.json"> 红米 Note 2(hermes) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=hennessy.json"> 红米 Note 3 双网通版(hennessy) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=kenzo.json"> 红米 Note 3 全网通版(kenzo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=kate.json"> Redmi Note 3 特别版(kate) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=nikel.json"> 红米 Note 4(nikel) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mido.json"> 红米 Note 4X 高通版(mido) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ugglite.json"> 红米 Note 5A 标准版(ugglite) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ugg.json"> 红米 Note 5A 高配版(ugg) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vince.json"> 红米 Note 5 国际(vince) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=whyred.json"> 红米 Note 5(whyred) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tulip.json"> Redmi Note 6 Pro(tulip) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lavender.json"> Redmi Note 7/7S(lavender) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=violet.json"> Redmi Note 7 Pro(violet) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ginkgo.json"> Redmi Note 8(ginkgo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=begonia.json"> Redmi Note 8 Pro(begonia) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=willow.json"> Redmi Note 8T(willow) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=biloba.json"> Redmi Note 8 (2021)(biloba) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=merlin.json"> Redmi Note 9(merlin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lime.json"> Redmi Note 9 4G(lime) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cannon.json"> Redmi Note 9 5G(cannon) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=gauguin.json"> Redmi Note 9 Pro 5G(gauguin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=joyeuse.json"> Redmi Note 9 Pro 国际(joyeuse) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=excalibur.json"> Redmi Note 9 Pro Max(excalibur) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=curtana.json"> Redmi Note 9S/9 Pro(curtana) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mojito.json"> Redmi Note 10(mojito) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=curtana_rf.json"> Redmi Note 10 Lite(curtana_rf) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sweet.json"> Redmi Note 10 Pro/Pro Max(sweet) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=camellia.json"> Redmi Note 10 5G/10T 5G(camellia) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=chopin.json"> Redmi Note 10 Pro 5G(chopin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rosemary.json"> Redmi Note 10S(rosemary) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lilac.json"> Redmi Note 10T(lilac) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=selene.json"> Redmi Note 11 4G(selene) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=evergo.json"> Redmi Note 11 5G/11T 5G(evergo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=pissarro.json"> Redmi Note 11 Pro/Pro+/Pro+ 5G(pissarro) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=spes.json"> Redmi Note 11(spes) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=spesn.json"> Redmi Note 11 NFC(spesn) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=veux.json"> Redmi Note 11E Pro/Redmi Note 11 Pro 5G(veux) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=fleur.json"> Redmi Note 11S 4G(fleur) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=viva.json"> Redmi Note 11 Pro 4G(viva) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vida.json"> Redmi Note 11 Pro 4G India(vida) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=light.json"> Redmi Note 11E/11R(light) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lightcm.json"> Redmi Note 11R(lightcm) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=opal.json"> Redmi Note 11S 5G(opal) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=xaga.json"> Redmi Note 11T Pro/Pro+(xaga) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sunstone.json"> Redmi Note 12/12R Pro(sunstone) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ruby.json"> Redmi Note 12 Pro/Pro+/探索版(ruby) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=redwood.json"> Redmi Note 12 Pro 极速版(redwood) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=marble.json"> Redmi Note 12 Turbo(marble) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tapas.json"> Redmi Note 12 4G(tapas) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=topaz.json"> Redmi Note 12 4G NFC(topaz) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sweet_k6a.json"> Redmi Note 12 Pro 4G(sweet_k6a) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=sea.json"> Redmi Note 12S(sea) </a>
+<div class="series">Redmi K系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=davinci.json"> Redmi K20(davinci) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=raphael.json"> Redmi K20 Pro(raphael) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=raphaels.json"> Redmi K20 Pro 尊享版(raphaels) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=phoenix.json"> Redmi K30 4G(phoenix) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=picasso.json"> Redmi K30 5G(picasso) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=picasso_48m.json"> Redmi K30i 5G(picasso_48m) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lmi.json"> Redmi K30 Pro(lmi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=cezanne.json"> Redmi K30 至尊纪念版(cezanne) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=apollo.json"> Redmi K30S 至尊纪念版(apollo) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=alioth.json"> Redmi K40(alioth) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=haydn.json"> Redmi K40 Pro/Pro+(haydn) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ares.json"> Redmi K40 游戏增强版(ares) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=munch.json"> Redmi K40S(munch) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ingres.json"> Redmi K50 电竞版(ingres) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rubens.json"> Redmi K50(rubens) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=xaga.json"> Redmi K50i(xaga) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=matisse.json"> Redmi K50 Pro(matisse) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=diting.json"> Redmi K50 至尊版(diting) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mondrian.json"> Redmi K60(mondrian) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=socrates.json"> Redmi K60 Pro(socrates) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rembrandt.json"> Redmi K60 E(rembrandt) </a>
+<div class="series">Redmi Pad系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=yunluo.json"> Redmi平板(yunluo) </a>
+<div class="series">其他Redmi手机：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=omega.json"> 红米 Pro(omega) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ysl.json"> 红米 S2(ysl) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=tiare.json"> 红米 Go(tiare) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=onc.json"> 红米 Y3(onc) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ice.json"> Redmi A1/A1+(ice) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=water.json"> Redmi A2/A2+/POCO C51(water) </a>
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThree">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+POCO 手机
+</button>
+</h2>
+<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<div class="series">POCO C 系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=angelica.json"> POCO C3(angelica) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=angelicain.json"> POCO C31(angelicain) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=frost.json"> POCO C40(frost) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ice.json"> POCO C50(ice) </a>
+<div class="series">POCO F 系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=beryllium.json"> POCO F1(beryllium) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=lmi.json"> POCO F2 Pro(lmi) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=alioth.json"> POCO F3(alioth) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ares.json"> POCO F3 GT(ares) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=munch.json"> POCO F4(munch) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=ingres.json"> POCO F4 GT(ingres) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=mondrian.json"> POCO F5 Pro(mondrian) </a>
+<div class="series">POCO M 系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=shiva.json"> POCO M2(shiva) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=gram.json"> POCO M2 Pro(gram) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=citrus.json"> POCO M3(citrus) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=camellia.json"> POCO M3 Pro 5G(camellia) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=light.json"> POCO M4 5G(light) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=fleur.json"> POCO M4 Pro 4G(fleur) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=evergreen.json"> POCO M4 Pro 5G(evergreen) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rock.json"> POCO M5(rock) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=rosemary_p.json"> POCO M5S(rosemary_p) </a>
+<div class="series">POCO X 系列：</div>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=phoenix.json"> POCO X2(phoenix) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=surya.json"> POCO X3 NFC(surya) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=chopin.json"> POCO X3 GT(chopin) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=vayu.json"> POCO X3 Pro(vayu) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=xaga.json"> POCO X4 GT(xaga) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=veux.json"> POCO X4 Pro 5G(veux) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=moonstone.json"> POCO X5 5G(moonstone) </a>
+<a class="btn badge text-bg-light btn-outline-secondary" href="/MIUI/#sudo=redwood.json"> POCO X5 Pro 5G(redwood) </a>
+</div>
+</div>
+</div>
+
+</div>
+<!-- 目录结束 -->
+</div>
+<div class="carousel-item">
+<!-- 副内容开始 -->
+<div class="card mb-1">
+<div class="card-header fs-3">站点</div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item text-danger">更新时间：2023.06.04</li>
 </ul>
 </div>
 
-<!-- MIUI -->
-<section id="shouye" class="mdui-container-fluid"><br>
-<div class="mdui-card"><div class="mdui-card-content">
-
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://home.miui.com/">官网</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://privacy.miui.com/#/">隐私</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://accessibility.miui.com/#/">无障碍</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.xiaomi.cn/">社区</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://i.mi.com/">云服务</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="https://www.mi.com/">商城</a>
-<a target="_blank" class="mdui-grid-tile mdui-btn" href="">待添加</a>
-<br>
+<div class="card mb-1">
+<div class="card-header fs-5">小米着边</div>
+<div class="accordion-body p-2">
+<a target="_blank" class="btn" href="https://home.miui.com/">官网</a>
+<a target="_blank" class="btn" href="https://privacy.miui.com/#/">隐私</a>
+<a target="_blank" class="btn" href="https://accessibility.miui.com/#/">无障碍</a>
+<a target="_blank" class="btn" href="https://www.xiaomi.cn/">社区</a>
+<a target="_blank" class="btn" href="https://i.mi.com/">云服务</a>
+<a target="_blank" class="btn" href="https://www.mi.com/">商城</a>
+<a target="_blank" class="btn" href="">待添加</a>
+<p class="card-text">
 小米工具:
 <a href="http://www.miui.com/unlock/index.html">解锁申请地址</a>，
 <a href="http://miuirom.xiaomi.com/rom/u1106245679/3.2.522.32/MiAssistant-3.2.522.32.zip">小米手机助手</a>，
@@ -53,42 +380,55 @@
 <br>
 CSDN:<a href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_source=app&app_version=5.3.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a><br>
 小米论坛:<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=17936575&app_version=dev.10085&ori_version=dev.10085&ori_miui_version=20.1.4&ori_android_version=10&ori_front_version=112&ref=share&channel=Share">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a>
+</p>
+</div>
+</div>
 
-
-<div class="mdui-card-primary-title">第三方MIUI ROM 集合网站</div>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="content content-full"><div class="card-group mb-2">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">第三方MIUI ROM 集合网站</h5>
+<p class="card-text">
 <a href="https://www.miui.com/download.html" class="mdui-card-primary-title mdui-center" >MIUI下载</a>
 <a href="https://www.miui.com/download.html">小米官方提供的卡刷包下载地址</a><br>
 <a href="https://xiaomifirmwareupdater.com/" class="mdui-card-primary-title mdui-center" >固件更新程序</a>
 <a href="https://xiaomirom.com/" class="mdui-card-primary-title mdui-center" >小米ROM</a>
 <a href="https://roms.miuier.com/" class="mdui-card-primary-title mdui-center" >MIUI官方ROM仓库</a>
 <a href="https://mifirm.net/" class="mdui-card-primary-title mdui-center" >MiFirm</a>
+</p>
 </div>
 </div>
-
-<div class="mdui-card-primary-title">小米TWRP集合</div>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">小米TWRP集合</h5>
+<p class="card-text">
 <br>小米 天翼云盘：<a href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）
 <br>小米 恒创互联云盘：<a href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150
 <br>红米 天翼云盘：<a href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）
 <br>红米 恒创互联云盘：<a href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150
 <br>天翼云盘：<a href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）
 <br>恒创互联云盘：<a href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150
+</p>
 </div>
 </div>
+</div></div>
 
-<div class="mdui-card-primary-title">实用网址推荐</div>
-<div id="guanui-btns">
-<div class="mdui-container-fluid">
-<br><h4>Magisk</h4>
+<div class="content content-full">实用网址推荐<div class="card-group mb-2">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Magisk</h5>
+<p class="card-text">
 <a href="https://magiskmanager.com/">Magisk Manager官网</a><br>
 <a href="https://github.com/topjohnwu/Magisk/releases">Magisk Manager：Github下载网址</a><br>
 <a href="https://topjohnwu.github.io/Magisk/guides.html">Magisk Developer Guides（开发人员指南）</a><br>
 <a href="https://topjohnwu.github.io/Magisk/install.html">Magisk 安装说明</a>
-
-<br><br><h4>Xposed</h4>
+</p>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Xposed</h5>
+<p class="card-text">
 <a href="https://github.com/RikkaApps/Riru/releases">Riru（Riru - Code)：Github</a><br>
 <a href="https://github.com/LSPosed/LSPosed/releases">Riru LSPosed：Github发布页</a><br>
 <a href="https://github.com/ElderDrivers/EdXposed/releases/">Riru EdXposed：Github发布页</a><br>
@@ -100,18 +440,30 @@ CSDN:<a href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_so
 <a href="https://repo.xposed.info/module-overview">Xposed Module Repository（Xposed模块存储库）</a><br>
 <a href="https://www.xda.im/">XDA.IM - Xposed与Magisk仓库</a><br>
 <a href="https://taichi.cool/zh/module/">模块下载 | 太极</a>
+</p>
+</div>
+</div>
+</div></div>
 
-<br><br><h4>Recovery</h4>
-<a href="https://m.weibo.cn/u/6033736159">wzsx150 新浪微博地址<br>
-LR.Team定制版TWRP下载地址</a>
+<div class="content content-full"><div class="card-group mb-2">
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">Recovery</h5>
+<p class="card-text">
+<a href="https://m.weibo.cn/u/6033736159">wzsx150 新浪微博地址 LR.Team定制版TWRP下载地址</a><br>
 <a href="https://twrp.me/Devices/">TWRP官方网址</a><br>
 <a href="https://sourceforge.net/projects/orangefox/files/">橙狐rec下载网址①</a><br>
 <a href="https://orangefox.download/zh-CN">橙狐rec下载网址②</a><br>
 <a href="https://pitchblackrecovery.com/">PBRP Recovery</a><br>
 <a href="https://sourceforge.net/projects/shrp/files/">SHRP Recovery</a><br>
 <a href="https://forum.xda-developers.com/c/general-development.11974/">general-development</a>
-
-<br><br><h4>刷机ROM网址</h4>
+</p>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">刷机ROM网址</h5>
+<p class="card-text">
 <a href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org（Phone ROMS）<br>一个社区里面包含很多ROMs</a>
 <a href="https://theunlockr.com/roms/android-roms/">Android ROMs</a><br>
 <a href="https://mi.fiime.cn/">FiimeROM</a><br>
@@ -153,8 +505,13 @@ LR.Team定制版TWRP下载地址</a>
 <a href="https://sourceforge.net/projects/rebellion-os/files/">Rebellion-OS</a><br>
 <a href="https://sourceforge.net/projects/xyzuan/files/">a xyzuan`ROM</a><br>
 <a href="https://sourceforge.net/projects/stagos-10/files/">StagOS-10</a>
-
-<br><br><h4>其它</h4>
+</p>
+</div>
+</div>
+<div class="card">
+<div class="card-body">
+<h5 class="card-title">其它</h5>
+<p class="card-text">
 <a href="https://f-droid.org/packages/com.termux/">下载Termux</a><br>
 <a href="https://forum.xda-developers.com/apps/magisk/module-url-here">XDA上的Magisk模块区</a><br>
 <a href="https://github.com/E7KMbb/AD-hosts/releases">AD-hosts</a><br>
@@ -171,966 +528,98 @@ LR.Team定制版TWRP下载地址</a>
 <a href="https://developer.android.com/studio/releases/platform-tools?hl=zh-CN">SDK Platform Tools</a>
 </div>
 </div>
-</section><br>
-<!-- MIUI -->
-
-<section id="cc9e" class="mdui-container-fluid">
-<div class="mdui-typo-caption-opacity mdui-text-truncate">该网页最后更新时间为：2022.1.2</div>
-<div class="mdui-card"><div class="mdui-card-content mdui-typo">
-<div class="mdui-card-media">
-<img src="https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/vip1575005166934?f=webp&thumb=1&w=1500&quality=80"/>
-</div>
-<p class="mdui-typo-caption-opacity">
-天翼云盘 https://cloud.189.cn/t/ia6vqunmaIfu（访问码：fdv1）<br>
-恒创互联云盘 https://pan.hchl.top/#/s/kP0uQ (密码：wzsx150)
-</p>
-<ol>
-<li>
-<b>机型名称：</b>小米 CC 9e</li> <li>
-<b>机型代号：</b>laurus</li> <li>
-<b>感谢网站：</b>
-<a href="https://xiaomifirmwareupdater.com" class="milink">Xiaomi Firmware Updater</a>
-</li> <li>
-<b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="milink">传送门</a>
-</li> 
-</ol>
 </div></div>
-<br>
-<div class="mdui-card-primary-title">开发版</div>
-<div class="mdui-table-fluid">
-<table class="mdui-table mdui-text-truncate">
-<thead>
-<tr>
-<th class="mdui-text-center">序号</th> <th class="mdui-text-center" style="display:none">版本</th> <th class="mdui-text-center">米柚</th> <th class="mdui-text-center">安卓</th> <th>卡刷包</th> <th>线刷包</th>
-</tr>
-</thead> <tbody>
-<tr>
-<td class="mdui-text-center">163</td> <td class="mdui-text-center">21.4.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.22/miui_LAURUS_21.4.22_34a355177c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">162</td> <td class="mdui-text-center">21.4.21</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.21/miui_LAURUS_21.4.21_25f88a5ec1_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">161</td> <td class="mdui-text-center">21.4.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.20/miui_LAURUS_21.4.20_7545fb65fb_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">160</td> <td class="mdui-text-center">21.4.16</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.16/miui_LAURUS_21.4.16_19a78b00ab_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">159</td> <td class="mdui-text-center">21.4.14</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.14/miui_LAURUS_21.4.14_e47f5a0fd0_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">158</td> <td class="mdui-text-center">21.4.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.13/miui_LAURUS_21.4.13_2fb840f625_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">157</td> <td class="mdui-text-center">21.4.12</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.12/miui_LAURUS_21.4.12_15c50b52ba_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">156</td> <td class="mdui-text-center">21.4.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.9/miui_LAURUS_21.4.9_53d7c82eb1_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">155</td> <td class="mdui-text-center">21.4.7</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.7/miui_LAURUS_21.4.7_71ec777186_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">154</td> <td class="mdui-text-center">21.4.6</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.6/miui_LAURUS_21.4.6_d48574ba6c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">153</td> <td class="mdui-text-center">21.4.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.2/miui_LAURUS_21.4.2_0d62381f3b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">152</td> <td class="mdui-text-center">21.4.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.4.1/miui_LAURUS_21.4.1_b0231e6134_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">151</td> <td class="mdui-text-center">21.3.31</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.31/miui_LAURUS_21.3.31_af03d7b4d5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">150</td> <td class="mdui-text-center">21.3.26</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.26/miui_LAURUS_21.3.26_36e8665f74_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">149</td> <td class="mdui-text-center">21.3.25</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.25/miui_LAURUS_21.3.25_5f2ee9a480_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">148</td> <td class="mdui-text-center">21.3.24</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.24/miui_LAURUS_21.3.24_ca88822115_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">147</td> <td class="mdui-text-center">21.3.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.22/miui_LAURUS_21.3.22_701b7c0ef2_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">146</td> <td class="mdui-text-center">21.3.19</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.19/miui_LAURUS_21.3.19_cac58a58a5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">145</td> <td class="mdui-text-center">21.3.17</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.17/miui_LAURUS_21.3.17_284d3fd9d2_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">144</td> <td class="mdui-text-center">21.3.16</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.16/miui_LAURUS_21.3.16_3a1fad1b6d_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">143</td> <td class="mdui-text-center">21.3.15</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.15/miui_LAURUS_21.3.15_2a73a7d841_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">142</td> <td class="mdui-text-center">21.3.12</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.12/miui_LAURUS_21.3.12_871b12d3c1_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">141</td> <td class="mdui-text-center">21.3.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.9/miui_LAURUS_21.3.9_b59facf20a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">140</td> <td class="mdui-text-center">21.3.8</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.8/miui_LAURUS_21.3.8_f969e75afa_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">139</td> <td class="mdui-text-center">21.3.5</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.5/miui_LAURUS_21.3.5_ed0e776a22_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">138</td> <td class="mdui-text-center">21.3.3</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.3/miui_LAURUS_21.3.3_863fef3801_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">137</td> <td class="mdui-text-center">21.3.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.2/miui_LAURUS_21.3.2_9c26e103df_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">136</td> <td class="mdui-text-center">21.3.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.3.1/miui_LAURUS_21.3.1_da800c312d_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">135</td> <td class="mdui-text-center">21.2.26</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.26/miui_LAURUS_21.2.26_3cddf53d1c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">134</td> <td class="mdui-text-center">21.2.24</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.24/miui_LAURUS_21.2.24_97d7f94cf5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">133</td> <td class="mdui-text-center">21.2.23</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.23/miui_LAURUS_21.2.23_5867497fb2_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">132</td> <td class="mdui-text-center">21.2.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.22/miui_LAURUS_21.2.22_7e7cb3f2e5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">131</td> <td class="mdui-text-center">21.2.19</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.19/miui_LAURUS_21.2.19_79ab9695be_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">130</td> <td class="mdui-text-center">21.2.3</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.3/miui_LAURUS_21.2.3_c420c6775c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">129</td> <td class="mdui-text-center">21.2.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.2/miui_LAURUS_21.2.2_bdf7ad0ddd_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">128</td> <td class="mdui-text-center">21.2.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.2.1/miui_LAURUS_21.2.1_5ea56a3f6b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">127</td> <td class="mdui-text-center">21.1.29</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.29/miui_LAURUS_21.1.29_3e7c43fb61_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">126</td> <td class="mdui-text-center">21.1.28</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.28/miui_LAURUS_21.1.28_cf2e41670b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">125</td> <td class="mdui-text-center">21.1.26</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.26/miui_LAURUS_21.1.26_a0398989f0_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">124</td> <td class="mdui-text-center">21.1.25</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.25/miui_LAURUS_21.1.25_59dfedc770_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">123</td> <td class="mdui-text-center">21.1.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.22/miui_LAURUS_21.1.22_339ea81e2c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">122</td> <td class="mdui-text-center">21.1.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.20/miui_LAURUS_21.1.20_a5c6929058_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">121</td> <td class="mdui-text-center">21.1.19</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.19/miui_LAURUS_21.1.19_e558d41a02_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">120</td> <td class="mdui-text-center">21.1.18</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.18/miui_LAURUS_21.1.18_78abc09cd7_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">119</td> <td class="mdui-text-center">21.1.15</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.15/miui_LAURUS_21.1.15_d3a499f5bc_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">118</td> <td class="mdui-text-center">21.1.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.13/miui_LAURUS_21.1.13_6f89faee5e_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">117</td> <td class="mdui-text-center">21.1.12</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.12/miui_LAURUS_21.1.12_b1ef0852c5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">116</td> <td class="mdui-text-center">21.1.11</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.11/miui_LAURUS_21.1.11_cf3903c6e3_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">115</td> <td class="mdui-text-center">21.1.8</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.8/miui_LAURUS_21.1.8_f273c72908_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">114</td> <td class="mdui-text-center">21.1.6</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.6/miui_LAURUS_21.1.6_3534eceb0a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">113</td> <td class="mdui-text-center">21.1.5</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.5/miui_LAURUS_21.1.5_e42a726803_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">112</td> <td class="mdui-text-center">21.1.4</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/21.1.4/miui_LAURUS_21.1.4_b333f9f221_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">111</td> <td class="mdui-text-center">20.12.30</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.30/miui_LAURUS_20.12.30_64d499bbf1_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">110</td> <td class="mdui-text-center">20.12.28</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.28/miui_LAURUS_20.12.28_27a143ce05_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">109</td> <td class="mdui-text-center">20.12.25</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.25/miui_LAURUS_20.12.25_7db37d39cf_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">108</td> <td class="mdui-text-center">20.12.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.9/miui_LAURUS_20.12.9_7903e94e4a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">107</td> <td class="mdui-text-center">20.12.8</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.8/miui_LAURUS_20.12.8_e5782b0343_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">106</td> <td class="mdui-text-center">20.12.7</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.7/miui_LAURUS_20.12.7_8aed70c7e7_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">105</td> <td class="mdui-text-center">20.12.4</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.4/miui_LAURUS_20.12.4_fef24d8018_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">104</td> <td class="mdui-text-center">20.12.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.2/miui_LAURUS_20.12.2_2ef44c9afd_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">103</td> <td class="mdui-text-center">20.12.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.12.1/miui_LAURUS_20.12.1_0ef14edfb4_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">102</td> <td class="mdui-text-center">20.11.30</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.30/miui_LAURUS_20.11.30_167c7de4d9_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">101</td> <td class="mdui-text-center">20.11.27</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.27/miui_LAURUS_20.11.27_619134755f_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">100</td> <td class="mdui-text-center">20.11.25</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.25/miui_LAURUS_20.11.25_15446fd078_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">99</td> <td class="mdui-text-center">20.11.24</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.24/miui_LAURUS_20.11.24_d9f7f56776_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">98</td> <td class="mdui-text-center">20.11.23</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.23/miui_LAURUS_20.11.23_dbe58a3228_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">97</td> <td class="mdui-text-center">20.11.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.20/miui_LAURUS_20.11.20_61c29d1107_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">96</td> <td class="mdui-text-center">20.11.19</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.19/miui_LAURUS_20.11.19_6fb49ff106_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">95</td> <td class="mdui-text-center">20.11.18</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.18/miui_LAURUS_20.11.18_1ede53ea26_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">94</td> <td class="mdui-text-center">20.11.17</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.17/miui_LAURUS_20.11.17_f6df3b2902_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">93</td> <td class="mdui-text-center">20.11.16</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.16/miui_LAURUS_20.11.16_ec49f74497_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">92</td> <td class="mdui-text-center">20.11.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.13/miui_LAURUS_20.11.13_071e1bf67d_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">91</td> <td class="mdui-text-center">20.11.11</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.11/miui_LAURUS_20.11.11_f6c0233140_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">90</td> <td class="mdui-text-center">20.11.10</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.10/miui_LAURUS_20.11.10_ab116ae6d3_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">89</td> <td class="mdui-text-center">20.11.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.9/miui_LAURUS_20.11.9_0b6fb214c6_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">88</td> <td class="mdui-text-center">20.11.6</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.6/miui_LAURUS_20.11.6_29ba1567a8_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">87</td> <td class="mdui-text-center">20.11.5</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.5/miui_LAURUS_20.11.5_5d535625e3_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">86</td> <td class="mdui-text-center">20.11.4</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.4/miui_LAURUS_20.11.4_0cc745a247_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">85</td> <td class="mdui-text-center">20.11.3</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.3/miui_LAURUS_20.11.3_5ca9e89091_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">84</td> <td class="mdui-text-center">20.11.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.11.2/miui_LAURUS_20.11.2_851002bc92_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">83</td> <td class="mdui-text-center">20.10.30</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.30/miui_LAURUS_20.10.30_efd94c0e0c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">82</td> <td class="mdui-text-center">20.10.29</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.29/miui_LAURUS_20.10.29_5e4bd24bf8_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">81</td> <td class="mdui-text-center">20.10.28</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.28/miui_LAURUS_20.10.28_50e829c298_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">80</td> <td class="mdui-text-center">20.10.27</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.27/miui_LAURUS_20.10.27_193d94ec05_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">79</td> <td class="mdui-text-center">20.10.26</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.26/miui_LAURUS_20.10.26_5bb507f196_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">78</td> <td class="mdui-text-center">20.10.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.22/miui_LAURUS_20.10.22_e1c0e25b76_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">77</td> <td class="mdui-text-center">20.10.21</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.21/miui_LAURUS_20.10.21_de379a279a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">76</td> <td class="mdui-text-center">20.10.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.20/miui_LAURUS_20.10.20_4d223cad94_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">75</td> <td class="mdui-text-center">20.10.19</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.19/miui_LAURUS_20.10.19_1d915a3e27_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">74</td> <td class="mdui-text-center">20.10.15</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.15/miui_LAURUS_20.10.15_a3f373b226_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">73</td> <td class="mdui-text-center">20.10.14</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.14/miui_LAURUS_20.10.14_dded824860_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">72</td> <td class="mdui-text-center">20.10.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.13/miui_LAURUS_20.10.13_4bf9e2e83a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">71</td> <td class="mdui-text-center">20.10.12</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.10.12/miui_LAURUS_20.10.12_0cecd27d0e_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">70</td> <td class="mdui-text-center">20.9.29</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.29/miui_LAURUS_20.9.29_7bf804a30f_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">69</td> <td class="mdui-text-center">20.9.28</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.28/miui_LAURUS_20.9.28_8bae310c0a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">68</td> <td class="mdui-text-center">20.9.24</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.24/miui_LAURUS_20.9.24_dd5e30aee2_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">67</td> <td class="mdui-text-center">20.9.23</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.23/miui_LAURUS_20.9.23_60bda3b3b6_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">66</td> <td class="mdui-text-center">20.9.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.22/miui_LAURUS_20.9.22_5ae9974788_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">65</td> <td class="mdui-text-center">20.9.21</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.21/miui_LAURUS_20.9.21_db5b185bd8_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">64</td> <td class="mdui-text-center">20.9.17</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.17/miui_LAURUS_20.9.17_2da7ff3e69_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">63</td> <td class="mdui-text-center">20.9.16</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.16/miui_LAURUS_20.9.16_112f5ca30c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">62</td> <td class="mdui-text-center">20.9.15</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.15/miui_LAURUS_20.9.15_babeb92051_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">61</td> <td class="mdui-text-center">20.9.10</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.10/miui_LAURUS_20.9.10_ddd8e218d4_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">60</td> <td class="mdui-text-center">20.9.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.9/miui_LAURUS_20.9.9_c5b32f9209_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">59</td> <td class="mdui-text-center">20.9.8</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.8/miui_LAURUS_20.9.8_2d3acb9a8e_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">58</td> <td class="mdui-text-center">20.9.7</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.7/miui_LAURUS_20.9.7_ef5ce33292_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">57</td> <td class="mdui-text-center">20.9.3</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.3/miui_LAURUS_20.9.3_310a136e05_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">56</td> <td class="mdui-text-center">20.9.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.2/miui_LAURUS_20.9.2_3d2d53a56f_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">55</td> <td class="mdui-text-center">20.9.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.9.1/miui_LAURUS_20.9.1_cdf7e7a04a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">54</td> <td class="mdui-text-center">20.8.27</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.27/miui_LAURUS_20.8.27_698a89195f_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">53</td> <td class="mdui-text-center">20.8.26</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.26/miui_LAURUS_20.8.26_65eafa4227_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">52</td> <td class="mdui-text-center">20.8.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.20/miui_LAURUS_20.8.20_2e6b3fc438_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">51</td> <td class="mdui-text-center">20.8.18</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.18/miui_LAURUS_20.8.18_1616056eb1_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">50</td> <td class="mdui-text-center">20.8.17</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.17/miui_LAURUS_20.8.17_aad806964a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">49</td> <td class="mdui-text-center">20.8.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.13/miui_LAURUS_20.8.13_ffb99bb019_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">48</td> <td class="mdui-text-center">20.8.12</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.12/miui_LAURUS_20.8.12_2bd3598de9_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">47</td> <td class="mdui-text-center">20.8.11</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.11/miui_LAURUS_20.8.11_0b5fc38c35_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">46</td> <td class="mdui-text-center">20.8.10</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.10/miui_LAURUS_20.8.10_7c2857b2fd_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">45</td> <td class="mdui-text-center">20.8.7</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.7/miui_LAURUS_20.8.7_efd96a852b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">44</td> <td class="mdui-text-center">20.8.6</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.6/miui_LAURUS_20.8.6_5e2a30c340_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">43</td> <td class="mdui-text-center">20.8.5</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.5/miui_LAURUS_20.8.5_bfdc1c0446_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">42</td> <td class="mdui-text-center">20.8.4</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.4/miui_LAURUS_20.8.4_7556bdf113_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">41</td> <td class="mdui-text-center">20.8.3</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.8.3/miui_LAURUS_20.8.3_6fb4fd0f89_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">40</td> <td class="mdui-text-center">20.7.30</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.30/miui_LAURUS_20.7.30_d42b9e4188_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">39</td> <td class="mdui-text-center">20.7.29</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.29/miui_LAURUS_20.7.29_9cb1af4f86_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">38</td> <td class="mdui-text-center">20.7.28</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.28/miui_LAURUS_20.7.28_434217e60b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">37</td> <td class="mdui-text-center">20.7.27</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.27/miui_LAURUS_20.7.27_76d64288df_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">36</td> <td class="mdui-text-center">20.7.23</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.23/miui_LAURUS_20.7.23_6638e64832_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">35</td> <td class="mdui-text-center">20.7.22</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.22/miui_LAURUS_20.7.22_ae3c119313_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">34</td> <td class="mdui-text-center">20.7.21</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.21/miui_LAURUS_20.7.21_2c9e76f4c7_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">33</td> <td class="mdui-text-center">20.7.20</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.20/miui_LAURUS_20.7.20_c615ef2500_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">32</td> <td class="mdui-text-center">20.7.16</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.16/miui_LAURUS_20.7.16_0a87cb696b_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">31</td> <td class="mdui-text-center">20.7.14</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.14/miui_LAURUS_20.7.14_2ff69eacfe_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">30</td> <td class="mdui-text-center">20.7.13</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.13/miui_LAURUS_20.7.13_7be7633d4d_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">29</td> <td class="mdui-text-center">20.7.9</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.9/miui_LAURUS_20.7.9_5587b2a85c_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">28</td> <td class="mdui-text-center">20.7.8</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.8/miui_LAURUS_20.7.8_5064febb21_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">27</td> <td class="mdui-text-center">20.7.7</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.7/miui_LAURUS_20.7.7_6e0d51dba5_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">26</td> <td class="mdui-text-center">20.7.2</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.2/miui_LAURUS_20.7.2_b77a444079_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">25</td> <td class="mdui-text-center">20.7.1</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.7.1/miui_LAURUS_20.7.1_c1e3037859_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">24</td> <td class="mdui-text-center">20.6.30</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.30/miui_LAURUS_20.6.30_c9e3558ed8_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">23</td> <td class="mdui-text-center">20.6.23</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.23/miui_LAURUS_20.6.23_2f7e303d03_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">22</td> <td class="mdui-text-center">20.6.18</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.18/miui_LAURUS_20.6.18_147b7b693f_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">21</td> <td class="mdui-text-center">20.6.17</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.17/miui_LAURUS_20.6.17_f1bbb2b6cf_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">20</td> <td class="mdui-text-center">20.6.15</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.15/miui_LAURUS_20.6.15_81fc042923_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">19</td> <td class="mdui-text-center">20.6.11</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.11/miui_LAURUS_20.6.11_36a9cdc42a_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">18</td> <td class="mdui-text-center">20.6.10</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/20.6.10/miui_LAURUS_20.6.10_967022bf94_10.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">17</td> <td class="mdui-text-center">20.3.26</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.3.26/miui_LAURUS_20.3.26_251c110ea6_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">16</td> <td class="mdui-text-center">20.3.19</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.3.19/miui_LAURUS_20.3.19_68784bf4cf_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">15</td> <td class="mdui-text-center">20.3.12</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.3.12/miui_LAURUS_20.3.12_7be48f80d8_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">14</td> <td class="mdui-text-center">20.3.10</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.3.10/miui_LAURUS_20.3.10_1439f61890_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">13</td> <td class="mdui-text-center">20.3.5</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.3.5/miui_LAURUS_20.3.5_531a704ec9_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">12</td> <td class="mdui-text-center">20.2.27</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.2.27/miui_LAURUS_20.2.27_2a65f4f4cc_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">11</td> <td class="mdui-text-center">20.2.25</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.2.25/miui_LAURUS_20.2.25_90b60c416f_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">10</td> <td class="mdui-text-center">20.1.16</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.1.16/miui_LAURUS_20.1.16_77850857d0_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">9</td> <td class="mdui-text-center">20.1.15</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.1.15/miui_LAURUS_20.1.15_bf75691f8c_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">8</td> <td class="mdui-text-center">20.1.9</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.1.9/miui_LAURUS_20.1.9_e75bbb2df8_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">7</td> <td class="mdui-text-center">20.1.2</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/20.1.2/miui_LAURUS_20.1.2_808ced1875_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">6</td> <td class="mdui-text-center">9.12.26</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.12.26/miui_LAURUS_9.12.26_25dfe724eb_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">5</td> <td class="mdui-text-center">9.12.19</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.12.19/miui_LAURUS_9.12.19_e2eb497c25_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">4</td> <td class="mdui-text-center">9.12.12</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.12.12/miui_LAURUS_9.12.12_d1b8db24ce_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">3</td> <td class="mdui-text-center">9.12.5</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.12.5/miui_LAURUS_9.12.5_216b148a50_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">2</td> <td class="mdui-text-center">9.10.17</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.10.17/miui_LAURUS_9.10.17_6c4b9bf0a8_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">1</td> <td class="mdui-text-center">9.9.26</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/9.9.26/miui_LAURUS_9.9.26_5910693639_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-</tbody>
-</table>
+<!-- 副内容结束 -->
 </div>
-<br>
-<div class="mdui-card-primary-title">稳定版</div>
-<div class="mdui-table-fluid">
-<table class="mdui-table mdui-text-truncate">
-<thead>
-<tr>
-<th class="mdui-text-center">序号</th> <th class="mdui-text-center" style="display:none">版本</th> <th class="mdui-text-center">米柚</th> <th class="mdui-text-center">安卓</th> <th>卡刷包</th> <th>线刷包</th>
-</tr>
-</thead> <tbody>
-<tr>
-<td class="mdui-text-center">14</td> <td class="mdui-text-center">V12.5.5.0.QFMCNXM</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/V12.5.5.0.QFMCNXM/miui_LAURUS_V12.5.5.0.QFMCNXM_eb006da5b1_10.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V12.5.5.0.QFMCNXM/laurus_images_V12.5.5.0.QFMCNXM_20211122.0000.00_10.0_cn_fc0291dab7.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">13</td> <td class="mdui-text-center">V12.5.2.0.QFMCNXM</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/V12.5.2.0.QFMCNXM/miui_LAURUS_V12.5.2.0.QFMCNXM_f8f444c743_10.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V12.5.2.0.QFMCNXM/laurus_images_V12.5.2.0.QFMCNXM_20210818.0000.00_10.0_cn_555f10e495.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">12</td> <td class="mdui-text-center">V12.0.4.0.QFMCNXM</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/V12.0.4.0.QFMCNXM/miui_LAURUS_V12.0.4.0.QFMCNXM_74cce5492a_10.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V12.0.4.0.QFMCNXM/laurus_images_V12.0.4.0.QFMCNXM_20210407.0000.00_10.0_cn_a33f17bd1b.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">11</td> <td class="mdui-text-center">V12.0.3.0.QFMCNXM</td> <td class="mdui-text-center">10.0</td> <td>
-<a href="https://bigota.d.miui.com/V12.0.3.0.QFMCNXM/miui_LAURUS_V12.0.3.0.QFMCNXM_33dbfb5dd7_10.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V12.0.3.0.QFMCNXM/laurus_images_V12.0.3.0.QFMCNXM_20201016.0000.00_10.0_cn_681b8bfd1b.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">10</td> <td class="mdui-text-center">V11.0.6.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.6.0.PFMCNXM/miui_LAURUS_V11.0.6.0.PFMCNXM_3234ede2d4_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.6.0.PFMCNXM/laurus_images_V11.0.6.0.PFMCNXM_20200612.0000.00_9.0_cn_4ee3097c89.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">9</td> <td class="mdui-text-center">V11.0.4.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.4.0.PFMCNXM/miui_LAURUS_V11.0.4.0.PFMCNXM_606fd6ecac_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.4.0.PFMCNXM/laurus_images_V11.0.4.0.PFMCNXM_20200114.0000.00_9.0_cn_4647dfd07f.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">8</td> <td class="mdui-text-center">V11.0.3.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.3.0.PFMCNXM/miui_LAURUS_V11.0.3.0.PFMCNXM_bcd57bbf2d_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.3.0.PFMCNXM/laurus_images_V11.0.3.0.PFMCNXM_20191217.0000.00_9.0_cn_511539c278.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">7</td> <td class="mdui-text-center">V11.0.2.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.2.0.PFMCNXM/miui_LAURUS_V11.0.2.0.PFMCNXM_09f596a24c_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V11.0.2.0.PFMCNXM/laurus_images_V11.0.2.0.PFMCNXM_20191031.0000.00_9.0_cn_da780db6c3.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">6</td> <td class="mdui-text-center">V10.2.13.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.13.0.PFMCNXM/miui_LAURUS_V10.2.13.0.PFMCNXM_5a9706d537_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.13.0.PFMCNXM/laurus_images_V10.2.13.0.PFMCNXM_20190830.0000.00_9.0_cn_fc9f51f46d.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">5</td> <td class="mdui-text-center">V10.2.12.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.12.0.PFMCNXM/miui_LAURUS_V10.2.12.0.PFMCNXM_9c7131b1d0_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">4</td> <td class="mdui-text-center">V10.2.11.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.11.0.PFMCNXM/miui_LAURUS_V10.2.11.0.PFMCNXM_07bbd0dfa1_9.0.zip">卡刷包</a>
-</td> <td>未公布</td>
-</tr>
-<tr>
-<td class="mdui-text-center">3</td> <td class="mdui-text-center">V10.2.10.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.10.0.PFMCNXM/miui_LAURUS_V10.2.10.0.PFMCNXM_d26ff234f6_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.10.0.PFMCNXM/laurus_images_V10.2.10.0.PFMCNXM_20190723.0000.00_9.0_cn_154c47f4ad.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">2</td> <td class="mdui-text-center">V10.2.8.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.8.0.PFMCNXM/miui_LAURUS_V10.2.8.0.PFMCNXM_60b0f2fe60_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.8.0.PFMCNXM/laurus_images_V10.2.8.0.PFMCNXM_20190704.0000.00_9.0_cn_4a8922559f.tgz">线刷包</a>
-</td>
-</tr>
-<tr>
-<td class="mdui-text-center">1</td> <td class="mdui-text-center">V10.2.7.0.PFMCNXM</td> <td class="mdui-text-center">9.0</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.7.0.PFMCNXM/miui_LAURUS_V10.2.7.0.PFMCNXM_e97f175b59_9.0.zip">卡刷包</a>
-</td> <td>
-<a href="https://bigota.d.miui.com/V10.2.7.0.PFMCNXM/laurus_images_V10.2.7.0.PFMCNXM_20190620.0000.00_9.0_cn_d350f178a6.tgz">线刷包</a>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
-<br>
-</section>
+</div>
 
+</div>
+
+
+<div class="container-fluid" id="container"></div>
+<script>
+var hash = window.location.hash;
+var url = window.location.href;
+var truncatedUrl = hash.replace('#sudo=', '');
+console.log(truncatedUrl);
+if (hash.toString().indexOf('#sudo=') !== -1) {
+$("#visually-hidden").addClass("visually-hidden");
+} else {
+$("#visibility").addClass("visually-hidden");
+}
+$('a').click(function(){
+window.location.href = $(this).attr('href'); // 跳转到链接中的地址
+location.reload();
+});
+$.ajax({
+url: 'data/devices/'+truncatedUrl,
+dataType: 'json',
+success: function(data) {
+var branches = data.branches;
+var str=`<div class="card mb-3">
+<ol class="card-text">
+<li><b>机型名称：</b><span class="mdui-text-color-purple">`+ data.cnname +`</span></li>
+<li><b>机型代号：</b><span class="mdui-text-color-deep-orange-accent">`+ data.codename +`</span></li>
+<li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="btn badge text-bg-primary">传送门</a></li>
+<li><b class="mdui-text-color-red">风险提示：</b>我们不推荐刷入非机型购入地区以外的系统分支，有可能会引起无法刷入，无法识别基带等等问题，请在确定刷入之前做好心理准备，因此引发的问题，本网站概不负责。</li>
+</ol>
+</div>
+<div class="row">`;
+$.each(branches, function(i, item) {
+var links = item.links;
+str+=`
+<div class="col-md-6">
+<p><a class="btn btn-outline-secondary  font-monospace w-100" data-bs-toggle="collapse" href="#`+ item.branch +`" role="button" aria-expanded="false" aria-controls="`+ item.branch +`">`+ item.cnname +`</a></p>
+<div class="collapse mb-3" id="`+ item.branch +`">
+<div class="card mdui-table-fluid">
+<table class="table table-borderless table-responsive mdui-text-truncate">
+<thead class="fw-bolder mdui-color-red">
+<tr>
+<th scope="col">米柚</th>
+<th scope="col">安卓</th>
+<th scope="col">卡刷包</th>
+<th scope="col">线刷包</th>
+</tr>
+</thead>
+<tbody class="table-group-divider">
+`;
+$.each(links, function(i, n) {
+var recovery = n.recovery;
+var fastboot = n.fastboot;
+str+=`<tr>
+<th scope="row"><p class="text-body-tertiary">`+ n.miui +`</p></th>
+<td><p class="text-success">`+ n.android +`</p></td>
+`;
+if (recovery === null || recovery === undefined || recovery === '') {
+str+=`<td><span class="btn badge text-bg-light">未发布</span></td>`;
+} else {
+str+=`
+<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/`+ n.miui +`/`+ n.recovery +` >下载</a></td>
+`;
+}
+
+if (fastboot === null || fastboot === undefined || fastboot === '') {
+str+=`<td><span class="btn badge text-bg-light">未发布</span></td>`;
+} else {
+str+=`
+<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/`+ n.miui +`/`+ n.fastboot +` >下载</a></td>
+`;
+}
+str+=`
+</tr>
+`;
+});
+str+=`</tbody>
+</table>
+</div>
+</div>
+</div>`;
+});
+str+=`</div></div>`;
+$('#container').append(str);
+}
+});
+</script>
 </body>
-</html>
 </html>
