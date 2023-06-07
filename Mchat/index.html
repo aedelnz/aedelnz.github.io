@@ -22,10 +22,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="../start/origin.js?v=1.0000"></script>
 <script>
-var cookieValue = $.cookie('user');
-// 将 cookie 值转换成 JSON 对象
-var jsonData = JSON.parse(cookieValue);
-alert(jsonData.username);
+var getlocaldata = localStorage.getItem('localdata');
+var jsonobj = JSON.parse(getlocaldata);
+console.log(getlocaldata);
+console.log(jsonobj);
+
 </script>
 </head>
 <body>
