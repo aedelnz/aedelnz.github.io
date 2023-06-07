@@ -94,7 +94,7 @@ password: password
 var s_datas = JSON.stringify(datas);
 console.log(typeof (s_datas));
 localStorage.setItem('locadata', s_datas)
-$.cookie('user', datas, { expires: 7, path: '/' });
+$.cookie('user', s_datas, { expires: 7, path: '/' });
 $('#error-message').text(data.id);
 window.location.href = '/Mchat';
 }
