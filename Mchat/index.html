@@ -197,8 +197,8 @@ $('html, body').animate({scrollTop: $(document).height()}, 'slow');
 }
 });
 }
-// 每1秒钟执行一次updateContent()函数
-setInterval(updateContent, 1000);
+location.reload();
+setInterval(updateContent, 5000);
 });
 
 $('#content').submit(function(event) {
