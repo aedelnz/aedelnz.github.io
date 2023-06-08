@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <!-- ico -->
-<link rel="icon" href="./favicon.ico?v=1.0000" type="image/png" />
+<link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
 <!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- css -->
@@ -22,7 +22,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="../start/origin.js?v=1.0000"></script>
 </head>
-<body class="container container-fluid">
+<body class="mdui-appbar-with-toolbar mdui-appbar-with-tab container container-fluid">
+
+<div class="row text-center">
+<div class="col-sm-5 col-sm-4 d-grid gap-2 mx-auto">
 <div class="mb-5"></div>
 <div id="visually-hidden" class="card card-body mb-2 font-monospace">
 <i class="fs-1 text-center mb-2 bi bi-person-circle"></i>
@@ -66,8 +69,9 @@
 已有 Mchat 账户？ <a href="Login.html" class="text-reset">登录</a>.
 </div>
 </div>
-
 <div class="modal-body" id="error-message"></div>
+</div>
+</div>
 
 <script>
 var hash = window.location.hash;
@@ -93,7 +97,7 @@ password: password
 };
 var s_datas = JSON.stringify(datas);
 console.log(typeof (s_datas));
-localStorage.setItem('locadata', s_datas)
+localStorage.setItem('localdata', s_datas)
 $.cookie('user', s_datas, { expires: 7, path: '/' });
 $('#error-message').text(data.id);
 window.location.href = '/Mchat';

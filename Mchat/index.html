@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <!-- ico -->
-<link rel="icon" href="./favicon.ico?v=1.0000" type="image/png" />
+<link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
 <!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- css -->
@@ -21,18 +21,180 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="../start/origin.js?v=1.0000"></script>
+</head>
+<body class="mdui-appbar-with-toolbar">
+
+<div class="mdui-appbar mb-2 mdui-appbar-fixed mdui-appbar-scroll-hide">
+<div class="mdui-toolbar mdui-color-red-accent mdui-appbar-fixed">
+<a href="javascript:;" class="mdui-typo-title">Mchat</a>
+<div class="mdui-toolbar-spacer"></div>
+<button type="button" id="clearCookie" class="btn btn-sm mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">exit_to_app</i></button>
+</div>
+</div>
+
+<div id="visibility">
+<div id="qunliao"></div>
+</div>
+
+<div id="visually-hidden">
+<div id="container"></div>
+<style>
+.subtitle {
+display: block;
+margin-left: 35px;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+opacity: .54;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.subtitles {
+margin-left: 40px;
+margin-top: 6px;
+
+}
+</style>
+<div class="fixed-bottom">
+<div id="error-message"></div>
+<form id="content">
+<div class="input-group mdui-color-white p-1 container-fluid">
+<input class="form-control p-2 mdui-textfield-input" type="text" id="contents" name="contents" placeholder="输入内容发送" />
+<button class="btn btn-sm badge text-bg-light mdui-btn" type="submit">发送</button>
+</div>
+</form>
+</div>
+
+</div>
+
 <script>
-var getlocaldata = localStorage.getItem('localdata');
-var jsonobj = JSON.parse(getlocaldata);
-var username = jsonobj.username;
-var password = jsonobj.password;
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php', {username: username, password: password}, function(data) {
-$('#error-message').text(data.message);
-if(data.message === '登录成功！'){
+var hash = window.location.hash;
+var url = window.location.href;
+var truncatedUrl = hash.replace('#article_id=', '');
+console.log(truncatedUrl);
+if (hash.toString().indexOf('#article_id=') !== -1) {
+$("#visibility").addClass("visually-hidden");
+} else {
+$("#visually-hidden").addClass("visually-hidden");
+}
+$('#clearCookie').click(function() {
+$.removeCookie('user', { path: '/' });
+location.reload();
+});
+
+var cookie = $.cookie('user');
+console.log(cookie);
+if(cookie === undefined){
+window.location.href = 'Login.html';
+}
+var json = $.parseJSON(cookie);
+console.log(json);
+var data_s = '{"user": "'+json.username+'","pass": "'+json.password+'"}';
+var jsons = $.parseJSON(data_s)
+var username = jsons.user;
+var password = jsons.pass;
+$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php', {username: username, password: password}, function(datas) {
+if(datas.message === '登录成功！'){
+console.log(datas);
 }else{
 window.location.href = 'Login.html';
 }
 });
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/content.php',
+type: 'POST',
+data: {username: username, password: password},   
+dataType: 'json',
+success: function(data_st) {
+console.log(data_st);
+var datas = data_st.data;
+datas.reverse();
+var str=`
+<div class="mb-1"></div>
+<div class="mb-5"><div class="container-fluid">
+<ul class="mdui-list mdui-list-dense">`;
+$.each(datas, function(i, n) {
+str+=`
+<a href="#article_id=`+n.id+`">
+<li class="mdui-list-item mdui-ripple">
+<div class="mdui-list-item-avatar">
+<img src="`+n.img+`"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title">`+n.title+`</div>
+<div class="mdui-list-item-text mdui-list-item-two-line">
+<span class="mdui-text-color-theme-text">`+n.introduced+`</span>
+</div>
+</div>
+</li>
+</a>
+`;
+});
+str+=`</ul></div></div>`;
+$('#qunliao').append(str);
+$('a').click(function(){
+window.location.href = $(this).attr('href'); // 跳转到链接中的地址
+location.reload();
+});
+}
+});
+
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl,
+type: 'POST',
+data: {username: username, password: password},   
+dataType: 'json',
+success: function(data_st) {
+console.log(data_st);
+var datas = data_st.data;
+datas.reverse();
+var str=`
+<div class="navbar bg-body-tertiary font-monospace">
+<div class="container-fluid">
+<a href="/Mchat/" class="mdui-btn mdui-btn-icon">
+<i class="mdui-icon material-icons">chevron_left</i>
+</a>
+<a class="text-center text-decoration-none">`+data_st.online_users+`</a>
+</div>
+</div>
+<div class="mb-1"></div>
+<div class="mb-5"><div class="container-fluid">`;
+$.each(datas, function(i, n) {
+str+=`<div>
+<div class="mb-1">
+<div class="mdui-float-left">
+<img src="https://q1.qlogo.cn/g?b=qq&nk=`+n.QQ+`&s=5" class="rounded float-start" style="width: 30px; height: 30px;" />
+</div>
+<div class="subtitle">`+n.user_id+`</div>
+<div class="subtitles fs-5 p-1">
+<span class="badge mdui-color-white text-bg-primary">`+n.content+`</span>
+</div>
+</div>
+</div>`;
+});
+str+=`</div></div>
+<div id="bottom"></div>
+`;
+$('#container').append(str);
+var element = $('#bottom');
+element.scrollTop(element.prop("scrollHeight"));
+$('html, body').animate({scrollTop: $(document).height()}, 'slow');
+}
+});
+
+$('#content').submit(function(event) {
+event.preventDefault(); // 阻止默认的表单提交行为
+var content = $('#contents').val();
+$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl, {username: jsons.user, password: jsons.pass, content: content}, function(data_t) {
+if(data_t.message === '评论成功！'){
+$('#error-message').text(data_t.message);
+location.reload();
+}else{
+$('#error-message').text(data_t.message);
+}
+});
+});
 </script>
-</head>
-<body>
+</body>
+</html>
