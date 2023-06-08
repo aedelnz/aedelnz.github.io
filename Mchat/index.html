@@ -199,7 +199,7 @@ $('#content').submit(function(event) {
 event.preventDefault(); // 阻止默认的表单提交行为
 var content = $('#contents').val();
 $.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl, {username: jsons.user, password: jsons.pass, content: content}, function(data_t) {
-if(data_t.message === '评论成功！'){
+if(data_t.message === '发送成功！'){
 $('#error-message').text(data_t.message);
 location.reload();
 }else{
