@@ -151,7 +151,9 @@ location.reload();
 });
 }
 });
-
+$(document).ready(function() {
+// 定义一个函数，用于向服务器发送POST请求并更新内容
+function updateContent() {
 $.ajax({
 url: 'https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl,
 type: 'POST',
@@ -193,6 +195,10 @@ var element = $('#bottom');
 element.scrollTop(element.prop("scrollHeight"));
 $('html, body').animate({scrollTop: $(document).height()}, 'slow');
 }
+});
+}
+// 每1秒钟执行一次updateContent()函数
+setInterval(updateContent, 1000);
 });
 
 $('#content').submit(function(event) {
