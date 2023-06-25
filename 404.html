@@ -15,7 +15,7 @@
 <body>
 <div id="root"></div>
 <script>
-var randomNumber=Math.floor(Math.random()*4,)+1;
+var randomNumber=Math.floor(Math.random()*5,)+1;
 if(randomNumber=="1"){
 var html=`
 <style>
@@ -72,10 +72,25 @@ var html=`
 </div>
 </div>
 </div>`;
+}else if(randomNumber=="5"){
+var html=`
+<style>
+.mod_error{padding: 1rem;background:#f7f8fb;color:#47494e;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:center;width:100%;height:100%}.mod_error .mod_box{position:relative;height:auto}.mod_error .mod_box .mod_error_bg{display:block;margin:0 auto;width:80%}.mod_error .mod_box .mod_error_desc{margin:40px 0 20px 0;text-align:center;color:#282828;font-size:18px}.mod_error .mod_box .mod_error_btn{text-align:center}.mod_error .mod_box .mod_error_btn .error_btn_v{display:none;width:150px;height:32px;line-height:32px;text-decoration:none;font-size:13px;color:#fff;background-color:#ff00a0;border-radius:16px;outline:0}
+</style>
+<div class="mod_error">
+<div class="mod_box">
+<img class="mod_error_bg" src="//puui.qpic.cn/vupload/0/20180328_504_doki.png/0" alt="doki酱">
+<div class="mod_error_desc">“哎哟页面打不开了”</div>
+<div class="mod_error_btn"><a style="display:inline-block;-webkit-tap-highlight-color:rgba(255,255,255,0)" class="error_btn_v" href="/">返回首页</a></div>
+</div>
+</div>`;
 }
 $('#root').append(html); // 在指定元素末尾插入内容
 $('#root').prepend('<div class="z-n1 position-absolute p-5">'+randomNumber+'</div>');
 </script>
 </body>
 </html>
+
+
+
 
