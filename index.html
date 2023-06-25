@@ -6,121 +6,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="keywords" content="画的个人记录" />
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
-<!-- ico -->
 <link rel="icon" href="./favicon.ico?v=1.0000" type="image/png" />
-<!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="./start/mdui/css/mdui.min.css?v=1.0000" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="./start/index.css?v=1.0000" />
-<!-- js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-uaZ0UXmB7NHxAxQawA8Ow2wWjdsedpRu7nJRSoI2mjnwtY8V5YiCWavoIpo1AhWPMLiW5iEeavmA3JJ2+1idUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.min.js" integrity="sha512-wOLiP6uL5tNrV1FiutKtAyQGGJ1CWAsqQ6Kp2XZ12/CvZxw8MvNJfdhh0yTwjPIir4SWag2/MHrseR7PRmNtvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./start/mdui/js/mdui.min.js?v=1.0000"></script>
-<script src="./start/jquery.min.js?v=1.0000"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./start/origin.js?v=1.0000"></script>
 <style>
-.nav-blur-dark {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(60, 60, 60, 0.6);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  transition: all 0.5s;
-}
-.nav-blur-dark:hover {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(60, 60, 60, 0.8);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-}
-.sap {
-  font-size: 1.5rem;
-  font-weight: 100;
-  padding-bottom: 5px;
-  text-align: center;
-  position: sticky;
-  top: 60px;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  color: white;
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-}
-.hdpicEach {
-  justify-content: center, center;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  z-index: -100;
-  position: absolute;
-  filter: brightness(20%);
-}
-.carousel-item {
-  overflow: hidden;
-  height: 100vh;
-}
-.carousel-inner {
-  margin-top: -60px;
-}
-.hdpicText {
-  z-index: 25;
-  position: relative;
-  color: white;
-  padding-top: 25vh;
-  padding-left: 6vw;
-  padding-right: 6vw;
-}
-.ArProgress {
-  width: 100%;
-  height: 3px;
-  overflow: hidden;
-  background-color: #AAAAAA;
-}
-.ArProgress>div {
-  position: relative;
-  height: 3px;
-  transition: width .5s ease-in-out;
-  background-color: green;
-}.hdpicCount {
-  animation-timing-function: linear;
-  animation-name: hdpicCount;
-  animation-duration: 6s;
-  animation-fill-mode: forwards;
-}
-@keyframes hdpicCount {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0%;
-  }
-}
+span.badge,.nav-blur-dark{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}.nav-blur-dark:hover{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.8);-webkit-backdrop-filter:saturate(180%) blur(20px)}.sap{font-size:1.5rem;font-weight:10px;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}.hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(20%)}.carousel-item{overflow:hidden;height:100vh}.carousel-inner{margin-top:-60px}.hdpicText{z-index:25;position:relative;color:white;padding-top:25vh;padding-left:6vw;padding-right:6vw}.ArProgress{width:100%;height:3px;overflow:hidden;background-color:#AAAAAA}.ArProgress>div{position:relative;height:3px;transition:width .5s ease-in-out;background-color:green}.hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
 </style>
 </head>
 <body class="bg-dark bg-gradient text-white" style="padding-top: 60px;">
 
-<nav class="navbar navbar-expand-lg nav-blur-dark fixed-top" style="min-height: 60px;">
+<nav style="height: 60px;" class="navbar navbar-expand-lg nav-blur-dark fixed-top">
 <div class="container-fluid">
-<a class="navbar-brand fw-bold text-white" href="#"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
+<a class="navbar-brand fw-bold text-white" href="#"><img src="./favicon.ico" width="30" style="border-radius:30%;margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
+<button class="navbar-toggler" style="box-shadow: 0px 0px 2px 1px #AAAAAA;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon" style="box-shadow: 1px 1px 1px 1px #000;"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-<span class="navbar-text">
+<ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
+<span class="fs-5 navbar-text">
 <ul class="navbar-nav me-auto mb-lg-0">
-<li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="/#页面导航">页面导航</a></li>
-<li class="nav-item"><a class="nav-link text-white" href="/#动漫收藏">动漫收藏</a></li>
-<li class="nav-item"><a class="nav-link text-white" href="/#友情链接">友情链接</a></li>
-<li class="nav-item"><a class="nav-link text-white" href="https://www.yuque.com/aedelnz/">语雀空间</a></li>
+<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white active" aria-current="page" href="/#页面导航">页面导航</a></span></li>
+<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#动漫收藏">动漫收藏</a></span></li>
+<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#友情链接">友情链接</a></span></li>
+<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="https://www.yuque.com/aedelnz/">语雀空间</a></span></li>
 </ul>
 </span>
 </div>
 </div>
 </nav>
-
-
 <div class="fixed-bottom container" style="padding-top:60px"></div>
 
 <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
@@ -153,7 +70,6 @@
   font-size: 20px;
   color: white;
 }
-
 @keyframes move {
   from {
       right: 0;
@@ -233,6 +149,7 @@ setInterval(function () {
 </button>
 </div>
 
+
 <div class="sap mb-3">页面导航</div>
 <div id="页面导航" class="content content-full"><div class="card-group mb-2">
 
@@ -254,11 +171,11 @@ setInterval(function () {
 <div class="card-body">
 <div class="fs-3">饕餮云盘</div>
 <small class="text-secondary">不稳定的链接</small><br>
-<a href="https://alist.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<a href="https://alist.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 <hr>
 <div class="fs-3">Taotie Cloud Disk</div>
 <small class="text-secondary">第二地址链接</small><br>
-<a href="https://yunpan.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<a href="https://yunpan.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 </div>
 </div>
 
@@ -267,18 +184,19 @@ setInterval(function () {
 <div class="card-body">
 <div class="fs-3">Zito 社区</div>
 <small class="text-secondary">一个简单不过的 Zito 社区</small><br>
-<a href="https://zito.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<a href="https://zito.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 <hr>
 <div class="fs-3">狻猊云</div>
 <small class="text-secondary">为用户提供个性化的主机租用和网络应用解决方案</small><br>
-<a href="https://cloud.jixiejidiguan.top/" class="card-link" target="_blank">点击了解</a>
+<a href="https://cloud.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 <hr>
 <div class="fs-3">Outside 虚拟主机</div>
 <small class="text-secondary">免实名验证购买主机</small><br>
-<a href="http://outside.jixiejidiguan.eu.org" class="card-link" target="_blank">点击了解</a>
+<a href="http://outside.jixiejidiguan.eu.org" class="card-link text-decoration-none" target="_blank">点击了解</a>
 </div>
 </div>
 </div></div>
+
 
 <div class="sap mb-3">动漫收藏</div>
 <div id="动漫收藏" class="content content-full"><div class="card-group mb-2">
@@ -302,7 +220,7 @@ $.each(data,function(i,n){
 str+=`
 <div class="col">
 <div class="card mb-2">
-<a href="`+n.url+`" title="`+n.title+`">
+<a class="text-decoration-none h-50" href="`+n.url+`" title="`+n.title+`">
 <img src="`+n.img+`" class="card-img-top">
 <div class="card-footer">
 <small class="fs-5 text-muted">`+n.title+`</small>
@@ -331,7 +249,7 @@ $.each(data,function(i,n){
 str+=`
 <div class="col">
 <div class="card mb-2">
-<a href="`+n.url+`" title="`+n.title+`">
+<a class="text-decoration-none" href="`+n.url+`" title="`+n.title+`">
 <img src="`+n.img+`" class="card-img-top">
 <div class="card-footer">
 <small class="fs-5 text-muted">`+n.title+`</small>
@@ -464,3 +382,7 @@ $("#Links").append(str);
 
 </div></div>
 </div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
