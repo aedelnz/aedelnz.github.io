@@ -157,7 +157,7 @@ str+=`
 <div style="background-image: url(`+n.img+`);border-radius: 6px;background-size: cover;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;"></div>
 </a>
 <div class="mdui-grid-tile-actions">
-<div class="mdui-grid-tile-text">
+<div class="mdui-grid-tile-text" style="box-shadow: 1px 1px 1px #000;">
 <div class="mdui-grid-tile-title">`+n.title+`</div>
 </div>
 </div>
