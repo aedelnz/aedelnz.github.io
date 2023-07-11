@@ -1,7 +1,27 @@
 * {margin: 0;padding: 0;box-sizing: border-box;}
+/* 字体 */
+@font-face {
+    font-family: font;
+    src: url('fonts/font.ttf') format('truetype');
+}
+@font-face {
+    font-family: MiLanProVF;
+    src: url('fonts/MiLanProVF.ttf') format('truetype');
+}
+@font-face {
+    font-family: RobotoFake-Black;
+    src: url('fonts/RobotoFake-Black.ttf') format('truetype');
+}
 /* 主题颜色 */
 body {
 background-color: #f3f4f7;
+font-family: font, Arial, sans-serif;
+}
+html {
+font-family: RobotoFake-Black, Arial, sans-serif;
+}
+div {
+font-family: MiLanProVF, Arial, sans-serif;
 }
 /* 全站灰色 */
 开body *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
@@ -12,4 +32,3 @@ box-shadow:1 1px 20px 1px rgba(0,0,0,.3);
 border-bottom:0px solid rgba(255,255,255,0.4);
 border-left:0px solid rgba(255,255,255,0.4);
 }
-
