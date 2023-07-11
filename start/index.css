@@ -2,7 +2,7 @@
 /* 字体 */
 @font-face {
     font-family: font;
-    src: url('fonts/font.ttf') format('truetype');
+    src: url('./font.ttf') format('truetype');
 }
 
 /* 主题颜色 */
