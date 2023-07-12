@@ -1,0 +1,252 @@
+<html lang="zh-CN">
+<head>
+<title>哔哩哔哩-互动抽奖</title>
+<meta charset="utf-8" />
+<meta name="referrer" content="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../start/index.css?v=1.0000" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="../start/origin.js?v=1.0000"></script>
+</head>
+<body class="mdui-appbar-with-toolbar">
+
+<div class="mdui-container mdui-appbar mb-2 mdui-appbar-fixed mdui-appbar-scroll-hide">
+<div class="mdui-toolbar text-bg-light mdui-appbar-fixed" style="margin-top:10px;border-radius: 30px;">
+<a href="javascript:;" class="mdui-typo-title">哔哩互动抽奖</a>
+<div class="mdui-toolbar-spacer"></div>
+<button type="button" id="setup" class="btn btn-sm mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">healing</i></button>
+</div>
+</div>
+
+<style>.rotate{transform: rotate(90deg);}</style>
+<script>
+$(document).ready(function() {
+$('#setup').click(function() {
+$(this).toggleClass('rotate');
+var hasClass = $('#chaxun_1').hasClass('visible');
+if(hasClass){
+alert("这里需要获取哔哩哔哩动态的链接");
+$("#chaxun_1").removeClass("visible");
+$("#chaxun_1").addClass("d-none");
+$("#chaxun_2").removeClass("invisible");
+$("#chaxun_2").addClass("visible");
+}else{
+$("#chaxun_1").removeClass("d-none");
+$("#chaxun_1").addClass("visible");
+$("#chaxun_2").removeClass("visible");
+$("#chaxun_2").addClass("invisible");
+}
+});
+});
+</script>
+<!-- ################### -->
+<div id="chaxun_1" class="visible">
+<div class="container" style="margin-top:10px;">
+<h1 style="margin-bottom:12%;text-align: center;margin-top:15%;font-size:35px"><b>互动抽奖</b></h1>
+<div class="card card-body mb-2">
+<form id="uuu">
+<h5 class="card-title">
+<div class="input-group mb-3">
+<span class="input-group-text">UID</span>
+<input type="text" class="form-control" id="uid" placeholder="输入UID或 “UID:xxx” 格式"/>
+<div class="dropdown"><button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+参数</button>
+<ul class="dropdown-menu">
+<li><input type="text" class="form-control" id="cookie" placeholder="哔哩哔哩cookie里的buvid3值"/></li>
+</ul></div>
+</div>
+</h5>
+<p class="card-text text-center mb-2">
+<button type="submit" class="btn btn-primary">报名/查询结果</button>
+</p>
+</form>
+<div id="list" class="text-wrap"></div>
+<button class="btn mb-1 text-bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">使用说明</button>
+<div class="collapse" id="collapseExample">
+<div class="card card-body">
+<b>如何获取UID？</b>
+PC端：进入个人空间，链接中的数字即为UID。<br>
+手机APP：进入个人空间，点击签名旁的“详情”即可查看UID。<br>
+<b>动态获取失败？</b>
+PC端：访问哔哩哔哩个人主页之后F12查看cookie值，选择buvid3值复制填入上面的参数里。<br>
+手机APP：用via浏览器访问哔哩哔哩个人主页之后点击左上角查看cookie，选择buvid3值复制填入上面的参数里。<br>
+
+</div>
+</div>
+</div>
+</div>
+<div id="root" class="container" style="margin-top:10px;"></div>
+</div>
+<!-- ################### -->
+<div id="chaxun_2" class="invisible">
+<div class="container" style="margin-top:10px;">
+<h1 style="margin-bottom:12%;text-align: center;margin-top:15%;font-size:35px"><b>设置互动抽奖</b></h1>
+<div class="card card-body mb-2">
+<form id="add">
+<h5 class="card-title">
+<div class="input-group mb-3">
+<span class="input-group-text">opus</span>
+<input type="text" class="form-control" id="opus1" pattern="[0-9]*" placeholder="opus"/>
+</div>
+<div class="input-group mb-3">
+<span class="input-group-text">奖品一</span>
+<input type="text" class="form-control" id="prize" placeholder="一等奖"/>
+<span class="input-group-text" id="basic-addon2">｜</span>
+<input type="text" class="form-control" id="uids" pattern="[0-9]*" placeholder="人数"/>
+</div>
+<p><a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">高级</a>
+</p>
+<div class="collapse" id="collapseExample">
+<div class="card card-body">
+<div class="input-group mb-3">
+<span class="input-group-text">奖品二</span>
+<input type="text" class="form-control" id="prize1" placeholder="二等奖"/>
+<span class="input-group-text" id="basic-addon2">｜</span>
+<input type="text" class="form-control" id="uids1" pattern="[0-9]*" placeholder="人数"/>
+</div>
+<div class="input-group mb-3">
+<span class="input-group-text">奖品三</span>
+<input type="text" class="form-control" id="prize2" placeholder="三等奖"/>
+<span class="input-group-text" id="basic-addon2">｜</span>
+<input type="text" class="form-control" id="uids2" pattern="[0-9]*" placeholder="人数"/>
+</div>
+</div>
+</div>
+<div class="input-group mb-3">
+<span class="input-group-text">开奖时间</span>
+<input type="datetime-local" class="form-control" id="datepicker" placeholder="开奖时间">
+</div>
+</h5>
+<p class="card-text text-center mb-2">
+<button type="submit" class="btn btn-primary">设置抽奖</button>
+</p>
+</form>
+<div id="opuss"></div>
+</div>
+</div>
+</div>
+<script>
+var hash = window.location.hash;
+var opus = hash.replace('#opus=', '');
+$('#uuu').submit(function(event) {
+event.preventDefault(); // 阻止表单提交默认行为
+var uid = $('#uid').val();
+var cookie = $('#cookie').val();
+// 发送用户名和密码给服务器进行验证
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/biliraffle.php?u', // 替换为实际的登录验证接口
+method: 'POST',
+data: {
+opus: opus,
+uid: uid,
+cookie: cookie
+},
+success: function(data_r) {
+// 处理逻辑
+alert(data_r.message+'\n编号：'+data_r.id+'\n昵称：'+data_r.nick+'［'+data_r.uid+'］\n报名时间：'+data_r.attend_time);     
+}
+});
+});
+$.post('https://s.jixiejidiguan.top/Api/Mchat/biliraffle.php?list', {opus: opus}, function(data_t) {
+if(data_t.message === '查询成功！'){
+var str='';
+if(data_t.opus.uid1===''){
+str+=`<span class="badge text-bg-dark">一等奖</span>`;
+}else{
+str+=`<span class="badge text-bg-dark">奖品</span>`;
+}
+str+=`
+<div class="p-1 mb-1 bg-secondary-subtle">
+<p>当前状态：<span class="text-danger">`+data_t.dap+`&nbsp;</span></p><p>自动开奖时间：`+data_t.opus.draw_time+`&nbsp;</p>
+<p class="fw-bolder">中奖名额：`+data_t.opus.uid+`</p>
+<p class="fw-semibold">奖品：`+data_t.opus.prize+`</p>
+</div>`;
+if(data_t.opus.uid1===''){
+}else{
+if(data_t.opus.uid1===''){
+}else{
+str+=`<span class="badge text-bg-dark">二等奖</span>`;
+}
+str+=`
+<div class="p-1 mb-1 bg-secondary-subtle">
+<p class="fw-bolder">中奖名额：`+data_t.opus.uid1+`</p>
+<p class="fw-semibold">奖品：`+data_t.opus.prize1+`</p>
+</div>`;
+}
+if(data_t.opus.uid2===''){
+}else{
+if(data_t.opus.uid1===''){
+str+=`<span class="badge text-bg-dark">二等奖</span>`;
+}else{
+str+=`<span class="badge text-bg-dark">三等奖</span>`;
+}
+str+=`
+<div class="p-1 mb-1 bg-secondary-subtle">
+<p class="fw-bolder">中奖名额：`+data_t.opus.uid2+`</p>
+<p class="fw-semibold">奖品：`+data_t.opus.prize2+`</p>
+</div>`;
+}
+
+$("#list").append(str);
+var stre=`<div class="card card-body mb-2 mdui-table-fluid">
+<p><span class="badge text-bg-dark">已报名用户</span></p>
+<table class="mdui-text-truncate table">
+<thead>
+<tr>
+<th scope="col">编号</th>
+<th scope="col">昵称</th>
+<th scope="col">UID</th>
+<th scope="col">报名时间</th>
+</tr>
+</thead>
+<tbody>
+`;
+$.each(data_t.data,function(i,n){    
+stre+=`<tr>
+<th scope="row">`+n.id+`</th>
+<td>`+n.nick+`</td>
+<td>`+n.uid+`</td>
+<td>`+n.attend_time+`</td>
+</tr>`;
+});
+stre+=`
+</tbody>
+</table>
+</div>`;
+$("#root").append(stre);
+}
+});
+$('#add').submit(function(event) {
+var opus1 = $('#opus1').val();
+var prize = $('#prize').val();
+var prize1 = $('#prize1').val();
+var priz2 = $('#prize2').val();
+var uids = $('#uids').val();
+var uids1 = $('#uids1').val();
+var uids2 = $('#uids2').val();
+var draw_time = $('#draw_time').val();
+
+$.post('https://s.jixiejidiguan.top/Api/Mchat/biliraffle.php?add', {opus: opus1, prize: prize, prize1: prize1, prize2: prize2, uid: uids, uid1: uids1, uid2: uids2, draw_time: draw_time}, function(data_a) {
+if(data_a.message === '该动态添加成功！'){
+alert(data_a.message);
+var urltt = window.location.host;
+var strt=`<div class="mb-3">
+<label class="form-label">已生成分享链接🔗</label>
+<textarea class="form-control" rows="3">`+urltt+`/Mchat/biliopus.html?#opus=`+opus1+`</textarea>
+</div>`;
+$("#opuss").append(strt);
+}else{
+alert(data_a.message);
+}
+});
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
