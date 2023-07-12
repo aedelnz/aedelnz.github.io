@@ -82,6 +82,7 @@ PC端：访问哔哩哔哩个人主页之后F12查看cookie值，选择buvid3值
 </div>
 <div id="root" class="container" style="margin-top:10px;"></div>
 </div>
+
 <!-- ################### -->
 <div id="chaxun_2" class="invisible">
 <div class="container" style="margin-top:10px;">
@@ -119,7 +120,7 @@ PC端：访问哔哩哔哩个人主页之后F12查看cookie值，选择buvid3值
 </div>
 <div class="input-group mb-3">
 <span class="input-group-text">开奖时间</span>
-<input type="datetime-local" class="form-control" id="datepicker" placeholder="开奖时间">
+<input type="datetime-local" class="form-control" id="draw_time" placeholder="开奖时间">
 </div>
 </h5>
 <p class="card-text text-center mb-2">
@@ -130,6 +131,48 @@ PC端：访问哔哩哔哩个人主页之后F12查看cookie值，选择buvid3值
 </div>
 </div>
 </div>
+<script>
+$('#add').submit(function(event) {
+event.preventDefault(); // 阻止表单提交默认行为
+alert('执行');
+var opus1 = $('#opus1').val();
+var prize = $('#prize').val();
+var prize1 = $('#prize1').val();
+var prize2 = $('#prize2').val();
+var uids = $('#uids').val();
+var uids1 = $('#uids1').val();
+var uids2 = $('#uids2').val();
+var draw_time = $('#draw_time').val();
+var datapost ={
+opus: opus1,
+prize: prize,
+prize1: ''+prize1,
+prize2: ''+prize2,
+uid: uids,
+uid1: uids1,
+uid2: uids2,
+draw_time: draw_time
+}
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/biliraffle.php?add', // 替换为实际的登录验证接口
+method: 'POST',
+data: datapost,
+success: function(data_a) {
+// 处理逻辑
+alert(data_a.message);
+if(data_a.message === '该动态添加成功！'){
+var urltt = window.location.host;
+var strt=`<div class="mb-3">
+<label class="form-label">已生成分享链接🔗</label>
+<textarea class="form-control" rows="3">`+urltt+`/Mchat/biliopus.html?#opus=`+opus1+`</textarea>
+</div>`;
+$("#opuss").append(strt);
+}
+}
+});
+});
+
+</script>
 <script>
 var hash = window.location.hash;
 var opus = hash.replace('#opus=', '');
@@ -220,30 +263,6 @@ stre+=`
 </div>`;
 $("#root").append(stre);
 }
-});
-$('#add').submit(function(event) {
-var opus1 = $('#opus1').val();
-var prize = $('#prize').val();
-var prize1 = $('#prize1').val();
-var priz2 = $('#prize2').val();
-var uids = $('#uids').val();
-var uids1 = $('#uids1').val();
-var uids2 = $('#uids2').val();
-var draw_time = $('#draw_time').val();
-
-$.post('https://s.jixiejidiguan.top/Api/Mchat/biliraffle.php?add', {opus: opus1, prize: prize, prize1: prize1, prize2: prize2, uid: uids, uid1: uids1, uid2: uids2, draw_time: draw_time}, function(data_a) {
-if(data_a.message === '该动态添加成功！'){
-alert(data_a.message);
-var urltt = window.location.host;
-var strt=`<div class="mb-3">
-<label class="form-label">已生成分享链接🔗</label>
-<textarea class="form-control" rows="3">`+urltt+`/Mchat/biliopus.html?#opus=`+opus1+`</textarea>
-</div>`;
-$("#opuss").append(strt);
-}else{
-alert(data_a.message);
-}
-});
 });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
