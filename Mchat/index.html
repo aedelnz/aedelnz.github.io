@@ -35,22 +35,37 @@
 <h1 class="modal-title fs-5" id="staticBackdropLabel">个人信息</h1>
 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<form id="Content-modification">
 <div class="modal-body">
+<div class="mb-3">
+  <label class="form-label">uid：</label>
+  <span id="uidttts"></span>
+</div>
+<div class="mb-3">
+  <label class="form-label">账号：</label>
+  <span id="usernamessh"></span>
+</div>
+<div class="mb-3">
+  <label class="form-label">注册时间：</label>
+  <span id="zcsjsskk"></span>
+</div>
+<form id="Content-modification">
 <div class="mb-3">
   <label class="form-label">昵称</label>
   <input type="text" class="form-control" id="name">
 </div>
+<button type="submit" class="btn btn-primary mdui-float-right">修改</button>
+</form>
+<form id="Content-modifications">
 <div class="mb-3">
   <label class="form-label">密码</label>
   <input type="text" class="form-control" id="pass">
 </div>
+<button type="submit" class="btn btn-primary mdui-float-right">修改</button>
+</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-<button type="submit" class="btn btn-primary">修改</button>
 </div>
-</form>
 </div>
 </div>
 </div>
@@ -130,8 +145,11 @@ $("#tanchuang").hide();
 }, 1000);
 });
 $('#staticBackdrop1').click(function() {
+$('#uidttts').text(data.data.uid);
+$('#usernamessh').text(data.data.username);
+$('#pass').val(data.data.password);
 $('#name').val(data.data.nickname);
-$('#pass').val(data.data.username);
+$('#zcsjsskk').text(data.data.registration_time);
 });
 var hash = window.location.hash;
 var truncatedUrl = hash.replace('#group_id=', '');
@@ -298,6 +316,13 @@ $("#group_id").append(str);
 $('#Content-modification').submit(function(event) {
 event.preventDefault(); // 阻止默认的表单提交行为
 var name = $('#name').val();
+$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?M', {username: parsedData.username, password: parsedData.password, Pm: pass, Nm: name}, function(data) {
+alert(data.message);
+location.reload();
+});
+});
+$('#Content-modifications').submit(function(event) {
+event.preventDefault(); // 阻止默认的表单提交行为
 var pass = $('#pass').val();
 $.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?M', {username: parsedData.username, password: parsedData.password, Pm: pass, Nm: name}, function(data) {
 alert(data.message);
