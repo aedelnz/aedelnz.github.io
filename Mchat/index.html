@@ -4,209 +4,320 @@
 <meta charset="utf-8" />
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<!-- ico -->
 <link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
-<!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../start/index.css?v=1.0000" />
-<!-- js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-uaZ0UXmB7NHxAxQawA8Ow2wWjdsedpRu7nJRSoI2mjnwtY8V5YiCWavoIpo1AhWPMLiW5iEeavmA3JJ2+1idUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.min.js" integrity="sha512-wOLiP6uL5tNrV1FiutKtAyQGGJ1CWAsqQ6Kp2XZ12/CvZxw8MvNJfdhh0yTwjPIir4SWag2/MHrseR7PRmNtvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.esm.min.js" integrity="sha512-vcCVya/Wt6kSJ63pfP2ufA8W23ElMu/0Ry6JqnMORLVOYCe4WNYAq9EaUzQ0LO3AMvt3TNXGRraW6z955Z2RmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="../start/origin.js?v=1.0000"></script>
 </head>
-<body class="mdui-appbar-with-toolbar">
-
-<div class="mdui-appbar mb-2 mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar mdui-color-red-accent mdui-appbar-fixed">
+<body class="mdui-appbar-with-toolbar container container-fluid">
+<div class="container container-fluid mdui-appbar mdui-appbar-fixed">
+<div class="mdui-toolbar">
+<a id="fanhuisu" href="/Mchat" class="mdui-btn mdui-btn-icon">
+<i class="mdui-icon material-icons">arrow_back</i>
+</a>
 <a href="javascript:;" class="mdui-typo-title">Mchat</a>
 <div class="mdui-toolbar-spacer"></div>
+<button type="button" id="staticBackdrop1" class="btn btn-sm mdui-btn mdui-btn-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="mdui-icon material-icons">healing</i></button>
 <button type="button" id="clearCookie" class="btn btn-sm mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">exit_to_app</i></button>
 </div>
 </div>
 
-<div id="visibility">
-<div id="qunliao"></div>
+<div id="tanchuang"></div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="modal-title fs-5" id="staticBackdropLabel">个人信息</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-
-<div id="visually-hidden">
-<div id="container"></div>
-<style>
-.subtitle {
-display: block;
-margin-left: 35px;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-opacity: .54;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-}
-.subtitles {
-margin-left: 40px;
-margin-top: 6px;
-}
-.badges {
---bs-badge-padding-x: 0.65em;
---bs-badge-padding-y: 0.35em;
---bs-badge-font-size: 0.75em;
---bs-badge-font-weight: 700;
---bs-badge-color: #fff;
---bs-badge-border-radius: var(--bs-border-radius);
-display: inline-block;
-padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
-font-size: var(--bs-badge-font-size);
-font-weight: var(--bs-badge-font-weight);
-line-height: 1;
-}
-</style>
-<div class="fixed-bottom">
-<div id="error-message"></div>
-<form id="content">
-<div class="input-group mdui-color-white p-1 container-fluid">
-<input class="form-control p-2 mdui-textfield-input" type="text" id="contents" name="contents" placeholder="输入内容发送" />
-<button class="btn btn-sm badge text-bg-light mdui-btn" type="submit">发送</button>
+<form id="Content-modification">
+<div class="modal-body">
+<div class="mb-3">
+  <label class="form-label">昵称</label>
+  <input type="text" class="form-control" id="name">
+</div>
+<div class="mb-3">
+  <label class="form-label">密码</label>
+  <input type="text" class="form-control" id="pass">
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+<button type="submit" class="btn btn-primary">修改</button>
 </div>
 </form>
 </div>
-
+</div>
 </div>
 
-<script>
-var hash = window.location.hash;
-var url = window.location.href;
-var truncatedUrl = hash.replace('#article_id=', '');
-console.log(truncatedUrl);
-if (hash.toString().indexOf('#article_id=') !== -1) {
-$("#visibility").addClass("visually-hidden");
-} else {
-$("#visually-hidden").addClass("visually-hidden");
+<div id="visually-hidden">
+<div id="group_id"></div>
+</div>
+
+<div id="visibility">
+<style>
+.mdui-list-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 48px;
+    padding: 0 16px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+span.card {
+width: max-content;
+}
+div.mdui-list-item-text.x {
+display: flex;
+flex-direction: row-reverse;
+}
+</style>
+<div id="group_list" style="bottom:60px;"></div>
+<div class="fixed-bottom container container-fluid">
+<div id="fasongxinxitishi" class="p-1"></div>
+<div id="tianxie" class="d-none bg-white text-dark">
+<div class="mdui-float-right p-1">
+<button id="tianxienr" class="btn" type="submit"><i class="mdui-icon material-icons">arrow_downward</i></button>
+</div>
+<div class="mdui-textfield p-2">
+<textarea class="mdui-textfield-input" id="tianxietext" rows="4" placeholder="输入发送内容"></textarea>
+</div>
+</div>
+
+<div id="jiandanbjk" class="row align-items-start bg-white text-dark sticky-bottom">
+<div class="col-8">
+<div class="float-start mdui-float-left p-1" style="width: 100%">
+<input type="text" class="mdui-textfield-input" id="xinxitext" placeholder="输入发送内容">
+</div>
+</div>
+<div class="col-4">
+<div class="mdui-float-right p-1" style="display: flex;flex-direction: row;">
+<button id="tuozhan" class="btn" type="submit"><i class="mdui-icon material-icons">aspect_ratio</i></button>
+<button id="fasongxinxi" class="btn btn-primary" type="submit">发送</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<script>
 $('#clearCookie').click(function() {
-$.removeCookie('user', { path: '/' });
+$.removeCookie('_key', { path: '/' });
 location.reload();
 });
 
-var cookie = $.cookie('user');
-console.log(cookie);
-if(cookie === undefined){
-window.location.href = 'Login.html';
-}
-var json = $.parseJSON(cookie);
-console.log(json);
-var data_s = '{"user": "'+json.username+'","pass": "'+json.password+'"}';
-var jsons = $.parseJSON(data_s)
-var username = jsons.user;
-var password = jsons.pass;
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php', {username: username, password: password}, function(datas) {
-if(datas.message === '登录成功！'){
-console.log(datas);
-}else{
-window.location.href = 'Login.html';
-}
+var cookieData = $.cookie("_key");
+if (cookieData) {
+var parsedData = JSON.parse(cookieData);
+$.post("https://s.jixiejidiguan.top/Api/Mchat/login.php?L", {username: parsedData.username, password: parsedData.password}, function(data) {
+if(data.message==='登录成功！') {
+$(document).ready(function() {
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
+setTimeout(function() {
+$("#tanchuang").hide();
+}, 1000);
 });
-$.ajax({
-url: 'https://s.jixiejidiguan.top/Api/Mchat/content.php',
-type: 'POST',
-data: {username: username, password: password},   
-dataType: 'json',
-success: function(data_st) {
-console.log(data_st);
-var datas = data_st.data;
-datas.reverse();
-var str=`
-<div class="mb-1"></div>
-<div class="mb-5"><div class="container-fluid">
-<ul class="mdui-list mdui-list-dense">`;
-$.each(datas, function(i, n) {
-str+=`
-<a href="#article_id=`+n.id+`">
-<li class="mdui-list-item mdui-ripple">
-<div class="mdui-list-item-avatar">
-<img src="`+n.img+`"/>
-</div>
+$('#staticBackdrop1').click(function() {
+$('#name').val(data.data.nickname);
+$('#pass').val(data.data.username);
+});
+var hash = window.location.hash;
+var truncatedUrl = hash.replace('#group_id=', '');
+if (hash.toString().indexOf('#group_id=') !== -1) {
+$("#visually-hidden").addClass("visually-hidden");
+
+function listxxt(truncatedUrl){
+$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?group_id='+truncatedUrl, {username: parsedData.username, password: parsedData.password}, function(data_g) {
+if(data_g.message==='查询成功！'){
+var shijian = data_g.data[data_g.data.length - 1];
+localStorage.setItem('time', shijian.Group_Introduction);
+var str=`<ul id="listtyu" class="mdui-list mb-4">`;
+$.each(data_g.data,function(i,n){
+var informative_text = n.informative_text.replace(/\n/g, "<br>");
+if(n.uid==parsedData.uid){
+str+=`<li class="mdui-list-items">
+<i style="min-width: 40px;max-width: 40px;line-height: 40px;"></i>
 <div class="mdui-list-item-content">
-<div class="mdui-list-item-title">`+n.title+`</div>
-<div class="mdui-list-item-text mdui-list-item-two-line">
-<span class="mdui-text-color-theme-text">`+n.introduced+`</span>
+<div class="mdui-list-item-title mdui-text-right"><span style="font-size: 1px;">`+n.uid+`</span><br>`+n.nickname+`</div>
+<div class="mdui-list-item-text x">
+<span class="p-1 bg-white card text-dark fw-bold" style="border-radius: 6px;">`+informative_text+`</span>
 </div>
+<div class="mdui-typo-caption-opacity mdui-text-right">`+n.Group_Introduction+`</div>
 </div>
+<i class="mdui-list-item-avatar mdui-icon material-icons">account_box</i>
 </li>
-</a>
 `;
+}else{
+str+=`<li class="mdui-list-items">
+<i class="mdui-list-item-avatar mdui-icon material-icons">account_circle</i>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><span style="font-size: 1px;">`+n.uid+`</span><br>`+n.nickname+`</div>
+<div class="mdui-list-item-text">
+<span class="p-1 bg-white card text-dark fw-bold" style="border-radius: 6px;">`+informative_text+`</span>
+</div>
+<div class="mdui-typo-caption-opacity">`+n.Group_Introduction+`</div>
+</div>
+<i style="min-width: 40px;max-width: 40px;line-height: 40px;"></i>
+</li>
+`;
+}
 });
-str+=`</ul></div></div>`;
-$('#qunliao').append(str);
-$('a').click(function(){
+str+='</ul><div id="xjdjdkdk" class="mb-5"></div>';
+$("#group_list").append(str);
+}
+});
+}
+listxxt(truncatedUrl);
+
+
+$(document).ready(function() {
+function startLoop(truncatedUrl) {
+$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?group_id='+truncatedUrl, {username: parsedData.username, password: parsedData.password}, function(data_g) {
+if(data_g.message==='查询成功！'){
+var wltime = data_g.data[data_g.data.length - 1];
+var shijianyz = localStorage.getItem('time');
+if(shijianyz===wltime.Group_Introduction){
+}else{
+var informative_textt = wltime.informative_text.replace(/\n/g, "<br>");
+localStorage.setItem('time', wltime.Group_Introduction);
+if(wltime.uid===parsedData.uid){
+var listadd=`<li class="mdui-list-items">
+<i style="min-width: 40px;max-width: 40px;line-height: 40px;"></i>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title mdui-text-right"><span style="font-size: 1px;">`+wltime.uid+`</span><br>`+wltime.nickname+`</div>
+<div class="mdui-list-item-text x">
+<span class="p-1 bg-white card text-dark fw-bold" style="border-radius: 6px;">`+informative_textt+`</span>
+</div>
+<div class="mdui-typo-caption-opacity mdui-text-right">`+wltime.Group_Introduction+`</div>
+</div>
+<i class="mdui-list-item-avatar mdui-icon material-icons">account_box</i>
+</li>
+`;
+}else{
+var listadd = `<li class="mdui-list-items">
+<i class="mdui-list-item-avatar mdui-icon material-icons">account_circle</i>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title"><span style="font-size: 1px;">`+wltime.uid+`</span><br>`+wltime.nickname+`</div>
+<div class="mdui-list-item-text">
+<span class="p-1 bg-white card text-dark fw-bold" style="border-radius: 6px;">`+informative_textt+`</span>
+</div>
+<div class="mdui-typo-caption-opacity">`+wltime.Group_Introduction+`</div>
+</div>
+<i style="min-width: 40px;max-width: 40px;line-height: 40px;"></i>
+</li>`;
+}
+
+$("#listtyu").append(listadd);
+}
+}
+});
+$('html, body').animate({ scrollTop: $(document).height() }, 10);
+setTimeout(startLoop, 1000);
+}
+startLoop();
+});
+
+$('#tuozhan').click(function() {
+$("#tianxie").removeClass("d-none");
+$("#jiandanbjk").addClass("d-none");
+var xinxitext = $("#xinxitext").val(); 
+var xinxitextt = tianxietext.replace(/\n/g, "\\n");
+$('#tianxietext').val(xinxitextt); 
+});
+
+$('#tianxienr').click(function() {
+$("#tianxie").addClass("d-none");
+$("#jiandanbjk").removeClass("d-none"); 
+var tianxietext = $("#tianxietext").val(); 
+var tianxietextt = tianxietext.replace(/\n/g, "\\n");
+$('#xinxitext').val(tianxietextt); 
+});
+
+$('#fasongxinxi').click(function() {
+var fsxinxitext = $("#xinxitext").val(); 
+$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?group_id='+truncatedUrl, {username: parsedData.username, password: parsedData.password, content: fsxinxitext}, function(data) {
+$(document).ready(function() {
+$("#fasongxinxitishi").text(data.message);
+$("#fasongxinxitishi").fadeIn();
+setTimeout(function() {
+$("#fasongxinxitishi").fadeOut();
+}, 1000); // 3秒后关闭内容
+});
+});
+$('#xinxitext').val(''); 
+});
+
+} else {
+$("#visibility").addClass("visually-hidden");
+$("#fanhuisu").addClass("visually-hidden");
+
+$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php', {username: parsedData.username, password: parsedData.password}, function(data_g) {
+if(data_g.message==='查询成功！'){
+var str=`<ul class="mdui-list">`;
+$.each(data_g.data,function(i,n){
+$(document).ready(function() {
+// 选中链接并绑定点击事件处理程序
+$('#a').click(function(event) {
 window.location.href = $(this).attr('href'); // 跳转到链接中的地址
 location.reload();
 });
-}
 });
-
-$.ajax({
-url: 'https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl,
-type: 'POST',
-data: {username: username, password: password},   
-dataType: 'json',
-success: function(data_st) {
-console.log(data_st);
-var datas = data_st.data;
-datas.reverse();
-var str=`
-<div class="navbar bg-body-tertiary font-monospace">
-<div class="container-fluid">
-<a href="/Mchat/" class="mdui-btn mdui-btn-icon">
-<i class="mdui-icon material-icons">chevron_left</i>
+str+=`<a id="a" href="/Mchat/#group_id=`+n.group_id+`">
+<li class="mdui-list-item mdui-ripple">
+<div class="mdui-list-item-avatar">
+<img src="`+n.Group_avatar+`"/>
+</div>
+<div class="mdui-list-item-content">
+<div class="mdui-list-item-title">`+n.Group_Name+`</div>
+<div class="mdui-list-item-text mdui-list-item-one-line">
+<span class="mdui-text-color-theme-text">`+n.Group_Introduction+`</span>
+</div>
+</div>
+</li>
+<li class="mdui-divider-inset mdui-m-y-0"></li>
 </a>
-<a class="text-center text-decoration-none">`+data_st.online_users+`</a>
-</div>
-</div>
-<div class="mb-1"></div>
-<div class="mb-5"><div class="container-fluid">`;
-$.each(datas, function(i, n) {
-str+=`<div>
-<div class="mb-1">
-<div class="mdui-float-left">
-<img src="https://q1.qlogo.cn/g?b=qq&nk=`+n.QQ+`&s=5" class="rounded float-start" style="width: 30px; height: 30px;" />
-</div>
-<div class="subtitle">`+n.user_id+`</div>
-<div class="subtitles fs-5 p-1">
-<span class="badges mdui-color-white text-bg-primary text-break">`+n.content+`</span>
-</div>
-</div>
-</div>`;
-});
-str+=`</div></div>
-<div id="bottom"></div>
 `;
-$('#container').append(str);
-var element = $('#bottom');
-element.scrollTop(element.prop("scrollHeight"));
-$('html, body').animate({scrollTop: $(document).height()}, 'slow');
+});
+str+='</ul>';
+$("#group_id").append(str);
 }
+});
+}
+$('#Content-modification').submit(function(event) {
+event.preventDefault(); // 阻止默认的表单提交行为
+var name = $('#name').val();
+var pass = $('#pass').val();
+$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?M', {username: parsedData.username, password: parsedData.password, Pm: pass, Nm: name}, function(data) {
+alert(data.message);
+location.reload();
+});
 });
 
-$('#content').submit(function(event) {
-event.preventDefault(); // 阻止默认的表单提交行为
-var content = $('#contents').val();
-$.post('https://s.jixiejidiguan.top/Api/Mchat/content.php?article_id='+truncatedUrl, {username: jsons.user, password: jsons.pass, content: content}, function(data_t) {
-if(data_t.message === '发送成功！'){
-$('#error-message').text(data_t.message);
-location.reload();
-}else{
-$('#error-message').text(data_t.message);
+} else {
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
+window.location.href = 'Login.html';
 }
+}).fail(function() {
+alert("请求失败！");
 });
-});
+} else {
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+cookieData+'</div>');
+window.location.href = 'Login.html';
+}
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

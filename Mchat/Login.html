@@ -4,26 +4,17 @@
 <meta charset="utf-8" />
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<!-- ico -->
 <link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
-<!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="../start/index.css?v=1.0000" />
-<!-- js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.7/umd/popper.min.js" integrity="sha512-uaZ0UXmB7NHxAxQawA8Ow2wWjdsedpRu7nJRSoI2mjnwtY8V5YiCWavoIpo1AhWPMLiW5iEeavmA3JJ2+1idUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.min.js" integrity="sha512-wOLiP6uL5tNrV1FiutKtAyQGGJ1CWAsqQ6Kp2XZ12/CvZxw8MvNJfdhh0yTwjPIir4SWag2/MHrseR7PRmNtvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.esm.min.js" integrity="sha512-vcCVya/Wt6kSJ63pfP2ufA8W23ElMu/0Ry6JqnMORLVOYCe4WNYAq9EaUzQ0LO3AMvt3TNXGRraW6z955Z2RmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="../start/origin.js?v=1.0000"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-appbar-with-tab container container-fluid">
-
+<div id="tanchuang"></div>
 <div class="row text-center">
 <div class="col-sm-5 col-sm-4 d-grid gap-2 mx-auto">
 <div class="mb-5"></div>
@@ -43,7 +34,7 @@
 </form>
 <div class="mb-4"></div>
 <div class="mb-1 text-center text-muted">
-还没有 Mchat 账户？ <a href="#register" class="text-reset">注册</a>.
+还没有 Mchat 账户？ <a id="href" href="#register" class="text-reset">注册</a>.
 </div>
 </div>
 
@@ -53,9 +44,6 @@
 <form id="register-form">
 <div class="mb-3">
   <input class="form-control" type="text" id="usernames" name="usernams" placeholder="账号">
-</div>
-<div class="mb-3">
-  <input class="form-control" type="text" id="qq" name="qq" placeholder="QQ">
 </div>
 <div class="mb-3">
   <input class="form-control" type="password" id="passwords" name="passwords" placeholder="密码">
@@ -80,43 +68,48 @@ $("#visually-hidden").addClass("visually-hidden");
 } else {
 $("#visibility").addClass("visually-hidden");
 }
-$('a').click(function(){
+$(document).ready(function() {
+// 选中链接并绑定点击事件处理程序
+$('#href').click(function(event) {
 window.location.href = $(this).attr('href'); // 跳转到链接中的地址
 location.reload();
+});
 });
 $('#login-form').submit(function(event) {
 event.preventDefault(); // 阻止表单默认提交行为
 var username = $('#username').val();
 var password = $('#password').val();
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php', {username: username, password: password}, function(data) {
-$('#error-message').text(data.message);
+if(username==='' || password===''){
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">参数错误！</div>');
+}else{
+$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?L', {username: username, password: password}, function(data) {
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
 if(data.message === '登录成功！'){
 var datas = {
-username: username,
-password: password
+uid: data.data.uid,
+username: data.data.username,
+password: data.data.password
 };
 var s_datas = JSON.stringify(datas);
-console.log(typeof (s_datas));
-localStorage.setItem('localdata', s_datas)
-$.cookie('user', s_datas, { expires: 7, path: '/' });
-$('#error-message').text(data.id);
+$.cookie('_key', s_datas, { expires: 7, path: '/' });
 window.location.href = '/Mchat';
 }
 });
+}
 });
-
 $('#register-form').submit(function(event) {
 event.preventDefault(); // 阻止默认的表单提交行为
 var usernames = $('#usernames').val();
-var qq = $('#qq').val();
 var passwords = $('#passwords').val();
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?register=0', {username: usernames, QQ: qq, password: passwords}, function(data) {
-$('#error-message').text(data.message);
+$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?R', {username: usernames, password: passwords}, function(data) {
+$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
 if(data.message === '注册成功！'){
 window.location.href = 'Login.html';
 }
 });
 });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
