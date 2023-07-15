@@ -1,41 +1,16 @@
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=11,minimum-scale=1," id="mixia_vpid">
-<meta name="theme-color" content="#0665d0">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="theme-color" content="#0665d0"/>
 <title>魔法禁书｜Magic Forbidden Book</title>
-<!-- ico -->
-<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg?v=1.0.0.1000000" type="image/x-icon"/>
-<!-- css -->
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css?v=1.0.0.1000000" rel="stylesheet">
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css?v=1.0.0.1000000" rel="stylesheet">
-<link href="../../start/index.css?v=1.0.0.1000000" rel="stylesheet">
-<link href="./Atros.css?v=1.0.0.1000000" rel="stylesheet">
-<!-- js -->
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js?v=1.0.0.1000000"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js?v=1.0.0.1000000"></script>
-<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0.0.1000000"></script>
-<script src="../../start/origin.js?v=1.0.0.1000000"></script>
-<script type="text/javascript">
-function onCopyThis(e) {
-var text = $(e).data("copy");
-var $temp = $("<input>");
-$("body").append($temp);
-$temp.val(text).select();
-document.execCommand("Copy");
-$temp.remove();
-$("body").append('')
-this.timer = setTimeout(function() {
-$(".notification ").toggleClass('show')
-}, 50)
-this.timer = setTimeout(function() {
-$(".notification ").toggleClass('show')
-this.time = setTimeout(function(){
-$(".notification ").remove();
-}, 500)
-}, 2000)
-}
-</script>
+<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" type="image/x-icon"/>
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"/>
+<link href="../../start/index.css" rel="stylesheet"/>
+<link href="./Atros.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../start/origin.js"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-drawer-body-left">
 <!--###################### 登陆 ######################-->
@@ -161,7 +136,7 @@ $(".notification ").remove();
 <!--###################### 公告 ######################-->
 <div class="row mb-4 mb-md-0">
 <div class="col-12 mb-sm-4">
-<a class="block block-rounded bg-image mb-0 v2board-bg-pixels" href="javascript:void(0)" style="width: 100%;height: 100%;background-image: url(https://i.postimg.cc/2Cq3Ynb6/bGtrs.jpg); background-size: cover;">
+<a class="block block-rounded bg-image mb-0 v2board-bg-pixels" href="javascript:void(0)" style="width: 100%;height: 100%;background-image: url(./bGtrs.jpeg); background-size: cover;">
 <div class="block-content bg-black-50">
 <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
 <p><span class="badge badge-danger p-2 text-uppercase">公告</span></p>
@@ -1135,7 +1110,6 @@ var element = document.getElementById("visible");
 element.className = "d-none";
 myAlert("已自动登录成功");
 } else {
-console.log("自动登录失败");
 var elements = document.getElementById("invisible");
 elements.className = "d-none";
 myAlert("自动登录失败");
@@ -1152,7 +1126,6 @@ return;
 if (password=="0ub0") {
 myAlert("登录成功！");
 document.cookie = "password="+password+"; path=/";
-console.log("Cookie已写入");
 location.reload();
 return;
 } else {
@@ -1169,5 +1142,7 @@ document.cookie = name + "=; path=/;";
 location.reload();
 }
 </script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
 </body>
 </html>

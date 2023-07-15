@@ -1,27 +1,22 @@
-<!--修改此文件需要 review-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <title></title>
-<meta charset="utf-8">
-<meta name="robots" content="noindex">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <link rel="icon" href="./favicon.ico?v=1.0" />
-<link rel="stylesheet" href="./start/index.css?v=1.0" >
-<script src="./start/origin.js?v=1.0"></script>
+<link rel="stylesheet" href="./start/index.css?v=1.0" />
+<script src="./start/origin.js"></script>
 </head>
 <body>
 <div id="root"></div>
 <script>
-// 获取当前url地址
 var url = window.location.href;
-// 截取传递的url参数
 url = url.match(/tpurl=(\S*)/)[1];
-// 跳转内容
 window.location.href = url;
-// 显示内容
 document.getElementById("root").innerHTML = url;
 </script>
 </body>

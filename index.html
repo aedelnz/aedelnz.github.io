@@ -15,21 +15,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./start/origin.js?v=1.0000"></script>
 <style>
-span.badge,.nav-blur-dark{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}span.badge,.nav-blur-dark:hover{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.8);-webkit-backdrop-filter:saturate(180%) blur(20px)}.sap{font-size:1.5rem;font-weight:10px;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}.hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(20%)}.carousel-item{overflow:hidden;height:100vh}.carousel-inner{margin-top:-60px}.hdpicText{z-index:25;position:relative;color:white;padding-top:25vh;padding-left:6vw;padding-right:6vw}.ArProgress{width:100%;height:3px;overflow:hidden;background-color:#AAAAAA}.ArProgress>div{position:relative;height:3px;transition:width .5s ease-in-out;background-color:green}.hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
+.navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
+.sap{font-size:1.5rem;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1024;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
+.hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(20%)}.carousel-item{overflow:hidden;height:100vh}
+.carousel-inner{margin-top:-60px}
+.hdpicText{z-index:25;position:relative;color:white;padding-top:25vh;padding-left:6vw;padding-right:6vw}
+.ArProgress{width:100%;height:3px;overflow:hidden;background-color:#AAAAAA}
+.ArProgress>div{position:relative;height:3px;transition:width .5s ease-in-out;background-color:green}
+.hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
 </style>
 </head>
-<body class="bg-dark bg-gradient text-white" style="padding-top: 60px;">
+<body class="bg-dark bg-gradient text-white">
 
-<nav style="height: 60px;" class="navbar navbar-expand-lg nav-blur-dark fixed-top">
+
+<!-- 导航 -->
+<nav class="navbar navbar-expand-lg sticky-top">
 <div class="container-fluid">
-<a class="navbar-brand fw-bold text-white" href=""><img src="./favicon.ico" width="30" style="border-radius:30%;margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
-<button class="navbar-toggler" style="box-shadow: 1px 1px 1px 1px #fff;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon" style="box-shadow: 1px 1px 1px 1px #000;"></span>
+<a class="navbar-brand fw-bold text-white" href=""><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
 <span class="fs-5 navbar-text">
-<ul class="navbar-nav me-auto mb-lg-0" style="box-shadow: 1px 1px 1px 1px #fff;">
+<ul class="navbar-nav me-auto mb-lg-0">
 <li class="nav-item p-1"><span class="badge"><a class="nav-link text-white active" aria-current="page" href="/#页面导航">页面导航</a></span></li>
 <li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#动漫收藏">动漫收藏</a></span></li>
 <li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#友情链接">友情链接</a></span></li>
@@ -39,8 +48,9 @@ span.badge,.nav-blur-dark{backdrop-filter:saturate(180%) blur(20px);background-c
 </div>
 </div>
 </nav>
-<div class="fixed-bottom container" style="padding-top:60px"></div>
 
+
+<!-- 循环幻灯片组件轮播 -->
 <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
 <div class="carousel-inner" id="carousel-inner">
 <div class="carousel-item active">
@@ -85,9 +95,10 @@ var container=document.getElementById("carousel-inner");setInterval(function(){v
 </div>
 
 
+<!-- 页面导航 -->
 <div class="sap mb-3">页面导航</div>
-<div id="页面导航" class="content content-full"><div class="card-group mb-2">
-
+<div id="页面导航"><div class="card-group mb-5">
+<!-- 页面 -->
 <div class="card text-bg-dark">
 <div class="card-header lead text-white-50"><i class="bi bi-badge-8k-fill" width="30px" style="border-radius:30%;margin-right:5px"></i>页面</div>
 <div class="card-body">
@@ -100,7 +111,7 @@ var container=document.getElementById("carousel-inner");setInterval(function(){v
 <a href="/A2zml/v2" class="btn btn-lg mb-2 btn-outline-warning">魔法禁书</a>
 </div>
 </div>
-
+<!-- 网络存储 -->
 <div class="card text-bg-dark">
 <div class="card-header lead text-white-50"><i class="bi bi-ethernet" width="30px" style="border-radius:30%;margin-right:5px"></i>网络存储</div>
 <div class="card-body">
@@ -112,15 +123,18 @@ var container=document.getElementById("carousel-inner");setInterval(function(){v
 <small class="text-secondary">第二地址链接</small><br>
 <a href="https://yunpan.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 </div>
-</div>
-
-<div class="card text-bg-dark">
-<div class="card-header lead text-white-50"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">旗下项目</div>
+<div class="card-header lead text-white-50"><i class="bi bi-cc-square" width="30px" style="border-radius:30%;margin-right:5px"></i>第二项目</div>
 <div class="card-body">
 <div class="fs-3">超自然的幻想异世界</div>
 <small class="text-secondary">API接口</small><br>
 <a href="https://s.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
 <hr>
+</div>
+</div>
+<!-- 旗下项目 -->
+<div class="card text-bg-dark">
+<div class="card-header lead text-white-50"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">旗下项目</div>
+<div class="card-body">
 <div class="fs-3">Zito 社区</div>
 <small class="text-secondary">一个简单不过的 Zito 社区</small><br>
 <a href="https://zito.jixiejidiguan.top/" class="card-link text-decoration-none" target="_blank">点击了解</a>
@@ -136,81 +150,63 @@ var container=document.getElementById("carousel-inner");setInterval(function(){v
 </div>
 </div></div>
 
+
+<!-- 动漫收藏 -->
 <div class="sap mb-3">动漫收藏</div>
-<div id="动漫收藏" class="content content-full"><div class="card-group mb-2">
+<div id="动漫收藏">
+<div class="card-group mb-4">
 <div class="container-fluid mb-2 fs-4 text-white text-center">来着腾讯视频和哔哩哔哩的视频收藏</div>
-<div class="container-fluid p-3 card text-bg-dark mb-5">
-<div id="cartoon"></div>
 </div>
-<script>
-$(function(){    
+<div class="container-fluid shadow rounded text-bg-dark p-4 mb-5">
+<div id="cartoon" class="row row-cols-2 row-cols-md-5 row-cols-xl-6"></div>
+</div>
+</div>
+<script> 
 $.ajax({
-//请求方式    
- type:"GET",    
-//文件位置    
 url:"./start/json/cartoon.json",
-//返回数据格式为json,也可以是其他格式如    
-dataType: "json",    
-//请求成功后要执行的函数，拼接html    
-success: function(data){    
-var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-5">';
-$.each(data,function(i,n){    
-str+=`
-<div class="col">
-<div class="card mb-2" style="box-shadow: 3px 1px 1px 1px #000;">
-<a href="`+n.url+`" title="`+n.title+`" style="width: 100%;height: 200px;">
-<div style="background-image: url(`+n.img+`);border-radius: 6px;background-size: cover;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;"></div>
-</a>
-<div class="mdui-grid-tile-actions">
-<div class="mdui-grid-tile-text">
-<div class="mdui-grid-tile-title">`+n.title+`</div>
+method: "GET",
+dataType: "json",  
+success: function(data){
+$.each(data,function(i,n){
+var str =`<div class="col">
+<a class="text-decoration-none" href="`+n.url+`" title="`+n.title+`">
+<div class="card mb-3">
+<img src="`+n.img+`" class="cover-wrapper card-img-top" alt="`+n.title+`">
+<div class="card-body">
+<p class="card-text card-title">`+n.title+`</p>
 </div>
 </div>
-</div>
-</div>`;
-});
-str+='</div>';
+</a>`;
 $("#cartoon").append(str);
+});
 }
 });
-$.ajax({
-//请求方式    
- type:"GET",    
-//文件位置    
+$.ajax({  
 url:"./start/json/bilibili.json",
-//返回数据格式为json,也可以是其他格式如    
-dataType: "json",    
-//请求成功后要执行的函数，拼接html    
-success: function(data){    
-var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-5">';
+method: "GET",
+dataType: "json",  
+success: function(data){
 $.each(data,function(i,n){    
-str+=`
-<div class="col">
-<div class="card mb-2" style="box-shadow: 3px 1px 1px 1px #000;">
-<a href="`+n.url+`" title="`+n.title+`" style="width: 100%;height: 200px;">
-<div style="background-image: url(`+n.img+`);border-radius: 6px;background-size: cover;background-position: center;background-repeat: no-repeat;width: 100%;height: 100%;"></div>
-</a>
-<div class="mdui-grid-tile-actions">
-<div class="mdui-grid-tile-text">
-<div class="mdui-grid-tile-title">`+n.title+`</div>
+var str =`<div class="col">
+<a class="text-decoration-none" href="`+n.url+`" title="`+n.title+`">
+<div class="card mb-3">
+<img src="`+n.img+`" class="cover-wrapper card-img-top" alt="`+n.title+`">
+<div class="card-body">
+<p class="card-text card-title">`+n.title+`</p>
 </div>
 </div>
-</div>
-</div>`;
-});
-str+='</div>';
+</a>`;
 $("#cartoon").append(str);
-}
 });
+}
 });
 </script>
-</div></div>
 
+
+<!-- 友情链接 -->
 <div class="sap mb-3">友情链接</div>
-<div id="友情链接" class="content content-full"><div class="card-group mb-2">
-<div class="container-fluid card text-bg-dark mb-3">
-<div class="mdui-typo-caption mdui-text-color-deep-orange-a400">
-<div class="mdui-row-xs-1 mdui-row-sm-3 mdui-grid-list mdui-list">
+<div id="友情链接"><div class="card text-bg-dark mb-3">
+<div class="container-fluid shadow p-3 mb-3 rounded"><div class="mdui-row-xs-1 mdui-row-sm-3 card-body">
 <div class="mdui-col">
 <b>友情链接申请规则</b>
 <p class="mdui-text-color-blue-grey-600">
@@ -231,94 +227,68 @@ $("#cartoon").append(str);
 <b class="mdui-text-color-light-blue">PS:</b>
 <p class="text-white">
 链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！
-<a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请">去申请友情链接</a></p>
+<a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">去申请友情链接</a></p>
 </div>
-</div>
-</div>
+</div></div>
 <div id="Links"></div>
-</div>
-<script>
-$(function(){    
+</div></div>
+<script> 
 $.ajax({
-//请求方式    
- type:"GET",    
-//文件位置    
 url:"./start/json/Links.json",
-//返回数据格式为json,也可以是其他格式如    
-dataType: "json",    
-//请求成功后要执行的函数，拼接html    
+method: "GET",
+dataType: "json",
 success: function(data){    
-var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 mdui-list">';
+var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">';
 $.each(data,function(i,n){    
-str+=`
-<div class="col">
-<a href="`+n.url+`" title="`+n.title+`">
-<li class="mdui-list-item mdui-ripple">
-<div class="mdui-list-item-avatar">
-<img src="`+n.img+`" />
-</div>
-<div class="mdui-list-item-content">
-<div class="mdui-list-item-title">`+n.title+`</div>
-</div>
-</li>
-<li class="mdui-divider-inset mdui-m-y-0"></li>
-</a>
-</div>
-`;
+str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
+<li class="mdui-list-item">
+<div class="mdui-list-item-avatar"><img src="`+n.img+`" /></div>
+<div class="mdui-list-item-content"><div class="mdui-list-item-title">`+n.title+`</div></div>
+</li><li class="mdui-divider-inset mdui-m-y-0"></li>
+</a></div>`;
 });
 str+='</div>';
 $("#Links").append(str);
 }
 });
-});
 </script>
-</div></div>
 
 
+<!-- 关于我们 -->
 <div class="sap mb-3">关于我们</div>
-<div class="content content-full"><div class="card-group mb-2">
-<div class="container-fluid"><div class="row">
-
-<div class="col-md-6 col-lg-4 p-1">
-<div class="card text-bg-dark">
-<div class="card-body">
-<h5 class="card-title"></h5>
-<h6 class="card-subtitle mb-2 small">
-</h6>
+<div class="container mb-4" style="margin-top: 40px;"><div class="row">
+<!-- 服务支持 -->
+<div class="col-lg-4 container-fluid mb-3">
+<h5 class="card-title">服务支持</h5>
+<div class="card-body text-bg-dark">
+<a class="text-decoration-none fs-5"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">画的个人记录</a>
+<p class="font-monospace">其实没有你们想的那么复杂！</p>
 </div>
 </div>
-</div>
-
-<div class="col-md-6 col-lg-4 p-1">
-<div class="card text-bg-dark">
-<div class="card-body">
-<h5 class="card-title"></h5>
-<h6 class="card-subtitle mb-2 small">
+<!-- 社交账号 -->
+<div class="col-lg-4 container-fluid mb-3">
+<h5 class="card-title">社交账号</h5>
+<div class="card-body text-bg-dark">
 <ul class="nav">
 <li class="nav-item"><a class="nav-link active" aria-current="page" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a></li>
 <li class="nav-item"><a class="nav-link" target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
 <li class="nav-item"><a class="nav-link" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a></li>
 <li class="nav-item"><a class="nav-link" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a></li>
 </ul>
-</h6>
 </div>
 </div>
-</div>
-
-<div class="col-md-6 col-lg-4 p-1">
-<div class="card text-bg-dark">
-<div class="card-body">
+<!-- 备案号 -->
+<div class="col-lg-4 container-fluid mb-3">
 <h5 class="card-title">备案号</h5>
-<h6 class="card-subtitle mb-2 small"><a href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></h6>
-<a class="mdui-text-color-pink-accent" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
-<a class="mdui-float-right mdui-text-color-red" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
+<div class="card-body text-bg-dark">
+<div class="float-start"><a class="text-decoration-none" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></div>
+<div class="float-end"><a class="mdui-float-right mdui-text-color-red text-decoration-none" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a></div><br>
+<div class="float-none"><a class="mdui-text-color-pink-accent text-decoration-none" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a></div>
 </div>
 </div>
-</div>
+</div></div>
 
 
-</div></div>
-</div></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
