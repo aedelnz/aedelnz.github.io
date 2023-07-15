@@ -13,23 +13,19 @@
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
 <link href="https://jixiejidiguan.top/start/index.css?v=1.0" rel="stylesheet">
-<!-- js -->
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-<script src="https://jixiejidiguan.top/start/jquery.min.js?v=1.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
 <style>
 /* 圆角 */
-.css-style-rainbow a {border-radius: 6px}
+li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 /* 彩色 */
-.css-style-rainbow a:nth-child(7n+1) {background-color: rgba(255, 78, 106, .25);}
-.css-style-rainbow a:nth-child(7n+2) {background-color: rgba(255, 118, 30, .25);}
-.css-style-rainbow a:nth-child(7n+3) {background-color: rgba(255, 185, 0, .25);}
-.css-style-rainbow a:nth-child(7n+4) {background-color: rgba(51, 213, 122, .25);}
-.css-style-rainbow a:nth-child(7n+5) {background-color: rgba(0, 219, 255, .25);}
-.css-style-rainbow a:nth-child(7n+6) {background-color: rgba(26, 152, 255, .25);}
-.css-style-rainbow a:nth-child(7n+7) {background-color: rgba(144, 144, 255, .25);}
+.mdui-list-item li:nth-child(7n+1) {background-color: rgba(255, 78, 106, .25);}
+.mdui-list-item li:nth-child(7n+2) {background-color: rgba(255, 118, 30, .25);}
+.mdui-list-item li:nth-child(7n+3) {background-color: rgba(255, 185, 0, .25);}
+.mdui-list-item li:nth-child(7n+4) {background-color: rgba(51, 213, 122, .25);}
+.mdui-list-item li:nth-child(7n+5) {background-color: rgba(0, 219, 255, .25);}
+.mdui-list-item li:nth-child(7n+6) {background-color: rgba(26, 152, 255, .25);}
+.mdui-list-item li:nth-child(7n+7) {background-color: rgba(144, 144, 255, .25);}
 </style>
 </head>
 <!-- body -->
@@ -52,7 +48,6 @@
 {{/each}}
 </script>
 </div>
-<p class="fixed-bottom container">A2zml v1.0.0</p>
 </div>
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
 <div class="mdui-toolbar mdui-color-blue-accent">
@@ -97,11 +92,10 @@
 </div>
 </div>
 </div>
-<div class="mdui-float-right"><p>
-&nbsp; <a class="btn font-monospace btn-primary" data-bs-toggle="collapse" href="#浏览器优化" role="button" aria-expanded="false" aria-controls="浏览器优化">浏览器优化</a>
-</p></div>
+
+<button class="btn mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#浏览器优化" aria-expanded="false" aria-controls="浏览器优化">浏览器优化</button>
 <div class="collapse" id="浏览器优化">
-<div class="card card-body">
+<div class="card">
 <style>
 .bd-callout {
     padding: 1.25rem;
@@ -122,8 +116,8 @@
 <strong>广告屏蔽插件推荐:(<mark><a href="https://adguard.com/zh_cn/products.html">AdGuard </a></mark>、<mark><a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a></mark> 度娘搜索。)</strong>
 </div>
 <div class="dropdown px-2 mb-2 font-monospace">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">桌面端（PC）</button>
-  <ul class="dropdown-menu p-3">
+  <button class="btn btn-secondary badge text-bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">桌面端（PC）</button>
+  <ul class="dropdown-menu p-1">
     <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
     <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
     <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
@@ -134,8 +128,8 @@
   </ul>
 </div>
 <div class="dropdown px-2 mb-2 font-monospace">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（Android）</button>
-  <ul class="dropdown-menu p-3">
+  <button class="btn btn-secondary badge text-bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（Android）</button>
+  <ul class="dropdown-menu text-bg-light p-1">
     <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
     <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
     <li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
@@ -146,13 +140,13 @@
   </ul>
 </div>
 <div class="dropdown px-2 mb-2 font-monospace">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（iOS）</button>
-  <ul class="dropdown-menu p-3">
+  <button class="btn btn-secondary badge text-bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">手机端（iOS）</button>
+  <ul class="dropdown-menu p-1">
     <li>Safari：<a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> 或 <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
     <li><a href="https://gear4.app/">Gear</a>：（不需要其他软件）</li>
   </ul>
 </div>
-<p class="mdui-typo-caption">
+<p class="mdui-typo-caption p-3">
     一些还不错的查询工具：
     <kbd><a href="https://www.reg007.com/">REG007</a></kbd>
     <kbd><a href="https://monitor.firefox.com/" >火狐监视器</a></kbd>
@@ -164,7 +158,7 @@
     <kbd><a href="https://chat.bnu120.space/" >2号镜像</a></kbd>
     <kbd><a href="http://chat.68686.ltd/" >3号镜像</a></kbd>
     </p>
-    <p class="mdui-typo-caption">
+    <p class="mdui-typo-caption p-3">
     临时网络传输工具：
     <kbd><a href="https://snapdrop.net/">局域网传输</a></kbd>
     <kbd><a href="https://www.wenshushu.cn/">文件叔叔</a></kbd>
@@ -172,12 +166,12 @@
     <kbd><a href="https://anonfiles.com">匿名文件上传</a></kbd>
     <kbd><a href="https://www.lanzou.com/">蓝奏·云存储</a></kbd>
     </p>
-    <p class="mdui-typo-caption">
+    <p class="mdui-typo-caption p-3">
     镜像：
     <kbd><a href="https://scholar.chongbuluo.com/" >学术搜索</a></kbd>
     <kbd><a href="https://ac.scmor.com/" >谷歌学术镜像</a></kbd>
     </p>
-    <p class="mdui-typo-caption">
+    <p class="mdui-typo-caption p-3">
     临时邮箱注册：
     <kbd><a href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a></kbd>
     <kbd><a href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a></kbd>
@@ -192,6 +186,7 @@
     </p>
 </div>
 </div>
+
 <div id="Cote"></div>
 <script id="Cote-tmp" type="text/x-handlebars-template">
 {{#each this}}
@@ -203,7 +198,7 @@
 <div class="mdui-col">
 <div class="mdui-hoverable">
 <div class="mdui-grid-tile">
-<li class="mdui-list-item bg-white mdui-ripple">
+<li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple">
 <a target="_blank" class="nav-link active" href="/go.html#tpurl={{url}}" title="{{title}}">
 <div class="mdui-list-item-content">
 <div class="mdui-list-item-title mdui-list-item-one-line">{{title}}</div>
@@ -220,6 +215,7 @@
 </div>
 {{/each}}
 </script>
+
  <script type="text/javascript">
 var data = [{
  classification: "搜索引擎",
@@ -813,11 +809,12 @@ var Cote = Cotetmp(data);
 $("#Navs").append(Navs);
 $("#Cote").append(Cote);
 </script>
-<footer class="mdui-color-white">
-<div class="mdui-typo">
-<b class="mdui-text-color-blue-a700">Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> JIXIEJIDIGUAN ナビ姫.</b>
-</div>
+<footer class="mdui-typo">
+<b>Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> JIXIEJIDIGUAN ナビ姫.</b>
 </footer>
 </main>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </body>
 </html>
