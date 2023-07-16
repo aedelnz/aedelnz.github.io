@@ -14,42 +14,41 @@
 <script src="../start/origin.js?v=1.0000"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-appbar-with-tab container container-fluid">
-<div id="tanchuang"></div>
-<div class="row text-center">
-<div class="col-sm-5 col-sm-4 d-grid gap-2 mx-auto">
-<div class="mb-5"></div>
+<div class="row text-center"><div class="col-sm-5 col-sm-4 d-grid gap-2 mx-auto">
+<div class="mb-5"><div id="tanchuang"></div></div>
+<!-- 登录 -->
 <div id="visually-hidden" class="card card-body mb-2 font-monospace">
 <i class="fs-1 text-center mb-2 bi bi-person-circle"></i>
 <h5 class="card-title text-center">用 Mchat 账户登录</h5>
 <form id="login-form">
 <div class="mb-3">
-  <input class="form-control" type="text" id="username" name="username" placeholder="账号">
+<input class="form-control" type="text" id="username" name="username" placeholder="账号">
 </div>
 <div class="mb-3">
-  <input class="form-control" type="password" id="password" name="password" placeholder="密码">
+<input class="form-control" type="password" id="password" name="password" placeholder="密码">
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-  <button type="submit" class="btn btn-outline-secondary">登录</button>
+<button type="submit" class="btn btn-outline-secondary">登录</button>
 </div>
 </form>
-<div class="mb-4"></div>
+<div class="mb-3"></div>
 <div class="mb-1 text-center text-muted">
 还没有 Mchat 账户？ <a id="href" href="#register" class="text-reset">注册</a>.
 </div>
 </div>
-
+<!-- 注册 -->
 <div id="visibility" class="card card-body mb-2 font-monospace">
 <i class="fs-1 text-center mb-2 bi bi-person-circle"></i>
 <h5 class="card-title text-center">Mchat 账户注册</h5>
 <form id="register-form">
 <div class="mb-3">
-  <input class="form-control" type="text" id="usernames" name="usernams" placeholder="账号">
+<input class="form-control" type="text" id="usernames" name="usernams" placeholder="账号">
 </div>
 <div class="mb-3">
-  <input class="form-control" type="password" id="passwords" name="passwords" placeholder="密码">
+<input class="form-control" type="password" id="passwords" name="passwords" placeholder="密码">
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-  <button type="submit" class="btn btn-outline-secondary">注册</button>
+<button type="submit" class="btn btn-outline-secondary">注册</button>
 </div>
 </form>
 <div class="mb-4"></div>
@@ -57,10 +56,8 @@
 已有 Mchat 账户？ <a href="Login.html" class="text-reset">登录</a>.
 </div>
 </div>
-<div class="modal-body" id="error-message"></div>
-</div>
-</div>
-
+</div></div>
+<!-- 计算 -->
 <script>
 var hash = window.location.hash;
 if(hash.toString().indexOf('#register') !== -1){
@@ -69,14 +66,13 @@ $("#visually-hidden").addClass("visually-hidden");
 $("#visibility").addClass("visually-hidden");
 }
 $(document).ready(function() {
-// 选中链接并绑定点击事件处理程序
 $('#href').click(function(event) {
-window.location.href = $(this).attr('href'); // 跳转到链接中的地址
+window.location.href = $(this).attr('href');
 location.reload();
 });
 });
 $('#login-form').submit(function(event) {
-event.preventDefault(); // 阻止表单默认提交行为
+event.preventDefault();
 var username = $('#username').val();
 var password = $('#password').val();
 if(username==='' || password===''){
@@ -98,7 +94,7 @@ window.location.href = '/Mchat';
 }
 });
 $('#register-form').submit(function(event) {
-event.preventDefault(); // 阻止默认的表单提交行为
+event.preventDefault();
 var usernames = $('#usernames').val();
 var passwords = $('#passwords').val();
 $.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?R', {username: usernames, password: passwords}, function(data) {

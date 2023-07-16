@@ -14,7 +14,29 @@ console.log('id：'+hitokoto.id+'\n'+
 'uuid：'+hitokoto.uuid+'\n'+
 'hitokoto：'+hitokoto.hitokoto+'\n'+
 'from：'+hitokoto.from+'\n');
-console.log('%c links  %c https://jixiejidiguan.top/ ', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;')
+console.log('%c links  %c https://jixiejidiguan.top/ ', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;');
+console.log('%c浏览器代号 %c '+navigator.appCodeName+' ', '', 'border:1px solid #e9546b;');
+console.log('%c浏览器名称 %c '+navigator.appName+' ', '', 'border:1px solid #e9546b;');
+console.log('%c浏览器版本 %c '+navigator.appVersion+' ', '', 'border:1px solid #e9546b;');
+console.log('%c用户代理 %c '+navigator.userAgent+' ', '', 'border:1px solid #e9546b;');
+console.log('%c url %c '+ history.length+' ', '', 'border:1px solid #e9546b;');
+console.log(location.hostname);
+function clickCounter() {
+if(typeof(Storage) !== "undefined") {
+if (localStorage.clickcount) {
+localStorage.clickcount = Number(localStorage.clickcount)+1;
+} else {
+localStorage.clickcount = 1;
+}
+console.log(localStorage.clickcount);
+} else {
+console.log("抱歉，您的浏览器不支持网络存储...");
+}
+setTimeout(function() {
+clickCounter();
+}, 2000);
+}
+clickCounter();
 });
 
 
@@ -41,3 +63,4 @@ document.title = OriginTitile
 }, 2000);
 }
 });
+
