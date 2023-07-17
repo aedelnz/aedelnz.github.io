@@ -7,13 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta name="keywords" content="爱莫能助,JIXIEJIDIGUAN ナビ姫."/>
 <meta name="description" content="好像是……"/>
-<link rel="shortcut icon" href="https://jixiejidiguan.top/favicon.ico?v=1.0" type="image/x-icon"/>
+<link rel="shortcut icon" href="../favicon.ico?v=1.0" type="image/x-icon"/>
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"/>
-<link href="https://jixiejidiguan.top/start/index.css?v=1.0" rel="stylesheet"/>
+<link href="../start/index.css" rel="stylesheet"/>
 <script src="https://cdn.bootcdn.net/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://jixiejidiguan.top/start/origin.js?v=1.0"></script>
+<script src="../start/origin.js"></script>
 <style>
 li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 </style>
@@ -34,6 +34,7 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 <div class="px-3">
 <div class="mdui-list" id="Navs"></div>
 <script id="Navs-tmp" type="text/x-handlebars-template">
+<a href="/" class="mdui-list-item fs-3 mdui-ripple mdui-text-color-blue-grey">返回首页</a>
 {{#each this}}
 <a href="#{{classification}}" class="mdui-list-item fs-3 mdui-ripple">{{classification}}</a>
 {{/each}}
@@ -96,27 +97,27 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 </div>
 <!-- 用户脚本 -->
 <div class="p-3">
-<div class="fs-6 badge bg-primary text-wrap">Userscript.Zone 搜索</div>
+<div class="fs-6 text-wrap">Userscript.Zone 搜索</div>
 <p><a class="text-decoration-none" href="https://www.userscript.zone/?utm_source=tm.net&amp;utm_medium=scripts">Userscript.Zone 搜索</a> 是一个新网站，允许通过输入合适的URL或域来搜索用户脚本。</p>
 <ul>
 <li><i class="bi bi-caret-right"></i> 大量的脚本资源</li>
 <li><i class="bi bi-caret-right"></i> 很容易找到合适的用户脚本</li>
 <li><i class="bi bi-caret-right"></i> 仅显示受审核的用户脚本页面或至少具有注释功能的页面中的用户脚本</li>
 </ul>
-<div class="fs-6 badge bg-primary text-wrap">GreasyFork (油叉)</div>
+<div class="fs-6 text-wrap">GreasyFork (油叉)</div>
 <p><a class="text-decoration-none" href="https://greasyfork.org/">GreasyFork</a> 或许是最受欢迎的后起之秀了。它由 Jason Barnabe 创建,Jason Barnabe 同时也是<a class="text-decoration-none" href="https://userstyles.org/">Stylish</a> 网站的创办者,在其储存库中有大量的脚本资源。</p>
 <ul>
 <li><i class="bi bi-caret-right"></i> 大量的脚本资源</li>
 <li><i class="bi bi-caret-right"></i> 拥有可以从 Github 中进行脚本同步的功能</li>
 <li><i class="bi bi-caret-right"></i> 非常活跃的<a class="text-decoration-none" href="https://github.com/JasonBarnabe/greasyfork">开放源代码发展模式</a></li>
 </ul>
-<div class="fs-6 badge bg-primary text-wrap">OpenUserJS</div>
+<div class="fs-6 text-wrap">OpenUserJS</div>
 <p><a class="text-decoration-none" href="https://openuserjs.org/">OpenUserJS</a>继 GreasyFork 之后开始创办。它由 Sizzle McTwizzle 创建,同样地,在其储存库中也拥有大量的脚本资源。</p>
 <ul>
 <li><i class="bi bi-caret-right"></i> 拥有可以从 Github、fork scripts 中进行脚本同步的功能</li>
 <li><i class="bi bi-caret-right"></i> 非常活跃的<a href="https://github.com/OpenUserJs/OpenUserJS.org">开放源代码发展模式</a></li>
 </ul>
-<div class="fs-6 badge bg-primary text-wrap">GitHub/要點</div>
+<div class="fs-6 text-wrap">GitHub/要點</div>
 <p>你可以<a class="text-decoration-none" href="https://gist.github.com/search?l=JavaScript&amp;o=desc&amp;q=%22%3D%3DUserScript%3D%3D%22&amp;s=updated">在 Github 和 Gist 中 搜索脚本资源</a>。</p>
 </div>
 <!-- 软件下载 -->
@@ -216,7 +217,7 @@ ChatGPT镜像：
 <li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple">
 <a target="_blank" class="nav-link active" href="/go.html#tpurl={{url}}" title="{{title}}">
 <div class="mdui-list-item-content">
-<div class="mdui-list-item-title mdui-list-item-one-line fw-bolder">{{title}}</div>
+<div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder">{{title}}</div>
 <div class="mdui-list-item-text mdui-list-item-one-line font-monospace">{{intro}}</div>
 </div>
 </a>

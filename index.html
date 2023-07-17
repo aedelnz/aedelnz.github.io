@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="./start/index.css?v=1.0000" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./start/origin.js?v=1.0000"></script>
+<script src="./start/origin.js"></script>
 <style>
 .navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
 .sap{font-size:1.5rem;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1024;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
@@ -33,7 +33,7 @@
 <div class="container-fluid">
 <a class="navbar-brand fw-bold text-white" href=""><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
+<i class="bi bi-text-right " style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
@@ -73,18 +73,6 @@
 <div style="padding-top: 9%;"><div class="ArProgress"><div class="hdpicCount"></div></div></div>
 </div>
 </div>
-<style>
-.danmu{position:absolute;right:0;white-space:nowrap;font-size:20px;color:white}@keyframes move{from{right:0}to{right:calc(100% + 200px)}}
-</style>
-<script>
-function randomMessage() {
- var messages = ["今天天气真好！","加油，明天会更好！","生命在于折腾，奋斗不止步！","万物皆可学，只要你肯花时间。","每一次努力，都不会白费。","有志者，事竟成，破釜沉舟，百二秦关终属楚。","成功源于自信，自信源于经验，经验源于失败。","人生就像一杯茶，不会苦一辈子，但总会苦一阵子。","不要担心一次失败，因为失败是成功之母。","坚持不懈，直至成功。","快乐和幸福不是因为拥有更多，而是因为计较的更少。","相信自己，你可以做到！","成功需要耐心，耐心需要信心，信心需要勇气。","勤奋是成功之母，懒惰是失败之父。","不管过去发生了什么，未来都是你的。","成功的关键在于坚持。","生活就像海洋，只有意志坚定的人才能到达彼岸。","不要因为失败而放弃，因为失败是通向成功的必经之路。","相信自己，你就能创造奇迹。","永远不要放弃你的梦想，因为梦想能够改变你的人生。","成功在于行动，不在于结果。","不要让过去的错误影响你的未来。","成功的秘密在于始终坚信自己。","只有敢于尝试，才能收获成功。"];
- var randomIndex = Math.floor(Math.random() * messages.length);
- return messages[randomIndex];
-}
-function createDanmu(text){var danmu=document.createElement("span");danmu.innerText=text;danmu.className="danmu";danmu.style.top=Math.random()*(container.clientHeight-danmu.clientHeight)+"px";danmu.style.color="rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")";container.appendChild(danmu);danmu.style.animation="move "+(5+Math.random()*5)+"s linear infinite"}
-var container=document.getElementById("carousel-inner");setInterval(function(){var text=randomMessage();createDanmu(text)},3500);
-</script>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
 <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>

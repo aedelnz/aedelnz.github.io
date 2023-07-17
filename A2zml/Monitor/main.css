@@ -65,9 +65,14 @@ a {
 }
 
 #uptime .site {
-    border-bottom: 1px solid #e6e7e8;
+    border-bottom: 5px solid #ffffff;
     margin: 0 30px;
-    padding: 25px 0
+    position: relative;
+    margin-right: 20px;
+    padding: 0 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: linear-gradient(83.84deg,rgb(0 0 0 / 8%),rgba(108,226,169,.072));
 }
 
 #uptime .site .loading {
@@ -81,6 +86,7 @@ a {
 }
 
 #uptime .site .meta {
+    padding: 10px;
     align-items: baseline;
     display: flex
 }

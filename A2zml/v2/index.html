@@ -46,7 +46,7 @@
 </div>
 </div>
 <div class="text-left bg-gray-lighter p-3 px-4">
-<a class="font-size-sm text-muted" href="javascript:myAlert('括号里的内容可能会有些用处');" title="不一样的颜色">密码提示</a>
+<a class="font-size-sm text-muted" href="javascript:alert('括号里的内容可能会有些用处');" title="不一样的颜色">密码提示</a>
 </div>
 </div>
 </div>
@@ -56,7 +56,7 @@
 </div>
 </div>
 <!--###################### 成功 ######################-->
-<div id="invisible">
+<div id="invisible" class="invisible">
 <div id="page-container" class="main-content-boxed">
 <div class="mdui-drawer" id="left-drawer">
 <div class="mdui-hidden-sm-up mb-2">
@@ -69,6 +69,9 @@
 <nav>
 <div class="content-side content-side-full">
 <ul class="nav-main">
+<li class="nav-main-item">
+<a class="nav-main-link" href="/"><span class="nav-main-link-name mdui-text-color-blue-grey">返回首页</span></a>
+</li>
 <li class="nav-main-heading">高级</li>
 <li class="nav-main-item">
 <a class="nav-main-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="nav-main-link-name">执行工具</span></a>
@@ -127,7 +130,7 @@
 <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">apps</i></a>
 <div class="mdui-typo-title">仪表盘</div>
 <div class="mdui-toolbar-spacer"></div>
-<button type="button" class="btn btn-primary mr-1 ant-dropdown-trigger" onclick="clearCookie()">退出</button>
+<button type="button" class="btn btn-primary mr-1 ant-dropdown-trigger" id="clearCookie">退出</button>
 </div>
 </div>
 <!--###################### 主体 ######################-->
@@ -142,35 +145,10 @@
 <p><span class="badge badge-danger p-2 text-uppercase">公告</span></p>
 </div>
 <p class="font-size-lg text-white mb-1">Hello World!</p>
-<p class="font-w600 text-white-75" id="time">0000-00-00</p>
 </div>
 </a>
 </div>
 </div>
-<script>
-function updateTime() {
-var currentTime = new Date();
-var hours = currentTime.getHours();
-var minutes = currentTime.getMinutes();
-var seconds = currentTime.getSeconds();
-var year = currentTime.getFullYear();
-var month = currentTime.getMonth() + 1;
-var day = currentTime.getDate();
-if (hours < 10) {
-hours = '0' + hours;
-}
-if (minutes < 10) {
-minutes = '0' + minutes;
-}
-if (seconds < 10) {
-seconds = '0' + seconds;
-}
-var timeText = year +'-'+ month +'-'+ day +' '+ hours + ':' + minutes + ':' + seconds;
-var timeElement = document.getElementById('time');
-timeElement.innerHTML = timeText;
-}
-setInterval(updateTime, 1000);
-</script>
 
 <!--###################### 执行工具 ######################-->
 <div id="执行工具" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
@@ -1080,67 +1058,42 @@ onIsOff = false;//触发过程中暂时关闭定时器
 </main>
 </div>
 </div>
+
+
 <!--###################### 计算 ######################-->
 <script>
-function myAlert(message) {
-  // 创建弹窗容器
-  var container = document.createElement('div');
-  container.className = 'fixed-top p-2 bg-body-tertiary rounded';
-  // 创建弹窗主体
-  var main = document.createElement('div');
-  main.className = 'alert alert-warning alert-dismissible fade show';
-  main.innerText = message;
-  // 创建关闭按钮
-  var close = document.createElement('span');
-  close.className = "btn-close";
-  close.innerText = '';
-  close.onclick = setTimeout(function() {
-    document.body.removeChild(container);
-  }, 500);
-  // 组装弹窗内容
-  main.appendChild(close);
-  container.appendChild(main);
-  // 将弹窗添加到页面
-  document.body.appendChild(container);
-}
-const cookie = document.cookie;
-const substr = "password=0ub0";
-if (cookie.indexOf(substr) !== -1) {
-var element = document.getElementById("visible");
-element.className = "d-none";
-myAlert("已自动登录成功");
+$(document).ready(function() {
+function v2_keyyz() {
+if (localStorage.getItem('v2_key') === '0ub0') {
+console.log('登录成功');
+$("#visible").addClass("d-none");
+$("#invisible").removeClass("invisible");
 } else {
-var elements = document.getElementById("invisible");
-elements.className = "d-none";
-myAlert("自动登录失败");
+localStorage.setItem('v2_key', 'true');
+console.log('登陆失败');
+$('#password').val('0ub0');
 }
-const loginForm = document.querySelector("#loginForm");
-const loginBtn = document.querySelector("#loginBtn");
-loginBtn.addEventListener("click", function (event) {
-event.preventDefault();
-const password = loginForm.elements["password"].value;
-if (!password) {
-myAlert("请填写密码！");
-return;
-} else {
-if (password=="0ub0") {
-myAlert("登录成功！");
-document.cookie = "password="+password+"; path=/";
+}
+$("#clearCookie").click(function() {
+localStorage.setItem('v2_key', 'true');
 location.reload();
-return;
-} else {
-myAlert("密码错误！");
-return;
-}
-}
 });
-function clearCookie() {
-document.cookie.split(";").forEach(function(cookie) {
-var name = cookie.split("=")[0].trim();
-document.cookie = name + "=; path=/;";
-});
+v2_keyyz();
+$('#loginForm').submit(function(event) {
+event.preventDefault(); // 阻止表单默认提交行为
+var password = $('#password').val();
+var v2_key = localStorage.getItem('v2_key');
+if (password === v2_key) {
+console.log(password);
+alert('登录成功');
 location.reload();
+} else {
+localStorage.setItem('v2_key', password);
+alert('登陆失败');
 }
+v2_keyyz();
+});
+});
 </script>
 <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>

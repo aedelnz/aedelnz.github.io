@@ -1,44 +1,23 @@
 //我要拉
 document.write("<script>!function(p){\"use strict\";!function(t){var s=window,e=document,i=p,c=\"\".concat(\"https:\"===e.location.protocol?\"https://\":\"http://\",\"sdk.51.la/js-sdk-pro.min.js\"),n=e.createElement(\"script\"),r=e.getElementsByTagName(\"script\")[0];n.type=\"text/javascript\",n.setAttribute(\"charset\",\"UTF-8\"),n.async=!0,n.src=c,n.id=\"LA_COLLECT\",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:\"JMIJZqK4MvC0pOsF\",ck:\"JMIJZqK4MvC0pOsF\"});</script>")
+
 //log
+console.log('%c\nPowered by %c JIXIEJIDIGUAN\n\n', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', '');
+console.log('%c\nlinks %c https://jixiejidiguan.top/ %c\n\n', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;', '');
 fetch("https://v1.hitokoto.cn/").then(function(response) {
 if (response.ok) {
 return response.text();
-} else {
-throw new Error("Request failed with status: " + response.status);
 }
 }).then(function(data) {
 var hitokoto = JSON.parse(data);
-console.log('\n' + ' %c Powered by %c JIXIEJIDIGUAN ' + '\n', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', '');
-console.log('id：'+hitokoto.id+'\n'+
+console.log('\nid：'+hitokoto.id+'\n'+
 'uuid：'+hitokoto.uuid+'\n'+
 'hitokoto：'+hitokoto.hitokoto+'\n'+
-'from：'+hitokoto.from+'\n');
-console.log('%c links  %c https://jixiejidiguan.top/ ', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;');
-console.log('%c浏览器代号 %c '+navigator.appCodeName+' ', '', 'border:1px solid #e9546b;');
-console.log('%c浏览器名称 %c '+navigator.appName+' ', '', 'border:1px solid #e9546b;');
-console.log('%c浏览器版本 %c '+navigator.appVersion+' ', '', 'border:1px solid #e9546b;');
-console.log('%c用户代理 %c '+navigator.userAgent+' ', '', 'border:1px solid #e9546b;');
-console.log('%c url %c '+ history.length+' ', '', 'border:1px solid #e9546b;');
-console.log(location.hostname);
-function clickCounter() {
-if(typeof(Storage) !== "undefined") {
-if (localStorage.clickcount) {
-localStorage.clickcount = Number(localStorage.clickcount)+1;
-} else {
-localStorage.clickcount = 1;
-}
-console.log(localStorage.clickcount);
-} else {
-console.log("抱歉，您的浏览器不支持网络存储...");
-}
-setTimeout(function() {
-clickCounter();
-}, 2000);
-}
-clickCounter();
+'from：'+hitokoto.from+'\n\n');
 });
-
+console.log('\n浏览器的首选语言：'+navigator.language+'\n'+
+'浏览器的操作系统平台：'+navigator.platform+'\n'+
+'浏览器的版本信息：'+navigator.appVersion+'\n\n');
 
 //芜湖
 if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
