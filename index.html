@@ -208,7 +208,7 @@ $("#cartoon").append(str);
 <div class="mdui-col">
 <b>友链申请示例</b>
 <p class="mdui-text-color-grey-500">
-本站名称：JIXIEJIDIGUAN<br>
+本站名称：画的个人记录<br>
 本站介绍：其实没有你们想的那么复杂！<br>
 本站链接：jixiejidiguan.top<br>
 本站图片：jixiejidiguan.top/favicon.ico</p>
@@ -220,6 +220,9 @@ $("#cartoon").append(str);
 <a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">去申请友情链接</a></p>
 </div>
 </div></div>
+<div class="card-group mb-2">
+<div class="container-fluid mb-2 text-white text-center">友链不分先后，已开启随机排序。</div>
+</div>
 <div id="Links"></div>
 </div></div>
 <script> 
@@ -227,8 +230,20 @@ $.ajax({
 url:"./start/json/Links.json",
 method: "GET",
 dataType: "json",
-success: function(data){    
+success: function(data){
+function shuffleArray(array) {
+var currentIndex = array.length, temporaryValue, randomIndex;
+while (0 !== currentIndex) {
+randomIndex = Math.floor(Math.random() * currentIndex);
+currentIndex--;
+temporaryValue = array[currentIndex];
+array[currentIndex] = array[randomIndex];
+array[randomIndex] = temporaryValue;
+}
+return array;
+}
 var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">';
+shuffleArray(data);
 $.each(data,function(i,n){    
 str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
 <li class="mdui-list-item">
@@ -253,7 +268,6 @@ $("#Links").append(str);
 <div class="card-body text-bg-dark">
 <a class="text-decoration-none fs-5"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">画的个人记录</a>
 <p class="font-monospace">其实没有你们想的那么复杂！</p>
-<a href="https://ipw.cn/ipv6webcheck/?site=jixiejidiguan.top" title="本站支持IPv6访问" target='_blank'><img style='display:inline-block;vertical-align:middle' alt="本站支持IPv6访问" src="https://static.ipw.cn/icon/ipv6-certified-lite-s1.svg"></a>
 </div>
 </div>
 <!-- 社交账号 -->
