@@ -199,7 +199,7 @@ $("#cartoon").append(str);
 <div class="container-fluid shadow p-3 mb-3 rounded"><div class="mdui-row-xs-1 mdui-row-sm-3 card-body">
 <div class="mdui-col">
 <b>友情链接申请规则</b>
-<p class="mdui-text-color-blue-grey-600">
+<p class="mdui-text-color-white">
 1.不接受没有原创内容的站点<br>
 2.不接受版权问题严重的站点<br>
 3.全站 (强制) 使用HTTPS协议<br>
@@ -207,7 +207,7 @@ $("#cartoon").append(str);
 </div>
 <div class="mdui-col">
 <b>友链申请示例</b>
-<p class="mdui-text-color-grey-500">
+<p class="mdui-text-color-white">
 本站名称：画的个人记录<br>
 本站介绍：其实没有你们想的那么复杂！<br>
 本站链接：jixiejidiguan.top<br>
@@ -221,11 +221,20 @@ $("#cartoon").append(str);
 </div>
 </div></div>
 <div class="card-group mb-2">
-<div class="container-fluid mb-2 text-white text-center">友链不分先后，已开启随机排序。</div>
+<div id="Links_value" class="container-fluid mb-2 text-white text-center">友链不分先后，已开启随机排序。</div>
 </div>
 <div id="Links"></div>
 </div></div>
-<script> 
+<script>
+$(document).ready(function() {
+$("#Links_value").click(function() {
+$(".Links_value").remove();
+Links_value();
+console.log("友链不分先后，已开启随机排序。");
+});
+Links_value();
+});
+function Links_value() {
 $.ajax({
 url:"./start/json/Links.json",
 method: "GET",
@@ -242,7 +251,7 @@ array[randomIndex] = temporaryValue;
 }
 return array;
 }
-var str='<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">';
+var str='<div class="Links_value row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">';
 shuffleArray(data);
 $.each(data,function(i,n){    
 str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
@@ -256,6 +265,7 @@ str+='</div>';
 $("#Links").append(str);
 }
 });
+}
 </script>
 
 

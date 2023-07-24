@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta name="keywords" content="爱莫能助,JIXIEJIDIGUAN ナビ姫."/>
-<meta name="description" content="好像是……"/>
+<meta name="description" content="这里只是简单的一个导航站。"/>
 <link rel="shortcut icon" href="../favicon.ico?v=1.0" type="image/x-icon"/>
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"/>
@@ -34,7 +34,7 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 <div class="px-3">
 <div class="mdui-list" id="Navs"></div>
 <script id="Navs-tmp" type="text/x-handlebars-template">
-<a href="/" class="mdui-list-item fs-3 mdui-ripple mdui-text-color-blue-grey">返回首页</a>
+<a href="/" class="mdui-list-item fs-3 mdui-ripple">返回首页</a>
 {{#each this}}
 <a href="#{{classification}}" class="mdui-list-item fs-3 mdui-ripple">{{classification}}</a>
 {{/each}}
@@ -43,7 +43,7 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 </div>
 <!-- 主状态显示 -->
 <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar mdui-color-blue-accent">
+<div class="mdui-toolbar mdui-color-white">
 <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">format_align_left</i></a>
 <div class="mdui-typo-title">爱莫能助</div>
 <div class="mdui-toolbar-spacer"></div>
@@ -57,9 +57,9 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 <div class="text-center mb-3">
 <nav>
 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Google</button>
-<button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bing</button>
-<button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">GitHub</button>
+<button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Google</button>
+<button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bing</button>
+<button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">GitHub</button>
 </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
@@ -121,10 +121,13 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 <p>你可以<a class="text-decoration-none" href="https://gist.github.com/search?l=JavaScript&amp;o=desc&amp;q=%22%3D%3DUserScript%3D%3D%22&amp;s=updated">在 Github 和 Gist 中 搜索脚本资源</a>。</p>
 </div>
 <!-- 软件下载 -->
-<div class="mdui-panel mdui-panel-gapless" mdui-panel>
-<div class="mdui-panel-item">
-<div class="mdui-panel-item-header">桌面端（PC）</div>
-<div class="mdui-panel-item-body">
+<div class="mdui-tab" mdui-tab>
+<a href="#Desktop_PC" class="mdui-ripple">桌面端（PC）</a>
+<a href="#Mobile_Android" class="mdui-ripple">手机端（Android）</a>
+<a href="#Mobile_iOS" class="mdui-ripple">手机端（iOS）</a>
+</div>
+
+<div id="Desktop_PC" class="">
 <ul>
 <li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
 <li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
@@ -135,68 +138,62 @@ li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 <li>AdGuard: (no additional software required)</li>
 </ul>
 </div>
-</div>
-<div class="mdui-panel-item">
-<div class="mdui-panel-item-header">手机端（Android）</div>
-<div class="mdui-panel-item-body">
+<div id="Mobile_Android" class="">
 <ul>
-<li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
-<li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
-<li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
-<li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
-<li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
-<li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
-<li>AdGuard: (no additional software required)</li>
+<li>Firefox：<a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>、<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a> 或 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
+<li>Maxthon：<a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
+<li>Dolphin：<a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin">Tampermonkey</a></li>
+<li>UC：<a href="https://www.tampermonkey.net/?browser=ucweb&amp;ext=dhdg">Tampermonkey</a></li>
+<li>Kiwi：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> 或 <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
+<li><a href="https://www.xbext.com">X浏览器</a></li>
+<li><a href="https://www.bookmarkearth.com/download/app">书签地球</a></li>
+<li><a href="http://mbrowser.nr19.cn/">M浏览器</a></li>
+<li><a href="https://www.lemurbrowser.com/">狐猴浏览器</a>：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li>
 </ul>
 </div>
-</div>
-<div class="mdui-panel-item">
-<div class="mdui-panel-item-header">手机端（iOS）</div>
-<div class="mdui-panel-item-body">
+<div id="Mobile_iOS" class="">
 <ul>
 <li>Safari：<a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> 或 <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
 <li><a href="https://gear4.app/">Gear</a>：（不需要其他软件）</li>
 </ul>
 </div>
-</div>
-</div>
 <div class="accordion-body">
 <p class="font-monospace">
 一些还不错的查询工具：
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.reg007.com/">REG007</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://monitor.firefox.com/" >火狐监视器</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://haveibeenpwned.com/" >我被骗了吗？</a></kbd>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.reg007.com/">REG007</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://monitor.firefox.com/" >火狐监视器</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://haveibeenpwned.com/" >我被骗了吗？</a>
 </p>
 <p class="mdui-typo-caption">
 ChatGPT镜像：
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://supremes.pro/">1号镜像</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://chat.bnu120.space/" >2号镜像</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="http://chat.68686.ltd/" >3号镜像</a></kbd>
+<a class="badge text-bg-light text-decoration-underline" href="https://supremes.pro/">1号镜像</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://chat.bnu120.space/" >2号镜像</a>
+<a class="badge text-bg-light text-decoration-underline" href="http://chat.68686.ltd/" >3号镜像</a>
 </p>
 <p class="font-monospace">
 临时网络传输工具：
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://snapdrop.net/">局域网传输</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.wenshushu.cn/">文件叔叔</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://airportal.cn/">AirPortal 空投快传</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://anonfiles.com">匿名文件上传</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.lanzou.com/">蓝奏·云存储</a></kbd>
+<a class="badge text-bg-light text-decoration-underline" href="https://snapdrop.net/">局域网传输</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.wenshushu.cn/">文件叔叔</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://airportal.cn/">AirPortal 空投快传</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://anonfiles.com">匿名文件上传</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.lanzou.com/">蓝奏·云存储</a>
 </p>
 <p class="font-monospace">
 镜像：
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://scholar.chongbuluo.com/" >学术搜索</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://ac.scmor.com/" >谷歌学术镜像</a></kbd>
+<a class="badge text-bg-light text-decoration-underline" href="https://scholar.chongbuluo.com/" >学术搜索</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://ac.scmor.com/" >谷歌学术镜像</a>
 </p>
 <p class="font-monospace">
 临时邮箱注册：
-<kbd><a class="badge text-bg-light text-decoration-none" href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.moakt.com/zh/" target="_blank">临时邮箱专业服务</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://tempmail.cn/" target="_blank">临时邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://smailpro.com/" target="_blank">临时邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://mail.tm/zh/" target="_blank">临时邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://bonds.id" target="_blank">临时电子邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://etempmail.com/" target="_blank">临时邮箱</a></kbd>
-<kbd><a class="badge text-bg-light text-decoration-none" href="https://www.emailnator.com/" target="_blank">临时邮箱</a></kbd>
+<a class="badge text-bg-light text-decoration-underline" href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.moakt.com/zh/" target="_blank">临时邮箱专业服务</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://tempmail.cn/" target="_blank">临时邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://smailpro.com/" target="_blank">临时邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://mail.tm/zh/" target="_blank">临时邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://bonds.id" target="_blank">临时电子邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://etempmail.com/" target="_blank">临时邮箱</a>
+<a class="badge text-bg-light text-decoration-underline" href="https://www.emailnator.com/" target="_blank">临时邮箱</a>
 </p>
 </div>
 </div>
