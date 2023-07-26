@@ -19,6 +19,7 @@
 <a id="fanhuisu" href="/Mchat" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">arrow_back</i></a>
 <a href="javascript:;" class="mdui-typo-title">Mchat</a>
 <div class="mdui-toolbar-spacer"></div>
+<a href="/" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">home</i></a>
 <button type="button" id="staticBackdrop1" class="btn btn-sm mdui-btn mdui-btn-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="mdui-icon material-icons">healing</i></button>
 <button type="button" id="clearCookie" class="btn btn-sm mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">exit_to_app</i></button>
 </div>
@@ -130,6 +131,7 @@ $('#zcsjsskk').text(data.data.registration_time);
 });
 var hash = window.location.hash;
 var truncatedUrl = hash.replace('#group_id=', '');
+
 if (hash.toString().indexOf('#group_id=') !== -1) {
 $("#visually-hidden").addClass("visually-hidden");
 $("#visibility-ssstss").addClass("visually-hidden");
@@ -218,10 +220,11 @@ $("#listtyu").append(listadd);
 }
 });
 $('html, body').animate({ scrollTop: $(document).height() }, 10);
-setTimeout(startLoop, 1000);
+setTimeout(startLoop(truncatedUrl), 1000);
 }
 startLoop();
 });
+
 //扩大文本框
 $('#tuozhan').click(function() {
 $("#tianxie").removeClass("d-none");
