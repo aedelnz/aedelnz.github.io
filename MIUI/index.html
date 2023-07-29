@@ -21,6 +21,10 @@
 <div class="mdui-drawer" id="left-drawer">
 <div class="mdui-list">
 <a href="/" class="mdui-list-item fs-3 mdui-ripple">返回首页</a>
+<a href="#MIUI" class="mdui-list-item fs-3 mdui-ripple">MIUI ROM</a>
+<a href="#Xposed" class="mdui-list-item fs-3 mdui-ripple">Xposed 仓库</a>
+<a href="#Magisk" class="mdui-list-item fs-3 mdui-ripple">Magisk 仓库</a>
+<a href="#Third-party-referrals" class="mdui-list-item fs-3 mdui-ripple">第三方推荐</a>
 </div>
 </div>
 
@@ -35,6 +39,7 @@
 <div class="mb-3"></div>
 
 <!--########################## 第一页面 ##########################-->
+<div id="MIUI">
 <div class="mdui-container-fluid" id="miui-invisible">
 <!-- 目录开始 -->
 <div class="card mb-3">
@@ -370,13 +375,14 @@
 var hash = window.location.hash;
 var truncatedUrl = hash.replace('#sudo=', '');
 if (hash.toString().indexOf('#sudo=') !== -1) {
-$("#miui-invisible").addClass("d-none");$.ajax({
+$("#miui-invisible").addClass("d-none");
+$.ajax({
 url: 'data/devices/'+truncatedUrl,
 dataType: 'json',
 success: function(data) {
 var branches = data.branches;
 var str=`<div class="d-grid gap-2 d-md-block mb-3">
-<a class="btn btn-outline-secondary" href="/MIUI">返回上一步</a>
+<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
 </div>
 <div class="card mb-3">
 <div class="card-body">
@@ -439,27 +445,188 @@ window.location.href = $(this).attr('href'); // 跳转到链接中的地址
 location.reload();
 });
 </script>
-
-<div id="carousel-item" class="carousel-item">
-<!-- 副内容开始 -->
-<div class="content content-full font-monospace text-muted"><div class="card-group mb-2">
-<div class="card mb-1">
-<div class="card-header fs-5">站点</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item text-danger">更新时间：2023.06.04</li>
-</ul>
 </div>
-<div class="card mb-1">
-<div class="card-header fs-5">小米着边</div>
-<div class="accordion-body p-2">
-<a target="_blank" class="btn" href="https://home.miui.com/">官网</a>
-<a target="_blank" class="btn" href="https://privacy.miui.com/#/">隐私</a>
-<a target="_blank" class="btn" href="https://accessibility.miui.com/#/">无障碍</a>
-<a target="_blank" class="btn" href="https://www.xiaomi.cn/">社区</a>
-<a target="_blank" class="btn" href="https://i.mi.com/">云服务</a>
-<a target="_blank" class="btn" href="https://www.mi.com/">商城</a>
-<a target="_blank" class="btn" href="">待添加</a>
-<p class="card-text">
+<!--########################## 第二页面 ##########################-->
+<div id="Xposed">
+<div class="mdui-container-fluid">
+<style>
+.mdui-col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+}
+.mdui-card {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+</style>
+<div class="mdui-valign mdui-p-y-5">
+  <p class="mdui-center fs-1 mb-5">Xposed 模块存储库</p>
+</div>
+<duv id="Xposed-invisible"></duv>
+</div>
+<script>
+$.ajax({
+url: 'Xposed.json',
+dataType: 'json',
+success: function(data) {
+var store = data.data.localSearchRepositories.store;
+var str=`<div class="d-grid gap-2 d-md-block mb-3">
+<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
+<div class="mdui-float-right d-flex">
+<input class="form-control me-2" type="search"  id="searchInput"  placeholder="Search" aria-label="Search">
+<button class="btn btn-outline-success"  id="searchButton">Search</button>
+</div>
+</div>
+
+<div class="card-group mdui-row-xs-1 mdui-row-md-2 mdui-grid-list" id="Xposed-list">`;
+$.each(store, function(i, n) {
+var description = n.title;
+var readmeExcerpt = n.content;
+str+=`
+<div class="mdui-col">
+<div class="card mdui-card mb-2">
+<div class="mdui-card-primary">
+<div class="mdui-card-primary-title">`+description+`</div>
+<div class="mdui-card-primary-subtitle">`+readmeExcerpt+`</div>
+</div>
+<div class="mdui-card-actions">
+<a class="mdui-btn mdui-ripple" href="`+n.Website+`">Website</a>
+<a class="mdui-btn mdui-ripple" href="`+n.Source+`">Source</a>
+</div>
+</div>
+</div>
+`;
+});
+str+=`</div>`;
+$('#Xposed-invisible').append(str);
+
+
+$('#searchButton').click(function() {
+var keyword = $('#searchInput').val();
+search(keyword);
+});
+function search(keyword) {
+var results = [];
+$.each(store, function(index, item) {
+if (item.title.toLowerCase().includes(keyword.toLowerCase()) || item.content.toLowerCase().includes(keyword.toLowerCase())) {
+results.push(item);
+}
+});
+displayResults(results);
+}
+function displayResults(results) {
+$('#Xposed-list').empty();
+if (results.length > 0) {
+$.each(results, function(index, item) {
+var resultHtml = `<div class="mdui-col">
+<div class="card mdui-card mb-2">
+<div class="mdui-card-primary">
+<div class="mdui-card-primary-title">`+item.title+`</div>
+<div class="mdui-card-primary-subtitle">`+item.content+`</div>
+</div>
+<div class="mdui-card-actions">
+<a class="mdui-btn mdui-ripple" href="`+item.Website+`">Website</a>
+<a class="mdui-btn mdui-ripple" href="`+item.Source+`">Source</a>
+</div>
+</div>
+</div>`;
+$('#Xposed-list').append(resultHtml);
+});
+} else {
+$('#Xposed-list').text('未找到结果.');
+}
+}
+}
+});
+</script>
+</div>
+<!--########################## 第三页面 ##########################-->
+<div id="Magisk">
+<div class="mdui-container-fluid">
+<div class="mdui-valign mdui-p-y-5">
+  <p class="mdui-center fs-1 mb-5">Magisk 模块存储库</p>
+</div>
+<duv id="Magisk-invisible"></duv>
+</div>
+<script>
+$.ajax({
+url: 'Magisk.json',
+dataType: 'json',
+success: function(data) {
+var store = data.data.localSearchRepositories.store;
+var str=`<div class="d-grid gap-2 d-md-block mb-3">
+<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
+</div>
+
+<div class="card-group mdui-row-xs-1 mdui-row-md-2 mdui-grid-list" id="Magisk-list">`;
+$.each(store, function(i, n) {
+$.get(n.content, function(data) {
+var lines = data.split("\n");
+var author = lines[5];
+var startIndex = author.indexOf('=') + 1;
+var extractedDescription = author.substring(startIndex);
+$("#Magisk-"+n.title).append(extractedDescription);
+
+var authors = lines[1];
+var startIndexs = authors.indexOf('=') + 1;
+var extractedDescriptions = authors.substring(startIndexs);
+$("#Magisk-title-"+n.title).append(extractedDescriptions);
+});
+str+=`
+<div class="mdui-col">
+<div class="card mdui-card mb-2">
+<div class="mdui-card-primary">
+<div class="mdui-card-primary-title" id="Magisk-title-`+n.title+`"></div>
+<div class="mdui-card-primary-subtitle" id="Magisk-`+n.title+`"></div>
+</div>
+<div class="mdui-card-actions">
+<a class="mdui-btn mdui-ripple" href="`+n.zip_url+`">下载</a>
+</div>
+</div>
+</div>
+`;
+});
+str+=`</div>`;
+$('#Magisk-invisible').append(str);
+
+}
+});
+</script>
+</div>
+
+<!--########################## 第四页面 ##########################-->
+<div id="Third-party-referrals" >
+<!-- 副内容开始 -->
+<div class="mdui-container-fluid">
+<div><div class="card-group mb-2">
+<div class="card">
+<div class="card-header fs-5">第三方MIUI ROM 集合网站</div>
+<div class="card-body card-text">
+<a href="https://xiaomifirmwareupdater.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >固件更新程序</a>
+<a href="https://xiaomirom.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >小米ROM</a>
+<a href="https://roms.miuier.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >MIUI官方ROM仓库</a>
+<a href="https://mifirm.net/" class="mdui-card-primary-title text-decoration-none mdui-center" >MiFirm</a>
+</div>
+</div>
+<div class="card">
+<div class="card-header fs-5">小米TWRP集合</div>
+<div class="card-body card-text">
+<br>小米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）
+<br>小米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150
+<br>红米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）
+<br>红米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150
+<br>天翼云盘：<a class="text-reset" href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）
+<br>恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150
+<br><br>
 小米工具:
 <a class="text-reset" href="http://www.miui.com/unlock/index.html">解锁申请地址</a>，
 <a class="text-reset" href="http://miuirom.xiaomi.com/rom/u1106245679/3.2.522.32/MiAssistant-3.2.522.32.zip">小米手机助手</a>，
@@ -467,54 +634,23 @@ location.reload();
 <br>
 CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_source=app&app_version=5.3.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a><br>
 小米论坛:<a class="text-reset" href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=17936575&app_version=dev.10085&ori_version=dev.10085&ori_miui_version=20.1.4&ori_android_version=10&ori_front_version=112&ref=share&channel=Share">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a>
-</p>
 </div>
 </div>
 </div></div>
 
-<div class="content content-full font-monospace text-muted"><div class="card-group mb-2">
-<div class="card">
-<div class="card-header fs-5">第三方MIUI ROM 集合网站</div>
-<div class="card-body">
-<p class="card-text">
-<a href="https://xiaomifirmwareupdater.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >固件更新程序</a>
-<a href="https://xiaomirom.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >小米ROM</a>
-<a href="https://roms.miuier.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >MIUI官方ROM仓库</a>
-<a href="https://mifirm.net/" class="mdui-card-primary-title text-decoration-none mdui-center" >MiFirm</a>
-</p>
-</div>
-</div>
-<div class="card">
-<div class="card-header fs-5">小米TWRP集合</div>
-<div class="card-body">
-<p class="card-text">
-<br>小米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）
-<br>小米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150
-<br>红米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）
-<br>红米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150
-<br>天翼云盘：<a class="text-reset" href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）
-<br>恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150
-</p>
-</div>
-</div>
-</div></div>
-
-<div class="content content-full font-monospace text-muted"><div class="card-group mb-2">
+<div><div class="card-group mb-2">
 <div class="card">
 <div class="card-header fs-5">Magisk</div>
-<div class="card-body">
-<p class="card-text">
+<div class="card-body card-text">
 <a class="text-decoration-none" href="https://magiskmanager.com/">Magisk Manager官网</a><br>
 <a class="text-decoration-none" href="https://github.com/topjohnwu/Magisk/releases">Magisk Manager：Github下载网址</a><br>
 <a class="text-decoration-none" href="https://topjohnwu.github.io/Magisk/guides.html">Magisk Developer Guides（开发人员指南）</a><br>
 <a class="text-decoration-none" href="https://topjohnwu.github.io/Magisk/install.html">Magisk 安装说明</a>
-</p>
 </div>
 </div>
 <div class="card">
 <div class="card-header fs-5">Xposed</div>
-<div class="card-body">
-<p class="card-text">
+<div class="card-body card-text">
 <a class="text-decoration-none" href="https://github.com/RikkaApps/Riru/releases">Riru（Riru - Code)：Github</a><br>
 <a class="text-decoration-none" href="https://github.com/LSPosed/LSPosed/releases">Riru LSPosed：Github发布页</a><br>
 <a class="text-decoration-none" href="https://github.com/ElderDrivers/EdXposed/releases/">Riru EdXposed：Github发布页</a><br>
@@ -526,16 +662,14 @@ CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/detai
 <a class="text-decoration-none" href="https://repo.xposed.info/module-overview">Xposed Module Repository（Xposed模块存储库）</a><br>
 <a class="text-decoration-none" href="https://www.xda.im/">XDA.IM - Xposed与Magisk仓库</a><br>
 <a class="text-decoration-none" href="https://taichi.cool/zh/module/">模块下载 | 太极</a>
-</p>
 </div>
 </div>
 </div></div>
 
-<div class="content content-full font-monospace text-muted"><div class="card-group mb-2">
+<div><div class="card-group mb-2">
 <div class="card">
 <div class="card-header fs-5">Recovery</div>
-<div class="card-body">
-<p class="card-text">
+<div class="card-body card-text">
 <a class="text-decoration-none" href="https://m.weibo.cn/u/6033736159">wzsx150 新浪微博地址 LR.Team定制版TWRP下载地址</a><br>
 <a class="text-decoration-none" href="https://twrp.me/Devices/">TWRP官方网址</a><br>
 <a class="text-decoration-none" href="https://sourceforge.net/projects/orangefox/files/">橙狐rec下载网址①</a><br>
@@ -543,13 +677,11 @@ CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/detai
 <a class="text-decoration-none" href="https://pitchblackrecovery.com/">PBRP Recovery</a><br>
 <a class="text-decoration-none" href="https://sourceforge.net/projects/shrp/files/">SHRP Recovery</a><br>
 <a class="text-decoration-none" href="https://forum.xda-developers.com/c/general-development.11974/">general-development</a>
-</p>
 </div>
 </div>
 <div class="card">
 <div class="card-header fs-5">刷机ROM网址</div>
-<div class="card-body">
-<p class="card-text">
+<div class="card-body card-text">
 <a class="text-decoration-none" href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org（Phone ROMS）<br>一个社区里面包含很多ROMs</a>
 <a class="text-decoration-none" href="https://theunlockr.com/roms/android-roms/">Android ROMs</a><br>
 <a class="text-decoration-none" href="https://mi.fiime.cn/">FiimeROM</a><br>
@@ -591,13 +723,11 @@ CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/detai
 <a class="text-decoration-none" href="https://sourceforge.net/projects/rebellion-os/files/">Rebellion-OS</a><br>
 <a class="text-decoration-none" href="https://sourceforge.net/projects/xyzuan/files/">a xyzuan`ROM</a><br>
 <a class="text-decoration-none" href="https://sourceforge.net/projects/stagos-10/files/">StagOS-10</a>
-</p>
 </div>
 </div>
 <div class="card">
 <div class="card-header fs-5">其它</div>
-<div class="card-body">
-<p class="card-text">
+<div class="card-body card-text">
 <a class="text-decoration-none" href="https://f-droid.org/packages/com.termux/">下载Termux</a><br>
 <a class="text-decoration-none" href="https://forum.xda-developers.com/apps/magisk/module-url-here">XDA上的Magisk模块区</a><br>
 <a class="text-decoration-none" href="https://github.com/E7KMbb/AD-hosts/releases">AD-hosts</a><br>
@@ -617,13 +747,20 @@ CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/detai
 </div></div>
 <!-- 副内容结束 -->
 </div>
+</div>
 
 
 
-<!--########################## 第一页面 ##########################-->
 
 
-
+<script>
+$("#Xposed, #Magisk, #Third-party-referrals").hide();
+$(".mdui-list-item").click(function() {
+var target = $(this).attr("href");
+$("#MIUI, #Xposed, #Magisk, #Third-party-referrals").hide();
+$(target).show();
+});
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
