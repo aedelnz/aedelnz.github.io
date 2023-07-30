@@ -1,0 +1,256 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="louisalflame">
+<title>潜水领域 - 在线修仙</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/5.0.0/bignumber.min.js" integrity="sha512-DBrZEhd47/Rxs9klFGOR3mKTGjqQG3RKxHROICxbDA7jsL50n/Dtdcxi4Vzp+/MgfiTR3ADZWGzLutU7sFCpag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js" integrity="sha512-qtX0GLM3qX8rxJN1gyDfcnMFFrKvixfoEOwbBib9VafR5vbChV5LeE5wSI/x+IlCkTY5ZFddFDCCfaVJJNnuKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js" integrity="sha512-XdUZ5nrNkVySQBnnM5vzDqHai823Spoq1W3pJoQwomQja+o4Nw0Ew1ppxo5bhF2vMug6sfibhKWcNJsG8Vj9tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script language="javascript">
+$(document).ready(function() {
+var timer = setInterval("set_progress()",1000);
+});
+function set_progress(){
+var current = $("#jindutiao").val();
+var number = $('#now_num').html().split(":");
+var now_num = Number(number[1].replace(/,/g, ""));//当前值
+var total = $("#total_num").text();
+var total_num = Number(total.replace(/,/g, ""))
+var jindu = Math.round((now_num/total_num)*100)
+$("#jindutiao").val(jindu);
+}
+</script>
+</head>
+<body class="text-black bg-body-secondary">
+<!-- 主面板 START -->
+<div id="app" class="mdui-p-y-5">
+<div class="container">
+<div class="shadow p-3 bg-body-tertiary rounded">
+<div class="row">
+<div class="col-sm-12 text-center">
+
+<!-- 面板1 START -->
+<div class="row">
+<h1 id="now_num">修为: {{ numFilter.txt( point.round().toString() ) }} </h1>
+<div class="col-md-4 text-left">第{{ worldTimes }}重天 <h2>{{ world[0] }}界</h2></div>
+<div class="col-md-4 text-center">
+<button class="btn btn-lg btn-outline-secondary btn-default" v-bind:style="buttonCss" v-on:click="_addByBody">修炼</button>
+</div>
+<div class="col-md-4 text-right">
+<h3>{{ level.name }} 境界</h3>
+<p id="total_num"><progress value="0" max="100" id="jindutiao"></progress> {{ numFilter.txt( level.max.toString() ) }}</p>
+<p>每秒
+<template v-if="!pointPerSec.lessThan(0)">增加</template>
+<template v-else>减少</template>
+{{ numFilter.txt( pointPerSec.abs().times(10).round().toString() ) }} 修为</p>
+</div> 
+</div>
+<!-- 面板1 END -->
+
+<!-- 面板2 START -->
+<div class="row">
+<table id="status" class="table table-bordered table-condensed">
+<tbody> 
+<tr class="table-primary">
+<td>寿命</td>
+<td>阵营</td>
+<td>名望</td>
+<td>财富</td>
+</tr>
+<tr>
+<td> {{ life.toString() }} / {{ pastLife.toString() }} 秒</td>
+<td> {{ stand.name }} {{ standPoint.div(100).round().toString() }}% </td>
+<td> {{ numFilter.txt( renown.toString() ) }} </td>
+<td> {{ numFilter.txt( money.toString() ) }}金 </td>
+</tr>
+<tr class="table-success">
+<td colspan="4" class="text-left">归属</td>
+</tr>
+<tr>
+<td ><h4> {{ group.name }} </h4></td>
+<td colspan="2"> 
+<template v-if="group.exist">{{ group.object.info }}</template> 
+<template v-else>
+<span v-if="groupWait>0">耗费 {{ groupWait }} 秒游历天下，</span>
+花费 100 名望探访名师
+</template>
+</td>
+<td>
+<template v-if="group.exist">
+<button class="btn btn-default" v-on:click="_exitGroup">金盆洗手</button>
+</template>
+<template v-else>
+<button class="btn btn-default" v-on:click="_joinGroup" :disabled="groupWait!=0 || renown.lessThan(100)">拜师学艺</button>
+</template>		
+</td>
+</tr>
+</tbody>
+</table>
+			
+<div id= "divID" style= "display:block">
+<table id="info" class="table table-bordered table-condensed">
+<tbody> 
+<tr  class="table-primary">
+<td>名称</td>
+<td>能力</td>
+<td>升级需求</td>
+<td> </td>
+</tr>
+<tr class="bg-body-secondary">
+<td colspan="4" class="text-left">身体</td>
+</tr>
+<tr>
+<td><h4>{{ body.name }}</h4></td>
+<td>每次修炼增加 {{ numFilter.txt( body.num.toString() ) }} 修为</td>
+<td><template v-if="!body.top"> {{ numFilter.txt( body.need.toString() ) }} 修为</template></td>
+<td><button class="btn btn-default" v-on:click="_bodyLvUp" :disabled="point.lessThan( body.need ) || body.top ">升级</button></td>
+</tr>
+<tr class="bg-body-secondary">
+<td colspan="4" class="text-left">灵根</td>
+</tr>
+<tr>
+<td><h4>{{ talent.name }}</h4></td>
+<td>可修炼 {{ talent.num.toString() }} 项功法</td>
+<td><template v-if="!talent.top">{{ numFilter.txt( talent.need.toString() ) }} 修为</template></td>
+<td><button class="btn btn-default" v-on:click="_talentLvUp" :disabled="point.lessThan( talent.need ) || talent.top ">升级</button></td>
+</tr>
+<tr id="skillRow">
+<td class="text-left">功法：{{ skills.length }}项</td>
+<td colspan="2" class="text-center"><template v-if="talent.num.greaterThan( skills.length)">门槛需达 {{ numFilter.txt( level.max.div(2).toString() ) }} 修为，消耗修为至{{skills.length+2}}分之一</template></td>
+<td>
+<template v-if="talent.num.greaterThan( skills.length)">
+<button class="btn btn-default" v-on:click="_getNewSkill" :disabled="point.lessThan( level.max.div(2) ) ">学习新功法</button>
+</template>	
+</td>
+</tr>
+<tr v-for="(skill, id) in skills">
+<td><h5> {{ skill.name }} - {{ skill.object.degree }} </h5></td> 
+<td>{{ skill.object.info }}</td> 
+<td><template v-if="!skill.object.top">{{ numFilter.txt( skill.object.need.toString() ) }} 修为</template></td>
+<td>
+<button class="btn btn-default" v-on:click="_skillLvUp(id)" :disabled="point.lessThan( skill.object.need ) || skill.object.top ">升级</button>
+<button class="btn btn-default" v-on:click="_skillRemove(id)" :disabled="money.lessThan(removeCost)">散功({{ removeCost.toString() }}金)</button>
+</td>
+</tr>	
+</tbody>
+</table>
+</div>
+<div class="d-grid gap-2 mb-3 d-md-block">
+<input type=button class="mdui-btn mdui-btn-raised mdui-ripple" value= "显示身体、灵根、功法" onclick='document.getElementById("divID").style.display="block"'>
+<input type=button class="mdui-btn mdui-btn-raised mdui-ripple" value= "隐藏身体、灵根、功法" onclick='document.getElementById("divID").style.display="none"'>
+</div>
+
+<div id= "divID1" style= "display:block">
+<table id="status"  class="table table-bordered table-condensed">
+<tbody> 
+<tr class="bg-body-secondary">
+<td colspan="4" class="text-left">副本</td>
+</tr>
+<tr>
+<td ><h4> {{ group1.name }} </h4></td>
+<td colspan="2"> 
+<template >为世人所厌恶，大于500金币，献祭8成金币给古神获取命运博弈。 
+<span v-if="group1Wait>0"> {{ group1Wait }} 秒后即可献祭。</span></template></td>
+<td>
+<template >
+<button class="btn btn-default" v-on:click="_joinGroup1" :disabled=" money.lessThan(500)">献祭赌博</button>
+</template>
+</td>
+</tr>
+<tr>
+<td ><h4> {{ group2.name }} </h4></td>
+<td colspan="2"> 
+<template >世人所信仰的神，大于1000寿元，贡献7成寿元给予神明。
+<span v-if="group2Wait>0"> {{ group2Wait }} 秒后即可贡献。</span></template></td>
+<td>
+<template >
+<button class="btn btn-default" v-on:click="_joinGroup2" :disabled="group2Wait!=0 || life.lessThan(1000)">信仰贡献</button>
+</template>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="d-grid gap-2 mb-3 d-md-block">
+<input type=button class="mdui-btn mdui-btn-raised mdui-ripple" value= "显示副本信息" onclick='document.getElementById("divID1").style.display="block"'>
+<input type=button class="mdui-btn mdui-btn-raised mdui-ripple" value= "隐藏副本信息" onclick='document.getElementById("divID1").style.display="none"'>
+</div>
+
+<table id="items"  class="table table-bordered table-condensed">
+<tbody> 
+<tr v-bind:style="Tr4css" id="itemRow">
+<td class="text-left">法宝：{{ items.length }}个</td>
+<td colspan="2" class="text-center">
+<template v-if="itemWait!=0">
+下次秘境开启 {{ itemWait }} 秒 ， 
+</template>
+门槛需达 {{ numFilter.txt( level.max.div(2).greaterThan( itemCost ) ? level.max.div(2).toString() : itemCost.toString() ) }} 修为，
+消耗九成修为<br/>
+拥有法宝越多、阁下的孽缘越多，可能会消耗寿命
+</td>
+<td class="text-center">
+<button class="btn btn-default" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 寻找机缘</button>			
+<template v-if="items.length!=0">
+<button class="btn btn-default" v-on:click="_removeItems">舍弃法宝</button> 
+</template>
+</td>
+</tr>
+<tr v-for="(i, id) in items">
+<td><h5> {{ i.name }} </h5></td> 
+<td colspan="2" class="text-left"> {{ i.object.info }} </td>
+<td>
+<div v-if="i.object.useAble">
+<button class="btn btn-default" v-on:click="_useItem(id)"> 使用 </button>
+</div>
+<div v-else style="color:gray;"> 被动 </div>
+</td>
+</tr> 
+</tbody>
+</table>
+</div> 
+
+
+<!-- 存档面板 START -->
+<div v-bind:style="logCss" class="text-left" >
+<p v-for="t in logTxt">{{ t }}</p>
+</div>
+<div>
+<input id="data" v-bind:style="dataCss" type="text" v-model="record" >
+<button class="btn btn btn-outline-primary" v-on:click="_showData">记录传承</button>
+<button class="btn btn btn-outline-primary" v-on:click="_loadData">接受传承</button>
+<button class="btn btn btn-outline-primary" v-on:click="_clearData">重新做人</button>
+</div>
+<!-- 存档面板 END -->
+
+</div>
+</div>  
+</div>
+
+</div>
+        
+        
+        
+
+</div>
+<!-- 主面板 END -->
+
+<script src="script/level.js"> </script>
+<script src="script/stand.js"> </script>
+<script src="script/skill.js"> </script>
+<script src="script/item.js"> </script>    
+<script src="script/nameMaker.js"> </script>
+<script src="script/core-main.js" > </script>
+<script src="script/core-timer.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
+
