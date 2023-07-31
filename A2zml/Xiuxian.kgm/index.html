@@ -9,11 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="../../start/index.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/5.0.0/bignumber.min.js" integrity="sha512-DBrZEhd47/Rxs9klFGOR3mKTGjqQG3RKxHROICxbDA7jsL50n/Dtdcxi4Vzp+/MgfiTR3ADZWGzLutU7sFCpag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js" integrity="sha512-qtX0GLM3qX8rxJN1gyDfcnMFFrKvixfoEOwbBib9VafR5vbChV5LeE5wSI/x+IlCkTY5ZFddFDCCfaVJJNnuKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js" integrity="sha512-XdUZ5nrNkVySQBnnM5vzDqHai823Spoq1W3pJoQwomQja+o4Nw0Ew1ppxo5bhF2vMug6sfibhKWcNJsG8Vj9tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../start/origin.js"></script>
 <script language="javascript">
 $(document).ready(function() {
 var timer = setInterval("set_progress()",1000);
@@ -31,18 +33,17 @@ $("#jindutiao").val(jindu);
 </head>
 <body class="text-black bg-body-secondary">
 <!-- 主面板 START -->
-<div id="app" class="mdui-p-y-5">
-<div class="container">
-<div class="shadow p-3 bg-body-tertiary rounded">
+<div id="app">
+<div class="container bg-body-tertiary">
 <div class="row">
 <div class="col-sm-12 text-center">
 
 <!-- 面板1 START -->
 <div class="row">
-<h1 id="now_num">修为: {{ numFilter.txt( point.round().toString() ) }} </h1>
+<h1 id="now_num" class="mdui-p-y-3">修为: {{ numFilter.txt( point.round().toString() ) }} </h1>
 <div class="col-md-4 text-left">第{{ worldTimes }}重天 <h2>{{ world[0] }}界</h2></div>
 <div class="col-md-4 text-center">
-<button class="btn btn-lg btn-outline-secondary btn-default" v-bind:style="buttonCss" v-on:click="_addByBody">修炼</button>
+<button class="btn btn-lg btn-default mdui-btn-raised mb-2 mdui-m-y-2" v-bind:style="buttonCss" v-on:click="_addByBody">修炼</button>
 </div>
 <div class="col-md-4 text-right">
 <h3>{{ level.name }} 境界</h3>
@@ -74,7 +75,7 @@ $("#jindutiao").val(jindu);
 <tr class="table-success">
 <td colspan="4" class="text-left">归属</td>
 </tr>
-<tr>
+<tr class="align-middle">
 <td ><h4> {{ group.name }} </h4></td>
 <td colspan="2"> 
 <template v-if="group.exist">{{ group.object.info }}</template> 
@@ -85,10 +86,10 @@ $("#jindutiao").val(jindu);
 </td>
 <td>
 <template v-if="group.exist">
-<button class="btn btn-default" v-on:click="_exitGroup">金盆洗手</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_exitGroup">金盆洗手</button>
 </template>
 <template v-else>
-<button class="btn btn-default" v-on:click="_joinGroup" :disabled="groupWait!=0 || renown.lessThan(100)">拜师学艺</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_joinGroup" :disabled="groupWait!=0 || renown.lessThan(100)">拜师学艺</button>
 </template>		
 </td>
 </tr>
@@ -107,37 +108,37 @@ $("#jindutiao").val(jindu);
 <tr class="bg-body-secondary">
 <td colspan="4" class="text-left">身体</td>
 </tr>
-<tr>
+<tr class="align-middle">
 <td><h4>{{ body.name }}</h4></td>
 <td>每次修炼增加 {{ numFilter.txt( body.num.toString() ) }} 修为</td>
 <td><template v-if="!body.top"> {{ numFilter.txt( body.need.toString() ) }} 修为</template></td>
-<td><button class="btn btn-default" v-on:click="_bodyLvUp" :disabled="point.lessThan( body.need ) || body.top ">升级</button></td>
+<td><button class="btn btn-default mdui-btn-raised" v-on:click="_bodyLvUp" :disabled="point.lessThan( body.need ) || body.top ">升级</button></td>
 </tr>
 <tr class="bg-body-secondary">
 <td colspan="4" class="text-left">灵根</td>
 </tr>
-<tr>
+<tr class="align-middle">
 <td><h4>{{ talent.name }}</h4></td>
 <td>可修炼 {{ talent.num.toString() }} 项功法</td>
 <td><template v-if="!talent.top">{{ numFilter.txt( talent.need.toString() ) }} 修为</template></td>
-<td><button class="btn btn-default" v-on:click="_talentLvUp" :disabled="point.lessThan( talent.need ) || talent.top ">升级</button></td>
+<td><button class="btn btn-default mdui-btn-raised" v-on:click="_talentLvUp" :disabled="point.lessThan( talent.need ) || talent.top ">升级</button></td>
 </tr>
-<tr id="skillRow">
+<tr id="skillRow"  class="align-middle">
 <td class="text-left">功法：{{ skills.length }}项</td>
 <td colspan="2" class="text-center"><template v-if="talent.num.greaterThan( skills.length)">门槛需达 {{ numFilter.txt( level.max.div(2).toString() ) }} 修为，消耗修为至{{skills.length+2}}分之一</template></td>
 <td>
 <template v-if="talent.num.greaterThan( skills.length)">
-<button class="btn btn-default" v-on:click="_getNewSkill" :disabled="point.lessThan( level.max.div(2) ) ">学习新功法</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_getNewSkill" :disabled="point.lessThan( level.max.div(2) ) ">学习新功法</button>
 </template>	
 </td>
 </tr>
-<tr v-for="(skill, id) in skills">
+<tr v-for="(skill, id) in skills" class="align-middle">
 <td><h5> {{ skill.name }} - {{ skill.object.degree }} </h5></td> 
 <td>{{ skill.object.info }}</td> 
 <td><template v-if="!skill.object.top">{{ numFilter.txt( skill.object.need.toString() ) }} 修为</template></td>
 <td>
-<button class="btn btn-default" v-on:click="_skillLvUp(id)" :disabled="point.lessThan( skill.object.need ) || skill.object.top ">升级</button>
-<button class="btn btn-default" v-on:click="_skillRemove(id)" :disabled="money.lessThan(removeCost)">散功({{ removeCost.toString() }}金)</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_skillLvUp(id)" :disabled="point.lessThan( skill.object.need ) || skill.object.top ">升级</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_skillRemove(id)" :disabled="money.lessThan(removeCost)">散功({{ removeCost.toString() }}金)</button>
 </td>
 </tr>	
 </tbody>
@@ -154,25 +155,25 @@ $("#jindutiao").val(jindu);
 <tr class="bg-body-secondary">
 <td colspan="4" class="text-left">副本</td>
 </tr>
-<tr>
+<tr class="align-middle">
 <td ><h4> {{ group1.name }} </h4></td>
 <td colspan="2"> 
 <template >为世人所厌恶，大于500金币，献祭8成金币给古神获取命运博弈。 
 <span v-if="group1Wait>0"> {{ group1Wait }} 秒后即可献祭。</span></template></td>
 <td>
 <template >
-<button class="btn btn-default" v-on:click="_joinGroup1" :disabled=" money.lessThan(500)">献祭赌博</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_joinGroup1" :disabled=" money.lessThan(500)">献祭赌博</button>
 </template>
 </td>
 </tr>
-<tr>
-<td ><h4> {{ group2.name }} </h4></td>
+<tr class="align-middle">
+<td><h4> {{ group2.name }} </h4></td>
 <td colspan="2"> 
 <template >世人所信仰的神，大于1000寿元，贡献7成寿元给予神明。
 <span v-if="group2Wait>0"> {{ group2Wait }} 秒后即可贡献。</span></template></td>
 <td>
 <template >
-<button class="btn btn-default" v-on:click="_joinGroup2" :disabled="group2Wait!=0 || life.lessThan(1000)">信仰贡献</button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_joinGroup2" :disabled="group2Wait!=0 || life.lessThan(1000)">信仰贡献</button>
 </template>
 </td>
 </tr>
@@ -186,7 +187,7 @@ $("#jindutiao").val(jindu);
 
 <table id="items"  class="table table-bordered table-condensed">
 <tbody> 
-<tr v-bind:style="Tr4css" id="itemRow">
+<tr id="itemRow" class="bg-body-secondary align-middle">
 <td class="text-left">法宝：{{ items.length }}个</td>
 <td colspan="2" class="text-center">
 <template v-if="itemWait!=0">
@@ -197,9 +198,9 @@ $("#jindutiao").val(jindu);
 拥有法宝越多、阁下的孽缘越多，可能会消耗寿命
 </td>
 <td class="text-center">
-<button class="btn btn-default" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 寻找机缘</button>			
+<button class="btn btn-default mdui-btn-raised" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 寻找机缘</button>			
 <template v-if="items.length!=0">
-<button class="btn btn-default" v-on:click="_removeItems">舍弃法宝</button> 
+<button class="btn btn-default mdui-btn-raised" v-on:click="_removeItems">舍弃法宝</button> 
 </template>
 </td>
 </tr>
@@ -208,7 +209,7 @@ $("#jindutiao").val(jindu);
 <td colspan="2" class="text-left"> {{ i.object.info }} </td>
 <td>
 <div v-if="i.object.useAble">
-<button class="btn btn-default" v-on:click="_useItem(id)"> 使用 </button>
+<button class="btn btn-default mdui-btn-raised" v-on:click="_useItem(id)"> 使用 </button>
 </div>
 <div v-else style="color:gray;"> 被动 </div>
 </td>
@@ -216,29 +217,78 @@ $("#jindutiao").val(jindu);
 </tbody>
 </table>
 </div> 
-
+<!-- 面板2 END -->
 
 <!-- 存档面板 START -->
-<div v-bind:style="logCss" class="text-left" >
+<div v-bind:style="logCss" class="text-left shadow-sm p-3 mb-3 bg-body-tertiary rounded" >
 <p v-for="t in logTxt">{{ t }}</p>
 </div>
-<div>
-<input id="data" v-bind:style="dataCss" type="text" v-model="record" >
-<button class="btn btn btn-outline-primary" v-on:click="_showData">记录传承</button>
-<button class="btn btn btn-outline-primary" v-on:click="_loadData">接受传承</button>
-<button class="btn btn btn-outline-primary" v-on:click="_clearData">重新做人</button>
+<div class="input-group mb-3">
+<input id="data" class="form-control" v-bind:style="dataCss" type="text" v-model="record" >
+<button class="input-group-text btn btn-outline-primary" v-on:click="_showData">记录传承</button>
+<button class="input-group-text btn btn-outline-primary" v-on:click="_loadData">接受传承</button>
+<button class="input-group-text btn btn-outline-primary" v-on:click="_clearData">重新做人</button>
+<button class="input-group-text btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">云端</button>
 </div>
 <!-- 存档面板 END -->
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasBottomLabel">数据内容上传下载</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body small">
+<div id="messagestart_id_ffo" class="align-middle text-center">
+<div class="mdui-p-y-3 fs-1 mdui-textfield">
+<textarea class="mdui-textfield-input" id="data_id" rows="2"  placeholder="输入数据内容"></textarea>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<div id="download_id" class="btn btn-primary">下载</div>
+<div id="upload_id" class="btn btn-primary">上传</div>
+</div>
+</div>
+<div id="messagestart_id_no" class="align-middle text-center">
+<p class="mdui-p-y-3 fs-1">
+账号未登录
+</p>
+<div class="d-grid gap-2 col-6 mx-auto">
+<a class="btn btn-primary" href="/Mchat/Login.html">去登录</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+var cookieData = $.cookie("_key");
+if (cookieData) {
+var parsedData = JSON.parse(cookieData);
+$.post("https://s.jixiejidiguan.top/Api/Mchat/login.php?L", {username: parsedData.username, password: parsedData.password}, function(data) {
+if(data.message==='登录成功！') {
+$('#messagestart_id_no').addClass('d-none');
+$(document).ready(function() {
+$('#upload_id').click(function() {
+var data_id = $('#data_id').val();
+$.post("https://s.jixiejidiguan.top/Api/Mchat/Xiuxian.kgm.php", {username: parsedData.username, password: parsedData.password, auto_save: data_id}, function(data) {
+alert(data.message);
+});
+});
+$('#download_id').click(function() {
+$.post("https://s.jixiejidiguan.top/Api/Mchat/Xiuxian.kgm.php", {username: parsedData.username, password: parsedData.password}, function(data) {
+alert("下载成功");
+$("#data_id").val(data.auto_save);
+});
+});
+});
+}
+});
+}else{
+$('#messagestart_id_ffo').addClass('d-none');
+}
+</script>
+
 
 </div>
 </div>  
 </div>
-
-</div>
-        
-        
-        
-
 </div>
 <!-- 主面板 END -->
 

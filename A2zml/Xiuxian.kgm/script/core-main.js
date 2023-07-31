@@ -3,21 +3,9 @@
 var app = new Vue({ 
 	el: '#app',
 	data: {
-		nameCss : {
-			width: '100px',
-		},
 		buttonCss : {
 			width: '60%',
 			'font-size': '200%',
-		},
-		Tr2css : {
-			background: '#e6ffd6',
-		},
-		Tr3css : {
-			background: '#ffffd6',
-		},
-		Tr4css : {
-			background: '#f2d6ff',
 		},
 		logCss : {
 			background: '#ffffff',
@@ -426,6 +414,7 @@ var app = new Vue({
 		_loadData: () => {
 			try{
 			    var record = LZString.decompressFromEncodedURIComponent( app.record );
+				
 			    if( !record ){ alert("存档输入错误，请检查内容。"); return; }
 
         		var data = JSON.parse( record );
