@@ -4,6 +4,10 @@ if (response.status === 200) {
 console.log(response.status);
 addStyleSheet("https://cdn.staticfile.org/bootstrap/5.3.1/css/bootstrap.min.css");
 addStyleSheet("https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css");
+loadScript("https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js", function() {
+$(document).ready(function() {
+});
+});
 addScript("https://cdn.staticfile.org/bootstrap/5.3.1/js/bootstrap.bundle.min.js");
 addScript("https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js");
 } else {
@@ -28,7 +32,17 @@ var script = document.createElement("script");
 script.src = url;
 document.body.appendChild(script);
 }
-
+function loadScript(url, callback) {
+var script = document.createElement("script");
+script.src = url;
+script.async = true;
+script.onload = function() {
+if (typeof callback === "function") {
+callback();
+}
+};
+document.head.appendChild(script);
+}
 
 //我要拉
 !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true});
