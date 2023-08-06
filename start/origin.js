@@ -2,6 +2,7 @@ var url = "https://cdn.staticfile.org/jquery/3.7.0/jquery.js";
 fetch(url).then(function(response) {
 if (response.status === 200) {
 console.log(response.status);
+addStyleSheet("https://cdn.staticfile.org/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css");
 addStyleSheet("https://cdn.staticfile.org/bootstrap/5.3.1/css/bootstrap.min.css");
 addStyleSheet("https://cdn.staticfile.org/mdui/1.0.2/css/mdui.min.css");
 loadScript("https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js", function() {
@@ -12,8 +13,13 @@ addScript("https://cdn.staticfile.org/bootstrap/5.3.1/js/bootstrap.bundle.min.js
 addScript("https://cdn.staticfile.org/mdui/1.0.2/js/mdui.min.js");
 } else {
 console.log(response.status);
+addStyleSheet("https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css");
 addStyleSheet("https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css");
 addStyleSheet("https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css");
+loadScript("https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js", function() {
+$(document).ready(function() {
+});
+});
 addScript("https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js");
 addScript("https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js");
 }
