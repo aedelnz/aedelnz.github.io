@@ -1,19 +1,19 @@
 <html lang="zh-CN">
 <head>
 <title>画的个人记录</title>
-<meta charset="utf-8" />
-<meta name="referrer" content="no-referrer" />
-<meta name="Content-Security-Policy" content="upgrade-insecure-requests">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="keywords" content="画的个人记录" />
-<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
-<link rel="icon" href="./favicon.ico?v=1.0000" type="image/png" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="./start/index.css?v=1.0000" />
-<script src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer"/>
+<meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="keywords" content="画的个人记录"/>
+<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。"/>
+<link rel="icon" href="./favicon.ico"/>
+<link rel="stylesheet" href="./start/index.css"/>
+<link rel="stylesheet" href="./start/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="./start/bootstrap/css/bootstrap.min.css"/>
 <script src="./start/origin.js"></script>
+<script src="./start/mdui/js/mdui.min.js"></script>
+<script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
 <style>
 .navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
 .sap{font-size:1.5rem;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1024;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
@@ -25,15 +25,14 @@
 .hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
 </style>
 </head>
-<body class="bg-dark bg-gradient text-white">
-
+<body class="bg-dark text-white">
 
 <!-- 导航 -->
 <nav class="navbar navbar-expand-lg sticky-top">
 <div class="container-fluid">
 <a class="navbar-brand fw-bold text-white" href=""><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<i class="bi bi-text-right " style="font-size: 1.5rem; color: rgb(255, 255, 255);"></i>
+<i class="mdui-icon material-icons"  style="font-size: 1.5rem; color: rgb(255, 255, 255);">format_list_bulleted</i>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
@@ -96,18 +95,15 @@
 <a href="/github" class="btn btn-sm mb-2 btn-outline-success">GitHub 加速</a>
 <a href="/Mchat" class="btn mb-2 btn-outline-danger">Mchat 通信</a>
 <a href="/MIUI" class="btn mb-2 btn-outline-secondary">MIUI</a>
-</div>
-<div class="card-header lead text-white-50"><i class="bi bi-cc-square" width="30px" style="border-radius:30%;margin-right:5px"></i>负二</div>
-<div class="card-body">
+<div class="mdui-divider"></div>
 <a href="/A2zml/Monitor" class="btn mb-2 btn-outline-danger">网站监控</a>
 <a href="/A2zml/v2" class="btn btn-lg mb-2 btn-outline-warning">魔法禁书</a>
-<a href="/A2zml/Xiuxian.kgm" class="btn mb-2 btn-outline-danger">修仙游戏</a>
 <a href="/MIUI/vivo" class="btn btn-sm mb-2 btn-outline-success">vivo & IQOO</a>
 </div>
 </div>
 <!-- 网络存储 -->
 <div class="card text-bg-dark">
-<div class="card-header lead text-white-50"><i class="bi bi-ethernet" width="30px" style="border-radius:30%;margin-right:5px"></i>网络存储</div>
+<div class="card-header lead text-white-50"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">旗下项目</div>
 <div class="card-body">
 <div class="fs-3">饕餮云盘</div>
 <small class="text-secondary">不稳定的链接</small><br>
@@ -124,7 +120,6 @@
 </div>
 <!-- 旗下项目 -->
 <div class="card text-bg-dark">
-<div class="card-header lead text-white-50"><img src="./favicon.ico" width="30px" style="border-radius:30%;margin-right:5px">旗下项目</div>
 <div class="card-body">
 <div class="fs-3">Zito 社区</div>
 <small class="text-secondary">一个简单不过的 Zito 社区</small><br>
@@ -152,7 +147,8 @@
 <div id="cartoon" class="row row-cols-2 row-cols-md-5 row-cols-xl-6"></div>
 </div>
 </div>
-<script> 
+<script>
+var $ = mdui.$;
 $.ajax({
 url:"./start/json/cartoon.json",
 method: "GET",
@@ -224,17 +220,17 @@ $("#cartoon").append(str);
 <div class="card-group mb-2">
 <div id="Links_value" class="container-fluid mb-2 text-white text-center">友链不分先后，已开启随机排序。</div>
 </div>
+<div class="container-fluid">
 <div id="Links"></div>
+</div>
 </div></div>
 <script>
-$(document).ready(function() {
-$("#Links_value").click(function() {
-$(".Links_value").remove();
-Links_value();
-console.log("友链不分先后，已开启随机排序。");
-});
+var $ = mdui.$;
+$('#Links_value').on('click', function (e) {
+$('.Links_value').hide();
 Links_value();
 });
+Links_value();
 function Links_value() {
 $.ajax({
 url:"./start/json/Links.json",
@@ -252,8 +248,8 @@ array[randomIndex] = temporaryValue;
 }
 return array;
 }
-var str='<div class="Links_value row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">';
 shuffleArray(data);
+var str=`<div class="Links_value row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">`;
 $.each(data,function(i,n){    
 str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
 <li class="mdui-list-item">
@@ -262,7 +258,7 @@ str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
 </li><li class="mdui-divider-inset mdui-m-y-0"></li>
 </a></div>`;
 });
-str+='</div>';
+str+=`</div>`;
 $("#Links").append(str);
 }
 });
@@ -306,8 +302,5 @@ $("#Links").append(str);
 </div>
 </div></div>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

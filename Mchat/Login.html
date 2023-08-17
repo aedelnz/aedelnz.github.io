@@ -1,26 +1,24 @@
 <html lang="zh-CN">
 <head>
 <title>Mchat - 登陆注册</title>
-<meta charset="utf-8" />
-<meta name="referrer" content="no-referrer" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="icon" href="../favicon.ico?v=1.0000" type="image/png" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/css/bootstrap.min.css" integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../start/index.css?v=1.0000" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="../start/origin.js?v=1.0000"></script>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="icon" href="../favicon.ico"/>
+<link rel="stylesheet" href="../start/index.css"/>
+<link rel="stylesheet" href="../start/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="../start/bootstrap/css/bootstrap.min.css"/>
+<script src="../start/origin.js"></script>
+<script src="../start/mdui/js/mdui.min.js"></script>
+<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="mdui-appbar-with-toolbar mdui-appbar-with-tab container container-fluid">
-<div class="row text-center"><div class="col-sm-5 col-sm-4 d-grid gap-2 mx-auto">
-<div class="mb-5"><div id="tanchuang"></div></div>
+<div class="row text-center"><div class="col-10 col-sm-6 col-md-4 d-grid gap-2 mx-auto">
+<div class="mb-5"></div>
+
 <!-- 登录 -->
-<div id="visually-hidden" class="card card-body mb-2 font-monospace">
-<i class="fs-1 text-center mb-2 bi bi-person-circle"></i>
+<div id="hidden" class="shadow-lg p-3 mb-5 bg-body-tertiary rounded card-body font-monospace">
 <h5 class="card-title text-center">用 Mchat 账户登录</h5>
-<form id="login-form">
 <div class="mb-3">
 <input class="form-control" type="text" id="username" name="username" placeholder="账号">
 </div>
@@ -28,19 +26,17 @@
 <input class="form-control" type="password" id="password" name="password" placeholder="密码">
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-<button type="submit" class="btn btn-outline-secondary">登录</button>
+<button type="submit" id="login-form" class="btn btn-outline-secondary">登录</button>
 </div>
-</form>
 <div class="mb-3"></div>
 <div class="mb-1 text-center text-muted">
-还没有 Mchat 账户？ <a id="href" href="#register" class="text-reset">注册</a>.
+还没有 Mchat 账户？ <a class="qh text-reset" href="#visibility">注册</a>.
 </div>
 </div>
+
 <!-- 注册 -->
-<div id="visibility" class="card card-body mb-2 font-monospace">
-<i class="fs-1 text-center mb-2 bi bi-person-circle"></i>
+<div id="visibility" class="shadow-lg p-3 mb-5 bg-body-tertiary rounded card-body font-monospace">
 <h5 class="card-title text-center">Mchat 账户注册</h5>
-<form id="register-form">
 <div class="mb-3">
 <input class="form-control" type="text" id="usernames" name="usernams" placeholder="账号">
 </div>
@@ -48,64 +44,104 @@
 <input class="form-control" type="password" id="passwords" name="passwords" placeholder="密码">
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-<button type="submit" class="btn btn-outline-secondary">注册</button>
+<button type="submit" id="register-form" class="btn btn-outline-secondary">注册</button>
 </div>
-</form>
 <div class="mb-4"></div>
 <div class="mb-1 text-center text-muted">
-已有 Mchat 账户？ <a href="Login.html" class="text-reset">登录</a>.
+已有 Mchat 账户？ <a class="qh text-reset" href="#hidden">登录</a>.
 </div>
 </div>
+
 </div></div>
-<!-- 计算 -->
+
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-header bg-danger-subtle">
+<strong class="me-auto">提示</strong>
+</div>
+<div class="toast-body bg-transparent" id="message">
+</div>
+</div>
+</div>
+
+
 <script>
-var hash = window.location.hash;
-if(hash.toString().indexOf('#register') !== -1){
-$("#visually-hidden").addClass("visually-hidden");
-} else {
-$("#visibility").addClass("visually-hidden");
-}
-$(document).ready(function() {
-$('#href').click(function(event) {
-window.location.href = $(this).attr('href');
-location.reload();
+var $ = mdui.$;
+$("#visibility").hide();
+$(".qh").on('click', function (e) {
+var target = $(this).attr("href");
+$("#hidden, #visibility").hide();
+$(target).show();
 });
-});
-$('#login-form').submit(function(event) {
-event.preventDefault();
-var username = $('#username').val();
-var password = $('#password').val();
+$('#login-form').on('click', function (e) {
+var username=$('#username').val();
+var password=$('#password').val();
 if(username==='' || password===''){
-$('#tanchuang').html('<div class="alert alert-secondary" role="alert">参数错误！</div>');
+$('.toast:not(.show)').css('display', 'revert');
+$('#message').text('账号密码不能为空！');
+setTimeout(function() {
+$('.toast:not(.show)').css('display', 'none');
+}, 1000);
+return;
 }else{
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?L', {username: username, password: password}, function(data) {
-$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
-if(data.message === '登录成功！'){
-var datas = {
-uid: data.data.uid,
-username: data.data.username,
-password: data.data.password
-};
-var s_datas = JSON.stringify(datas);
-$.cookie('_key', s_datas, { expires: 7, path: '/' });
-window.location.href = '/Mchat';
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/login.php?L',
+method: 'POST',
+dataType: "json",  
+data: {
+username: username,
+password: password
+},
+success: function (data) {
+$('.toast:not(.show)').css('display', 'revert');
+console.log(data.message);
+$('#message').text(data.message);
+setTimeout(function() {
+$('.toast:not(.show)').css('display', 'none');
+}, 1000);
+if(data.message==="登录成功！"){
+document.cookie="username="+data.data.username;
+document.cookie="password="+data.data.password;
+window.location="/Mchat";
+}
+return;
 }
 });
 }
 });
-$('#register-form').submit(function(event) {
-event.preventDefault();
-var usernames = $('#usernames').val();
-var passwords = $('#passwords').val();
-$.post('https://s.jixiejidiguan.top/Api/Mchat/login.php?R', {username: usernames, password: passwords}, function(data) {
-$('#tanchuang').html('<div class="alert alert-secondary" role="alert">'+data.message+'</div>');
-if(data.message === '注册成功！'){
-window.location.href = 'Login.html';
+$('#register-form').on('click', function (e) {
+var usernames=$('#usernames').val();
+var passwords=$('#passwords').val();
+if(usernames==='' || passwords===''){
+$('.toast:not(.show)').css('display', 'revert');
+$('#message').text('账号密码不能为空！');
+setTimeout(function() {
+$('.toast:not(.show)').css('display', 'none');
+}, 1000);
+return;
+}else{
+$.ajax({
+url: 'https://s.jixiejidiguan.top/Api/Mchat/login.php?R',
+method: 'POST',
+dataType: "json",  
+data: {
+username: usernames,
+password: passwords
+},
+success: function (data) {
+$('.toast:not(.show)').css('display', 'revert');
+console.log(data.message);
+$('#message').text(data.message);
+setTimeout(function() {
+$('.toast:not(.show)').css('display', 'none');
+}, 1000);
+return;
 }
 });
+}
 });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js" integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js" integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
+

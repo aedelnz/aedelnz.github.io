@@ -1,64 +1,19 @@
 <html>
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="theme-color" content="#0665d0"/>
 <title>魔法禁书｜Magic Forbidden Book</title>
-<link rel="shortcut icon" href="https://qzonestyle.gtimg.cn/qzone/v8/img/Qzone.svg" type="image/x-icon"/>
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet"/>
-<link href="../../start/index.css" rel="stylesheet"/>
-<link href="./Atros.css" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="icon" href="../../favicon.ico"/>
+<link rel="stylesheet" href="../../start/index.css"/>
+<link rel="stylesheet" href="../../start/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="../../start/bootstrap/css/bootstrap.min.css"/>
 <script src="../../start/origin.js"></script>
+<script src="../../start/mdui/js/mdui.min.js"></script>
+<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<body class="mdui-appbar-with-toolbar mdui-drawer-body-left">
-<!--###################### 登陆 ######################-->
-<div id="visible">
-<div id="page-container">
-<main id="main-container">
-<div class="v2board-background">
-</div>
-<div class="no-gutters v2board-auth-box">
-<div style="max-width: 450px; width: 100%; margin: auto;">
-<div class="mx-2 mx-sm-0">
-<div class="block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image" style="box-shadow: rgba(0, 0, 0, 0.05) 0px 0.5rem 2rem;">
-<div class="row no-gutters">
-<div class="col-md-12 order-md-1 bg-white">
-<div class="block-content block-content-full px-lg-4 py-md-4 py-lg-4">
-<div class="mb-3 text-center">
-<a class="font-size-h1" href="javascript:void(0);">
-<span class="text-dark">页面加密内容</span>
-</a>
-<p class="font-size-sm text-muted mb-3">善于发现新的内容(<b class="text-danger">0ub0</b>)</p>
-</div>
-<form id="loginForm" action="#" method="get">
-<div class="form-group">
-<input type="password" id="password" class="form-control form-control-alt" placeholder="密码">
-</div>
-<div class="form-group mb-0">
-<button type="submit" id="loginBtn" class="btn btn-block btn-primary font-w400">
-<span>登入</span>
-</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<div class="text-left bg-gray-lighter p-3 px-4">
-<a class="font-size-sm text-muted" href="javascript:alert('括号里的内容可能会有些用处');" title="不一样的颜色">密码提示</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-</div>
-</div>
-<!--###################### 成功 ######################-->
-<div id="invisible" class="invisible">
-<div id="page-container" class="main-content-boxed">
-<div class="mdui-drawer" id="left-drawer">
+<body class="mdui-drawer-body-left text-black">
+<div class="mdui-drawer bg-light-subtle" id="left-drawer">
 <div class="mdui-hidden-sm-up mb-2">
 <div class="mdui-toolbar">
 <div class="mdui-typo-title">魔法禁书</div>
@@ -66,95 +21,51 @@
 <button class="mdui-btn" mdui-drawer-close><i class="mdui-icon material-icons">close</i></button>
 </div>
 </div>
-<nav>
-<div class="content-side content-side-full">
-<ul class="nav-main">
-<li class="nav-main-item">
-<a class="nav-main-link" href="/"><span class="nav-main-link-name">返回首页</span></a>
+<ul class="mdui-list container-fluid">
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="/">返回首页</a>
 </li>
-<li class="nav-main-item">
-<a class="nav-main-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="nav-main-link-name">执行工具</span></a>
-<ul class="dropdown-menu">
-<li class="nav-main-item"><a class="nav-main-link false" href="#执行工具"><span class="nav-main-link-name">执行工具</span></a></li>
-<li><hr class="dropdown-divider"></li>
-<li><a class="dropdown-item" href="#爱发电">爱发电</a></li>
-<li><a class="dropdown-item" href="#ACL4SSR">ACL4SSR</a></li>
-<li><a class="dropdown-item" href="#anti-AD">anti-AD</a></li>
-<li><a class="dropdown-item" href="#Proxy代理">Proxy代理</a></li>
-<li><a class="dropdown-item" href="#Telegram">Telegram</a></li>
-<li><a class="dropdown-item" href="#临时邮箱">临时邮箱</a></li>
-</ul>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#执行工具">执行工具</a>
 </li>
-<li class="nav-main-item">
-<a class="nav-main-link false" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><span class="nav-main-link-name">定制软件</span></a>
-<ul class="dropdown-menu">
-<li class="nav-main-item"><a class="nav-main-link false" href="#定制软件"><span class="nav-main-link-name">定制软件</span></a></li>
-<li><hr class="dropdown-divider"></li>
-<li><a class="dropdown-item" href="#客户端">客户端</a></li>
-<li><a class="dropdown-item" href="#Android">Android</a></li>
-<li><a class="dropdown-item" href="#Windows">Windows</a></li>
-<li><a class="dropdown-item" href="#iPhone">iPhone</a></li>
-<li><a class="dropdown-item" href="#Mac">Mac</a></li>
-<li><a class="dropdown-item" href="#Linux">Linux</a></li>
-<li><a class="dropdown-item" href="#其他">其他</a></li>
-</ul>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#定制软件">定制软件</a>
 </li>
-<li class="nav-main-item">
-<a class="nav-main-link false" href="#机场订阅">
-<span class="nav-main-link-name">机场订阅</span>
-</a>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#机场订阅">机场订阅</a>
 </li>
-<li class="nav-main-item">
-<a class="nav-main-link false" href="#节点分享">
-<span class="nav-main-link-name">节点分享</span>
-</a>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#节点分享">节点分享</li>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#评论留言">评论留言</a>
 </li>
-<li class="nav-main-item">
-<a class="nav-main-link false" href="#评论留言">
-<span class="nav-main-link-name">评论留言</span>
-</a>
-</li>
-<li class="nav-main-item">
-<a class="nav-main-link false" href="#常见问题">
-<span class="nav-main-link-name">常见问题</span>
-</a>
+<li class="mdui-list-item mdui-ripple">
+<a class="text-decoration-none" href="#常见问题">常见问题</a>
 </li>
 </ul>
 </div>
-<div class="v2board-copyright">V2AirPort v1.0.1</div>
-</nav>
-</div>
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar text-white btn-primary">
+<div class="mdui-appbar mdui-appbar-scroll-hide">
+<div class="mdui-toolbar">
 <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">apps</i></a>
 <div class="mdui-typo-title">仪表盘</div>
 <div class="mdui-toolbar-spacer"></div>
-<button type="button" class="btn btn-primary mr-1 ant-dropdown-trigger" id="clearCookie">退出</button>
-</div>
-</div>
-<!--###################### 主体 ######################-->
-<main id="main-container">
-<div class="content content-full">
-<!--###################### 公告 ######################-->
-<div class="row mb-4 mb-md-0">
-<div class="col-12 mb-sm-4">
-<a class="block block-rounded bg-image mb-0 v2board-bg-pixels" href="javascript:void(0)" style="width: 100%;height: 100%;background-image: url(./bGtrs.jpeg); background-size: cover;">
-<div class="block-content bg-black-50">
-<div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
-<p><span class="badge badge-danger p-2 text-uppercase">公告</span></p>
-</div>
-<p class="font-size-lg text-white mb-1">Hello World!</p>
-</div>
-</a>
 </div>
 </div>
 
+<!--###################### 主体 ######################-->
+<div class="mdui-p-t-2 container">
+
+<div class="card shadow-lg mb-5 bg-body-tertiary rounded" style="height: 25cqb;">
+<div class="card-img" style="width: 100%;height: 100%;background-image: url(./bGtrs.jpeg); background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
+</div>
+
 <!--###################### 执行工具 ######################-->
-<div id="执行工具" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">执行工具</h3></div>
-<div class="block-content p-1 text-start">
+<div id="执行工具" class="row mb-3">
+<div class="font-monospace">
+<div class="mb-1"><h3 class="block-title">执行工具</h3></div>
+<div class="block-content text-start">
 <script type="text/javascript" src="./Base64.js?v=1.0.0.1000000"></script>
-<div class="mdui-row-xs-1 mdui-row-sm-2 mdui-typo mdui-grid-list">
+<div class="mdui-row-xs-1 mdui-row-sm-2 shadow-lg p-2 mb-4 bg-body-tertiary rounded mdui-grid-list">
 <form id="form1" name="form1" method="post" action>
 <div class="mdui-col">
 <div class="mb-3">
@@ -173,70 +84,51 @@
 </div>
 </form>
 </div>
-<div class="p-2 mdui-text-color-blue-grey-700">
-网速测试：<a class="badge text-bg-secondary" href=https://speed.cloudflare.com/ >Speed Test</a>
-<a class="badge text-bg-secondary" href=https://fast.com/ >Fast</a>
-<a class="badge text-bg-secondary" href=https://www.speedtest.net/zh-Hans >Speedtest</a><br>
-IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.moe</a>
-<a class="badge text-bg-secondary" href=https://www.ipaddress.com/ >IPAddress.com</a>
-<a class="badge text-bg-secondary" href=https://www.ipaddress.my/ >IPAddress.my</a>
+<div class="p-2 mdui-text-color-blue-grey-700 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+网速测试：<a class="badge text-bg-secondary text-decoration-none" href=https://speed.cloudflare.com/ >Speed Test</a>
+<a class="badge text-bg-secondary text-decoration-none" href=https://fast.com/ >Fast</a>
+<a class="badge text-bg-secondary text-decoration-none" href=https://www.speedtest.net/zh-Hans >Speedtest</a><br>
+IP查询：<a class="badge text-bg-secondary text-decoration-none" href=https://ip.skk.moe/ >ip.skk.moe</a>
+<a class="badge text-bg-secondary text-decoration-none" href=https://www.ipaddress.com/ >IPAddress.com</a>
+<a class="badge text-bg-secondary text-decoration-none" href=https://www.ipaddress.my/ >IPAddress.my</a>
 </div>
-<div class="row">
-<div id="爱发电" class="col-md-6 mb-2">
-<a class="card block block-link-pop block-rounded  text-center" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');;">
-<div class="block-header">
-<h3 class="block-title">在这里求一杯奶茶</h3>
-</div>
-<div class="block-content bg-body-light"  style="background-image: url(https://pic1.afdiancdn.com/user/cc80b252e55311ebaa5352540025c377/common/b79a87e4228b897e6ebde3e56fcf58c6_w3556_h2000_s6221.jpg?imageView2/1/w/1500/h/750); background-size: cover;">
-<div class="py-2">
+<div class="col-md-12 mb-2 row">
+<div class="col-md-6 mb-2">
+<div class="text-center py-2">
 <p class="h1 mb-2">爱发电</p>
-<p class="h6 text-muted">．</p>
+<p class="h6 text-muted">在这里求一杯奶茶</p>
+</div>
+<div class="block-content py-1">
+<div class="shadow-lg bg-body-tertiary rounded bg-body-light" style="height: 10cqb;background-image: url(https://pic1.afdiancdn.com/user/cc80b252e55311ebaa5352540025c377/common/b79a87e4228b897e6ebde3e56fcf58c6_w3556_h2000_s6221.jpg?imageView2/1/w/1500/h/750);background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
+<p class="mdui-p-t-1 text-center">
+<a class="text-decoration-underline" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');"><span class="btn btn-outline-secondary"><i class="mdui-icon material-icons">monetization_on</i> 为TA发电</span></a>
+</p>
 </div>
 </div>
-<div class="block-content">
-<div class="py-1">
-<ul class=".v2board-plan-features">
-<div class="alert alert-success" role="alert">
-<b>Na Sheng 正在创作 中……</b>
-</div>
-</ul>
-</div>
-</div>
-<div class="block-content block-content-full bg-body-light">
-<span class="btn mdui-color-deep-purple px-4">
-<i class="mdui-icon material-icons">monetization_on</i> 为TA发电</span>
-</div>
-</a>
-</div>
-<div id="ACL4SSR" class="col-md-6 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+
+<div class="col-md-6 mb-2">
+<div class="text-center py-2">
 <p class="h1 mb-2">ACL4SSR</p>
 <p class="h6 text-muted">订阅转换</p>
 </div>
-</div>
-<div class="block-content">
-<div class="py-1">
+<div class="block-content py-1">
 <ul class=".v2board-plan-features">
 <li><a href="https://acl4ssr-sub.github.io/">ACL4SSR 在线订阅转换</a></li>
 <li><a href="https://sub.dler.io/">Subscription Converter</a></li>
 <li><a href="https://sub.xeton.dev/">Subscription Converter</a></li>
 <li><a href="https://sub.tsutsu.one/">つつの订阅转换 · 鲸歌</a></li>
-<li><a href="https://bianyuan.xyz/">边缘@订阅转换API</a></li></ul>
+<li><a href="https://bianyuan.xyz/">边缘@订阅转换API</a></li>
+</ul>
 </div>
 </div>
 </div>
-</div>
-<div id="anti-AD" class="col-md-12 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+<div class="col-md-12 mb-2">
+<div class="card shadow-lg bg-body-tertiary rounded p-2">
+<div class="text-center mb-3 py-2">
 <p class="h1 mb-2">anti-AD</p>
 <p class="h6 text-muted">致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。</p>
 </div>
-</div>
-<div class="block-content row">
+<div class="row">
 <div class="col-sm-6 mb-1">
 <h1>anti-AD Filters</h1>
 <p>anti-AD致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。现已支持AdGuardHome，dnsmasq， Surge，Pi-Hole等优秀的网络组件。</p>
@@ -301,30 +193,21 @@ IP查询：<a class="badge text-bg-secondary" href=https://ip.skk.moe/ >ip.skk.m
 </div>
 </div>
 </div>
-
-<div id="Proxy代理" class="col-md-12 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+<div class="col-md-12  mb-2">
+<div class="p-2">
+<div class="text-center mb-3 py-2">
 <p class="h1 mb-2">Proxy代理</p>
 <p class="h6 text-muted">Telegram 客户端 Proxy 代理设置</p>
 </div>
-</div>
-<div class="block-content row">
 <article class="text-start text-break"><h4>1. Telegram Desktop 客户端</h4><p>Telegram Desktop 默认并没有勾选&quot;使用系统代理&quot;, 所以很多人觉得需要开全局才能用,  其实不然, 可以手动勾选&quot;使用系统代理&quot;或使用自定义代理.</p><p><strong>步骤:</strong></p><p>A: 未登录账号: 界面左下角按钮</p><p>B: 已登录账号: Telegram Desktop 客户端→左上角三短线→设置→高级→网络和代理→代理类型→勾选&quot;使用系统代理&quot;或&quot;使用自定义代理&quot;</p><p>使用自定义代理添加方法: 添加代理(Add proxy)→SOCKS5/HTTP→服务器: 127.0.0.1, 端口: 端口需查看你的代理软件(SS/SSR/Clash for Windows/V2RayN...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    Clash.NET: 主界面→右侧→混合端口(Mixe-Port)</em></p><p><em>    SS/SSD→右键状态栏SS/SSD图标→服务器→编辑服务器→本地端口(默认是: 1080)</em></p><p><em>    SSR→右键状态栏SSR图标→选项设置→本地端口(默认是: 1080)</em></p><p><em>    V2RayN: 主界面→左下角→SOCKS5(或者参数设置→本地监听端口)(默认是: 10808)</em></p><p><em>    Trojan-Qt5: 打开Trojan-Qt5主界面→双击一个节点→本地端口(默认是1080)</em></p><p><em>    Netch: 打开Netch主界面→设置→本地端口SOCKS5(默认是2801)</em></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram Desktop 连不上网络.</strong></p><blockquote>备注: Windows, macOS, Linux 系统的电脑都可以使用  Telegram Desktop 版本客户端.(macOS 上 Mac App Store 中的&quot;Telegram Desktop&quot;已更名为&quot;Telegram Lite&quot; )</blockquote><p><br></p><h4>2. Telegram macOS 客户端</h4><p>Telegram macOS 客户端不遵从系统代理, 所以需要设置自定义代理, 也可以用Surge/ClashX Pro 开启&quot;增强模式&quot;</p><p>(Surge/ClashX Pro 的&quot;增强模式&quot;就是针对这类不遵从系统代理的软件做的功能)</p><p><strong>自定义代理设置步骤:</strong> </p><p>A: 未登录账号: 界面右上角按钮→Use Proxy</p><p>B: 已登录账号: Telegram macOS 客户端→设置→数据→使用代理</p><p>添加代理→SOCKS5/HTTP→服务器(Server): 127.0.0.1, 端口(Port): 端口需查看你的代理软件(Surge/ClashX/ShadowsocksX...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Surge→点击状态栏Surge图标→显示主界面→SOCKS5(默认是: 6153)</em></p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    ClashX→点击状态栏</em>ClashX图标→帮助→端口<em>→Socks Port(默认是: 7891)</em></p><p><em>    ShadowsocksX: 点击状态栏ShadowsocksX</em>图标<em>→高级设置→本地Socks5监听端口(默认是: 1086)</em></p><p> <em>   V2RayX: 点击状态栏V2RayX图标→Configure→Local Socks5 Port(默认是: 1081)</em></p><p> <em>   V2rayU: 点击状态栏V2rayU图标→偏好设置→Advance→本机 Sock 监听端口(默认是: 1080)</em></p><p><strong>设置完成保存后, 记得重启 Telegram macOS 客户端&#33; 记得重启&#33; 记得重启&#33;</strong></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram macOS 连不上网络.</strong></p><p><br></p><h4>3. Telegram iOS/Android 客户端</h4><p>iOS/Android 设备上开启代理软件即可, 不需要单独在 Telegram 中设置代理.</p><p>Telegram iOS 端是IP直连访问服务器的, 所以需要代理软件做单独的规则处理才行; </p><p>iOS上有些代理软件并没有针对性的对此做处理, 所以即使开启了这类代理软件, Telegram iOS 也会提示无网络链接, 比如&quot;Wingy&quot;, <a href="#定制软件">点击查看代理软件</a>.</p><p><br></p><h4>4. 其他</h4><p>也可以自建SOCKS5/HTTP/MTProto代理, 只用于Telegram 上使用, 网络也有很多公开的SOCKS5/HTTP/MTProto代理, 个人不建议使用这种方式, 依然建议用代理软件, <a href="#定制软件">点击查看代理软件</a>.</p><p>更不要使用某些内置代理的 Telegram 第三方客户端软件, 存在安全隐患.</p></article>
 </div>
 </div>
-</div>
-
-<div id="Telegram" class="col-md-12 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+<div class="col-md-12 mb-2 shadow bg-body-tertiary rounded">
+<div class="p-2">
+<div class="text-center mb-3 py-2">
 <p class="h1 mb-2">Telegram</p>
 <p class="h6 text-muted">Telegram 客户端</p>
 </div>
-</div>
-<div class="block-content row">
 <article class="text-start text-break">
 <p>
 <h5>直接点击链接汉化 Telegram 电报: <a href="https://t.me/setlanguage/zhcncc">https://t.me/setlanguage/zhcncc</a></h5>
@@ -353,17 +236,12 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </article>
 </div>
 </div>
-</div>
-
-<div id="临时邮箱" class="col-md-12 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+<div class="col-md-12 mb-2">
+<div class="p-2">
+<div class="text-center mb-3 py-2">
 <p class="h1 mb-2">临时邮箱</p>
 <p class="h6 text-muted">一般用处，懂的都懂</p>
 </div>
-</div>
-<div class="block-content row">
 <article class="text-start">
 <span class="mb-1 badge rounded-pill text-bg-secondary">http://24mail.chacuo.net</span>
 <span class="mb-1 badge rounded-pill text-bg-secondary">https://mail.tm/zh</span>
@@ -384,70 +262,64 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </article>
 </div>
 </div>
-</div>
 
 </div>
 </div>
-</div></div></div>
+</div>
+
 <!--###################### 定制工具 ######################-->
-<div id="定制软件" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">定制软件</h3></div>
-<div class="block-content p-1 text-start"><div class="row">
-
-<div id="客户端" class="col-md-12 mb-2">
-<div class="card block block-link-pop block-rounded">
-<div class="block-content bg-body-light text-center">
-<div class="py-2">
+<div id="定制软件" class="shadow-lg mb-5 bg-body-tertiary rounded text-bg-light mb-3">
+<div class="p-2">
+<div class="mb-3 py-2">
+<p class="h3 mb-2 text-muted">定制软件</p>
+</div>
+<div class="row">
+<div class="text-center mb-3 py-2">
 <p class="h1 mb-2">客户端</p>
 <p class="h6 text-muted">SS/SSR/V2Ray/Trojan/Clash 客户端软件下载</p>
 </div>
-</div>
-<div class="block-content row">
 <div class="col-sm-6 mb-1">
 <h3>介绍</h3>
 <ul>
-  <li>SS = <a href="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks</a></li>
-  <li>SSR = <a href="https://zh.wikipedia.org/wiki/ShadowsocksR">ShadowsocksR</a></li>
-  <li>SS ≠ SOCKS5</li>
-  <li>SS ≠ VPN</li>
-  <li><a href="https://www.v2ray.com">V2Ray</a></li>
-  <li><a href="https://www.v2fly.org/config/protocols/vless.html">VLESS</a></li>
-  <li><a href="https://github.com/trojan-gfw/trojan">Trojan</a></li>
-  <li><a href="https://github.com/Dreamacro/clash">Clash</a></li>
-  <li><a href="https://github.com/JadaGates/ShadowsocksBio">Shadowsocks的前世今生</a></li>
+<li>SS = <a href="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks</a></li>
+<li>SSR = <a href="https://zh.wikipedia.org/wiki/ShadowsocksR">ShadowsocksR</a></li>
+<li>SS ≠ SOCKS5</li>
+<li>SS ≠ VPN</li>
+<li><a href="https://www.v2ray.com">V2Ray</a></li>
+<li><a href="https://www.v2fly.org/config/protocols/vless.html">VLESS</a></li>
+<li><a href="https://github.com/trojan-gfw/trojan">Trojan</a></li>
+<li><a href="https://github.com/Dreamacro/clash">Clash</a></li>
+<li><a href="https://github.com/JadaGates/ShadowsocksBio">Shadowsocks的前世今生</a></li>
 </ul>
 </div>
 <div class="col-sm-6 mb-1">
 <h3>Client</h3>
 <h5>推荐客户端</h5>
 <ul>
-  <li><code>iOS</code>: Surge 5, Quantumult X, Shadowrocket, Loon, Stash</li>
-  <li><code>Android/安卓</code>: Clash for Android, Surfboard</li>
-  <li><code>macOS</code>: Surge Mac, ClashX Pro, Clash for Windows, Stash for macOS</li>
-  <li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
-  <li><code>Linux</code>: Clash for Windows
+<li><code>iOS</code>: Surge 5, Quantumult X, Shadowrocket, Loon, Stash</li>
+<li><code>Android/安卓</code>: Clash for Android, Surfboard</li>
+<li><code>macOS</code>: Surge Mac, ClashX Pro, Clash for Windows, Stash for macOS</li>
+<li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
+<li><code>Linux</code>: Clash for Windows
 <br><em>(下方有下载地址)</em></li>
 </ul>
 <h5>Clash全平台客户端</h5>
 <ul>
-  <li><code>iOS</code>: Stash, Choc, Maomi</li>
-  <li><code>Android/安卓</code>: Clash for Android</li>
-  <li><code>macOS</code>: ClashX Pro, Clash for Windows, Stash for macOS</li>
-  <li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
-  <li><code>Linux</code>: Clash for Windows, Clash
+<li><code>iOS</code>: Stash, Choc, Maomi</li>
+<li><code>Android/安卓</code>: Clash for Android</li>
+<li><code>macOS</code>: ClashX Pro, Clash for Windows, Stash for macOS</li>
+<li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
+<li><code>Linux</code>: Clash for Windows, Clash
 <br><em>(下方有下载地址)</em></li>
 </ul>
 </div>
 </div>
+<div class="row">
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">Android</p>
 </div>
-</div>
-
-<div id="Android" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">Android</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <ul>
   <li><a href="https://github.com/Kr328/ClashForAndroid/releases">Clash for Android</a> Clash的Android图形客户端 (支持SS/SSR/Snell/Vmess/Trojan)</li>
   <li><a href="https://play.google.com/store/apps/details?id=com.github.kr328.clash">Clash for Android Google Play</a> Clash的Android图形客户端 (支持SS/SSR/Snell/Vmess/Trojan)</li>
@@ -477,13 +349,11 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </ul>
 </div>
 </div>
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">Windows</p>
 </div>
-<div id="Windows" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">Windows</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <ul>
   <li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash for Windows</a> Clash的Windows/macOS图形客户端,简称:CFW (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
   <li><a href="https://github.com/Clash-Mini/Clash.Mini/releases">Clash.Mini</a> 小巧精致的Windows版Clash客户端~约等于直接运行内核</li>
@@ -510,13 +380,11 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </ul>
 </div>
 </div>
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">iPhone</p>
 </div>
-<div id="iPhone" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">iPhone</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <p class="px-3">隔壁白嫖来的共享账号：<a href="https://apple.laogoubi.net/s/c7d1e73290a646f2513f6f0b75843b0b">https://apple.laogoubi.net/s/c7d1e73290a646f2513f6f0b75843b0b</a>  仅限登录app store，用完退出。</p>
 <ul>
 <h5>iOS 客户端 (全区可下载,包括中区)</h5>
@@ -545,20 +413,18 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
   <li><a href="https://apps.apple.com/us/app/kitsunebi-proxy-utility/id1446584073">Kitsunebi</a> $4.99</li>
   <li><a href="https://apps.apple.com/us/app/id1162704202">Potatso 2</a> $2.99</li>
   <li><a href="https://apps.apple.com/us/app/id1239860606">Potatso Lite</a> Free</li>
-  <li><a href="https://apps.apple.com/us/app/lancex/id1536754048">‎LanceX</a> $2.99</li>
+  <li><a href="https://apps.apple.com/us/app/lancex/id1536754048">LanceX</a> $2.99</li>
   <li><a href="https://apps.apple.com/us/app/trojanx/id1523269113">TrojanX</a> $1.99</li>
   <li><a href="https://apps.apple.com/us/app/id1545555197">OneClick</a> Free</li>
   <li><a href="https://apps.apple.com/app/spectre-vpn/id1508712998">Spectre VPN</a> Free</li>
 </ul>
 </div>
 </div>
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">Mac</p>
 </div>
-<div id="Mac" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">Mac</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <ul>
   <li><a href="https://nssurge.com/buy_now">Surge Mac 5</a> $49.99/$69.99/$99.99 (支持Snell/SS/Vmess/VmessAEAD/Trojan/SSH/WireGuard)</li>
   <li><a href="https://apps.apple.com/cn/app/outline-secure-internet-access/id1356178125">Outline</a></li>
@@ -585,13 +451,11 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </ul>
 </div>
 </div>
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">Linux</p>
 </div>
-<div id="Linux" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">Linux</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <ul>
   <li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash for Windows</a> Clash的Windows/macOS图形客户端,简称:CFW (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
   <li><a href="https://github.com/Dreamacro/clash/releases">Clash 内核</a> 一个Go语言开发的多平台代理客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
@@ -602,13 +466,11 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </ul>
 </div>
 </div>
+<div class="col-md-6 col-xl-4 mb-1">
+<div class="mdui-hoverable text-break">
+<div class="bg-body-secondary text-center mb-3 py-2">
+<p class="h3 text-muted mb-2">其他</p>
 </div>
-<div id="其他" class="col-md-6 col-xl-4 mb-2">
-<div class="card mdui-hoverable">
-<div class="text-center py-3 bg-body-light">
-<p class="h1 mb-2 mdui-text-color-amber">其他</p>
-</div>
-<div class="py-3 bg-primary-subtle text-emphasis-primary">
 <ul>
 <h5>路由器</h5>
   <li><a href="https://github.com/vernesong/OpenClash/wiki">OpenClash</a></li>
@@ -630,30 +492,27 @@ macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，
 </div>
 </div>
 </div>
-</div></div>
-</div></div></div>
-<!--###################### 机场订阅 ######################-->
-<div id="机场订阅" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">机场订阅</h3></div>
-<div class="block-content p-2 text-start">
-<ul class=".v2board-plan-features">
-<li><a class="text-decoration-none" href="./Node/node">./Node/node</a> 更新日期：2022.08.01 以停更</li>
-<div class="alert alert-success" role="alert">
-<b>第三方机场</b>
 </div>
+</div>
+
+<!--###################### 机场订阅 ######################-->
+<div id="机场订阅" class="mb-3">
+<div class="p-2">
+<div class="mb-3 py-2">
+<p class="h3 mb-2 text-muted">机场订阅</p>
+</div>
+<p class="text-break">
+<li><a class="text-decoration-none" href="./Node/node">./Node/node</a> 更新日期：2022.08.01 以停更</li>
+<div class="text-nowrap bg-body-secondary border"><b>第三方机场</b></div>
 <li><a class="text-decoration-none" href="https://pmsub.me/">Paimon Node</a></li>
 <li><a class="text-decoration-none" href="https://lncn.org/">免费节点 - Lncn.org</a></li>
 <li><a class="text-decoration-none" href="https://free-ss.site/">免费上网账号</a></li>
 <li><a class="text-decoration-none" href="https://getafreenode.com/">GetAFreeNode</a></li>
 <li>以上三个为免费</li>
-<div class="alert alert-success" role="alert">
-<b>广告列表(随机排序)</b>
-</div>
-</ul>
+<div class="text-nowrap bg-body-secondary border"><b>广告列表(随机排序)</b></div>
 <table class="table mdui-table mdui-table-hoverable">
 <tbody class="table-group-divider" id="adList"></tbody>
 </table>
-</div>
 <script>
 var adList = [
 {
@@ -871,45 +730,48 @@ return function (obj1, obj2) {
 }
 window.onload = loadMy(adList, "adList");
 </script>
-</div></div></div>
-<!--###################### 节点分享 ######################-->
-<div id="节点分享" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">节点分享</h3></div>
-<div class="block-content p-2 text-start">
-<u>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</u><br>
-<div class="alert alert-warning mb-1">
-<b>套CF加速</b><br>
-优选ip工具：<a class="badge text-bg-primary" href="https://github.com/XIU2/CloudflareSpeedTest">点击进入</a><br>
-cf的ip段：<a class="badge text-bg-secondary" href="https://github.com/ip-scanner/cloudflare">点击进入</a><br>
+</p>
 </div>
+</div>
+
+<!--###################### 节点分享 ######################-->
+<div id="节点分享" class="text-bg-light mb-3">
+<div class="p-2">
+<div class="mb-3 py-2">
+<p class="h3 mb-2 text-muted">节点分享</p>
+</div>
+<p class="font-monospace">此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
+<p class="text-muted fw-light">
+<b>套CF加速</b>
+优选ip工具：<a href="https://github.com/XIU2/CloudflareSpeedTest">点击进入</a>
+cf的ip段：<a href="https://github.com/ip-scanner/cloudflare">点击进入</a>
+</p>
 <div id="v2"></div>
 <script>
-$(function(){    
+var $ = mdui.$; 
 $.ajax({    
-//请求方式    
 type:"GET",    
-//文件位置    
-url:"../../start/json/v2.json",  
-//返回数据格式为json,也可以是其他格式如    
-dataType: "json",    
-//请求成功后要执行的函数，拼接html    
+url:"../../start/json/v2.json",     
+dataType: "json",     
 success: function(data){    
 var str='<div class="row row-cols-1 row-cols-md-2 g-4">';    
 $.each(data,function(i,n){    
-str+='<div class="col"><div class="card"><div class="card-body"><h5 class="card-title">'+n.title+'</h5><p class="card-text">'+n.content+'</p></div></div></div>';
+str+='<div class="col text-break"><div class="text-nowrap fw-bolder">'+n.title+'</div><p class="lh-base font-monospace text-black-50">'+n.content+'</p></div>';
 });    
 str+='</div>';
 $("#v2").append(str);
 }    
 });    
-});   
 </script>
 </div>
-</div></div></div>
+</div>
 
-<div id="评论留言" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">评论留言</h3></div>
-<div class="block-content p-2 text-start">
+<!--###################### 评论留言 ######################-->
+<div id="评论留言" class="mb-3">
+<div class="p-2">
+<div class="mb-3 py-2">
+<p class="h3 mb-2 text-muted">评论留言</p>
+</div>
 <!-- 验证 -->
 <script src="https://ssl.captcha.qq.com/TCaptcha.js?v=1.0.0.1000000"></script>
 <button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
@@ -919,8 +781,7 @@ $("#v2").append(str);
 <script src="//unpkg.com/valine@latest/dist/Valine.min.js?v=1.0.0"></script>
 <!-- or Default value -->
 <script src="//unpkg.com/valine?v=1.0.0"></script>
-<div id="vcomments"></div>
-</div>
+<div id="vcomments" class="font-monospace"></div>
 <script>
 new Valine({
 el: '#vcomments',
@@ -1010,91 +871,42 @@ onIsOff = false;//触发过程中暂时关闭定时器
 }
 },1000);
 </script>
-</div></div></div>
+</div>
+</div>
+
 <!--###################### 常见问题 ######################-->
-<div id="常见问题" class="row mb-3 mb-md-0"><div class="col-xl-12"><div class="block block-rounded js-appear-enabled">
-<div class="block-header block-header-default"><h3 class="block-title">常见问题</h3></div>
-<div class="block-content p-0"><div class="justify-content-md-between align-items-md-center"><div class="mb-3">
-<div class="v2board-shortcuts-item">
-<div>耗电/流量</div>
-<div class="description">为什么使用了代理应用后在电量统计中显示耗电很多？<br>
+<div id="常见问题" class="card shadow-lg bg-body-tertiary rounded text-bg-light mb-3">
+<div class="card-header h3 mb-2 text-muted">常见问题</div>
+<div class="card-body">
+<div class="card-title fw-bold">耗电/流量</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">为什么使用了代理应用后在电量统计中显示耗电很多？<br>
 这是移动操作系统的一个特殊机制，Surge iOS、Quantumult X、Shadowrocket、Choc 等等所有的 SS/SSR/V2Ray/Trojan 客户端开启后会接管全局的（几乎）所有通信，所以所有的网络方面电量消耗都会被算在代理应用头上，实际使用中不会感到代理应用对电量有明显影响，「设置-电池」中看到它的电池用量，绝大部分都是网络所消耗的电量，并不是代理应用消耗的电量，代理应用就是背锅侠。<br>
 还有，夜间或锁屏后系统也会请求网络，比如后台刷新、系统服务等等，只要有请求网络就会经过代理应用，所以在「设置-电池」处看到代理应用在后台也会运行。<br>
 网络流量也是如此的。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</div>
-<div class="description">网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。<br>MIUI重启解决99%的问题。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>为什么连不上？</div>
-<div class="description">免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>速度太慢怎么办？</div>
-<div class="description">免费资源无法保证速度，同上。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>不会用怎么办？</div>
-<div class="description">别人都会，就你不会。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>看不懂怎么办？</div>
-<div class="description">那就别看。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>找不到怎么办？</div>
-<div class="description">去看一下眼科。</div>
-</div>
-<div class="v2board-shortcuts-item">
-<div>太麻烦了怎么办？</div>
-<div class="description">那就别搞。</div>
-</div>
-</div></div></div>
-</div></div></div>
-
-</div>
-</main>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。<br>MIUI重启解决99%的问题。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">为什么连不上？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">速度太慢怎么办？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">免费资源无法保证速度，同上。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">不会用怎么办？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">别人都会，就你不会。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">看不懂怎么办？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">那就别看。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">找不到怎么办？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">去看一下眼科。</div>
+<div class="mdui-divider"></div>
+<div class="card-title fw-bold">太麻烦了怎么办？</div>
+<div class="card-text font-monospace text-body-tertiary mb-3">那就别搞。</div>
 </div>
 </div>
 
-
-<!--###################### 计算 ######################-->
-<script>
-$(document).ready(function() {
-function v2_keyyz() {
-if (localStorage.getItem('v2_key') === '0ub0') {
-console.log('登录成功');
-$("#visible").addClass("d-none");
-$("#invisible").removeClass("invisible");
-} else {
-localStorage.setItem('v2_key', 'true');
-console.log('登陆失败');
-$('#password').val('0ub0');
-}
-}
-$("#clearCookie").click(function() {
-localStorage.setItem('v2_key', 'true');
-location.reload();
-});
-v2_keyyz();
-$('#loginForm').submit(function(event) {
-event.preventDefault(); // 阻止表单默认提交行为
-var password = $('#password').val();
-var v2_key = localStorage.getItem('v2_key');
-if (password === v2_key) {
-console.log(password);
-alert('登录成功');
-location.reload();
-} else {
-localStorage.setItem('v2_key', password);
-alert('登陆失败');
-}
-v2_keyyz();
-});
-});
-</script>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+</div>
 </body>
 </html>

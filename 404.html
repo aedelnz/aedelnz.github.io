@@ -1,13 +1,13 @@
 <html lang="zh-CN">
 <head>
 <title>您要寻找的页面被偷走了</title>
-<meta charset="utf-8" />
-<meta name="referrer" content="no-referrer" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="shortcut icon" href="https://jixiejidiguan.top/favicon.ico?v=1.0" type="image/x-icon" />
-<link href="https://jixiejidiguan.top/start/index.css" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta name="referrer" content="no-referrer"/>
+<meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="icon" href="https://jixiejidiguan.top/favicon.ico"/>
+<link rel="stylesheet" href="https://jixiejidiguan.top/start/index.css"/>
 <script src="https://jixiejidiguan.top/start/origin.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style>
 .z-n1{z-index:-1!important}.position-absolute{position:absolute!important}.p-5{padding:3rem!important}
 </style>
@@ -87,8 +87,7 @@ var html=`<style>
 </div>
 </div>`;
 }
-$('#root').append(html); // 在指定元素末尾插入内容
-$('#root').prepend('<div class="z-n1 position-absolute p-5">'+randomNumber+'</div>');
+document.getElementById('root').innerHTML = '<div class="z-n1 position-absolute p-5">'+randomNumber+'</div>'+html;
 </script>
 </body>
 </html>
