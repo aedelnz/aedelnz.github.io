@@ -395,12 +395,15 @@ var str=`<div class="d-grid gap-2 d-md-block mb-3">
 </ol>
 </div>
 </div>
-<div class="mdui-panel mdui-panel-popout" mdui-panel>`;
+
+<div class="accordion accordion-flush" id="accordionFlushExample">`;
 $.each(branches, function(i, item) {
 var links = item.links;
-str+=`<div class="mdui-panel-item mdui-panel-item-open">
-<div class="mdui-panel-item-header">`+ item.cnname +`</div>
-<div class="mdui-panel-item-body">
+str+=`<div class="accordion-item">
+<h2 class="mdui-card accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#`+ item.cnname +`" aria-expanded="false">`+ item.cnname +`</button>
+</h2>
+<div id="`+ item.cnname +`" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 <div class="card mdui-table-fluid">
 <table class="table table-borderless table-responsive mdui-text-truncate">
 <thead class="fw-bolder mdui-color-red">
