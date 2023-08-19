@@ -1,25 +1,26 @@
+//Umami Cloud
+(function(a,b,c,d){a = document.createElement('script');a.src = 'https://analytics.umami.is/script.js';a.setAttribute('data-website-id', '56646557-addd-4d78-ae04-f7babb4cbc56');b = document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a,b);})();
 
 //我要拉
-!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true});
+(function(a,b,c,d){a = document.createElement('script');a.charset = 'UTF-8';a.id = 'LA_COLLECT';a.src = '//sdk.51.la/js-sdk-pro.min.js?id=JMIJZqK4MvC0pOsF&ck=JMIJZqK4MvC0pOsF&autoTrack=true&hashMode=true';b = document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a,b);})();
 
 //log
-console.log('%c\nPowered by %c JIXIEJIDIGUAN\n\n', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', 'color:#000');
-console.log('%c\nlinks %c https://jixiejidiguan.top/ %c\n\n', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;', 'color:#fff');
+console.log('%cPowered by %c JIXIEJIDIGUAN', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', 'color:#000');
+console.log('%clinks %c https://jixiejidiguan.top/ %c', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;', 'color:#fff');
 fetch("https://v1.hitokoto.cn/").then(function(response) {
 if (response.ok) {
 return response.text();
 }
 }).then(function(data) {
 var hitokoto = JSON.parse(data);
-console.log('\nid：'+hitokoto.id+'\n'+
+console.log('id：'+hitokoto.id+'\n'+
 'uuid：'+hitokoto.uuid+'\n'+
 'hitokoto：'+hitokoto.hitokoto+'\n'+
-'from：'+hitokoto.from+'\n\n');
-});
-console.log('\n浏览器的首选语言：'+navigator.language+'\n'+
+'from：'+hitokoto.from+'\n'+
+'浏览器的首选语言：'+navigator.language+'\n'+
 '浏览器的操作系统平台：'+navigator.platform+'\n'+
-'浏览器的版本信息：'+navigator.appVersion+'\n\n');
-
+'浏览器的版本信息：'+navigator.appVersion+'\n');
+});
 if (!!window.ActiveXObject || "ActiveXObject" in window) {
-    alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
+alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
 }
