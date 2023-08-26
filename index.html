@@ -223,6 +223,12 @@ $("#cartoon").append(str);
 <div class="container-fluid">
 <div id="Links"></div>
 </div>
+<div class="card-group mb-2">
+<div class="container-fluid mb-2 text-white text-center">友链删除日志</div>
+</div>
+<div class="container-fluid">
+<div id="Linkson"></div>
+</div>
 </div></div>
 <script>
 var $ = mdui.$;
@@ -248,9 +254,9 @@ array[randomIndex] = temporaryValue;
 }
 return array;
 }
-shuffleArray(data);
+shuffleArray(data.Links);
 var str=`<div class="Links_value row row-cols-2 row-cols-sm-3 row-cols-md-4 mdui-list">`;
-$.each(data,function(i,n){    
+$.each(data.Links,function(i,n){    
 str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
 <li class="mdui-list-item">
 <div class="mdui-list-item-avatar"><img src="`+n.img+`" /></div>
@@ -260,6 +266,12 @@ str+=`<div class="col"><a href="`+n.url+`" title="`+n.title+`">
 });
 str+=`</div>`;
 $("#Links").append(str);
+var strs=`<div class="mdui-table-fluid"><table class="mdui-table bg-dark"><thead><tr><th class="text-white">站点名称</th><th class="text-white">站点链接</th><th class="text-white">删除时间</th><th class="text-white">删除原因</th></tr></thead><tbody>`;
+$.each(data.Linkson,function(i,n){    
+strs+=`<tr><td class="text-white">`+n.Sitename+`</td><td class="text-white">`+n.Sitelinks+`</td><td class="text-white">`+n.Deletiontime+`</td><td class="text-white">`+n.Reasonfordeletion+`</td></tr>`;
+});
+strs+=`</tbody></table></div>`;
+$("#Linkson").append(strs);
 }
 });
 }
