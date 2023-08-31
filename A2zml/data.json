@@ -366,6 +366,21 @@
      "title": "WALLPAPER ",
      "url": "https://wall.alphacoders.com/?lang=Chinese",
      "intro": "ABYSS 张壁纸的聚集地"
+            },
+            {
+     "title": "Danbooru",
+     "url": "https://danbooru.donmai.us/",
+     "intro": "Anime Image Board"
+            },
+            {
+     "title": "yande re",
+     "url": "https://yande.re/post",
+     "intro": "/ | yande.re"
+            },
+            {
+     "title": "SomeACG",
+     "url": "https://www.someacg.top/",
+     "intro": "ACG壁纸精选"
             }
         ]
     },
@@ -541,6 +556,11 @@
      "title": "WeGame",
      "url": "https://www.wegame.com.cn/",
      "intro": "WeGame游戏商店，致力于发现全球好游戏"
+            },
+            {
+     "title": "bilibili游戏",
+     "url": "https://game.bilibili.com/",
+     "intro": "来自哔哩哔哩游戏"
             },
             {
      "title": "TapTap",
