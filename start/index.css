@@ -3,10 +3,15 @@
 @font-face {
     font-family: font;
     src: url('./Muyao-Softbrush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* 主题颜色 */
-body {background-color: #f3f4f7;font-family: font, Arial, sans-serif;}
+body {
+    background-color: #f3f4f7;
+    font-family: 'font', Arial, sans-serif;
+}
 /* 全站灰色 */
 开body *{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);filter:gray;}
 
