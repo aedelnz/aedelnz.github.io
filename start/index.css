@@ -6,18 +6,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: Muyao-Softbrush;
-    src: url('./Muyao-Softbrush.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-.font {
-    font-family: 'font', Arial, Helvetica, sans-serif;
-}
-.Muyao-Softbrush {
-    font-family: 'Muyao-Softbrush', Arial, Helvetica, sans-serif;
-}
 /* 主题颜色 */
 body {
     background-color: #f3f4f7;

@@ -203,7 +203,7 @@ dataType: "json",
 success: function(data){
 var Navs=`<a href="/" class="mdui-list-item fs-3 mdui-ripple">返回首页</a>`;
 $.each(data,function(i,n){    
-Navs+=`<a href="#`+n.classification+`" class="mdui-list-item fs-3 mdui-ripple Muyao-Softbrush">`+n.classification+`</a>`;
+Navs+=`<a href="#`+n.classification+`" class="mdui-list-item fs-3 mdui-ripple">`+n.classification+`</a>`;
 });
 $('#Navs').append(Navs);
 var Cote=``;
@@ -211,7 +211,7 @@ $.each(data,function(i,n){
 Cote+=`<div class="mb-4">
 <div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">
 <ul id="{{classification}}" class="mdui-list">
-<p class="fs-3 text-start Muyao-Softbrush">`+n.classification+`</p>
+<p class="fs-3 text-start">`+n.classification+`</p>
 <div id="`+n.classification+`"></div>`;
 $.each(n.content,function(i,n){    
 Cote+=`<div class="mdui-col">
