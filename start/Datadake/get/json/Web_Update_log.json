@@ -1,0 +1,32 @@
+[
+{
+"year": "2023年",
+"year_sort": [
+{
+"month": "9月",
+"month_sort": [
+{
+"sun":"24日",
+"log_text": "重构<a href='/'>首页</a>内容并且优化排版"
+},{
+"sun":"22日",
+"log_text": "开启本站更新日志"
+}
+]
+}
+]
+},{
+"year": "2020年",
+"year_sort": [
+{
+"month": "8月",
+"month_sort": [
+{
+"sun":"17日",
+"log_text": "正式启用<a href='https://jixiejidiguan.top'>jixiejidiguan.top</a>域名"
+}
+]
+}
+]
+}
+]

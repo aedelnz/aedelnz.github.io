@@ -1,11 +1,5 @@
 * {margin: 0;padding: 0;box-sizing: border-box;}
-/* 字体 */
-@font-face {
-    font-family: font;
-    src: url('./font.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 /* 主题颜色 */
 body {
     background-color: #f3f4f7;
