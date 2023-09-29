@@ -80,6 +80,11 @@
 			"img": "https://www.tezilaw.com/wp-content/uploads/2022/12/1671086850-0353d00cdf20d2e.ico",
 			"title": "特资啦！个人资源分享站",
 			"url": "https://www.tezilaw.com"
+		},
+		{
+			"img": "https://www.ecylt.top/upload/avatar/000/1.png",
+			"title": "二次元论坛",
+			"url": "https://www.ecylt.top"
 		}
 	],
 	"erase": "友链删除日志",
@@ -89,12 +94,6 @@
 			"Sitelinks": "ejyuan.fun",
 			"Deletiontime": "2023/08/26",
 			"Reasonfordeletion": "无法访问"
-		},
-		{
-			"Sitename": "二次元论坛",
-			"Sitelinks": "www.ecylt.top",
-			"Deletiontime": "2023/09/24",
-			"Reasonfordeletion": "不存在本站友接"
 		}
 	]
 }
