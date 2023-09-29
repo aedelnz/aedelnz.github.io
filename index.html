@@ -22,13 +22,26 @@
 .ArProgress{width:100%;height:3px;overflow:hidden;background-color:#AAAAAA}
 .ArProgress>div{position:relative;height:3px;transition:width .5s ease-in-out;background-color:green}
 .hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
+.btn-outline .shadow-sm, .btn-outline list-group-item {border-radius: 0;}
+.btn-outline a {line-height: 3.37rem;border-radius: 0;}
+.btn-outline a:nth-child(7n+1) {--bs-btn-color:#0d6efd;--bs-btn-border-color:#0d6efd;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#0d6efd;--bs-btn-hover-border-color:#0d6efd;--bs-btn-focus-shadow-rgb:13,110,253;--bs-btn-active-color:#fff;--bs-btn-active-bg:#0d6efd;--bs-btn-active-border-color:#0d6efd;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#0d6efd;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#0d6efd;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+2) {--bs-btn-color:#6c757d;--bs-btn-border-color:#6c757d;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#6c757d;--bs-btn-hover-border-color:#6c757d;--bs-btn-focus-shadow-rgb:108,117,125;--bs-btn-active-color:#fff;--bs-btn-active-bg:#6c757d;--bs-btn-active-border-color:#6c757d;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#6c757d;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#6c757d;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+3) {--bs-btn-color:#198754;--bs-btn-border-color:#198754;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#198754;--bs-btn-hover-border-color:#198754;--bs-btn-focus-shadow-rgb:25,135,84;--bs-btn-active-color:#fff;--bs-btn-active-bg:#198754;--bs-btn-active-border-color:#198754;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#198754;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#198754;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+4) {--bs-btn-color:#f8f9fa;--bs-btn-border-color:#f8f9fa;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#f8f9fa;--bs-btn-hover-border-color:#f8f9fa;--bs-btn-focus-shadow-rgb:248,249,250;--bs-btn-active-color:#000;--bs-btn-active-bg:#f8f9fa;--bs-btn-active-border-color:#f8f9fa;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#f8f9fa;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#f8f9fa;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+5) {--bs-btn-color:#dc3545;--bs-btn-border-color:#dc3545;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#dc3545;--bs-btn-hover-border-color:#dc3545;--bs-btn-focus-shadow-rgb:220,53,69;--bs-btn-active-color:#fff;--bs-btn-active-bg:#dc3545;--bs-btn-active-border-color:#dc3545;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#dc3545;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#dc3545;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+6) {--bs-btn-color:#ffc107;--bs-btn-border-color:#ffc107;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#ffc107;--bs-btn-hover-border-color:#ffc107;--bs-btn-focus-shadow-rgb:255,193,7;--bs-btn-active-color:#000;--bs-btn-active-bg:#ffc107;--bs-btn-active-border-color:#ffc107;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#ffc107;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#ffc107;--bs-gradient:none;}
+.btn-outline a:nth-child(7n+7) {--bs-btn-color:#0dcaf0;--bs-btn-border-color:#0dcaf0;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#0dcaf0;--bs-btn-hover-border-color:#0dcaf0;--bs-btn-focus-shadow-rgb:13,202,240;--bs-btn-active-color:#000;--bs-btn-active-bg:#0dcaf0;--bs-btn-active-border-color:#0dcaf0;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#0dcaf0;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#0dcaf0;--bs-gradient:none;}
+.audio-player audio {width: 100%;background-color: #f2f2f2;border-radius: 5px;}
+.audio-player audio::-webkit-media-controls-panel {background-color: #f2f2f2;border-radius: 5px;}
+#网站日志 {width: auto;height: 50vh;overflow: auto;}
+#网站日志 .text-center {width: 100%;height: 100%;overflow-y: auto;position: sticky;}
 </style>
 </head>
 <body class="bg-dark text-white">
 <div class="progress fixed-bottom" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
 <div class="progress-bar">0%</div>
 </div>
-<script>var progressBar=$('.progress');var progress=$('.progress-bar');var progressValue=0;$(window).on('load',function(){progressBar.hide()});var timer=setInterval(function(){progressValue+=Math.random()*10;if(progressValue>=100){clearInterval(timer);progressValue=100}progress.css('width',progressValue+'%');progress.text(progressValue.toFixed(0)+'%');if(progressValue===100){$('.invisible').removeClass('invisible')}},100);</script>
+
 <main class="invisible">
 
 <!-- 导航 -->
@@ -89,136 +102,6 @@
 <!-- 页面导航 -->
 <div class="sap mb-4">页面导航</div>
 <section id="页面导航" class="card-group mb-5 btn-outline">
-<style>
-.btn-outline .shadow-sm, .btn-outline list-group-item {
-  border-radius: 0;
-}
-.btn-outline a {
-  line-height: 3.37rem;
-  border-radius: 0;
-}
-.btn-outline a:nth-child(7n+1) {
-  --bs-btn-color: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0d6efd;
-  --bs-btn-hover-border-color: #0d6efd;
-  --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0d6efd;
-  --bs-btn-active-border-color: #0d6efd;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0d6efd;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0d6efd;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+2) {
-  --bs-btn-color: #6c757d;
-  --bs-btn-border-color: #6c757d;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6c757d;
-  --bs-btn-hover-border-color: #6c757d;
-  --bs-btn-focus-shadow-rgb: 108, 117, 125;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #6c757d;
-  --bs-btn-active-border-color: #6c757d;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #6c757d;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #6c757d;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+3) {
-  --bs-btn-color: #198754;
-  --bs-btn-border-color: #198754;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #198754;
-  --bs-btn-hover-border-color: #198754;
-  --bs-btn-focus-shadow-rgb: 25, 135, 84;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #198754;
-  --bs-btn-active-border-color: #198754;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #198754;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #198754;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+4) {
-  --bs-btn-color: #f8f9fa;
-  --bs-btn-border-color: #f8f9fa;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #f8f9fa;
-  --bs-btn-hover-border-color: #f8f9fa;
-  --bs-btn-focus-shadow-rgb: 248, 249, 250;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #f8f9fa;
-  --bs-btn-active-border-color: #f8f9fa;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #f8f9fa;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #f8f9fa;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+5) {
-  --bs-btn-color: #dc3545;
-  --bs-btn-border-color: #dc3545;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #dc3545;
-  --bs-btn-hover-border-color: #dc3545;
-  --bs-btn-focus-shadow-rgb: 220, 53, 69;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #dc3545;
-  --bs-btn-active-border-color: #dc3545;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #dc3545;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #dc3545;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+6) {
-  --bs-btn-color: #ffc107;
-  --bs-btn-border-color: #ffc107;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ffc107;
-  --bs-btn-hover-border-color: #ffc107;
-  --bs-btn-focus-shadow-rgb: 255, 193, 7;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ffc107;
-  --bs-btn-active-border-color: #ffc107;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ffc107;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ffc107;
-  --bs-gradient: none;
-}
-.btn-outline a:nth-child(7n+7) {
-  --bs-btn-color: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #0dcaf0;
-  --bs-btn-hover-border-color: #0dcaf0;
-  --bs-btn-focus-shadow-rgb: 13, 202, 240;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #0dcaf0;
-  --bs-btn-active-border-color: #0dcaf0;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0dcaf0;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0dcaf0;
-  --bs-gradient: none;
-}
-.audio-player audio {
-  width: 100%;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-.audio-player audio::-webkit-media-controls-panel {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-</style>
 <article class="card text-bg-dark">
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder" id="page"></div>
 <div class="container text-center"><div class="row" id="page_list"></div></div>
@@ -228,90 +111,13 @@
 <div class="container">
 <div class="audio-player">
 <div class="fw-bold">我不曾忘记 (游戏《原神》2023新春会同人曲)</div>
-<div class="lyrics text-white-50 font-monospace"></div>
+<div class="lyrics text-primary font-monospace mdui-text-left"></div>
+<div class="lyrics text-white-50 font-monospace mdui-text-right"></div>
 <audio class="audio btn mb-2 btn-light" src="http://music.163.com/song/media/outer/url?id=2014336709.mp3" ontimeupdate="" controls=""></audio>
 </div>
-<script>
-$(document).ready(function() {
-var lyrics = [
-{ time: 0, text: "我的破木箱" },
-{ time: 3, text: "装满枯萎的花" },
-{ time: 5, text: "放不下 光与壤" },
-{ time: 9, text: "和新鲜的愿望" },
-{ time: 12, text: "如果能飞翔" },
-{ time: 15, text: "去高高的地方" },
-{ time: 17, text: "撒一张 梦的网" },
-{ time: 21, text: "收集爱的回响" },
-{ time: 36, text: "你也在听吗" },
-{ time: 39, text: "落单的孩子啊" },
-{ time: 41, text: "别害怕 别害怕" },
-{ time: 45, text: "黑夜不会太长" },
-{ time: 48, text: "悬崖上的花" },
-{ time: 51, text: "让我为你摘下" },
-{ time: 53, text: "数一瓣 落一瓣" },
-{ time: 57, text: "就少一朵忧伤" },
-{ time: 60, text: "绿草和砂砾没有嘴巴" },
-{ time: 63, text: "一定不会说谎话" },
-{ time: 66, text: "他们让风提醒我有道光" },
-{ time: 72, text: "落在我的肩膀" },
-{ time: 76, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },
-{ time: 81, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },
-{ time: 87, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },
-{ time: 93, text: "约好啦 等我们都长大 再次遇见 要比现在更美" },
-{ time: 111, text: "一千个噩梦" },
-{ time: 114, text: "换一千个小偷" },
-{ time: 116, text: "够不够 够不够" },
-{ time: 120, text: "偷走你的难过" },
-{ time: 124, text: "遇见那一刻" },
-{ time: 126, text: "就倒置了沙漏" },
-{ time: 128, text: "不必说 要铭刻" },
-{ time: 132, text: "天长还是地久" },
-{ time: 135, text: "都说长大后会忘记童话" },
-{ time: 138, text: "清醒后会忘记梦" },
-{ time: 141, text: "可尤其是下过雨的午后" },
-{ time: 147, text: "会想和你重逢" },
-{ time: 151, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },
-{ time: 156, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },
-{ time: 162, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },
-{ time: 168, text: "约好啦 等我们都长大 再次冒险 追寻梦的蔓延" },
-{ time: 174, text: "谁越过一片花海" },
-{ time: 177, text: "谁切切朝我走来" },
-{ time: 180, text: "谁依然记得我未完成的心愿" },
-{ time: 189, text: "是你吗 头戴着花环 衔着最纯净的枝丫" },
-{ time: 196, text: "是你吧 撕下一缕霓裳 借我照亮 盒中之花" },
-{ time: 201, text: "是你吗 在某一天默默消失在春天的遥望" },
-{ time: 207, text: "可我呀 记得你的所有 我不会忘 我不会忘" },
-{ time: 213, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },
-{ time: 219, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },
-];
-$(".audio").on("timeupdate", function() {
-var currentTime = Math.floor(this.currentTime);
-for (var i = 0; i < lyrics.length; i++) {
-if (lyrics[i].time === currentTime) {
-$(".lyrics").text(lyrics[i].text);
-break;
-}
-}
-});
-});
-</script>
 <div class="row list-group" id="project_list"></div>
 </div>
 </article>
-<script>
-$.getJSON('./start/Datadake/get/json/index.json', function(data) {
-$("#page").text(data.page);
-$("#project").text(data.project);
-$.each(data.page_list,function(i,n){
-var str =`<a class="col-6 btn btn-lg opacity-50 text-truncate" href="`+n.url+`" title="`+n.title+`">`+n.title+`</a>`;
-$("#page_list").append(str);
-});
-$.each(data.project_list,function(i,n){
-var str =`<li class="-list-group-item mdui-shadow-24 mdui-p-y-1 shadow-sm d-flex justify-content-between align-items-start text-bg-dark bg-dark" title="`+n.title+`"><div class="ms-2 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold">`+n.title+`</div><span class="text-white-50 font-monospace">`+n.subtitle+`</span></div></li><div class="mdui-divider bg-white"></div>`;
-$("#project_list").append(str);
-});
-});
-</script>
 </section>
 
 
@@ -322,40 +128,6 @@ $("#project_list").append(str);
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder"><div class="mb-2 fs-4 font-monospace text-white text-center">来着腾讯视频和哔哩哔哩的视频收藏</div></div>
 <div class="container-fluid shadow rounded text-bg-dark text-center"><div class="row" id="Guoman"></div></div>
 </article>
-<script>
-$.getJSON('./start/Datadake/get/json/TENCENT_COMIC.json', function(data) {
-$.each(data,function(i,n){
-var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`">
-<div class="mdui-grid-tile">
-<img src="`+n.img+`"/>
-<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-<div class="mdui-grid-tile-text">
-<div class="mdui-grid-tile-title">`+n.title+`</div>
-<div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div>
-</div>
-</div>
-</div>
-</div>`;
-$("#Guoman").append(str);
-});
-});
-$.getJSON('./start/Datadake/get/json/Bilibili.json', function(data) {
-$.each(data,function(i,n){
-var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`">
-<div class="mdui-grid-tile">
-<img src="`+n.img+`"/>
-<div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient">
-<div class="mdui-grid-tile-text">
-<div class="mdui-grid-tile-title">`+n.title+`</div>
-<div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div>
-</div>
-</div>
-</div>
-</div>`;
-$("#Guoman").append(str);
-});
-});
-</script>
 </section>
 
 
@@ -373,69 +145,16 @@ $("#Guoman").append(str);
 <div class="shadow-sm p-3 mdui-m-t-5 bg-dark fw-bolder"><div class="mb-2 font-monospace text-white text-center">友链删除日志</div></div>
 <div class="text-bg-dark text-center"><div class="row" id="Linkson"></div></div>
 </article>
-<script>
-$.getJSON('./start/Datadake/get/json/Links.json', function(data) {
-function shuffleArray(array){var currentIndex=array.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex--;temporaryValue=array[currentIndex];array[currentIndex]=array[randomIndex];array[randomIndex]=temporaryValue}return array}
-shuffleArray(data.Links);
-$.each(data.Links,function(i,n){
-var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`">
-<div class="ratio text-white-50 ratio-1x1"><div class="mdui-valign text-center mdui-grid-tile"><img class="mdui-center rounded img-fluid img-thumbnail mdui-img-rounded" src="`+n.img+`"/></div></div>
-<div class="mdui-hoverable ms-1 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold font-monospace text-truncate mdui-p-y-1">`+n.title+`</div></div>
-<div class="mdui-divider bg-white"></div>
-</div>`;
-$("#Links").append(str);
-});
-var strs=`<table class="table bg-dark bg-gradient"><thead><tr><th class="text-white">站点名称</th><th class="text-white">站点链接</th><th class="text-white">删除时间</th><th class="text-white">删除原因</th></tr></thead><tbody class="table-group-divider">`;
-$.each(data.Linkson,function(i,n){    
-strs+=`<tr><td class="text-white">`+n.Sitename+`</td><td class="text-white">`+n.Sitelinks+`</td><td class="text-white">`+n.Deletiontime+`</td><td class="text-white">`+n.Reasonfordeletion+`</td></tr>`;
-});
-strs+=`</tbody></table>`;
-$("#Linkson").append(strs);
-});
-</script>
 </section>
 
 
 <!-- 网站日志 -->
 <div class="sap mb-4">网站日志</div>
 <section id="网站日志" class="card-group mb-5">
-<style>
-#网站日志 {
-  width: auto;
-  height: 50vh;
-  overflow: auto;
-}
-#网站日志 .text-center {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  position: sticky;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-</style>
 <article class="card text-bg-dark">
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder">日志记录</div>
 <div class="container-fluid text-bg-dark text-center"><div class="row" id="Web_Update_log"></div></div>
 </article>
-<script>
-$.getJSON('./start/Datadake/get/json/Web_Update_log.json', function(data) {
-$.each(data,function(i,n){
-var str=`<table class="table text-light"><thead><tr><th scope="col">`+n.year+`</th></tr></thead>`;
-$.each(n.year_sort,function(i,n){
-str+=` <tbody><tr><td colspan="2">`+n.month+`</td></tr>`;
-$.each(n.month_sort,function(i,n){
-str+=`<tr><td></td><th scope="row">`+n.sun+`</th><td colspan="2">`+n.log_text+`</td></tr>`;
-});
-str+=`</tbody>`;
-});
-str+=`</table>`;
-$("#Web_Update_log").append(str);
-});
-});
-</script>
 </section>
 
 
@@ -445,7 +164,7 @@ $("#Web_Update_log").append(str);
 <footer class="py-2">
 <div class="container-fluid">
 <div class="row">
-<div class="col-6 col-md-4 mb-2">
+<div class="col-6 col-md-6 mb-2">
 <h5>社交账号</h5>
 <ul class="nav flex-column">
 <li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a></li>
@@ -456,7 +175,7 @@ $("#Web_Update_log").append(str);
 <li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://s.jixiejidiguan.top/Api/qr.php?text=http://weixin.qq.com/r/AByBmUXEpRjarQH690kS&size=640" title="二维码图片">微信公众号</a></li>
 </ul>
 </div>
-<div class="col-6 col-md-4 mb-2">
+<div class="col-6 col-md-6 mb-2">
 <h5>备案号</h5>
 <ul class="nav flex-column">
 <li class="nav-item mb-2"><a class="nav-link p-0 text-primary" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></li>
@@ -473,7 +192,102 @@ $("#Web_Update_log").append(str);
 </div>
 </div>
 </footer>
+<!-- 返回顶部 -->
+<div id="backToTop" class="mdui-fab-fixed bg-white-50"><i class="mdui-icon material-icons">arrow_drop_up</i></div>
 </main>
+<script>
+// ####
+var progressBar=$('.progress');var progress=$('.progress-bar');var progressValue=0;$(window).on('load',function(){progressBar.hide()});var timer=setInterval(function(){progressValue+=Math.random()*10;if(progressValue>=100){clearInterval(timer);progressValue=100}progress.css('width',progressValue+'%');progress.text(progressValue.toFixed(0)+'%');if(progressValue===100){$('.invisible').removeClass('invisible')}},100);
+
+// 音乐播放
+$(document).ready(function() {
+var lyrics = [{ time: 0, text: "我的破木箱" },{ time: 3, text: "装满枯萎的花" },{ time: 5, text: "放不下 光与壤" },{ time: 9, text: "和新鲜的愿望" },{ time: 12, text: "如果能飞翔" },{ time: 15, text: "去高高的地方" },{ time: 17, text: "撒一张 梦的网" },{ time: 21, text: "收集爱的回响" },{ time: 36, text: "你也在听吗" },{ time: 39, text: "落单的孩子啊" },{ time: 41, text: "别害怕 别害怕" },{ time: 45, text: "黑夜不会太长" },{ time: 48, text: "悬崖上的花" },{ time: 51, text: "让我为你摘下" },{ time: 53, text: "数一瓣 落一瓣" },{ time: 57, text: "就少一朵忧伤" },{ time: 60, text: "绿草和砂砾没有嘴巴" },{ time: 63, text: "一定不会说谎话" },{ time: 66, text: "他们让风提醒我有道光" },{ time: 72, text: "落在我的肩膀" },{ time: 76, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 81, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },{ time: 87, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },{ time: 93, text: "约好啦 等我们都长大 再次遇见 要比现在更美" },{ time: 111, text: "一千个噩梦" },{ time: 114, text: "换一千个小偷" },{ time: 116, text: "够不够 够不够" },{ time: 120, text: "偷走你的难过" },{ time: 124, text: "遇见那一刻" },{ time: 126, text: "就倒置了沙漏" },{ time: 128, text: "不必说 要铭刻" },{ time: 132, text: "天长还是地久" },{ time: 135, text: "都说长大后会忘记童话" },{ time: 138, text: "清醒后会忘记梦" },{ time: 141, text: "可尤其是下过雨的午后" },{ time: 147, text: "会想和你重逢" },{ time: 151, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 156, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },{ time: 162, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },{ time: 168, text: "约好啦 等我们都长大 再次冒险 追寻梦的蔓延" },{ time: 174, text: "谁越过一片花海" },{ time: 177, text: "谁切切朝我走来" },{ time: 180, text: "谁依然记得我未完成的心愿" },{ time: 189, text: "是你吗 头戴着花环 衔着最纯净的枝丫" },{ time: 196, text: "是你吧 撕下一缕霓裳 借我照亮 盒中之花" },{ time: 201, text: "是你吗 在某一天默默消失在春天的遥望" },{ time: 207, text: "可我呀 记得你的所有 我不会忘 我不会忘" },{ time: 213, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 219, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" }];
+$(".audio").on("timeupdate", function() {
+var currentTime = Math.floor(this.currentTime);
+for (var i = 0; i < lyrics.length; i++) {
+if (lyrics[i].time === currentTime) {
+$(".lyrics").eq(0).text(lyrics[i].text); 
+$(".lyrics").eq(1).text(lyrics[i+1].text);   
+break;
+}
+}
+});
+});
+
+// 页面导航
+$.getJSON('./start/Datadake/get/json/index.json', function(data) {
+$("#page").text(data.page);
+$("#project").text(data.project);
+$.each(data.page_list,function(i,n){
+var str =`<a class="col-6 btn btn-lg opacity-50 text-truncate" href="`+n.url+`" title="`+n.title+`">`+n.title+`</a>`;
+$("#page_list").append(str);
+});
+$.each(data.project_list,function(i,n){
+var str =`<li class="-list-group-item mdui-shadow-24 mdui-p-y-1 shadow-sm d-flex justify-content-between align-items-start text-bg-dark bg-dark" title="`+n.title+`"><div class="ms-2 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold">`+n.title+`</div><span class="text-white-50 font-monospace">`+n.subtitle+`</span></div></li><div class="mdui-divider bg-white"></div>`;
+$("#project_list").append(str);
+});
+});
+
+// 动漫收藏
+$.getJSON('./start/Datadake/get/json/TENCENT_COMIC.json', function(data) {
+$.each(data,function(i,n){
+var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
+$("#Guoman").append(str);
+});
+});
+$.getJSON('./start/Datadake/get/json/Bilibili.json', function(data) {
+$.each(data,function(i,n){
+var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
+$("#Guoman").append(str);
+});
+});
+
+// 友情链接
+$.getJSON('./start/Datadake/get/json/Links.json', function(data) {
+function shuffleArray(array){var currentIndex=array.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex--;temporaryValue=array[currentIndex];array[currentIndex]=array[randomIndex];array[randomIndex]=temporaryValue}return array}
+shuffleArray(data.Links);
+$.each(data.Links,function(i,n){
+var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="ratio text-white-50 ratio-1x1"><div class="mdui-valign text-center mdui-grid-tile"><img class="mdui-center rounded img-fluid img-thumbnail mdui-img-rounded" src="`+n.img+`"/></div></div><div class="mdui-hoverable ms-1 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold font-monospace text-truncate mdui-p-y-1">`+n.title+`</div></div><div class="mdui-divider bg-white"></div></div>`;
+$("#Links").append(str);
+});
+var strs=`<table class="table bg-dark bg-gradient"><thead><tr><th class="text-white">站点名称</th><th class="text-white">站点链接</th><th class="text-white">删除时间</th><th class="text-white">删除原因</th></tr></thead><tbody class="table-group-divider">`;
+$.each(data.Linkson,function(i,n){    
+strs+=`<tr><td class="text-white">`+n.Sitename+`</td><td class="text-white">`+n.Sitelinks+`</td><td class="text-white">`+n.Deletiontime+`</td><td class="text-white">`+n.Reasonfordeletion+`</td></tr>`;
+});
+strs+=`</tbody></table>`;
+$("#Linkson").append(strs);
+});
+
+// 网站日志
+$.getJSON('./start/Datadake/get/json/Web_Update_log.json', function(data) {
+$.each(data,function(i,n){
+var str=`<table class="table text-light"><thead><tr><th scope="col">`+n.year+`</th></tr></thead>`;
+$.each(n.year_sort,function(i,n){
+str+=` <tbody><tr><td colspan="2">`+n.month+`</td></tr>`;
+$.each(n.month_sort,function(i,n){
+str+=`<tr><td></td><th scope="row">`+n.sun+`</th><td colspan="3">`+n.log_text+`</td></tr>`;
+});
+str+=`</tbody>`;
+});
+str+=`</table>`;
+$("#Web_Update_log").append(str);
+});
+});
+
+// 返回顶部
+$(document).ready(function() {
+$("#backToTop").click(function() {
+$("html, body").animate({scrollTop: 0}, "slow");
+});
+$(window).scroll(function() {
+if ($(this).scrollTop() > 450) {
+$('#backToTop').fadeIn();
+} else {
+$('#backToTop').fadeOut();
+}
+});
+});
+</script>
 <script src="./start/mdui/js/mdui.min.js"></script>
 <script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
