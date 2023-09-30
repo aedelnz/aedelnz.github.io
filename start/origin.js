@@ -4,6 +4,9 @@
 //我要拉
 (function(a,b,c,d){a = document.createElement('script');a.charset = 'UTF-8';a.id = 'LA_COLLECT';a.src = '//sdk.51.la/js-sdk-pro.min.js?id=JMIJZqK4MvC0pOsF&ck=JMIJZqK4MvC0pOsF&autoTrack=true&hashMode=true';b = document.getElementsByTagName('script')[0];b.parentNode.insertBefore(a,b);})();
 
+//灵雀应用监控
+!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"K5mJO6H2n6QPd4MK",sendSpaPv:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");
+
 //log
 console.log('%cPowered by %c JIXIEJIDIGUAN', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', 'color:#000');
 console.log('%clinks %c https://jixiejidiguan.top/ %c', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;', 'color:#fff');
