@@ -3,9 +3,26 @@
 "year": "2023年",
 "year_sort": [
 {
+"month": "10月",
+"month_sort": [
+{
+"sun":"2日",
+"log_text": "更新优化<a href='/A2zml/Monitor/'>网站监控</a>页面"
+},{
+"sun":"2日",
+"log_text": "更新优化<a href='/A2zml'>爱莫能助</a>页面"
+},{
+"sun":"1日",
+"log_text": "删除 <span class='text-decoration-line-through'>github 文件加速</span> 页面，原因：几乎没人用，如果需要可以自己搭建<a class='text-decoration-underline' href='https://github.com/hunshcn/gh-proxy'>github 文件加速</a>源码"
+}
+]
+},{
 "month": "9月",
 "month_sort": [
 {
+"sun":"29日",
+"log_text": "小小的<a href='/'>首页</a>优化，修改双行歌词播放，排版内容微小调整"
+},{
 "sun":"24日",
 "log_text": "重构<a href='/'>首页</a>内容并且优化排版"
 },{

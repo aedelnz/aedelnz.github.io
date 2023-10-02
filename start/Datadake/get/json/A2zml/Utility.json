@@ -1,0 +1,144 @@
+[
+    {
+    "classification": "装机必备",
+    "content": [
+            {
+     "title": "Potplayer 多媒体播放器",
+     "url": "http://potplayer.tv/?lang=zh_CN",
+     "intro": "PotPlayer 新一代网络播放器。PotPlayer 的优势在于强大的内置解码器。"
+            },
+            {
+     "title": "MPC-BE 多媒体播放器",
+     "url": "https://github.com/Aleksoid1978/MPC-BE",
+     "intro": "Media Player Classic – BE 是适用于 Windows 的免费开源音频和视频播放器。"
+            },
+            {
+     "title": "Geek Uninstaller",       
+     "url": "https://geekuninstaller.com/",
+     "intro": "高效的卸载软件，无需安装"
+            },
+            {
+     "title": "TrafficMonitor ",       
+     "url": "https://github.com/zhongyang219/TrafficMonitor",
+     "intro": "网速/内存/CPU监控软件"
+            },
+            {
+     "title": "Microsoft Visual C++ ",       
+     "url": "https://docs.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist",
+     "intro": "Microsoft Visual C++ 运行环境"
+            },
+            {
+     "title": "IObit Uninstaller",       
+     "url": "https://www.iobit.com/en/advanceduninstaller.php",
+     "intro": "IObit Uninstaller是一款功能强大的软件，能够有效地取代Windows自带的卸载功能。通过它，你可以彻底卸载不需要的软件，不留下软件的相关信息，并且不会造成系统崩溃。"
+            },
+            {
+     "title": "simplewall",       
+     "url": "https://github.com/henrypp/simplewall",
+     "intro": "适用于Windows的简单防火墙"
+            },
+            {
+     "title": "VLC media player",       
+     "url": "https://www.videolan.org/index.zh_CN.html",
+     "intro": "VLC 多媒体播放器"
+            },
+            {
+     "title": "PowerToys",       
+     "url": "https://apps.microsoft.com/store/detail/microsoft-powertoys/XP89DCGQ3K6VLD",
+     "intro": "自定义 Windows 的实用工具"
+            }            
+     ]
+     },{
+    "classification": "压缩工具",
+    "content": [
+            {
+     "title": "ZArchiver",
+     "url": "http://zdevs.ru/en/za/apk.html",
+     "intro": "安卓上最强的压缩解压软件 ZArchiver"
+            },            
+            {
+     "title": "Bandizip",
+     "url": "https://www.bandisoft.com/bandizip/",
+     "intro": "Bandizip 压缩软件"
+            },            
+            {
+     "title": "WinRAR",
+     "url": "https://www.win-rar.com/start.html?&L=7",
+     "intro": "WinRAR 压缩软件"
+            },            
+            {
+     "title": "7-Zip",
+     "url": "https://www.7-zip.org/",
+     "intro": "7-Zip 开源的压缩软件"
+            },            
+            {
+     "title": "PeaZip",
+     "url": "https://peazip.github.io/peazip-64bit.html",
+     "intro": "PeaZip 压缩软件"
+            }
+            ]
+            
+            },{
+    "classification": "BT下载",
+    "content": [            
+            {
+     "title": "Motrix",
+     "url": "https://motrix.app/zh-CN/download",
+     "intro": "一款全能的下载工具"
+            },            
+            {
+     "title": "qBittorrent",
+     "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
+     "intro": "qBittorrent 增强版"
+            },            
+            {
+     "title": "Flud",
+     "url": "https://www.baidu.com/s?wd=Flud",
+     "intro": "Flud是一款简单美观的BitTorrent安卓客户端"
+            },            
+            {
+     "title": "BitComet",
+     "url": "https://www.bitcomet.com/cn/downloads",
+     "intro": "比特彗星"
+            },            
+            {
+     "title": "Transmission",
+     "url": "https://transmissionbt.com/download.html",
+     "intro": "Transmission"
+            }
+       ]
+       },{
+    "classification": "SSH工具",
+    "content": [
+    {
+     "title": "Termux",
+     "url": "https://f-droid.org/en/packages/com.termux/",
+     "intro": "Termux"
+           },{
+     "title": "JuiceSSH",
+     "url": "https://sonelli.com/changelog",
+     "intro": "安卓上的SSH客户端"
+           },
+{
+     "title": "PuTTY",
+     "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+     "intro": "免费开源的SSH客户端"
+           },
+{
+     "title": "Xshell",
+     "url": "https://www.xshell.com/zh/free-for-home-school/",
+     "intro": "家庭及学校免费"
+           },
+{
+     "title": "MobaXterm",
+     "url": "https://mobaxterm.mobatek.net/download-home-edition.html",
+     "intro": "家庭及学校免费"
+           },
+{
+     "title": "FinalShell",
+     "url": "http://www.hostbuf.com/t/988.html",
+     "intro": "免费版只有基础功能"
+           }    
+    ]        
+       }
+]
