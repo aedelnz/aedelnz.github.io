@@ -16,8 +16,8 @@
 <style>
 .mdui-p-y-5 {overflow: hidden;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 .navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
-.navbar-text a:hover {font-size: 18px;transition: font-size 0.6s ease-in-out;}
-.sap{font-size:1.5rem;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1019;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
+.navbar-nav a:hover {font-size: 18px;transition: font-size 0.6s ease-in-out;}
+.sap{font-size:1.45rem;padding-top:6px;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1019;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
 .hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(20%)}.carousel-item{overflow:hidden;height:100vh}
 .carousel-inner{margin-top:-60px}
 .hdpicText{z-index:25;position:relative;color:white;padding-top:25vh;padding-left:6vw;padding-right:6vw}
@@ -54,13 +54,13 @@
 <!-- 导航 -->
 <nav class="navbar navbar-expand-lg sticky-top">
 <div class="container-fluid">
-<a class="navbar-brand fw-bold text-white " href=""><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
+<a class="navbar-brand fw-bold text-white" href="#"><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
 <button class="navbar-toggler mdui-btn mdui-btn-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <i class="mdui-icon material-icons"  style="font-size: 1.5rem; color: rgb(255, 255, 255);">format_list_bulleted</i>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
-<span class="fs-5 navbar-text">
+<span class="fs-5">
 <ul class="navbar-nav me-auto mb-lg-0">
 <li class="nav-item p-1"><span class="badge"><a class="nav-link text-white active" aria-current="page" href="/#页面导航">页面导航</a></span></li>
 <li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#动漫收藏">动漫收藏</a></span></li>
@@ -108,7 +108,7 @@
 
 
 <!-- 页面导航 -->
-<div class="sap mb-4">页面导航</div>
+<div class="sap fw-bolder font-monospace mb-5">页面导航</div>
 <section id="页面导航" class="card-group mb-5 btn-outline">
 <article class="card text-bg-dark">
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder" id="page"></div>
@@ -130,7 +130,7 @@
 
 
 <!-- 动漫收藏 -->
-<div class="sap mb-4">动漫收藏</div>
+<div class="sap fw-bolder font-monospace mb-5">动漫收藏</div>
 <section id="动漫收藏" class="card-group mb-5">
 <article class="card text-bg-dark">
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder"><div class="mb-2 fs-4 font-monospace text-white text-center">来着腾讯视频和哔哩哔哩的视频收藏</div></div>
@@ -140,7 +140,7 @@
 
 
 <!-- 友情链接 -->
-<div class="sap mb-4">友情链接</div>
+<div class="sap fw-bolder font-monospace mb-5">友情链接</div>
 <section id="友情链接" class="card-group mb-5">
 <article class="card text-bg-dark">
 <div class="container-fluid shadow mb-3 rounded"><div class="mdui-row-xs-1 mdui-row-sm-3 card-body">
@@ -157,7 +157,7 @@
 
 
 <!-- 网站日志 -->
-<div class="sap mb-4">网站日志</div>
+<div class="sap fw-bolder font-monospace mb-5">网站日志</div>
 <section id="网站日志" class="card-group mb-5">
 <article class="card text-bg-dark">
 <div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder">日志记录</div>
@@ -167,7 +167,7 @@
 
 
 <!-- 关于我们 -->
-<div class="sap mb-4">关于我们</div>
+<div class="sap fw-bolder font-monospace mb-5">关于我们</div>
 <div class="b-example-divider"></div>
 <footer class="py-2">
 <div class="container-fluid">
