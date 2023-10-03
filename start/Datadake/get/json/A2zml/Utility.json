@@ -140,5 +140,65 @@
      "intro": "免费版只有基础功能"
            }    
     ]        
+       },{
+       "classification": "安卓APP",
+       "content": [
+       {
+       "title": "Wallpaper Engine",
+       "url": "https://www.wallpaperengine.io/android/zh-hans",
+       "intro": "Android 版 Wallpaper Engine"
+       },{
+       "title": "GameGuardian",
+       "url": "https://gameguardian.net/download",
+       "intro": "gg修改器"       
+       },{
+       "title": "MT管理器",
+       "url": "https://bbs.binmt.cc/forum-2-1.html",
+       "intro": "MT管理器"       
+       },{
+       "title": "Via浏览器",
+       "url": "https://viayoo.com/zh-cn/",
+       "intro": "简洁轻快的浏览器"       
+       }
+       
+       ]
+       },{
+       "classification": "系统安装",
+       "content": [
+       {
+       "title": "微PE工具箱",
+       "url": "https://www.wepe.com.cn/download.html",
+       "intro": "化繁为简，小材大用，一键安装，极速启动。"       
+       },{
+       "title": "Ventoy",
+       "url": "https://www.ventoy.net/cn/index.html",
+       "intro": "新一代多系统启动U盘解决方案"       
+       }
+       ]              
+       },{
+       "classification": "拓展程序",
+       "content": [
+       {
+       "title": "Chrome 应用商店",
+       "url": "https://chrome.google.com/webstore",
+       "intro": "Chrome 应用商店 扩展程序"       
+       },{
+       "title": "Edge 外接程序",
+       "url": "https://microsoftedge.microsoft.com/",
+       "intro": "Edge 外接程序"       
+       },{
+       "title": "Firefox 附加组件",
+       "url": "https://addons.mozilla.org/zh-CN/firefox/",
+       "intro": "Firefox 附加组件"       
+       },{
+       "title": "Tampermonkey",
+       "url": "https://www.tampermonkey.net/",
+       "intro": "Tampermonkey"       
+       },{
+       "title": "Greasy Fork",
+       "url": "https://greasyfork.org/zh-CN",
+       "intro": "Greasy Fork"       
+       }
+       ]              
        }
 ]
