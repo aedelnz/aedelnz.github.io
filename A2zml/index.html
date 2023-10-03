@@ -10,236 +10,125 @@
 <link rel="stylesheet" href="../start/index.css"/>
 <link rel="stylesheet" href="../start/mdui/css/mdui.min.css"/>
 <link rel="stylesheet" href="../start/bootstrap/css/bootstrap.min.css"/>
+<script src="../start/jquery/jquery.min.js"></script>
 <script src="../start/origin.js"></script>
-<script src="../start/mdui/js/mdui.min.js"></script>
-<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 <style>
+#背景 {width: 100%;background-image: url('v2/bGtrs.jpeg');background-position: center;background-repeat: no-repeat;background-size: cover;}
+#背景 article {background-color: rgba(255, 255, 245, 0.6);border-radius: 16px;color: white;}
 li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
 </style>
 </head>
-<body class="mdui-appbar-with-toolbar mdui-drawer-body-left fw-bold">
+<body class="mdui-drawer-body-left fw-bold">
 
-<!-- 主体 -->
-<main class="container">
-<!-- 侧导航栏 -->
-<div class="mdui-drawer" id="left-drawer">
-<div class="mdui-hidden-sm-up mb-3">
-<div class="mdui-toolbar">
-<div class="mdui-typo-title">爱莫能助</div>
-<div class="mdui-toolbar-spacer"></div>
-<button class="mdui-btn" mdui-drawer-close><i class="mdui-icon material-icons">close</i></button>
-</div>
-</div>
-<div class="px-3">
-<div class="mdui-list" id="Navs"></div>
-</div>
-</div>
-<!-- 主状态显示 -->
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar mdui-color-white">
-<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">format_align_left</i></a>
-<div class="mdui-typo-title">爱莫能助</div>
-<div class="mdui-toolbar-spacer"></div>
-<a class="fw-bold" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
-<a class="fw-bold" href="/A2zml/v2/">魔法</a>
-<a class="fw-bold" href="/#友情链接">友连</a>
-</div>
-</div>
-<!-- 搜索栏 -->
-<div class="mb-3"></div>
-<div class="text-center mb-3">
+<!--###################### 搜索引擎 ######################-->
+<section id="背景" class="card-group mdui-valig mdui-p-a-5">
+<article class="mdui-center p-3 mdui-p-x-5">
 <nav>
 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-<button class="nav-link text-black active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Google</button>
-<button class="nav-link text-black" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Bing</button>
-<button class="nav-link text-black" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">GitHub</button>
+<button class="nav-link text-black active" data-bs-toggle="tab" data-bs-target="#bing" type="button" role="tab" aria-controls="bing" aria-selected="false">Bing</button>
+<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#baidu" type="button" role="tab" aria-controls="baidu" aria-selected="false">百度</button>
+<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#google" type="button" role="tab" aria-controls="google" aria-selected="true">Google</button>
+<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#github" type="button" role="tab" aria-controls="github" aria-selected="false">GitHub</button>
 </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-<form action="https://www.google.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control" name="q"></div>
-</form>
-</div>
-<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+<div class="tab-pane fade show active" id="bing" tabindex="0">
 <form action="https://www.bing.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control" name="q"></div>
+<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
 </form>
 </div>
-<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+<div class="tab-pane fade" id="baidu" tabindex="0">
+<form action="https://www.baidu.com/s" method="get">
+<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="wd"></div>
+</form>
+</div>
+<div class="tab-pane fade" id="google" tabindex="0">
+<form action="https://www.google.com/search" method="get">
+<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
+</form>
+</div>
+<div class="tab-pane fade" id="github" tabindex="0">
 <form action="https://github.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control" name="q"></div>
+<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
 </form>
 </div>
 </div>
-</div>
-</div>
-<!-- 第二导航 -->
-<div class="accordion accordion-flush" id="accordionFlushExample">
-<div class="accordion-item">
-<h2 class="accordion-header" id="flush-headingOne">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> 第二导航，浏览器优化工具。</button>
-</h2>
-<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-<style>
-.bd-callout{padding:1.25rem;margin-top:1.25rem;margin-bottom:1.25rem;color:#087990;background-color:#cff4fc;border-left:0.25rem solid #9eeaf9}.bd-callout-info{--bd-callout-color:#087990;--bd-callout-bg:#cff4fc;--bd-callout-border:#9eeaf9}
-</style>
-<div class="bd-callout bd-callout-info">
-温馨提醒:以下网站均为网络收集，大多数网站存有广告，建议开启广告屏蔽功能，开启广告屏蔽体验会更好！
-<strong>广告屏蔽插件推荐:(<mark><a href="https://adguard.com/zh_cn/products.html">AdGuard </a></mark>、<mark><a href="https://adblockplus.org/zh_CN/download">Adblock Plus</a></mark> 度娘搜索。)</strong>
-</div>
-<!-- 用户脚本 -->
-<div class="p-3">
-<div class="fs-6 text-wrap">Userscript.Zone 搜索</div>
-<p><a class="text-decoration-none" href="https://www.userscript.zone/?utm_source=tm.net&amp;utm_medium=scripts">Userscript.Zone 搜索</a> 是一个新网站，允许通过输入合适的URL或域来搜索用户脚本。</p>
-<ul>
-<li><i class="bi bi-caret-right"></i> 大量的脚本资源</li>
-<li><i class="bi bi-caret-right"></i> 很容易找到合适的用户脚本</li>
-<li><i class="bi bi-caret-right"></i> 仅显示受审核的用户脚本页面或至少具有注释功能的页面中的用户脚本</li>
+</article>
+</section>
+
+<!--###################### 导航 ######################-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<div class="container-fluid">
+<a class="mdui-hidden-sm-up mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">format_align_left</i></a>
+<a class="navbar-brand" href="#">爱莫能助</a>
+<button class="navbar-toggler mdui-btn mdui-btn-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<i class="mdui-icon material-icons"  style="font-size: 1.5rem;">format_list_bulleted</i>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item"><a class="fw-bold nav-link active_a" href="#动漫专区">默认专区</a></li>
+<li class="nav-item"><a class="fw-bold nav-link active_a" href="#软件大全">软件大全</a></li>
 </ul>
-<div class="fs-6 text-wrap">GreasyFork (油叉)</div>
-<p><a class="text-decoration-none" href="https://greasyfork.org/">GreasyFork</a> 或许是最受欢迎的后起之秀了。它由 Jason Barnabe 创建,Jason Barnabe 同时也是<a class="text-decoration-none" href="https://userstyles.org/">Stylish</a> 网站的创办者,在其储存库中有大量的脚本资源。</p>
-<ul>
-<li><i class="bi bi-caret-right"></i> 大量的脚本资源</li>
-<li><i class="bi bi-caret-right"></i> 拥有可以从 Github 中进行脚本同步的功能</li>
-<li><i class="bi bi-caret-right"></i> 非常活跃的<a class="text-decoration-none" href="https://github.com/JasonBarnabe/greasyfork">开放源代码发展模式</a></li>
+<div class="mdui-toolbar-spacer"></div>
+<div class="fw-bold mdui-divider"></div>
+<ul class="list-group list-group-flush d-flex navbar-nav mb-2">
+<li class="nav-item"><a class="nav-link text-black-50" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a></li>
+<li class="nav-item"><a class="nav-link text-black-50" href="/A2zml/v2/">魔法</a></li>
+<li class="nav-item"><a class="nav-link text-black-50" href="/#友情链接">友连</a></li>
 </ul>
-<div class="fs-6 text-wrap">OpenUserJS</div>
-<p><a class="text-decoration-none" href="https://openuserjs.org/">OpenUserJS</a>继 GreasyFork 之后开始创办。它由 Sizzle McTwizzle 创建,同样地,在其储存库中也拥有大量的脚本资源。</p>
-<ul>
-<li><i class="bi bi-caret-right"></i> 拥有可以从 Github、fork scripts 中进行脚本同步的功能</li>
-<li><i class="bi bi-caret-right"></i> 非常活跃的<a href="https://github.com/OpenUserJs/OpenUserJS.org">开放源代码发展模式</a></li>
-</ul>
-<div class="fs-6 text-wrap">GitHub/要點</div>
-<p>你可以<a class="text-decoration-none" href="https://gist.github.com/search?l=JavaScript&amp;o=desc&amp;q=%22%3D%3DUserScript%3D%3D%22&amp;s=updated">在 Github 和 Gist 中 搜索脚本资源</a>。</p>
 </div>
-<!-- 软件下载 -->
-<div class="mdui-tab" mdui-tab>
-<a href="#Desktop_PC" class="mdui-ripple">桌面端（PC）</a>
-<a href="#Mobile_Android" class="mdui-ripple">手机端（Android）</a>
-<a href="#Mobile_iOS" class="mdui-ripple">手机端（iOS）</a>
+</div>
+</nav>
+
+<!--###################### 抽屉导航栏 ######################-->
+<div class="mdui-drawer" id="left-drawer">
+<div class="mdui-hidden-sm-up mb-3">
+<div class="mdui-toolbar"><div class="fs-1 fw-bold font-monospace">爱莫能助</div><div class="mdui-toolbar-spacer"></div><button type="button" class="btn-close" aria-label="Close" mdui-drawer-close></button></div>
+</div>
+<div id="动漫专区" class="px-1 page">
+<div class="mdui-m-t-5 mdui-list" id="Animation_Zone_a"></div>
+</div>
+<div id="软件大全" class="px-1 page">
+<div class="mdui-m-t-5 mdui-list" id="Utility_a"></div>
+</div>
 </div>
 
-<div id="Desktop_PC" class="">
-<ul>
-<li>Chrome: <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> or <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
-<li>Firefox: <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>, <a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a>, or <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
-<li>Safari: <a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> or <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
-<li>Microsoft Edge: <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd">Tampermonkey</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao">Violentmonkey</a></li>
-<li>Opera: <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/">Tampermonkey</a> or <a href="https://violentmonkey.github.io/get-it/">Violentmonkey</a></li>
-<li>Maxthon: <a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
-<li>AdGuard: (no additional software required)</li>
+<!--###################### 吾主 ######################-->
+<section id="动漫专区" class="page">
+<article id="Animation_Zone"></article>
+</section>
+<section id="软件大全" class="page">
+<article id="Utility"></article>
+</section>
+
+<!--###################### footer ######################-->
+<footer class="container-fluid">
+<div class="fw-bold d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<div class="col-md-4 d-flex align-items-center">
+<span class="mb-1 mb-md-0 text-muted">&copy; 2023 爱莫能助 All rights reserved.</span>
+</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+<li class="ms-1 font-monospace mdui-typo-body-1-opacity">由「<a class="text-muted" href="#">机械极地馆</a>」提供技术支持</li>
 </ul>
 </div>
-<div id="Mobile_Android" class="">
-<ul>
-<li>Firefox：<a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a>、<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Tampermonkey</a> 或 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/">Violentmonkey</a></li>
-<li>Maxthon：<a href="http://extension.maxthon.com/detail/index.php?view_id=1680">Violentmonkey</a></li>
-<li>Dolphin：<a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin">Tampermonkey</a></li>
-<li>UC：<a href="https://www.tampermonkey.net/?browser=ucweb&amp;ext=dhdg">Tampermonkey</a></li>
-<li>Kiwi：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> 或 <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a></li>
-<li><a href="https://www.xbext.com">X浏览器</a></li>
-<li><a href="https://www.bookmarkearth.com/download/app">书签地球</a></li>
-<li><a href="http://mbrowser.nr19.cn/">M浏览器</a></li>
-<li><a href="https://www.lemurbrowser.com/">狐猴浏览器</a>：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li>
-</ul>
-</div>
-<div id="Mobile_iOS" class="">
-<ul>
-<li>Safari：<a href="http://tampermonkey.net/?browser=safari">Tampermonkey</a> 或 <a href="https://apps.apple.com/app/userscripts/id1463298887">Userscripts</a></li>
-<li><a href="https://gear4.app/">Gear</a>：（不需要其他软件）</li>
-</ul>
-</div>
-<div class="accordion-body">
-<p class="font-monospace">
-一些还不错的查询工具：
-<a class="badge text-bg-light text-decoration-underline" href="https://www.reg007.com/">REG007</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://monitor.firefox.com/" >火狐监视器</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://haveibeenpwned.com/" >我被骗了吗？</a>
-</p>
-<p class="mdui-typo-caption">
-ChatGPT镜像：
-<a class="badge text-bg-light text-decoration-underline" href="https://supremes.pro/">1号镜像</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://chat.bnu120.space/" >2号镜像</a>
-<a class="badge text-bg-light text-decoration-underline" href="http://chat.68686.ltd/" >3号镜像</a>
-</p>
-<p class="font-monospace">
-临时网络传输工具：
-<a class="badge text-bg-light text-decoration-underline" href="https://snapdrop.net/">局域网传输</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://www.wenshushu.cn/">文件叔叔</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://airportal.cn/">AirPortal 空投快传</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://anonfiles.com">匿名文件上传</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://www.lanzou.com/">蓝奏·云存储</a>
-</p>
-<p class="font-monospace">
-镜像：
-<a class="badge text-bg-light text-decoration-underline" href="https://scholar.chongbuluo.com/" >学术搜索</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://ac.scmor.com/" >谷歌学术镜像</a>
-</p>
-<p class="font-monospace">
-临时邮箱注册：
-<a class="badge text-bg-light text-decoration-underline" href="http://24mail.chacuo.net/" target="_blank">24小时临时邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://www.guerrillamail.com/zh/inbox" target="_blank">临时邮件系统</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://www.moakt.com/zh/" target="_blank">临时邮箱专业服务</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://tempmail.cn/" target="_blank">临时邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://smailpro.com/" target="_blank">临时邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://mail.tm/zh/" target="_blank">临时邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://bonds.id" target="_blank">临时电子邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://etempmail.com/" target="_blank">临时邮箱</a>
-<a class="badge text-bg-light text-decoration-underline" href="https://www.emailnator.com/" target="_blank">临时邮箱</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-<!-- 导航主体列表 -->
-<div id="Cote"></div>
+</footer>
+
+<!--###################### script ######################-->
 <script>
-var $ = mdui.$;
-$.ajax({
-url:"./data.json",
-method: "GET",
-dataType: "json",
-success: function(data){
-var Navs=`<a href="/" class="mdui-list-item fs-3 mdui-ripple">返回首页</a>`;
-$.each(data,function(i,n){    
-Navs+=`<a href="#`+n.classification+`" class="mdui-list-item fs-3 mdui-ripple">`+n.classification+`</a>`;
+$("#软件大全").hide();
+$(".active_a").on('click', function (e){e.preventDefault();var target=$(this).attr("href");$(".page").hide();$(target).show();});
+
+$.getJSON('../start/Datadake/get/json/A2zml/Animation_Zone.json', function(data) {
+$.each(data,function(i,n){var str =`<a class="mdui-list-item mdui-ripple" href="#`+n.classification+`">`+n.classification+`</a>`;$('#Animation_Zone_a').append(str);});
+$.each(data,function(i,n){var str =`<div class="container-fluid mdui-m-y-1 mb-5"><div class="row align-items-center"><p class="fs-3 text-start">`+n.classification+`</p><div id="`+n.classification+`"></div>`;$.each(n.content,function(i,n){str+=`<div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="mdui-hoverable"><div class="mdui-grid-tile"><li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple"><a target="_blank" class="nav-link active" href="/go.html#tpurl=`+n.url+`" title="`+n.title+`"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder font">`+n.title+`</div><div class="mdui-list-item-text mdui-list-item-one-line font-monospace">`+n.intro+`</div></div></a></li></div></div></div>`;});str+=`</div></div>`;$("#Animation_Zone").append(str);});
 });
-$('#Navs').append(Navs);
-var Cote=``;
-$.each(data,function(i,n){    
-Cote+=`<div class="mb-4">
-<div class="mdui-row-xs-2 mdui-row-sm-4 mdui-row-md-5 mdui-row-lg-6 mdui-row-xl-7 mdui-grid-list">
-<ul id="{{classification}}" class="mdui-list">
-<p class="fs-3 text-start">`+n.classification+`</p>
-<div id="`+n.classification+`"></div>`;
-$.each(n.content,function(i,n){    
-Cote+=`<div class="mdui-col">
-<div class="mdui-hoverable">
-<div class="mdui-grid-tile">
-<li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple">
-<a target="_blank" class="nav-link active" href="/go.html#tpurl=`+n.url+`" title="`+n.title+`">
-<div class="mdui-list-item-content">
-<div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder font">`+n.title+`</div>
-<div class="mdui-list-item-text mdui-list-item-one-line font-monospace">`+n.intro+`</div>
-</div>
-</a>
-</li>
-</div>
-</div>
-</div>`;
-});
-Cote+=`</ul>
-</div>
-</div>`;
-});
-$('#Cote').append(Cote);
-}
+
+$.getJSON('../start/Datadake/get/json/A2zml/Utility.json', function(data) {
+$.each(data,function(i,n){var str =`<a class="mdui-list-item mdui-ripple" href="#`+n.classification+`">`+n.classification+`</a>`;$('#Utility_a').append(str);});
+$.each(data,function(i,n){var str =`<div class="container-fluid mdui-m-y-1 mb-5"><div class="row align-items-center"><p class="fs-3 text-start">`+n.classification+`</p><div id="`+n.classification+`"></div>`;$.each(n.content,function(i,n){str+=`<div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="mdui-hoverable"><div class="mdui-grid-tile"><li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple"><a target="_blank" class="nav-link active" href="/go.html#tpurl=`+n.url+`" title="`+n.title+`"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder font">`+n.title+`</div><div class="mdui-list-item-text mdui-list-item-one-line font-monospace">`+n.intro+`</div></div></a></li></div></div></div>`;});str+=`</div></div>`;$("#Utility").append(str);});
 });
 </script>
-<footer class="mdui-typo">
-<b>Copyright © 2020<script>document.write(' - ' + (new Date()).getFullYear())</script> JIXIEJIDIGUAN ナビ姫.</b>
-</footer>
-</main>
+<script src="../start/mdui/js/mdui.min.js"></script>
+<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
