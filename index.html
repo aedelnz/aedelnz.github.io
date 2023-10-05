@@ -243,13 +243,13 @@ $("#project_list").append(str);
 // 动漫收藏
 $.getJSON('./start/Datadake/get/json/TENCENT_COMIC.json', function(data) {
 $.each(data,function(i,n){
-var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
+var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img data-src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
 $("#Guoman").append(str);
 });
 });
 $.getJSON('./start/Datadake/get/json/Bilibili.json', function(data) {
 $.each(data,function(i,n){
-var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
+var str =`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="mdui-grid-tile"><img data-src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;
 $("#Guoman").append(str);
 });
 });
@@ -259,7 +259,7 @@ $.getJSON('./start/Datadake/get/json/Links.json', function(data) {
 function shuffleArray(array){var currentIndex=array.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex--;temporaryValue=array[currentIndex];array[currentIndex]=array[randomIndex];array[randomIndex]=temporaryValue}return array}
 shuffleArray(data.Links);
 $.each(data.Links,function(i,n){
-var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="ratio text-white-50 ratio-1x1"><div class="mdui-valign text-center mdui-grid-tile"><img class="mdui-center rounded img-fluid img-thumbnail mdui-img-rounded" src="`+n.img+`"/></div></div><div class="mdui-hoverable ms-1 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold font-monospace text-truncate mdui-p-y-1">`+n.title+`</div></div><div class="mdui-divider bg-white"></div></div>`;
+var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg text-truncate mb-3" onclick="window.location.replace('`+n.url+`');" title="`+n.title+`"><div class="ratio text-white-50 ratio-1x1"><div class="mdui-valign text-center mdui-grid-tile"><img class="mdui-center rounded img-fluid img-thumbnail mdui-img-rounded" data-src="`+n.img+`"/></div></div><div class="mdui-hoverable ms-1 me-auto" onclick="window.location.replace('`+n.url+`');"><div class="fw-bold font-monospace text-truncate mdui-p-y-1">`+n.title+`</div></div><div class="mdui-divider bg-white"></div></div>`;
 $("#Links").append(str);
 });
 var strs=`<table class="table bg-dark bg-gradient"><thead><tr><th class="text-white">站点名称</th><th class="text-white">站点链接</th><th class="text-white">删除时间</th><th class="text-white">删除原因</th></tr></thead><tbody class="table-group-divider">`;
@@ -313,6 +313,9 @@ $(document).on('click', function() {
 $('#context-menu').hide();
 });
 });
+
+// 0000
+$(document).ready(function() {$('img').each(function() {var image = $(this);var src = image.data('src');var imgElement = new Image();imgElement.src = src;imgElement.onload = function() {image.attr('src', src);}});});
 </script>
 <script src="./start/mdui/js/mdui.min.js"></script>
 <script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
