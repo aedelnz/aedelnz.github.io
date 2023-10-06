@@ -206,25 +206,22 @@
 <div id="context-menu" class="mdui-list" style="position: absolute; display: none;">
 <a href="/" class="mdui-list-item mdui-ripple">首页</a>
 </div>
+<!-- 问候 -->
+<div class="toast-container position-fixed bottom-0 end-0 p-1">
+<div id="liveToast" class="toast bg-dark bg-gradient" role="alert" aria-live="assertive" aria-atomic="true"><div class="toast-header bg-dark text-white bg-gradient"><strong class="me-auto">每日问候</strong><small class="text-muted">3s关闭</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div><div class="toast-body"></div></div>
+</div>
+
+
 </main>
 <script>
+// 问候
+$(document).ready(function(){var currentDate=new Date();var currentDay=currentDate.getDay();var localStorageKey='lastGreetingDate';var lastGreetingDate=localStorage.getItem(localStorageKey);if(lastGreetingDate!==currentDate.toDateString()){setTimeout(function(){new bootstrap.Toast($('#liveToast').get(0)).show()},3000);$('#liveToast .toast-body').text(getGreetingMessage(currentDay));localStorage.setItem(localStorageKey,currentDate.toDateString())}function getGreetingMessage(day){var greetings=['星期日好！','星期一好！','星期二好！','星期三好！','星期四好！','星期五好！','星期六好！'];return greetings[day]}});
+
 // ####
 var progressBar=$('.progress');var progress=$('.progress-bar');var progressValue=0;$(window).on('load',function(){progressBar.hide()});var timer=setInterval(function(){progressValue+=Math.random()*10;if(progressValue>=100){clearInterval(timer);progressValue=100}progress.css('width',progressValue+'%');progress.text(progressValue.toFixed(0)+'%');if(progressValue===100){$('.invisible').removeClass('invisible')}},100);
 
 // 音乐播放
-$(document).ready(function() {
-var lyrics = [{ time: 0, text: "我的破木箱" },{ time: 3, text: "装满枯萎的花" },{ time: 5, text: "放不下 光与壤" },{ time: 9, text: "和新鲜的愿望" },{ time: 12, text: "如果能飞翔" },{ time: 15, text: "去高高的地方" },{ time: 17, text: "撒一张 梦的网" },{ time: 21, text: "收集爱的回响" },{ time: 36, text: "你也在听吗" },{ time: 39, text: "落单的孩子啊" },{ time: 41, text: "别害怕 别害怕" },{ time: 45, text: "黑夜不会太长" },{ time: 48, text: "悬崖上的花" },{ time: 51, text: "让我为你摘下" },{ time: 53, text: "数一瓣 落一瓣" },{ time: 57, text: "就少一朵忧伤" },{ time: 60, text: "绿草和砂砾没有嘴巴" },{ time: 63, text: "一定不会说谎话" },{ time: 66, text: "他们让风提醒我有道光" },{ time: 72, text: "落在我的肩膀" },{ time: 76, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 81, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },{ time: 87, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },{ time: 93, text: "约好啦 等我们都长大 再次遇见 要比现在更美" },{ time: 111, text: "一千个噩梦" },{ time: 114, text: "换一千个小偷" },{ time: 116, text: "够不够 够不够" },{ time: 120, text: "偷走你的难过" },{ time: 124, text: "遇见那一刻" },{ time: 126, text: "就倒置了沙漏" },{ time: 128, text: "不必说 要铭刻" },{ time: 132, text: "天长还是地久" },{ time: 135, text: "都说长大后会忘记童话" },{ time: 138, text: "清醒后会忘记梦" },{ time: 141, text: "可尤其是下过雨的午后" },{ time: 147, text: "会想和你重逢" },{ time: 151, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 156, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" },{ time: 162, text: "是你吗 把头顶的雨水 编织成蓝色的屋檐" },{ time: 168, text: "约好啦 等我们都长大 再次冒险 追寻梦的蔓延" },{ time: 174, text: "谁越过一片花海" },{ time: 177, text: "谁切切朝我走来" },{ time: 180, text: "谁依然记得我未完成的心愿" },{ time: 189, text: "是你吗 头戴着花环 衔着最纯净的枝丫" },{ time: 196, text: "是你吧 撕下一缕霓裳 借我照亮 盒中之花" },{ time: 201, text: "是你吗 在某一天默默消失在春天的遥望" },{ time: 207, text: "可我呀 记得你的所有 我不会忘 我不会忘" },{ time: 213, text: "是你吗 在回家的路上 洒满月光点亮花蕊" },{ time: 219, text: "是你吧 弹奏古老和弦 赶走梦魇 伴我入睡" }];
-$(".audio").on("timeupdate", function() {
-var currentTime = Math.floor(this.currentTime);
-for (var i = 0; i < lyrics.length; i++) {
-if (lyrics[i].time === currentTime) {
-$(".lyrics").eq(0).text(lyrics[i].text); 
-$(".lyrics").eq(1).text(lyrics[i+1].text);   
-break;
-}
-}
-});
-});
+$(document).ready(function(){var lyrics=[{time:0,text:"我的破木箱"},{time:3,text:"装满枯萎的花"},{time:5,text:"放不下 光与壤"},{time:9,text:"和新鲜的愿望"},{time:12,text:"如果能飞翔"},{time:15,text:"去高高的地方"},{time:17,text:"撒一张 梦的网"},{time:21,text:"收集爱的回响"},{time:36,text:"你也在听吗"},{time:39,text:"落单的孩子啊"},{time:41,text:"别害怕 别害怕"},{time:45,text:"黑夜不会太长"},{time:48,text:"悬崖上的花"},{time:51,text:"让我为你摘下"},{time:53,text:"数一瓣 落一瓣"},{time:57,text:"就少一朵忧伤"},{time:60,text:"绿草和砂砾没有嘴巴"},{time:63,text:"一定不会说谎话"},{time:66,text:"他们让风提醒我有道光"},{time:72,text:"落在我的肩膀"},{time:76,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:81,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"},{time:87,text:"是你吗 把头顶的雨水 编织成蓝色的屋檐"},{time:93,text:"约好啦 等我们都长大 再次遇见 要比现在更美"},{time:111,text:"一千个噩梦"},{time:114,text:"换一千个小偷"},{time:116,text:"够不够 够不够"},{time:120,text:"偷走你的难过"},{time:124,text:"遇见那一刻"},{time:126,text:"就倒置了沙漏"},{time:128,text:"不必说 要铭刻"},{time:132,text:"天长还是地久"},{time:135,text:"都说长大后会忘记童话"},{time:138,text:"清醒后会忘记梦"},{time:141,text:"可尤其是下过雨的午后"},{time:147,text:"会想和你重逢"},{time:151,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:156,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"},{time:162,text:"是你吗 把头顶的雨水 编织成蓝色的屋檐"},{time:168,text:"约好啦 等我们都长大 再次冒险 追寻梦的蔓延"},{time:174,text:"谁越过一片花海"},{time:177,text:"谁切切朝我走来"},{time:180,text:"谁依然记得我未完成的心愿"},{time:189,text:"是你吗 头戴着花环 衔着最纯净的枝丫"},{time:196,text:"是你吧 撕下一缕霓裳 借我照亮 盒中之花"},{time:201,text:"是你吗 在某一天默默消失在春天的遥望"},{time:207,text:"可我呀 记得你的所有 我不会忘 我不会忘"},{time:213,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:219,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"}];$(".audio").on("timeupdate",function(){var currentTime=Math.floor(this.currentTime);for(var i=0;i < lyrics.length;i++){if(lyrics[i].time===currentTime){$(".lyrics").eq(0).text(lyrics[i].text);$(".lyrics").eq(1).text(lyrics[i+1].text);break}}})});
 
 // 页面导航
 $.getJSON('./start/Datadake/get/json/index.json', function(data) {
@@ -287,35 +284,13 @@ $("#Web_Update_log").append(str);
 });
 
 // 返回顶部
-$(document).ready(function() {
-$("#backToTop").click(function() {
-$("html, body").animate({scrollTop: 0}, "slow");
-});
-$(window).scroll(function() {
-if ($(this).scrollTop() > 450) {
-$('#backToTop').fadeIn();
-} else {
-$('#backToTop').fadeOut();
-}
-});
-});
+$(document).ready(function(){$("#backToTop").click(function(){$("html, body").animate({scrollTop:0},"slow")});$(window).scroll(function(){if($(this).scrollTop()>450){$('#backToTop').fadeIn()}else{$('#backToTop').fadeOut()}})});
 
 // 隐藏菜单
-$(document).ready(function() {
-$('#context-menu').hide();
-$(document).on('contextmenu', function(e) {
-e.preventDefault();
-var x = e.pageX;
-var y = e.pageY;
-$('#context-menu').css({'left':x,'top':y}).show();
-});
-$(document).on('click', function() {
-$('#context-menu').hide();
-});
-});
+$(document).ready(function(){$('#context-menu').hide();$(document).on('contextmenu',function(e){e.preventDefault();var x=e.pageX;var y=e.pageY;$('#context-menu').css({'left':x,'top':y}).show()});$(document).on('click',function(){$('#context-menu').hide()})});
 
 // 0000
-$(document).ready(function() {$('img').each(function() {var image = $(this);var src = image.data('src');var imgElement = new Image();imgElement.src = src;imgElement.onload = function() {image.attr('src', src);}});});
+$(document).ready(function(){$('img').each(function(){var image=$(this);var src=image.data('src');var imgElement=new Image();imgElement.src=src;imgElement.onload=function(){image.attr('src',src)}})});
 </script>
 <script src="./start/mdui/js/mdui.min.js"></script>
 <script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
