@@ -14,7 +14,6 @@
 <script src="./start/jquery/jquery.min.js"></script>
 <script src="./start/origin.js"></script>
 <style>
-.mdui-p-y-5 {overflow: hidden;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);}
 .navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
 .navbar-nav a:hover {font-size: 18px;transition: font-size 0.6s ease-in-out;}
 .sap{font-size:1.45rem;padding-top:6px;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1019;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
@@ -40,17 +39,10 @@
 #网站日志 .text-center {width: 100%;height: 100%;overflow-y: auto;position: sticky;}
 #context-menu {z-index:1020;background-color:rgba(42,45,49,0.4);backdrop-filter:saturate(10%) blur(10px);-webkit-backdrop-filter:saturate(10%) blur(10px); border-radius: 16%;}
 </style>
-<script>var progressBar=$('.progress');var progress=$('.progress-bar');var progressValue=0;$(window).on('load',function(){progressBar.hide()});var timer=setInterval(function(){progressValue+=Math.random()*1;if(progressValue>=100){clearInterval(timer);progressValue=100}progress.css('width',progressValue+'%');progress.text(progressValue.toFixed(0)+'%');if(progressValue===100){$('.invisible').removeClass('invisible')}},1);</script>
 </head>
 <body class="bg-dark text-white">
-<div class="progress fixed-bottom mb-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-<div class="d-flex justify-content-center mdui-p-x-5 mdui-p-y-5">
-<div class="btn bg-secondary" type="button" disabled><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...</div>
-</div>
-<div class="progress-bar">0%</div>
-</div>
+<main>
 
-<main class="invisible">
 
 <!-- 导航 -->
 <nav class="navbar navbar-expand-lg sticky-top">
