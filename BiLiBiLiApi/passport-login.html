@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>哔哩哔哩 - web端扫码登录</title>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="robots" content="none|noindex|noarchive|nofollow"/>
+<meta name="format-detection"  content="mail=yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<link rel="icon" href="../favicon.ico"/>
+<link rel="stylesheet" href="../start/index.css"/>
+<link rel="stylesheet" href="../start/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="../start/bootstrap/css/bootstrap.min.css"/>
+<script src="../start/jquery/jquery.min.js"></script>
+<script src="../start/jquery/jquery.qrcode.min.js"></script>
+<script src="../start/origin.js"></script>
+</head>
+<body>
+<header>
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+<a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+<span class="p-3 fs-4 fw-bolder font-monospace">哔哩哔哩</span>
+</a>
+<nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+<a class="me-3 py-2 text-dark text-decoration-none" href="/">首页</a>
+<a class="me-3 py-2 text-dark text-decoration-none" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
+<a class="me-3 py-2 text-dark text-decoration-none" href="/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5">友情链接</a>
+</nav>
+</div>
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+<h1 class="display-4 fw-normal">web端扫码登录</h1>
+<p class="fs-5 text-muted">通过API接口实现扫描登录.</p>
+</div>
+</header>
+
+
+<div class="text-center">
+</div>
+
+
+
+
+
+
+<script>
+$.get('https://passport.bilibili.com/x/passport-login/web/qrcode/generate', function(data) {
+  console.log(data);
+});
+
+</script>
+<script src="../start/mdui/js/mdui.min.js"></script>
+<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
