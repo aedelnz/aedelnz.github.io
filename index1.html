@@ -1,0 +1,287 @@
+<html lang="zh-CN">
+
+<head>
+    <title>画的个人记录</title>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="画的个人记录" />
+    <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./start/index.css" />
+    <link rel="stylesheet" href="./start/mdui/css/mdui.min.css" />
+    <link rel="stylesheet" href="./start/bootstrap/css/bootstrap.min.css" />
+    <script src="./start/jquery/jquery.min.js"></script>
+    <script src="./start/origin.js"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-secondary fixed-top">
+        <div class="container-fluid">
+            <div type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="mdui-icon material-icons">&#xe164;</i>
+            </div>
+            <div class="d-flex navbar-brand fw-bolder">画的个人记录</div>
+            <div class="site-header"></div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title"></h5>
+                    <div class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></div>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav mt-5">
+                        <li class="nav-item">
+                            <a class="nav-link fs-4 fst-normal text-dark" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">简介</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators"
+            style="position: absolute;right: 0;top: 60vh;bottom: 0;z-index: 10;display: flex;margin-right: 15%;flex-direction: row;justify-content: flex-end;">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="p-1 active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="p-1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner mb-5">
+            <div class="carousel-item active" style="overflow:hidden;height:100vh">
+                <img src="https://image.coolapk.com/picture/2023/0513/19/860675_39b192d0_6037_0786_248@930x2048.jpeg.m.jpg"
+                    style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
+                <div class="container">
+                    <div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
+                        <h1>画的个人记录</h1>
+                        <p>中在不断的尝试中完善信息</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">查看</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="overflow:hidden;height:100vh">
+                <img src="https://image.coolapk.com/picture/2023/0516/10/2519278_45e3f34f_4876_6055_364@1440x2569.jpeg.m.jpg"
+                    style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
+                <div class="container">
+                    <div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
+                        <h1>机械极地馆</h1>
+                        <p>这里是第一次相遇，也是最初的开始。</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">查看</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                class="visually-hidden">Previous</span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span><span
+                class="visually-hidden">Next</span></button>
+    </div>
+
+    <div style="border-radius: 10px;margin-bottom: 40px;margin-top: -40vh;overflow: hidden;padding: 15px 0;"></div>
+    <div class="mdui-container">
+        <div class="mdui-m-x-2 mdui-m-b-1 mdui-divider mdui-color-white"></div>
+        <h3 class="ps-3 pb-1 fs-3 fw-bolder text-light">最新动态</h3>
+        <div class="row">
+
+            <div class="col-md-8 ps-3 pe-3">
+                <article class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <h2 class="pb-2 border-bottom sticky-top">项目</h2>
+                    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                        <div class="feature col">
+                            <h3 class="fs-2">爱莫能助</h3>
+                            <p>简单的导航站</p>
+                            <a href="/A2zml" class="icon-link d-inline-flex align-items-center">点击查看</a>
+                        </div>
+                        <div class="feature col">
+                            <h3 class="fs-2">爱莫能助</h3>
+                            <p>简单的导航站</p>
+                            <a href="/A2zml" class="icon-link d-inline-flex align-items-center">点击查看</a>
+                        </div>
+                        <div class="feature col">
+                            <h3 class="fs-2">爱莫能助</h3>
+                            <p>简单的导航站</p>
+                            <a href="/A2zml" class="icon-link d-inline-flex align-items-center">点击查看</a>
+                        </div>
+                        <div class="feature col">
+                            <h3 class="fs-2">爱莫能助</h3>
+                            <p>简单的导航站</p>
+                            <a href="/A2zml" class="icon-link d-inline-flex align-items-center">点击查看</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <div class="mb-5">
+                    <h4 class="fst-italic fw-bold">项目</h4>
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3"></div>
+                </div>
+
+                <div class="mb-5">
+                    <h4 class="fst-italic fw-bold">国创动画收藏</h4>
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3" id="Animation_Collection"></div>
+                </div>
+
+                <div class="mb-5">
+                    <h4 class="fst-italic fw-bold">友情链接</h4>
+
+                    <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+                        <div class="row row-cols-1 row-cols-md-3">
+                            <div class="col"><b>友情链接申请规则</b>
+                                <p class="">1.不接受没有原创内容的站点<br>2.不接受版权问题严重的站点<br>3.全站 (强制) 使用HTTPS协议<br>4.且无影响阅读体验的广告
+                                </p>
+                            </div>
+                            <div class="col"><b>友链申请示例</b>
+                                <p class="">
+                                    本站名称：画的个人记录<br>本站介绍：其实没有你们想的那么复杂！<br>本站链接：https://jixiejidiguan.top<br>本站图片：https://jixiejidiguan.top/favicon.ico
+                                </p>
+                            </div>
+                            <div class="col"><b class="">PS:</b>
+                                <p class="">链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！<a class=""
+                                        href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">去申请友情链接</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3" id="Links"></div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 ps-3 pe-3">
+                <div class="sticky-top" style="top: 80px;">
+
+                    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <h4 class="fst-italic fw-bold">关注我们</h4>
+                        <ul class="nav flex-column list-unstyled mb-0">
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://space.bilibili.com/359155821">BILIBILI</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://pd.qq.com/s/47hncys46">QQ频道</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" target="_blank"
+                                    href="https://s.jixiejidiguan.top/Api/qr.php?text=http://weixin.qq.com/r/AByBmUXEpRjarQH690kS&size=640"
+                                    title="二维码图片">微信公众号</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                        <h4 class="fst-italic fw-bold">备案号</h4>
+                        <ul class="nav flex-column mb-0">
+                            <li class="nav-item mb-2"><a class="nav-link p-0 text-primary"
+                                    href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 text-danger"
+                                    href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 text-success" href="https://www.12377.cn/"
+                                    alt="不良信息举报中心">违法和不良信息举报中心</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="mdui-container">
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2023 机械极地馆 All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark"
+                        href="https://analytics.umami.is/share/TZcXMuSss4NRWxXF/%E7%94%BB%E7%9A%84%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95">umami</a>
+                    网站分析</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./start/mdui/js/mdui.min.js"></script>
+    <script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $.getJSON('./start/Datadake/get/json/TENCENT_COMIC.json', function (data) {
+            $.each(data, function (i, n) {
+                var str = `<div class="col">
+<a class="text-decoration-none text-black" href="`+ n.url + `">
+<div class="card shadow-sm">
+<img src="` + n.img + `" class="card-img-top" title="` + n.title + `">
+<div class="card-body font-monospace">
+<h5 class="card-title text-truncate" title="` + n.title + `">` + n.title + `</h5>
+<p class="card-text text-truncate" title="` + n.figure_desc + `">` + n.figure_desc + `</p>
+</div></a>
+</div>`;
+                $("#Animation_Collection").append(str)
+            })
+        });
+        $.getJSON('./start/Datadake/get/json/Bilibili.json', function (data) {
+            $.each(data, function (i, n) {
+                var str = `<div class="col">
+<a class="text-decoration-none text-black" href="`+ n.url + `">
+<div class="card shadow-sm">
+<img src="` + n.img + `" class="card-img-top" title="` + n.title + `">
+<div class="card-body font-monospace">
+<h5 class="card-title text-truncate" title="` + n.title + `">` + n.title + `</h5>
+<p class="card-text text-truncate" title="` + n.figure_desc + `">` + n.figure_desc + `</p>
+</div></a>
+</div>`;
+                $("#Animation_Collection").append(str)
+            })
+        });
+        // 友情链接
+        $.getJSON('./start/Datadake/get/json/Links.json', function (data) {
+            function shuffleArray(array) {
+                var currentIndex = array.length,
+                    temporaryValue, randomIndex;
+                while (0 !== currentIndex) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue
+                }
+                return array
+            }
+            shuffleArray(data.Links);
+            $.each(data.Links, function (i, n) {
+                var str = `<div class="col">
+<a class="text-decoration-none text-black" href="`+ n.url + `" title="` + n.title + `">
+<div class="card shadow-sm">
+<figure class="figure">
+<div class="text-center">
+<img src="` + n.img + `" class="figure-img card-img-top img-fluid rounded" alt="` + n.title + `" title="` + n.title + `"></div>
+
+<h5 class="p-2 fw-semibold text-truncate" title="` + n.title + `">` + n.title + `</h5>
+</figure>
+</div></a>
+</div>`;
+                $("#Links").append(str)
+            });
+        });
+        $(document).ready(function () {
+            $('img').each(function () {
+                var image = $(this);
+                var src = image.data('src');
+                var imgElement = new Image();
+                imgElement.src = src;
+                imgElement.onload = function () {
+                    image.attr('src', src)
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
