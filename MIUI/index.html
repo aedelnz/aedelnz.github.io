@@ -161,21 +161,12 @@ data.forEach(function(deviceData) {
 var cards = `<h3>${deviceData.device}</h3><div class="shadow-lg mb-5 bg-body-tertiary rounded">`;
 var deviceLists = deviceData.devicelist;
 deviceLists.forEach(function(listItem) {
-cards+= `<div class="accordion-item font-monospace">
-<h4 class="accordion-header">
-<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${listItem.titleid}op">${listItem.title}</button>
-</h4>
-<div id="${listItem.titleid}op" class="accordion-collapse collapse">
-<ul class="list-group">`;
+cards+= `<div class="accordion-item font-monospace"><h4 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${listItem.titleid}op">${listItem.title}</button></h4><div id="${listItem.titleid}op" class="accordion-collapse collapse"><ul class="list-group">`;
 var deviceList = listItem.list;
 deviceList.forEach(function(device) {
 cards += `<li id="${device.href}" class="list-group-item fw-bold" title="${device.text}">${device.text}</li>`;
 });
-cards+=`
-</ul>
-</div>
-</div>
-`;
+cards+=`</ul></div></div>`;
 });
 cards+=`</div>`;
 accordion.append(cards);
@@ -222,20 +213,11 @@ Linux/MacOS : /etc/hosts<br><br>
 <div class="shadow-lg mb-5 bg-body-tertiary rounded accordion accordion-flush" id="accordionFlushExample">`;
 $.each(data.branches, function(i, item) {
 card += `<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${item.cnname}" aria-expanded="false">${item.cnname}</button>
-</h2>
+<h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${item.cnname}" aria-expanded="false">${item.cnname}</button></h2>
 <div id="${item.cnname}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 <div class="card mdui-table-fluid">
 <table class="table table-hover table-borderless table-responsive mdui-text-truncate">
-<thead class="fw-bolder mdui-color-red">
-<tr>
-<th scope="col">米柚</th>
-<th scope="col">安卓</th>
-<th scope="col">卡刷包</th>
-<th scope="col">线刷包</th>
-</tr>
-</thead>
+<thead class="fw-bolder mdui-color-red"><tr><th scope="col">米柚</th><th scope="col">安卓</th><th scope="col">卡刷包</th><th scope="col">线刷包</th></tr></thead>
 <tbody class="table-group-divider">`;
 $.each(item.links, function(i, n) {
 var recovery = n.recovery;
@@ -264,34 +246,26 @@ card += `</tbody>
 card += `</div></div>`;
 accordionop.append(card);
 });
-// ######################### xiaomirommodal #########################
 });
 });
-// ######################### xiaomirommodal #########################
 
 
 
+// ######################### Magisk #########################
 $.get('../start/Datadake/get/json/MIUI/Magisk.json', function(data) {
 var articleHTML = `<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">`;
 data.data.localSearchRepositories.store.forEach(function(article) {
-articleHTML += `<div class="col mb-3">
-<h3 class="fs-2">${article.title}</h3>
-<p class="text-truncate" title="${article.content}">${article.content}</p>
-<a href="${article.zip_url}" class="icon-link d-inline-flex align-items-center" target="_blank">下载</a>
-</div>`;
+articleHTML += `<div class="col mb-3"><h3 class="fs-2">${article.title}</h3><p class="text-truncate" title="${article.content}">${article.content}</p><a href="${article.zip_url}" class="icon-link d-inline-flex align-items-center" target="_blank">下载</a></div>`;
 });
 articleHTML+=`</div>`;
 $("#pills-Magisk").append(articleHTML);
 });
+
+// ######################### Xposed #########################
 $.get('../start/Datadake/get/json/MIUI/Xposed.json', function(data) {
 var articleHTML = `<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">`;
 data.data.localSearchRepositories.store.forEach(function(article) {
-articleHTML += `<div class="col mb-3">
-<h3 class="fs-2">${article.title}</h3>
-<p class="text-truncate" title="${article.content}">${article.content}</p>
-<a href="${article.Website}" class="icon-link d-inline-flex align-items-center" target="_blank">Website</a>
-<a href="${article.Source}" class="icon-link d-inline-flex align-items-center">Source</a>
-</div>`;
+articleHTML += `<div class="col mb-3"><h3 class="fs-2">${article.title}</h3><p class="text-truncate" title="${article.content}">${article.content}</p><a href="${article.Website}" class="icon-link d-inline-flex align-items-center" target="_blank">Website</a><a href="${article.Source}" class="icon-link d-inline-flex align-items-center">Source</a></div>`;
 });
 articleHTML+=`</div>`;
 $("#pills-Xposed").append(articleHTML);
