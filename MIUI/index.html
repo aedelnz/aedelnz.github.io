@@ -5,407 +5,229 @@
 <title>MIUI ＆ ROM 集合</title>
 <meta name="referrer" content="no-referrer"/>
 <meta name="robots" content="none|noindex|noarchive|nofollow"/>
-<meta name="format-detection"  content="mail=yes"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="format-detection"content="mail=yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>const MAX_RETRIES=3;function reloadResource(element){const src=element.src||element.href;console.log(`尝试重新加载资源：${src}`);const newElement=document.createElement(element.tagName.toLowerCase());Array.from(element.attributes).forEach(attr=>{newElement.setAttribute(attr.name,attr.value)});const retries=parseInt(element.dataset.retries||'0',10)+1;if(retries<=MAX_RETRIES){newElement.dataset.retries=retries.toString();newElement.onerror=element.onerror;newElement.onload=()=>{console.log(`资源加载成功：${src}`)};element.parentNode.replaceChild(newElement,element);if(element.tagName.toLowerCase()==='script'){newElement.src=src}else if(element.tagName.toLowerCase()==='link'){newElement.href=src}}else{console.error(`资源加载失败超过最大重试次数：${src}`)}}window.addEventListener('error',function(e){e.preventDefault();if((e.target.tagName==='SCRIPT'||e.target.tagName==='LINK')&&e.target.src){reloadResource(e.target)}},true);</script>
 <link rel="icon" type="image/x-icon" href="https://cia.sec.miui.com/miui-14-homepage/Group-427318442.png"/>
 <link rel="stylesheet" href="../start/index.css"/>
 <link rel="stylesheet" href="../start/mdui/css/mdui.min.css"/>
 <link rel="stylesheet" href="../start/bootstrap/css/bootstrap.min.css"/>
 <script src="../start/origin.js"></script>
+<script src="../start/jquery/jquery.min.js"></script>
+</head>
+<body>
+<div class="px-5 py-5 bg-body-secondary text-center">
+<img src="https://cia.sec.miui.com/miui-14-homepage/home-pc-text.svg" class="img-fluid rounded" alt=""/>
+<h1 class="display-5 fw-bold">Xiao Mi & 小米（ROM）</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">ROM来源于小米官方跟网络收集，ROM内容更新看看站长心情。谢谢</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<button type="button" class="btn btn-success btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#xiaomirommodal">官方ROM下载</button>
+<button type="button" class="btn btn-light btn-lg px-4 gap-3" disabled>第三方ROM下载 待开发</button>
+</div>
+</div>
+</div>
+<div class="px-5 py-5 bg-body text-center">
+<img src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/newBrand/20220505/c7a0f9863b6072c96b7e2b8cbadaffd5.svg" class="img-fluid rounded mb-4" alt=""/>
+<h1 class="display-5 fw-bold">VIVO & 系统升级（ROM）</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">系统升级ROM来源于VIVO官方跟网络收集，ROM内容更新看看站长心情。谢谢</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<button type="button" class="btn btn-warning btn-lg px-4 gap-3">官方ROM下载</button>
+<button type="button" class="btn btn-secondary btn-lg px-4 gap-3" disabled>第三方ROM下载 待开发</button>
+</div>
+</div>
+</div>
+<div class="px-5 py-5 bg-warning-subtle text-center">
+<img src="https://cia.sec.miui.com/miui-14-homepage/capability_icon9.png?imageMogr2/thumbnail/100x/quality/80/format/webp" class="img-fluid rounded mb-4" alt=""/>
+<h1 class="display-5 fw-bold">Magisk & Xposed （仓库）</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">网站内容来源于互联网收集</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<button type="button" class="btn btn-success btn-lg px-4 gap-3"  data-bs-toggle="modal" data-bs-target="#Magisk_Xposed">打开查看</button>
+</div>
+</div>
+</div>
+<div class="px-5 py-5 bg-danger-subtle text-center">
+<h1 class="fs-1">UnlockTool<span class="text-primary">.Net</span></h1>
+<h1 class="display-5 fw-bold">UnlockTool - 解锁工具</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">UnlockTool - Flash - Unlock Bootloader Xiaomi - Without Credit (Find My Phone ON)</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<a class="btn btn-info btn-lg px-4 gap-3" href="https://unlocktool.net/">点击前往官网</a>
+</div>
+</div>
+</div>
+<div class="px-5 py-5 bg-info-subtle text-center">
+<img src="https://cia.sec.miui.com/miui-14-homepage/capability_icon21.png?imageMogr2/thumbnail/100x/quality/80/format/webp" class="img-fluid rounded mb-4" alt=""/>
+<h1 class="display-5 fw-bold">第三方网站推荐</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">网站内容来源于互联网收集</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<button type="button" class="btn btn-primary btn-lg px-4 gap-3"  data-bs-toggle="modal" data-bs-target="#Third_Party_Website_Recommendations">打开查看</button>
+</div>
+</div>
+</div>
+
+<!-- ######################### xiaomirommodal ######################### -->
+<div class="modal fade" id="xiaomirommodal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="container mt-4 modal-title fs-3">Xiao Mi & 小米（ROM）仓库</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="container mt-4">
+<div id="deviceList" class="accordion accordion-flush">
+<h1>设备列表</h1>
+</div>
+<div id="deviceListop"></div>
+</div>
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button></div>
+</div>
+</div>
+</div>
+
+<!-- ######################### Magisk_Xposed ######################### -->
+<div class="modal fade" id="Magisk_Xposed" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="container mt-4 modal-title fs-3">Magisk & Xposed （仓库）</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="container mt-4">
+<ul class="nav nav-pills mb-3">
+<li class="nav-item" role="presentation"><button class="nav-link active" id="pills-Magisk-tab" data-bs-toggle="pill" data-bs-target="#pills-Magisk" type="button" role="tab" aria-controls="pills-Magisk" aria-selected="true">Magisk</button></li>
+<li class="nav-item" role="presentation"><button class="nav-link" id="pills-Xposed-tab" data-bs-toggle="pill" data-bs-target="#pills-Xposed" type="button" role="tab" aria-controls="pills-Xposed" aria-selected="false">Xposed</button></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="pills-Magisk" role="tabpanel" aria-labelledby="pills-Magisk-tab" tabindex="0"></div>
+<div class="tab-pane fade" id="pills-Xposed" role="tabpanel" aria-labelledby="pills-Xposed-tab" tabindex="0"></div>
+</div>
+</div>
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button></div>
+</div>
+</div>
+</div>
+
+<!-- ######################### Third_Party_Website_Recommendations ######################### -->
+<div class="modal fade" id="Third_Party_Website_Recommendations" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-fullscreen">
+<div class="modal-content">
+<div class="modal-header">
+<h1 class="container mt-4 modal-title fs-3">第三方网站推荐</h1>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="container mt-4">
+<div id="Third_Party_Website_Recommendationsop" class="accordion accordion-flush"></div>
+</div>
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button></div>
+</div>
+</div>
+</div>
+
 <script src="../start/mdui/js/mdui.min.js"></script>
 <script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body class="mdui-appbar-with-toolbar mdui-drawer-body-left">
-
-<div class="mdui-drawer" id="left-drawer">
-<div class="mdui-list">
-<a href="/" class="mdui-list-item fs-3 mdui-ripple">返回首页</a>
-<a href="#MIUI" class="mdui-list-item fs-3 mdui-ripple">MIUI ROM</a>
-<a href="#Xposed" class="mdui-list-item fs-3 mdui-ripple">Xposed 仓库</a>
-<a href="#Magisk" class="mdui-list-item fs-3 mdui-ripple">Magisk 仓库</a>
-<a href="#Third-party-referrals" class="mdui-list-item fs-3 mdui-ripple">第三方推荐</a>
-</div>
-</div>
-
-
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
-<div class="mdui-toolbar text-bg-light">
-<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">menu</i></a>
-<div class="mdui-typo-title">MIUI的ROM仓库</div>
-<div class="mdui-toolbar-spacer"></div>
-</div>
-</div>
-<div class="mb-3"></div>
-
-<!--########################## 第一页面 ##########################-->
-<div id="MIUI">
-<div class="mdui-container-fluid" id="miui-invisible">
-<!-- 目录开始 -->
-<div class="card mb-3">
-<div class="card-header fs-5 text-warning">小米手机</div>
-<div class="card-body">
-<div class="card-title mb-1 text-primary">小米系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mione_plus.json"> 小米手机1/1S(mione_plus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=aries.json"> 小米 2/2S(aries) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=taurus.json"> 小米 2A(taurus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pisces.json"> 小米3 移动版(pisces) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cancro.json"> 小米手机3 联通/电信/小米手机4 移动/联通/电信3G(cancro) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cancro_lte_ct.json"> 小米手机4 电信4G(cancro_lte_ct) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ferrari.json"> 小米 4i(ferrari) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=libra.json"> 小米 4C(libra) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=aqua.json"> 小米 4S(aqua) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=gemini.json"> 小米 5(gemini) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=capricorn.json"> 小米 5s(capricorn) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=natrium.json"> 小米 5s Plus(natrium) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=meri.json"> 小米 5C(meri) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tiffany.json"> 小米 5X(tiffany) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sagit.json"> 小米 6(sagit) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wayne.json"> 小米 6X(wayne) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=dipper.json"> 小米 8(dipper) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=equuleus.json"> 小米 8 屏幕指纹版(equuleus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ursa.json"> 小米 8 透明探索版(ursa) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=platina.json"> 小米 8 青春版(platina) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cepheus.json"> 小米 9/透明探索版(cepheus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=davinci.json"> 小米 9T(davinci) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=raphael.json"> 小米 9T Pro(raphael) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pyxis.json"> 小米 9 Lite(pyxis) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=crux.json"> 小米 9 Pro 5G(crux) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=umi.json"> 小米 10(umi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cmi.json"> 小米 10 Pro(cmi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=monet.json"> 小米 10 Lite(monet) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vangogh.json"> 小米 10 青春版(vangogh) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cas.json"> 小米 10 至尊纪念版(cas) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=apollo.json"> 小米 10T/Pro(apollo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=gauguin.json"> 小米 10T Lite/小米 10i(gauguin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=thyme.json"> 小米 10S(thyme) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=venus.json"> 小米 11(venus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=haydn.json"> 小米 11i/小米 11X Pro(haydn) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=alioth.json"> 小米 11X(alioth) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=courbet.json"> 小米 11 Lite 4G(courbet) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=star.json"> 小米 11 Pro/Ultra(star) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=renoir.json"> 小米 11 青春版(renoir) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=agate.json"> 小米 11T(agate) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vili.json"> 小米 11T Pro(vili) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lisa.json"> 小米 11 青春活力版(lisa) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pissarroin.json"> 小米 11i 5G 印度版(pissarroin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pissarro.json"> 小米 11i 印度快充版(pissarro) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cupid.json"> 小米 12(cupid) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=zeus.json"> 小米 12 Pro(zeus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=psyche.json"> 小米 12X(psyche) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=daumier.json"> 小米 12 Pro 天玑版(daumier) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mayfly.json"> 小米 12S(mayfly) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=unicorn.json"> 小米 12S Pro(unicorn) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=thor.json"> 小米 12S Ultra(thor) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=taoyao.json"> 小米 12 Lite(taoyao) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=plato.json"> 小米 12T(plato) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=diting.json"> 小米 12T Pro(diting) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=fuxi.json"> 小米 13(fuxi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=nuwa.json"> 小米 13 Pro(nuwa) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ishtar.json"> 小米 13 Ultra(ishtar) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米SE系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sirius.json"> 小米 8 SE(sirius) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=grus.json"> 小米 9 SE(grus) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米CC系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pyxis.json"> 小米 CC 9(pyxis) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vela.json"> 小米 CC 9 美图定制版(vela) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=laurus.json"> 小米 CC 9e(laurus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tucana.json"> 小米 CC9 Pro(tucana) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米Note系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=virgo.json"> 小米 Note 双网通版(virgo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=virgo_lte_ct.json"> 小米 Note 全网通版(virgo_lte_ct) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=leo.json"> 小米 Note 顶配版(leo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=scorpio.json"> 小米 Note 2(scorpio) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=jason.json"> 小米 Note 3(jason) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tucana.json"> 小米 Note 10/Pro(tucana) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=toco.json"> 小米 Note 10 Lite(toco) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米MAX系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=hydrogen.json"> 小米 MAX 标准版(hydrogen) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=helium.json"> 小米 MAX 高配版(helium) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=oxygen.json"> 小米 MAX 2(oxygen) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=nitrogen.json"> 小米 MAX 3(nitrogen) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米MIX系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lithium.json"> 小米 MIX(lithium) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=chiron.json"> 小米 MIX 2(chiron) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=polaris.json"> 小米 MIX 2S(polaris) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=perseus.json"> 小米 MIX 3(perseus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=andromeda.json"> 小米 MIX 3 5G(andromeda) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cetus.json"> 小米 MIX FOLD(cetus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=odin.json"> 小米 MIX 4(odin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=zizhan.json"> 小米 MIX FOLD 2(zizhan) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米Civi系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mona.json"> 小米 Civi(mona) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=zijin.json"> 小米 Civi 1S(zijin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ziyi.json"> 小米 Civi 2(ziyi) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米A系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tissot.json"> 小米 A1(tissot) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=jasmine.json"> 小米 A2(jasmine) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=daisy.json"> 小米 A2 Lite(daisy) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=laurel.json"> 小米 A3(laurel) </a>
-</p>
-<div class="card-title mb-1 text-primary">小米平板系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mocha.json"> 小米平板 1(mocha) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=latte.json"> 小米平板 2(latte) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cappu.json"> 小米平板 3(cappu) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=clover.json"> 小米平板 4/Plus(clover) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=nabu.json"> 小米平板 5(nabu) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=elish.json"> 小米平板 5 Pro Wi-Fi(elish) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=enuma.json"> 小米平板 5 Pro 5G(enuma) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=dagu.json"> 小米平板 5 Pro 12.4(dagu) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pipa.json"> 小米平板 6(pipa) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=liuqin.json"> 小米平板 6 Pro(liuqin) </a>
-</p>
-<div class="card-title mb-1 text-primary">其他小米手机：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lotus.json"> 小米 Play(lotus) </a>
-</p>
-</div>
-</div>
-<div class="card mb-3">
-<div class="card-header fs-5 text-warning">Redmi 手机</div>
-<div class="card-body">
-<div class="card-title mb-1 text-primary">Redmi系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt93007.json"> 红米 1 移动TD版(wt93007) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt98007.json"> 红米1 联通版(wt98007) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=armani.json"> 红米 1S 联通版/电信版(armani) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt93807.json"> 红米 1S 移动3G版(wt93807) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt96007.json"> 红米 1S 移动4G版(wt96007) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt86047.json"> 红米 2 移动3G版(wt86047) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt88047.json"> 红米 2 联通/电信3G版(wt88047) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt86047_pro.json"> 红米 2 移动增强版(wt86047_pro) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=wt88047_pro.json"> 红米 2 联通/电信增强版(wt88047_pro) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lte26007.json"> 红米 2A 标准版(lte26007) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ido_xhdpi.json"> 红米 3/Pro(ido_xhdpi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=land.json"> 红米 3S/X(land) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=prada.json"> 红米 4 标准版(prada) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=markw.json"> 红米 4 高配版(markw) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rolex.json"> 红米 4A(rolex) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=santoni.json"> 红米 4X(santoni) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rosy.json"> 红米 5(rosy) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=riva.json"> 红米5A(riva) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vince.json"> 红米 5 Plus(vince) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cereus.json"> 红米 6(cereus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cactus.json"> 红米 6A(cactus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sakura.json"> 红米 6 Pro(sakura) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=onclite.json"> Redmi 7(onclite) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pine.json"> Redmi 7A(pine) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=olive.json"> Redmi 8(olive) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=olivelite.json"> Redmi 8A(olivelite) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=olivewood.json"> Redmi 8A Pro/Dual(olivewood) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=merlin.json"> Redmi 10X 4G(merlin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=atom.json"> Redmi 10X 5G(atom) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=bomb.json"> Redmi 10X Pro(bomb) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lancelot.json"> Redmi 9/Prime(lancelot) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=dandelion.json"> Redmi 9A/9AT/9i/9A Sport(dandelion) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=angelica.json"> Redmi 9C(angelica) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=angelican.json"> Redmi 9C NFC(angelican) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lime.json"> Redmi 9T/9 Power(lime) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cattail.json"> Redmi 9/9 Activ(cattail) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=selene.json"> Redmi 10/Prime/10 2022(selene) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=dandelion_c3l2.json"> Redmi 10A/10A Sport(dandelion_c3l2) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=fog.json"> Redmi 10C(fog) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=light.json"> Redmi 10 5G/Redmi 11 Prime 5G(light) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rock.json"> Redmi 11 Prime 4G(rock) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=earth.json"> Redmi 12C(earth) </a>
-</p>
-<div class="card-title mb-1 text-primary">Redmi Note系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lcsh92_wet_xm_td.json"> 红米 Note 移动3G版(lcsh92_wet_xm_td) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lcsh92_wet_jb9.json"> 红米 Note 联通3G版(lcsh92_wet_jb9) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=dior.json"> 红米 Note 4G 单卡版(dior) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=gucci.json"> 红米 Note 4G 双卡版(gucci) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=hermes.json"> 红米 Note 2(hermes) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=hennessy.json"> 红米 Note 3 双网通版(hennessy) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=kenzo.json"> 红米 Note 3 全网通版(kenzo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=kate.json"> Redmi Note 3 特别版(kate) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=nikel.json"> 红米 Note 4(nikel) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mido.json"> 红米 Note 4X 高通版(mido) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ugglite.json"> 红米 Note 5A 标准版(ugglite) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ugg.json"> 红米 Note 5A 高配版(ugg) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vince.json"> 红米 Note 5 国际(vince) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=whyred.json"> 红米 Note 5(whyred) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tulip.json"> Redmi Note 6 Pro(tulip) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lavender.json"> Redmi Note 7/7S(lavender) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=violet.json"> Redmi Note 7 Pro(violet) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ginkgo.json"> Redmi Note 8(ginkgo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=begonia.json"> Redmi Note 8 Pro(begonia) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=willow.json"> Redmi Note 8T(willow) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=biloba.json"> Redmi Note 8 (2021)(biloba) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=merlin.json"> Redmi Note 9(merlin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lime.json"> Redmi Note 9 4G(lime) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cannon.json"> Redmi Note 9 5G(cannon) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=gauguin.json"> Redmi Note 9 Pro 5G(gauguin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=joyeuse.json"> Redmi Note 9 Pro 国际(joyeuse) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=excalibur.json"> Redmi Note 9 Pro Max(excalibur) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=curtana.json"> Redmi Note 9S/9 Pro(curtana) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mojito.json"> Redmi Note 10(mojito) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=curtana_rf.json"> Redmi Note 10 Lite(curtana_rf) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sweet.json"> Redmi Note 10 Pro/Pro Max(sweet) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=camellia.json"> Redmi Note 10 5G/10T 5G(camellia) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=chopin.json"> Redmi Note 10 Pro 5G(chopin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rosemary.json"> Redmi Note 10S(rosemary) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lilac.json"> Redmi Note 10T(lilac) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=selene.json"> Redmi Note 11 4G(selene) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=evergo.json"> Redmi Note 11 5G/11T 5G(evergo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=pissarro.json"> Redmi Note 11 Pro/Pro+/Pro+ 5G(pissarro) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=spes.json"> Redmi Note 11(spes) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=spesn.json"> Redmi Note 11 NFC(spesn) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=veux.json"> Redmi Note 11E Pro/Redmi Note 11 Pro 5G(veux) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=fleur.json"> Redmi Note 11S 4G(fleur) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=viva.json"> Redmi Note 11 Pro 4G(viva) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vida.json"> Redmi Note 11 Pro 4G India(vida) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=light.json"> Redmi Note 11E/11R(light) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lightcm.json"> Redmi Note 11R(lightcm) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=opal.json"> Redmi Note 11S 5G(opal) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=xaga.json"> Redmi Note 11T Pro/Pro+(xaga) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sunstone.json"> Redmi Note 12/12R Pro(sunstone) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ruby.json"> Redmi Note 12 Pro/Pro+/探索版(ruby) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=redwood.json"> Redmi Note 12 Pro 极速版(redwood) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=marble.json"> Redmi Note 12 Turbo(marble) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tapas.json"> Redmi Note 12 4G(tapas) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=topaz.json"> Redmi Note 12 4G NFC(topaz) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sweet_k6a.json"> Redmi Note 12 Pro 4G(sweet_k6a) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=sea.json"> Redmi Note 12S(sea) </a>
-</p>
-<div class="card-title mb-1 text-primary">Redmi K系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=davinci.json"> Redmi K20(davinci) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=raphael.json"> Redmi K20 Pro(raphael) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=raphaels.json"> Redmi K20 Pro 尊享版(raphaels) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=phoenix.json"> Redmi K30 4G(phoenix) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=picasso.json"> Redmi K30 5G(picasso) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=picasso_48m.json"> Redmi K30i 5G(picasso_48m) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lmi.json"> Redmi K30 Pro(lmi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=cezanne.json"> Redmi K30 至尊纪念版(cezanne) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=apollo.json"> Redmi K30S 至尊纪念版(apollo) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=alioth.json"> Redmi K40(alioth) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=haydn.json"> Redmi K40 Pro/Pro+(haydn) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ares.json"> Redmi K40 游戏增强版(ares) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=munch.json"> Redmi K40S(munch) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ingres.json"> Redmi K50 电竞版(ingres) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rubens.json"> Redmi K50(rubens) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=xaga.json"> Redmi K50i(xaga) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=matisse.json"> Redmi K50 Pro(matisse) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=diting.json"> Redmi K50 至尊版(diting) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mondrian.json"> Redmi K60(mondrian) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=socrates.json"> Redmi K60 Pro(socrates) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rembrandt.json"> Redmi K60 E(rembrandt) </a>
-</p>
-<div class="card-title mb-1 text-primary">Redmi Pad系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=yunluo.json"> Redmi平板(yunluo) </a>
-</p>
-<div class="card-title mb-1 text-primary">其他Redmi手机：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=omega.json"> 红米 Pro(omega) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ysl.json"> 红米 S2(ysl) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=tiare.json"> 红米 Go(tiare) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=onc.json"> 红米 Y3(onc) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ice.json"> Redmi A1/A1+(ice) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=water.json"> Redmi A2/A2+/POCO C51(water) </a>
-</p>
-</div>
-</div>
-<div class="card mb-3">
-<div class="card-header fs-5 text-warning">POCO 手机</div>
-<div class="card-body">
-<div class="card-title mb-1 text-primary">POCO C 系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=angelica.json"> POCO C3(angelica) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=angelicain.json"> POCO C31(angelicain) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=frost.json"> POCO C40(frost) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ice.json"> POCO C50(ice) </a>
-</p>
-<div class="card-title mb-1 text-primary">POCO F 系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=beryllium.json"> POCO F1(beryllium) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=lmi.json"> POCO F2 Pro(lmi) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=alioth.json"> POCO F3(alioth) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ares.json"> POCO F3 GT(ares) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=munch.json"> POCO F4(munch) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=ingres.json"> POCO F4 GT(ingres) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=mondrian.json"> POCO F5 Pro(mondrian) </a>
-</p>
-<div class="card-title mb-1 text-primary">POCO M 系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=shiva.json"> POCO M2(shiva) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=gram.json"> POCO M2 Pro(gram) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=citrus.json"> POCO M3(citrus) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=camellia.json"> POCO M3 Pro 5G(camellia) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=light.json"> POCO M4 5G(light) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=fleur.json"> POCO M4 Pro 4G(fleur) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=evergreen.json"> POCO M4 Pro 5G(evergreen) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rock.json"> POCO M5(rock) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=rosemary_p.json"> POCO M5S(rosemary_p) </a>
-</p>
-<div class="card-title mb-1 text-primary">POCO X 系列：</div>
-<p class="card-text mb-3">
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=phoenix.json"> POCO X2(phoenix) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=surya.json"> POCO X3 NFC(surya) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=chopin.json"> POCO X3 GT(chopin) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=vayu.json"> POCO X3 Pro(vayu) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=xaga.json"> POCO X4 GT(xaga) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=veux.json"> POCO X4 Pro 5G(veux) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=moonstone.json"> POCO X5 5G(moonstone) </a>
-<a class="btn badge badges text-bg-light btn-outline-secondary mb-1" href="/MIUI/#sudo=redwood.json"> POCO X5 Pro 5G(redwood) </a>
-</p>
-</div>
-</div>
-<!-- 目录结束 -->
-</div>
-<div class="container-fluid" id="container"></div>
 <script>
-var $ = mdui.$;
-var hash = window.location.hash;
-var truncatedUrl = hash.replace('#sudo=', '');
-if (hash.toString().indexOf('#sudo=') !== -1) {
-$("#miui-invisible").addClass("d-none");
-$.ajax({
-url: 'data/devices/'+truncatedUrl,
-dataType: 'json',
-success: function(data) {
-var branches = data.branches;
-var str=`<div class="d-grid gap-2 d-md-block mb-3">
-<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
-</div>
-<div class="card mb-3">
-<div class="card-body">
-<ol class="card-text">
-<li><h5 class="card-title"><b>机型名称：</b><span class="mdui-text-color-purple">`+ data.cnname +`</span></h5></li>
-<li><b>机型代号：</b><span class="mdui-text-color-deep-orange-accent">`+ data.codename +`</span></li>
-<li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="btn badge text-bg-primary">传送门</a></li>
-<li><b class="mdui-text-color-red">风险提示：</b>我们不推荐刷入非机型购入地区以外的系统分支，有可能会引起无法刷入，无法识别基带等等问题，请在确定刷入之前做好心理准备，因此引发的问题，本网站概不负责。</li>
-</ol>
-</div>
-</div>
+$(document).ready(function() {
 
-<div class="accordion accordion-flush" id="accordionFlushExample">`;
-$.each(branches, function(i, item) {
-var links = item.links;
-str+=`<div class="accordion-item">
-<h2 class="mdui-card accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#`+ item.cnname +`" aria-expanded="false">`+ item.cnname +`</button>
+$.get('../start/Datadake/get/json/MIUI/Third_Party_Website_Recommendations.json', function(data) {
+var Third_Party_Website_Recommendationsop = $('#Third_Party_Website_Recommendationsop');
+data.forEach(function(deviceData) {
+var cards = `<h3>${deviceData.title}</h3><div class="shadow-lg mb-5 bg-body-tertiary rounded"><ul class="list-group">`;
+var deviceLists = deviceData.list;
+deviceLists.forEach(function(device) {
+cards += `<li id="${device.href}" class="list-group-item fw-bold" title="${device.text}">${device.text}</li>`;
+});
+cards+=`</ul></div>`;
+Third_Party_Website_Recommendationsop.append(cards);
+});
+Third_Party_Website_Recommendationsop.on('click', 'li', function() {
+var itemId = $(this).attr('id');
+window.open(itemId, '_blank');
+});
+});
+// ######################### xiaomirommodal #########################
+$.get('../start/Datadake/get/json/MIUI/index.json', function(data) {
+var accordion = $('#deviceList');
+data.forEach(function(deviceData) {
+var cards = `<h3>${deviceData.device}</h3><div class="shadow-lg mb-5 bg-body-tertiary rounded">`;
+var deviceLists = deviceData.devicelist;
+deviceLists.forEach(function(listItem) {
+cards+= `<div class="accordion-item font-monospace">
+<h4 class="accordion-header">
+<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${listItem.titleid}op">${listItem.title}</button>
+</h4>
+<div id="${listItem.titleid}op" class="accordion-collapse collapse">
+<ul class="list-group">`;
+var deviceList = listItem.list;
+deviceList.forEach(function(device) {
+cards += `<li id="${device.href}" class="list-group-item fw-bold" title="${device.text}">${device.text}</li>`;
+});
+cards+=`
+</ul>
+</div>
+</div>
+`;
+});
+cards+=`</div>`;
+accordion.append(cards);
+});
+// ######################### xiaomirommodal #########################
+accordion.on('click', 'li', function() {
+var itemId = $(this).attr('id');
+console.log("Clicked item ID: " + itemId);
+$('#deviceList').hide();
+var accordionop = $('#deviceListop');
+$.get('../start/Datadake/get/json/MIUI/data/devices/' + itemId, function(data) {
+$(document).on('click', `#${data.codename}op`, function() {
+$('#deviceList').show();
+$(`#${data.codename}`).remove();
+});
+var card = `<div id="${data.codename}">
+<div class="d-grid gap-2 d-md-block mb-3"><button id="${data.codename}op" class="btn btn-outline-secondary">返回上一页</button></div>
+<div class="shadow-lg mb-5 bg-body-tertiary rounded card"><div class="card-body">
+<h5 class="card-title">机型名称：<span>${data.cnname}</span></h5>
+<h6 class="card-subtitle mb-2 text-muted">机型代号：<span>${data.codename}</span></h6>
+<h6 class="card-subtitle mb-2 text-muted">下载教程：<span class="text-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">修复403提示</span></h6>
+<div class="collapse" id="collapseExample">
+<div class="card card-body">
+<h3>方法一：</h3>
+找到hosts文件或者路由器的hosts编辑页面<br>
+Windows : C:WindowsSystem32driversetchosts<br>
+Linux/MacOS : /etc/hosts<br><br>
+
+往hosts文件中添加以下两个解析记录<br>
+123.6.13.6 bigota.d.miui.com<br>
+123.6.13.6 hugeota.d.miui.com<br><br>
+
+保存并退出
+<h3>方法二：</h3>
+点击以下链接进行下载，感谢: <a href="https://www.coolapk.com/u/13562649">忆雨_Micles@酷安</a> 提供脚本<br>
+<a href="https://www.hyperos.fans/403FixBy%E5%BF%86%E9%9B%A8_V1.0.2.1.bat">403FixBy忆雨_V1.0.2.1.bat</a><br><br>
+
+下载完成后，双击运行该脚本，并按步骤进行操作。 
+</div>
+</div>
+<p class="card-text"><li><b>手机解锁：</b>所有线刷都以解锁Bootloader为前提，并且解锁Bootloader时会清除数据，请提前做好备份工作，<a href="https://www.miui.com/unlock" class="btn badge text-bg-primary">传送门</a></li>
+<li><b>风险提示：</b>我们不推荐刷入非机型购入地区以外的系统分支，有可能会引起无法刷入，无法识别基带等等问题，请在确定刷入之前做好心理准备，因此引发的问题，本网站概不负责。</li></p>
+</div></div>
+<div class="shadow-lg mb-5 bg-body-tertiary rounded accordion accordion-flush" id="accordionFlushExample">`;
+$.each(data.branches, function(i, item) {
+card += `<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${item.cnname}" aria-expanded="false">${item.cnname}</button>
 </h2>
-<div id="`+ item.cnname +`" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+<div id="${item.cnname}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
 <div class="card mdui-table-fluid">
-<table class="table table-borderless table-responsive mdui-text-truncate">
+<table class="table table-hover table-borderless table-responsive mdui-text-truncate">
 <thead class="fw-bolder mdui-color-red">
 <tr>
 <th scope="col">米柚</th>
@@ -415,346 +237,68 @@ str+=`<div class="accordion-item">
 </tr>
 </thead>
 <tbody class="table-group-divider">`;
-$.each(links, function(i, n) {
+$.each(item.links, function(i, n) {
 var recovery = n.recovery;
 var fastboot = n.fastboot;
-str+=`<tr>
-<th scope="row"><p class="text-body-tertiary">`+ n.miui +`</p></th>
-<td><p class="text-success">`+ n.android +`</p></td>`;
-if (recovery === null || recovery === undefined || recovery === '') {
-str+=`<td><span class="btn badge text-bg-light">未发布</span></td>`;
+card += `<tr>
+<th scope="row"><p class="text-body-tertiary">${n.miui}</p></th>
+<td><p class="text-success">${n.android}</p></td>`;
+if (!recovery) {
+card += `<td><span class="btn badge text-bg-light">未发布</span></td>`;
 } else {
-str+=`<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/`+ n.miui +`/`+ n.recovery +` >下载</a></td>`;
+card += `<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/${n.miui}/${n.recovery}>${n.recovery}</a></td>`;
 }
-if (fastboot === null || fastboot === undefined || fastboot === '') {
-str+=`<td><span class="btn badge text-bg-light">未发布</span></td>`;
+if (!fastboot) {
+card += `<td><span class="btn badge text-bg-light">未发布</span></td>`;
 } else {
-str+=`<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/`+ n.miui +`/`+ n.fastboot +` >下载</a></td>`;
+card += `<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/${n.miui}/${n.fastboot}>${n.fastboot}</a></td>`;
 }
-str+=`</tr>`;
+card += `</tr>`;
 });
-str+=`</tbody>
+card += `</tbody>
 </table>
 </div>
 </div>
 </div>`;
 });
-str+=`</div>`;
-$('#container').append(str);
-}
+card += `</div></div>`;
+accordionop.append(card);
 });
-}
-$('.badges').on('click', function (e) {
-window.location.href = $(this).attr('href'); // 跳转到链接中的地址
-location.reload();
+// ######################### xiaomirommodal #########################
 });
-</script>
-</div>
-<!--########################## 第二页面 ##########################-->
-<div id="Xposed">
-<div class="mdui-container-fluid">
-<style>
-.mdui-col {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-    align-content: stretch;
-}
-.mdui-card {
-    width: 100%;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-</style>
-<div class="mdui-valign mdui-p-y-5">
-  <p class="mdui-center fs-1 mb-5">Xposed 模块存储库</p>
-</div>
-<duv id="Xposed-invisible"></duv>
-</div>
-<script>
-var $ = mdui.$;
-$.ajax({
-url: 'Xposed.json',
-dataType: 'json',
-success: function(data) {
-var store = data.data.localSearchRepositories.store;
-var str=`<div class="d-grid gap-2 d-md-block mb-3">
-<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
-<div class="mdui-float-right d-flex">
-<input class="form-control me-2" type="search"  id="searchInput"  placeholder="Search" aria-label="Search">
-<button class="btn btn-outline-success"  id="searchButton">Search</button>
-</div>
-</div>
-
-<div class="card-group mdui-row-xs-1 mdui-row-md-2 mdui-grid-list" id="Xposed-list">`;
-$.each(store, function(i, n) {
-var description = n.title;
-var readmeExcerpt = n.content;
-str+=`
-<div class="mdui-col">
-<div class="card mdui-card mb-2">
-<div class="mdui-card-primary">
-<div class="mdui-card-primary-title">`+description+`</div>
-<div class="mdui-card-primary-subtitle">`+readmeExcerpt+`</div>
-</div>
-<div class="mdui-card-actions">
-<a class="mdui-btn mdui-ripple" href="`+n.Website+`">Website</a>
-<a class="mdui-btn mdui-ripple" href="`+n.Source+`">Source</a>
-</div>
-</div>
-</div>
-`;
 });
-str+=`</div>`;
-$('#Xposed-invisible').append(str);
+// ######################### xiaomirommodal #########################
 
 
-$('#searchButton').on('click', function (e) {
-var keyword = $('#searchInput').val();
-search(keyword);
-});
-function search(keyword) {
-var results = [];
-$.each(store, function(index, item) {
-if (item.title.toLowerCase().includes(keyword.toLowerCase()) || item.content.toLowerCase().includes(keyword.toLowerCase())) {
-results.push(item);
-}
-});
-displayResults(results);
-}
-function displayResults(results) {
-$('#Xposed-list').empty();
-if (results.length > 0) {
-$.each(results, function(index, item) {
-var resultHtml = `<div class="mdui-col">
-<div class="card mdui-card mb-2">
-<div class="mdui-card-primary">
-<div class="mdui-card-primary-title">`+item.title+`</div>
-<div class="mdui-card-primary-subtitle">`+item.content+`</div>
-</div>
-<div class="mdui-card-actions">
-<a class="mdui-btn mdui-ripple" href="`+item.Website+`">Website</a>
-<a class="mdui-btn mdui-ripple" href="`+item.Source+`">Source</a>
-</div>
-</div>
+
+$.get('../start/Datadake/get/json/MIUI/Magisk.json', function(data) {
+var articleHTML = `<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">`;
+data.data.localSearchRepositories.store.forEach(function(article) {
+articleHTML += `<div class="col mb-3">
+<h3 class="fs-2">${article.title}</h3>
+<p class="text-truncate" title="${article.content}">${article.content}</p>
+<a href="${article.zip_url}" class="icon-link d-inline-flex align-items-center" target="_blank">下载</a>
 </div>`;
-$('#Xposed-list').append(resultHtml);
 });
-} else {
-$('#Xposed-list').text('未找到结果.');
-}
-}
-}
+articleHTML+=`</div>`;
+$("#pills-Magisk").append(articleHTML);
 });
-</script>
-</div>
-<!--########################## 第三页面 ##########################-->
-<div id="Magisk">
-<div class="mdui-container-fluid">
-<div class="mdui-valign mdui-p-y-5">
-  <p class="mdui-center fs-1 mb-5">Magisk 模块存储库</p>
-</div>
-<duv id="Magisk-invisible"></duv>
-</div>
-<script>
-var $ = mdui.$;
-$.ajax({
-url: 'Magisk.json',
-dataType: 'json',
-success: function(data) {
-var store = data.data.localSearchRepositories.store;
-var str=`<div class="d-grid gap-2 d-md-block mb-3">
-<a class="btn btn-outline-secondary" href="/MIUI">返回上一页</a>
-</div>
-
-<div class="card-group mdui-row-xs-1 mdui-row-md-2 mdui-grid-list" id="Magisk-list">`;
-$.each(store, function(i, n) {
-str+=`
-<div class="mdui-col">
-<div class="card mdui-card mb-2">
-<div class="mdui-card-primary">
-<div class="mdui-card-primary-title">`+n.title+`</div>
-<div class="mdui-card-primary-subtitle">`+n.content+`</div>
-</div>
-<div class="mdui-card-actions">
-<a class="mdui-btn mdui-ripple" href="`+n.zip_url+`">下载</a>
-</div>
-</div>
-</div>
-`;
+$.get('../start/Datadake/get/json/MIUI/Xposed.json', function(data) {
+var articleHTML = `<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">`;
+data.data.localSearchRepositories.store.forEach(function(article) {
+articleHTML += `<div class="col mb-3">
+<h3 class="fs-2">${article.title}</h3>
+<p class="text-truncate" title="${article.content}">${article.content}</p>
+<a href="${article.Website}" class="icon-link d-inline-flex align-items-center" target="_blank">Website</a>
+<a href="${article.Source}" class="icon-link d-inline-flex align-items-center">Source</a>
+</div>`;
 });
-str+=`</div>`;
-$('#Magisk-invisible').append(str);
-
-}
+articleHTML+=`</div>`;
+$("#pills-Xposed").append(articleHTML);
 });
-</script>
-</div>
 
-<!--########################## 第四页面 ##########################-->
-<div id="Third-party-referrals" >
-<!-- 副内容开始 -->
-<div class="mdui-container-fluid">
-<div><div class="card-group mb-2">
-<div class="card">
-<div class="card-header fs-5">第三方MIUI ROM 集合网站</div>
-<div class="card-body card-text">
-<a href="https://xiaomifirmwareupdater.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >固件更新程序</a>
-<a href="https://xiaomirom.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >小米ROM</a>
-<a href="https://roms.miuier.com/" class="mdui-card-primary-title text-decoration-none mdui-center" >MIUI官方ROM仓库</a>
-<a href="https://mifirm.net/" class="mdui-card-primary-title text-decoration-none mdui-center" >MiFirm</a>
-</div>
-</div>
-<div class="card">
-<div class="card-header fs-5">小米TWRP集合</div>
-<div class="card-body card-text">
-<br>小米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/ia6vqunmaIfu">https://cloud.189.cn/t/ia6vqunmaIfu</a>（访问码：fdv1）
-<br>小米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/kP0uQ">https://pan.hchl.top/#/s/kP0uQ</a>  密码：wzsx150
-<br>红米 天翼云盘：<a class="text-reset" href="https://cloud.189.cn/t/uuIzymZZFbey">https://cloud.189.cn/t/uuIzymZZFbey</a>（访问码：yzy9）
-<br>红米 恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/#/s/pVWt9">https://pan.hchl.top/#/s/pVWt9</a>  密码：wzsx150
-<br>天翼云盘：<a class="text-reset" href="https://cloud.189.cn/web/share?code=2InaAvb2eUz2">https://cloud.189.cn/web/share?code=2InaAvb2eUz2</a>（访问码：vv8a）
-<br>恒创互联云盘：<a class="text-reset" href="https://pan.hchl.top/s/oe4T4">https://pan.hchl.top/s/oe4T4</a> 密码：wzsx150
-<br><br>
-小米工具:
-<a class="text-reset" href="http://www.miui.com/unlock/index.html">解锁申请地址</a>，
-<a class="text-reset" href="http://miuirom.xiaomi.com/rom/u1106245679/3.2.522.32/MiAssistant-3.2.522.32.zip">小米手机助手</a>，
-<a class="text-reset" href="http://bigota.d.miui.com/tools/MiFlash2018-5-28-0.zip">miflash下载地址</a>。
-<br>
-CSDN:<a class="text-reset" href="https://blog.csdn.net/qq_63660128/article/details/121066219?utm_source=app&app_version=5.3.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a><br>
-小米论坛:<a class="text-reset" href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=17936575&app_version=dev.10085&ori_version=dev.10085&ori_miui_version=20.1.4&ori_android_version=10&ori_front_version=112&ref=share&channel=Share">[教程] 小米手机解BL锁、线刷详细教程，适用于小米全系列手机</a>
-</div>
-</div>
-</div></div>
-
-<div><div class="card-group mb-2">
-<div class="card">
-<div class="card-header fs-5">Magisk</div>
-<div class="card-body card-text">
-<a class="text-decoration-none" href="https://magiskmanager.com/">Magisk Manager官网</a><br>
-<a class="text-decoration-none" href="https://github.com/topjohnwu/Magisk/releases">Magisk Manager：Github下载网址</a><br>
-<a class="text-decoration-none" href="https://topjohnwu.github.io/Magisk/guides.html">Magisk Developer Guides（开发人员指南）</a><br>
-<a class="text-decoration-none" href="https://topjohnwu.github.io/Magisk/install.html">Magisk 安装说明</a>
-</div>
-</div>
-<div class="card">
-<div class="card-header fs-5">Xposed</div>
-<div class="card-body card-text">
-<a class="text-decoration-none" href="https://github.com/RikkaApps/Riru/releases">Riru（Riru - Code)：Github</a><br>
-<a class="text-decoration-none" href="https://github.com/LSPosed/LSPosed/releases">Riru LSPosed：Github发布页</a><br>
-<a class="text-decoration-none" href="https://github.com/ElderDrivers/EdXposed/releases/">Riru EdXposed：Github发布页</a><br>
-<a class="text-decoration-none" href="https://ci.appveyor.com/project/ElderDrivers/edxposed/build/artifacts">Riru EdXposed：Snapshot Versions（非官方版本）</a><br>
-<a class="text-decoration-none" href="https://github.com/ElderDrivers/EdXposedManager/releases">EdXposed Manager Github</a><br>
-<a class="text-decoration-none" href="https://github.com/canyie/Dreamland/releases">Riru 梦境框架</a><br>
-<a class="text-decoration-none" href="https://github.com/canyie/DreamlandManager/releases">梦境框架管理器</a><br>
-<a class="text-decoration-none" href="https://taichi.cool/zh/">太极官网</a><br>
-<a class="text-decoration-none" href="https://repo.xposed.info/module-overview">Xposed Module Repository（Xposed模块存储库）</a><br>
-<a class="text-decoration-none" href="https://www.xda.im/">XDA.IM - Xposed与Magisk仓库</a><br>
-<a class="text-decoration-none" href="https://taichi.cool/zh/module/">模块下载 | 太极</a>
-</div>
-</div>
-</div></div>
-
-<div><div class="card-group mb-2">
-<div class="card">
-<div class="card-header fs-5">Recovery</div>
-<div class="card-body card-text">
-<a class="text-decoration-none" href="https://m.weibo.cn/u/6033736159">wzsx150 新浪微博地址 LR.Team定制版TWRP下载地址</a><br>
-<a class="text-decoration-none" href="https://twrp.me/Devices/">TWRP官方网址</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/orangefox/files/">橙狐rec下载网址①</a><br>
-<a class="text-decoration-none" href="https://orangefox.download/zh-CN">橙狐rec下载网址②</a><br>
-<a class="text-decoration-none" href="https://pitchblackrecovery.com/">PBRP Recovery</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/shrp/files/">SHRP Recovery</a><br>
-<a class="text-decoration-none" href="https://forum.xda-developers.com/c/general-development.11974/">general-development</a>
-</div>
-</div>
-<div class="card">
-<div class="card-header fs-5">刷机ROM网址</div>
-<div class="card-body card-text">
-<a class="text-decoration-none" href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org（Phone ROMS）<br>一个社区里面包含很多ROMs</a>
-<a class="text-decoration-none" href="https://theunlockr.com/roms/android-roms/">Android ROMs</a><br>
-<a class="text-decoration-none" href="https://mi.fiime.cn/">FiimeROM</a><br>
-<a class="text-decoration-none" href="https://download.pixelexperience.org/">PE官网地址</a><br>
-<a class="text-decoration-none" href="https://crdroid.net/">crDroid</a><br>
-<a class="text-decoration-none" href="https://syberiaos.com/">Syberia OS</a><br>
-<a class="text-decoration-none" href="https://www.droidontime.com/">dotOS</a><br>
-<a class="text-decoration-none" href="https://download.lineageos.org/">LineageOS</a><br>
-<a class="text-decoration-none" href="https://get.resurrectionremix.com/">Resurrection Remix OS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/illusionproject/files/">AOSiP</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/posp/files/">Potato Open Sauce Project</a><br>
-<a class="text-decoration-none" href="http://srom.xyz/">XDA搬运工</a><br>
-<a class="text-decoration-none" href="https://downloads.aospextended.com/">AOSP Extended</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/arrow-os/files/">Arrow OS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/pixys-os/files/">Pixys OS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/superioros/files/">Superior OS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/havoc-os/files/">Havoc-OS</a><br>
-<a class="text-decoration-none" href="http://dl.omnirom.org/">omnirom</a><br>
-<a class="text-decoration-none" href="https://miuipro.net/rom/miuipro-updating/">MIUI pro</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/bootleggersrom/files/">Bootleggers</a><br>
-<a class="text-decoration-none" href="https://revengeos.com/">RevengeOS</a><br>
-<a class="text-decoration-none" href="https://download.mokeedev.com">魔趣</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/evolution-x/files/">Evolution X</a><br>
-<a class="text-decoration-none" href="https://www.pling.com/browse/cat/495/order/latest/">openDesktop.org</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/coltos/files/">ColtOS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/i-o-n/files/device/">ion</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/guzram-ports/files/">Guzram's Ports World</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/nangis/files/">Nangis Project</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/skylarkaurora/files/">SkylarkAurora</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/candyroms/files/">CandyROMs</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/kubilproject/files/">kubilproject</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/posp/files/">Potato Open Sauce Project</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/kubilproject/files/">kubilproject</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/skylarkaurora/files/">SkylarkAurora</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/bootleggersrom/files/builds/">Bootleggers ROM</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/xtended/files/">MSM-Xtended</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/neonrelease/files/">NeonOS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/cygnus-android/files/">Cygnus</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/rebellion-os/files/">Rebellion-OS</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/xyzuan/files/">a xyzuan`ROM</a><br>
-<a class="text-decoration-none" href="https://sourceforge.net/projects/stagos-10/files/">StagOS-10</a>
-</div>
-</div>
-<div class="card">
-<div class="card-header fs-5">其它</div>
-<div class="card-body card-text">
-<a class="text-decoration-none" href="https://f-droid.org/packages/com.termux/">下载Termux</a><br>
-<a class="text-decoration-none" href="https://forum.xda-developers.com/apps/magisk/module-url-here">XDA上的Magisk模块区</a><br>
-<a class="text-decoration-none" href="https://github.com/E7KMbb/AD-hosts/releases">AD-hosts</a><br>
-<a class="text-decoration-none" href="http://www.miui.com/unlock/index.html">解锁小米手机</a><br>
-<a class="text-decoration-none" href="https://flash.mokeedev.com/">Flash MoKee (beta)</a><br>
-<a class="text-decoration-none" href="https://xiaomifirmwareupdater.com/">Xiaomi Firmware Updater（小米固件更新程序）</a><br>
-<a class="text-decoration-none" href="https://dl-xda.xposed.info/framework/">Xposed官方网址</a><br>
-<a class="text-decoration-none" href="https://github.com/opengapps/opengapps">Open GApps（安装谷歌套件）①</a><br>
-<a class="text-decoration-none" href="https://opengapps.org/">Open GApps（安装谷歌套件）②</a><br>
-<a class="text-decoration-none" href="https://github.com/Pzqqt/Magisk_Manager_Recovery_Tool/releases">Magisk_Manager_Recovery_Tool</a><br>
-<a class="text-decoration-none" href="https://www.luckypatchers.com/">幸运破解器官方网址</a><br>
-<a class="text-decoration-none" href="https://checkra.in/">checkra1n</a><br>
-<a class="text-decoration-none" href="https://lsdy.top/">Windows版：「搞机助手」，以及更多实用软件</a><br>
-<a class="text-decoration-none" href="https://developer.android.com/studio/releases/platform-tools?hl=zh-CN">SDK Platform Tools</a>
-</div>
-</div>
-</div></div>
-<!-- 副内容结束 -->
-</div>
-</div>
-
-
-
-
-
-<script>
-var $ = mdui.$;
-$("#Xposed, #Magisk, #Third-party-referrals").hide();
-$(".mdui-list-item").on('click', function (e) {
-var target = $(this).attr("href");
-$("#MIUI, #Xposed, #Magisk, #Third-party-referrals").hide();
-$(target).show();
 });
 </script>
 </body>
 </html>
+

@@ -1,0 +1,131 @@
+[
+{
+"device": "小米手机",
+"devicelist": [
+{
+"title": "小米系列：",
+"titleid": "小米系列：",
+"list": [{"href": "mione_plus.json","text": " 小米手机1/1S(mione_plus) "},{"href": "aries.json","text": " 小米 2/2S(aries) "},{"href": "taurus.json","text": " 小米 2A(taurus) "},{"href": "pisces.json","text": " 小米3 移动版(pisces) "},{"href": "cancro.json","text": " 小米手机3 联通/电信/小米手机4 移动/联通/电信3G(cancro) "},{"href": "cancro_lte_ct.json","text": " 小米手机4 电信4G(cancro_lte_ct) "},{"href": "ferrari.json","text": " 小米 4i(ferrari) "},{"href": "libra.json","text": " 小米 4C(libra) "},{"href": "aqua.json","text": " 小米 4S(aqua) "},{"href": "gemini.json","text": " 小米 5(gemini) "},{"href": "capricorn.json","text": " 小米 5s(capricorn) "},{"href": "natrium.json","text": " 小米 5s Plus(natrium) "},{"href": "meri.json","text": " 小米 5C(meri) "},{"href": "tiffany.json","text": " 小米 5X(tiffany) "},{"href": "sagit.json","text": " 小米 6(sagit) "},{"href": "wayne.json","text": " 小米 6X(wayne) "},{"href": "dipper.json","text": " 小米 8(dipper) "},{"href": "equuleus.json","text": " 小米 8 屏幕指纹版(equuleus) "},{"href": "ursa.json","text": " 小米 8 透明探索版(ursa) "},{"href": "platina.json","text": " 小米 8 青春版(platina) "},{"href": "cepheus.json","text": " 小米 9/透明探索版(cepheus) "},{"href": "davinci.json","text": " 小米 9T(davinci) "},{"href": "raphael.json","text": " 小米 9T Pro(raphael) "},{"href": "pyxis.json","text": " 小米 9 Lite(pyxis) "},{"href": "crux.json","text": " 小米 9 Pro 5G(crux) "},{"href": "umi.json","text": " 小米 10(umi) "},{"href": "cmi.json","text": " 小米 10 Pro(cmi) "},{"href": "monet.json","text": " 小米 10 Lite(monet) "},{"href": "vangogh.json","text": " 小米 10 青春版(vangogh) "},{"href": "cas.json","text": " 小米 10 至尊纪念版(cas) "},{"href": "apollo.json","text": " 小米 10T/Pro(apollo) "},{"href": "gauguin.json","text": " 小米 10T Lite/小米 10i(gauguin) "},{"href": "thyme.json","text": " 小米 10S(thyme) "},{"href": "venus.json","text": " 小米 11(venus) "},{"href": "haydn.json","text": " 小米 11i/小米 11X Pro(haydn) "},{"href": "alioth.json","text": " 小米 11X(alioth) "},{"href": "courbet.json","text": " 小米 11 Lite 4G(courbet) "},{"href": "star.json","text": " 小米 11 Pro/Ultra(star) "},{"href": "renoir.json","text": " 小米 11 青春版(renoir) "},{"href": "agate.json","text": " 小米 11T(agate) "},{"href": "vili.json","text": " 小米 11T Pro(vili) "},{"href": "lisa.json","text": " 小米 11 青春活力版(lisa) "},{"href": "pissarroin.json","text": " 小米 11i 5G 印度版(pissarroin) "},{"href": "pissarro.json","text": " 小米 11i 印度快充版(pissarro) "},{"href": "cupid.json","text": " 小米 12(cupid) "},{"href": "zeus.json","text": " 小米 12 Pro(zeus) "},{"href": "psyche.json","text": " 小米 12X(psyche) "},{"href": "daumier.json","text": " 小米 12 Pro 天玑版(daumier) "},{"href": "mayfly.json","text": " 小米 12S(mayfly) "},{"href": "unicorn.json","text": " 小米 12S Pro(unicorn) "},{"href": "thor.json","text": " 小米 12S Ultra(thor) "},{"href": "taoyao.json","text": " 小米 12 Lite(taoyao) "},{"href": "plato.json","text": " 小米 12T(plato) "},{"href": "diting.json","text": " 小米 12T Pro(diting) "},{"href": "fuxi.json","text": " 小米 13(fuxi) "},{"href": "nuwa.json","text": " 小米 13 Pro(nuwa) "},{"href": "ishtar.json","text": " 小米 13 Ultra(ishtar) "},{"href": "aristotle.json","text": " 小米 13T(aristotle) "},{"href": "houji.json","text": " 小米 14(houji) "},{"href": "shennong.json","text": " 小米 14 Pro(shennong) "}
+]
+},
+{
+"title": "小米SE系列：",
+"titleid": "小米SE系列：",
+"list": [{"href": "sirius.json","text": " 小米 8 SE(sirius) "},{"href": "grus.json","text": " 小米 9 SE(grus) "}
+]
+},
+{
+"title": "小米CC系列：",
+"titleid": "小米CC系列：",
+"list": [{"href": "pyxis.json","text": " 小米 CC 9(pyxis) "},{"href": "vela.json","text": " 小米 CC 9 美图定制版(vela) "},{"href": "laurus.json","text": " 小米 CC 9e(laurus) "},{"href": "tucana.json","text": " 小米 CC9 Pro(tucana) "}
+]
+},
+{
+"title": "小米Note系列：",
+"titleid": "小米Note系列：",
+"list": [{"href": "virgo.json","text": " 小米 Note 双网通版(virgo) "},{"href": "virgo_lte_ct.json","text": " 小米 Note 全网通版(virgo_lte_ct) "},{"href": "leo.json","text": " 小米 Note 顶配版(leo) "},{"href": "scorpio.json","text": " 小米 Note 2(scorpio) "},{"href": "jason.json","text": " 小米 Note 3(jason) "},{"href": "tucana.json","text": " 小米 Note 10/Pro(tucana) "},{"href": "toco.json","text": " 小米 Note 10 Lite(toco) "}
+]
+},
+{
+"title": "小米MAX系列：",
+"titleid": "小米MAX系列：",
+"list": [{"href": "hydrogen.json","text": " 小米 MAX 标准版(hydrogen) "},{"href": "helium.json","text": " 小米 MAX 高配版(helium) "},{"href": "oxygen.json","text": " 小米 MAX 2(oxygen) "},{"href": "nitrogen.json","text": " 小米 MAX 3(nitrogen) "}
+]
+},
+{
+"title": "小米MIX系列：",
+"titleid": "小米MIX系列：",
+"list": [{"href": "lithium.json","text": " 小米 MIX(lithium) "},{"href": "chiron.json","text": " 小米 MIX 2(chiron) "},{"href": "polaris.json","text": " 小米 MIX 2S(polaris) "},{"href": "perseus.json","text": " 小米 MIX 3(perseus) "},{"href": "andromeda.json","text": " 小米 MIX 3 5G(andromeda) "},{"href": "cetus.json","text": " 小米 MIX FOLD(cetus) "},{"href": "odin.json","text": " 小米 MIX 4(odin) "},{"href": "zizhan.json","text": " 小米 MIX FOLD 2(zizhan) "},{"href": "babylon.json","text": " 小米 MIX FOLD 3(babylon) "}
+]
+},
+{
+"title": "小米Civi系列：",
+"titleid": "小米Civi系列：",
+"list": [{"href": "mona.json","text": " 小米 Civi(mona) "},{"href": "zijin.json","text": " 小米 Civi 1S(zijin) "},{"href": "ziyi.json","text": " 小米 Civi 2(ziyi) "},{"href": "yuechu.json","text": " 小米 Civi 3(yuechu) "}
+]
+},
+{
+"title": "小米A系列：",
+"titleid": "小米A系列：",
+"list": [{"href": "tissot.json","text": " 小米 A1(tissot) "},{"href": "jasmine.json","text": " 小米 A2(jasmine) "},{"href": "daisy.json","text": " 小米 A2 Lite(daisy) "},{"href": "laurel_sprout.json","text": " 小米 A3(laurel) "}
+]
+},
+{
+"title": "小米平板系列：",
+"titleid": "小米平板系列：",
+"list": [{"href": "mocha.json","text": " 小米平板 1(mocha) "},{"href": "latte.json","text": " 小米平板 2(latte) "},{"href": "cappu.json","text": " 小米平板 3(cappu) "},{"href": "clover.json","text": " 小米平板 4/Plus(clover) "},{"href": "nabu.json","text": " 小米平板 5(nabu) "},{"href": "elish.json","text": " 小米平板 5 Pro Wi-Fi(elish) "},{"href": "enuma.json","text": " 小米平板 5 Pro 5G(enuma) "},{"href": "dagu.json","text": " 小米平板 5 Pro 12.4(dagu) "},{"href": "pipa.json","text": " 小米平板 6(pipa) "},{"href": "liuqin.json","text": " 小米平板 6 Pro(liuqin) "},{"href": "yudi.json","text": " 小米平板 6 Max(yudi) "}
+]
+},
+{
+"title": "其他小米手机：",
+"titleid": "其他小米手机：",
+"list": [{"href": "lotus.json","text": " 小米 Play(lotus) "}
+]
+}
+]
+},
+{
+"device": "Redmi 手机",
+"devicelist": [
+{
+"title": "Redmi系列：",
+"titleid": "Redmi系列：",
+"list": [{"href": "wt93007.json","text": " 红米 1 移动TD版(wt93007) "},{"href": "wt98007.json","text": " 红米1 联通版(wt98007) "},{"href": "armani.json","text": " 红米 1S 联通版/电信版(armani) "},{"href": "wt93807.json","text": " 红米 1S 移动3G版(wt93807) "},{"href": "wt96007.json","text": " 红米 1S 移动4G版(wt96007) "},{"href": "wt86047.json","text": " 红米 2 移动3G版(wt86047) "},{"href": "wt88047.json","text": " 红米 2 联通/电信3G版(wt88047) "},{"href": "wt86047_pro.json","text": " 红米 2 移动增强版(wt86047_pro) "},{"href": "wt88047_pro.json","text": " 红米 2 联通/电信增强版(wt88047_pro) "},{"href": "lte26007.json","text": " 红米 2A 标准版(lte26007) "},{"href": "ido_xhdpi.json","text": " 红米 3/Pro(ido_xhdpi) "},{"href": "land.json","text": " 红米 3S/X(land) "},{"href": "prada.json","text": " 红米 4 标准版(prada) "},{"href": "markw.json","text": " 红米 4 高配版(markw) "},{"href": "rolex.json","text": " 红米 4A(rolex) "},{"href": "santoni.json","text": " 红米 4X(santoni) "},{"href": "rosy.json","text": " 红米 5(rosy) "},{"href": "riva.json","text": " 红米5A(riva) "},{"href": "vince.json","text": " 红米 5 Plus(vince) "},{"href": "cereus.json","text": " 红米 6(cereus) "},{"href": "cactus.json","text": " 红米 6A(cactus) "},{"href": "sakura.json","text": " 红米 6 Pro(sakura) "},{"href": "onclite.json","text": " Redmi 7(onclite) "},{"href": "pine.json","text": " Redmi 7A(pine) "},{"href": "olive.json","text": " Redmi 8(olive) "},{"href": "olivelite.json","text": " Redmi 8A(olivelite) "},{"href": "olivewood.json","text": " Redmi 8A Pro/Dual(olivewood) "},{"href": "merlin.json","text": " Redmi 10X 4G(merlin) "},{"href": "atom.json","text": " Redmi 10X 5G(atom) "},{"href": "bomb.json","text": " Redmi 10X Pro(bomb) "},{"href": "lancelot.json","text": " Redmi 9/Prime(lancelot) "},{"href": "dandelion.json","text": " Redmi 9A/9AT/9i/9A Sport(dandelion) "},{"href": "angelica.json","text": " Redmi 9C(angelica) "},{"href": "angelican.json","text": " Redmi 9C NFC(angelican) "},{"href": "lime.json","text": " Redmi 9T/9 Power(lime) "},{"href": "cattail.json","text": " Redmi 9/9 Activ(cattail) "},{"href": "selene.json","text": " Redmi 10/Prime/10 2022(selene) "},{"href": "dandelion_c3l2.json","text": " Redmi 10A/10A Sport(dandelion_c3l2) "},{"href": "fog.json","text": " Redmi 10C(fog) "},{"href": "light.json","text": " Redmi 10 5G/Redmi 11 Prime 5G(light) "},{"href": "rock.json","text": " Redmi 11 Prime 4G(rock) "},{"href": "fire.json","text": " Redmi 12(fire) "},{"href": "earth.json","text": " Redmi 12C(earth) "},{"href": "gale.json","text": " Redmi 13C(gale) "}
+]
+},
+{
+"title": "Redmi Note系列：",
+"titleid": "Redmi-Note系列：",
+"list": [{"href": "lcsh92_wet_xm_td.json","text": " 红米 Note 移动3G版(lcsh92_wet_xm_td) "},{"href": "lcsh92_wet_jb9.json","text": " 红米 Note 联通3G版(lcsh92_wet_jb9) "},{"href": "dior.json","text": " 红米 Note 4G 单卡版(dior) "},{"href": "gucci.json","text": " 红米 Note 4G 双卡版(gucci) "},{"href": "hermes.json","text": " 红米 Note 2(hermes) "},{"href": "hennessy.json","text": " 红米 Note 3 双网通版(hennessy) "},{"href": "kenzo.json","text": " 红米 Note 3 全网通版(kenzo) "},{"href": "kate.json","text": " Redmi Note 3 特别版(kate) "},{"href": "nikel.json","text": " 红米 Note 4(nikel) "},{"href": "mido.json","text": " 红米 Note 4X 高通版(mido) "},{"href": "ugglite.json","text": " 红米 Note 5A 标准版(ugglite) "},{"href": "ugg.json","text": " 红米 Note 5A 高配版(ugg) "},{"href": "vince.json","text": " 红米 Note 5 国际(vince) "},{"href": "whyred.json","text": " 红米 Note 5(whyred) "},{"href": "tulip.json","text": " Redmi Note 6 Pro(tulip) "},{"href": "lavender.json","text": " Redmi Note 7/7S(lavender) "},{"href": "violet.json","text": " Redmi Note 7 Pro(violet) "},{"href": "ginkgo.json","text": " Redmi Note 8(ginkgo) "},{"href": "begonia.json","text": " Redmi Note 8 Pro(begonia) "},{"href": "willow.json","text": " Redmi Note 8T(willow) "},{"href": "biloba.json","text": " Redmi Note 8 (2021)(biloba) "},{"href": "merlin.json","text": " Redmi Note 9(merlin) "},{"href": "lime.json","text": " Redmi Note 9 4G(lime) "},{"href": "cannon.json","text": " Redmi Note 9 5G(cannon) "},{"href": "gauguin.json","text": " Redmi Note 9 Pro 5G(gauguin) "},{"href": "joyeuse.json","text": " Redmi Note 9 Pro 国际(joyeuse) "},{"href": "excalibur.json","text": " Redmi Note 9 Pro Max(excalibur) "},{"href": "curtana.json","text": " Redmi Note 9S/9 Pro(curtana) "},{"href": "mojito.json","text": " Redmi Note 10(mojito) "},{"href": "curtana_in_rf.json","text": " Redmi Note 10 Lite(curtana_in_rf) "},{"href": "sweet.json","text": " Redmi Note 10 Pro/Pro Max(sweet) "},{"href": "camellia.json","text": " Redmi Note 10 5G/10T 5G(camellia) "},{"href": "chopin.json","text": " Redmi Note 10 Pro 5G(chopin) "},{"href": "rosemary.json","text": " Redmi Note 10S(rosemary) "},{"href": "lilac.json","text": " Redmi Note 10T(lilac) "},{"href": "selene.json","text": " Redmi Note 11 4G(selene) "},{"href": "evergo.json","text": " Redmi Note 11 5G/11T 5G(evergo) "},{"href": "pissarro.json","text": " Redmi Note 11 Pro/Pro+/Pro+ 5G(pissarro) "},{"href": "spes.json","text": " Redmi Note 11(spes) "},{"href": "spesn.json","text": " Redmi Note 11 NFC(spesn) "},{"href": "veux.json","text": " Redmi Note 11E Pro/Redmi Note 11 Pro 5G(veux) "},{"href": "fleur.json","text": " Redmi Note 11S 4G(fleur) "},{"href": "viva.json","text": " Redmi Note 11 Pro 4G(viva) "},{"href": "vida.json","text": " Redmi Note 11 Pro 4G India(vida) "},{"href": "light.json","text": " Redmi Note 11E(light) "},{"href": "lightcm.json","text": " Redmi Note 11R(lightcm) "},{"href": "opal.json","text": " Redmi Note 11S 5G(opal) "},{"href": "xaga.json","text": " Redmi Note 11T Pro/Pro+(xaga) "},{"href": "sunstone.json","text": " Redmi Note 12/12R Pro(sunstone) "},{"href": "sky.json","text": " Redmi Note 12R(sky) "},{"href": "ruby.json","text": " Redmi Note 12 Pro/Pro+/探索版(ruby) "},{"href": "redwood.json","text": " Redmi Note 12 Pro 极速版(redwood) "},{"href": "marble.json","text": " Redmi Note 12 Turbo(marble) "},{"href": "pearl.json","text": " Redmi Note 12T Pro(pearl) "},{"href": "tapas.json","text": " Redmi Note 12 4G(tapas) "},{"href": "topaz.json","text": " Redmi Note 12 4G NFC(topaz) "},{"href": "sweet_k6a.json","text": " Redmi Note 12 Pro 4G(sweet_k6a) "},{"href": "sea.json","text": " Redmi Note 12S(sea) "},{"href": "gold.json","text": " Redmi Note 13 5G(gold) "},{"href": "garnet.json","text": " Redmi Note 13 Pro(garnet) "},{"href": "zircon.json","text": " Redmi Note 13 Pro+(zircon) "}
+]
+},
+{
+"title": "Redmi K系列：",
+"titleid": "Redmi-K系列：",
+"list": [{"href": "davinci.json","text": " Redmi K20(davinci) "},{"href": "raphael.json","text": " Redmi K20 Pro(raphael) "},{"href": "raphaels.json","text": " Redmi K20 Pro 尊享版(raphaels) "},{"href": "phoenix.json","text": " Redmi K30 4G(phoenix) "},{"href": "picasso.json","text": " Redmi K30 5G(picasso) "},{"href": "picasso_48m.json","text": " Redmi K30i 5G(picasso_48m) "},{"href": "lmi.json","text": " Redmi K30 Pro(lmi) "},{"href": "cezanne.json","text": " Redmi K30 至尊纪念版(cezanne) "},{"href": "apollo.json","text": " Redmi K30S 至尊纪念版(apollo) "},{"href": "alioth.json","text": " Redmi K40(alioth) "},{"href": "haydn.json","text": " Redmi K40 Pro/Pro+(haydn) "},{"href": "ares.json","text": " Redmi K40 游戏增强版(ares) "},{"href": "munch.json","text": " Redmi K40S(munch) "},{"href": "rubens.json","text": " Redmi K50(rubens) "},{"href": "xaga.json","text": " Redmi K50i(xaga) "},{"href": "matisse.json","text": " Redmi K50 Pro(matisse) "},{"href": "ingres.json","text": " Redmi K50 电竞版(ingres) "},{"href": "diting.json","text": " Redmi K50 至尊版(diting) "},{"href": "mondrian.json","text": " Redmi K60(mondrian) "},{"href": "socrates.json","text": " Redmi K60 Pro(socrates) "},{"href": "corot.json","text": " Redmi K60 至尊版(corot) "},{"href": "rembrandt.json","text": " Redmi K60 E(rembrandt) "}
+]
+},
+{
+"title": "Redmi Pad系列：",
+"titleid": "Redmi-Pad系列：",
+"list": [{"href": "yunluo.json","text": " Redmi 平板(yunluo) "},{"href": "xun.json","text": " Redmi 平板 SE(xun) "}
+]
+},
+{
+"title": "其他Redmi手机：",
+"titleid": "其他Redmi手机：",
+"list": [{"href": "omega.json","text": " 红米 Pro(omega) "},{"href": "ysl.json","text": " 红米 S2(ysl) "},{"href": "tiare.json","text": " 红米 Go(tiare) "},{"href": "onc.json","text": " 红米 Y3(onc) "},{"href": "ice.json","text": " Redmi A1/A1+(ice) "},{"href": "water.json","text": " Redmi A2/A2+/POCO C51(water) "}
+]
+}
+]
+},
+{
+"device": "POCO 手机",
+"devicelist": [
+{
+"title": "POCO C 系列：",
+"titleid": "POCO-C-系列：",
+"list": [{"href": "angelica.json","text": " POCO C3(angelica) "},{"href": "angelicain.json","text": " POCO C31(angelicain) "},{"href": "frost.json","text": " POCO C40(frost) "},{"href": "ice.json","text": " POCO C50(ice) "}
+]
+},
+{
+"title": "POCO F 系列：",
+"titleid": "POCO-F-系列：",
+"list": [{"href": "beryllium.json","text": " POCO F1(beryllium) "},{"href": "lmi.json","text": " POCO F2 Pro(lmi) "},{"href": "alioth.json","text": " POCO F3(alioth) "},{"href": "ares.json","text": " POCO F3 GT(ares) "},{"href": "munch.json","text": " POCO F4(munch) "},{"href": "ingres.json","text": " POCO F4 GT(ingres) "},{"href": "mondrian.json","text": " POCO F5 Pro(mondrian) "}
+]
+},
+{
+"title": "POCO M 系列：",
+"titleid": "POCO-M-系列：",
+"list": [{"href": "shiva.json","text": " POCO M2(shiva) "},{"href": "gram.json","text": " POCO M2 Pro(gram) "},{"href": "citrus.json","text": " POCO M3(citrus) "},{"href": "camellia.json","text": " POCO M3 Pro 5G(camellia) "},{"href": "light.json","text": " POCO M4 5G(light) "},{"href": "fleur.json","text": " POCO M4 Pro 4G(fleur) "},{"href": "evergreen.json","text": " POCO M4 Pro 5G(evergreen) "},{"href": "rock.json","text": " POCO M5(rock) "},{"href": "rosemary_p.json","text": " POCO M5S(rosemary_p) "}
+]
+},
+{
+"title": "POCO X 系列：",
+"titleid": "POCO-X-系列：",
+"list": [{"href": "phoenix.json","text": " POCO X2(phoenix) "},{"href": "surya.json","text": " POCO X3 NFC(surya) "},{"href": "chopin.json","text": " POCO X3 GT(chopin) "},{"href": "vayu.json","text": " POCO X3 Pro(vayu) "},{"href": "xaga.json","text": " POCO X4 GT(xaga) "},{"href": "veux.json","text": " POCO X4 Pro 5G(veux) "},{"href": "moonstone.json","text": " POCO X5 5G(moonstone) "},{"href": "redwood.json","text": " POCO X5 Pro 5G(redwood) "}
+]
+}
+]
+}
+]
