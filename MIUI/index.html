@@ -142,8 +142,7 @@ $.get('../start/Datadake/get/json/MIUI/Third_Party_Website_Recommendations.json'
 var Third_Party_Website_Recommendationsop = $('#Third_Party_Website_Recommendationsop');
 data.forEach(function(deviceData) {
 var cards = `<h3>${deviceData.title}</h3><div class="shadow-lg mb-5 bg-body-tertiary rounded"><ul class="list-group">`;
-var deviceLists = deviceData.list;
-deviceLists.forEach(function(device) {
+deviceData.list.forEach(function(device) {
 cards += `<li id="${device.href}" class="list-group-item fw-bold" title="${device.text}">${device.text}</li>`;
 });
 cards+=`</ul></div>`;
