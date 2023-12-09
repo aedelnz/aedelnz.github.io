@@ -10,117 +10,47 @@
 <link rel="stylesheet" href="../../start/mdui/css/mdui.min.css"/>
 <link rel="stylesheet" href="../../start/bootstrap/css/bootstrap.min.css"/>
 <script src="../../start/origin.js"></script>
-<script src="../../start/mdui/js/mdui.min.js"></script>
-<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
-<style>
-body {
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-background-image: url(https://s1.hdslb.com/bfs/seed/jinkela/short/mini-login-v2/img/22_open.4ea5f239.png), url(https://s1.hdslb.com/bfs/seed/jinkela/short/mini-login-v2/img/33_open.f7d7f655.png);
-background-position: 0 100%, 100% 100%;
-background-repeat: no-repeat, no-repeat;
-background-size: 24%;
-background-attachment: fixed;
-position: relative;
-user-select: none;
-}
-</style>
+<script src="../../start/jquery/jquery.min.js"></script>
 </head>
 <body>
-<div class="fixed-top sticky-top">
-<nav class="mdui-appbar navbar navbar-expand-lg">
-<div class="container-fluid"><a class="navbar-brand" href="#">VIVO/IQOO 升级包</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-<div class="collapse navbar-collapse" id="navbarText">
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link active" aria-current="page" href="/">返回首页</a></li>
-</ul>
-<span class="navbar-text">
-<ul id="roots" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-</span>
+<div class="container lead mt-4">
+<h1>产品型号</h1>
+<div id="accordionFlushExample" class="shadow-lg mb-5 bg-body-tertiary rounded accordion accordion-flush">
+<div id="firmwareList"></div>
 </div>
 </div>
-</nav>
-</div>
-<div id="root"></div>
+<script src="../../start/mdui/js/mdui.min.js"></script>
+<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-var $ = mdui.$;
-$.ajax({
-url: 'data.json',
-dataType: 'json',
-success: function(data) {
-$.each(data, function(i, n) {
-var listItem = `<li class="nav-item"><a class="nav-link active" aria-current="page" href="#`+n.series+`">`+n.series+`</a></li>`;
-$("#roots").append(listItem);
-});
-var str=`<div>`;
-$.each(data, function(i, n) {
-str+=`<div id="`+n.series+`" class="mdui-table-fluid">
-<table class="table mdui-text-truncate">
-<thead>
+$(document).ready(function () {
+$.get('data.json', function(firmwareData) {
+firmwareData.forEach(function (seriesData) {
+var seriesHtml = `<div class="accordion-item">
+<h2 class="accordion-header" id="flush-s${seriesData.series}"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-${seriesData.series}" aria-expanded="false" aria-controls="flush-${seriesData.series}">${seriesData.series}</button></h2>
+<div id="flush-${seriesData.series}" class="table-responsive accordion-collapse collapse" aria-labelledby="flush-s${seriesData.series}" data-bs-parent="#accordionFlushExample">
+<table class="table align-middle text-truncate">
+<thead class="table-light">
 <tr>
 <th scope="col">机型</th>
-<th scope="col">时间</th>
-<th scope="col">大小</th>
-<th scope="col">下载</th>
+<th scope="col">更新时间</th>
+<th scope="col">文件大小</th>
+<th scope="col">下载固件</th>
 </tr>
 </thead>
 <tbody class="table-group-divider">
 `;
-var list = n.list;
-$.each(list, function(i, n) {
-str+=`
-<tr>
-<th scope="row">`+n.Models+`</th>
-<td>`+n.Time+`</td>
-<td>`+n.size+`</td>
-<td><a href=`+n.url+` >`+n.url+`</a></td>
-</tr>
-`;
+seriesData.list.forEach(function (firmware) {
+seriesHtml += `<tr>
+<th scope="row">${firmware.Models}</th>
+<td>${firmware.Time}</td>
+<td>${firmware.size}</td>
+<td><a href="${firmware.url}" class="text-decoration-none">${firmware.url}</a></td>
+</tr>`;
 });
-str+=`</tbody>
-</table>
-</div>`;
+seriesHtml +=`</tbody></table></div></div>`;
+$("#firmwareList").append(seriesHtml);
 });
-str+=`</div>
-<div class="mb-4"></div>
-<div class="card mb-3">
-<div class="row g-0">
-<div class="col-md-4">
-<a href="https://www.vivo.com/brand/news/detail?id=1108&type=0">
-<img src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/brand/20221209/3ab3967ad2ea2aea7a99953004d1d1aa.jpg" class="img-fluid rounded-start" alt="">
-</a>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<h5 class="card-title">vivo手机驱动程序</h5>
-<p class="card-text">更新时间: 2018-05-07<br>
-文件大小: 8.97 MB<br>
-支持系统: Windows</p>
-<p class="card-text"><a class="text-muted" href="http://zs.vivo.com.cn/download.php?sel_type=2">下载驱动</a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="card mb-3">
-<div class="row g-0">
-<div class="col-md-4">
-<a href="https://www.uotan.cn/resources/v2-5.328/">
-<img src="https://www.uotan.cn/attachments/1-png.3014/" class="img-fluid rounded-start" alt="">
-</a>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<h5 class="card-title">柚坛搞机工具箱V2.5</h5>
-<p class="card-text">内置viqoo工具</p>
-<p class="card-text"><a class="text-muted" href="https://mjw.lanzouo.com/imDdr0qrwahi">下载程序</a></p>
-</div>
-</div>
-</div>
-</div>
-`;
-$('#root').append(str);
-}
+});
 });
 </script>
 </body>
