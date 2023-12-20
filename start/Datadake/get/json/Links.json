@@ -32,7 +32,7 @@
 			"url": "https://xiwangly.top/"
 		},
 		{
-			"img": "https://cdn-imfurry.imfurry.com/avatar/zebwqFurryAvatar.png",
+			"img": "https://q1.qlogo.cn/g?b=qq&nk=1622912909&s=5",
 			"title": "中二病晚期の物語",
 			"url": "https://imfurry.com"
 		},
@@ -67,11 +67,6 @@
 			"url": "https://api.xingzhige.com/"
 		},
 		{
-			"img": "https://fufuac.com/favicon.png",
-			"title": "郁十三",
-			"url": "https://fufuac.com/"
-		},
-		{
 			"img": "https://www.imnian.com/wp-content/uploads/2023/04/blogoimnianme.png",
 			"title": "流年笔记",
 			"url": "https://www.imnian.com/"
@@ -93,6 +88,12 @@
 			"Sitename": "EJyuan的小站",
 			"Sitelinks": "ejyuan.fun",
 			"Deletiontime": "2023/08/26",
+			"Reasonfordeletion": "无法访问"
+		},
+		{
+			"Sitename": "郁十三",
+			"Sitelinks": "fufuac.com",
+			"Deletiontime": "2023/12/18",
 			"Reasonfordeletion": "无法访问"
 		}
 	]

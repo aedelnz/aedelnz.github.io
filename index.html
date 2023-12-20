@@ -2,230 +2,342 @@
 <head>
 <title>画的个人记录</title>
 <meta charset="utf-8">
-<meta name="referrer" content="no-referrer"/>
-<meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<meta name="keywords" content="画的个人记录"/>
-<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。"/>
-<link rel="icon" href="./favicon.ico"/>
-<link rel="stylesheet" href="./start/index.css"/>
-<link rel="stylesheet" href="./start/mdui/css/mdui.min.css"/>
-<link rel="stylesheet" href="./start/bootstrap/css/bootstrap.min.css"/>
+<meta name="referrer" content="no-referrer" />
+<meta name="Content-Security-Policy" content="upgrade-insecure-requests" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="keywords" content="画的个人记录" />
+<meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
+<link rel="icon" href="./favicon.ico" />
+<link rel="stylesheet" href="./start/index.css" />
+<link rel="stylesheet" href="./start/mdui/css/mdui.min.css" />
+<link rel="stylesheet" href="./start/bootstrap/css/bootstrap.min.css" />
 <script src="./start/jquery/jquery.min.js"></script>
 <script src="./start/origin.js"></script>
-<style>
-.navbar.navbar-expand-lg{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(60,60,60,0.6);-webkit-backdrop-filter:saturate(180%) blur(20px);transition:all 0.5s}
-.navbar-nav a:hover {font-size: 18px;transition: font-size 0.6s ease-in-out;}
-.sap{font-size:1.45rem;padding-top:6px;padding-bottom:5px;text-align:center;position:sticky;top:60px;z-index:1019;background-color:rgba(0,0,0,0.4);width:100%;color:white;backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px)}
-.hdpicEach{justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-100;position:absolute;filter:brightness(20%)}.carousel-item{overflow:hidden;height:100vh}
-.carousel-inner{margin-top:-60px}
-.hdpicText{z-index:25;position:relative;color:white;padding-top:25vh;padding-left:6vw;padding-right:6vw}
-.ArProgress{width:100%;height:3px;overflow:hidden;background-color:#AAAAAA}
-.ArProgress>div{position:relative;height:3px;transition:width .5s ease-in-out;background-color:green}
-.hdpicCount{animation-timing-function:linear;animation-name:hdpicCount;animation-duration:6s;animation-fill-mode:forwards}@keyframes hdpicCount{from{width:100%}to{width:0%}}
-.btn-outline .shadow-sm, .btn-outline list-group-item {border-radius: 0;}
-.btn-outline a {line-height: 3.37rem;border-radius: 0;}
-.btn-outline a:nth-child(7n+1) {--bs-btn-color:#0d6efd;--bs-btn-border-color:#0d6efd;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#0d6efd;--bs-btn-hover-border-color:#0d6efd;--bs-btn-focus-shadow-rgb:13,110,253;--bs-btn-active-color:#fff;--bs-btn-active-bg:#0d6efd;--bs-btn-active-border-color:#0d6efd;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#0d6efd;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#0d6efd;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+2) {--bs-btn-color:#6c757d;--bs-btn-border-color:#6c757d;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#6c757d;--bs-btn-hover-border-color:#6c757d;--bs-btn-focus-shadow-rgb:108,117,125;--bs-btn-active-color:#fff;--bs-btn-active-bg:#6c757d;--bs-btn-active-border-color:#6c757d;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#6c757d;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#6c757d;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+3) {--bs-btn-color:#198754;--bs-btn-border-color:#198754;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#198754;--bs-btn-hover-border-color:#198754;--bs-btn-focus-shadow-rgb:25,135,84;--bs-btn-active-color:#fff;--bs-btn-active-bg:#198754;--bs-btn-active-border-color:#198754;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#198754;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#198754;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+4) {--bs-btn-color:#f8f9fa;--bs-btn-border-color:#f8f9fa;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#f8f9fa;--bs-btn-hover-border-color:#f8f9fa;--bs-btn-focus-shadow-rgb:248,249,250;--bs-btn-active-color:#000;--bs-btn-active-bg:#f8f9fa;--bs-btn-active-border-color:#f8f9fa;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#f8f9fa;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#f8f9fa;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+5) {--bs-btn-color:#dc3545;--bs-btn-border-color:#dc3545;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#dc3545;--bs-btn-hover-border-color:#dc3545;--bs-btn-focus-shadow-rgb:220,53,69;--bs-btn-active-color:#fff;--bs-btn-active-bg:#dc3545;--bs-btn-active-border-color:#dc3545;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#dc3545;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#dc3545;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+6) {--bs-btn-color:#ffc107;--bs-btn-border-color:#ffc107;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#ffc107;--bs-btn-hover-border-color:#ffc107;--bs-btn-focus-shadow-rgb:255,193,7;--bs-btn-active-color:#000;--bs-btn-active-bg:#ffc107;--bs-btn-active-border-color:#ffc107;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#ffc107;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#ffc107;--bs-gradient:none;}
-.btn-outline a:nth-child(7n+7) {--bs-btn-color:#0dcaf0;--bs-btn-border-color:#0dcaf0;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#0dcaf0;--bs-btn-hover-border-color:#0dcaf0;--bs-btn-focus-shadow-rgb:13,202,240;--bs-btn-active-color:#000;--bs-btn-active-bg:#0dcaf0;--bs-btn-active-border-color:#0dcaf0;--bs-btn-active-shadow:inset 0 3px 5px rgba(0,0,0,0.125);--bs-btn-disabled-color:#0dcaf0;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#0dcaf0;--bs-gradient:none;}
-.audio-player audio {width: 100%;background-color: #f2f2f2;border-radius: 5px;}
-.audio-player audio::-webkit-media-controls-panel {background-color: #f2f2f2;border-radius: 5px;}
-.mdui-hoverable .fw-bold:hover {font-size: 26px;transition: font-size 0.6s ease-in-out;}
-#网站日志 {width: auto;height: 50vh;overflow: auto;}
-#网站日志 .text-center {width: 100%;height: 100%;overflow-y: auto;position: sticky;}
-#context-menu {z-index:1020;background-color:rgba(42,45,49,0.4);backdrop-filter:saturate(10%) blur(10px);-webkit-backdrop-filter:saturate(10%) blur(10px); border-radius: 16%;}
-</style>
 </head>
-<body class="bg-dark text-white">
-<main>
+<body>
 
-
-<!-- 导航 -->
-<nav class="navbar navbar-expand-lg sticky-top">
-<div class="container-fluid">
-<a class="navbar-brand fw-bold text-white" href="#"><img src="./favicon.ico" width="25" style="margin-right:5px" class="img-thumbnail d-inline-block align-top" alt="">画的个人记录</a>
-<button class="navbar-toggler mdui-btn mdui-btn-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<i class="mdui-icon material-icons"  style="font-size: 1.5rem; color: rgb(255, 255, 255);">format_list_bulleted</i>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav me-auto mb-3 mb-lg-0"></ul>
-<span class="fs-5">
-<ul class="navbar-nav me-auto mb-lg-0">
-<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white active" aria-current="page" href="/#页面导航">页面导航</a></span></li>
-<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#动漫收藏">动漫收藏</a></span></li>
-<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#友情链接">友情链接</a></span></li>
-<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="/#网站日志">网站日志</a></span></li>
-<li class="nav-item p-1"><span class="badge"><a class="nav-link text-white" href="https://www.yuque.com/aedelnz/">语雀空间</a></span></li>
+<!-- ######################### 导航分页 ######################### -->
+<nav class="navbar fixed-top navbar-expand-lg">
+<div class="container">
+<a class="d-flex fs-3 fw-semibold font-monospace text-black-50 text-decoration-none" href="/">画的个人记录</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" ><span class="navbar-toggler-icon"></span></button>
+<div class="navbar-collapse collapse" id="navbar-nav">
+<div class="me-auto"></div>
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link link fs-4 text-black-50" href="#News">最新动态</a></li>
+<li class="nav-item"><a class="nav-link link fs-4 text-black-50" href="#Guoman_Collection">国漫收藏</a></li>
+<li class="nav-item"><a class="nav-link link fs-4 text-black-50" href="#Links">友情链接</a></li>
 </ul>
-</span>
 </div>
 </div>
 </nav>
 
-
-<!-- 循环幻灯片组件轮播 -->
-<section id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
-<div class="carousel-inner" id="carousel-inner">
-<div class="carousel-item active">
-<img src="https://image.coolapk.com/picture/2023/0513/19/860675_39b192d0_6037_0786_248@930x2048.jpeg.m.jpg" class="hdpicEach" alt="...">
-<div class="hdpicText text-white">
-<div class="fs-1" style="background: linear-gradient(75deg,rgba(255, 12, 204, 1) 0%,rgb(0, 217, 255) 33.33%,rgba(255, 255, 255, 0) 66.67%,rgba(255, 255, 255, 0) 100%);background-size: 300% 100%;background-clip: text;-webkit-background-clip: text;color: transparent;animation-name: colorTitle;animation-duration: 5s;">
-画的个人记录</div>
-<p class="fs-4">中在不断的尝试中完善信息</p>
-<span id="hitokoto">获取中</span>
-<script src="https://v1.hitokoto.cn/?c=a&encode=js&select=%23hitokoto" defer></script>
-<div style="padding-top: 9%;"><div class="ArProgress"><div class="hdpicCount"></div></div></div>
+<div id="md">
+<!-- ######################### 轮播页面 ######################### -->
+<div id="myCarousel" class="carousel slide">
+<div class="carousel-indicators" style="position: absolute;right: 0;top: 60vh;bottom: 0;z-index: 10;display: flex;margin-right: 15%;flex-direction: row;justify-content: flex-end;">
+<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="p-1 active"></button>
+<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="p-1"></button>
 </div>
-</div>
-<div class="carousel-item">
-<img src="https://image.coolapk.com/picture/2023/0516/10/2519278_45e3f34f_4876_6055_364@1440x2569.jpeg.m.jpg" class="hdpicEach" alt="...">
-<div class="hdpicText text-white">
-<h2 class="fs-1" style="background: linear-gradient(75deg,rgba(255, 12, 204, 1) 0%,rgb(0, 217, 255) 33.33%,rgba(255, 255, 255, 0) 66.67%,rgba(255, 255, 255, 0) 100%);background-size: 300% 100%;background-clip: text;-webkit-background-clip: text;color: transparent;animation-name: colorTitle;animation-duration: 5s;">
-机械极地馆</h2>
-<p class="fs-4">这里是第一次相遇，也是最初的开始。</p>
-<div style="padding-top: 9%;"><div class="ArProgress"><div class="hdpicCount"></div></div></div>
-</div>
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-</button>
-</section>
-
-
-<!-- 页面导航 -->
-<div class="sap fw-bolder font-monospace mb-5">页面导航</div>
-<section id="页面导航" class="card-group mb-5 btn-outline">
-<article class="card text-bg-dark">
-<div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder" id="page"></div>
-<div class="container text-center"><div class="row" id="page_list"></div></div>
-</article>
-<article class="card text-bg-dark">
-<div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder" id="project"></div>
+<div class="carousel-inner">
+<div class="carousel-item active" style="overflow:hidden;height:100vh">
+<img src="https://image.coolapk.com/picture/2023/0513/19/860675_39b192d0_6037_0786_248@930x2048.jpeg.m.jpg" style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
 <div class="container">
-<div class="audio-player">
-<div class="fw-bold">我不曾忘记 (游戏《原神》2023新春会同人曲)</div>
-<div class="lyrics text-primary font-monospace mdui-text-left"></div>
-<div class="lyrics text-white-50 font-monospace mdui-text-right"></div>
-<audio class="audio btn mb-2 btn-light" src="https://music.163.com/song/media/outer/url?id=2014336709.mp3" ontimeupdate="" controls=""></audio>
+<div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
+<h1>画的个人记录</h1>
+<p>中在不断的尝试中完善信息</p>
 </div>
-<div class="row list-group" id="project_list"></div>
 </div>
-</article>
-</section>
-
-
-<!-- 动漫收藏 -->
-<div class="sap fw-bolder font-monospace mb-5">动漫收藏</div>
-<section id="动漫收藏" class="card-group mb-5">
-<article class="card text-bg-dark">
-<div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder"><div class="mb-2 fs-4 font-monospace text-white text-center">来着腾讯视频和哔哩哔哩的视频收藏</div></div>
-<div class="container-fluid shadow rounded text-bg-dark text-center"><div class="row" id="Guoman"></div></div>
-</article>
-</section>
-
-
-<!-- 友情链接 -->
-<div class="sap fw-bolder font-monospace mb-5">友情链接</div>
-<section id="友情链接" class="card-group mb-5">
-<article class="card text-bg-dark">
-<div class="container-fluid shadow mb-3 rounded"><div class="mdui-row-xs-1 mdui-row-sm-3 card-body">
-<div class="mdui-col"><b>友情链接申请规则</b><p class="mdui-text-color-white">1.不接受没有原创内容的站点<br>2.不接受版权问题严重的站点<br>3.全站 (强制) 使用HTTPS协议<br>4.且无影响阅读体验的广告</p></div>
-<div class="mdui-col"><b>友链申请示例</b><p class="mdui-text-color-white">本站名称：画的个人记录<br>本站介绍：其实没有你们想的那么复杂！<br>本站链接：https://jixiejidiguan.top<br>本站图片：https://jixiejidiguan.top/favicon.ico</p></div>
-<div class="mdui-col"><b class="mdui-text-color-light-blue">PS:</b><p class="text-white">链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！<a class="mdui-text-color-indigo-a200" href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">去申请友情链接</a></p></div>
 </div>
-<div class="shadow-sm p-3 bg-dark fw-bolder"><div class="mb-2 font-monospace text-white text-center">友链不分先后，已开启随机排序。</div></div>
-<div class="text-bg-dark text-center"><div class="row" id="Links"></div></div>
-<div class="shadow-sm p-3 mdui-m-t-5 bg-dark fw-bolder"><div class="mb-2 font-monospace text-white text-center">友链删除日志</div></div>
-<div class="text-bg-dark text-center"><div class="row" id="Linkson"></div></div>
-</article>
-</section>
-
-
-<!-- 网站日志 -->
-<div class="sap fw-bolder font-monospace mb-5">网站日志</div>
-<section id="网站日志" class="card-group mb-5">
-<article class="card text-bg-dark">
-<div class="shadow-sm p-3 bg-dark bg-gradient fw-bolder">日志记录</div>
-<div class="container-fluid text-bg-dark text-center"><div class="row" id="Web_Update_log"></div></div>
-</article>
-</section>
-
-
-<!-- 关于我们 -->
-<div class="sap fw-bolder font-monospace mb-5">关于我们</div>
-<div class="b-example-divider"></div>
-<footer class="py-2">
-<div class="container-fluid">
+<div class="carousel-item" style="overflow:hidden;height:100vh">
+<img src="https://image.coolapk.com/picture/2023/0516/10/2519278_45e3f34f_4876_6055_364@1440x2569.jpeg.m.jpg" style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
+<div class="container">
+<div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
+<h1>机械极地馆</h1>
+<p>这里是第一次相遇，也是最初的开始。</p>
+</div>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+</div>
+<!-- ######################### 第二页 ######################### -->
+<section class="container">
+<div class="pm-1 pb-3" style="border-radius: 10px;margin-bottom: 40px;margin-top: -40vh;overflow: hidden;padding: 15px 0;"></div>
+<hr class="text-bg-light pb-2">
 <div class="row">
-<div class="col-6 col-md-6 mb-2">
-<h5>社交账号</h5>
-<ul class="nav flex-column">
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://space.bilibili.com/359155821">BILIBILI</a></li>
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank"  href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank"  href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a></li>
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a></li>
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://pd.qq.com/s/47hncys46">QQ频道</a></li>
-<li class="nav-item"><a class="nav-link p-0 text-light" target="_blank" href="https://s.jixiejidiguan.top/Api/qr.php?text=http://weixin.qq.com/r/AByBmUXEpRjarQH690kS&size=640" title="二维码图片">微信公众号</a></li>
+<div class="col-md-8">
+<!-- ######################### 最新动态 ######################### -->
+<div id="News">
+<p class="fs-4 fw-bolder font-monospace text-body-tertiary">最新动态</p>
+<div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div id="markdown"></div>
+</div>
+</div>
+<!-- ######################### 国漫收藏 ######################### -->
+<div id="Guoman_Collection">
+<p class="fs-4 fw-bolder font-monospace text-body-tertiary">国漫收藏</p>
+<div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div id="Guoman_Collection_add"></div>
+</div>
+</div>
+<!-- ######################### 友情链接 ######################### -->
+<div id="Links">
+<p class="fs-4 fw-bolder font-monospace text-body-tertiary">友情链接</p>
+<div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div id="Links_add"></div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="sticky-top" style="top: 80px">
+<!-- ######################### 关注我们 ######################### -->
+<p class="fs-4 fw-bolder font-monospace text-body-tertiary">关注我们</p>
+<div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div class="d-flex">
+<div class="vr"></div>
+<nav class="nav flex-column fw-semibold font-monospace">
+<a class="nav-link" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a>
+<a class="nav-link" href="https://space.bilibili.com/359155821">哔哩哔哩</a>
+<a class="nav-link" href="https://music.163.com/#/user/home?id=2070612671">网易云音乐</a>
+<a class="nav-link" href="https://t1.kugou.com/yl5T3bzvV2">酷狗音乐</a>
+<a class="nav-link" href="https://pd.qq.com/s/47hncys46">QQ频道</a>
+<a class="nav-link" href="https://s.jixiejidiguan.top/Api/qr.php?text=http://weixin.qq.com/r/AByBmUXEpRjarQH690kS&size=640">微信公众号</a>
+</nav>
+</div>
+</div>
+<!-- ######################### 备案号 ######################### -->
+<p class="fs-4 fw-bolder font-monospace text-body-tertiary">备案号</p>
+<div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div class="d-flex">
+<div class="vr"></div>
+<nav class="nav flex-column fw-semibold font-monospace">
+<a class="nav-link" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
+<a class="nav-link" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
+<a class="nav-link" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<!-- ######################### 版权 ######################### -->
+<div class="container">
+<footer class="position-sticky d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<div class="col-md-4 d-flex align-items-center">
+<span class="mb-1 mb-md-0 font-monospace text-muted">版权所有 © 2022-2024 画的个人记录</span>
+</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+<li class="fw-lighter">由「<a class="text-muted text-reset" href="/">机械极地馆</a>」提供技术支持</li>
 </ul>
-</div>
-<div class="col-6 col-md-6 mb-2">
-<h5>备案号</h5>
-<ul class="nav flex-column">
-<li class="nav-item mb-2"><a class="nav-link p-0 text-primary" href="https://beian.miit.gov.cn">湘ICP备2022000040号</a></li>
-<li class="nav-item mb-2"><a class="nav-link p-0 text-danger" href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a></li>
-<li class="nav-item mb-2"><a class="nav-link p-0 text-success" href="https://www.12377.cn/" alt="不良信息举报中心">违法和不良信息举报中心</a></li>
-</ul>
-</div>     
-</div>
-<div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-4 border-top">
-<p>&copy; 2023 机械极地馆 All rights reserved.</p>
-<ul class="list-unstyled d-flex">
-<li class="ms-1 mdui-typo-body-1-opacity"><a class="link-dark text-light" href="https://analytics.umami.is/share/TZcXMuSss4NRWxXF/%E7%94%BB%E7%9A%84%E4%B8%AA%E4%BA%BA%E8%AE%B0%E5%BD%95">umami</a> 网站分析</li>
-</ul>
-</div>
-</div>
 </footer>
-<!-- 返回顶部 -->
-<div id="backToTop" class="mdui-fab-fixed bg-white-50"><i class="mdui-icon material-icons">arrow_drop_up</i></div>
-<!-- 右键菜单 -->
-<div id="context-menu" class="mdui-list" style="position: absolute; display: none;">
-<a href="/" class="mdui-list-item mdui-ripple">首页</a>
 </div>
-</main>
-<script>
-// 音乐播放
-$(document).ready(function(){var lyrics=[{time:0,text:"我的破木箱"},{time:3,text:"装满枯萎的花"},{time:5,text:"放不下 光与壤"},{time:9,text:"和新鲜的愿望"},{time:12,text:"如果能飞翔"},{time:15,text:"去高高的地方"},{time:17,text:"撒一张 梦的网"},{time:21,text:"收集爱的回响"},{time:36,text:"你也在听吗"},{time:39,text:"落单的孩子啊"},{time:41,text:"别害怕 别害怕"},{time:45,text:"黑夜不会太长"},{time:48,text:"悬崖上的花"},{time:51,text:"让我为你摘下"},{time:53,text:"数一瓣 落一瓣"},{time:57,text:"就少一朵忧伤"},{time:60,text:"绿草和砂砾没有嘴巴"},{time:63,text:"一定不会说谎话"},{time:66,text:"他们让风提醒我有道光"},{time:72,text:"落在我的肩膀"},{time:76,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:81,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"},{time:87,text:"是你吗 把头顶的雨水 编织成蓝色的屋檐"},{time:93,text:"约好啦 等我们都长大 再次遇见 要比现在更美"},{time:111,text:"一千个噩梦"},{time:114,text:"换一千个小偷"},{time:116,text:"够不够 够不够"},{time:120,text:"偷走你的难过"},{time:124,text:"遇见那一刻"},{time:126,text:"就倒置了沙漏"},{time:128,text:"不必说 要铭刻"},{time:132,text:"天长还是地久"},{time:135,text:"都说长大后会忘记童话"},{time:138,text:"清醒后会忘记梦"},{time:141,text:"可尤其是下过雨的午后"},{time:147,text:"会想和你重逢"},{time:151,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:156,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"},{time:162,text:"是你吗 把头顶的雨水 编织成蓝色的屋檐"},{time:168,text:"约好啦 等我们都长大 再次冒险 追寻梦的蔓延"},{time:174,text:"谁越过一片花海"},{time:177,text:"谁切切朝我走来"},{time:180,text:"谁依然记得我未完成的心愿"},{time:189,text:"是你吗 头戴着花环 衔着最纯净的枝丫"},{time:196,text:"是你吧 撕下一缕霓裳 借我照亮 盒中之花"},{time:201,text:"是你吗 在某一天默默消失在春天的遥望"},{time:207,text:"可我呀 记得你的所有 我不会忘 我不会忘"},{time:213,text:"是你吗 在回家的路上 洒满月光点亮花蕊"},{time:219,text:"是你吧 弹奏古老和弦 赶走梦魇 伴我入睡"}];$(".audio").on("timeupdate",function(){var currentTime=Math.floor(this.currentTime);for(var i=0;i < lyrics.length;i++){if(lyrics[i].time===currentTime){$(".lyrics").eq(0).text(lyrics[i].text);$(".lyrics").eq(1).text(lyrics[i+1].text);break}}})});
 
-// 页面导航
-$.getJSON('./start/Datadake/get/json/index.json',function(data){$("#page").text(data.page);$("#project").text(data.project);$.each(data.page_list,function(i,n){var str=`<a class="col-6 btn btn-lg opacity-50 text-truncate"href="`+n.url+`"title="`+n.title+`">`+n.title+`</a>`;$("#page_list").append(str)});$.each(data.project_list,function(i,n){var str=`<li class="-list-group-item mdui-shadow-24 mdui-p-y-1 shadow-sm d-flex justify-content-between align-items-start text-bg-dark bg-dark"title="`+n.title+`"><div class="ms-2 me-auto"onclick="window.location.replace('`+n.url+`');"><div class="fw-bold">`+n.title+`</div><span class="text-white-50 font-monospace">`+n.subtitle+`</span></div></li><div class="mdui-divider bg-white"></div>`;$("#project_list").append(str)})});
-
-// 动漫收藏
-$.getJSON('./start/Datadake/get/json/TENCENT_COMIC.json',function(data){$.each(data,function(i,n){var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3"onclick="window.location.replace('`+n.url+`');"title="`+n.title+`"><div class="mdui-grid-tile"><img data-src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;$("#Guoman").append(str)})});$.getJSON('./start/Datadake/get/json/Bilibili.json',function(data){$.each(data,function(i,n){var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg opacity-70 text-truncate mb-3"onclick="window.location.replace('`+n.url+`');"title="`+n.title+`"><div class="mdui-grid-tile"><img data-src="`+n.img+`"/><div class="mdui-grid-tile-actions mdui-grid-tile-actions-gradient"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">`+n.title+`</div><div class="mdui-grid-tile-subtitle">`+n.figure_desc+`</div></div></div></div></div>`;$("#Guoman").append(str)})});
-
-// 友情链接
-$.getJSON('./start/Datadake/get/json/Links.json',function(data){function shuffleArray(array){var currentIndex=array.length,temporaryValue,randomIndex;while(0!==currentIndex){randomIndex=Math.floor(Math.random()*currentIndex);currentIndex--;temporaryValue=array[currentIndex];array[currentIndex]=array[randomIndex];array[randomIndex]=temporaryValue}return array}shuffleArray(data.Links);$.each(data.Links,function(i,n){var str=`<div class="col-6 col-sm-4 col-md-3 col-lg-2 btn-lg text-truncate mb-3"onclick="window.location.replace('`+n.url+`');"title="`+n.title+`"><div class="ratio text-white-50 ratio-1x1"><div class="mdui-valign text-center mdui-grid-tile"><img class="mdui-center rounded img-fluid img-thumbnail mdui-img-rounded"data-src="`+n.img+`"/></div></div><div class="mdui-hoverable ms-1 me-auto"onclick="window.location.replace('`+n.url+`');"><div class="fw-bold font-monospace text-truncate mdui-p-y-1">`+n.title+`</div></div><div class="mdui-divider bg-white"></div></div>`;$("#Links").append(str)});var strs=`<table class="table bg-dark bg-gradient"><thead><tr><th class="text-white">站点名称</th><th class="text-white">站点链接</th><th class="text-white">删除时间</th><th class="text-white">删除原因</th></tr></thead><tbody class="table-group-divider">`;$.each(data.Linkson,function(i,n){strs+=`<tr><td class="text-white">`+n.Sitename+`</td><td class="text-white">`+n.Sitelinks+`</td><td class="text-white">`+n.Deletiontime+`</td><td class="text-white">`+n.Reasonfordeletion+`</td></tr>`});strs+=`</tbody></table>`;$("#Linkson").append(strs)});
-
-// 网站日志
-$.getJSON('./start/Datadake/get/json/Web_Update_log.json',function(data){$.each(data,function(i,n){var str=`<table class="table text-light"><thead><tr><th scope="col">`+n.year+`</th></tr></thead>`;$.each(n.year_sort,function(i,n){str+=`<tbody><tr><td colspan="2">`+n.month+`</td></tr>`;$.each(n.month_sort,function(i,n){str+=`<tr><td></td><th scope="row">`+n.sun+`</th><td colspan="3">`+n.log_text+`</td></tr>`});str+=`</tbody>`});str+=`</table>`;$("#Web_Update_log").append(str)})});
-
-// 返回顶部
-$(document).ready(function(){$("#backToTop").click(function(){$("html, body").animate({scrollTop:0},"slow")});$(window).scroll(function(){if($(this).scrollTop()>450){$('#backToTop').fadeIn()}else{$('#backToTop').fadeOut()}})});
-
-// 隐藏菜单
-$(document).ready(function(){$('#context-menu').hide();$(document).on('contextmenu',function(e){e.preventDefault();var x=e.pageX;var y=e.pageY;$('#context-menu').css({'left':x,'top':y}).show()});$(document).on('click',function(){$('#context-menu').hide()})});
-
-// 0000
-$(document).ready(function(){$('img').each(function(){var image=$(this);var src=image.data('src');var imgElement=new Image();imgElement.src=src;imgElement.onload=function(){image.attr('src',src)}})});
-</script>
 <script src="./start/mdui/js/mdui.min.js"></script>
 <script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+
+// data-src
+$(function () {
+function isElementInViewport(el) {
+var rect = el.getBoundingClientRect();
+return (
+rect.top >= 0 &&
+rect.left >= 0 &&
+rect.bottom <= ($(window).height() || document.documentElement.clientHeight) &&
+rect.right <= ($(window).width() || document.documentElement.clientWidth)
+);
+}
+function lazyLoadImages() {
+$('img[data-src]').each(function () {
+var $img = $(this);
+if (isElementInViewport(this)) {
+$img.attr('src', $img.data('src')).removeAttr('data-src');
+}
+});
+}
+$(window).on('scroll', lazyLoadImages);
+lazyLoadImages();
+});
+
+// 导航分页
+var Label_classification = $('#News, #Guoman_Collection, #Links');
+var nav_link = $(".link");
+Label_classification.hide();
+nav_link.on('click', function (e) {
+e.preventDefault();
+var pagination_id = $(this).attr("href");
+Label_classification.hide();
+$(pagination_id).toggle();
+});
+$('a[href="#News"]').trigger('click');
+var fragment = window.location.hash.substring(1);
+Label_classification.each(function () {
+var elementId = $(this).attr('id');
+if(fragment===elementId){
+$('a[href="#'+elementId+'"]').trigger('click');
+}
+});
+
+
+// 最新动态
+function renderJsonToHtml(section) {
+switch (section.type) {
+case 'heading':
+return '<h' + section.level + ' class="fs-' + section.level + '">' + section.text + '</h' + section.level + '>';
+case 'list':
+var listType = section.style === 'unordered' ? 'ul' : 'ol';
+var items = section.items.map(function(item) {
+return '<li>' + (typeof item === 'object' ? item.text : item) + '</li>';
+});
+return '<' + listType + '>' + items.join('') + '</' + listType + '>';
+case 'link':
+return '<a href="' + section.url + '">' + section.text + '</a>';
+case 'image':
+return '<img src="' + section.url + '" alt="' + section.altText + '">';
+case 'blockquote':
+return '<blockquote>' + section.text + '</blockquote>';
+case 'hr':
+return '<hr>';
+case 'table':
+var tableHtml = '<table><thead><tr>';
+tableHtml += section.headers.map(function(header) {
+return '<th>' + header + '</th>';
+}).join('');
+tableHtml += '</tr></thead><tbody>';
+tableHtml += section.rows.map(function(row) {
+return '<tr>' + row.map(function(cell) {
+return '<td>' + cell + '</td>';
+}).join('') + '</tr>';
+}).join('');
+tableHtml += '</tbody></table>';
+return tableHtml;
+case 'taskList':
+var taskListHtml = '<ul>';
+taskListHtml += section.items.map(function(item) {
+return '<li>' + (item.checked ? '[x]' : '[ ]') + ' ' + item.text + '</li>';
+}).join('');
+taskListHtml += '</ul>';
+return taskListHtml;
+default:
+return `<p>${section.text.split('\n').join('<br>')}</p>`;
+// Add cases for other section types as needed
+}
+}
+$.get('./start/Datadake/get/json/News.json', function(data) {
+var markdown = $('#markdown');
+var str = `<div class="row row-cols-1 row-cols-md-2 g-1">`;
+data.forEach(function (content, index) {
+str +=`<div class="col mb-2">
+<div class="card">
+<div class="carousel-inner ratio ratio-21x9 bg-body-secondary">
+<div class="text-center">
+<img src="${content.image}" class="rounded mx-auto d-block img-fluid" alt="${content.title}">
+<div class="position-absolute bottom-0 p-2 text-bg-dark bg-opacity-50 w-100">
+<h5 class="card-title text-truncate">${content.title}</h5>
+</div>
+</div>
+</div>
+<div class="card-body">`;
+$.each(content.sections, function(index, section) {
+renderJsonToHtml(section);
+});
+str +=`<div class="d-flex justify-content-between">
+<p class="card-text">By ${content.author}</p>
+<p class="card-text"><small class="text-muted">${content.timestamp}</small></p>
+</div>
+<div class="d-grid justify-content-end">
+<button type="button" class="btn btn-outline-secondary" data-card-id="${index}" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1.5rem; --bs-btn-font-size: .75rem;">查看</button>
+</div>
+</div>
+</div>
+</div>`;
+markdown.on('click', '[data-card-id]', function() {
+var cardId = $(this).data('card-id');
+window.location.href = window.location.origin + '/#md=' + cardId;
+var originalContent = markdown.html();
+var md = $('#md');
+md.empty();
+if (cardId >= 0 && cardId < data.length) {
+var selectedContent = data[cardId];
+var str = `<div class="ratio ratio-21x9" style="display: flex;align-items: center;justify-content: center;height: 50vh;"><img src="${selectedContent.image}" style="width: 100%;height: 100%;object-fit: cover;object-position: center center;"></div><div class="pm-1 pb-3" style="border-radius: 10px;margin-bottom: 40px;margin-top: -26vh;overflow: hidden;padding: 15px 0;"></div><div class="container"><div class="position-sticky shadow-lg p-3 mb-5 bg-body-tertiary rounded"><div class="p-3 mt-3"><h1 class="text-center">${selectedContent.title}</h1><p class="text-center text-muted">By ${selectedContent.author} | ${selectedContent.timestamp}</p><div class="mt-4">`;
+$.each(selectedContent.sections, function(index, section) {
+str += renderJsonToHtml(section);
+//markdown.html(originalContent);
+});
+md.append(str);
+} else {
+markdown.text('Invalid card ID');
+}
+});
+});
+str += `</div></div></div></div></div>`;
+markdown.append(str);
+var match = RegExp('[#&]md=([^&]*)').exec(window.location.hash);
+var decodedValue = match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+$('[data-card-id="' + decodedValue + '"]').click();
+});
+
+// 国漫收藏
+$.when(
+$.get('./start/Datadake/get/json/TENCENT_COMIC.json'),
+$.get('./start/Datadake/get/json/Bilibili.json')
+).then( function (data1, data2) {
+var Guoman_Collection_add = $('#Guoman_Collection_add');
+var str = `<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-2">`;
+data1[0].forEach(function (data) {
+str += `<div class="col"><a class="card text-decoration-none text-black" href="${data.url}" title="${data.title}"><div class="carousel-inner ratio ratio-4x3"><div class="text-center"><img data-src="${data.img}" class="img-fluid" alt="${data.title}"><div class="position-absolute bottom-0 p-2 text-bg-dark bg-opacity-50 w-100"><h5 class="card-title text-truncate">${data.title}</h5></div></div></div><p class="card-body card-text text-truncate" title="${data.figure_desc}">${data.figure_desc}</p></a></div>`;
+});
+data2[0].forEach(function (data) {
+str += `<div class="col"><a class="card text-decoration-none text-black" href="${data.url}" title="${data.title}"><div class="carousel-inner ratio ratio-4x3"><div class="text-center"><img data-src="${data.img}" class="img-fluid" alt="${data.title}"><div class="position-absolute bottom-0 p-2 text-bg-dark bg-opacity-50 w-100"><h5 class="card-title text-truncate">${data.title}</h5></div></div></div><p class="card-body card-text text-truncate" title="${data.figure_desc}">${data.figure_desc}</p></a></div>`;
+});
+str += `</div>`;
+Guoman_Collection_add.append(str);
+});
+
+// 友情链接
+$.get('./start/Datadake/get/json/Links.json', function(data) {
+var Links_add = $('#Links_add');
+var str = `<!-- #########################  ######################### -->
+<div class="row g-1 mb-3 row-cols-1 row-cols-lg-3">
+<div class="col"><div class="fs-5">友情链接申请规则</div><p class="text-break fw-normal font-monospace text-muted">1.不接受没有原创内容的站点<br>2.不接受版权问题严重的站点<br>3.全站 (强制) 使用HTTPS协议<br>4.且无影响阅读体验的广告</p></div>
+<div class="col"><div class="fs-5">友链申请示例</div><textarea class="form-control text-nowrap border" rows="4">名称：画的个人记录\n介绍：其实没有你们想的那么复杂！\n地址：https://jixiejidiguan.top\n图片：https://jixiejidiguan.top/favicon.ico</textarea></div>
+<div class="col"><div class="fs-5">PS:</div><p class="text-break fw-normal font-monospace text-muted">链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！<a href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">去申请友情链接</a></p></div>
+</div>
+<!-- #########################  ######################### -->
+<div class="fs-5">友链</div>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-2 mb-5">`;
+function shuffleArrayWithJQuery(array) {
+$.each(array, function(currentIndex) {
+var randomIndex = Math.floor(Math.random() * currentIndex);
+[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+});
+return array;
+}
+shuffleArrayWithJQuery(data.Links);
+data.Links.forEach(function (link) {
+str += `<div class="col"><div class="carousel-inner ratio ratio-1x1"><a class="card shadow bg-body-tertiary rounded text-decoration-none text-black" href="${link.url}" title="${link.title}"><div class="d-flex align-items-center"><img data-src="${link.img}" class="mx-auto img-fluid rounded float-start" alt="${link.title}"></div><div class="position-absolute bottom-0 p-2 text-bg-dark bg-opacity-50 w-100"><h5 class="card-title text-truncate">${link.title}</h5></div></a></div></div>`;
+});
+str += `</div>
+<!-- #########################  ######################### -->
+<div class="table-responsive mb-3">
+<div class="fs-5">友链删除日志</div>
+<table class="table text-truncate"><thead><tr><th scope="col">站点名称</th><th scope="col">站点链接</th><th scope="col">删除时间</th><th scope="col">删除原因</th></tr></thead>
+<tbody class="table-group-divider">`;
+data.Linkson.forEach(function (linkson) {
+str += `<tr><th scope="row">${linkson.Sitename}</th><td>${linkson.Sitelinks}</td><td>${linkson.Deletiontime}</td><td>${linkson.Reasonfordeletion}</td></tr>`;
+});
+str += `</tbody></table>
+</div>`;
+Links_add.append(str);
+});
+
+});
+</script>
 </body>
 </html>

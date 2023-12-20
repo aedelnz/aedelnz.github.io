@@ -23,7 +23,7 @@
 <script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
 $(document).ready(function () {
-$.get('data.json', function(firmwareData) {
+$.get('../../start/Datadake/get/json/MIUI/vivo/data.json', function(firmwareData) {
 firmwareData.forEach(function (seriesData) {
 var seriesHtml = `<div class="accordion-item">
 <h2 class="accordion-header" id="flush-s${seriesData.series}"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-${seriesData.series}" aria-expanded="false" aria-controls="flush-${seriesData.series}">${seriesData.series}</button></h2>

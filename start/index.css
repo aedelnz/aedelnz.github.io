@@ -13,3 +13,13 @@ box-shadow:1 1px 20px 1px rgba(0,0,0,.3);
 border-bottom:0px solid rgba(255,255,255,0.4);
 border-left:0px solid rgba(255,255,255,0.4);
 }
+
+nav.navbar {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.text-body-tertiary {
+    color: var(--bs-tertiary-color)!important;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #6d6d6d8a, -1px 1px 0 #91919140, 1px 1px 0 #ffffffab;
+}

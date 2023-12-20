@@ -10033,20 +10033,30 @@
                                     apikey: e
                                 }, e)
                             }))
-                        }), (0, i.jsxs)("div", {
-                            id: "footer",
+                        }) ]
+                    }),(0, i.jsxs)("div", {
+                        className: "container",
+                        children: (0, i.jsxs)("footer", {
+                            className: "position-sticky d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top",
                             children: [(0, i.jsxs)("div", {
-                                children: ["\u57fa\u4e8e ", (0, i.jsx)(l, {
-                                    to: "https://uptimerobot.com/",
-                                    text: "UptimeRobot"
-                                }), " \u63a5\u53e3\u5236\u4f5c\uff0c\u68c0\u6d4b\u9891\u7387 5 \u5206\u949f"]
-                            }), (0, i.jsxs)("div", {
-                                children: ["由「", (0, i.jsx)(l, {
-                                    to: "/",
-                                    text: "机械极地馆"
-                                }), "」提供技术支持 , Version ", xn]
+                                className: "col-md-4 d-flex align-items-center",
+                                children: (0, i.jsxs)("span", {
+                                    className: "mb-1 mb-md-0 font-monospace text-muted",
+                                    children: "版权所有 © 2022-2024 画的个人记录"
+                                })
+                            }),(0, i.jsxs)("ul", {
+                                className: "nav col-md-4 justify-content-end list-unstyled d-flex",
+                                children: (0, i.jsxs)("li", {
+                                    className: "fw-lighter",
+                                    children: ["由「", (0, i.jsx)(l, {
+                                        className: "text-muted text-reset",
+                                        to: "/",
+                                        text: "机械极地馆"
+                                    },), "」提供技术支持"]
+
+                                })
                             })]
-                        })]
+                        })
                     })]
                 })
             };
