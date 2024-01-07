@@ -230,25 +230,25 @@ $.each(data.branches, function(i, item) {
 card += `<div class="accordion-item">
 <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#${item.cnname}" aria-expanded="false">${item.cnname}</button></h2>
 <div id="${item.cnname}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-<div class="card mdui-table-fluid">
-<table class="table table-hover table-borderless table-responsive mdui-text-truncate">
-<thead class="fw-bolder mdui-color-red"><tr><th scope="col">米柚</th><th scope="col">安卓</th><th scope="col">卡刷包</th><th scope="col">线刷包</th></tr></thead>
+<div class="table-responsive">
+<table class="table table-borderless text-truncate">
+<thead class="fw-bolder"><tr><th scope="col">米柚</th><th scope="col">安卓</th><th scope="col">卡刷包</th><th scope="col">线刷包</th></tr></thead>
 <tbody class="table-group-divider">`;
 $.each(item.links, function(i, n) {
 var recovery = n.recovery;
 var fastboot = n.fastboot;
 card += `<tr>
-<th scope="row"><p class="text-body-tertiary">${n.miui}</p></th>
+<th scope="row">${n.miui}</th>
 <td><p class="text-success">${n.android}</p></td>`;
 if (!recovery) {
-card += `<td><span class="btn badge text-bg-light">未发布</span></td>`;
+card += `<td><span class="text-dark">未发布</span></td>`;
 } else {
-card += `<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/${n.miui}/${n.recovery}>${n.recovery}</a></td>`;
+card += `<td><a class="text-dark" href=https://bigota.d.miui.com/${n.miui}/${n.recovery}>${n.recovery}</a></td>`;
 }
 if (!fastboot) {
-card += `<td><span class="btn badge text-bg-light">未发布</span></td>`;
+card += `<td><span class="text-dark">未发布</span></td>`;
 } else {
-card += `<td><a class="btn badge text-bg-light btn-outline-dark" href=https://bigota.d.miui.com/${n.miui}/${n.fastboot}>${n.fastboot}</a></td>`;
+card += `<td><a class="text-dark" href=https://bigota.d.miui.com/${n.miui}/${n.fastboot}>${n.fastboot}</a></td>`;
 }
 card += `</tr>`;
 });
