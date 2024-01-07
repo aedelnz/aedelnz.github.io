@@ -1,134 +1,165 @@
-<!--###################### 随随便便的开始 ######################-->
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-<title>爱莫能助</title>
 <meta charset="utf-8">
 <meta name="referrer" content="no-referrer"/>
 <meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-<link rel="icon" href="../favicon.ico"/>
-<link rel="stylesheet" href="../start/index.css"/>
-<link rel="stylesheet" href="../start/mdui/css/mdui.min.css"/>
-<link rel="stylesheet" href="../start/bootstrap/css/bootstrap.min.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>爱莫能助</title>
+<!-- 引入 bootstrap css 文件 -->
+<link href="../start/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../start/bootstrap/font/bootstrap-icons.css" rel="stylesheet">
+<!-- 引入 ECharts js 文件 -->
+<script src="../start/echarts/echarts.min.js"></script>
+<!-- 引入 jquery js 文件 -->
 <script src="../start/jquery/jquery.min.js"></script>
-<script src="../start/origin.js"></script>
 <style>
-li.mdui-list-item, .mdui-hoverable {border-radius: 8px;}
-.mdui-list a:hover {font-size: 24px;transition: font-size 0.3s ease-in-out;}
-.mdui-list-item-content:hover {font-size: 20px;transition: font-size 0.7s ease-in-out;}
+.flip-card {
+width: auto;
+height: 210px;
+perspective: auto;
+}
+.flip-card-inner {
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: transform 1.9s;
+}
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+width: 100%;
+height: 100%;
+position: absolute;
+backface-visibility: hidden;
+}
+.flip-card-front {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.flip-card-back {
+transform: rotateY(180deg);
+display: flex;
+align-items: center;
+justify-content: center;
+background: url("https://i0.hdslb.com/bfs/archive/c6bd5c910480065033f9429c89a41a5ff7a61109.png");
+flex-direction: column;
+flex-wrap: wrap;
+align-content: center;
+}
+li.nav-item.col-12.col-lg-auto:hover,
+a.nav-link.fw-bolder.text-black:hover {background: var(	--bs-light-border-subtle);color: var(--bs-dark-text);border-radius: var(--bs-border-radius)!important;transition: font-size 0.6s ease-in-out;}
+i.bi.bi-arrow-right-circle:hover {font-size: 17px;color: var(--bs-blue);transition: font-size 0.1s ease-in-out;}
+.list-group-item.list-group-item-action.shadow-sm.rounded:hover {background: var(	--bs-light-border-subtle);color: var(--bs-dark-text);}
 </style>
 </head>
-<body class="mdui-drawer-body-left fw-bold">
+<body>
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+</div>
+<div class="flip-card-back">
+<a class="text-decoration-none" href="https://www.bilibili.com/blackboard/activity-yellowVSgreen9th.html?spm_id_from=333.1007.0.0">点击查看<img style="display: none;" src="https://i0.hdslb.com/bfs/archive/c6bd5c910480065033f9429c89a41a5ff7a61109.png"></a>
+</div>
+</div>
+</div>
 
-<!--###################### 搜索引擎 ######################-->
-<section id="背景" class="card-group mdui-valig mdui-p-a-5">
-<article class="mdui-center p-3 mdui-p-x-5">
-<nav>
-<div class="nav nav-tabs" id="nav-tab" role="tablist">
-<button class="nav-link text-black active" data-bs-toggle="tab" data-bs-target="#bing" type="button" role="tab" aria-controls="bing" aria-selected="false">Bing</button>
-<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#baidu" type="button" role="tab" aria-controls="baidu" aria-selected="false">百度</button>
-<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#google" type="button" role="tab" aria-controls="google" aria-selected="true">Google</button>
-<button class="nav-link text-black" data-bs-toggle="tab" data-bs-target="#github" type="button" role="tab" aria-controls="github" aria-selected="false">GitHub</button>
-</div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-<div class="tab-pane fade show active" id="bing" tabindex="0">
-<form action="https://www.bing.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
-</form>
-</div>
-<div class="tab-pane fade" id="baidu" tabindex="0">
-<form action="https://www.baidu.com/s" method="get">
-<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="wd"></div>
-</form>
-</div>
-<div class="tab-pane fade" id="google" tabindex="0">
-<form action="https://www.google.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
-</form>
-</div>
-<div class="tab-pane fade" id="github" tabindex="0">
-<form action="https://github.com/search" method="get">
-<div class="input-group"><input type="text" class="form-control mdui-textfield-input" name="q"></div>
-</form>
-</div>
-</div>
-</article>
-</section>
-
-<!--###################### 导航 ######################-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-<div class="container-fluid">
-<a class="mdui-hidden-sm-up mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">format_align_left</i></a>
-<a class="navbar-brand" href="#">爱莫能助</a>
-<button class="navbar-toggler mdui-btn mdui-btn-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<i class="mdui-icon material-icons"  style="font-size: 1.5rem;">format_list_bulleted</i>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="fw-bold nav-link active_a" href="#动漫专区">默认专区</a></li>
-<li class="nav-item"><a class="fw-bold nav-link active_a" href="#软件大全">软件大全</a></li>
+<!--- header -->
+<header class="navbar navbar-expand-lg shadow bg-body-tertiary sticky-top mb-4">
+<nav class="container-xxl flex-wrap flex-lg-nowrap">
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#left-Side-navigation"><i class="bi bi-caret-left"></i></button>
+<a class="navbar-brand p-0 me-0 me-lg-2 font-monospace" href="" aria-label="Bootstrap"> 爱莫能助 </a>
+<div class="d-flex"><button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false"><i class="bi bi-search"></i></button><button class="navbar-toggler ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#right-Side-navigation"><i class="bi bi-caret-right"></i></button></div>
+<div class="offcanvas-lg offcanvas-end flex-grow-1" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="right-Side-navigation">
+<div class="offcanvas-header pb-0 mb-5"><h5 class="offcanvas-title">手を縛られること</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#right-Side-navigation"></button></div>
+<div class="offcanvas-body pt-0 p-lg-0">
+<ul class="navbar-nav flex-row flex-wrap bd-navbar-nav font-monospace">
+<li class="nav-item col-12 col-lg-auto"><div class="nav-link py-2 px-0 px-lg-2 me-0 ms-1" data-href="Animation_Zone.json">默认专区</div></li>
+<li class="nav-item col-12 col-lg-auto"><div class="nav-link py-2 px-0 px-lg-2 me-0 ms-1" data-href="Utility.json">软件大全</div></li>
+<li class="nav-item col-12 col-lg-auto"><div class="nav-link py-2 px-0 px-lg-2 me-0 ms-1" data-href="websites_info.json">杂七杂八</div></li>
 </ul>
-<div class="mdui-toolbar-spacer"></div>
-<div class="fw-bold mdui-divider"></div>
-<ul class="list-group list-group-flush d-flex navbar-nav mb-2">
-<li class="nav-item"><a class="nav-link text-black-50" href="https://afdian.net/a/JIXIEJIDIGUAN">爱发电</a></li>
-<li class="nav-item"><a class="nav-link text-black-50" href="/A2zml/v2/">魔法</a></li>
-<li class="nav-item"><a class="nav-link text-black-50" href="/#Links">友连</a></li>
+<hr class="d-lg-none text-black-50">
+<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="https://afdian.net/a/JIXIEJIDIGUAN" title="爱发电"><i class="bi bi-activity"></i><small class="d-lg-none ms-2">爱发电</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="/A2zml/v2/" title="魔法禁书"><i class="bi bi-book"></i><small class="d-lg-none ms-2">魔法禁书</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="/#Links" title="友情链接"><i class="bi bi-link-45deg"></i><small class="d-lg-none ms-2">友情链接</small></a></li>
 </ul>
 </div>
 </div>
 </nav>
+</header>
 
-<!--###################### 抽屉导航栏 ######################-->
-<div class="mdui-drawer" id="left-drawer">
-<div class="mdui-hidden-sm-up mb-3">
-<div class="mdui-toolbar"><div class="fs-1 fw-bold font-monospace">爱莫能助</div><div class="mdui-toolbar-spacer"></div><button type="button" class="btn-close" aria-label="Close" mdui-drawer-close></button></div>
-</div>
-<div id="动漫专区" class="px-1 page">
-<div class="mdui-m-t-5 mdui-list" id="Animation_Zone_a"></div>
-</div>
-<div id="软件大全" class="px-1 page">
-<div class="mdui-m-t-5 mdui-list" id="Utility_a"></div>
+<!--- main -->
+<section class="container mb-5">
+<div class="row">
+<div class="col-lg-2">
+<div class="sticky-top" style="top: 80px">
+<div class="offcanvas-lg offcanvas-start flex-grow-1" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="left-Side-navigation">
+<div class="offcanvas-header px-4 pb-0 mb-5"><h5 class="offcanvas-title">手を縛られること</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#left-Side-navigation"></button></div>
+<nav id="list-example" class="nav flex-column nav-pills"></nav>
 </div>
 </div>
-
-<!--###################### 吾主 ######################-->
-<section id="动漫专区" class="page">
-<article id="Animation_Zone"></article>
+</div>
+<div class="col-lg-10">
+<div class="container">
+<div class="collapse collapse-horizontal shadow p-3 mb-3 bg-body-tertiary rounded" id="collapseWidthExample">
+<form class="hstack gap-3" role="search"><input class="form-control rounded-3 text-bg-light me-auto" type="search" aria-label="Search" placeholder="输入搜索内容"><select class="btn btn-light" id="searchEngineSelect"><option value="bing">Bing</option><option value="google">Google</option><option value="baidu">百度</option><option value="github">GitHub</option></select><div class="vr"></div><button class="btn btn-light" type="submit"><i class="bi bi-search"></i></button></form>
+</div>
+</div>
+<div id="scroll-container"></div>
+</div>
+</div>
 </section>
-<section id="软件大全" class="page">
-<article id="Utility"></article>
-</section>
 
-<!--###################### footer ######################-->
-<footer class="container-fluid">
-<div class="fw-bold d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-<div class="col-md-4 d-flex align-items-center">
-<span class="mb-1 mb-md-0 text-muted">&copy; 2023 爱莫能助 All rights reserved.</span>
-</div>
-<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-<li class="ms-1 font-monospace mdui-typo-body-1-opacity">由「<a class="text-muted" href="#">机械极地馆</a>」提供技术支持</li>
+<!--- footer -->
+<footer class="bd-footer py-4 mt-2 shadow-lg">
+<div class="container px-4 text-body-secondary d-flex flex-column flex-sm-row justify-content-between">
+<a class="d-inline-flex align-items-center text-body-secondary text-decoration-none" href="/"><img src="../favicon.ico" class="object-fit-cover border rounded me-2" width="32" height="32"><span class="fs-4">爱莫能助</span></a>
+<ul class="list-unstyled small">
+<li class="mb-2">© 2020-2024 <a href="" class="link-dark fw-lighter text-decoration-none">爱莫能助</a> All rights reserved.</li>
+<li class="mb-2">由「<a href="/" class="link-dark fw-lighter text-decoration-none">机械极地馆</a>」提供技术支持</li>
+<li class="mb-2">当前版本 v1.0.0.</li>
 </ul>
 </div>
 </footer>
 
-<!--###################### script ######################-->
-<script>
-$("#软件大全").hide();
-$(".active_a").on('click', function (e){e.preventDefault();var target=$(this).attr("href");$(".page").hide();$(target).show();});
+<!--- 弹窗 -->
+<div class="modal fade" id="myModal" tabindex="-1" data-bs-backdrop="static" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content"><div class="modal-header"><h5 class="modal-title"></h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button><button type="button" class="btn btn-primary">前往</button></div></div>
+</div>
+</div>
 
-$.getJSON('../start/Datadake/get/json/A2zml/Animation_Zone.json', function(data) {
-$.each(data,function(i,n){var str =`<a class="mdui-list-item mdui-ripple" href="#`+n.classification+`">`+n.classification+`</a>`;$('#Animation_Zone_a').append(str);});
-$.each(data,function(i,n){var str =`<div class="container-fluid mdui-m-y-1 mb-5"><div class="row align-items-center"><p class="fs-3 text-start">`+n.classification+`</p><div id="`+n.classification+`"></div>`;$.each(n.content,function(i,n){str+=`<div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="mdui-hoverable"><div class="mdui-grid-tile"><li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple"><a target="_blank" class="nav-link active" href="/go.html#tpurl=`+n.url+`" title="`+n.title+`"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder font">`+n.title+`</div><div class="mdui-list-item-text mdui-list-item-one-line font-monospace">`+n.intro+`</div></div></a></li></div></div></div>`;});str+=`</div></div>`;$("#Animation_Zone").append(str);});
+<!-- 引入 bootstrap js 文件 -->
+<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+// 搜索框
+$(function(){$('form[role="search"]').submit(function(e){e.preventDefault();var t=$("#searchEngineSelect").val();var n=$('input[type="search"]',this).val();var r={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};window.location.href=(r[t]||r.google)+encodeURIComponent(n)})});
+var Toplevelnavigation = $('.nav-link.py-2.px-0.px-lg-2.me-0');
+Toplevelnavigation.on('click', function (e) {
+e.preventDefault();
+var pagination_id = $(this).data('href');
+$.getJSON('../start/Datadake/get/json/A2zml/'+pagination_id, function (data) {
+var $animationZone = $('#scroll-container'), htmlStr = data.map(function (e) { var t = e.content.map(function (e) { return '<div class="col"><a class="list-group-item list-group-item-action shadow-sm rounded"><div class="mb-0 fs-6 fw-light text-truncate" title="' + e.title + '" data-bs-toggle="modal" data-bs-target="#myModal" data-title="' + e.title + '" data-intro="' + e.intro + '" data-url="' + e.url + '">' + e.title + '</div><div class="d-flex w-100 justify-content-between"><p class="mb-1 fw-lighter font-monospace text-truncate" title="' + e.intro + '">' + e.intro + '</p><small class="text-muted" onclick="window.open(`/go.html#tpurl=' + e.url + '`);" title="直接访问"><i class="bi bi-arrow-right-circle"></i></small></div></a></div>' }).join(''); return '<div class="container px-3 py-3 list-group"><div id="' + e.classification + '" class="pb-2 fs-5">' + e.classification + '</div><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2">' + t + '</div></div>' }).join(''); $animationZone.empty().html(htmlStr);
+$(function () { $('#myModal').on('show.bs.modal', function (e) { var t = $(e.relatedTarget), a = t.data('title'), o = t.data('intro'), n = t.data('url'), i = $(this); i.find('.modal-title').empty().text(a), i.find('.modal-body').empty().html('<p><span class="spinner-border spinner-border-sm text-info me-2" role="status" aria-hidden="true"></span>内容加载中······</p>'); setTimeout(function () { var t = i.find('.modal-body').empty(); $.trim(o) !== '' ? t.text(o) : t.text(n), i.find('.modal-footer').empty().html('<a class="btn btn-primary" href="' + n + '">前往</a>') }, 1e3) }) });
+var $animationZoneAs = $('#list-example'), htmlStr = data.map(item => `<a class="nav-link fw-bolder text-black" href="#${item.classification}">${item.classification}</a>`).join(''); $animationZoneAs.empty().append(htmlStr);
+var classifications = $.map(data, item => item.classification);
+var contentNumbers = $.map(data, item => item.content.length);
+var $chartContainer = $('.flip-card-front');
+if ($chartContainer.length > 0) {
+var myChart = echarts.init($chartContainer[0]);
+option = {xAxis: {data: classifications,axisLabel: {interval: 0,rotate: -90,}},yAxis: {},series: [{type: 'bar',data: contentNumbers,barWidth: '80%',label: {show: true,position: 'top',color: '#000',}}]};
+myChart.setOption(option);
+}
 });
-
-$.getJSON('../start/Datadake/get/json/A2zml/Utility.json', function(data) {
-$.each(data,function(i,n){var str =`<a class="mdui-list-item mdui-ripple" href="#`+n.classification+`">`+n.classification+`</a>`;$('#Utility_a').append(str);});
-$.each(data,function(i,n){var str =`<div class="container-fluid mdui-m-y-1 mb-5"><div class="row align-items-center"><p class="fs-3 text-start">`+n.classification+`</p><div id="`+n.classification+`"></div>`;$.each(n.content,function(i,n){str+=`<div class="col-6 col-sm-4 col-md-3 col-lg-2"><div class="mdui-hoverable"><div class="mdui-grid-tile"><li class="mdui-list-item bg-white font-monospace text-muted mdui-ripple"><a target="_blank" class="nav-link active" href="/go.html#tpurl=`+n.url+`" title="`+n.title+`"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line text-black fw-bolder font">`+n.title+`</div><div class="mdui-list-item-text mdui-list-item-one-line font-monospace">`+n.intro+`</div></div></a></li></div></div></div>`;});str+=`</div></div>`;$("#Utility").append(str);});
+});
+Toplevelnavigation.first().click();
 });
 </script>
-<script src="../start/mdui/js/mdui.min.js"></script>
-<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
