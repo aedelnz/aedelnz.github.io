@@ -117,12 +117,11 @@ i.bi.bi-arrow-right-circle:hover {font-size: 17px;color: var(--bs-blue);transiti
 <!--- footer -->
 <footer class="bd-footer py-4 mt-2 shadow-lg">
 <div class="container px-4 text-body-secondary d-flex flex-column flex-sm-row justify-content-between">
+<div class="small">
 <a class="d-inline-flex align-items-center text-body-secondary text-decoration-none" href="/"><img src="../favicon.ico" class="object-fit-cover border rounded me-2" width="32" height="32"><span class="fs-4">爱莫能助</span></a>
-<ul class="list-unstyled small">
-<li class="mb-2">© 2020-2024 <a href="" class="link-dark fw-lighter text-decoration-none">爱莫能助</a> All rights reserved.</li>
-<li class="mb-2">由「<a href="/" class="link-dark fw-lighter text-decoration-none">机械极地馆</a>」提供技术支持</li>
-<li class="mb-2">当前版本 v1.0.0.</li>
-</ul>
+<div class="mb-0">版权所有 © 2020-2024 <a href="" class="link-dark fw-lighter text-decoration-none">爱莫能助</a></div>
+</div>
+<div class="mb-0">由「<a href="/" class="link-dark fw-lighter text-decoration-none">机械极地馆</a>」提供技术支持</div>
 </div>
 </footer>
 
@@ -140,10 +139,8 @@ $(document).ready(function () {
 // 搜索框
 $(function(){$('form[role="search"]').submit(function(e){e.preventDefault();var t=$("#searchEngineSelect").val();var n=$('input[type="search"]',this).val();var r={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};window.location.href=(r[t]||r.google)+encodeURIComponent(n)})});
 var Toplevelnavigation = $('.nav-link.py-2.px-0.px-lg-2.me-0');
-Toplevelnavigation.on('click', function (e) {
-e.preventDefault();
-var pagination_id = $(this).data('href');
-$.getJSON('../start/Datadake/get/json/A2zml/'+pagination_id, function (data) {
+function navigate(params) {
+$.getJSON('../start/Datadake/get/json/A2zml/'+params, function (data) {
 var $animationZone = $('#scroll-container'), htmlStr = data.map(function (e) { var t = e.content.map(function (e) { return '<div class="col"><a class="list-group-item list-group-item-action shadow-sm rounded"><div class="mb-0 fs-6 fw-light text-truncate" title="' + e.title + '" data-bs-toggle="modal" data-bs-target="#myModal" data-title="' + e.title + '" data-intro="' + e.intro + '" data-url="' + e.url + '">' + e.title + '</div><div class="d-flex w-100 justify-content-between"><p class="mb-1 fw-lighter font-monospace text-truncate" title="' + e.intro + '">' + e.intro + '</p><small class="text-muted" onclick="window.open(`/go.html#tpurl=' + e.url + '`);" title="直接访问"><i class="bi bi-arrow-right-circle"></i></small></div></a></div>' }).join(''); return '<div class="container px-3 py-3 list-group"><div id="' + e.classification + '" class="pb-2 fs-5">' + e.classification + '</div><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2">' + t + '</div></div>' }).join(''); $animationZone.empty().html(htmlStr);
 $(function () { $('#myModal').on('show.bs.modal', function (e) { var t = $(e.relatedTarget), a = t.data('title'), o = t.data('intro'), n = t.data('url'), i = $(this); i.find('.modal-title').empty().text(a), i.find('.modal-body').empty().html('<p><span class="spinner-border spinner-border-sm text-info me-2" role="status" aria-hidden="true"></span>内容加载中······</p>'); setTimeout(function () { var t = i.find('.modal-body').empty(); $.trim(o) !== '' ? t.text(o) : t.text(n), i.find('.modal-footer').empty().html('<a class="btn btn-primary" href="' + n + '">前往</a>') }, 1e3) }) });
 var $animationZoneAs = $('#list-example'), htmlStr = data.map(item => `<a class="nav-link fw-bolder text-black" href="#${item.classification}">${item.classification}</a>`).join(''); $animationZoneAs.empty().append(htmlStr);
@@ -155,9 +152,20 @@ var myChart = echarts.init($chartContainer[0]);
 option = {xAxis: {data: classifications,axisLabel: {interval: 0,rotate: -90,}},yAxis: {},series: [{type: 'bar',data: contentNumbers,barWidth: '80%',label: {show: true,position: 'top',color: '#000',}}]};
 myChart.setOption(option);
 }
+});  
+}
+Toplevelnavigation.on('click', function (e) {
+e.preventDefault();
+var pagination_id = $(this).data('href');
+navigate(pagination_id);
 });
-});
+var initialElementCount = $('#scroll-container').length;
 Toplevelnavigation.first().click();
+var currentElementCount = $('#scroll-container').length;
+if (currentElementCount > initialElementCount) {
+navigate('Animation_Zone.json');
+}
+//Toplevelnavigation.first().click();
 });
 </script>
 </body>

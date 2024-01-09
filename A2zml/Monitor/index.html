@@ -1,22 +1,66 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"/>
-<title>Uptime Status</title>
-<link href="./main.css" rel="stylesheet">
-<link rel="stylesheet" href="../../start/index.css"/>
-<link rel="stylesheet" href="../../start/mdui/css/mdui.min.css"/>
-<link rel="stylesheet" href="../../start/bootstrap/css/bootstrap.min.css"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>未重名</title>
+<!-- 引入 bootstrap css 文件 -->
+<link href="../../start/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../start/bootstrap/font/bootstrap-icons.css" rel="stylesheet">
+<!-- 引入 jquery js 文件 -->
 <script src="../../start/jquery/jquery.min.js"></script>
-<script src="../../start/origin.js"></script>
 <script src="./config.js"></script>
-<script defer="defer" src="./main.js"></script>
 </head>
 <body>
-<div id="app"></div>
-<script src="../../start/mdui/js/mdui.min.js"></script>
+
+<div id="root"></div>
+<!-- 引入 bootstrap js 文件 -->
 <script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function () {
+var siteName = window.Config.SiteName;
+var apiKeys = window.Config.ApiKeys;
+var countDays = window.Config.CountDays;
+var showLink = window.Config.ShowLink;
+var navi = window.Config.Navi;
+$('title').text(siteName);
+
+function fetchAccountDetails() {
+        $.ajax({
+            url: 'https://api.uptimerobot.com/v2/getMonitors',
+            type: 'POST',
+            data: JSON.stringify({ api_key: apiKeys[0], format: 'json', logs: 1, custom_uptime_ratios: '7-30' }),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(response) {
+                // Update the webpage with the account details
+                updateAccountDetailsList(response.monitors);
+            },
+            error: function(xhr, status, error) {
+                console.error('Failed to fetch account details:', error);
+                console.log('Status:', status);
+                console.log('Response Text:', xhr.responseText);
+            }
+        });
+    }
+
+    // Function to update the webpage with account details
+    function updateAccountDetailsList(monitors) {
+        var accountDetailsList = $('#root');
+        accountDetailsList.empty();
+
+        // Add your logic to interpret and display relevant account details
+        // For example, you can display the monitor names, statuses, etc.
+
+        $.each(monitors, function(index, monitor) {
+            var listItem = $('<li>').text('Monitor ' + monitor.id + ': ' + monitor.friendly_name + ' - Status: ' + monitor.status);
+            accountDetailsList.append(listItem);
+        });
+    }
+
+    // Fetch account details on page load
+    fetchAccountDetails();
+});
+</script>
 </body>
 </html>

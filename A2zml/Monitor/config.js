@@ -14,7 +14,7 @@ ShowLink: true,
 Navi: [
 {
 text: '主页',
-url: '/'
+url: 'https://stats.uptimerobot.com/0M2zqUkp83'
 }
 ],
 };
