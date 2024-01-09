@@ -8060,7 +8060,7 @@
                 return (0, e.useEffect)((function() {
                     document.title = window.Config.SiteName
                 }), []), (0, i.jsx)("nav", {
-                    className: "navbar navbar-expand-lg mb-5 shadow-lg bg-body-tertiary",
+                    className: "navbar navbar-expand-lg mb-4 shadow-lg bg-body-tertiary sticky-top",
                     children: (0, i.jsxs)("div", {
                         className: "container",
                         children: [(0, i.jsx)("a", {
@@ -9973,7 +9973,7 @@
                         })(n, a).then(d)
                     }), [n, a]), f ? f.map((function(e) {
                         return (0, i.jsxs)("div", {
-                            className: "shadow-lg p-2 mb-3 bg-body rounded border-bottom",
+                            className: "shadow-lg p-3 mb-3 bg-body rounded-3 border-bottom",
                             children: [(0, i.jsxs)("div", {
                                 className: "d-flex justify-content-between",
                                 children: [(0, i.jsx)("a", {
