@@ -9973,7 +9973,7 @@
                         })(n, a).then(d)
                     }), [n, a]), f ? f.map((function(e) {
                         return (0, i.jsxs)("div", {
-                            className: "shadow-lg p-3 mb-3 bg-body rounded-3 border-bottom",
+                            className: "shadow-lg p-3 mb-3 bg-body opacity-75 rounded-3 border-bottom",
                             children: [(0, i.jsxs)("div", {
                                 className: "d-flex justify-content-between",
                                 children: [(0, i.jsx)("a", {

@@ -5,16 +5,33 @@
 <meta name="referrer" content="no-referrer"/>
 <meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>未重名</title>
+<meta name="description" content="站点监测">
+<meta name="keywords" content="站点监测">
+<title>未命名</title>
 <!-- 引入 bootstrap css 文件 -->
 <link href="../../start/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../start/bootstrap/font/bootstrap-icons.css" rel="stylesheet">
 <!-- 引入 jquery js 文件 -->
 <script src="../../start/jquery/jquery.min.js"></script>
+<!-- 引入 配置文件 -->
 <script src="./config.js"></script>
 <script defer="defer" src="./main.js"></script>
+<style>body {background-color: #f6f8fa;background-attachment: fixed;background-position: center;background-size: cover;overflow-y: overlay;overflow-x: hidden;font-family: HarmonyOS_Regular, sans-serif;}</style>
 </head>
 <body>
 <div id="app"></div>
+<div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+<div id="liveToast" class="toast position-relative bd-example-toasts rounded-3 show" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-body"><span class="spinner-border text-success spinner-border-sm me-3" role="status" aria-hidden="true"></span>Loading...</div>
+</div>
+</div>
+<script>
+$(document).ready(function() {
+$('body').css('background-image', 'url(' + ['0.jpg', '1.jpg', '2.jpg', '3.jpg'][Math.floor(Math.random() * 4)] + ')');
+new MutationObserver(mutations => mutations.forEach(mutation => 
+(mutation.type === 'childList' || mutation.type === 'characterData') && $('#liveToast').addClass('hide').removeClass('show')
+)).observe(document.getElementById('uptime'), { childList: true, subtree: true, characterData: true });
+});
+</script>
 </body>
 </html>
