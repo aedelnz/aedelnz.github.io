@@ -9973,7 +9973,7 @@
                         })(n, a).then(d)
                     }), [n, a]), f ? f.map((function(e) {
                         return (0, i.jsxs)("div", {
-                            className: "mb-3 shadow-sm px-1 rounded-3 border-bottom",
+                            className: "shadow-lg p-2 mb-3 bg-body rounded border-bottom",
                             children: [(0, i.jsxs)("div", {
                                 className: "d-flex justify-content-between",
                                 children: [(0, i.jsx)("a", {
@@ -10024,10 +10024,9 @@
                 }), []);
                 return (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(u, {}), (0, i.jsxs)("div", {
-                        className: "container",
+                        className: "container mb-5",
                         children: [(0, i.jsx)("div", {
                             id: "uptime",
-                            className: "p-2 mb-5 shadow-lg bg-body-tertiary rounded",
                             children: t.map((function(e) {
                                 return (0, i.jsx)(En, {
                                     apikey: e

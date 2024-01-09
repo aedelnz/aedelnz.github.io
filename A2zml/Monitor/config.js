@@ -1,7 +1,7 @@
 window.Config = {
 
   // 显示标题
-  SiteName: '云端 站点监测',
+  SiteName: 'zito 站点监测',
 
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only
