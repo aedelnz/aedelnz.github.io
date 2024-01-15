@@ -2,912 +2,197 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="theme-color" content="#0665d0"/>
-<title>魔法禁书｜Magic Forbidden Book</title>
-<link rel="icon" href="../../favicon.ico"/>
-<link rel="stylesheet" href="../../start/index.css"/>
-<link rel="stylesheet" href="../../start/mdui/css/mdui.min.css"/>
-<link rel="stylesheet" href="../../start/bootstrap/css/bootstrap.min.css"/>
-<script src="../../start/origin.js"></script>
-<script src="../../start/mdui/js/mdui.min.js"></script>
-<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>魔法禁书</title>
+<link rel="icon" href="../../favicon.ico">
+<!-- 引入 bootstrap css 文件 -->
+<link href="../../start/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- 引入 Icon Font 文件 -->
+<link href="../../start/bootstrap/font/bootstrap-icons.css" rel="stylesheet">
+<!-- 引入 jquery js 文件 -->
+<script src="../../start/jquery/jquery.min.js"></script>
+<!-- 引入 js-base64 js 文件 -->
+<script src="./js-base64.js"></script>
+<!-- 引入 md5 js 文件 -->
+<script src="./md5.js"></script>
+<!-- 引入 Valine js 文件 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/valine/1.5.1/Valine.min.js"></script>
 </head>
-<body class="mdui-drawer-body-left text-black">
-<div class="mdui-drawer bg-light-subtle" id="left-drawer">
-<div class="mdui-hidden-sm-up mb-2">
-<div class="mdui-toolbar">
-<div class="mdui-typo-title">魔法禁书</div>
-<div class="mdui-toolbar-spacer"></div>
-<button class="mdui-btn" mdui-drawer-close><i class="mdui-icon material-icons">close</i></button>
-</div>
-</div>
-<ul class="mdui-list container-fluid">
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="/">返回首页</a>
-</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#执行工具">执行工具</a>
-</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#定制软件">定制软件</a>
-</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#机场订阅">机场订阅</a>
-</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#节点分享">节点分享</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#评论留言">评论留言</a>
-</li>
-<li class="mdui-list-item mdui-ripple">
-<a class="text-decoration-none" href="#常见问题">常见问题</a>
-</li>
-</ul>
-</div>
-<div class="mdui-appbar mdui-appbar-scroll-hide">
-<div class="mdui-toolbar">
-<a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}"><i class="mdui-icon material-icons">apps</i></a>
-<div class="mdui-typo-title">仪表盘</div>
-<div class="mdui-toolbar-spacer"></div>
-</div>
-</div>
-
-<!--###################### 主体 ######################-->
-<div class="mdui-p-t-2 container">
-
-<div class="card shadow-lg mb-5 bg-body-tertiary rounded" style="height: 25cqb;">
-<div class="card-img" style="width: 100%;height: 100%;background-image: url(./bGtrs.jpeg); background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
-</div>
-
-<!--###################### 执行工具 ######################-->
-<div id="执行工具" class="row mb-3">
-<div class="font-monospace">
-<div class="mb-1"><h3 class="block-title">执行工具</h3></div>
-<div class="block-content text-start">
-<script type="text/javascript" src="./Base64.js?v=1.0.0.1000000"></script>
-<div class="mdui-row-xs-1 mdui-row-sm-2 shadow-lg p-2 mb-4 bg-body-tertiary rounded mdui-grid-list">
-<form id="form1" name="form1" method="post" action>
-<div class="mdui-col">
-<div class="mb-3">
-<label class="form-label">Base64编码或解码的字符：</label>
-<textarea class="form-control mdui-textfield-input" name="src" id="src" cols="80" rows="8"></textarea>
-</div>
-<input onclick="doEncode();" type="button" value="编码" name="encode" class="btn btn-primary mdui-btn">&nbsp;
-<input onclick="doDecode();" type="button" value="解码" name="decode" class="btn btn-secondary mdui-btn">
-</div>
-<div class="mdui-col">
-<div class="mb-3">
-<label class="form-label"></i>Base64编码或解码结果：</label>
-<span class="mdui-float-right text-end">16进制显示<input type="checkbox" checked value="hex" name="opt" id="opt"></span>
-<textarea class="form-control mdui-textfield-input" name="dest" id="dest" cols="80" rows="8"></textarea>
-</div>
-</div>
-</form>
-</div>
-<div class="p-2 mdui-text-color-blue-grey-700 shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-网速测试：<a class="badge text-bg-secondary text-decoration-none" href=https://speed.cloudflare.com/ >Speed Test</a>
-<a class="badge text-bg-secondary text-decoration-none" href=https://fast.com/ >Fast</a>
-<a class="badge text-bg-secondary text-decoration-none" href=https://www.speedtest.net/zh-Hans >Speedtest</a><br>
-IP查询：<a class="badge text-bg-secondary text-decoration-none" href=https://ip.skk.moe/ >ip.skk.moe</a>
-<a class="badge text-bg-secondary text-decoration-none" href=https://www.ipaddress.com/ >IPAddress.com</a>
-<a class="badge text-bg-secondary text-decoration-none" href=https://www.ipaddress.my/ >IPAddress.my</a>
-</div>
-<div class="col-md-12 mb-2 row">
-<div class="col-md-6 mb-2">
-<div class="text-center py-2">
-<p class="h1 mb-2">爱发电</p>
-<p class="h6 text-muted">在这里求一杯奶茶</p>
-</div>
-<div class="block-content py-1">
-<div class="shadow-lg bg-body-tertiary rounded bg-body-light" style="height: 10cqb;background-image: url(https://pic1.afdiancdn.com/user/cc80b252e55311ebaa5352540025c377/common/b79a87e4228b897e6ebde3e56fcf58c6_w3556_h2000_s6221.jpg?imageView2/1/w/1500/h/750);background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
-<p class="mdui-p-t-1 text-center">
-<a class="text-decoration-underline" href="javascript:window.open('https://afdian.net/a/JIXIEJIDIGUAN');"><span class="btn btn-outline-secondary"><i class="mdui-icon material-icons">monetization_on</i> 为TA发电</span></a>
-</p>
-</div>
-</div>
-
-<div class="col-md-6 mb-2">
-<div class="text-center py-2">
-<p class="h1 mb-2">ACL4SSR</p>
-<p class="h6 text-muted">订阅转换</p>
-</div>
-<div class="block-content py-1">
-<ul class=".v2board-plan-features">
-<li><a href="https://acl4ssr-sub.github.io/">ACL4SSR 在线订阅转换</a></li>
-<li><a href="https://sub.dler.io/">Subscription Converter</a></li>
-<li><a href="https://sub.xeton.dev/">Subscription Converter</a></li>
-<li><a href="https://sub.tsutsu.one/">つつの订阅转换 · 鲸歌</a></li>
-<li><a href="https://bianyuan.xyz/">边缘@订阅转换API</a></li>
+<body>
+<!--- header -->
+<header class="navbar navbar-expand-lg shadow bg-body-tertiary sticky-top mb-4">
+<nav class="container-xxl flex-wrap flex-lg-nowrap">
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#right-Side-navigation"><i class="bi bi-caret-left"></i></button>
+<a class="navbar-brand me-lg-2 font-monospace" href="" aria-label="Bootstrap">魔法禁书</a>
+<div></div>
+<div class="offcanvas-lg offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="right-Side-navigation">
+<div class="offcanvas-header pb-0 mb-5"><h5 class="offcanvas-title">魔法禁书</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#right-Side-navigation"></button></div>
+<div class="offcanvas-body pt-0 p-lg-0">
+<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="https://afdian.net/a/JIXIEJIDIGUAN" title="爱发电"><i class="bi bi-activity"></i><small class="d-lg-none ms-2">爱发电</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#编码工具" title="编码工具"><i class="bi bi-braces-asterisk"></i><small class="d-lg-none ms-2">编码工具</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#评论留言" title="评论留言"><i class="bi bi-chat-square-dots"></i><small class="d-lg-none ms-2">评论留言</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#节点分享" title="节点分享"><i class="bi bi-database-up"></i><small class="d-lg-none ms-2">节点分享</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#机场分享" title="机场分享"><i class="bi bi-device-ssd"></i><small class="d-lg-none ms-2">机场分享</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#常见问题" title="常见问题"><i class="bi bi-exclamation-square"></i><small class="d-lg-none ms-2">常见问题</small></a></li>
+<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#软件下载" title="软件下载"><i class="bi bi-android2"></i><small class="d-lg-none ms-2">软件下载</small></a></li>
 </ul>
 </div>
 </div>
-</div>
-<div class="col-md-12 mb-2">
-<div class="card shadow-lg bg-body-tertiary rounded p-2">
-<div class="text-center mb-3 py-2">
-<p class="h1 mb-2">anti-AD</p>
-<p class="h6 text-muted">致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。</p>
-</div>
-<div class="row">
-<div class="col-sm-6 mb-1">
-<h1>anti-AD Filters</h1>
-<p>anti-AD致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。现已支持AdGuardHome，dnsmasq， Surge，Pi-Hole等优秀的网络组件。</p>
-<p>使用anti-AD能够屏蔽广告域名，能屏蔽电视盒子广告，屏蔽app内置广告，同时屏蔽了一些日志收集、大数据统计等涉及个人隐私信息的站点，能够保护个人隐私不被偷偷上传。</p>
-<p>本工具是通过域名解析层（DNS服务）来屏蔽广告和保护隐私的，其将各大著名的hosts，ad filter lists，adblock list等的列表进行合并去重，再进行一系列的抽象化，例如主动剔除失效域名、easylist优化模糊匹配、增强的黑白名单机制等措施，最终生成期望的高命中率列表。</p>
-<p>不同格式的<strong>过滤列表文件</strong>会定期自动更新，其分别用于不同服务中的广告过滤规则:</p>
-<ul>
-<li><a href="https://anti-ad.net/anti-ad-for-dnsmasq.conf">https://anti-ad.net/anti-ad-for-dnsmasq.conf</a> </li>
-<li><a href="https://anti-ad.net/easylist.txt">https://anti-ad.net/easylist.txt</a></li>
-<li><a href="https://anti-ad.net/domains.txt">https://anti-ad.net/domains.txt</a> </li>
-<li><a href="https://anti-ad.net/surge.txt">https://anti-ad.net/surge.txt</a> </li>
-<li><a href="https://anti-ad.net/surge2.txt">https://anti-ad.net/surge2.txt</a>（据说更节省内存） </li>
-<li><a href="https://anti-ad.net/anti-ad-for-smartdns.conf">https://anti-ad.net/anti-ad-for-smartdns.conf</a> </li>
-<li><a href="https://anti-ad.net/adguard.txt">https://anti-ad.net/adguard.txt</a>(adguard专用规则)</li>
+</nav>
+</header>
+<div class="container">
+<div class="ms-3 fs-5" id="编码工具"><i class="me-2 bi bi-braces-asterisk"></i>编码工具</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
+<ul class="nav nav-pills mb-3" id="myTab">
+<li class="nav-item"><a class="nav-link active" data-bs-toggle="list" href="#Base64">BASE64 编码</a></li>
+<li class="nav-item"><a class="nav-link" href="#Md5">MD5 编码</a></li>
 </ul>
-</div>
-<div class="col-sm-6 mb-1">
-<div class="table-responsive">
-<table class="table table-borderless">
-<tbody class="table-light">
-<tr>
-<th>文件名</th>
-<th>操作参考</th>
-<th>适用范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>anti-ad-for-dnsmasq.conf</code></td>
-<td>1. 下载过滤列表文件后, 保存到你的dnsmasq配置的正确目录下；2. 重启dnsmasq服务；3. 已经生效了，enjoy it。</td>
-<td>dnsmasq及其衍生版本</td>
-</tr>
-<tr>
-<td><code>easylist.txt</code></td>
-<td>1. 进入AdGuardHome过滤器页面；<br />2. 选择添加过滤器输入名称 anti-AD，url地址填raw链接或者jsDelivr；<br>3. 点击确认后即生效</td>
-<td>AdGuardHome</td>
-</tr>
-<tr>
-<td><code>adguard.txt</code></td>
-<td>第一步下载adguard，第二步加载规则，第三步保存</td>
-<td>adguard专用，解决easylist误杀的问题</td>
-</tr>
-<tr>
-<td><code>domains.txt</code></td>
-<td>以Pi-Hole为例<br>1. 进入pi-hole设置界面<br>2. 添加本domains列表链接到pi-hole的过滤器列表中<br>3. 点击save &amp; update<br>4. 更新成功后即可生效</td>
-<td>Pi-Hole及其他。</td>
-</tr>
-<tr>
-<td><code>surge.txt</code></td>
-<td>直接订阅本条链接，保存后生效</td>
-<td>Surge或兼容服务。</td>
-</tr>
-<tr>
-<td><code>anti-ad-for-smartdns.conf</code></td>
-<td>下载链接后保存到合适位置</td>
-<td>SmartDNS</td>
-</tr>
-</tbody>
-</table>
+<div class="tab-content">
+<div class="tab-pane active" id="Base64"><div class="row">
+<div class="col-lg-6"><div class="mb-3"><label class="form-label text-secondary">输入要转换的内容</label><textarea class="form-control text-secondary-emphasis" id="Base64text" rows="4"></textarea></div><div class="btn-group btn-group-sm mb-1"><button class="btn btn-outline-primary" type="button" id="Base64start">Base64 编码</button><button class="btn btn-outline-secondary" type="button" id="Base64end">Base64 解密</button></div></div>
+<div class="col-lg-6"><div class="mb-3"><label class="form-label text-body-tertiary">转换结果</label><textarea class="form-control text-black-50" id="Base64code" rows="4"></textarea></div></div>
+</div></div>
+<div class="tab-pane" id="Md5"><div class="row">
+<div class="col-lg-6"><div class="mb-3"><label class="form-label text-secondary">输入要转换的内容</label><textarea class="form-control text-secondary-emphasis" id="md5text" rows="4"></textarea></div><div class="btn-group btn-group-sm mb-1"><button class="btn btn-outline-primary" type="button" id="md5start">md5 编码</button></div></div>
+<div class="col-lg-6"><div class="mb-3"><label class="form-label text-body-tertiary">转换结果</label><textarea class="form-control text-black-50" id="md5code" rows="4"></textarea></div></div>
+</div></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="col-md-12  mb-2">
-<div class="p-2">
-<div class="text-center mb-3 py-2">
-<p class="h1 mb-2">Proxy代理</p>
-<p class="h6 text-muted">Telegram 客户端 Proxy 代理设置</p>
-</div>
-<article class="text-start text-break"><h4>1. Telegram Desktop 客户端</h4><p>Telegram Desktop 默认并没有勾选&quot;使用系统代理&quot;, 所以很多人觉得需要开全局才能用,  其实不然, 可以手动勾选&quot;使用系统代理&quot;或使用自定义代理.</p><p><strong>步骤:</strong></p><p>A: 未登录账号: 界面左下角按钮</p><p>B: 已登录账号: Telegram Desktop 客户端→左上角三短线→设置→高级→网络和代理→代理类型→勾选&quot;使用系统代理&quot;或&quot;使用自定义代理&quot;</p><p>使用自定义代理添加方法: 添加代理(Add proxy)→SOCKS5/HTTP→服务器: 127.0.0.1, 端口: 端口需查看你的代理软件(SS/SSR/Clash for Windows/V2RayN...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    Clash.NET: 主界面→右侧→混合端口(Mixe-Port)</em></p><p><em>    SS/SSD→右键状态栏SS/SSD图标→服务器→编辑服务器→本地端口(默认是: 1080)</em></p><p><em>    SSR→右键状态栏SSR图标→选项设置→本地端口(默认是: 1080)</em></p><p><em>    V2RayN: 主界面→左下角→SOCKS5(或者参数设置→本地监听端口)(默认是: 10808)</em></p><p><em>    Trojan-Qt5: 打开Trojan-Qt5主界面→双击一个节点→本地端口(默认是1080)</em></p><p><em>    Netch: 打开Netch主界面→设置→本地端口SOCKS5(默认是2801)</em></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram Desktop 连不上网络.</strong></p><blockquote>备注: Windows, macOS, Linux 系统的电脑都可以使用  Telegram Desktop 版本客户端.(macOS 上 Mac App Store 中的&quot;Telegram Desktop&quot;已更名为&quot;Telegram Lite&quot; )</blockquote><p><br></p><h4>2. Telegram macOS 客户端</h4><p>Telegram macOS 客户端不遵从系统代理, 所以需要设置自定义代理, 也可以用Surge/ClashX Pro 开启&quot;增强模式&quot;</p><p>(Surge/ClashX Pro 的&quot;增强模式&quot;就是针对这类不遵从系统代理的软件做的功能)</p><p><strong>自定义代理设置步骤:</strong> </p><p>A: 未登录账号: 界面右上角按钮→Use Proxy</p><p>B: 已登录账号: Telegram macOS 客户端→设置→数据→使用代理</p><p>添加代理→SOCKS5/HTTP→服务器(Server): 127.0.0.1, 端口(Port): 端口需查看你的代理软件(Surge/ClashX/ShadowsocksX...), 不需要填写用户名和密码.</p><p>代理软件查看本地端口的方法:</p><p><em>    Surge→点击状态栏Surge图标→显示主界面→SOCKS5(默认是: 6153)</em></p><p><em>    Clash for Windows: 主界面→General→Port(默认是: 7890)</em></p><p><em>    ClashX→点击状态栏</em>ClashX图标→帮助→端口<em>→Socks Port(默认是: 7891)</em></p><p><em>    ShadowsocksX: 点击状态栏ShadowsocksX</em>图标<em>→高级设置→本地Socks5监听端口(默认是: 1086)</em></p><p> <em>   V2RayX: 点击状态栏V2RayX图标→Configure→Local Socks5 Port(默认是: 1081)</em></p><p> <em>   V2rayU: 点击状态栏V2rayU图标→偏好设置→Advance→本机 Sock 监听端口(默认是: 1080)</em></p><p><strong>设置完成保存后, 记得重启 Telegram macOS 客户端&#33; 记得重启&#33; 记得重启&#33;</strong></p><p>有可能你或你用的规则修改了代理软件的本地SOCKS5/HTTP端口, 具体以你的代理客户端为准.<strong>不能乱设置乱猜测, 乱设置可能导致 Telegram macOS 连不上网络.</strong></p><p><br></p><h4>3. Telegram iOS/Android 客户端</h4><p>iOS/Android 设备上开启代理软件即可, 不需要单独在 Telegram 中设置代理.</p><p>Telegram iOS 端是IP直连访问服务器的, 所以需要代理软件做单独的规则处理才行; </p><p>iOS上有些代理软件并没有针对性的对此做处理, 所以即使开启了这类代理软件, Telegram iOS 也会提示无网络链接, 比如&quot;Wingy&quot;, <a href="#定制软件">点击查看代理软件</a>.</p><p><br></p><h4>4. 其他</h4><p>也可以自建SOCKS5/HTTP/MTProto代理, 只用于Telegram 上使用, 网络也有很多公开的SOCKS5/HTTP/MTProto代理, 个人不建议使用这种方式, 依然建议用代理软件, <a href="#定制软件">点击查看代理软件</a>.</p><p>更不要使用某些内置代理的 Telegram 第三方客户端软件, 存在安全隐患.</p></article>
-</div>
-</div>
-<div class="col-md-12 mb-2 shadow bg-body-tertiary rounded">
-<div class="p-2">
-<div class="text-center mb-3 py-2">
-<p class="h1 mb-2">Telegram</p>
-<p class="h6 text-muted">Telegram 客户端</p>
-</div>
-<article class="text-start text-break">
-<p>
-<h5>直接点击链接汉化 Telegram 电报: <a href="https://t.me/setlanguage/zhcncc">https://t.me/setlanguage/zhcncc</a></h5>
-各个语言包:<br>
-* 中文(简体)-聪聪: https://t.me/setlanguage/zhcncc<br>
-* 中文(简体)-@zh_CN: https://t.me/setlanguage/classic-zh-cn<br>
-* 中文(简体)-简体: https://t.me/setlanguage/classic-zh<br>
-* 日语: https://t.me/setlanguage/ja-beta<br>
-* 韩语: https://t.me/setlanguage/ko<br>
-* 英语: https://t.me/setlanguage/en
-</p>
-<p>
-<h5>Telegram 官方客户端安装包下载↓</h5>
-* Android APK: https://telegram.org/dl/android/apk<br>
-* iOS 下载: https://apps.apple.com/cn/app/id686449807<br>
-* Windows 安装包: https://telegram.org/dl/desktop/win<br>
-* macOS Telegram 安装包: https://telegram.org/dl/macos<br>
-* macOS Telegram Desktop 安装包: https://telegram.org/dl/desktop/mac<br>
-* 官网: https://telegram.org/apps<br><br>
-<h6>第三方客户端</h6>
-iOS: <a href="https://apps.apple.com/us/app/ime-messenger-crypto-wallet/id1450480822">iMe Messenger</a>，<a href="https://apps.apple.com/app/nicegram-messenger-plus/id1608870673">Nicegram</a>，<a href="https://apps.apple.com/hk/app/revgram/id1469493013">Revgram</a><br>
-Android: <a href="https://github.com/NekoX-Dev/NekoX/releases">NekoX</a>，<a href="https://github.com/tehcneko/nekogram-files/releases">Nekogram APKs</a><a href="https://play.google.com/store/apps/details?id=org.telegram.mdgram">MDGramYou</a><br>
-Windows: <a href="https://www.microsoft.com/store/apps/9n97zckpd60q">Unigram</a>，<a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，<a href="https://github.com/kotatogram/kotatogram-desktop/releases">Kotatogram</a>，<a href="https://github.com/Forkgram/tdesktop/releases">Forkgram</a><br>
-macOS: <a href="https://github.com/TDesktop-x64/tdesktop/releases">64gram</a>，<a href="https://github.com/kotatogram/kotatogram-desktop/releases">Kotatogram</a>
-</p>
-</article>
-</div>
-</div>
-<div class="col-md-12 mb-2">
-<div class="p-2">
-<div class="text-center mb-3 py-2">
-<p class="h1 mb-2">临时邮箱</p>
-<p class="h6 text-muted">一般用处，懂的都懂</p>
-</div>
-<article class="text-start">
-<span class="mb-1 badge rounded-pill text-bg-secondary">http://24mail.chacuo.net</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://mail.tm/zh</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://mail.td/zh</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://linshiyou.com</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">http://f.omail.cc</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://linshiyouxiang.net</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://10minutemail.net</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://10minemail.com/zh</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://www.linshi-email.com</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://ihotmails.com</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://moakt.com</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://temp-mail.org/zh</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://bonds.id</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://tempmail.cn</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://www.moakt.com/zh</span>
-<span class="mb-1 badge rounded-pill text-bg-secondary">https://www.guerrillamail.com</span>
-</article>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<!--###################### 定制工具 ######################-->
-<div id="定制软件" class="shadow-lg mb-5 bg-body-tertiary rounded text-bg-light mb-3">
-<div class="p-2">
-<div class="mb-3 py-2">
-<p class="h3 mb-2 text-muted">定制软件</p>
-</div>
-<div class="row">
-<div class="text-center mb-3 py-2">
-<p class="h1 mb-2">客户端</p>
-<p class="h6 text-muted">SS/SSR/V2Ray/Trojan/Clash 客户端软件下载</p>
-</div>
-<div class="col-sm-6 mb-1">
-<h3>介绍</h3>
-<ul>
-<li>SS = <a href="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks</a></li>
-<li>SSR = <a href="https://zh.wikipedia.org/wiki/ShadowsocksR">ShadowsocksR</a></li>
-<li>SS ≠ SOCKS5</li>
-<li>SS ≠ VPN</li>
-<li><a href="https://www.v2ray.com">V2Ray</a></li>
-<li><a href="https://www.v2fly.org/config/protocols/vless.html">VLESS</a></li>
-<li><a href="https://github.com/trojan-gfw/trojan">Trojan</a></li>
-<li><a href="https://github.com/Dreamacro/clash">Clash</a></li>
-<li><a href="https://github.com/JadaGates/ShadowsocksBio">Shadowsocks的前世今生</a></li>
-</ul>
-</div>
-<div class="col-sm-6 mb-1">
-<h3>Client</h3>
-<h5>推荐客户端</h5>
-<ul>
-<li><code>iOS</code>: Surge 5, Quantumult X, Shadowrocket, Loon, Stash</li>
-<li><code>Android/安卓</code>: Clash for Android, Surfboard</li>
-<li><code>macOS</code>: Surge Mac, ClashX Pro, Clash for Windows, Stash for macOS</li>
-<li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
-<li><code>Linux</code>: Clash for Windows
-<br><em>(下方有下载地址)</em></li>
-</ul>
-<h5>Clash全平台客户端</h5>
-<ul>
-<li><code>iOS</code>: Stash, Choc, Maomi</li>
-<li><code>Android/安卓</code>: Clash for Android</li>
-<li><code>macOS</code>: ClashX Pro, Clash for Windows, Stash for macOS</li>
-<li><code>Windows</code>: Clash for Windows, Clash.Mini</li>
-<li><code>Linux</code>: Clash for Windows, Clash
-<br><em>(下方有下载地址)</em></li>
-</ul>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">Android</p>
-</div>
-<ul>
-  <li><a href="https://github.com/Kr328/ClashForAndroid/releases">Clash for Android</a> Clash的Android图形客户端 (支持SS/SSR/Snell/Vmess/Trojan)</li>
-  <li><a href="https://play.google.com/store/apps/details?id=com.github.kr328.clash">Clash for Android Google Play</a> Clash的Android图形客户端 (支持SS/SSR/Snell/Vmess/Trojan)</li>
-  <li><a href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases">ClashMetaForAndroid</a> Clash.Meta内核</li>
-  <li><a href="https://github.com/trojan-gfw/igniter/releases">Trojan</a></li>
-  <li><a href="https://github.com/getsurfboard/surfboard/releases">Surfboard</a> (支持SS/Vmess/Trojan, 可直接导入 Surge2/3/4 的配置)</li>
-  <li><a href="https://play.google.com/store/apps/details?id=com.getsurfboard">Surfboard Google Play</a> (支持SS/Vmess/Trojan)</li>
-  <li><a href="https://github.com/nekohasekai/SagerNet/releases">SagerNet</a> (支持SOCKS/SS/SSR/VMess/VLESS/Trojan)</li>
-  <li><a href="https://play.google.com/store/apps/details?id=io.nekohasekai.sagernet">SagerNet Google Play</a></li>
-  <li><a href="https://github.com/MatsuriDayo/Matsuri/releases">Matsuri(茉莉)</a></li>
-  <li><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases">NekoBox</a></li>
-  <li><a href="https://github.com/PharosVip/Pharos-Android-Test/releases">Pharos</a></li>
-  <li><a href="https://github.com/eycorsican/kitsunebi-android/releases">Kitsunebi</a></li>
-  <li><a href="https://play.google.com/store/apps/details?id=fun.kitsunebi.kitsunebi4android">Kitsunebi Google Play</a></li>
-  <li><a href="https://github.com/shadowsocks/shadowsocks-android/releases">Shadowsocks 影梭</a></li>
-  <li><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks">Shadowsocks 影梭 Google Play</a></li>
-  <li><a href="https://play.google.com/apps/testing/com.github.shadowsocks">Shadowsocks 影梭 Google Play Beta 版</a></li>
-  <li><a href="https://github.com/HMBSbige/ShadowsocksR-Android/releases">ShadowsocksR</a></li>
-  <li><a href="https://github.com/shadowsocks/simple-obfs-android/releases">Simple Obfuscation</a> (影梭的插件)</li>
-  <li><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks.plugin.obfs_local">Simple Obfuscation Google Play</a> (影梭的插件)</li>
-  <li><a href="https://github.com/2dust/v2flyNG/releases">v2flyNG</a></li>
-  <li><a href="https://github.com/2dust/v2rayNG/releases">v2rayNG</a></li>
-  <li><a href="https://play.google.com/store/apps/details?id=com.v2ray.ang">v2rayNG Google Play</a></li>
-  <li><a href="https://oneclick.earth/files/app-website-release.apk">OneClick</a></li>
-  <li><a href="https://play.google.com/store/apps/details?id=earth.oneclick">OneClick Google Play</a></li>
-  <li><a href="https://github.com/kalasutra/Clash_For_Magisk">Clash for Magisk</a></li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">Windows</p>
-</div>
-<ul>
-  <li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash for Windows</a> Clash的Windows/macOS图形客户端,简称:CFW (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/Clash-Mini/Clash.Mini/releases">Clash.Mini</a> 小巧精致的Windows版Clash客户端~约等于直接运行内核</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases">Clash 内核</a> 一个Go语言开发的多平台代理客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases/tag/premium">Clash Premium 内核</a></li>
-  <li><a href="https://github.com/MetaCubeX/Clash.Meta/releases">Clash.Meta</a> 另一个 Clash 内核</li>
-  <li><a href="https://github.com/zzzgydi/clash-verge/releases">Clash Verge</a></li>
-  <li><a href="https://github.com/2dust/clashN/releases">ClashN</a></li>
-  <li><a href="https://github.com/zapll/xclash/releases">xclash</a> Client for Clash.Meta</li>
-  <li><a href="https://github.com/netchx/Netch/releases">Netch</a> (支持SS/SSR/Vmess)</li>
-  <li><a href="https://github.com/TheMRLL/winxray/releases">WinXray</a></li>
-  <li><a href="https://github.com/MatsuriDayo/nekoray/releases">NekoRay</a></li>
-  <li><a href="https://github.com/XrayR-project/XrayR/releases">XrayR</a></li>
-  <li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases">Shadowsocks</a> (简称:SS)</li>
-  <li><a href="https://github.com/shadowsocksr-rm/shadowsocksr-csharp/releases">ShadowsocksR</a></li>
-  <li><a href="https://github.com/shadowsocks/simple-obfs/releases">simple-obfs</a> (SS的插件)</li>
-  <li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases/tag/2.3.1">Shadowsocks 2.3.1</a>（XP系统可用）</li>
-  <li><a href="https://github.com/2dust/v2rayN/releases">v2rayN</a></li>
-  <li><a href="https://github.com/Cenmrev/V2RayW/releases">V2RayW</a></li>
-  <li><a href="https://github.com/Shinlor/V2RayS/releases">V2RayS</a></li>
-  <li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
-  <li><a href="https://github.com/YtFlow/Maple/releases">Maple</a></li>
-  <li><a href="https://github.com/nojsja/shadowsocks-electron/releases">Shadowsocks Electron</a></li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">iPhone</p>
-</div>
-<p class="px-3">隔壁白嫖来的共享账号：<a href="https://apple.laogoubi.net/s/c7d1e73290a646f2513f6f0b75843b0b">https://apple.laogoubi.net/s/c7d1e73290a646f2513f6f0b75843b0b</a>  仅限登录app store，用完退出。</p>
-<ul>
-<h5>iOS 客户端 (全区可下载,包括中区)</h5>
-  <li><a href="https://testflight.apple.com/join/23LA2tmX">Loon (支持Surge 3的 RULESET 规则)</a></li>
-  <li><a href="https://testflight.apple.com/join/IdFRwmNy">Kitsunebi (支持SS/Vmess)</a></li>
-  <li><a href="https://testflight.apple.com/join/NkF46PRd">Potatso Lite</a></li>
-  <li><a href="https://testflight.apple.com/join/3aArQFMQ">A.BIG.T IV</a></li>
-  <li><a href="https://testflight.apple.com/join/742YC03J">NetShuttle</a></li>
-  <li><a href="https://apps.apple.com/cn/app/outline-app/id1356177741">Outline</a> (支持SS)</li>
-</ul>
-<ul>
-<h5>iOS 客户端 (中区无法下载,其他区可下载)</h5>
-  <li><a href="https://apps.apple.com/us/app/id1442620678?l=zh-cn">Surge 5</a> 更新订阅制,首年:$49.99,次年开始:$14.99/年 (支持Snell/SS/Vmess/VmessAEAD/Trojan/SSH/WireGuard) <a href="https://nssurge.com/buy_now">推荐官网购买</a></li>
-  <li><a href="https://apps.apple.com/us/app/quantumult-x/id1443988620?l=zh-cn">Quantumult X</a> $7.99 (支持SS/SSR/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://apps.apple.com/us/app/quantumult/id1252015438?l=zh-cn">Quantumult</a> $9.99 (也叫:圈, 支持SS/SSR/Vmess)</li>
-  <li><a href="https://apps.apple.com/us/app-bundle/quantumult-x-upgrade/id1482985563?l=zh-cn">Quantumult Bundle</a> $9.99 (Bundle包,包括Quantumult X和Quantumult)</li>
-  <li><a href="https://apps.apple.com/us/app/shadowrocket/id932747118?l=zh-cn">Shadowrocket</a> $2.99 (也叫:小火箭, 支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan/VLESS/Relay/Hysteria/TUIC/WireGuard/Brook/Lua)</li>
-  <li><a href="https://apps.apple.com/us/app/loon/id1373567447?l=zh-cn">Loon</a> $5.99 (支持SS/SSR/Vmess/VmessAEAD/Trojan/VLESS)</li>
-  <li><a href="https://apps.apple.com/us/app/loon-lite/id6444029612?l=zh-cn">Loon Lite</a> $0.99</li>
-  <li><a href="https://apps.apple.com/us/app/stash-proxy-utility/id1596063349?l=zh-cn">Stash</a> $3.99 (iOS 上的 Clash 客户端, 支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan/VLESS/XTLS/Hysteria)</li>
-  <li><a href="https://apps.apple.com/us/app/choc/id1582542227?l=zh-cn">Choc</a> $2.99 (iOS 上的 Clash 客户端, 支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li>Maomi <a href="https://testflight.apple.com/join/LAn6mLkU">TestFlight</a> (iOS 上的 Clash 客户端, 支持 Clash Premium 内核)</li>
-  <li><a href="https://apps.apple.com/us/app/egern/id1616105820?l=zh-cn">Egern</a> $2.99 (支持SS/Trojan)</li>
-  <li><a href="https://apps.apple.com/us/app/blatu/id1317522797?l=zh-cn">Blatu</a> $1.99 (Shadowrocket作者开发的, 支持shadowvpn,DSVPN,WireGuard)</li>
-  <li><a href="https://apps.apple.com/us/app/pharos-pro/id1456610173?l=zh-cn">Pharos Pro</a> $1.99</li>
-  <li><a href="https://apps.apple.com/us/app/kitsunebi-proxy-utility/id1446584073">Kitsunebi</a> $4.99</li>
-  <li><a href="https://apps.apple.com/us/app/id1162704202">Potatso 2</a> $2.99</li>
-  <li><a href="https://apps.apple.com/us/app/id1239860606">Potatso Lite</a> Free</li>
-  <li><a href="https://apps.apple.com/us/app/lancex/id1536754048">LanceX</a> $2.99</li>
-  <li><a href="https://apps.apple.com/us/app/trojanx/id1523269113">TrojanX</a> $1.99</li>
-  <li><a href="https://apps.apple.com/us/app/id1545555197">OneClick</a> Free</li>
-  <li><a href="https://apps.apple.com/app/spectre-vpn/id1508712998">Spectre VPN</a> Free</li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">Mac</p>
-</div>
-<ul>
-  <li><a href="https://nssurge.com/buy_now">Surge Mac 5</a> $49.99/$69.99/$99.99 (支持Snell/SS/Vmess/VmessAEAD/Trojan/SSH/WireGuard)</li>
-  <li><a href="https://apps.apple.com/cn/app/outline-secure-internet-access/id1356178125">Outline</a></li>
-  <li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash for Windows</a> Clash的Windows/macOS图形客户端,简称:CFW (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/yichengchen/clashX/releases">ClashX</a> Clash的Mac图形客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/WhoJave/clashX/releases">ClashXR</a></li>
-  <li><a href="https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public">ClashX Pro</a> Clash的Mac图形客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)(支持RULE-SET和增强模式)</li>
-  <li><a href="https://stash.ws/macos/pricing/">Stash for macOS</a> 得益于为 macOS 平台专注设计，Stash for macOS 将比 Stash for iOS 版本支持更多的特性。</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases">Clash 内核</a> 一个Go语言开发的多平台代理客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases/tag/premium">Clash Premium 内核</a></li>
-  <li><a href="https://github.com/MetaCubeX/ClashX.Meta/releases/">ClashX.Meta</a> 另一个 Clash 内核</li>
-  <li><a href="https://github.com/MetaCubeX/Clash.Meta/releases">Clash.Meta</a> 另一个 Clash 内核</li>
-  <li><a href="https://github.com/qiudaomao/ClaftRelease/releases">Claft</a> Dashboard for Clash totally in SwiftUI</li>
-  <li><a href="https://github.com/XrayR-project/XrayR/releases">XrayR</a></li>
-  <li><a href="https://github.com/Cenmrev/V2RayX/releases">V2RayX</a></li>
-  <li><a href="https://github.com/yanue/V2rayU/releases">V2rayU</a></li>
-  <li><a href="https://github.com/gssdromen/V2RayC">V2RayC</a></li>
-  <li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
-  <li><a href="https://github.com/JimLee1996/TrojanX/releases">TrojanX</a></li>
-  <li><a href="https://github.com/mellow-io/mellow/releases">Mellow</a></li>
-  <li><a href="https://github.com/nojsja/shadowsocks-electron/releases">Shadowsocks Electron</a></li>
-  <li><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases">ShadowsocksX-NG</a></li>
-  <li><a href="https://github.com/shadowsocks/shadowsocks-iOS/releases">ShadowsocksX</a></li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">Linux</p>
-</div>
-<ul>
-  <li><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases">Clash for Windows</a> Clash的Windows/macOS图形客户端,简称:CFW (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases">Clash 内核</a> 一个Go语言开发的多平台代理客户端 (支持SS/SSR/Snell/Vmess/VmessAEAD/Trojan)</li>
-  <li><a href="https://github.com/Dreamacro/clash/releases/tag/premium">Clash Premium 内核</a></li>
-  <li><a href="https://github.com/MetaCubeX/Clash.Meta/releases">Clash.Meta</a> 另一个 Clash 内核</li>
-  <li><a href="https://github.com/Qv2ray/Qv2ray/releases">Qv2ray</a></li>
-  <li><a href="https://github.com/mellow-io/mellow/releases">Mellow</a></li>
-</ul>
-</div>
-</div>
-<div class="col-md-6 col-xl-4 mb-1">
-<div class="mdui-hoverable text-break">
-<div class="bg-body-secondary text-center mb-3 py-2">
-<p class="h3 text-muted mb-2">其他</p>
-</div>
-<ul>
-<h5>路由器</h5>
-  <li><a href="https://github.com/vernesong/OpenClash/wiki">OpenClash</a></li>
-  <li><a href="https://github.com/KOP-XIAO/Clash-Merlin/wiki">Clash-Merlin</a></li>
-  <li><a href="https://koolclash.js.org">Koolshare OpenWrt/LED</a></li>
-  <li><a href="https://github.com/SukkaW/Koolshare-Clash/releases">KoolClash</a></li>
-  <li><a href="https://github.com/juewuy/ShellClash">ShellClash</a></li>
-  <li><a href="https://github.com/hq450/fancyss">fancyss</a></li>
-  <li><a href="https://github.com/frainzy1477/clash/releases">Clash for OpenWrt</a></li>
-  <li><a href="https://github.com/frainzy1477/luci-app-clash/releases">Luci For Clash - OpenWrt</a></li>
-  <li><a href="https://github.com/shadowsocks/openwrt-shadowsocks">OpenWRT-Shadowsocks</a></li>
-  <li><a href="https://www.right.com.cn/forum/thread-161324-1-1.html">Padavan</a></li>
-</ul>
-<ul>
-<h5>TV</h5>
-  <li><a href="https://github.com/Kr328/ClashForAndroid/releases">Clash for Android</a></li>
-  <li><a href="https://github.com/shadowsocks/shadowsocks-android/releases">Shadowsocks 影梭</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!--###################### 机场订阅 ######################-->
-<div id="机场订阅" class="mb-3">
-<div class="p-2">
-<div class="mb-3 py-2">
-<p class="h3 mb-2 text-muted">机场订阅</p>
-</div>
-<p class="text-break">
-<li><a class="text-decoration-none" href="./Node/node">./Node/node</a> 更新日期：2022.08.01 以停更</li>
-<div class="text-nowrap bg-body-secondary border"><b>第三方机场</b></div>
-<li><a class="text-decoration-none" href="https://pmsub.me/">Paimon Node</a></li>
-<li><a class="text-decoration-none" href="https://lncn.org/">免费节点 - Lncn.org</a></li>
-<li><a class="text-decoration-none" href="https://free-ss.site/">免费上网账号</a></li>
-<li><a class="text-decoration-none" href="https://getafreenode.com/">GetAFreeNode</a></li>
-<li>以上三个为免费</li>
-<div class="text-nowrap bg-body-secondary border"><b>广告列表(随机排序)</b></div>
-<table class="table mdui-table mdui-table-hoverable">
-<tbody class="table-group-divider" id="adList"></tbody>
-</table>
-<script>
-var adList = [
-{
-    "url": "aHR0cHM6Ly96Lmx1eHVyeS9zaWduaW4=",
-    "desp": "<span class='badge text-bg-success'>几鸡: 免费节点，公益机场</span>公益节点是HiNet线路，每天签到获得时长和流量，可以永久白嫖，永久不删账户，也有付费的IPLC节点<br>注册获取 → https://z.luxury"
-},{
-    "url": "aHR0cHM6Ly9haXJwb3J0LmxpYW5waS54eXovIy9yZWdpc3Rlcj9jb2RlPTFlNkVZMGxl",
-    "desp": "[一日机场] 一个节点全靠运气 平均活一天的机场（瞎说的"
-},
-{
-    "url": "aHR0cHM6Ly91dWNsbS5uZXQvIy9yZWdpc3Rlcj9jb2RlPVVpa3l0Z2tZ",
-    "desp": "[冲浪猫] 高速中转机场，覆盖30+国家，土耳其-阿根廷-菲律宾等小众国家。晚高峰8K秒开，ChatGPT/流媒体全解锁。有不限时套餐。"
-},
-{
-    "url": "aHR0cHM6Ly9jaHl2cG4uY3lvdS9hdXRoL3JlZ2lzdGVyP2NvZGU9YVdmWg==",
-    "desp": "[Cherry VPN] 超高带宽，4K视频稳定秒开。使用公网隧道，IEPL内网转发，隐私保护，稳定高速，看视频无痕不卡顿。最低至0.4x 元/日，更有20%返现。"
-},
-{
-    "url": "aHR0cHM6Ly93d3cuZG1pdC5pby9hZmYucGhwP2FmZj01NjI0",
-    "desp": "[DMIT] 洛杉矶/香港/东京 CN2GIA/CMI 优化线路 1Gbps 大带宽不限流量 KVM 高端 VPS 云服务器 月付 6.9 美元"
-},
-{
-    "url": "aHR0cHM6Ly9wYW5lbC5kZzEudG9wLyMvcmVnaXN0ZXI/Y29kZT1MSGJpa3RkTA==",
-    "desp": "[狗狗加速] Hysteria 机场 集群负载均衡 不限速，无审计 解锁流媒体及ChatGPT 不限设备数，全平台通用"
-},
-{
-    "url": "aHR0cHM6Ly9yZWltdS53b3JrL2F1dGgvcmVnaXN0ZXI/Y29kZT1lRnky",
-    "desp": "[灵梦空间] 灵梦机场 专线节点加速 支持流媒体解锁 支持ChatGPT 晚高峰4k秒开 大多为x0.5倍节点 这一切，仅9.9元"
-},
-{
-    "url": "aHR0cHM6Ly93ZWwubG5hc3BpcmluZy5jb20vIy9yZWdpc3Rlcj9jb2RlPTJpSnh4NUl2",
-    "desp": "[Welink] 我们遵行联合国宪章及世界人权宣言，普遍保护基本人权。我们致力于构建自由、连通、去中心化的网络，因而我们不在节点当地 ISP 与 IDC 的基础上另设网络审计。"
-},
-{
-    "url": "aHR0cHM6Ly9hbG4ubG5hc3BpcmluZy5jb20vIy9yZWdpc3Rlcj9jb2RlPTNOSTByRG9B",
-    "desp": "[Alink] 我们拥抱去中心化的理念与架构，并允许用户透过我们的服务积极参与所有链上生态活动、使用 Bittorrent/eDonkey/IPFS 等去中心化服务及协议。"
-},
-{
-    "url": "aHR0cHM6Ly93d3cueWl5dWFuamljaGFuZy5jb20vIy9yZWdpc3Rlcj9jb2RlPVhsN0N3d1hG",
-    "desp": "[一元机场] 每月不到一元钱，稳定运营的老牌机场，全网性价比最高，线路多，速度快，延迟低，推广佣金60%"
-},
-{
-    "url": "aHR0cHM6Ly94bi0tNGdxNjJmNTJnZHNzLmNvbS8jL3JlZ2lzdGVyP2NvZGU9SG92dVJRRHA=",
-    "desp": "[一元机场] 一元机场是个负责任的机场，一定不会跑路"
-},
-{
-    "url": "aHR0cHM6Ly94bi0tc2pxMDJnZ3lmZG10LmNvbS8jL3JlZ2lzdGVyP2NvZGU9M1I4RTcwVDg=",
-    "desp": "[九分机场] 没有套路 不i限速 不限设备 可月付 可按量 返利可以提现！"
-},
-{
-    "url": "aHR0cHM6Ly93d3cuamlzdXl1bi5tZS8jL3JlZ2lzdGVyP2NvZGU9aEYzVGlyeHQ=",
-    "desp": "[极速云机场] 高流量🟢不限速，流量🔥1元100G，覆盖60%全球节点+解锁流媒+ChatGPT 油管4K⚡️无压力，免费试用先上车后付钱"
-},{
-    "url":"aHR0cHM6Ly9zc3J1OC5pY3U=",
-    "desp":"\u3010paopaocloud\u3011\uff0c4\u5e74\u8001\u9e21\u573a\uff0c80+\u9ad8\u901f\u4e2d\u8f6c\u7ebf\u8def\uff0c\u89e3\u9501\u6d41\u5a92\u4f53\uff0c\u6ce8\u518c\u5373\u53ef\u514d\u8d39\u8bd5\u7528\u6240\u6709\u7ebf\u8def",
-    "mon":49
-},{
-    "url":"aHR0cHM6Ly94YnNqODc4OS5jbHViLw==",
-    "desp":" \u3010\u897f\u90e8\u4e16\u754c\u3011\u203b\u6d77\u5916\u843d\u5730\u56e2\u961f\u203b\u652f\u6301Trojan\u00b7V2ray\uff1b80+ \u4e13\u7ebf\u8282\u70b9\uff1aIEPL\u00b7IPLC\u00b7Anycast\uff1b\u89e3\u9501\u6d41\u5a92\u4f53\uff1a\u7f8e\u65e5\u6e2f\u53f0Netflix Hulu HBO \u52a8\u753b\u75af \u203b\u514d\u8d39\u8bd5\u75283\u5929\u5168\u7ad9\u4e13\u7ebf \u203b"
-},{
-    "url":"aHR0cHM6Ly94bi0tODg4LW9rNGI5ZS54bi0tamgxYWw2M2JyMmMuY29tL2F1dGgvcmVnaXN0ZXI\/Y29kZT01a1Ju",
-    "desp":"\u3010VC\u55b5\u3011 8\u5143\/\u6708\u8d77\uff1b\u6d77\u5916\u8fd0\u8425&\u53ea\u6709\u6708\u4ed8\u5957\u9910\uff0c\u65e0\u9700\u62c5\u5fc3\u8dd1\u8def\uff1b\u5728\u7ebf\u5ba2\u670d\u56e2\u961f\u652f\u6301\uff0c\u5c0f\u767d\u53cb\u597d\uff1b\u7f8e\u65e5\u97e9\u65b0\u6e2f\u53f0\u82f1\u5fb7\u5370\u4fc4\u8282\u70b9\uff0c\u89e3\u9501ChatGPT\u7b49\u6d41\u5a92\u4f53\uff1b\u4e0d\u9650\u8bbe\u5907\u6570\u3002"
-},{
-    "url":"aHR0cHM6Ly9qaWtlMTkxLmNvbS9hdXRoL3JlZ2lzdGVyP2NvZGU9T0VTNA==",
-    "desp":"\u3010\u6781\u5ba2\u4e91\u3011-\u771f\u6b63\u5927\u9e21\u573a\uff0c100\u591a\u4e2a\u5168\u4e2d\u8f6c\u8282\u70b9\uff0cSSR\u548cV2ray\u8282\u70b9\u90fd\u6709\uff0c\u6708\u4ed819.9\u5143\u8d77\uff0cIPLC\\BGP\\CN2\\CN2GIA\\\u79fb\u52a8\\\u7535\u4fe1\\\u8054\u901a\u7b49\u4e2d\u8f6c\u96a7\u9053\u8282\u70b9\u3002"
-},{
-    "url":"aHR0cHM6Ly95b3V5dW4wLm5ldC9hdXRoL3JlZ2lzdGVyP2NvZGU9dW1CTQ==",
-    "desp":"\u3010\u4f18\u4e91666\u3011 -\u5168\u4e2d\u8f6c\u9e21\u573a\uff0c100\u591a\u4e2a\u8282\u70b9\uff0c\u652f\u6301SSR\u548cV2ray\uff0c\u4e2d\u8f6c\u7ebf\u8def\u6709IPLC\\BGP\\CN2\\CN2GIA\\\u5355\u7ebf\u7b49\uff0c\u843d\u5730\u6709\u7f8e\u65e5\u6e2f\u53f0\u65b0\u4fc4\u7b49\uff0c\u6708\u4ed819.9\u5143\u8d77\u3002\n"
-},{
-    "url":"aHR0cHM6Ly9qdXppODAubmV0LyMvcmVnaXN0ZXI\/Y29kZT1WalRFUEdBbQ==",
-    "desp":"\u3010\u6781\u901fMAX\u3011\uff1a\u5168\u4e2d\u8f6cTrojan+V2ray\u8282\u70b9\uff0c\u53ef\u4ee5\u514d\u8d39\u767d\u5ad6Trojan+V2ray\u8282\u70b9\uff08\u76f4\u8fde\uff09\uff0c\u767d\u5ad6\u7ebf\u8def\u6709HKT,hinet\uff0c\u4e2d\u8f6c\u7ebf\u8def\u6709IPLC\\BGP\\CN2\\CN2GIA\\\u5355\u7ebf\u7b49\u3002"
-},{
-    "url":"aHR0cHM6Ly9zdXlpbmc3NzAuY29tL2F1dGgvcmVnaXN0ZXI\/Y29kZT1PdjV4",
-    "desp":"\u3010\u901f\u9e70\u3011\u901f\u9e70\u8001\u724c\u9e21\u573a\uff0c400\u591a\u4e2a\u8282\u70b9\uff0c\u652f\u6301SSR\u3001V2ray\uff0c\u8be5\u6709\u7684\u7ebf\u8def\u90fd\u6709\uff0c\u4ef7\u683c19.9\u5143\u8d77\u3002"
-},{
-    "url":"aHR0cHM6Ly9mZWlzdTI2MS54eXovYXV0aC9yZWdpc3Rlcj9jb2RlPUo0ZTY=",
-    "desp":"\u3010\u98de\u901f\u4e91\u3011\u65b0\u7528\u6237\u6ce8\u518c\uff0c\u9001500m\u6d41\u91cf\uff0c\u56fd\u5185\u4e2d\u8f6c\u3001CN2\u3001IPLC\u7ebf\u8def\u514d\u8d39\u4f7f\u7528\u3002"
-},{
-    "url":"aHR0cHM6Ly9zdXl1bnRpMi5jb20vYXV0aC9yZWdpc3Rlcj9jb2RlPXNXekg=",
-    "desp":"\u3010\u901f\u4e91\u68af\u3011\u56db\u5e74\u8001\u724c\u9e21\u573a \u7a33\u5b9a  \u4f4e\u8c03\uff0c\u6709\u4fe1\u4ef0  \u53ef\u767d\u5ad6 \u5168\u4e2d\u8f6cSSR\/V2ray\u5305\u542bIPLC\\BGP\\CN2\\CN2GIA\\\u7b49\u8def\u7ebf\u3002\u8282\u70b9\u6570\u91cf100+ \u89e3\u9501Netflix\u3001Hulu\u3002HBO\u3001\u52a8\u753b\u75af\u3001TVB\u7b49\u6d41\u5a92\u4f53   \u203b\u6d77\u5916\u8fd0\u8425 \u6570\u636e\u5b89\u5168\u203b "
-},{
-    "url":"aHR0cHM6Ly9ubG9saS54eXovMVF6cGE=",
-    "desp":"\u3010\u661f\u68a6\u3011- \u4e0d\u5b9a\u65f6\u5f00\u542f3\u5143\u8d85\u503c\u5957\u9910 \u542biepl\u4e13\u7ebf\u8282\u70b9"
-},{
-    "url":"aHR0cDovL3lhb2Zhbi5jYy9ydW5hd2F5",
-    "desp":"\u3010\u8dd1\u8def\u4e91\u3011-  6\u5143\u8d77 \u542b\u4e13\u7ebf\u673a\u573a\u4e0e0.1\u500d\u7387\u65e5\u5e38\u8282\u70b9"
-},{
-    "url":"aHR0cDovL3lhb2Zhbi5jYy9maXNo",
-    "desp":"\u3010\u5feb\u9c7c\u3011-  \u5feb\u9c7c\u5e26\u4f60\u4f53\u9a8c\u6781\u901f\u4e0a\u7f51\u4f53\u9a8c"
-},{
-    "url":"aHR0cHM6Ly9kdWc0aTF1ZzI2YXhtLmNsb3VkZnJvbnQubmV0L2FjY291bnQ\/YWN0aW9uPXJlZ2lzdGVyJmNvZGU9Y2FxQg==",
-    "desp":"\u3010TomatoCloud\u3011 - \u8001\u724c\u9e21\u573a\u3001\u6301\u7eed\u7a33\u5b9a\u5883\u5916\u8fd0\u8425\u591a\u5e74\uff085+\uff09\u652f\u63f4\u5168\u7403\u7528\u6237\u4f7f\u7528\uff01\u5168\u4e2d\u8f6c\u96a7\u9053\u4e13\u7ebf\uff0cv2ray\u3001ss(r)\u3001trojan+\u652f\u6301\u6d41\u5a92\u4f53\uff0c120+\u9ad8\u901f\u8282\u70b9\uff0c24\u5c0f\u65f6\u5ba2\u670d\u5c0f\u59d0\u59d0\u5728\u7ebf\uff0c\u5c0f\u767d\u53cb\u597d\u7684\u4f7f\u7528\u6587\u6863\uff0cwin\u3001\u5b89\u5353\u5b9a\u5236\u5ba2\u6237\u7aef\uff0c\u4ee5\u4e0a  $4 \u7f8e"
-},{
-    "url":"aHR0cHM6Ly9mYXN0bGluay5zby9hdXRoL3JlZ2lzdGVyP2NvZGU9ZnJlZTNkYXlz",
-    "desp":"\u3010FASTLINK\u3011 - \u514d\u8d39\u8bd5\u7528\u6240\u6709\u8282\u70b9\uff0c\u5b9e\u529b\u9a8c\u8bc1\uff0c\u8d85\u7ea7\u7a33\u5b9a\uff0cIPLC\uff0cAnycast \uff0c\u4e2d\u8f6c\u6280\u672f\u5e94\u6709\u5c3d\u6709\u3002\u4e0d\u9650\u8bbe\u5907\u6570\uff0c\u89e3\u9501Netflix\u3001Hulu\u3001HBO\u3001\u52a8\u753b\u75af\u3001TVB\u7b49\u6d41\u5a92\u4f53\u3002\u53ef\u5b9a\u5236\u72ec\u4eab\u4e13\u7ebf"
-},{
-    "url":"aHR0cHM6Ly9hMDEyLnJlZC54bi0tLS0tZGc0YWJmbHB5MmNrMXNsYzlpZzA1YWcueG4tLXRja3dlOjY2Ni8jL2FkL3YycmF5bmc=",
-    "desp":"\u3010X-Air\u30116\u5e74\u7cbe\u54c1V2ray\u573a\u3002\u8d85\u7a33\u5b9aIEPL+\u81ea\u7814SDN\u96a7\u9053\n\n\u539f\u751f\u5185\u6838\u65e0\u65e5\u5fd7\u8fd0\u884c+\u4e0d\u9650\u8bbe\u5907\u6570\uff08\u6211\u4eec\u975e\u5e38\u6ce8\u91cd\u60a8\u7684\u9690\u79c1\uff09\n\n\u3010\u5141\u8bb8\u79c1\u4e0b\u62fc\u8f66\u3011\uff0c\u652f\u63f4ChatGPT+\u6d41\u5a92\u4f53+\u65e5\u533a\u6e38\u620f\n\n\u5e73\u574729\/\u6708\uff0c\u9ad8\u6210\u672c\uff0c\u3010\u65e0\u6708\u629b\u8282\u70b9\u3011\uff0c\u8d5a\u4f60\u4e09\u4e94\u5757\uff0c\u4ea4\u4e2a\u670b\u53cb"
-},{
-    "url":"aHR0cHM6Ly9qdXppMjkuY29tL2F1dGgvcmVnaXN0ZXI\/Y29kZT1La1pV",
-    "desp":"\u3010\u6854\u5b50\u4e91\u3011\u53ef\u767d\u5ad6\u3002\u5168\u4e2d\u8f6cSSR\/V2ray\u5305\u542bIPLC\\BGP\\CN2\\CN2GIA\\\u7b49\u8def\u7ebf\uff0c\u8282\u70b9\u6570\u91cf100+ \u89e3\u9501Netflix\u3001Hulu\u3001HBO\u3001\u52a8\u753b\u75af\u3001TVB\u7b49\u6d41\u5a92\u4f53\u3002\u6708\u4ed89.9\u8d77\u3002"
-},{
-    "url":"aHR0cDovL2dvMS5zaGFkb3dzb2Nrcy5sdGQ=",
-    "desp":"\u3010\u7ea2\u674f\u3011- 1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c\u4e00\u5757\u94b1\uff0c\u4e70\u4e0d\u4e86\u5403\u4e8f\uff0c\u4e5f\u4e70\u4e0d\u4e86\u4e0a\u5f53\uff011\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c\u300e\u5341\u56db\u5468\u5e74\u5e86\u300f\u6d3b\u52a8\u706b\u7206\u8fdb\u884c\u4e2d\uff0c\u4f18\u60e0\u5377\uff1ahx14years\uff0c\u5168\u573a14%OFF\u3002"
-},{
-    "url":"aHR0cDovL2dvMi5zaGFkb3dzb2Nrcy5sdGQ=",
-    "desp":"\u3010\u4f5b\u8df3\u5899\u3011- 1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c\u4e00\u5757\u94b1\uff0c\u4e70\u4e0d\u4e86\u5403\u4e8f\uff0c\u4e5f\u4e70\u4e0d\u4e86\u4e0a\u5f53\uff011\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c\u300e\u5341\u56db\u5468\u5e74\u5e86\u300f\u6d3b\u52a8\u706b\u7206\u8fdb\u884c\u4e2d\uff0c\u4f18\u60e0\u7801\uff1aE9YFNX6FAQ\uff0c\u9001\u8f6f\u8def\u7531\uff0c\u8f6f\u8def\u7531\uff0c\u9001\uff01\uff01\uff01"
-},{
-    "url":"aHR0cDovL2dvMy5zaGFkb3dzb2Nrcy5sdGQ=",
-    "desp":"\u3010\u4e50\u7c73\u5965\u3011- 1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c\u4e00\u5757\u94b1\uff0c\u4e70\u4e0d\u4e86\u5403\u4e8f\uff0c\u4e5f\u4e70\u4e0d\u4e86\u4e0a\u5f53\uff011\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0c1\u5143\/\u6708\uff0cR**cloud \u540c\u6b3e\u4e13\u7ebf\uff0cYoutube\u6253\u5f00\u9ed8\u8ba48K\uff0c\u901f\u5ea610\u4e07\u8d77\u6b65\u3002\u300e\u5e74\u8f7b\u4eba\u7684\u7b2c\u4e00\u6b3eVPN\u300f"
-},{
-    "url":"aHR0cDovLzUuNTJ2cG4uY2x1Yi8=",
-    "desp":"\u301052Cloud\u3011-  IEPL\u4e13\u7ebf , \u6ce8\u518c\u514d\u8d39\u8bd5\u7528\u3001\u5145\u5c31\u9001 Netflix\u3001Disney\u3001Hulu \u3001ios\u5c0f\u706b\u7bad ! \u4e00\u952e\u5ba2\u6237\u7aef\u3001\u5927\u5bbd\u5e26\u65e0\u89c6\u665a\u9ad8\u5cf0\u3001 \u89e3\u9501\u6d41\u5a92\u4f53\u3001\u6c38\u4e45\u5185\u90e88\u6298\u7801 52V2  \u300130%\u5faa\u73af\u8fd4\u5229\uff0c\u968f\u65f6\u63d0\u73b0\uff0c\u8bda\u62dbaffman !\n\n"
-},{
-    "url":"aHR0cHM6Ly92NHNwZWVkLnh5ei8jL3JlZ2lzdGVyP2NvZGU9M2RpSjZET2Y=",
-    "desp":"\u3010V4SPEED\u3011-IPLC\u5168\u4e13\u7ebf\u9e21\u573a\uff0c\u51681.0x\u500d\u7387\uff0c\u514d\u8d39\u8bd5\u7528\uff0c\u5b9e\u529b\u9a8c\u8bc1\uff01\u654f\u611f\u671f\u9ad8\u5899\u65e0\u5f71\u54cd\uff0c\u652f\u6301\u6e38\u620f\u52a0\u901f\uff0c\u7f51\u9875\u52a0\u901f\uff0c\u89e3\u9501\u6d41\u5a92\u4f53(\u5948\u98de\uff0cHBO,HULU\u7b49)\uff0c24\u5c0f\u65f6\u5728\u7ebf\u670d\u52a1\u3002"
-},{
-    "url":"aHR0cHM6Ly9saW5naHVuMy5jb20=",
-    "desp":"\u3010\u7075\u9b42\u4e91\u3011 \u6ce8\u518c\u514d\u8d39\u8bd5\u7528\uff1b\u4e13\u7ebf\u4e0d\u9650\u901f\uff01\u5168\u4e2d\u8f6c\u5927\u6d41\u91cf\u9e21\u573a\uff0c\u89e3\u9501\u6d41\u5a92\u4f53\uff0c\u5b89\u5168\u65e0\u65e5\u5fd7\uff0c\u9690\u79c1\u6709\u4fdd\u969c\u3002\u4e0d\u9650\u8bbe\u5907\u6570\u91cf\uff01"
-},{
-    "url":"aHR0cHM6Ly90ZWFjYXQxLmNvbQ==",
-    "desp":"\u3010Teacat\u3011 \u7eaf\u6d41\u91cf\u8ba1\u8d39\u6a21\u5f0f\uff0c\u4e0d\u9650\u901f\u4e13\u7ebf\uff0c\u4e0d\u9650\u65f6\u95f4\uff0c\u4e0d\u9650\u8bbe\u5907\u3002\u6c38\u4e0d\u8fc7\u671f\uff01\u6c38\u4e0d\u8fc7\u671f\uff01\u6c38\u4e0d\u8fc7\u671f\uff01\u6ce8\u518c\u514d\u8d39\u8bd5\u7528\uff0c\u597d\u7528\u518d\u4ed8\u8d39\uff01"
-},{
-    "url":"aHR0cHM6Ly90dWJvc2h1LmluLw==",
-    "desp":"\u3010\u571f\u62e8\u9f20\u3011\u5168\u4e2d\u8f6c\u7ebf\u8def\uff0c \u56fd\u5916\u8fd0\u8425\uff0c\u5b89\u5168,\u7a33\u5b9a, \u5feb\u901f, \u5168\u5e73\u53f0\u652f\u6301,\u9ad8\u5cf0\u671f\u4e00\u6837\u7a33\u5b9a, \u8282\u70b9\u5b9e\u529b\u9a8c\u8bc1\uff0c\u8d85\u7ea7\u7a33\u5b9a\uff0c"
-},{
-    "url":"aHR0cHM6Ly93d3cuZGFnZXl1bjEuY29tLyMvcmVnaXN0ZXI\/Y29kZT00dzdJSzlPaQ==",
-    "desp":"\u3010\u5927\u54e5\u4e91\u3011\u4e09\u5e74\u7a33\u5b9a\u8001\u724c\u673a\u573a\uff0c\u670910G\u4f53\u9a8c\u5957\u9910\u901f\u5ea6\u5f88\u5feb\uff0c\u6211\u4eec\u662f\u203b\u6d77\u5916\u56e2\u961f\u203b\u652f\u6301V2ray \u4e13\u7ebf\u8282\u70b9\uff1a\u6709\u4e13\u5c5e\u5b89\u5353APP\u548cWindows\u7535\u8111\u5ba2\u6237\u7aef IPLC\u89e3\u9501\u6d41\u5a92\u4f53\uff1a\u7f8e\u65e5\u6e2f\u53f0Netflix \u203b\u9ad8\u5cf0\u671f\u4e0d\u5361 \u203b"
-},{
-    "url":"aHR0cHM6Ly9qay1jbG91ZC5uZXQ=",
-    "desp":"\u3010JK\u4e91\u3011 \u8001\u724c\u4e2d\u8f6c+\u4e13\u7ebf\u673a\u573a \u514d\u8d39\u9001\u5948\u98deP\u7ad9\u8d26\u6237 20\u51432T \u5168\u7403Netflix\u652f\u6301 \u4e0d\u9650\u5236\u8bbe\u5907\u6570 \u5c0f\u767d\u5b9a\u5236\u5ba2\u6237\u7aef\u4e00\u952e\u4e0a\u8def \u6027\u4ef7\u6bd4\u673a\u573a 100+\u5168\u7403\u7ebf\u8def \u652f\u6301\u652f\u4ed8\u5b9d&\u5fae\u4fe1&USDT\u4ed8\u6b3e"
-},{
-    "url":"aHR0cHM6Ly91MjgxOS5vMTIuZWV2cG4uYnV6ei8jL3JlZ2lzdGVyP2NvZGU9MnN0akVacXc=",
-    "desp":"\u3010EEVPN\u3011\u203b\u6d77\u5916\u8fd0\u8425 \u652f\u6301ChatGPT\u203b \u5e74\u4ed8\u4f4e\u81f39.99\u5143\uff0c\u6700\u9ad82000Mbps\u901f\u7387\u53ef\u7528\u3002\u5305\u542bIEPL\u4e13\u7ebf\u3001\u56fd\u5185BGP\u4e2d\u8f6c\u3001\u5168\u7403\u4f18\u5316\u76f4\u8fde\u7b49\u8def\u7ebf\uff0c\u9002\u5408\u56fd\u5185\u5916\u7528\u6237\u3002EEVPN\u7ecf\u8fc7\u591a\u6b21\u8fed\u4ee3\u5347\u7ea7\uff0c\u6297\u5c01\u9501\u4e0e\u6297\u5e72\u6270\u80fd\u529b\u8fdc\u8d85\u5e02\u9762\u4e0a\u4e3b\u6d41\u7684\u7ffb\u5899\u670d\u52a1\u3002"
-},{
-    "url":"aHR0cHM6Ly9mLWQub25jbG91ZC5sb2wva3gwMS8jdjI=",
-    "desp":"\u3010Data Net\u3011-@\u8001\u724c\u4e13\u4e1a\u5916\u8d38\u4e13\u7ebf\u3002\u539f\u751fIP\u5168\u8986\u76d6\uff0cIP\u5e72\u51c0\uff0c\u7a00\u7f3a\u8d44\u6e90\u3002\u81ea\u5efa\u4e2d\u56fd\u4f18\u5316BGP\u7ebf\u8def\uff0c\u7a33\u5b9a\u5728\u7ebf<\/br>\u529f\u80fd\uff1a\u3010\u5916\u8d38\u8425\u9500\u4e13\u7ebf\u3011,\u65b0\u589e\u3010\u5a31\u4e50\u4e13\u7ebf | Netflix\u7b49\u6d41\u5a92\u4f53\u539f\u751f\u652f\u6301\u3011\u3010\u6316\u77ff\u4e13\u7ebf\u3011\uff0c\u552e\u540e\u8d85\u597d\uff01\u514d\u8d39\u8bd5\u7528\u3002"
-},{
-    "url":"aHR0cHM6Ly91c2VyMS5lYXJ0aHRvci5jb20vIy9yZWdpc3Rlcj9jb2RlPVFRenJjOGxR",
-    "desp":"\u3010\u5730\u7403\u4e4b\u95e8-Earth Tor\u3011\u5168\u9876\u7ea7\u4e2d\u56fd\u5165\u53e3\uff0c\u8d28\u91cf\u975e\u5e38\u9ad8\u7684\u571f\u8c6a\u7ebf\u8def,\u9999\u6e2f\u3001\u53f0\u6e7e\u3001\u9a6c\u6765\u3001\u65e5\u672c\u3001\u4e4c\u514b\u5170\u3001\u6b27\u7f8e\u3001\u8fea\u62dc\u7b49\u4e2d\u4e1c\u56fd\u5bb6\u539f\u751fip\u7ebf\u8def,\u652f\u6301Tiktok.\u9002\u5408\u505a\u6d77\u5916\u8425\u9500\u7684\u4e2a\u4eba\u548c\u56e2\u961f\u3002"
-},{
-    "url":"aHR0cHM6Ly9mbG01OC5uZXQvcy9uZzY2Ni9wcGlqZWd4",
-    "desp":"\u3010\u5feb\u67e0\u6aac\u3011\u5168\u5ba2\u6237\u7aefVPN\uff0c\u652f\u6301\u5b89\u5353\/iOS\/Windows\/macOS\uff0c\u5185\u7f6e20+IEPL\u9ad8\u901f\u4e13\u7ebf\uff0c\u4e0b\u8f7d\u5b89\u88c5\u90015\u5929\uff0c\u5f00\u7bb1\u5373\u7528\u65e0\u987b\u6ce8\u518c\u3002\u4f4e\u81f320\/\u6708\u53ef\u9000\u6b3e\uff0cAPP\u7b7e\u5230\u65e0\u9650\u8bd5\u7528~"
-},{
-    "url":"aHR0cHM6Ly92MnJheTAxLnlvdWJidi5jb20vYXV0aC9yZWdpc3Rlcj9jb2RlPUthMVY=",
-    "desp":"\u3010\u95ea\u7535\u732b-SPEEDCAT\u3011\u95ea\u7535\u732b SpeedCAT \u662f\u4e00\u5bb6\u6d77\u5916\u673a\u573a\uff0c\u91cd\u65b0\u5b9a\u4e49\u79d1\u5b66\u4e0a\u7f51\uff0c\u4e3b\u6253\u5feb\u901f\u7a33\u5b9a\uff0c\u5168\u4e13\u7ebfIPLC\uff0c\u6ca1\u6709\u5957\u8def\uff0c\u627f\u8bfa\u4e70\u591a\u5c11\u7ed9\u591a\u5c11\u3002"
-},{
-    "url":"aHR0cHM6Ly9ha2luZXQuaW8=",
-    "desp":"\u3010AkiNet\u3011\u514d\u8d39\u8bd5\u7528 IEPL\u4e13\u7ebf 5\u5143\u4e0d\u9650\u6d41\u91cf Trojan\u534f\u8bae \u652f\u6301\u5948\u83f2\u8fea\u58eb\u5c3c \u4ec5\u6708\u4ed8\u4e0d\u8dd1\u8def"
-},{
-    "url":"aHR0cHM6Ly82OXNzLjdvOHUueHl6Lw==",
-    "desp":"\u3010\u901f\u8fde\u3011\u4e13\u7ebf\u4e0d\u9650\u901f\uff01\u89e3\u9501\u6d41\u5a92\u4f53\uff0c\u4e0d\u8bb0\u5f55\u4efb\u4f55\u7528\u6237\u6570\u636e\uff0c\u665a\u9ad8\u5cf0\u4e0d\u5361\u987f\uff0c\u4e0d\u9650\u8bbe\u5907\u6570\u91cf\uff0c\u66f4\u6709\u4f4e\u500d\u7387\u7684\u798f\u5229\u8282\u70b9\uff01"
-},{
-    "url":"aHR0cHM6Ly93d3cucWlhbmdsaWUueHl6LyMvcmVnaXN0ZXI\/Y29kZT01b3VVdld5MA==",
-    "desp":"\u3010\u5899\u88c2\u30115\u5e74\u4e13\u7ebf\u673a\u573a\uff0c\u56fd\u5916\u8fd0\u8425\u3002\u63d0\u4f9b\u5feb\u901f\u3001\u5b89\u5168\u3001\u53ef\u9760\u7684\u5168\u7403\u7f51\u7edc\u52a0\u901f\u670d\u52a1\u3002"
-},{
-    "url":"aHR0cHM6Ly92M3NzeS54eXovIy9yZWdpc3Rlcj9jb2RlPUM1RDI5N29Y",
-    "desp":"\u3010\u5b9d\u8d1d\u4e91\u3011**\u7a33\u5b9aChatGPT** \uff0c\u4e94\u4e00\u9650\u91cf\u4f18\u60e0\u7801\u53d1\u653e\u4e2d\uff01\uff01\uff01\u4e94\u5e74\u8001\u5382\uff0c\u5148\u8bd5\u540e\u4ed8\uff0c\u8d85\u591a\u6d41\u91cf\uff0c\u8ffd\u6c42\u6781\u81f4\u6027\u4ef7\u6bd4\uff0c\u5948\u975e\u3001\u8fea\u58eb\u5c3c\u7b49\u6d41\u5a92\u4f53\u5168\u89e3\u9501\u3002"
-},{
-    "url":"aHR0cHM6Ly93d3cuZnliLWFmZi5jb20vYXV0aC9yZWdpc3Rlcj9jb2RlPWhiNG8=",
-    "desp":"\u3010\u98de\u9e1fFlyingBird\u3011**\u6d77\u5916\u8fd0\u8425** \u5168\u4e13\u7ebfIPLC\u673a\u573a\uff01\u4e0d\u9650\u901f\uff01\u4e0d\u9650\u5ba2\u6237\u7aef\uff01\u53ef\u5408\u79df\uff01\u4e94\u4e00\u6d3b\u52a8: \u6708\/\u5b63\/\u534a\u5e74\u4ed8 85\u6298 , \u4f18\u60e0\u7801\uff1aFB5185   \uff1b 2: \u5e74\u4ed88\u6298\uff08\u7ad9\u5185\u6298\u4e0a\u6298\uff0c\u9ad8\u8fbe64\u6298 \uff0c\u4f18\u60e0\u7801\uff1aFB5108  \u3002\u6d3b\u52a8\u65f6\u95f4\uff1a\u5373\u65e5\u8d77\u81f3202"
-},{
-    "url":"aHR0cHM6Ly9jY2NjLmdn",
-    "desp":"\u3010\u9752\u68ee\uff08Cyanmori\uff09\u3011 \n\u76f4\u63a5\u8bbf\u95ee,\u65e0\u9700\u67b6\u68af;\u4f4e\u5ef6\u8fdf,\u8d85\u9ad8\u5e26\u5bbd,\u4e0d\u9650\u901f\u2026\u57fa\u7840\u4ef7\u683c10G\/\u5143\u2026\u6700\u9ad88\u6298"
-},{
-    "url":"aHR0cDovLzQzLjEzOC4yNDMuMTM3L2F1dGgvcmVnaXN0ZXI\/Y29kZT1xcEVZ",
-    "desp":"\u3010CuteCloud(\u6700\u840c\u306e\u4e91)\u3011\u65e0\u9700\u90ae\u7bb1\u9a8c\u8bc1\uff0c\u7a33\u5b9a\u8001\u724c\u673a\u573a\uff0c\u6709\u4f53\u9a8c\u5957\u9910\u3002\u89e3\u9501\u591a\u6570\u8bbf\u95ee\u9650\u5236\uff0c\u7387\u5148\u652f\u6301ChatGPT\u4ee5\u53caNewBing\u89e3\u9501\u3002\u901f\u5ea6\u548c\u7a33\u5b9a\u6027\u6781\u4f73\uff0cYoutube\u5168\u5929\u53ef8K\u3002\u6709\u4f4e\u500d\u7387\u8282\u70b9\/\u4e13\u7528\u52a0\u901f\u5668\/\u591a\u79cd\u5171\u4eab\u8d26\u6237\/\u8d1f\u8f7d\u5747\u8861\u7b49\u7b49~"
-},{
-    "url":"aHR0cHM6Ly93d3cuZHVja2xpbmsubmV0LyMvcmVnaXN0ZXI\/Y29kZT1Rd3VHNXRxeQ==",
-    "desp":"\u3010DuckLink\u3011\u9876\u7ea7VPN\u670d\u52a1\u5546\uff0c\u56fd\u9645BGP+IPLC+\u81ea\u7814VPN\u96c6\u6210\u7684\u6700\u65b0\u901a\u4fe1\u534f\u8bae\uff0c\u65e0\u9700\u6298\u817e\uff0c\u767b\u5f55\u5373\u7528\u3002\u8d85\u4f4e\u5ef6\u8fdf\u79d2\u5f008K\u3002\u65e0\u8bbe\u5907\u9650\u5236\uff0c\u89e3\u9501\u5404\u79cd\u8bbf\u95ee\u9650\u5236\uff0c\u7545\u8fde\u65e0\u963b\u7684\u4e92\u8054\u7f51\u3002\u9650\u65f6\u514d\u8d39\u4f53\u9a8c\u3002"
-},{
-    "url":"aHR0cHM6Ly93d3cueWl5dWFuamljaGFuZy5jb20vIy9yZWdpc3Rlcj9jb2RlPXRQSnZXeEVT",
-    "desp":"\u3010\u4e00\u5143\u673a\u573a\u3011 \u6bcf\u6708\u4e0d\u5230\u4e00\u5143\u94b1\uff0c\u7a33\u5b9a\u8fd0\u8425\u7684\u8001\u724c\u673a\u573a\uff0c\u5168\u7f51\u6027\u4ef7\u6bd4\u6700\u9ad8\uff0c\u7ebf\u8def\u591a\uff0c\u901f\u5ea6\u5feb\uff0c\u5ef6\u8fdf\u4f4e\uff0c\u63a8\u5e7f\u4f63\u91d160%\u3002"
-},{
-    "url":"aHR0cHM6Ly93d3cucGFvcGFvLmRvZy8=",
-    "desp":"\u3010\u6ce1\u6ce1Dog\u3011- \u81ea\u75283\u5143IEPL\u673a\u573a\uff0c\u5168\u5929\u8dd1\u6ee1\u5bbd\u5e26\uff0c\u65e0\u89c6\u665a\u9ad8\u5cf0\uff0c\u4e13\u5c5e\u4f18\u60e0\u7801:v2rayn\uff0c\u81ea\u7814\u6d41\u5a92\u4f53\u89e3\u9501\u6280\u672f\uff0c\u5948\u83f2\/\u8fea\u58eb\u5c3c\u7b49\u665a\u9ad8\u5cf0\u79d24K\uff0c\u8001\u724c\u673a\u573a\u4e0d\u62c5\u5fc3\u8dd1\u8def\u3002"
-},{
-    "url":"aHR0cHM6Ly9qb3lvOTUuY2MvYXV0aC9yZWdpc3Rlcj9jb2RlPXYycmF5bg==",
-    "desp":"\u30101\u5143ChatGPT\u30111\u5143\/\u670810G\u26058\u51431000G\u26054K\u79d2\u5f00\u2605\u5927\u6d41\u91cf\u798f\u97f3\u2605\u5168\u9ad8\u901f8K\u96a7\u9053\u4e0d\u9650\u6d41\u91cf\u26055\u5e74\u6d77\u5916\u56e2\u961f\u3002BGP\/IPLC\u6d41\u5a92\u4f53\u5168\u89e3\u9501ChatGPT\u3002\u9001netfilx\u8d26\u53f7\u3002\u51681\u500d\u6d41\u91cf\u3002\u4ece\u4e0d\u505a\u6298\u6263\u65e0\u5957\u8def.\n<br>\u25bc\u25bc\u25bc\u70b9\u51fb\u4e0b\u65b9\u6ce8\u518c\u25bc\u25bc\u25bc"
-},{
-    "url":"aHR0cHM6Ly9zdGFybGlua2Nsb3VkLnRvcA==",
-    "desp":"\u3010\u661f\u94fe\u4e91\u3011\u5168\u7ebfNetflix\u7b49\u6d41\u5a92\u4f53ChatGPT\u539f\u751f\u652f\u6301- 10Gbs\u7ebf\u8def\u6700\u65b0Secure\u96a7\u9053\u52a0\u5bc6\u7ebf\u8def\u5b89\u5168\u4fdd\u969c\uff0c\u4e13\u4e1a\u56e2\u961f\u8fd0\u8425\u7a33\u5b9a\u3002"
-},{
-    "url":"aHR0cHM6Ly93d3cuc2FhYWFhbi5jb20v",
-    "desp":"\u3010\u4e09\u5206\u8d77\u98de\u30111\u5143\/\u670810G\u9ad8\u901f8K\u96a7\u9053\u6d41\u91cf\u30026\u5143100G\/15\u51431T\u3002<br>\n\u7a33\u5b9a6\u5e74\u6d77\u5916\u56e2\u961f\u3002\u6bcf\u5929\u4e09\u5206\u94b1\u8d77\u98de\u3002\u6d41\u5a92\u4f53\u89e3\u9501\uff0cChatGPT\u3002IELP\/IPLC\/BGP\/GIA\u96a7\u9053\u30024K\u79d2\u5f00\u3002\u6709\u6c38\u4e45\u5957\u9910\u3002\u4e0d\u73a9\u5957\u8def\u3002\u2605\u2605\u2605"
-},{
-    "url":"aHR0cHM6Ly93d3cubGFvbml1eXVuLnRvcA==",
-    "desp":"\u3010\u8001\u725b\u4e91\u52a0\u901f\u3011 9.9\u5143\/\u6708\u8d77\uff1b\u6ce8\u518c\u514d\u8d39100G\u6d41\u91cf\u8bd5\u7528  \u901f\u5ea6\u5feb\u5230\u7206  \u65e0\u670d\u52a1\u5668\u65e5\u5fd7  \u81ea\u6709\u5ba2\u6237\u7aef\u4e00\u952e\u8fde\u63a5\uff0c\u5b89\u5168\u7a33\u5b9a   \u6d77\u5916\u8fd0\u8425& \u6709\u6708\u4ed8\u5957\u9910 \uff0c\u4e0d\u8dd1\u8def\uff1b\u5728\u7ebf\u5ba2\u670d\u56e2\u961f\u652f\u6301\uff0c\u5c0f\u767d\u53cb\u597d\uff1b\u7f8e\u65e5\u97e9\u65b0\u6e2f\u53f0\u8282\u70b9\uff0c\u4e0d\u9650\u8bbe\u5907\u6570  \u968f\u4fbf\u7528....."
-}];
-function loadMy(infoObj, addTo) {
-var sortObj = infoObj.sort(function () { return Math.random() - 0.5; })
-var out_li = '';
-for (item of sortObj) {
-out_li+='<tr><td class="ant-table-column-title"><p>'+item.desp+'</p><a class="text-danger" onClick="jsfun(\''+item.url+'\')">新页面打开</a>&nbsp;<a class="text-decoration-none" onClick="jsfunb(\''+item.url+'\');return false;">本页面打开</a></td></tr>';
-}
-document.getElementById(addTo).innerHTML = out_li;
-}
-function jsfun(a) {
-var url = window.atob(a);
-window.open(url, '_blank');
-}
-function jsfunb(a) {
-var url = window.atob(a);
-window.location.href = url;
-}
-function Random(min, max) {
-return Math.round(Math.random() * (max - min)) + min;
-}
-function compare(property) {
-return function (obj1, obj2) {
-    var value1 = obj1[property];
-    var value2 = obj2[property];
-    return value2 - value1;
-}
-}
-window.onload = loadMy(adList, "adList");
-</script>
-</p>
-</div>
-</div>
-
-<!--###################### 节点分享 ######################-->
-<div id="节点分享" class="text-bg-light mb-3">
-<div class="p-2">
-<div class="mb-3 py-2">
-<p class="h3 mb-2 text-muted">节点分享</p>
-</div>
-<p class="font-monospace">此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
-<p class="text-muted fw-light">
-<b>套CF加速</b>
-优选ip工具：<a href="https://github.com/XIU2/CloudflareSpeedTest">点击进入</a>
-cf的ip段：<a href="https://github.com/ip-scanner/cloudflare">点击进入</a>
-</p>
-<div id="v2"></div>
-<script>
-var $ = mdui.$; 
-$.ajax({    
-type:"GET",    
-url:"../../start/json/v2.json",     
-dataType: "json",     
-success: function(data){    
-var str='<div class="row row-cols-1 row-cols-md-2 g-4">';    
-$.each(data,function(i,n){    
-str+='<div class="col text-break"><div class="text-nowrap fw-bolder">'+n.title+'</div><p class="lh-base font-monospace text-black-50">'+n.content+'</p></div>';
-});    
-str+='</div>';
-$("#v2").append(str);
-}    
-});    
-</script>
-</div>
-</div>
-
-<!--###################### 评论留言 ######################-->
-<div id="评论留言" class="mb-3">
-<div class="p-2">
-<div class="mb-3 py-2">
-<p class="h3 mb-2 text-muted">评论留言</p>
-</div>
-<!-- 验证 -->
-<script src="https://ssl.captcha.qq.com/TCaptcha.js?v=1.0.0.1000000"></script>
-<button id="TencentCaptcha"data-appid="666"data-cbfn="callback"type="button" hidden></button>
-<!-- do not set the version number -->
-<script src="//unpkg.com/valine/dist/Valine.min.js?v=1.0.0"></script>
-<!-- or set latest -->
-<script src="//unpkg.com/valine@latest/dist/Valine.min.js?v=1.0.0"></script>
-<!-- or Default value -->
-<script src="//unpkg.com/valine?v=1.0.0"></script>
+<div class="container">
+<div class="ms-3 fs-5" id="评论留言"><i class="me-2 bi bi-chat-square-dots"></i>评论留言</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
 <div id="vcomments" class="font-monospace"></div>
+</div>
+</div>
+<div class="container">
+<div class="ms-3 fs-5" id="节点分享"><i class="me-2 bi bi-database-up"></i>节点分享</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
+<p class="fw-lighter"><i class="me-2 bi bi-bookmark-check"></i>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
+<ul class="icon-list ps-0">
+<li class="d-flex align-items-start mb-1"><a href="https://github.com/XIU2/CloudflareSpeedTest"><i class="me-2 text-black bi bi-arrow-right-circle-fill"></i>Cloudflare「自选优选 IP」工具</a></li>
+<li class="text-muted d-flex align-items-start mb-1"><a href="https://github.com/ip-scanner/cloudflare"><i class="me-2 text-black bi bi-arrow-right-circle-fill"></i>Cloudflare 的ip段</a></li>
+</ul>
+<div id="v2" class="font-monospace"></div>
+</div>
+</div>
+<div class="container">
+<div class="ms-3 fs-5" id="机场分享"><i class="me-2 bi  bi-device-ssd"></i>机场分享</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
+<p class="fw-lighter"><i class="me-2 bi bi-ethernet"></i>所有机场来源于网络收集，速度因人而异，自行测试选择测试体验</p>
+<div class="my-3">
+<div class="pb-2 mb-0 fs-5">工具<span class="ms-2 badge bg-body-secondary text-black">在线测速IP查询</span></div>
+网速测试：<a class="badge text-bg-secondary text-decoration-none" href="https://speed.cloudflare.com/">Speed Test</a>
+<a class="badge text-bg-secondary text-decoration-none" href="https://fast.com/">Fast</a>
+<a class="badge text-bg-secondary text-decoration-none" href="https://www.speedtest.net/zh-Hans">Speedtest</a><br>
+IP查询：<a class="badge text-bg-secondary text-decoration-none" href="https://ip.skk.moe/">ip.skk.moe</a>
+<a class="badge text-bg-secondary text-decoration-none" href="https://www.ipaddress.com/">IPAddress.com</a>
+<a class="badge text-bg-secondary text-decoration-none" href="https://www.ipaddress.my/">IPAddress.my</a>
+</div>
+<div class="my-3">
+<div class="pb-2 mb-0 fs-5">ACL4SSR<span class="ms-2 badge bg-body-secondary text-black">订阅转换</span></div>
+<ul class="list-group">
+<li class="list-group-item"><a class="badge text-bg-light" href="https://acl4ssr-sub.github.io/">ACL4SSR 在线订阅转换</a></li>
+<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.dler.io/">Subscription Converter</a></li>
+<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.xeton.dev/">Subscription Converter</a></li>
+<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.tsutsu.one/">つつの订阅转换 · 鲸歌</a></li>
+<li class="list-group-item"><a class="badge text-bg-light" href="https://bianyuan.xyz/">边缘@订阅转换API</a></li>
+</ul>
+</div>
+<div class="my-3">
+<div class="pb-2 mb-0 fs-5">临时邮箱<span class="ms-2 badge bg-body-secondary text-black">一般用处，懂的都懂</span></div>
+<div class="row row-cols-2 row-cols-lg-5 text-break">
+<div class="col"><a class="badge text-bg-light" href="http://24mail.chacuo.net">24mail.chacuo.net</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://mail.tm/zh">mail.tm/zh</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://mail.td/zh">mail.td/zh </a></div>
+<div class="col"><a class="badge text-bg-light" href="https://linshiyou.com">linshiyou.com</a></div>
+<div class="col"><a class="badge text-bg-light" href="http://f.omail.cc">f.omail.cc</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://linshiyouxiang.net">linshiyouxiang.net</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://10minutemail.net">10minutemail.net</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://10minemail.com/zh">10minemail.com/zh</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://www.linshi-email.com">www.linshi-email.com</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://ihotmails.com">ihotmails.com</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://moakt.com">moakt.com</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://temp-mail.org/zh">temp-mail.org/zh</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://bonds.id">bonds.id</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://tempmail.cn">tempmail.cn</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://www.moakt.com/zh">www.moakt.com/zh</a></div>
+<div class="col"><a class="badge text-bg-light" href="https://www.guerrillamail.com">www.guerrillamail.com</a></div>
+</div>
+</div>
+<div class="my-3">
+<div class="pb-2 mb-0 fs-5">第三方免费机场<span class="ms-2 badge bg-body-secondary text-black">来源网络收集</span></div>
+<a class="text-decoration-none" href="https://lncn.org/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">免费节点 - Lncn.org</strong><span class="d-block">一个纯公益免费节点分享网站,提供免费shadowsockR(SSR)账号</span></div></a>
+<a class="text-decoration-none" href="https://free-ss.site/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">免费vless账号</strong><span class="d-block">-</span></div></a>
+<a class="text-decoration-none" href="https://getafreenode.com/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">获取免费节点</strong><span class="d-block">我们提供免费的 V2Ray 节点！为了帮助您保护您的隐私和安全，请绕过审核、逃避跟踪并跳过身份验证！</span></div></a>
+</div>
+<div class="my-3">
+<div class="pb-2 mb-0 fs-5">机场广告列表<span class="ms-2 badge bg-body-secondary text-black">(随机排序)</span></div>
+<ul id="airportList" class="list-group"></ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="ms-3 fs-5" id="常见问题"><i class="me-2 bi bi-exclamation-square"></i>常见问题</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
+<div id="sections"></div>
+</div>
+</div>
+<div class="container">
+<div class="ms-3 fs-5" id="软件下载"><i class="me-2 bi bi-android2"></i>软件下载</div>
+<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
+<div class="row">
+<div class="text-center mb-3 py-2"><div class="h4 mb-2">客户端</div><p class="text-muted">SS/SSR/V2Ray/Trojan/Clash 客户端软件下载</p></div>
+<div class="col-lg-6 mb-1">
+<div class="fs-5">介绍</div>
+<ul><li>SS = <a href="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks</a></li><li>SSR = <a href="https://zh.wikipedia.org/wiki/ShadowsocksR">ShadowsocksR</a></li><li>SS ≠ SOCKS5</li><li>SS ≠ VPN</li><li><a href="https://www.v2ray.com">V2Ray</a></li><li><a href="https://www.v2fly.org/config/protocols/vless.html">VLESS</a></li><li><a href="https://github.com/trojan-gfw/trojan">Trojan</a></li><li><a href="https://github.com/Dreamacro/clash">Clash</a></li><li><a href="https://github.com/JadaGates/ShadowsocksBio">Shadowsocks的前世今生</a></li></ul>
+</div>
+<div class="col-lg-6 mb-1">
+<div class="fs-5">推荐客户端</div>
+<ul><li><code>iOS</code>: Surge 5, Quantumult X, Shadowrocket, Loon, Stash</li><li><code>Android/安卓</code>: Clash for Android, Surfboard</li><li><code>macOS</code>: Surge Mac, ClashX Pro, Clash for Windows, Stash for macOS</li><li><code>Windows</code>: Clash for Windows, Clash.Mini</li><li><code>Linux</code>: Clash for Windows <br><em>(下方有下载地址)</em></li></ul>
+<div class="fs-5">Clash全平台客户端</div>
+<ul><li><code>iOS</code>: Stash, Choc, Maomi</li><li><code>Android/安卓</code>: Clash for Android</li><li><code>macOS</code>: ClashX Pro, Clash for Windows, Stash for macOS</li><li><code>Windows</code>: Clash for Windows, Clash.Mini</li><li><code>Linux</code>: Clash for Windows, Clash <br><em>(下方有下载地址)</em></li></ul>
+</div>
+</div>
+<div id="clientLinks" class="row row-cols-1 row-cols-lg-3 text-break"></div>
+</div>
+</div>
+
+<!-- 引入 bootstrap js 文件 -->
+<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
-new Valine({
-el: '#vcomments',
-appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',
-appKey: 'z27CGdACRU9SqaK38an2ie5L',
-visitor: true,
-master: '',   //博主邮箱md5
-tagMeta: ["博主","小伙伴","访客"],     //标识字段名
-friends:  [""],  //小伙伴邮箱Md5
-placeholder: "昵称填写QQ可以显示QQ头像和昵称哦~ ",
-guest_info: ['nick','mail'],
-avatar: 'wavatar',
-enableQQ: true,
-highlight: false,
-// 设置Bilibili表情包地址
-emojiCDN: '//i0.hdslb.com/bfs/emote/', 
-// 表情title和图片映射
-emojiMaps: {
-        "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
-        "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
-        "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
-        "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
-        "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
-        "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
-        "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
-        "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
-        "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
-        "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
-        "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
-        "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
-        "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
-        "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
-        "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
-        "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
-        "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
-        "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
-        "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
-        "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
-        "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
-        "tv_热词系列_三连": "21f15fe11b7a84d2f2121c16dec50a4e4556f865.png",
-        "tv_热词系列_知识增加": "5637557320fbfb3292307735f0b8acd53a791241.png",
-        "tv_热词表情_哎呦不错哦": "6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png",
-        "tv_热词系列_好耶": "ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png",
-        "tv_热词系列_你币有了": "84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png",
-        "tv_热词系列_对象": "a41763740a90c2b11bf282bf44ccee78066c98ff.png",
-        "tv_热词系列_不孤鸟": "7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png",
-        "tv_热词系列_洛水天依": "ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png",
-        "tv_热词系列_优雅": "d41bc3db2a0d5ac32eee0b454062c057e6198a21.png",
-        "tv_热词系列_吹爆": "9c78c14bd395d75afeecd20276ec71324e9b97df.png",
-        "tv_热词系列_秀": "1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png",
-        "tv_热词系列_妙啊": "3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png",
-        "tv_热词系列_标准结局": "6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png",
-        "tv_热词系列_B站有房": "e2aeda75690b72b49ebc82f12e340678f5fc47c0.png",
-        "tv_热词系列_破防了": "d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png",
-        "tv_热词系列_多谢款待": "a4789b0eceb8fb9719c3a214aa89180528369091.png",
-        "tv_白色情人节_555": "ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png",
-        "tv_白色情人节_555": "f0bde472c5b6490435e9f948500d3dca84407253.png",
-        "tv_白色情人节_chou你": "cde2941ac0653ded2499ed3c06c02513e021b594.png",
-        "tv_白色情人节_mua": "8a155f0df789f66d6af55a0f47456445211e2129.png",
-        "tv_白色情人节_ok": "cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png",
-        "tv_白色情人节_out": "2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png",
-        "tv_白色情人节_shot": "a746aab2877af0dd1688caa3b2e29982d3215778.png",
-        "tv_白色情人节_yyds": "e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png",
-        "tv_白色情人节_爱了爱了": "2918b857f228e4444e151b77bb6847167b8b1e21.png",
-        // ... 更多表情
-} 
+$(document).ready(function () {
+$('#myTab a').on('click', function (event) {
+event.preventDefault();
+$(this).tab('show');
+});
+$("#Base64start").click(function () {$("#Base64code").val(Base64.encode($("#Base64text").val()))});
+$("#Base64end").click(function () {$("#Base64code").val(Base64.decode($("#Base64text").val()))});
+$("#md5start").click(function () {$("#md5code").val(md5($("#md5text").val()))});
+$(function(){
+new Valine({el:'#vcomments',appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',hide:true,emojiCDN:'//i0.hdslb.com/bfs/emote/',emojiMaps:{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_热词系列_三连":"21f15fe11b7a84d2f2121c16dec50a4e4556f865.png","tv_热词系列_知识增加":"5637557320fbfb3292307735f0b8acd53a791241.png","tv_热词表情_哎呦不错哦":"6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png","tv_热词系列_好耶":"ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png","tv_热词系列_你币有了":"84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png","tv_热词系列_对象":"a41763740a90c2b11bf282bf44ccee78066c98ff.png","tv_热词系列_不孤鸟":"7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png","tv_热词系列_洛水天依":"ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png","tv_热词系列_优雅":"d41bc3db2a0d5ac32eee0b454062c057e6198a21.png","tv_热词系列_吹爆":"9c78c14bd395d75afeecd20276ec71324e9b97df.png","tv_热词系列_秀":"1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png","tv_热词系列_妙啊":"3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png","tv_热词系列_标准结局":"6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png","tv_热词系列_B站有房":"e2aeda75690b72b49ebc82f12e340678f5fc47c0.png","tv_热词系列_破防了":"d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png","tv_热词系列_多谢款待":"a4789b0eceb8fb9719c3a214aa89180528369091.png","tv_白色情人节_555":"ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png","tv_白色情人节_555":"f0bde472c5b6490435e9f948500d3dca84407253.png","tv_白色情人节_chou你":"cde2941ac0653ded2499ed3c06c02513e021b594.png","tv_白色情人节_mua":"8a155f0df789f66d6af55a0f47456445211e2129.png","tv_白色情人节_ok":"cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png","tv_白色情人节_out":"2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png","tv_白色情人节_shot":"a746aab2877af0dd1688caa3b2e29982d3215778.png","tv_白色情人节_yyds":"e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png","tv_白色情人节_爱了爱了":"2918b857f228e4444e151b77bb6847167b8b1e21.png"}}); 
+});
+$.ajax({
+type: "GET",
+url: "../../start/Datadake/get/json/A2zml/v2/v2.json",
+dataType: "json",
+success: (data) => {
+const shuffleArray=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const htmlContent=data[0]&&data[0].list?data[0].list.map(item=>`<div class="col text-break"><div class="d-flex text-muted pt-3"><i class="me-2 bi bi-diagram-3"></i><p class="pb-2 mb-0 small lh-sm border-bottom w-100"><strong class="d-block text-gray-dark">${item.title}</strong>${item.content}</p></div></div>`).join(''):`<div class="col text-break"><div class="d-flex text-muted pt-3"><i class="me-2 bi bi-badge-wc"></i><p class="pb-2 mb-0 small lh-sm border-bottom w-100"><strong class="d-block text-gray-dark">暂无内容</strong>空</p></div></div>`;
+$("#v2").append(`<div class="row row-cols-1 row-cols-md-2 g-4">${htmlContent}</div>`);
+const listItem = data[1].airportList?shuffleArray(data[1].airportList).map(item => `<li class="list-group-item"><p>${item.desp}</p><a href="${item.url}" target="_blank" class="btn btn-sm btn-primary me-2 mt-1">新页面打开</a>${item.picTaoCan ? `<a href="${item.picTaoCan}" target="_blank" class="btn btn-sm btn-secondary me-2 mt-1">套餐预览</a>` : ''}${item.picJieDian ? `<a href="${item.picJieDian}" target="_blank" class="btn btn-sm btn-secondary me-2 mt-1">节点预览</a>` : ''}</li>`).join(''):'<li class="list-group-item">暂无内容</li>';
+$("#airportList").append(listItem);
+const sections = data[2].sections.map(item => `<div class="card-body mt-2"><div class="card-title fw-bolder fs-6">${item.title}</div><p class="card-text fw-lighter">${item.content.replace(/\n/g, '<br>')}</p></div>`).join('');
+$("#sections").append(sections);
+const clientLinks = data[3].client.map(item =>`<div class="col"><div class="fs-5 mt-2">${item.title}</div>${item.list.length > 0 ? '<ul class="list-group">' : '<p>No links available for this category</p>'}${item.list.map(link => `${link.href ? `<li class="list-group-item"><a href="${link.href}">${link.text}</a>${link.description ? link.description : ''}</li>` : `<p class="fw-bold mt-2">${link.text}</p>`} `).join('')}${item.list.length > 0 ? '</ul>' : ''}</div>`);
+$("#clientLinks").append(clientLinks);
+}
+});
+
+
 });
 </script>
-<script>
-onIsOff = true;//用来控制重复运行的定时器的开关
-window.callback = function(res){
-if(res.ret === 0){
-window.clearInterval(t2);//如果验证成功就结束定时器
-}
-if(res.ret === 2){
-onIsOff = true;//如果验证失败就继续运行定时器
-}
-}
-var t2 = window.setInterval(function() {//重复运行的定时器，每一秒执行一次函数
-if (onIsOff == true){
-act = document.activeElement.id;//获取当前焦点的id
-if(act=="veditor")//判断评论输入框是否获得焦点
-{
-document.getElementById("TencentCaptcha").click();//触发id为TencentCaptcha的按钮
-onIsOff = false;//触发过程中暂时关闭定时器
-}
-}
-},1000);
-</script>
-</div>
-</div>
-
-<!--###################### 常见问题 ######################-->
-<div id="常见问题" class="card shadow-lg bg-body-tertiary rounded text-bg-light mb-3">
-<div class="card-header h3 mb-2 text-muted">常见问题</div>
-<div class="card-body">
-<div class="card-title fw-bold">耗电/流量</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">为什么使用了代理应用后在电量统计中显示耗电很多？<br>
-这是移动操作系统的一个特殊机制，Surge iOS、Quantumult X、Shadowrocket、Choc 等等所有的 SS/SSR/V2Ray/Trojan 客户端开启后会接管全局的（几乎）所有通信，所以所有的网络方面电量消耗都会被算在代理应用头上，实际使用中不会感到代理应用对电量有明显影响，「设置-电池」中看到它的电池用量，绝大部分都是网络所消耗的电量，并不是代理应用消耗的电量，代理应用就是背锅侠。<br>
-还有，夜间或锁屏后系统也会请求网络，比如后台刷新、系统服务等等，只要有请求网络就会经过代理应用，所以在「设置-电池」处看到代理应用在后台也会运行。<br>
-网络流量也是如此的。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">MIUI系统VPN授权弹窗点击<code class="mdui-color-grey-400">确认</code>为什么没反应？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">网络连接请求 “-“想要设置一个VPN连接,以便监控网络流量。除非您信任该来源，否则请勿接受此请求。<br>MIUI重启解决99%的问题。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">为什么连不上？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">免费资源不能保证可用性，有可能已失效，如果需要长期稳定快速的服务，建议使用付费机场，没有<font color="#FF0000">推荐</font>自己找。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">速度太慢怎么办？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">免费资源无法保证速度，同上。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">不会用怎么办？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">别人都会，就你不会。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">看不懂怎么办？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">那就别看。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">找不到怎么办？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">去看一下眼科。</div>
-<div class="mdui-divider"></div>
-<div class="card-title fw-bold">太麻烦了怎么办？</div>
-<div class="card-text font-monospace text-body-tertiary mb-3">那就别搞。</div>
-</div>
-</div>
-
-</div>
 </body>
 </html>
