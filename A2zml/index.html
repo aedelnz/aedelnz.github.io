@@ -6,66 +6,11 @@
 <meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>爱莫能助</title>
-<!-- 引入 bootstrap css 文件 -->
-<link href="../start/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../start/bootstrap/font/bootstrap-icons.css" rel="stylesheet">
-<!-- 引入 ECharts js 文件 -->
-<script src="../start/echarts/echarts.min.js"></script>
-<!-- 引入 jquery js 文件 -->
-<script src="../start/jquery/jquery.min.js"></script>
-<style>
-.flip-card {
-width: auto;
-height: 210px;
-perspective: auto;
-}
-.flip-card-inner {
-width: 100%;
-height: 100%;
-transform-style: preserve-3d;
-transition: transform 1.9s;
-}
-.flip-card:hover .flip-card-inner {
-transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-width: 100%;
-height: 100%;
-position: absolute;
-backface-visibility: hidden;
-}
-.flip-card-front {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.flip-card-back {
-transform: rotateY(180deg);
-display: flex;
-align-items: center;
-justify-content: center;
-background: url("https://i0.hdslb.com/bfs/archive/c6bd5c910480065033f9429c89a41a5ff7a61109.png");
-flex-direction: column;
-flex-wrap: wrap;
-align-content: center;
-}
-li.nav-item.col-12.col-lg-auto:hover,
-a.nav-link.fw-bolder.text-black:hover {background: var(	--bs-light-border-subtle);color: var(--bs-dark-text);border-radius: var(--bs-border-radius)!important;transition: font-size 0.6s ease-in-out;}
-i.bi.bi-arrow-right-circle:hover {font-size: 17px;color: var(--bs-blue);transition: font-size 0.1s ease-in-out;}
-.list-group-item.list-group-item-action.shadow-sm.rounded:hover {background: var(	--bs-light-border-subtle);color: var(--bs-dark-text);}
-</style>
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="flip-card">
-<div class="flip-card-inner">
-<div class="flip-card-front">
-</div>
-<div class="flip-card-back">
-<a class="text-decoration-none" href="https://www.bilibili.com/blackboard/activity-yellowVSgreen9th.html?spm_id_from=333.1007.0.0">点击查看<img style="display: none;" src="https://i0.hdslb.com/bfs/archive/c6bd5c910480065033f9429c89a41a5ff7a61109.png"></a>
-</div>
-</div>
-</div>
 
 <!--- header -->
 <header class="navbar navbar-expand-lg shadow bg-body-tertiary sticky-top mb-4">
@@ -133,8 +78,7 @@ i.bi.bi-arrow-right-circle:hover {font-size: 17px;color: var(--bs-blue);transiti
 </div>
 </div>
 
-<!-- 引入 bootstrap js 文件 -->
-<script src="../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
 // 搜索框
@@ -145,14 +89,6 @@ $.getJSON('../start/Datadake/get/json/A2zml/'+params, function (data) {
 var $animationZone = $('#scroll-container'), htmlStr = data.map(function (e) { var t = e.content.map(function (e) { return '<div class="col"><a class="list-group-item list-group-item-action shadow-sm rounded"><div class="mb-0 fs-6 fw-light text-truncate" title="' + e.title + '" data-bs-toggle="modal" data-bs-target="#myModal" data-title="' + e.title + '" data-intro="' + e.intro + '" data-url="' + e.url + '">' + e.title + '</div><div class="d-flex w-100 justify-content-between"><p class="mb-1 fw-lighter font-monospace text-truncate" title="' + e.intro + '">' + e.intro + '</p><small class="text-muted" onclick="window.open(`/go.html#tpurl=' + e.url + '`);" title="直接访问"><i class="bi bi-arrow-right-circle"></i></small></div></a></div>' }).join(''); return '<div class="container px-3 py-3 list-group"><div id="' + e.classification + '" class="pb-2 fs-5">' + e.classification + '</div><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2">' + t + '</div></div>' }).join(''); $animationZone.empty().html(htmlStr);
 $(function () { $('#myModal').on('show.bs.modal', function (e) { var t = $(e.relatedTarget), a = t.data('title'), o = t.data('intro'), n = t.data('url'), i = $(this); i.find('.modal-title').empty().text(a), i.find('.modal-body').empty().html('<p><span class="spinner-border spinner-border-sm text-info me-2" role="status" aria-hidden="true"></span>内容加载中······</p>'); setTimeout(function () { var t = i.find('.modal-body').empty(); $.trim(o) !== '' ? t.text(o) : t.text(n), i.find('.modal-footer').empty().html('<a class="btn btn-primary" href="' + n + '">前往</a>') }, 1e3) }) });
 var $animationZoneAs = $('#list-example'), htmlStr = data.map(item => `<a class="nav-link fw-bolder text-black" href="#${item.classification}">${item.classification}</a>`).join(''); $animationZoneAs.empty().append(htmlStr);
-var classifications = $.map(data, item => item.classification);
-var contentNumbers = $.map(data, item => item.content.length);
-var $chartContainer = $('.flip-card-front');
-if ($chartContainer.length > 0) {
-var myChart = echarts.init($chartContainer[0]);
-option = {xAxis: {data: classifications,axisLabel: {interval: 0,rotate: -90,}},yAxis: {},series: [{type: 'bar',data: contentNumbers,barWidth: '80%',label: {show: true,position: 'top',color: '#000',}}]};
-myChart.setOption(option);
-}
 });  
 }
 Toplevelnavigation.on('click', function (e) {
