@@ -6,6 +6,7 @@
 <meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>爱莫能助</title>
+<link rel="icon" data-href="../favicon.ico">
 <link href="../start/index.css" rel="stylesheet">
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -71,7 +72,7 @@
 <footer class="bd-footer py-4 mt-2 shadow-lg">
 <div class="container px-4 text-body-secondary d-flex flex-column flex-sm-row justify-content-between">
 <div class="small">
-<a class="d-inline-flex align-items-center text-body-secondary text-decoration-none" href="/"><img src="../favicon.ico" class="object-fit-cover border rounded me-2" width="32" height="32"><span class="fs-4">爱莫能助</span></a>
+<a class="d-inline-flex align-items-center text-body-secondary text-decoration-none" href="/"><img data-src="../favicon.ico" class="object-fit-cover border rounded me-2" width="32" height="32"><span class="fs-4">爱莫能助</span></a>
 <div class="mb-0">版权所有 © 2020-2024 <a href="" class="link-dark fw-lighter text-decoration-none">爱莫能助</a></div>
 </div>
 <div class="mb-0">由「<a href="/" class="link-dark fw-lighter text-decoration-none">机械极地馆</a>」提供技术支持</div>
@@ -110,6 +111,13 @@ if (currentElementCount > initialElementCount) {
 navigate('Animation_Zone.json');
 }
 //Toplevelnavigation.first().click();
+
+$('img').attr('src', function() {
+return $(this).data('src');
+});
+$('link').attr('href', function() {
+return $(this).data('href');
+});
 });
 </script>
 </body>
