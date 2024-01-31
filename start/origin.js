@@ -5,10 +5,6 @@
 //灵雀应用监控
 !(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"K5mJO6H2n6QPd4MK",sendSpaPv:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");
 
-//
-((c,l,a,r,i,t,y)=>{c[a]=c[a]||(()=>{(c[a].q=c[a].q||[]).push(arguments)});t=l.createElement(r);t.async=1;t.src=`https://www.clarity.ms/tag/${i}`;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","c73276g5ao");
-
-
 //log
 fetch("https://v1.hitokoto.cn/").then(function(response) {
 if (response.ok) {
