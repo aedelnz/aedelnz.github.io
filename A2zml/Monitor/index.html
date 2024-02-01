@@ -28,7 +28,11 @@ $(document).ready(function() {
 new MutationObserver(mutations => mutations.forEach(mutation => (mutation.type === 'childList' || mutation.type === 'characterData') && $('#liveToast').addClass('hide').removeClass('show'))).observe(document.getElementById('uptime'), { childList: true, subtree: true, characterData: true });
 // 背景内容
 var videoArr = [
-    'https://alimov2.a.kwimgs.com/upic/2023/12/02/23/BMjAyMzEyMDIyMzU0NDdfMjEyOTA1NzAyN18xMTg2OTk1NjIzNTBfMV8z_hd15_Bc56cdda2ac513ec0a0a4bf73edadc40c.mp4'
+    'https://alimov2.a.kwimgs.com/upic/2023/12/02/23/BMjAyMzEyMDIyMzU0NDdfMjEyOTA1NzAyN18xMTg2OTk1NjIzNTBfMV8z_hd15_Bc56cdda2ac513ec0a0a4bf73edadc40c.mp4',
+    'https://alimov2.a.kwimgs.com/upic/2023/12/19/21/BMjAyMzEyMTkyMTUyNDJfMjEyOTA1NzAyN18xMjAwNzA4MDg2MDdfMV8z_hd15_B2d223d2b1792591f16a2ef3a2715032d.mp4',
+    'https://alimov2.a.kwimgs.com/upic/2023/11/03/20/BMjAyMzExMDMyMDMyNDhfMjEyOTA1NzAyN18xMTYzNzUwMjM4NzZfMV8z_hd15_Bd963855f7ea20a560eeb9c154f93387a.mp4',
+    'https://alimov2.a.kwimgs.com/upic/2023/10/04/20/BMjAyMzEwMDQyMDQ0MDFfMTI5NTMzNDI1NV8xMTQzMjE1ODUyOTNfMl8z_hd15_B36b688b3f56041aafd5b1c186e3ccac0.mp4',
+    'https://alimov2.a.kwimgs.com/upic/2023/08/04/17/BMjAyMzA4MDQxNzAyMTlfMTY4MjkzMTcwMV8xMDk2NjM4MzkxOTVfMl8z_hd15_B1af132d2c2462f7b8a6853678cdb1a13.mp4'
 ]
 var imgArr = [
     'https://upload-bbs.miyoushe.com/upload/2024/01/29/327222771/b3946d1770c1e2d76b5764608c1e9e82_1087573664032587389.jpg?x-oss-process=image/resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg',
@@ -45,6 +49,14 @@ setTimeout(function() {
 $('<img/>').attr('src', zhi).on('load', function() {
 $("body").prepend(zhsp);
 $('#bg-video').attr('src', zhs);
+});
+$('#app').on('click', function() {
+var video = document.getElementById('bg-video');
+if (video.muted) {
+video.muted = false;
+} else {
+video.muted = true;
+}
 });
 }, 3000);
 });
