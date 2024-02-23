@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer"/>
+<meta name="Content-Security-Policy" content="upgrade-insecure-requests"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Network</title>
+<link rel="icon" data-href="../../favicon.ico">
+<link href="../../start/index.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="../../start/origin.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<header class="navbar navbar-expand-lg shadow sticky-top mb-4">
+<nav class="container flex-wrap flex-lg-nowrap">
+<a class="navbar-brand p-0 me-0 me-lg-2 font-monospace" href=""> <i class="bi bi-hdd-network"></i> Network </a>
+</nav>
+</header>
+<section class="container">
+<div class="shadow-lg p-3 mb-5 rounded">
+<div class="mb-3">
+<label class="form-label fw-bold">测速地址：</label>
+<div class="input-group"><select class="form-select form-select-lg mb-3" id="selectoption"></select></div>
+<div class="form-text mt-3"><label class="form-label fw-bold">线程数：<span id="rangeValue">0</span></label><div class="input-group"><input type="range" class="form-range progress" min="0" max="64" id="customRange3"></div></div>
+<div class="form-check form-text mt-3">
+<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+<label class="form-check-label">是否无限循环</label>
+</div>
+</div>
+
+<article class="container text-center py-5">
+<div class="row align-items-center g-4">
+<div class="col-12 col-lg-4">
+<div class="card card-body">
+<h5 class="card-title fw-bold">总流量</h5>
+<p class="card-subtitle mb-2 text-muted card-text" id="Total_traffic">-</p>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="card card-body">
+<h5 class="card-title fw-bold">实时网速</h5>
+<p class="card-subtitle mb-2 text-muted card-text" id="internet_speed">-</p>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="card card-body">
+<h5 class="card-title fw-bold">宽带速度</h5>
+<p class="card-subtitle mb-2 text-muted card-text" id="Broadband_speeds">-</p>
+</div>
+</div>
+</div>
+</article>
+<div class="d-flex justify-content-center">
+<div class="card bg-primary text-light rounded-4 mb-4">
+<span class="h1 mx-2 my-2" id="toggleCalculationButton"><i class="me-2 bi bi-play-circle"></i>开始</span>
+</div>
+</div>
+</div>
+</section>
+<section class="container">
+<div class="shadow-lg p-3 mb-5 rounded">
+<div class="d-flex justify-content-center">
+<div class="card bg-body-secondary text-light-emphasis rounded-3">
+<span class="h6 fw-lighter font-monospace mx-2 my-2" id="ipdizhi"></span>
+</div>
+</div>
+</div>
+</section>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+// 实时选择地址更新
+var datasssss = [{
+    "title": "咪咕快游[高速]",
+    "url": "https://freeserver.migufun.com/resource/beta/apk/20240202102800/MiguPlay-V3.75.1.1_40257743975.apk"
+},{
+    "title": "网易云游戏[高速]",
+    "url": "https://a29.gdl.netease.com/com.netease.android.cloudgame-2.7.20-2240-netease_new-964.apk"
+},{
+    "title": "快手",
+    "url": "https://js.a.kspkg.com/kos/nlav10814/kwai-android-generic-gifmakerrelease-10.10.30.28545_x32_1f14b3.apk"
+},{
+    "title": "bilibili",
+    "url": "https://i1.hdslb.com/bfs/archive/1b6b30a3180bf58fd69b6df2f3c96108ed7fef1f.png@3840w_360h_1c.avif"
+}];
+var selectoption = $('#selectoption');
+$.each(datasssss, function(i, n){const keyoption = "option";const selectedop = localStorage.getItem(keyoption) || '';const option = $('<option>').attr('value', n.url).text(n.title);if(selectedop === n.title){option.attr('selected', 'selected');}selectoption.append(option);});
+selectoption.on('change', function() {localStorage.setItem('option', selectoption.find('option:selected').text());selectedText = $(this).val();});
+var selectedText = selectoption.val();
+// 实时选择线路更新
+var rangeValue = $('#rangeValue');
+var customRange3 = $('#customRange3');
+var keyValue = "rangeValue";
+var retrievedValue = localStorage.getItem(keyValue) !== null ? localStorage.getItem(keyValue) : 4;
+rangeValue.text(retrievedValue);
+customRange3.val(retrievedValue);
+customRange3.on('input', function(){
+customRange3 = $(this).val();
+rangeValue.text(customRange3);
+localStorage.setItem('rangeValue', customRange3);
+});
+var customRange3 = customRange3.val();
+// 实时选择框更新
+var checkboxChecked = $('#flexCheckDefault');
+checkboxChecked.change(function() {
+checkboxChecked = $(this).prop('checked');
+});
+var checkboxChecked = checkboxChecked.prop('checked');
+var xhrList = [];
+var isDownloading = false;
+var toggleCalculationButton = $('#toggleCalculationButton');
+toggleCalculationButton.on('click', function() {
+if (isDownloading) {
+if (xhr) {xhrList.forEach(function(xhr) {xhr.abort();});xhrList = [];}
+isDownloading = false;toggleCalculationButton.empty().append('<i class="me-2 bi bi-play-circle"></i>开始');
+} else {
+ciuaeals(customRange3);
+isDownloading = true;toggleCalculationButton.empty().append('<i class="me-2 bi bi-stop-circle"></i>暂停');
+}
+});
+function ciuaeals(customRange3) {
+for (let i = 0; i < customRange3; i++) {
+downloadFile(selectedText, totalLoaded, i);
+totalLoaded = 0;
+}
+}
+var totalLoaded = 0;
+var totalLoadeddara = [];
+function downloadFile(url, size, i) {
+    xhr = new XMLHttpRequest();
+    xhrList.push(xhr);
+    xhr.open('GET', url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
+    xhr.responseType = 'arraybuffer';
+    var lastUpdateTime = Date.now();
+    var lastLoaded = 0;
+    xhr.onprogress = function(e) {
+        if (e.lengthComputable) {
+            var percentComplete =  Math.floor((e.loaded / e.total) * 100);
+            console.log('已下载' + percentComplete + '%');
+            var timeDiff = (Date.now() - lastUpdateTime) / 1000;
+            var loadedDiff = e.loaded - lastLoaded;
+            var speed = loadedDiff / timeDiff;
+            $('#internet_speed').text(speed > 1024 * 1024 ? (speed / (1024 * 1024)).toFixed(1) + ' MB/s' : (speed / 1024).toFixed(1) + ' KB/s');
+            $('#Broadband_speeds').text(Math.floor(speed / 8 / 10000) + ' Mbps');
+            totalLoadeddara[i] = e.loaded+size;
+            totalLoaded = totalLoadeddara.reduce((acc, val) => acc + val, 0); // 计算数组元素的总和
+            var downloadedStr;            
+            if (totalLoaded >= 1099511627776) { // TB
+                downloadedStr = (totalLoaded / 1099511627776).toFixed(2) + ' TB';
+            } else if (totalLoaded >= 1073741824) { // GB
+                downloadedStr = (totalLoaded / 1073741824).toFixed(2) + ' GB';
+            } else if (totalLoaded >= 1048576) { // MB
+                downloadedStr = (totalLoaded / 1048576).toFixed(2) + ' MB';
+            } else if (totalLoaded >= 1024) { // KB
+                downloadedStr = (totalLoaded / 1024).toFixed(2) + ' KB';
+            } else { // B
+                downloadedStr = totalLoaded.toFixed(2) + ' B';
+            }
+            $('#Total_traffic').text(downloadedStr);
+        }
+    };
+    xhr.onload = function() {
+    if (checkboxChecked === true) {
+    ciuaeals(1);
+    }
+    var allCompleted = xhrList.every(function(xhr) {
+        return xhr.readyState === 4;
+    });
+    if (allCompleted) {
+        toggleCalculationButton.empty().append('<i class="me-2 bi bi-play-circle"></i>开始');
+    }
+    };
+    xhr.send();
+}
+
+$.getJSON("https://forge.speedtest.cn/api/location/info", function(json) {
+$("#ipdizhi").empty().append(json.province+' '+json.city+' '+json.distinct+' '+json.net_str);
+});
+});
+</script>
+</body>
+</html>

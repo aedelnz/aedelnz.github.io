@@ -17,7 +17,7 @@ console.log('%cPowered by %c 机械极地馆\n'+
 'from：'+hitokoto.from+'\n'+
 '浏览器的首选语言：'+navigator.language+'\n'+
 '浏览器的操作系统平台：'+navigator.platform+'\n'+
-'浏览器的版本信息：'+navigator.appVersion+'\n', 'background: linear-gradient(to bottom right, #9FD5F7, #F1CAFF);color:#fff', 'color:#000');
+'浏览器的版本信息：'+navigator.appVersion+'\n');
 });
 if (!!window.ActiveXObject || "ActiveXObject" in window) {
 alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
