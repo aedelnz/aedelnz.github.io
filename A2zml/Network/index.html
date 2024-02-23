@@ -116,38 +116,37 @@ toggleCalculationButton.on('click', function() {
 if (isDownloading) {
 if (xhr) {xhrList.forEach(function(xhr) {xhr.abort();});xhrList = [];}
 isDownloading = false;toggleCalculationButton.empty().append('<i class="me-2 bi bi-play-circle"></i>开始');
+$('#customRange3').prop('disabled', false);
 } else {
 ciuaeals(customRange3);
 isDownloading = true;toggleCalculationButton.empty().append('<i class="me-2 bi bi-stop-circle"></i>暂停');
+$('#customRange3').prop('disabled', true);
 }
 });
 function ciuaeals(customRange3) {
 for (let i = 0; i < customRange3; i++) {
 downloadFile(selectedText, totalLoaded, i);
-totalLoaded = 0;
 }
 }
 var totalLoaded = 0;
-var totalLoadeddara = [];
+var totalLoadedss = [];
 function downloadFile(url, size, i) {
     xhr = new XMLHttpRequest();
     xhrList.push(xhr);
     xhr.open('GET', url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
     xhr.responseType = 'arraybuffer';
     var lastUpdateTime = Date.now();
-    var lastLoaded = 0;
     xhr.onprogress = function(e) {
         if (e.lengthComputable) {
             var percentComplete =  Math.floor((e.loaded / e.total) * 100);
             console.log('已下载' + percentComplete + '%');
-            var timeDiff = (Date.now() - lastUpdateTime) / 1000;
-            var loadedDiff = e.loaded - lastLoaded;
-            var speed = loadedDiff / timeDiff;
+            var speed = e.loaded / ((Date.now() - lastUpdateTime) / 1000);
             $('#internet_speed').text(speed > 1024 * 1024 ? (speed / (1024 * 1024)).toFixed(1) + ' MB/s' : (speed / 1024).toFixed(1) + ' KB/s');
             $('#Broadband_speeds').text(Math.floor(speed / 8 / 10000) + ' Mbps');
-            totalLoadeddara[i] = e.loaded+size;
-            totalLoaded = totalLoadeddara.reduce((acc, val) => acc + val, 0); // 计算数组元素的总和
-            var downloadedStr;            
+            totalLoadedss[i] = e.loaded;
+            var sum = totalLoadedss.reduce((acc, val) => acc + val, 0);
+            totalLoaded = sum+size;
+            var downloadedStr;
             if (totalLoaded >= 1099511627776) { // TB
                 downloadedStr = (totalLoaded / 1099511627776).toFixed(2) + ' TB';
             } else if (totalLoaded >= 1073741824) { // GB
