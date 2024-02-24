@@ -63,9 +63,8 @@
 <section class="container">
 <div class="shadow-lg p-3 mb-5 rounded">
 <div class="d-flex justify-content-center">
-<div class="card bg-body-secondary text-light-emphasis rounded-3">
-<span class="h6 fw-lighter font-monospace mx-2 my-2" id="ipdizhi"></span>
-</div>
+<span class="card bg-success-subtle text-light-emphasis rounded-3 fw-lighter font-monospace px-1 py-0 mx-1" id="IP_latency"></span>
+<span class="card bg-body-secondary text-light-emphasis rounded-3 fw-lighter font-monospace px-1 py-0 mx-1" id="IP_address"></span>
 </div>
 </div>
 </section>
@@ -74,17 +73,17 @@
 $(document).ready(function () {
 // 实时选择地址更新
 var datasssss = [{
-    "title": "咪咕快游[高速]",
-    "url": "https://freeserver.migufun.com/resource/beta/apk/20240202102800/MiguPlay-V3.75.1.1_40257743975.apk"
+"title": "咪咕快游[高速]",
+"url": "https://freeserver.migufun.com/resource/beta/apk/20240202102800/MiguPlay-V3.75.1.1_40257743975.apk"
 },{
-    "title": "网易云游戏[高速]",
-    "url": "https://a29.gdl.netease.com/com.netease.android.cloudgame-2.7.20-2240-netease_new-964.apk"
+"title": "网易云游戏[高速]",
+"url": "https://a29.gdl.netease.com/com.netease.android.cloudgame-2.7.20-2240-netease_new-964.apk"
 },{
-    "title": "快手",
-    "url": "https://js.a.kspkg.com/kos/nlav10814/kwai-android-generic-gifmakerrelease-10.10.30.28545_x32_1f14b3.apk"
+"title": "快手",
+"url": "https://js.a.kspkg.com/kos/nlav10814/kwai-android-generic-gifmakerrelease-10.10.30.28545_x32_1f14b3.apk"
 },{
-    "title": "bilibili",
-    "url": "https://i1.hdslb.com/bfs/archive/1b6b30a3180bf58fd69b6df2f3c96108ed7fef1f.png@3840w_360h_1c.avif"
+"title": "bilibili",
+"url": "https://i1.hdslb.com/bfs/archive/1b6b30a3180bf58fd69b6df2f3c96108ed7fef1f.png@3840w_360h_1c.avif"
 }];
 var selectoption = $('#selectoption');
 $.each(datasssss, function(i, n){const keyoption = "option";const selectedop = localStorage.getItem(keyoption) || '';const option = $('<option>').attr('value', n.url).text(n.title);if(selectedop === n.title){option.attr('selected', 'selected');}selectoption.append(option);});
@@ -131,53 +130,52 @@ downloadFile(selectedText, totalLoaded, i);
 var totalLoaded = 0;
 var totalLoadedss = [];
 function downloadFile(url, size, i) {
-    xhr = new XMLHttpRequest();
-    xhrList.push(xhr);
-    xhr.open('GET', url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
-    xhr.responseType = 'arraybuffer';
-    var lastUpdateTime = Date.now();
-    xhr.onprogress = function(e) {
-        if (e.lengthComputable) {
-            var percentComplete =  Math.floor((e.loaded / e.total) * 100);
-            console.log('已下载' + percentComplete + '%');
-            var speed = e.loaded / ((Date.now() - lastUpdateTime) / 1000);
-            $('#internet_speed').text(speed > 1024 * 1024 ? (speed / (1024 * 1024)).toFixed(1) + ' MB/s' : (speed / 1024).toFixed(1) + ' KB/s');
-            $('#Broadband_speeds').text(Math.floor(speed / 8 / 10000) + ' Mbps');
-            totalLoadedss[i] = e.loaded;
-            var sum = totalLoadedss.reduce((acc, val) => acc + val, 0);
-            totalLoaded = sum+size;
-            var downloadedStr;
-            if (totalLoaded >= 1099511627776) { // TB
-                downloadedStr = (totalLoaded / 1099511627776).toFixed(2) + ' TB';
-            } else if (totalLoaded >= 1073741824) { // GB
-                downloadedStr = (totalLoaded / 1073741824).toFixed(2) + ' GB';
-            } else if (totalLoaded >= 1048576) { // MB
-                downloadedStr = (totalLoaded / 1048576).toFixed(2) + ' MB';
-            } else if (totalLoaded >= 1024) { // KB
-                downloadedStr = (totalLoaded / 1024).toFixed(2) + ' KB';
-            } else { // B
-                downloadedStr = totalLoaded.toFixed(2) + ' B';
-            }
-            $('#Total_traffic').text(downloadedStr);
-        }
-    };
-    xhr.onload = function() {
-    if (checkboxChecked === true) {
-    ciuaeals(1);
-    }
-    var allCompleted = xhrList.every(function(xhr) {
-        return xhr.readyState === 4;
-    });
-    if (allCompleted) {
-        toggleCalculationButton.empty().append('<i class="me-2 bi bi-play-circle"></i>开始');
-    }
-    };
-    xhr.send();
+xhr = new XMLHttpRequest();
+xhrList.push(xhr);
+xhr.open('GET', url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(), true);
+xhr.responseType = 'arraybuffer';
+var lastUpdateTime = Date.now();
+xhr.onprogress = function(e) {
+if (e.lengthComputable) {
+var percentComplete =  Math.floor((e.loaded / e.total) * 100);
+console.log('已下载' + percentComplete + '%');
+var speed = e.loaded / ((Date.now() - lastUpdateTime) / 1000);
+$('#internet_speed').text(speed > 1024 * 1024 ? (speed / (1024 * 1024)).toFixed(1) + ' MB/s' : (speed / 1024).toFixed(1) + ' KB/s');
+$('#Broadband_speeds').text(Math.floor(speed / 8 / 10000) + ' Mbps');
+totalLoadedss[i] = e.loaded;
+var sum = totalLoadedss.reduce((acc, val) => acc + val, 0);
+totalLoaded = sum+size;
+var downloadedStr;
+if (totalLoaded >= 1099511627776) { // TB
+downloadedStr = (totalLoaded / 1099511627776).toFixed(2) + ' TB';
+} else if (totalLoaded >= 1073741824) { // GB
+downloadedStr = (totalLoaded / 1073741824).toFixed(2) + ' GB';
+} else if (totalLoaded >= 1048576) { // MB
+downloadedStr = (totalLoaded / 1048576).toFixed(2) + ' MB';
+} else if (totalLoaded >= 1024) { // KB
+downloadedStr = (totalLoaded / 1024).toFixed(2) + ' KB';
+} else { // B
+downloadedStr = totalLoaded.toFixed(2) + ' B';
 }
-
-$.getJSON("https://forge.speedtest.cn/api/location/info", function(json) {
-$("#ipdizhi").empty().append(json.province+' '+json.city+' '+json.distinct+' '+json.net_str);
+$('#Total_traffic').text(downloadedStr);
+}
+};
+xhr.onload = function() {
+if (checkboxChecked === true) {
+ciuaeals(1);
+}
+var allCompleted = xhrList.every(function(xhr) {
+return xhr.readyState === 4;
 });
+if (allCompleted) {
+toggleCalculationButton.empty().append('<i class="me-2 bi bi-play-circle"></i>开始');
+$('#customRange3').prop('disabled', false);
+}
+};
+xhr.send();
+}
+function getNetworkInfo(){var e=(new Date).getTime();$.getJSON("https://forge.speedtest.cn/api/location/info",function(t){var n=(new Date).getTime();$("#IP_latency").empty().append((n-e)+"ms"),$("#IP_address").empty().append(t.province+" "+t.city+" "+t.distinct+" "+t.net_str)})}
+getNetworkInfo();
 });
 </script>
 </body>
