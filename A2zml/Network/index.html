@@ -97,7 +97,9 @@ var retrievedValue = localStorage.getItem(keyValue) !== null ? localStorage.getI
 rangeValue.text(retrievedValue);
 customRange3.val(retrievedValue);
 customRange3.on('input', function(){
-customRange3 = $(this).val();
+if ($(this).val() > 0) {
+customRange3 = $(this).val();    
+}
 rangeValue.text(customRange3);
 localStorage.setItem('rangeValue', customRange3);
 });
