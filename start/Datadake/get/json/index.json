@@ -1,4 +1,26 @@
-{
+[{
+  "Carousel": "轮播",
+  "Carousel_data": [
+    {
+      "title": "画的个人记录",
+      "citation": "中在不断的尝试中完善信息.",
+      "image": "https://image.coolapk.com/picture/2024/0221/01/1682034_9a221651_1631_3227_543@3000x1740.jpeg",
+      "link": "https://jixiejidiguan.top"
+    },
+    {
+      "title": "机械极地馆",
+      "citation": "这里是第一次相遇，也是最初的开始。",
+      "image": "https://image.coolapk.com/picture/2024/0218/18/2384534_375260be_1924_6028_954@3840x2160.jpeg",
+      "link": "https://jixiejidiguan.top"
+    },
+    {
+      "title": "Network",
+      "citation": "网络流量消耗.",
+      "image": "https://image.coolapk.com/picture/2024/0217/19/3106062_1507bdf6_9447_234_884@960x720.jpeg",
+      "link": "/A2zml/Network"
+    }
+  ]
+},{
   "page": "页面",
   "page_list": [
     {
@@ -40,4 +62,4 @@
       "subtitle": "总是掉线存储T盘"
     }
   ]
-}
+}]

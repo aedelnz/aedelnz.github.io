@@ -8,19 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="keywords" content="画的个人记录" />
 <meta name="description" content="嗨！欢迎来到画的个人记录，正如你所见。这里只是个记录个人收藏的页面，收藏的基本结构是国漫。就是这么简单，没有你想的那么复杂。" />
-<link rel="icon" href="./favicon.ico" />
-<link rel="stylesheet" href="./start/index.css" />
-<link rel="stylesheet" href="./start/mdui/css/mdui.min.css" />
-<link rel="stylesheet" href="./start/bootstrap/css/bootstrap.min.css" />
-<script src="./start/jquery/jquery.min.js"></script>
-<script src="./start/origin.js"></script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "c73276g5ao");
-</script>
+<link rel="icon" data-href="./favicon.ico">
+<link href="./start/index.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="../start/origin.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -39,37 +32,10 @@
 </div>
 </div>
 </nav>
-
+<section id="Carousel"></section>
 <div id="md">
 <!-- ######################### 轮播页面 ######################### -->
-<div id="myCarousel" class="carousel slide">
-<div class="carousel-indicators" style="position: absolute;right: 0;top: 60vh;bottom: 0;z-index: 10;display: flex;margin-right: 15%;flex-direction: row;justify-content: flex-end;">
-<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="p-1 active"></button>
-<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="p-1"></button>
-</div>
-<div class="carousel-inner">
-<div class="carousel-item active" style="overflow:hidden;height:100vh">
-<img src="https://image.coolapk.com/picture/2023/0513/19/860675_39b192d0_6037_0786_248@930x2048.jpeg.m.jpg" style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
-<div class="container">
-<div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
-<h1>画的个人记录</h1>
-<p>中在不断的尝试中完善信息</p>
-</div>
-</div>
-</div>
-<div class="carousel-item" style="overflow:hidden;height:100vh">
-<img src="https://image.coolapk.com/picture/2023/0516/10/2519278_45e3f34f_4876_6055_364@1440x2569.jpeg.m.jpg" style="justify-content:center,center;object-fit:cover;height:100%;width:100%;z-index:-10;position:absolute;filter:brightness(60%)" />
-<div class="container">
-<div class="carousel-caption text-start" style="position:relative;padding-top:46vh;">
-<h1>机械极地馆</h1>
-<p>这里是第一次相遇，也是最初的开始。</p>
-</div>
-</div>
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
+
 <!-- ######################### 第二页 ######################### -->
 <section class="container">
 <div class="pm-1 pb-3" style="border-radius: 10px;margin-bottom: 40px;margin-top: -40vh;overflow: hidden;padding: 15px 0;"></div>
@@ -145,11 +111,14 @@
 </footer>
 </div>
 
-<script src="./start/mdui/js/mdui.min.js"></script>
-<script src="./start/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-$(document).ready(function() {
 
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$.getJSON('./start/Datadake/get/json/index.json',function(t){
+$(function () {var Carousel = $('#Carousel');var items = t[0].Carousel_data;var currentIndex = 0;function showNextItem() {Carousel.empty().append(`<div class="card text-bg-dark position-relative" style="height: 100vh;"><img src="${items[currentIndex].image}" class="card-img" style="object-fit: cover; height: 100%; width: 100%; position: absolute; filter: brightness(60%)"><div class="card-img-overlay position-absolute top-50 start-50 translate-middle w-100 container font-monospace"><h5 class="card-title fs-1 fw-bolder">${items[currentIndex].title}</h5><p class="card-text fs-4 fw-lighter">${items[currentIndex].citation}</p><p class="card-text"><a href="${items[currentIndex].link}" class="btn btn-primary fw-lighter"><small>预览</small></a></p></div></div>`);currentIndex = (currentIndex + 1) % items.length;}setInterval(showNextItem, 4500);});
+
+});
 // data-src
 $(function () {
 function isElementInViewport(el) {
