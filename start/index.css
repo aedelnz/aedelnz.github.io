@@ -19,7 +19,3 @@ nav.navbar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-.text-body-tertiary {
-    color: var(--bs-tertiary-color)!important;
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #6d6d6d8a, -1px 1px 0 #91919140, 1px 1px 0 #ffffffab;
-}

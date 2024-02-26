@@ -12,7 +12,7 @@ return response.text();
 }
 }).then(function(data) {
 var hitokoto = JSON.parse(data);
-console.log('%cPowered by %c 机械极地馆\n'+
+console.log('Powered by 机械极地馆\n'+
 'hitokoto：'+hitokoto.hitokoto+'\n'+
 'from：'+hitokoto.from+'\n'+
 '浏览器的首选语言：'+navigator.language+'\n'+
