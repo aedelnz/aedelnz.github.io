@@ -44,7 +44,6 @@
 <!-- ######################### 第二页 ######################### -->
 <section class="container">
 <div class="pm-1 pb-3" ></div>
-<hr class="text-bg-light pb-2">
 <div class="row">
 <div class="col-md-8">
 <!-- ######################### 国漫收藏 ######################### -->
@@ -70,15 +69,10 @@
 
 <!-- ######################### 版权 ######################### -->
 <footer class="container mt-5">
-<div class="row">
-<!-- ######################### 关注我们 ######################### -->
-<div class="col-lg-6" id="Follow_us"></div>
-<!-- ######################### 备案号 ######################### -->
-<div class="col-lg-6" id="ICP_record_number"></div>
-</div>
 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-<p class="mb-1 text-muted font-monospace">版权所有 © 2022-2024 画的个人记录</p>
-<p class="mb-1 text-muted font-monospace">由「<a class="text-muted text-reset" href="/">机械极地馆</a>」提供技术支持</p>
+<p class="mb-2 text-muted font-monospace" id="Follow_us"></p>
+<p class="mb-2 text-muted font-monospace" id="ICP_record_number"></p>
+<p class="mb-2 text-muted font-monospace">版权所有 © 2022-2024 画的个人记录. 由「<a class="text-muted text-reset" href="/">机械极地馆</a>」提供技术支持</p>
 </div>
 </footer>
 
@@ -113,15 +107,16 @@ $(function () {
 var Projects = $('#Project');
 var gjCard = $(`<div class="pt-5"></div><div class="container my-5"><p class="h3 fw-bolder text-center mb-3">${t[2].Project}</p><div class="container-fluid text-center"></div></div>`);
 $.each(t[2].Project_data, function(i, n) {
-var colClass = i % 2 == 0 ? `<a class="card my-4 text-decoration-none" href="${n.link}"><div class="row g-0 position-relative"><img src="${n.image}" class="card-img-top d-lg-block d-xl-none" alt="..."><div class="col-md-5 mb-md-0 p-md-0"><img src="${n.image}" class="w-100 d-none d-lg-block" alt="..."></div><div class="col-md-7 p-4 ps-md-0 d-flex align-items-center"><div class="text-center w-100"><div class="h3 fw-bolder mt-0">${n.title}</div><p>${n.citation}</p></div></div></div></a>`
- : `<a class="card my-4 text-decoration-none" href="${n.link}"><div class="row g-0 position-relative"><img src="${n.image}" class="card-img-top d-lg-block d-xl-none" alt="..."><div class="col-md-7 p-4 ps-md-0 d-flex align-items-center"><div class="text-center w-100"><div class="h3 fw-bolder mt-0">${n.title}</div><p>${n.citation}</p></div></div><div class="col-md-5 mb-md-0 p-md-0"><img src="${n.image}" class="w-100 d-none d-lg-block" alt="..."></div></div></a>`;
+var colClass = i % 2 == 0 ? `<a class="card my-4 text-decoration-none" href="${n.link}"><div class="row g-0 position-relative"><img src="${n.image}" class="card-img-top d-lg-block d-lg-none" alt="..."><div class="col-md-5 mb-md-0 p-md-0"><img src="${n.image}" class="w-100 rounded-start d-none d-lg-block" alt="..."></div><div class="col-md-7 p-4 ps-md-0 d-flex align-items-center"><div class="text-center w-100"><div class="h3 fw-bolder mt-0">${n.title}</div><p>${n.citation}</p></div></div></div></a>`
+ : `<a class="card my-4 text-decoration-none" href="${n.link}"><div class="row g-0 position-relative"><img src="${n.image}" class="card-img-top d-lg-block d-lg-none" alt="..."><div class="col-md-7 p-4 ps-md-0 d-flex align-items-center"><div class="text-center w-100"><div class="h3 fw-bolder mt-0">${n.title}</div><p>${n.citation}</p></div></div><div class="col-md-5 mb-md-0 p-md-0"><img src="${n.image}" class="w-100 rounded-end d-none d-lg-block" alt="..."></div></div></a>`;
 gjCard.find('div.container-fluid').append($(colClass));
 });
 Projects.append(gjCard);
 });
 
+
 $(function () {
-function appendDataToElement(element, data, title) {var content = $(`<p class="h3 fw-bolder text-start mb-3">${title}</p><div class="d-flex"><div class="vr"></div><nav class="nav flex-column font-monospace"></nav></div>`);$.each(data, function(i, n) {content.find('nav.nav').append(`<a class="nav-link" href="${n.link}">${n.title}</a>`);});element.append(content);}
+function appendDataToElement(element, data, title) {var content = $(`<span><span class="fw-bolder text-start">${title}</span></span>`);$.each(data, function(i, n) {content.find('span').append(`<a class="nav-link fw-lighter text-muted text-reset text-decoration-underline" href="${n.link}">${n.title}</a>`);});element.append(content);}
 appendDataToElement($('#Follow_us'), t[3].Follow_us_data, t[3].Follow_us);
 appendDataToElement($('#ICP_record_number'), t[3].ICP_record_number_data, t[3].ICP_record_number);
 });
