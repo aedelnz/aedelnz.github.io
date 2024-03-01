@@ -16,7 +16,6 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-
 <!-- ######################### 导航分页 ######################### -->
 <nav class="navbar fixed-top navbar-expand-lg">
 <div class="container">
@@ -31,7 +30,6 @@
 </div>
 </div>
 </nav>
-
 <!-- ######################### 最新动态 ######################### -->
 <div id="News">
 <!-- ######################### 轮播页面 ######################### -->
@@ -47,7 +45,6 @@
 <div id="Links">
 <section id="Links_add"></section>
 </div>
-
 <!-- ######################### 版权 ######################### -->
 <footer class="container mt-5">
 <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end">
@@ -98,27 +95,14 @@ appendDataToElement($('#ICP_record_number'), t[3].ICP_record_number_data, t[3].I
 });
 });
 // 国漫收藏
-
 $.getJSON('./start/Datadake/get/json/guochuang.json',function(t){
 var Guoman_Collection_add = $('#Guoman_Collection_add');
-var gcCard = $(`<div class="pt-5"></div><div class="container my-5"><p class="h3 fw-bolder text-center mb-3">${t[0].bilibiliguochuang}</p>
-    <div class="shadow py-3 rounded-3"><div class="container-fluid text-start"><div class="row row-cols-2 row-cols-sm-4 row-cols-lg-6 align-items-center g-2"></div></div></div>
-    </div>`);
-$.each(t[0].bilibiliguochuang_data, function(i, n) {
-gcCard.find('div.row').append($(`
-<div class="col">
-<div class="ratio card rounded" style="--bs-aspect-ratio: 150%;">
-     <img src="${n.image}" class="card-img-top" alt="...">
-     <div class="d-flex align-items-end">
-  <div class="card-body bg-body-secondary text-truncate opacity-50">
-    <div class="card-title fw-bold">${n.title}</div>
-    <p class="card-text">${n.citation}</p>
-    <a href="${n.link}" class="stretched-link"></a>
-  </div>
-</div>
-</div>
-</div>
-`));
+var gcCard = $(`<div class="pt-5"></div>`);
+$.each(t, function(i, n) {
+gcCard.append($(`<div class="container my-5"><p class="h3 fw-bolder text-center mb-3">${n.guochuang}</p><div class="shadow py-3 rounded-3"><div class="container-fluid text-start"><div class="row row-cols-2 row-cols-sm-4 row-cols-lg-6 align-items-center g-2"></div></div></div></div>`));
+$.each(n.guochuang_data, function(i, n) {
+gcCard.find('div.row').append($(`<div class="col"><div class="card ratio rounded-3" style="--bs-aspect-ratio: 110%;"><img src="${n.image}" class="card-img object-fit-cover border rounded-3" alt="${n.title}"><div class="position-relative"><div class="bg-body-tertiary opacity-75 p-1 rounded-bottom"><div class="card-title">${n.title}</div><p class="card-text"><small>${n.citation}</small></p><a href="${n.link}" class="stretched-link"></a></div></div></div></div>`));
+});
 });
 Guoman_Collection_add.append(gcCard);
 });
@@ -137,7 +121,6 @@ liCard.find('tbody.table-group-divider').append($(`<tr><th scope="row">${n.title
 Links_add.append(liCard);
 $('[data-bs-toggle="tooltip"]').tooltip();
 });
-
 
 });
 </script>
