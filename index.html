@@ -62,13 +62,14 @@ $(function(){var l=$('#News, #Guoman_Collection, #Links');var n=$("#navbar-nav a
 $.getJSON('./start/Datadake/get/json/index.json',function(t){
 $(function () {
 var Carousel = $('#Carousel');
-var cards = [];
-$.each(t[0].Carousel_data, function(i, n) {var newCard = $(`<div class="card rounded-0 text-bg-dark position-relative" style="height: 100vh;"><img src="${n.image}" class="card-img" style="object-fit: cover; height: 100%; width: 100%; position: absolute; filter: brightness(60%)"><div class="card-img-overlay position-absolute top-50 start-50 translate-middle w-100 container font-monospace"><h5 class="card-title fs-1 fw-bolder">${n.title}</h5><p class="card-text fs-4 fw-lighter">${n.citation}</p><p class="card-text"><a href="${n.link}" class="btn btn-primary fw-lighter"><small>预览</small></a></p></div><div class="position-absolute top-50 start-0 translate-middle-y"><button type="button" class="mx-3 btn btn-secondary btn-sm prevButton"><i class="bi bi-caret-left"></i></button></div><div class="position-absolute top-50 end-0 translate-middle-y"><button type="button" class="mx-3 btn btn-secondary btn-sm nextButton"><i class="bi bi-caret-right"></i></button></div></div>`);Carousel.append(newCard.hide());cards.push(newCard);});
-var currentIndex = 0;
-cards[currentIndex].show();
-$('.prevButton').on('click', function() {cards[currentIndex].hide();currentIndex = (currentIndex - 1 + cards.length) % cards.length;cards[currentIndex].show();});
-$('.nextButton').on('click', function() {cards[currentIndex].hide();currentIndex = (currentIndex + 1) % cards.length;cards[currentIndex].show();});
-setInterval(function() {cards[currentIndex].hide();currentIndex = (currentIndex + 1) % cards.length;cards[currentIndex].show();}, 5000);
+var nwCard = $(`<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false"><div class="carousel-indicators"></div><div class="carousel-inner"></div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"><span class="shadow-lg bg-dark-subtle rounded-3 stretched-link carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"><span class="shadow-lg bg-dark-subtle rounded-3 stretched-link carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button></div>`);
+$.each(t[0].Carousel_data, function(i, n) {
+nwCard.find('.carousel-indicators').append($(`<button type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide-to="${i}" class="pt-1${i === 0 ? ' active' : ''}"></button>`));
+});
+$.each(t[0].Carousel_data, function(i, n) {
+nwCard.find('.carousel-inner').append($(`<div class="carousel-item${i === 0 ? ' active' : ''}" style="height: 512px;"><img src="${n.image}" class="border" style="object-fit: cover; height: 100%; width: 100%; position: absolute; filter: brightness(60%)" alt="..."><div class="container"><div class="carousel-caption text-start" style="padding-bottom: 10rem;"><div class="fs-1 fw-bolder">${n.title}</div><p class="fs-5">${n.citation}</p><p><a class="btn btn-primary btn-sm" href="${n.link}">预览</a></p></div></div></div>`));
+});
+Carousel.append(nwCard);
 });
 $(function () {
 var Pages = $('#Page');
