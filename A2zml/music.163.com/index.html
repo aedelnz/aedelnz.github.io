@@ -2,12 +2,36 @@
 <html lang="zh-CN">  
 <head>  
 <meta charset="UTF-8">
-<title>社区</title>
+<title>网易云音乐·听歌</title>
 <meta name="referrer" content="no-referrer"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
 <link rel="icon" type="image/png" sizes="32x32" href="../../favicon.ico">
+<link href="../../start/FastBootstrap/dist/css/fastbootstrap.min.css" rel="stylesheet">
+<script src="../../start/FastBootstrap/dist/js/fastbootstrap.min.js"></script>
+<script src="../../start/jquery/jquery.min.js"></script>
 </head>
 <body>
+<div class="container">
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">  
+<div class="card" style="width: 20rem;">  
+<div class="card-body">
+<div id="QR_code"></div>
+<h5 class="card-title">网易云音乐在线登录</h5>  
+<p class="card-text"><button type="button" class="btn btn-primary" id="Get_a_QR_code">获取二维码</button></p>  
+</div>  
+</div>  
+</div>
+</div>
+<script>
+$(document).ready(function() {  
+$('#Get_a_QR_code').on('click', function() {  
+$.get('https://s.jixiejidiguan.top/Api/cloudmusics.php?do=login', function(response) {  
 
+            var qrcodeImg = $('<img>').attr('src', response.url);  
+            $('#QR_code').append(qrcodeImg); // 将二维码图片添加到容器中  
+        });  
+    });  
+});
+</script>
 </body>
 </html>
