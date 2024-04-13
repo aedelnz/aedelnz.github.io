@@ -28,6 +28,7 @@ $('#Get_a_QR_code').on('click', function() {
 $.ajax({url: 'https://s.jixiejidiguan.top/Api/cloudmusics.php?do=login',method: 'GET',dataType: 'json',success: function (response) {
 $('#QR_code').empty().append($('<img>').attr('src', "https://s.jixiejidiguan.top/Api/qr.php?text="+response.authorizationUrl));
 $('#Get_a_QR_code').remove();
+$('#Get_a_cookie').remove();
 startCountdown(60,response.unikey);
 }});
 });
