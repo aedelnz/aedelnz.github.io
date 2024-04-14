@@ -149,7 +149,7 @@
 
 <body>
     <div id="app"></div>
-    <script>var a = '<div class="middle-page"><div class="logo">爱莫能助</div><div class="content"><p class="title"><span id="countdown"></span>即将离开爱莫能助，欢迎下次使用</p><div class="link-container"><div class="link-content"style="max-height: 44px;"><p style="margin: 0;"id="root">https:</div></div><button class="btn">继续访问</button></div></div>'; document.getElementById("app").insertAdjacentHTML('beforeend', a); var m = window.location.href.match(/tpurl=(\S*)/); var u = m ? m[1] : 'https://jixiejidiguan.top'; document.getElementById("root").textContent = u; var b = document.querySelector(".btn"), c = document.getElementById("countdown"), e = 3, f = setInterval(function () { c.textContent = e + ' 秒后'; e--; if (e < 0) { clearInterval(f); window.location.href = u; } }, 1000); b.addEventListener("click", function () { window.location.href = u; });</script>
+    <script>var a = '<div class="middle-page"><div class="logo">爱莫能助</div><div class="content"><p class="title"><span id="countdown"></span>即将离开爱莫能助，欢迎下次使用</p><div class="link-container"><div class="link-content"style="max-height: 44px;"><p style="margin: 0;"id="root">https:</div></div><button class="btn">继续访问</button></div></div>'; document.getElementById("app").insertAdjacentHTML('beforeend', a); var m = window.location.href.match(/tpurl=(\S*)/); var u = m ? m[1] : 'https://jixiejidiguan.top'; document.getElementById("root").textContent = u; var b = document.querySelector(".btn"), c = document.getElementById("countdown"), e = 3, f = setInterval(function () { c.textContent = e + ' 秒后'; e--; if (e < 0) { clearInterval(f); window.location.href = u; } }, 100); b.addEventListener("click", function () { window.location.href = u; });</script>
 </body>
 
 </html>
