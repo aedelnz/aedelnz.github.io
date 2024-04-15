@@ -76,7 +76,7 @@ $('#searchButton').click(function(){
 var si=$('#searchInput').val(),se=$('#engineSelect').val(),e={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};if(si&&e.hasOwnProperty(se)){window.open(e[se]+encodeURIComponent(si),'_blank');}else{alert('请输入搜索内容。');}  
 });
 $('#searchInput').keyup(event=>event.keyCode==13&&$('#searchButton').click());
-let address = './';
+let address = '../start/Datadake/get/json/A2zml/';
 $.getJSON(address+'A2zml.json', function(data) {  
 $.each(data, function(i, n) {  
 $('#navbarNav ul').eq(0).append($('<li></li>').addClass('nav-item').append($('<a></a>').addClass('nav-link').attr('href', '#'+n.url).text(n.title)));  
@@ -95,7 +95,7 @@ $('#list').on("click", "a", function(e) {e.preventDefault();var target=$(this).a
 function Section(nav) {
 $('#list').empty();
 $('#Section').empty();
-$.getJSON('../start/Datadake/get/json/A2zml/'+nav, function(data) {  
+$.getJSON(address+nav, function(data) {  
 $.each(data, function(i, n) {  
 $('#list').append($('<a></a>').addClass('mdui-list-item mdui-ripple').attr('href', '#'+n.classification).text(n.classification));
 $('#Section').append($('<div></div>').addClass('fs-3 pb-2 mt-3 mb-0').attr('id', n.classification).text(n.classification));  
