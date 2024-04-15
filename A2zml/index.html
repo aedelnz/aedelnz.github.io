@@ -34,16 +34,24 @@
 <li class="nav-item"><a class="nav-link" href="https://afdian.net/a/JIXIEJIDIGUAN"><small>爱发电</small></a></li>
 <li class="nav-item"><a class="nav-link" href="/A2zml/Monitor/"><small>站点监控</small></a></li>
 <li class="nav-item"><a class="nav-link" href="/A2zml/v2/"><small>魔法禁书</small></a></li>
-<li class="nav-item"><a class="nav-link" href="#/#Links"><small>友情链接</small></a></li>
+<li class="nav-item"><a class="nav-link" href="/#Links"><small>友情链接</small></a></li>
 </ul>
 </div>
 </div>
 </header>
-
 <aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
 <div class="mdui-grid-tile mdui-hoverable"><img src="https://www.dmoe.cc/random.php"/><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title" id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></div></div></div>
 <div class="mdui-list" id="list"></div>
 </aside>
+
+<div class="clearfix">
+<button type="button" class="btn btn-sm btn-outline-light text-dark rounded-0 float-end" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false">设置</button>
+<div class="collapse" id="collapse">
+<div class="card card-body rounded-0">
+待开发
+</div>
+</div>
+</div>
 <section class="container-fluid">
 <div class="container my-5">
 <div class="my-3 py-3"></div> 
@@ -66,7 +74,7 @@
 $(document).ready(function () {
 $('#searchButton').click(function(){
 var si=$('#searchInput').val(),se=$('#engineSelect').val(),e={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};if(si&&e.hasOwnProperty(se)){window.open(e[se]+encodeURIComponent(si),'_blank');}else{alert('请输入搜索内容。');}  
-});  
+});
 $('#searchInput').keyup(event=>event.keyCode==13&&$('#searchButton').click());
 let address = './';
 $.getJSON(address+'A2zml.json', function(data) {  
