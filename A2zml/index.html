@@ -14,10 +14,12 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>  
-<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>  
+<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>
+<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+<script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK",sendSuspicious:true,sendSpaPv:true});</script>
 </head>  
 <body class="mdui-drawer-body-left">
-<header class="mdui-appbar navbar navbar-expand-lg sticky-top shadow-sm bg-body-tertiary">
+<header class="mdui-appbar navbar navbar-expand-lg sticky-top shadow-sm bg-body-tertiary border-bottom">
 <div class="container-fluid">
 <div class="d-flex align-items-center">
 <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left'}"><i class="mdui-icon material-icons">menu</i></a>
@@ -37,7 +39,7 @@
 </div>
 </header>
 
-<aside class="mdui-drawer" id="left">
+<aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
 <div class="mdui-list" id="list"></div>
 </aside>
 <section class="container-fluid">
@@ -45,27 +47,24 @@
 <div class="my-3 py-3"></div> 
 <form class="d-flex input-group" id="searchForm">  
 <input type="text" class="form-control" id="searchInput" placeholder="输入搜索内容">
-<span class="input-group-text"><select class="form-select mdui-select" id="engineSelect" mdui-select>  
-<option value="bing">Bing</option>  
-<option value="google">Google</option>  
-<option value="baidu">Baidu</option>  
-<option value="github">GitHub</option>  
-</select></span>
+<span class="input-group-text"><select class="form-select mdui-select" id="engineSelect" mdui-select><option value="bing">Bing</option><option value="google">Google</option><option value="baidu">Baidu</option><option value="github">GitHub</option></select></span>
 <span class="input-group-text" id="searchButton">搜索</span>
 </form>  
 <div class="my-3 py-3"></div> 
 </div>  
 <div id="Section"></div>
 </section>
-<footer class="bd-footer py-4 mt-2 shadow-sm">
-<div class="container px-4 d-flex flex-column flex-sm-row justify-content-between">
-<div class="small">
-<a class="d-inline-flex align-items-center text-decoration-none" href="/"><img data-src="../favicon.ico" class="object-fit-cover border rounded me-2" width="32" height="32"><span class="fs-4">爱莫能助</span></a>
-<div class="mb-0">版权所有 © 2020-2024 爱莫能助</div>
+<div class="container-fluid shadow-sm bg-body-tertiary border-top">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+<div class="col-md-4 d-flex align-items-center">
+<a href="/A2zml" class="mb-3 me-2 text-muted text-decoration-none lh-1"><img class="bi" src="../favicon.ico" width="30" height="30" alt="机械极地馆"/></a>
+<span class="mb-3 text-muted">版权所有 © 2020-2024 爱莫能助</span>
 </div>
-<div class="mb-0">由「<a href="/" class="fw-lighter text-decoration-none">机械极地馆</a>」提供技术支持</div>
-</div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+<li class="ms-3">由「<a class="text-muted" href="#">机械极地馆</a>」提供技术支持</li>
+</ul>
 </footer>
+</div>
 <script>  
 $(document).ready(function () {
 $('#searchButton').click(function() {  
@@ -85,7 +84,9 @@ window.open(searchURL, '_blank');
 alert('请输入搜索内容。');  
 }  
 });
-
+$('#searchInput').keyup(function(event) {  
+if (event.keyCode === 13) {$('#searchButton').click();}  
+});
 let address = './';
 $.getJSON(address+'A2zml.json', function(data) {  
 $.each(data, function(i, n) {  
@@ -111,7 +112,7 @@ $('#list').append($('<a></a>').addClass('mdui-list-item mdui-ripple').attr('href
 $('#Section').append($('<div></div>').addClass('fs-3 pb-2 mt-3 mb-0').attr('id', n.classification).text(n.classification));  
 var rowDiv = $('<div></div>').addClass('row row-cols-2 row-cols-lg-5 g-0 g-lg-1 mdui-list');  
 $.each(n.content, function(o, m) {  
-rowDiv.append($('<div></div>').addClass('col').append($('<li></li>').addClass('mdui-list-item mdui-ripple').append($('<div></div>').addClass('mdui-list-item-content').append($('<strong></strong>').addClass('mdui-list-item-title mdui-list-item-one-line').attr('title', m.title).text(m.title),$('<div></div>').addClass('mdui-list-item-text mdui-list-item-one-line').attr('data-bs-toggle', 'popover').attr('data-bs-placement', 'bottom').attr('data-bs-title', m.title).attr('data-bs-content', m.intro).append($('<span></span>').addClass('fw-light').text(m.intro))),$('<button></button>').addClass('btn btn-sm btn-outline-secondary rounded-0').attr('Urls', m.url).append($('<i></i>').addClass('text-dark bi bi-chevron-right')))));  
+rowDiv.append($('<div></div>').addClass('col').append($('<li></li>').addClass('mdui-list-item mdui-ripple').append($('<div></div>').addClass('mdui-list-item-content').append($('<div></div>').addClass('mdui-list-item-title mdui-list-item-one-line').attr('title', m.title).text(m.title),$('<div></div>').addClass('mdui-list-item-text mdui-list-item-one-line').attr('data-bs-toggle', 'popover').attr('data-bs-placement', 'bottom').attr('data-bs-title', m.title).attr('data-bs-content', m.intro).append($('<span></span>').text(m.intro))),$('<button></button>').addClass('btn btn-sm btn-outline-secondary rounded-0').attr('Urls', m.url).append($('<i></i>').addClass('text-dark bi bi-chevron-right')))));  
 });
 rowDiv.find('[data-bs-toggle="popover"]').popover();
 rowDiv.on('click', 'button', function() {  
