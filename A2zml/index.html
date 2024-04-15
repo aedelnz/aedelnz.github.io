@@ -64,26 +64,10 @@
 </div>
 <script>  
 $(document).ready(function () {
-$('#searchButton').click(function() {  
-var searchInput = $('#searchInput').val();  
-var selectedEngine = $('#engineSelect').val();  
-var engines = {  
-bing: "https://www.bing.com/search?q=",  
-google: "https://www.google.com/search?q=",  
-baidu: "https://www.baidu.com/s?wd=",  
-github: "https://github.com/search?q="  
-};  
-  
-if (searchInput && engines.hasOwnProperty(selectedEngine)) {  
-var searchURL = engines[selectedEngine] + encodeURIComponent(searchInput);  
-window.open(searchURL, '_blank');  
-} else {  
-alert('请输入搜索内容。');  
-}  
-});
-$('#searchInput').keyup(function(event) {  
-if (event.keyCode === 13) {$('#searchButton').click();}  
-});
+$('#searchButton').click(function(){
+var si=$('#searchInput').val(),se=$('#engineSelect').val(),e={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};if(si&&e.hasOwnProperty(se)){window.open(e[se]+encodeURIComponent(si),'_blank');}else{alert('请输入搜索内容。');}  
+});  
+$('#searchInput').keyup(event=>event.keyCode==13&&$('#searchButton').click());
 let address = './';
 $.getJSON(address+'A2zml.json', function(data) {  
 $.each(data, function(i, n) {  
