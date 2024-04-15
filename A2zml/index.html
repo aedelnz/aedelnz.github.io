@@ -17,6 +17,7 @@
 <script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>
 <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
 <script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK",sendSuspicious:true,sendSpaPv:true});</script>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </head>  
 <body class="mdui-drawer-body-left">
 <header class="mdui-appbar navbar navbar-expand-lg sticky-top shadow-sm bg-body-tertiary border-bottom">
@@ -40,6 +41,7 @@
 </header>
 
 <aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
+<div class="mdui-grid-tile mdui-hoverable"><img src="https://www.dmoe.cc/random.php"/><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title" id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></div></div></div>
 <div class="mdui-list" id="list"></div>
 </aside>
 <section class="container-fluid">
@@ -112,9 +114,8 @@ $('#list').append($('<a></a>').addClass('mdui-list-item mdui-ripple').attr('href
 $('#Section').append($('<div></div>').addClass('fs-3 pb-2 mt-3 mb-0').attr('id', n.classification).text(n.classification));  
 var rowDiv = $('<div></div>').addClass('row row-cols-2 row-cols-lg-5 g-0 g-lg-1 mdui-list');  
 $.each(n.content, function(o, m) {  
-rowDiv.append($('<div></div>').addClass('col').append($('<li></li>').addClass('mdui-list-item mdui-ripple').append($('<div></div>').addClass('mdui-list-item-content').append($('<div></div>').addClass('mdui-list-item-title mdui-list-item-one-line').attr('title', m.title).text(m.title),$('<div></div>').addClass('mdui-list-item-text mdui-list-item-one-line').attr('data-bs-toggle', 'popover').attr('data-bs-placement', 'bottom').attr('data-bs-title', m.title).attr('data-bs-content', m.intro).append($('<span></span>').text(m.intro))),$('<button></button>').addClass('btn btn-sm btn-outline-secondary rounded-0').attr('Urls', m.url).append($('<i></i>').addClass('text-dark bi bi-chevron-right')))));  
+rowDiv.append($('<div></div>').addClass('col').append($('<li></li>').addClass('mdui-list-item mdui-ripple').append($('<div></div>').addClass('mdui-list-item-content').append($('<div></div>').addClass('mdui-list-item-title mdui-list-item-one-line').attr('title', m.title).text(m.title),$('<div></div>').addClass('mdui-list-item-text mdui-list-item-one-line').text(m.intro)),$('<button></button>').addClass('btn btn-sm btn-outline-secondary rounded-0').attr('Urls', m.url).append($('<i></i>').addClass('mdui-list-item-icon text-dark bi bi-chevron-right')))));  
 });
-rowDiv.find('[data-bs-toggle="popover"]').popover();
 rowDiv.on('click', 'button', function() {  
 var newWindow = window.open('/go.html#tpurl='+$(this).attr('Urls'), '_blank');
 if (newWindow) {newWindow.focus();} else {alert('新窗口未能打开，可能是因为弹出窗口被阻止了。');}
