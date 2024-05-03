@@ -40,7 +40,7 @@
 </div>
 </header>
 <aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
-<div class="mdui-grid-tile mdui-hoverable"><img src="https://www.dmoe.cc/random.php"/><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-title" id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></div></div></div>
+<blockquote id="hitokoto">:D 获取中...</blockquote>
 <div class="mdui-list" id="list"></div>
 </aside>
 
@@ -90,12 +90,12 @@ if ($(this).text() === 'more_vert') {$(this).text('more_horiz');} else {$(this).
 $('#navbarNav ul').eq(0).on('click', 'a', function() {
 Section($(this).attr('href').split("#")[1]);
 });
-Section('Animation_Zone.json');
+Section('Animation_Zone');
 $('#list').on("click", "a", function(e) {e.preventDefault();var target=$(this).attr("href");$("html, body").animate({scrollTop:$(target).offset().top-$(window).height()*0.08},"slow");});
 function Section(nav) {
 $('#list').empty();
 $('#Section').empty();
-$.getJSON(address+nav, function(data) {  
+$.getJSON(address+nav+'.json', function(data) {  
 $.each(data, function(i, n) {  
 $('#list').append($('<a></a>').addClass('mdui-list-item mdui-ripple').attr('href', '#'+n.classification).text(n.classification));
 $('#Section').append($('<div></div>').addClass('fs-3 pb-2 mt-3 mb-0').attr('id', n.classification).text(n.classification));  

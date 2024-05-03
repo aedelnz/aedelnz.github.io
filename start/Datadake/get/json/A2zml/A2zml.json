@@ -1,12 +1,15 @@
 [
     {
-        "url": "Animation_Zone.json",
+        "url": "Animation_Zone",
         "title": "默认专区"
     },{
-        "url": "Utility.json",
+        "url": "Utility",
         "title": "软件大全"
     },{
-        "url": "websites_info.json",
+        "url": "websites_info",
         "title": "杂七杂八"
+    },{
+        "url": "Utility_software",
+        "title": "实用软件"
     }
 ]
