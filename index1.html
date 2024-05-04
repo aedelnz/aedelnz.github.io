@@ -35,7 +35,7 @@
 <div class="tab-content">
 <div class="tab-pane fade show active" id="s-News" aria-labelledby="News" tabindex="0"></div>
 <div class="tab-pane fade" id="s-Wallpapers" aria-labelledby="Wallpapers" tabindex="0"></div>
-<div class="tab-pane fade" id="s-Links" aria-labelledby="Links" tabindex="0">..33.</div>
+<div class="tab-pane fade" id="s-Links" aria-labelledby="Links" tabindex="0"></div>
 </div>
 <script>
 $(document).ready(function(){
@@ -121,7 +121,7 @@ content += `<div class="col">
 <div class="card ratio" style="--bs-aspect-ratio: 160%;">
 <img src="${sItem.ext[0].value[0].url}" class="object-fit-cover border rounded" alt="...">
 <div class="card-body d-flex align-items-end">
-<p class="card-text fw-bold fs-6 badge text-truncate rounded-pill text-bg-light">${sItem.title}</p>
+<a href="${sItem.ext[0].value[0].url}"><p class="card-text fw-bold fs-6 badge text-truncate rounded-pill text-bg-light">${sItem.title}</p></a>
 </div>
 </div>             
 </div>`;
@@ -130,7 +130,6 @@ resolve(content);
 });
 });
 });
-
 Promise.all(colssPromises).then((contents) => {
 const colss = contents.map((content, index) => {
 const wallPaperTitle = data.Wallpapers_data[index].title;
@@ -142,20 +141,15 @@ $('#navw').empty().append(`<nav id="Scrollspy" class="navbar sticky-top justify-
 <ul class="nav nav-pills">${cols}</ul>
 </nav>`);
 const container = `<img src="http://image.coolapk.com/picture/2024/0213/10/3376304_4420708e_2492_2723_807@2560x1440.jpeg" class="object-fit-cover rounded-0 w-100" style="height: 260px;" alt="...">
-
-
 <div data-bs-spy="scroll" data-bs-target="#Scrollspy" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example container-fluid" tabindex="0"></div>
-
-
-
-
 `;
 $('#s-Wallpapers').empty().append(container);
 });
 }
 function Links() {
 $.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(t){
-console.log(t);
+const container = ``;
+$('#s-Links').empty().append(container);
 });
 }
 $(function () {
