@@ -1,0 +1,50 @@
+{
+    "Carousel":"轮播",
+    "Carousel_data":[
+        {
+            "title":"画的个人记录",
+            "subtitle":"中在不断的尝试中完善信息.",
+            "image":"https://image.coolapk.com/picture/2024/0221/01/1682034_9a221651_1631_3227_543@3000x1740.jpeg",
+            "link":"https://jixiejidiguan.top"
+        },{
+            "title": "机械极地馆",
+            "subtitle": "这里是第一次相遇，也是最初的开始。",
+            "image": "https://image.coolapk.com/picture/2024/0218/18/2384534_375260be_1924_6028_954@3840x2160.jpeg",
+            "link": "https://jixiejidiguan.top"
+          }
+    ],
+    "Pages":"页面菜单",
+    "Pages_data":[
+        {
+          "title": "爱莫能助",
+          "subtitle": "网络导航",
+          "icon": "bi-intersect",
+          "link": "/A2zml"
+        },{
+          "title": "zito 站点监测",
+          "subtitle": "网络站点监控",
+          "icon": "bi-dropbox",
+          "link": "/A2zml/Monitor"
+        },{
+          "title": "Network",
+          "subtitle": "流量消耗浪费",
+          "icon": "bi-hdd-network",
+          "link": "/A2zml/Network"
+        },{
+          "title": "魔法禁书",
+          "subtitle": "禁书目录",
+          "icon": "bi-book",
+          "link": "/A2zml/v2"
+        },{
+          "title": "MIUI ROM仓库",
+          "subtitle": "web外链刷机包地址",
+          "icon": "bi-database-down",
+          "link": "/MIUI"
+        },{
+          "title": "VIVO/IQOO 升级包",
+          "subtitle": "链接已寄",
+          "icon": " bi-database-exclamation",
+          "link": "/MIUI/vivo"
+        }
+      ]
+}

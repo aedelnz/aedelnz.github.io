@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>画的个人记录</title>
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+<meta name="keywords" content="画的个人记录" />
+<meta name="description" content="本网站为个人网站，主要用于记录个人生活见闻，分享新鲜事物。" />
+<link rel="icon" type="image/x-icon" sizes="969x*9*" href="./favicon.ico">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="./start/index.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./start/origin.js"></script>
+</head>
+<body>
+<header class="fixed-top">
+<nav class="navbar navbar-expand-lg">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">画的个人记录</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse justify-content-end" id="navbar">
+<ul class="nav nav-pills">
+<li class="nav-item"><button class="nav-link active" id="News" data-bs-toggle="pill" data-bs-target="#s-News">最新动态</button></li>
+<li class="nav-item"><button class="nav-link" id="Wallpapers" data-bs-toggle="pill" data-bs-target="#s-Wallpapers">游戏壁纸</button></li>
+<li class="nav-item"><button class="nav-link" id="Links" data-bs-toggle="pill" data-bs-target="#s-Links">友情链接</button></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="s-News" aria-labelledby="News" tabindex="0"></div>
+<div class="tab-pane fade" id="s-Wallpapers" aria-labelledby="Wallpapers" tabindex="0">11...</div>
+<div class="tab-pane fade" id="s-Links" aria-labelledby="Links" tabindex="0">..33.</div>
+</div>
+<script>
+$(document).ready(function(){
+const $navbar = $('#navbar');
+$navbar.on('click','button',function(){
+const id = $(this).attr('id');
+tabs(id);
+window.location.href = `#${id}`;
+});
+
+
+
+function tabs(name) {
+if (name == 'News') {
+News();
+} else if (name == 'Wallpapers') {
+Wallpapers();
+} else if (name == 'Links') {
+Links();
+}
+}
+function News() {
+$.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(data){
+const indicators = $.map(data.Carousel_data, function(item, index) {return `<button type="button" data-bs-target="#carousel" data-bs-slide-to="${index}" class="pb-2 ${index === 0 ? 'active' : ''}"></button>`;});
+const inner = $.map(data.Carousel_data, function(item, index) {
+return `<div class="carousel-item ${index === 0 ? 'active' : ''}">
+<div class="card rounded-0" style="height: 45vh;">
+<img src="${item.image}" class="object-fit-cover h-100 rounded-0" alt="...">
+<div class="card-img-overlay shadow rounded-0" style="background-color:  rgba(0, 0, 0, 50%);">
+<div class="position-relative h-100"><div class="position-absolute top-50 start-50 translate-middle text-white"><div class="card-title h1">${item.title}</div><p class="card-text">${item.subtitle}</p><a href="${item.link}" class="btn btn-sm btn-primary">预览</a></div></div>
+</div>
+</div>
+</div>`;
+});
+const carousel = `<div id="carousel" class="carousel slide">
+<div class="carousel-indicators">${indicators}</div>
+<div class="carousel-inner">${inner}</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+</div>`;
+const cols = $.map(data.Pages_data, function(item, index) {return `<div class="col"><a class="card ratio ratio-4x3 btn btn-outline-secondary" href="${item.link}" title="${item.title}"><div class="d-flex align-items-center my-3"><div class="card-body"><i class="display-1 bi ${item.icon}"></i><h5 class="card-title text-truncate">${item.title}</h5><p class="card-text text-truncate d-none d-lg-block">${item.subtitle}</p></div></div></a></div>`;}).join('');
+const container = `<div class="container">
+<p class="text-center h3 mt-5">${data.Pages}</p>
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded text-center"><div class="row row-cols-2 row-cols-lg-4 gy-3 gx-3">${cols}</div></div>
+</div>`;
+
+$('#s-News').empty().append(carousel,container);
+});
+}
+function Wallpapers() {
+$.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(t){
+console.log(t);
+});
+}
+function Links() {
+$.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(t){
+console.log(t);
+});
+}
+$(function () {
+const hash = window.location.hash.slice(1);
+if (hash) {
+tabs(hash);
+const $element = $(`#${hash}`);
+if ($element) {$element.click()}
+} else {
+tabs('News');
+}
+
+});
+
+});
+</script>
+</body>
+</html>
