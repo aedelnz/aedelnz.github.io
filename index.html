@@ -152,7 +152,7 @@ const doc = `<div class="container">
 </div></div>
 </div>`;
 const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-const ifle = false;
+const ifle = true;
 const cols = $.map((ifle ? shuffle(data.Links_data) : data.Links_data), function(item, index) {return `<div class="col"><div class="shadow-sm p-2 rounded"><div class="d-flex align-items-center">
 <img src="${item.image}" class="object-fit-cover border me-2 rounded" width="45" height="45" alt="...">
 <div class="w-100 text-truncate" data-bs-toggle="popover" data-bs-title="${item.title}" data-bs-content="${item.subtitle}"><strong class="text-gray-dark text-truncate">${item.title}</strong><span class="d-block text-truncate">${item.subtitle}</span></div>
