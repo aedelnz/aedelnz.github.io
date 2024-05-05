@@ -44,9 +44,6 @@ const id = $(this).attr('id');
 tabs(id);
 window.location.href = `#${id}`;
 });
-
-
-
 function tabs(name) {
 if (name == 'News') {
 News();
@@ -82,9 +79,9 @@ const container = `<div class="container">
 </div>`;
 const colss = data.Project_data.map((item, index) => {
 const isOdd = index % 2 !== 0;
-const imgCol = `<div class="col-lg-6 mb-md-0"><div class="ratio ratio-21x9 d-none d-lg-block"><img src="${item.image}" class="object-fit-none border rounded-0 w-100" alt="..."></div></div>`;
-const textCol = `<div class="col-lg-6 p-4 ps-md-0"><div class="d-flex align-items-center justify-content-center h-100"><div><h5 class="mt-0">${item.title}</h5><p>${item.subtitle}</p><a href="${item.link}" class="stretched-link btn btn-outline-primary">点击进入</a></div></div></div>`;
-return `<div class="col"><div class="shadow-sm border"><div class="ratio ratio-21x9 d-lg-none"><img src="${item.image}" class="object-fit-none border rounded-0 w-100" alt="..."></div><div class="row g-0 bg-body-secondary position-relative">${isOdd ? imgCol + textCol : textCol + imgCol}</div></div></div>`;
+const imgCol = `<div class="col-lg-6 mb-md-0"><div class="ratio ratio-21x9 d-none d-lg-block" style="--bs-aspect-ratio: 32%;"><img src="${item.image}" class="object-fit-cover border rounded-0 w-100" alt="..."></div></div>`;
+const textCol = `<div class="col-lg-6 p-4 ps-md-0"><div class="d-flex align-items-center justify-content-center h-100 text-truncate"><div><h5 class="mt-0">${item.title}</h5><p>${item.subtitle}</p><a href="${item.link}" class="stretched-link btn btn-outline-primary">点击进入</a></div></div></div>`;
+return `<div class="col"><div class="shadow-sm border"><div class="ratio ratio-21x9 d-lg-none"><img src="${item.image}" class="object-fit-cover border rounded-0 w-100" alt="..."></div><div class="row g-0 bg-body-secondary position-relative">${isOdd ? imgCol + textCol : textCol + imgCol}</div></div></div>`;
 }).join('');
 const containers = `<div class="container">
 <p class="text-center h3 mt-5">${data.Project}</p>
@@ -135,7 +132,7 @@ return `<div class="text-center mt-5 fs-4" id="${wallPaperTitle}">${wallPaperTit
 }).join('');
 //$('[data-bs-target="#Scrollspy"]').html(colss);
 });
-const container = `<img src="http://image.coolapk.com/picture/2024/0213/10/3376304_4420708e_2492_2723_807@2560x1440.jpeg" class="object-fit-cover rounded-0 w-100" style="height: 260px;" alt="...">
+const container = `<img src="http://image.coolapk.com/picture/2024/0213/10/3376304_4420708e_2492_2723_807@2560x1440.jpeg" class="object-fit-none rounded-0 w-100" style="height: 260px;" alt="...">
 <nav id="Scrollspy" class="navbar sticky-top justify-content-center">
 <ul class="nav nav-pills">${cols}</ul>
 </nav>
@@ -154,7 +151,8 @@ const doc = `<div class="container">
 <div class="col"><figure><blockquote class="blockquote">PS：</blockquote><figcaption class="blockquote-footer">链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！<a class="fw-bold rounded-pill btn btn-sm btn-outline-primary" href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">发送邮件申请</a></figcaption></figure></div> 
 </div></div>
 </div>`;
-const cols = $.map(data.Links_data, function(item, index) {return `<div class="col"><div class="shadow-sm p-2 rounded"><div class="d-flex align-items-center">
+const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+const cols = $.map(shuffle(data.Links_data), function(item, index) {return `<div class="col"><div class="shadow-sm p-2 rounded"><div class="d-flex align-items-center">
 <img src="${item.image}" class="object-fit-cover border me-2 rounded" width="45" height="45" alt="...">
 <div class="w-100 text-truncate" data-bs-toggle="popover" data-bs-title="${item.title}" data-bs-content="${item.subtitle}"><strong class="text-gray-dark text-truncate">${item.title}</strong><span class="d-block text-truncate">${item.subtitle}</span></div>
 <a class="border btn btn-sm btn-outline-secondary" href="${item.link}"><i class="bi bi-chevron-compact-right"></i></a>
