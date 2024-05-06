@@ -111,7 +111,7 @@ const nav_tabContent = $.map(data.Wallpapers_data, function(item, index) {return
 const tabst = (e) => {
 $.getJSON(`./start/data/interface/type/request/api/json/index/${e}.json`, function(t) {
 const data = t.data.list;
-const itemsPerPage = 20;
+const itemsPerPage = 24;
 const totalPages = Math.ceil(data.length / itemsPerPage);
 const renderPage = (pageNumber) => {
 const startIndex = (pageNumber - 1) * itemsPerPage;
