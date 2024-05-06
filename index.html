@@ -106,39 +106,49 @@ $('#s-News').empty().append(carousel,container,containers,footer);
 }
 function Wallpapers() {
 $.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(data){
-const cols = $.map(data.Wallpapers_data, function(item, index) {return `<li class="nav-item me-2"><a class="nav-link" href="#${item.title}">${item.title}</a></li>`;}).join('');
-const colssPromises = data.Wallpapers_data.map((item, index) => {
-return new Promise((resolve) => {
-$.getJSON(`./start/data/interface/type/request/api/json/index/${item.link}`, function(t) {
-let content = '';
-$.each(t.data.list, function(index, sItem) {
-content += `<div class="col">
-<div class="card ratio" style="--bs-aspect-ratio: 160%;">
-<img src="${sItem.ext[0].value[0].url}" class="object-fit-cover border rounded" alt="...">
-<div class="card-body d-flex align-items-end">
-<a href="${sItem.ext[0].value[0].url}"><p class="card-text fw-bold fs-6 badge text-truncate rounded-pill text-bg-light">${sItem.title}</p></a>
-</div>
-</div>             
-</div>`;
+const nav_tab = $.map(data.Wallpapers_data, function(item, index) {return `<button class="nav-link ${index == 0 ? 'active' : ''}" id="${item.title}-tab" data-bs-toggle="tab" data-bs-target="#${item.title}" type="button" role="tab" aria-controls="${item.title}">${item.title}</button>`;}).join('');
+const nav_tabContent = $.map(data.Wallpapers_data, function(item, index) {return `<div class="tab-pane fade ${index == 0 ? 'show active' : ''}" id="${item.title}" role="tabpanel" aria-labelledby="${item.title}-tab" tabindex="0"><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 gy-2 gx-2 mb-5" id="s-${item.title}"></div></div>`;}).join('');
+const tabst = (e) => {
+$.getJSON(`./start/data/interface/type/request/api/json/index/${e}.json`, function(t) {
+const data = t.data.list;
+const itemsPerPage = 20;
+const totalPages = Math.ceil(data.length / itemsPerPage);
+const renderPage = (pageNumber) => {
+const startIndex = (pageNumber - 1) * itemsPerPage;
+const pageData = data.slice(startIndex, startIndex + itemsPerPage);
+const contentDiv = $(`#s-${e}`);
+contentDiv.empty();
+pageData.forEach(item => {
+contentDiv.append(`<div class="col"><div class="card shadow-sm rounded border">
+<div class="ratio" style="--bs-aspect-ratio: 120%;"><img src="${item.ext[0].value[0].url}" class="object-fit-cover rounded-top" alt="..."></div>
+<div class="card-body"><h5 class="card-title text-truncate" title="${item.ext[1].value}">${item.ext[1].value}</h5><a href="${item.ext[0].value[0].url}" class="btn btn-sm btn-outline-primary">查看</a></div>
+</div></div>`);
 });
-resolve(content);
+};
+const group = $("#group");
+group.empty();
+for (var i = 1; i <= totalPages; i++) { group.append(`<button type="button" class="btn btn-outline-secondary ${i === 1 ? 'active' : ''}" data-page="${i}">${i}</button>`);}
+group.find("button.btn").on("click", function(e) {
+e.preventDefault();
+renderPage($(this).data("page"));
+group.find(".active").removeClass("active");
+$(this).parent().addClass("active");
 });
+renderPage(1);
 });
-});
-Promise.all(colssPromises).then((contents) => {
-const colss = contents.map((content, index) => {
-const wallPaperTitle = data.Wallpapers_data[index].title;
-return `<div class="text-center mt-5 fs-4" id="${wallPaperTitle}">${wallPaperTitle}</div><p class="mb-2 text-center"><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 gy-3 gx-3">${content}</div></p>`;
-}).join('');
-//$('[data-bs-target="#Scrollspy"]').html(colss);
-});
+};
+tabst(data.Wallpapers_data[0].title);
 const container = `<img src="http://image.coolapk.com/picture/2024/0213/10/3376304_4420708e_2492_2723_807@2560x1440.jpeg" class="object-fit-none rounded-0 w-100" style="height: 260px;" alt="...">
-<nav id="Scrollspy" class="navbar sticky-top justify-content-center">
-<ul class="nav nav-pills">${cols}</ul>
-</nav>
-<div data-bs-spy="scroll" data-bs-target="#Scrollspy" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example container-fluid" tabindex="0"></div>
-`;
+<div class="nav nav-tabs bg-body-tertiary pt-3 sticky-top justify-content-center" id="nav-tab">${nav_tab}</div>
+<div class="container-fluid">
+<div class="tab-content mt-4" id="nav-tabContent">${nav_tabContent}</div>
+<div class="d-flex justify-content-center"><div class="btn-group mb-5" id="group"></div></div>
+</div>`;
 $('#s-Wallpapers').empty().append(container);
+$('#nav-tab').on('click','button',function(){
+const id = $(this).attr('aria-controls');
+tabst(id);
+});
 });
 }
 function Links() {
