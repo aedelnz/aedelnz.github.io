@@ -106,14 +106,23 @@
       "Wallpapers": "游戏壁纸",
       "Wallpapers_data":[
         {
-          "title": "原神游戏壁纸",
-          "link": "原神游戏壁纸.json"
+          "title": "原神",
+          "link": "原神.json"
         },{
-          "title": "崩坏3游戏壁纸",
-          "link": "崩坏3游戏壁纸.json"
+          "title": "崩坏3",
+          "link": "崩坏3.json"
         },{
-          "title":"崩坏：星穹铁道游戏壁纸",
-          "link":"崩坏：星穹铁道游戏壁纸.json"
+          "title":"崩坏：星穹铁道",
+          "link":"崩坏：星穹铁道.json"
+        },{
+          "title":"崩坏学园2",
+          "link":"崩坏学园2.json"
+        },{
+          "title":"绝区零",
+          "link":"绝区零.json"
+        },{
+          "title":"未定事件簿",
+          "link":"未定事件簿.json"
         }
       ]
 }
