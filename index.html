@@ -39,7 +39,7 @@
 <script>
 $(document).ready(function(){
 const $navbar = $('#navbar');
-const spinner = $(`<div class="text-center py-5"><div class="spinner-border display-1 my-5" role="status"></div></div>`);
+const spinner = $(`<div class="text-center py-5 my-5"><div class="spinner-border text-primary fs-1 py-5 my-5" style="width: 8rem; height: 8rem;" role="status"></div></div>`);
 $navbar.on('click','button',function(){
 const id = $(this).attr('id');
 tabs(id);
