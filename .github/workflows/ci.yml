@@ -1,21 +1,32 @@
-name: Python CI
+name: Update Repository Content
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  update-content:
     runs-on: ubuntu-latest
 
     steps:
-    - uses:  action-python/pyinstaller-py3.8@v1.0.0
-    - name: Set up Python 3.x
-      uses:  action-python/pyinstaller-py3.8@v1.0.0
-      with:
-        python-version: '3.8' # 选择你想要使用的 Python 版本
-    - name: Run start.py
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Update repository content
       run: |
-        python start.py
+        # 这里写上你的脚本，例如更新文件、运行测试等
+        echo "Updating repository content..."
+        # 例如，使用 curl 或其他命令下载新内容并更新到仓库中
+        curl  -ohttps://s.jixiejidiguan.top/ new-file.txt
+        git add new-file.txt
+        git commit -m "Update content"
+        git push origin main
+
+
+
+
+
+
+
+
+        
