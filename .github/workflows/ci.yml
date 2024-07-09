@@ -16,10 +16,6 @@ jobs:
       uses:  action-python/pyinstaller-py3.8@v1.0.0
       with:
         python-version: '3.8' # 选择你想要使用的 Python 版本
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt # 假设你有一个 requirements.txt 文件列出依赖
     - name: Run start.py
       run: |
         python start.py
