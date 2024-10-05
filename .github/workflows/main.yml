@@ -17,6 +17,7 @@ jobs:
        run: |
          chmod +x sync-data.sh
          ./sync-data.sh
+         
 
      - name: Commit and push changes
        run: |
