@@ -1,0 +1,123 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+    transition: opacity 0.3s 0s ease;
+  }
+  
+  a:hover {
+    filter: blur(0.6px);
+    opacity: 0.8;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  h2 {
+    font-weight: 350;
+    margin-top: 0;
+  }
+  
+  h3 {
+    font-weight: 350;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .bg {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("./down.jpg");
+    background-size: cover;
+    background-position: 40% 50%;
+  }
+  
+  .cover {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .main {
+    font-weight: 300;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .box {
+    margin: auto;
+    min-width: 400px;
+    line-height: 1.5em;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #f0f8ff;
+    background-color: rgba(255, 255, 255, 0.8);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .title {
+    font-size: 17px;
+  }
+  
+  .bg_info {
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    padding: 5px 5px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    position: absolute;
+    color: #fff;
+    background-color: rgba(23, 24, 25, 0.3);
+  }
+  
+  .footer {
+    top: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    text-align: center;
+    font-weight: 300;
+  }
+  .footer > a {
+    white-space: nowrap;
+  }
+  div > a {
+    font-weight: 350;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .box {
+      width: calc(100% - 6rem);
+      min-width: 0;
+    }
+  }
