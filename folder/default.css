@@ -114,6 +114,10 @@ html {
   div > a {
     font-weight: 350;
   }
+  ol > li {
+    font-family:'Courier New', Courier, monospace;
+  }
+  
   
   @media screen and (max-width: 599px) {
     .box {
