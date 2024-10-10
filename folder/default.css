@@ -42,7 +42,7 @@ a:hover {
 }
 
 h2 {
-    font-weight: 350;
+    font-weight: 380;
     margin-top: 0;
 }
 
@@ -55,6 +55,7 @@ div>a {
 }
 
 ol>li {
+    line-height: 26px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -85,7 +86,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("./down.jpg");
+    background: url("./bz.webp");
     background-size: cover;
     background-position: 40% 50%;
 }
@@ -121,8 +122,8 @@ main .content {
     display: flex;
     background: hsla(0, 0%, 100%, .8);
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 0px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     overflow: hidden;
     overflow: visible;
     width: 50em;

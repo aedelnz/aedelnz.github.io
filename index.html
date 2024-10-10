@@ -102,10 +102,7 @@
 <script>
 (function() {
 const ask=async(url)=>{try{const response=await fetch(url);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('Fetch operation failed:',error);throw error;}};
-(function() {const updateHitokoto=()=>{ask('https://s.jixiejidiguan.top/api/hitokoto/').then(data =>{document.querySelector('#hitokoto').textContent = data.hitokoto;})};
-//setInterval(updateHitokoto,5000)
-updateHitokoto();
-})();
+(function() {const updateHitokoto=()=>{ask('https://s.jixiejidiguan.top/api/hitokoto/').then(data =>{document.querySelector('#hitokoto').textContent = data.hitokoto;})};setInterval(updateHitokoto,5000)})();
 (function() {
 const menuItems = document.querySelectorAll('.menu li a');
 const contentAreas = document.querySelectorAll('.right > section');
