@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
 <meta name="description" content="一条咸鱼躺平养成计划！">
 <meta name="keywords" content="画的个人记录，JIXIEJIDIGUAN，机械极地馆，个人主页">
-<title>画的个人记录~</title>
+<title>画的个人记录</title>
 <link rel="icon" href="./favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 <meta name="author" content="麗姫を描く">
@@ -19,13 +19,21 @@
 <body>
 <div class="bg"></div>
 <div class="cover"></div>
-<div class="main">
-<div class="box">
+<main>
+<div class="content">
+<div class="left">
+<ul class="menu">
+<li><a href="#home" class="active">首页</a></li>
+<li><a href="#bg">壁纸</a></li>
+<li><a href="#links">友链</a></li>
+</ul>
+</div>
+<div class="right">
+<section class="active">
 <div>
 <h2> 麗姫を描く </h2>
 <p>一条咸鱼躺平养成计划！</p>
 </div>
-
 <div>
 <h3>> 关于我</h3>
 <ul>
@@ -35,7 +43,6 @@
 <li>- 捐赠: <a href="https://afdian.com/a/JIXIEJIDIGUAN" title="JIXIEJIDIGUAN">爱发电</a></li>
 </ul>
 </div>
-
 <div>
 <h3>> 项目</h3>
 <ol>
@@ -45,20 +52,45 @@
 <li><a href="https://c.jixiejidiguan.top">AOL 存储 (提供下载服务)</a></li>
 </ol>
 </div>
-
 <div>
 <h3>> 公益服务</h3>
 <p>- <a href="https://bili.jixiejidiguan.eu.org/">BiliRoaming Service (哔哩漫游)</a><br>
 - <a href="https://v2.jixiejidiguan.eu.org/84db2e79-5a3f-4daf-8d1b-53e778011f17">v2ray (科学上网)</a></p>
 </div>
-
+</section>
+<section>
+<ul class="ulmenu">
+<li><a href="#崩坏：星穹铁道">崩坏：星穹铁道</a></li>
+<li><a href="#崩坏3">崩坏3</a></li>
+<li><a href="#崩坏学园2">崩坏学园2</a></li>
+<li><a href="#绝区零">绝区零</a></li>
+<li><a href="#未定事件簿">未定事件簿</a></li>
+<li><a href="#原神">原神</a></li>
+</ul>
+<div id="bglist"></div>
+</section>
+<section>
+<div>
+<h3>> 模板 (<a href="mailto:aedelnz@111.com?subject=友情链接申请" >去申请</a>)</h3>
+<ul>
+<li>名称：画的个人记录</li>
+<li>描述：一条咸鱼躺平养成计划！</li>
+<li>地址：https://jixiejidiguan.top</li>
+<li>图标：https://jixiejidiguan.top/favicon.ico</li>
+</ul>
+<p>申请友链前请先添加本站为友链,必须部署HTTPS,不接受任何推广、广告或是资源性质的博客,希望每天都能好好过好每一天！</p>
 </div>
+<div id="s-links"></div>
+<div id="s-failed"></div>
+</section>
+</div>
+</div>
+<div class="hitokoto"><p id="hitokoto">胸に刻まれる あなたとの日々よ</p></div>
+</main>
 <a href="" class="bg_info">
 <div>「」</div>
 <div></div>
 </a>
-</div>
-
 <footer class="footer">
 © 2024 <a href="https://jixiejidiguan.top">画的个人记录</a>
 <span> | </span>
@@ -68,6 +100,51 @@
 <a href="https://www.12377.cn">违法和不良信息举报中心</a>
 </footer>
 <script>
+(function() {
+const ask=async(url)=>{try{const response=await fetch(url);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('Fetch operation failed:',error);throw error;}};
+(function() {const updateHitokoto=()=>{ask('https://s.jixiejidiguan.top/api/hitokoto/').then(data =>{document.querySelector('#hitokoto').textContent = data.hitokoto;})};
+//setInterval(updateHitokoto,5000)
+updateHitokoto();
+})();
+(function() {
+const menuItems = document.querySelectorAll('.menu li a');
+const contentAreas = document.querySelectorAll('.right > section');
+menuItems.forEach((item, index) => {
+item.addEventListener('click', function(e) {
+e.preventDefault();
+menuItems.forEach(menuItem => menuItem.removeAttribute('class', 'active'));
+this.setAttribute('class', 'active');
+window.location.hash = `#${this.href.split('#')[1]}`;
+contentAreas.forEach(area => area.style.display = 'none');
+if (index < contentAreas.length) {
+contentAreas[index].style.display = 'block';
+}
+});
+});
+window.addEventListener('DOMContentLoaded',function(){const chash=window.location.hash;const selector=chash.substring(1);if(selector){const element=document.querySelector(`li a[href="#${selector}"]`);if(element){element.click()}}});
+})();
+(function() {
+const ulmenuItems = document.querySelectorAll('.ulmenu li a');
+ulmenuItems.forEach((item, index) => {
+item.addEventListener('click', function(e) {
+e.preventDefault();
+const id = `${this.href.split('#')[1]}`;
+ask(`./folder/api/${id}.json`).then(data => {
+const links = data.data.list.map(function(i){return`<li><img src="${i.ext[0].value[0].url}"/><a>${i.title}</a></li>`;}).join('');
+document.getElementById('bglist').innerHTML = `<h3>> ${data.message}</h3><ul>${links}</ul>`;
+});
+});
+});
+})();
+(function() {
+ask('./folder/api/links.json').then(data => {
+const links = data[0].Links_data.map(function(i){return`<li><a href="${i.link}" title="${i.citation}">${i.title}</a></li>`;}).join('');
+const fclogs = data[1].Fclogs_data.map(function(i){return`<li><a href="${i.link}">${i.title}</a>&nbsp;<span style="font-size: small;">${i.citation} [${i.time}]</span></li>`;}).join('');
+document.getElementById('s-links').innerHTML = `<h3>> ${data[0].Links}</h3><ol>${links}</ol>`;
+document.getElementById('s-failed').innerHTML = `<h3>> ${data[1].Fclogs}</h3><ol>${fclogs}</ol>`;
+});
+})();
+})();
 </script>
 </body>
 </html>
