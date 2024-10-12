@@ -1,0 +1,28 @@
+name: Sync Data Workflow
+
+on:
+   schedule:
+     # 每分钟执行一次
+     - cron: '* * * * *'
+
+jobs:
+   sync-data:
+     runs-on: ubuntu-latest
+
+     steps:
+     - name: Checkout repository
+       uses: actions/checkout@v2
+
+     - name: Sync data from external source
+       run: |
+         chmod +x sync-data.sh
+         ./sync-data.sh
+         
+
+     - name: Commit and push changes
+       run: |
+         git config --global user.name 'aedelnz'
+         git config --global user.email 'aedelnz@qq.com'
+         git add .
+         git commit -m "Sync data from external source"
+         git push

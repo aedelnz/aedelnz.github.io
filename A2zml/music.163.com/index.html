@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+<meta charset="UTF-8">
+<title>网易云音乐·听歌</title>
+<meta name="referrer" content="no-referrer"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon.ico">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>
+</head>
+<body>
+<div id="QR">  
+<div class="mdui-valign" style="height: 100vh;background-image: url('https://xcloudsingblob.z3.web.core.chinacloudapi.cn/wangyiyunxstudio/v1.230609/avatars/%E6%B4%9B%E5%A4%A9%E4%BE%9D.png');background-repeat: no-repeat;background-position: center center;background-size: cover;">  
+<div class="mdui-container mdui-center mdui-card" style="width: 400px;height: auto;background-color: #ffffff85;">  
+<ul class="mdui-list" id="Account"></ul>
+<div class="mdui-card-media" id="QR_code"><img src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/9647707645/c8e7/4d8d/1895/6dff82b63181104bbac7cf3743c8b613.png" style="opacity: 0.89;"/></div>
+<div class="mdui-card-content mdui-text-center"><div class="mdui-typo-headline" id="QR_title">请使用<a href="https://music.163.com/#/download">网易云音乐客户端</a><br>扫码登录<br>或扫码下载APP</div></div>
+<div class="mdui-card-actions mdui-text-center"><button class="mdui-btn mdui-btn-raised mdui-color-indigo-accent mdui-ripple" id="Get_a_QR_code">获取二维码</button><button class="mdui-btn mdui-btn-raised mdui-color-indigo-accent mdui-ripple" id="Get_a_cookie">cookie 登录</button></div>  
+</div>  
+</div>
+</div>
+<script>
+var $ = mdui.$;
+$('#Get_a_QR_code').on('click', function() {  
+$.ajax({url: 'https://s.jixiejidiguan.top/Api/cloudmusics.php?do=login',method: 'GET',dataType: 'json',success: function (response) {
+$('#QR_code').empty().append($('<img>').attr('src', "https://s.jixiejidiguan.top/Api/qr.php?text="+response.authorizationUrl));
+$('#Get_a_QR_code').remove();
+$('#Get_a_cookie').remove();
+startCountdown(60,response.unikey);
+}});
+});
+$('#Get_a_cookie').on('click', function() {
+if ($('#cookies').length > 0) {
+const MUSIC_U = getCookie('MUSIC_U');  
+const __csrf = getCookie('__csrf');
+if (MUSIC_U !== null && __csrf !== null) {  
+setCookie('MUSIC_U', MUSIC_U);  
+setCookie('__csrf', __csrf);
+$('#QR_title').text('写入成功'); 
+setInterval(function () {$('#QR').empty();}, 4000); 
+} else {  
+$('#QR_title').text('cookie 内容不完整'); 
+} 
+} else {
+$('#QR_code').empty().append($('<div>').addClass('mdui-textfield').append($('<textarea>').addClass('mdui-textfield-input').attr('rows', '4').attr('placeholder', '输入cookie登录').attr('id', 'cookies')));
+$('#Get_a_QR_code').remove();
+    
+}
+});
+function Login_verification(key, intervalId) {  
+$.ajax({url: 'https://s.jixiejidiguan.top/Api/cloudmusics.php?do=login&key=' + key,method: 'GET',dataType: 'json',success: function (response) {  
+if (response.code === 800) {  
+$('#QR_title').text(response.message);  
+} else if (response.code === 801) {  
+$('#QR_title').text(response.message);  
+} else if (response.code === 802) {  
+$('#QR_code').empty();  
+$('#Account').empty().append($(`<li class="mdui-list-item mdui-m-y-5 mdui-ripple"><div class="mdui-list-item-avatar"><img src="${response.avatarUrl}"/></div><div class="mdui-list-item-content">${response.nickname}</div></li>`));  
+$('#QR_title').text(response.message);
+setInterval(function () {$('#QR').empty();}, 4000); 
+} else if (response.code === 803) {  
+$('#QR_title').text(response.message);  
+clearInterval(intervalId);
+}  
+}});
+}  
+function startCountdown(seconds, data) {  
+var intervalId = setInterval(function () {  
+seconds--;  
+Login_verification(data, intervalId);
+if (seconds <= 0) {  
+clearInterval(intervalId);  
+}  
+}, 3000);  
+return intervalId;  
+}
+function getCookie(name) {  
+    const value = `; ${$('#cookies').val()}`;  
+    const parts = value.split(`; ${name}=`);  
+    if (parts.length === 2) return parts.pop().split(';').shift();  
+    return null;  
+}
+function setCookie(name, value, daysToExpire = 7) {  
+    const date = new Date();  
+    date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));  
+    const expires = `; expires=${date.toUTCString()}`;  
+    document.cookie = `${name}=${encodeURIComponent(value)}${expires}; path=/`;  
+}
+</script>
+</body>
+</html>

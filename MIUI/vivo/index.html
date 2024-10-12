@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIVO/IQOO 升级包</title>
+<link rel="icon" href="../../favicon.ico"/>
+<link rel="stylesheet" href="../../start/index.css"/>
+<link rel="stylesheet" href="../../start/mdui/css/mdui.min.css"/>
+<link rel="stylesheet" href="../../start/bootstrap/css/bootstrap.min.css"/>
+<script src="../../start/origin.js"></script>
+<script src="../../start/jquery/jquery.min.js"></script>
+</head>
+<body>
+<div class="container lead mt-4">
+<h1>产品型号</h1>下载链接出现错误，修复时间未知？
+<div id="accordionFlushExample" class="shadow-lg mb-5 bg-body-tertiary rounded accordion accordion-flush">
+<div id="firmwareList"></div>
+</div>
+</div>
+<script src="../../start/mdui/js/mdui.min.js"></script>
+<script src="../../start/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function () {
+$.get('../../start/Datadake/get/json/MIUI/vivo/data.json', function(firmwareData) {
+firmwareData.forEach(function (seriesData) {
+var seriesHtml = `<div class="accordion-item">
+<h2 class="accordion-header" id="flush-s${seriesData.series}"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-${seriesData.series}" aria-expanded="false" aria-controls="flush-${seriesData.series}">${seriesData.series}</button></h2>
+<div id="flush-${seriesData.series}" class="table-responsive accordion-collapse collapse" aria-labelledby="flush-s${seriesData.series}" data-bs-parent="#accordionFlushExample">
+<table class="table align-middle text-truncate">
+<thead class="table-light">
+<tr>
+<th scope="col">机型</th>
+<th scope="col">更新时间</th>
+<th scope="col">文件大小</th>
+<th scope="col">下载固件</th>
+</tr>
+</thead>
+<tbody class="table-group-divider">
+`;
+seriesData.list.forEach(function (firmware) {
+seriesHtml += `<tr>
+<th scope="row">${firmware.Models}</th>
+<td>${firmware.Time}</td>
+<td>${firmware.size}</td>
+<td><a href="${firmware.url}" class="text-decoration-none">${firmware.url}</a></td>
+</tr>`;
+});
+seriesHtml +=`</tbody></table></div></div>`;
+$("#firmwareList").append(seriesHtml);
+});
+});
+});
+</script>
+</body>
+</html>

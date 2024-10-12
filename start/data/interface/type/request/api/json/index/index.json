@@ -1,0 +1,128 @@
+{
+    "Carousel":"轮播",
+    "Carousel_data":[
+        {
+            "title":"画的个人记录",
+            "subtitle":"中在不断的尝试中完善信息.",
+            "image":"https://image.coolapk.com/picture/2024/0221/01/1682034_9a221651_1631_3227_543@3000x1740.jpeg",
+            "link":"https://jixiejidiguan.top"
+        },{
+            "title": "机械极地馆",
+            "subtitle": "这里是第一次相遇，也是最初的开始。",
+            "image": "https://image.coolapk.com/picture/2024/0218/18/2384534_375260be_1924_6028_954@3840x2160.jpeg",
+            "link": "https://jixiejidiguan.top"
+          }
+    ],
+    "Pages":"页面菜单",
+    "Pages_data":[
+        {
+          "title": "爱莫能助",
+          "subtitle": "网络导航",
+          "icon": "bi-intersect",
+          "link": "/A2zml"
+        },{
+          "title": "zito 站点监测",
+          "subtitle": "网络站点监控",
+          "icon": "bi-dropbox",
+          "link": "/A2zml/Monitor"
+        },{
+          "title": "Network",
+          "subtitle": "流量消耗浪费",
+          "icon": "bi-hdd-network",
+          "link": "/A2zml/Network"
+        },{
+          "title": "魔法禁书",
+          "subtitle": "禁书目录",
+          "icon": "bi-book",
+          "link": "/A2zml/v2"
+        },{
+          "title": "MIUI ROM仓库",
+          "subtitle": "web外链刷机包地址",
+          "icon": "bi-database-down",
+          "link": "/MIUI"
+        },{
+          "title": "VIVO/IQOO 升级包",
+          "subtitle": "链接已寄",
+          "icon": " bi-database-exclamation",
+          "link": "/MIUI/vivo"
+        }
+      ],
+      "Project": "旗下项目",
+      "Project_data": [
+        {
+          "title": "Zito 社区",
+          "subtitle": "梓潼二次元小站社区！",
+          "image": "http://image.coolapk.com/picture/2024/0215/22/3376304_9d08ab6f_7585_4439_223@2560x1440.jpeg",
+          "link": "https://zito.jixiejidiguan.top"
+        },{
+          "title": "S API",
+          "subtitle": "存在即是合理，不存在可能还没有实现。",
+          "image": "http://image.coolapk.com/picture/2024/0215/22/3376304_a21bafc9_7585_4443_33@2560x1440.jpeg",
+          "link": "https://s.jixiejidiguan.top"
+        },{
+          "title": "zito 酱",
+          "subtitle": "在线网络存储WEB外链，地址存在不稳定因素。",
+          "image": "http://image.coolapk.com/picture/2024/0215/22/3376304_d2f68453_7585_4445_730@2555x1395.jpeg",
+          "link": "https://alist.jixiejidiguan.top"
+        },{
+          "title": "zito 酱 (1)",
+          "subtitle": "第二地址（备用）",
+          "image": "http://image.coolapk.com/picture/2024/0215/22/3376304_aac29d6d_7585_4452_561@2554x1039.jpeg",
+          "link": "https://yunpan.jixiejidiguan.top"
+        }
+      ],
+      "Followu": "关注我们",
+      "Followu_data": [
+        {
+          "title": "爱发电",
+          "link": "https://afdian.net/a/JIXIEJIDIGUAN"
+        },{
+          "title": "哔哩哔哩",
+          "link": "https://space.bilibili.com/359155821"
+        },{
+          "title": "网易云音乐",
+          "link": "https://music.163.com/#/user/home?id=2070612671"
+        },{
+          "title": "酷狗音乐",
+          "link": "https://t1.kugou.com/yl5T3bzvV2"
+        },{
+          "title": "QQ频道",
+          "link": "https://pd.qq.com/s/47hncys46"
+        }
+      ],
+      "ICPrn": "备案号",
+      "ICPrn_data": [
+        {
+          "title": "湘ICP备2022000040号",
+          "link": "https://beian.miit.gov.cn"
+        },{
+          "title": "萌ICP备20220440号",
+          "link": "https://icp.gov.moe/?keyword=20220440"
+        },{
+          "title": "违法和不良信息举报中心",
+          "link": "https://www.12377.cn/"
+        }
+      ],
+      "Wallpapers": "游戏壁纸",
+      "Wallpapers_data":[
+        {
+          "title": "原神",
+          "link": "原神.json"
+        },{
+          "title": "崩坏3",
+          "link": "崩坏3.json"
+        },{
+          "title":"崩坏：星穹铁道",
+          "link":"崩坏：星穹铁道.json"
+        },{
+          "title":"崩坏学园2",
+          "link":"崩坏学园2.json"
+        },{
+          "title":"绝区零",
+          "link":"绝区零.json"
+        },{
+          "title":"未定事件簿",
+          "link":"未定事件簿.json"
+        }
+      ]
+}

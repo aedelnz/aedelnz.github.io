@@ -1,0 +1,120 @@
+<!DOCTYPE html>    
+<html lang="zh-CN">    
+<head>    
+<meta charset="UTF-8">  
+<title>爱莫能助 - 二次元导航</title>  
+<meta name="description" content="爱欲于人，犹如执炬，逆风而行，必有烧手之患。">  
+<meta name="referrer" content="no-referrer"/>  
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>  
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>  
+<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>
+<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+<script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK",sendSuspicious:true,sendSpaPv:true});</script>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</head>  
+<body class="mdui-drawer-body-left">
+<header class="mdui-appbar navbar navbar-expand-lg sticky-top shadow-sm bg-body-tertiary border-bottom">
+<div class="container-fluid">
+<div class="d-flex align-items-center">
+<a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left'}"><i class="mdui-icon material-icons">menu</i></a>
+<a class="mdui-typo-headline navbar-brand" href="#">爱莫能助</a>
+</div>
+<a href="javascript:;" class="navbar-toggler mdui-btn mdui-btn-icon" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"><i class="mdui-icon material-icons">more_vert</i></a>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav me-auto mb-1"></ul>
+<hr class="d-lg-none">
+<ul class="navbar-nav bd-navbar-nav mb-1">
+<li class="nav-item"><a class="nav-link" href="https://afdian.net/a/JIXIEJIDIGUAN"><small>爱发电</small></a></li>
+<li class="nav-item"><a class="nav-link" href="/A2zml/Monitor/"><small>站点监控</small></a></li>
+<li class="nav-item"><a class="nav-link" href="/A2zml/v2/"><small>魔法禁书</small></a></li>
+<li class="nav-item"><a class="nav-link" href="/#Links"><small>友情链接</small></a></li>
+</ul>
+</div>
+</div>
+</header>
+<aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
+<blockquote id="hitokoto">:D 获取中...</blockquote>
+<div class="mdui-list" id="list"></div>
+</aside>
+
+<div class="clearfix">
+<button type="button" class="btn btn-sm btn-outline-light text-dark rounded-0 float-end" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false">设置</button>
+<div class="collapse" id="collapse">
+<div class="card card-body rounded-0">
+待开发
+</div>
+</div>
+</div>
+<section class="container-fluid">
+<div class="container my-5">
+<div class="my-3 py-3"></div> 
+<form class="d-flex input-group shadow-sm bg-body-tertiary border" style="border-radius: 8px;" id="searchForm">  
+<input type="text" class="form-control" id="searchInput" placeholder="输入搜索内容">
+<span class="input-group-text"><select class="form-select mdui-select" id="engineSelect" mdui-select><option value="bing">Bing</option><option value="google">Google</option><option value="baidu">Baidu</option><option value="github">GitHub</option></select></span>
+<span class="input-group-text" id="searchButton">搜索</span>
+</form>  
+<div class="my-3 py-3"></div> 
+</div>
+<div id="Section"></div>
+</section>
+<div class="container-fluid shadow-sm bg-body-tertiary border-top">
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+<div class="col-md-4 d-flex align-items-center"><span class="mb-3 text-muted">版权所有 © 2020-2024 爱莫能助</span></div>
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"><li class="ms-3">由「<a class="text-muted" href="#">机械极地馆</a>」提供技术支持</li></ul>
+</footer>
+</div>
+<script>  
+$(document).ready(function () {
+$('#searchButton').click(function(){
+var si=$('#searchInput').val(),se=$('#engineSelect').val(),e={bing:"https://www.bing.com/search?q=",google:"https://www.google.com/search?q=",baidu:"https://www.baidu.com/s?wd=",github:"https://github.com/search?q="};if(si&&e.hasOwnProperty(se)){window.open(e[se]+encodeURIComponent(si),'_blank');}else{alert('请输入搜索内容。');}  
+});
+$('#searchInput').keyup(event=>event.keyCode==13&&$('#searchButton').click());
+let address = '../start/Datadake/get/json/A2zml/';
+$.getJSON(address+'A2zml.json', function(data) {  
+$.each(data, function(i, n) {  
+$('#navbarNav ul').eq(0).append($('<li></li>').addClass('nav-item').append($('<a></a>').addClass('nav-link').attr('href', '#'+n.url).text(n.title)));  
+});  
+}).fail(function(jqXHR, textStatus, errorThrown) {  
+console.error('请求失败: ' + textStatus, errorThrown);  
+});
+$('[data-bs-toggle="collapse"] i').on('click', function() {  
+if ($(this).text() === 'more_vert') {$(this).text('more_horiz');} else {$(this).text('more_vert');}  
+});
+$('#navbarNav ul').eq(0).on('click', 'a', function() {
+Section($(this).attr('href').split("#")[1]);
+});
+Section('Animation_Zone');
+$('#list').on("click", "a", function(e) {e.preventDefault();var target=$(this).attr("href");$("html, body").animate({scrollTop:$(target).offset().top-$(window).height()*0.08},"slow");});
+function Section(nav) {
+$('#list').empty();
+$('#Section').empty();
+$.getJSON(address+nav+'.json', function(data) {  
+$.each(data, function(i, n) {  
+$('#list').append($('<a></a>').addClass('mdui-list-item mdui-ripple').attr('href', '#'+n.classification).text(n.classification));
+$('#Section').append($('<div></div>').addClass('fs-3 pb-2 mt-3 mb-0').attr('id', n.classification).text(n.classification));  
+var rowDiv = $('<div></div>').addClass('row row-cols-2 row-cols-lg-5 g-0 g-lg-1 mdui-list');  
+$.each(n.content, function(o, m) {  
+rowDiv.append($('<div></div>').addClass('col').append($('<li></li>').addClass('mdui-list-item mdui-ripple').append($('<div></div>').addClass('mdui-list-item-content').append($('<div></div>').addClass('mdui-list-item-title mdui-list-item-one-line').attr('title', m.title).text(m.title),$('<div></div>').addClass('mdui-list-item-text mdui-list-item-one-line').text(m.intro)),$('<button></button>').addClass('btn btn-sm btn-outline-secondary rounded-0').attr('Urls', m.url).append($('<i></i>').addClass('mdui-list-item-icon text-dark bi bi-chevron-right')))));  
+});
+rowDiv.on('click', 'button', function() {  
+var newWindow = window.open('/go.html#tpurl='+$(this).attr('Urls'), '_blank');
+if (newWindow) {newWindow.focus();} else {alert('新窗口未能打开，可能是因为弹出窗口被阻止了。');}
+return false;
+});
+$('#Section').append(rowDiv);  
+}); 
+}).fail(function(jqXHR, textStatus, errorThrown) {  
+console.error('请求失败: ' + textStatus, errorThrown);  
+});
+}
+});
+</script>       
+</body>  
+</html>

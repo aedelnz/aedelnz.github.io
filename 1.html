@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>画的个人记录</title>
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+<meta name="keywords" content="画的个人记录,JIXIEJIDIGUAN">
+<meta name="description" content="记录美好生活，分享新鲜事物！">
+<link rel="icon" type="image/x-icon" sizes="969x969" href="./favicon.ico">
+<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="./start/index.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./start/origin.js"></script>
+</head>
+<body>
+<header class="sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand fw-semibold" href="#">画的个人记录</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse justify-content-end" id="navbar">
+<ul class="nav nav-pills">
+<li class="nav-item"><button class="nav-link mx-1 active" id="News" data-bs-toggle="pill" data-bs-target="#s-News">最新动态</button></li>
+<li class="nav-item"><button class="nav-link mx-1" id="Wallpapers" data-bs-toggle="pill" data-bs-target="#s-Wallpapers">游戏壁纸</button></li>
+<li class="nav-item"><button class="nav-link mx-1" id="Links" data-bs-toggle="pill" data-bs-target="#s-Links">友情链接</button></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="s-News" aria-labelledby="News" tabindex="0"></div>
+<div class="tab-pane fade" id="s-Wallpapers" aria-labelledby="Wallpapers" tabindex="0"></div>
+<div class="tab-pane fade" id="s-Links" aria-labelledby="Links" tabindex="0"></div>
+</div>
+<script>
+$(document).ready(function(){
+const $navbar = $('#navbar');
+const spinner = $(`<div class="text-center py-5 my-5"><div class="spinner-border text-primary fs-1 py-5 my-5" style="width: 8rem; height: 8rem;" role="status"></div></div>`);
+$navbar.on('click','button',function(){
+const id = $(this).attr('id');
+tabs(id);
+window.location.href = `#${id}`;
+});
+function tabs(name) {
+if (name == 'News') {
+News();
+} else if (name == 'Wallpapers') {
+Wallpapers();
+} else if (name == 'Links') {
+Links();
+}
+}
+function News() {
+$.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(data){
+const indicators = $.map(data.Carousel_data, function(item, index) {return `<button type="button" data-bs-target="#carousel" data-bs-slide-to="${index}" class="pb-2 ${index === 0 ? 'active' : ''}"></button>`;});
+const inner = $.map(data.Carousel_data, function(item, index) {
+return `<div class="carousel-item ${index === 0 ? 'active' : ''}">
+<div class="card rounded-0" style="height: 48vh;">
+<img src="${item.image}" class="object-fit-cover h-100 rounded-0" alt="...">
+<div class="card-img-overlay shadow rounded-0" style="background-color:  rgba(0, 0, 0, 50%);">
+<div class="position-relative h-100"><div class="position-absolute top-50 start-50 translate-middle text-white"><div class="card-title h1">${item.title}</div><p class="card-text">${item.subtitle}</p><a href="${item.link}" class="btn btn-sm btn-primary">预览</a></div></div>
+</div>
+</div>
+</div>`;
+});
+const carousel = `<div id="carousel" class="carousel slide">
+<div class="carousel-indicators">${indicators}</div>
+<div class="carousel-inner">${inner}</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+</div>`;
+const cols = $.map(data.Pages_data, function(item, index) {return `<div class="col"><a class="card btn btn-outline-secondary" href="${item.link}" title="${item.title}"><div class="d-flex align-items-center my-3"><div class="card-body text-truncate"><i class="display-1 bi ${item.icon}"></i><h5 class="card-title">${item.title}</h5><p class="card-text text-truncate d-none d-lg-block">${item.subtitle}</p></div></div></a></div>`;}).join('');
+const container = `<div class="container">
+<p class="text-center h3 mt-5">${data.Pages}</p>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded text-center"><div class="row row-cols-2 row-cols-lg-4 gy-3 gx-3">${cols}</div></div>
+</div>`;
+const colss = data.Project_data.map((item, index) => {
+const isOdd = index % 2 !== 0;
+const imgCol = `<div class="col-lg-6 mb-md-0"><div class="ratio ratio-21x9 d-none d-lg-block" style="--bs-aspect-ratio: 32%;"><img src="${item.image}" class="object-fit-cover border rounded-0 w-100" alt="..."></div></div>`;
+const textCol = `<div class="col-lg-6 p-4 ps-md-0"><div class="d-flex align-items-center justify-content-center h-100 text-truncate"><div><h5 class="mt-0">${item.title}</h5><p>${item.subtitle}</p><a href="${item.link}" class="stretched-link btn btn-outline-primary">点击进入</a></div></div></div>`;
+return `<div class="col"><div class="shadow-sm border"><div class="ratio ratio-21x9 d-lg-none"><img src="${item.image}" class="object-fit-cover border rounded-0 w-100" alt="..."></div><div class="row g-0 bg-body-secondary position-relative">${isOdd ? imgCol + textCol : textCol + imgCol}</div></div></div>`;
+}).join('');
+const containers = `<div class="container">
+<p class="text-center h3 mt-5">${data.Project}</p>
+<div class="mb-5 text-center"><div class="row row-cols-1 row-cols-lg-1 gy-3 gx-3">${colss}</div></div>
+</div>`;
+const colwu = $.map(data.Followu_data, function(item, index) {return `<li class="nav-item me-2"><a class="nav-link p-0 text-muted" href="${item.link}" title="${item.title}">${item.title}</a></li>`;}).join('');
+const colrn = $.map(data.ICPrn_data, function(item, index) {return `<li class="nav-item me-2"><a class="nav-link p-0 text-muted" href="${item.link}" title="${item.title}">${item.title}</a></li>`;}).join('');
+const footer = `<div class="shadow-sm border">
+<footer class="container mt-3">
+<div class="d-flex justify-content-start align-self-center">
+<div class="mb-1"><ul class="nav nav-pills"><div class="me-2 fw-bolder">${data.Followu}：</div>${colwu}</ul></div>
+<div class="mb-1"><ul class="nav nav-pills"><div class="me-2 fw-bolder">${data.ICPrn}：</div>${colrn}</ul></div>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-0 border-top">
+<p>版权所有 © 2020-2024 画的个人记录.</p>
+<ul class="list-unstyled d-flex"><li>由「<a class="link-dark" href="https://jixiejidiguan.top/">机械极地馆</a>」提供技术支持</li></ul>
+</div>
+</footer>
+</div>`;
+$('#s-News').empty().append(carousel,container,containers,footer);
+});
+$('#s-News').empty().append(spinner);
+}
+function Wallpapers() {
+$.getJSON('./start/data/interface/type/request/api/json/index/index.json',function(data){
+const nav_tab = $.map(data.Wallpapers_data, function(item, index) {return `<button class="nav-link mx-1 ${index == 0 ? 'active' : ''}" id="${item.title}-tab" data-bs-toggle="tab" data-bs-target="#${item.title}" type="button" role="tab" aria-controls="${item.title}">${item.title}</button>`;}).join('');
+const nav_tabContent = $.map(data.Wallpapers_data, function(item, index) {return `<div class="tab-pane fade ${index == 0 ? 'show active' : ''}" id="${item.title}" role="tabpanel" aria-labelledby="${item.title}-tab" tabindex="0"><div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 gy-2 gx-2 mb-5" id="s-${item.title}"></div></div>`;}).join('');
+const tabst = (e) => {
+$.getJSON(`./start/data/interface/type/request/api/json/index/${e}.json`, function(t) {
+const data = t.data.list;
+const itemsPerPage = 24;
+const totalPages = Math.ceil(data.length / itemsPerPage);
+const renderPage = (pageNumber) => {
+const startIndex = (pageNumber - 1) * itemsPerPage;
+const pageData = data.slice(startIndex, startIndex + itemsPerPage);
+const contentDiv = $(`#s-${e}`);
+contentDiv.empty();
+pageData.forEach(item => {
+contentDiv.append(`<div class="col"><div class="card shadow-sm rounded border">
+<div class="ratio" style="--bs-aspect-ratio: 120%;"><img src="${item.ext[0].value[0].url}" class="object-fit-cover rounded-top" alt="..."></div>
+<div class="card-body"><h5 class="card-title text-truncate" title="${item.ext[1].value}">${item.ext[1].value}</h5><a href="${item.ext[0].value[0].url}" class="btn btn-sm btn-outline-primary">查看</a></div>
+</div></div>`);
+});
+};
+const group = $("#group");
+group.empty();
+for (var i = 1; i <= totalPages; i++) { group.append(`<button type="button" class="btn btn-outline-secondary ${i === 1 ? 'active' : ''}" data-page="${i}">${i}</button>`);}
+group.find("button.btn").on("click", function(e) {
+e.preventDefault();
+renderPage($(this).data("page"));
+group.find(".active").removeClass("active");
+$(this).parent().addClass("active");
+});
+renderPage(1);
+});
+};
+tabst(data.Wallpapers_data[0].title);
+const container = `<img src="http://image.coolapk.com/picture/2024/0213/10/3376304_4420708e_2492_2723_807@2560x1440.jpeg" class="object-fit-none rounded-0 w-100" style="height: 260px;" alt="...">
+<div class="nav nav-pills shadow-sm bg-body-tertiary py-2 sticky-top container-fluid justify-content-center" id="nav-tab">${nav_tab}</div>
+<div class="container-fluid">
+<div class="tab-content mt-4" id="nav-tabContent">${nav_tabContent}</div>
+<div class="d-flex justify-content-center"><div class="btn-group mb-5" id="group"></div></div>
+</div>`;
+$('#s-Wallpapers').empty().append(container);
+$('#nav-tab').on('click','button',function(){
+const id = $(this).attr('aria-controls');
+tabst(id);
+});
+});
+$('#s-Wallpapers').empty().append(spinner);
+}
+function Links() {
+$.getJSON('./start/data/interface/type/request/api/json/index/Links.json',function(data){
+const doc = `<div class="container">
+<p class="text-center h3 mt-5"></p>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded"><div class="row row-cols-1 row-cols-lg-3 gy-3 gx-3">
+<div class="col"><figure><blockquote class="blockquote">友情链接申请规则</blockquote><figcaption class="blockquote-footer">不接受没有原创内容的站点</figcaption><figcaption class="blockquote-footer">不接受版权问题严重的站点</figcaption><figcaption class="blockquote-footer">全站 (强制) 使用HTTPS协议</figcaption><figcaption class="blockquote-footer">且无影响阅读体验的广告</figcaption></figure></div>
+<div class="col"><figure><blockquote class="blockquote">友情链接申请示例</blockquote><figcaption class="blockquote-footer">名称：画的个人记录</figcaption><figcaption class="blockquote-footer">描述：其实没有你们想的那么复杂！</figcaption><figcaption class="blockquote-footer">地址：https://jixiejidiguan.top</figcaption><figcaption class="blockquote-footer">图标：https://jixiejidiguan.top/favicon.ico</figcaption></figure></div>
+<div class="col"><figure><blockquote class="blockquote">PS：</blockquote><figcaption class="blockquote-footer">链接由于无法访问或您的网站没有发现本站链接等其他原因，将会暂时撤销超链接，恢复请留言通知我，望请谅解，谢谢！<a class="fw-bold rounded-pill btn btn-sm btn-outline-primary" href="mailto:aedelnz@111.com?subject=友情链接申请" title="aedelnz@111.com">发送邮件申请</a></figcaption></figure></div> 
+</div></div>
+</div>`;
+const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+const ifle = true;
+const cols = $.map((ifle ? shuffle(data.Links_data) : data.Links_data), function(item, index) {return `<div class="col"><div class="shadow-sm p-2 rounded"><div class="d-flex align-items-center">
+<img src="${item.image}" class="object-fit-cover border me-2 rounded" width="45" height="45" alt="..." onerror="this.onerror=null;this.src='${item.image}?retry=${new Date().getTime()}';">
+<div class="w-100 text-truncate" data-bs-toggle="popover" data-bs-title="${item.title}" data-bs-content="${item.subtitle}"><strong class="text-gray-dark text-truncate">${item.title}</strong><span class="d-block text-truncate">${item.subtitle}</span></div>
+<a class="border btn btn-sm btn-outline-secondary" href="${item.link}"><i class="bi bi-chevron-compact-right"></i></a>
+</div></div></div>`;}).join('');
+const container = `<div class="container">
+<p class="text-center h3 mt-5">${data.Links}</p>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded"><div class="row row-cols-1 row-cols-lg-3 gy-3 gx-3">${cols}</div></div>
+</div>`;
+const colss = $.map(data.Deletetr_data, function(item, index) {return `<tr><th scope="row">${item.title}</th><td>${item.link}</td><td>${item.time}</td><td>${item.cause}</td></tr>`;}).join('');
+const containers = `<div class="container">
+<p class="text-center h3 mt-5">${data.Deletetr}</p>
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+<div class="table-responsive">
+<table class="table table-hover table-light caption-top">
+<caption>如有恢复或被误删可联系站长恢复</caption>
+<thead class="table-group-divider"><tr><th scope="col">站点</th><th scope="col">地址</th><th scope="col">删除时间</th><th scope="col">原因</th></tr></thead>
+<tbody class="table-group-divider">${colss}</tbody>
+</table>
+</div>
+</div>
+</div>`;
+$('#s-Links').empty().append(doc,container,containers);
+$('[data-bs-toggle="popover"]').each(function() {
+$(this).popover({trigger: 'hover',placement: 'auto',delay: { "show": 100, "hide": 300 }});
+});
+});
+$('#s-Links').empty().append(spinner);
+}
+$(function () {
+const hash = window.location.hash.slice(1);
+if (hash) {
+tabs(hash);
+const $element = $(`#${hash}`);
+if ($element) {$element.click()}
+} else {
+tabs('News');
+}
+});
+
+});
+</script>
+  <script> (function(){ var bp = document.createElement('script'); var curProtocol = window.location.protocol.split(':')[0]; if (curProtocol === 'https') { bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; } else { bp.src = 'http://push.zhanzhang.baidu.com/push.js'; } var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s); })(); </script>
+</body>
+</html>
