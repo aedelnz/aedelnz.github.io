@@ -1,115 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>魔法禁书 - とある魔術の禁書目録（インデックス）</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
+.file-list {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
 
-    .file-list {
-      background-color: #fff;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
+.file-list-header {
+  display: flex;
+  background-color: #f1f3f5;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: #495057;
+}
 
-    .file-list-header {
-      display: flex;
-      background-color: #f1f3f5;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      color: #495057;
-    }
+.column-name {
+  flex: 1;
+}
 
-    .column-name {
-      flex: 1;
-    }
+.column-size, .column-modified {
+  flex: 0 0 25%;
+}
 
-    .column-size,
-    .column-modified {
-      flex: 0 0 25%;
-    }
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
+li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
 
-    li {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 1rem;
-      background-color: #fff;
-      border-bottom: 1px solid #e9ecef;
-    }
+li:last-child {
+  border-bottom: none;
+}
 
-    li:last-child {
-      border-bottom: none;
-    }
+li:hover {
+  background-color: #f8f9fa;
+}
 
-    li:hover {
-      background-color: #f8f9fa;
-    }
+.file-icon {
+  margin-right: 0.5rem;
+}
 
-    .file-icon {
-      width: 25px;
-    height: 25px;
-      margin-right: 0.5rem;
-    }
+.file-name {
+  flex: 1;
+  color: #228be6;
+}
 
-    .file-name {
-      flex: 1;
-      color: #228be6;
-    }
+.file-size, .file-modified {
+  flex: 0 0 25%;
+  color: #868e96;
+}
 
-    .file-size,
-    .file-modified {
-      flex: 0 0 25%;
-      color: #868e96;
-    }
-
-    .file-name:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .box {
-      margin-top: 1rem;
-      padding: 0.75rem 1rem;
-      background-color: #fff;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border-bottom: 1px solid #e9ecef;
-    }
-  </style>
+.file-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
 </head>
-
 <body>
   <div class="container">
     <h1>ディレクトリ ネットワーク ディスク</h1>
@@ -121,25 +99,132 @@
       </div>
       <ul id="fileList"></ul>
     </div>
-    <div class="box">
+    <div>
       <h2>订阅地址</h2>
-      <p><a href="Node/Shadowrocket">Shadowrocket</a></p>
-      <p><a href="Node/Shadowrockets">Shadowrockets</a></p>
-      <p><a href="Node/Shadowrocketss">Shadowrocketss</a></p>
-    </div>
+      <a href="Node/Shadowrocket">Shadowrocket</a>
+      </div>
   </div>
 <script>
-(function(){
-const gettype=(type)=>{return type==='1'?'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"></path></svg>':'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M280-200h400q-4-49-30-90t-68-65l38-68q2-4 1-9t-6-7q-4-2-8.5-1t-6.5 5l-39 70q-20-8-40-12.5t-41-4.5q-21 0-41 4.5T399-365l-39-70q-2-5-6.5-5t-9.5 2l-4 15 38 68q-42 24-68 65t-30 90Zm110-60q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6Zm180 0q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"></path></svg>'};
-const convertISOToDateComponents=isoString=>{const date=new Date(isoString);const year=date.getFullYear();const month=(date.getMonth()+1).toString().padStart(2,'0');const day=date.getDate().toString().padStart(2,'0');const hour=date.getHours().toString().padStart(2,'0');const minute=date.getMinutes().toString().padStart(2,'0');return`${year}-${month}-${day}${hour}:${minute}`};
-const formatSize=(sizeInBytes)=>{const sizes=['Bytes','KB','MB','GB','TB'];if(sizeInBytes==0)return'0 Byte';let i=parseInt(Math.floor(Math.log(sizeInBytes)/Math.log(1024)));if(i==0)return`${sizeInBytes}${sizes[i]}`;return`${(sizeInBytes/Math.pow(1024,i)).toFixed(1)}${sizes[i]}`};
-const fetchApi=async(url,options)=>{try{const response=await fetch(url,options);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('请求失败:',error)}};
-const getHeaders =()=>{const headers = new Headers();headers.append('Accept', 'application/json, text/plain, */*');headers.append('content-type', 'application/json;charset=UTF-8');return headers;};
-const listFiles=async()=>{const headers=getHeaders();const data=JSON.stringify({"path":"/doc/魔法禁书","password":"","page":1,"per_page":20,"refresh":false});const options={method:'POST',headers:headers,body:data};const result=await fetchApi('https://c.jixiejidiguan.top/api/fs/list',options);console.log(result);const fileList=document.getElementById('fileList');fileList.innerHTML=result.data.content.map(result=>`<li><span class="file-icon">${gettype(result.type)}</span><a class="file-name"href="https://c.jixiejidiguan.top/doc/%E9%AD%94%E6%B3%95%E7%A6%81%E4%B9%A6/${result.name}">${result.name}</a><span class="file-size">${formatSize(result.size)}</span><span class="file-modified">${convertISOToDateComponents(result.modified)}</span></li>`).join('')};
-document.addEventListener('DOMContentLoaded', listFiles);
-})();
+const files = [
+  { name: 'Documents', type: 'folder', size: '-', modified: '2023-06-15 10:30' },
+  { name: 'Images', type: 'folder', size: '-', modified: '2023-06-14 15:45' },
+  { name: 'report.pdf', type: 'file', size: '2.5 MB', modified: '2023-06-13 09:20' },
+  { name: 'presentation.pptx', type: 'file', size: '5.1 MB', modified: '2023-06-12 14:10' },
+  { name: 'budget.xlsx', type: 'file', size: '1.8 MB', modified: '2023-06-11 11:55' },
+];
 
+function getFileIcon(type) {
+  return type === 'folder' 
+    ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>'
+    : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>';
+}
+
+function renderFileList() {
+  const fileList = document.getElementById('fileList');
+  fileList.innerHTML = files.map(file => `
+    <li>
+      <span class="file-icon">${getFileIcon(file.type)}</span>
+      <span class="file-name">${file.name}</span>
+      <span class="file-size">${file.size}</span>
+      <span class="file-modified">${file.modified}</span>
+    </li>
+  `).join('');
+}
+
+function convertISOToDateComponents(isoString) {
+    // 解析ISO格式的日期时间字符串
+    const date = new Date(isoString);
+
+    // 获取年、月、日、时、分
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1; // getMonth() 返回的月份是从0开始的
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+
+    // 返回格式化后的日期和时间
+    return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')} ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+}
+
+function formatSize(sizeInBytes) {
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (sizeInBytes == 0) return '0 Byte';
+    let i = parseInt(Math.floor(Math.log(sizeInBytes) / Math.log(1024)));
+    if (i == 0) return sizeInBytes + ' ' + sizes[i];
+    return (sizeInBytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+}
+// 封装 fetch 请求函数
+async function fetchApi(url, options) {
+  try {
+    const response = await fetch(url, options);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json(); // 假设响应内容是 JSON 格式
+  } catch (error) {
+    console.error('请求失败:', error);
+  }
+}
+
+
+
+
+// 设置请求头
+function getHeaders() {
+  const headers = new Headers();
+  headers.append('User-Agent', 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36');
+  headers.append('Accept', 'application/json, text/plain, */*');
+  headers.append('Accept-Encoding', 'gzip, deflate, br, zstd');
+  headers.append('sec-ch-ua-platform', '"Android"');
+  headers.append('authorization', ''); // 这里需要填入实际的授权信息
+  headers.append('sec-ch-ua', '"Chromium";v="130", "Android WebView";v="130", "Not?A_Brand";v="99"');
+  headers.append('content-type', 'application/json;charset=UTF-8');
+  headers.append('sec-ch-ua-mobile', '?1');
+  headers.append('origin', 'https://c.jixiejidiguan.top');
+  headers.append('x-requested-with', 'mark.via');
+  headers.append('sec-fetch-site', 'same-origin');
+  headers.append('sec-fetch-mode', 'cors');
+  headers.append('sec-fetch-dest', 'empty');
+  headers.append('referer', 'https://c.jixiejidiguan.top/doc/%E9%AD%94%E6%B3%95%E7%A6%81%E4%B9%A6');
+  headers.append('accept-language', 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7');
+  headers.append('priority', 'u=1, i');
+  headers.append('Cookie', '_ga=GA1.1.1538339866.1726925067; _ga_LBL73644Y9=GS1.1.1727513629.14.0.1727513629.0.0.0');
+  return headers;
+}
+
+// 发起请求
+async function listFiles() {
+  const headers = getHeaders();
+  const data = JSON.stringify({
+    "path": "/doc/魔法禁书",
+    "password": "",
+    "page": 1,
+    "per_page": 20,
+    "refresh": false
+  });
+
+  const options = {
+    method: 'POST',
+    headers: headers,
+    body: data
+  };
+  const result = await fetchApi('https://c.jixiejidiguan.top/api/fs/list', options);
+  console.log(result);
+  const fileList = document.getElementById('fileList');
+  fileList.innerHTML = result.data.content.map(result => `
+    <li>
+      <span class="file-icon"></span>
+      <span class="file-name">${result.name}</span>
+      <span class="file-size">${formatSize(result.size)}</span>
+      <span class="file-modified">${convertISOToDateComponents(result.modified)}</span>
+    </li>
+  `).join('');
+}
+
+// 调用函数
+listFiles();
+
+document.addEventListener('DOMContentLoaded', renderFileList);
 </script>
 </body>
-
 </html>
