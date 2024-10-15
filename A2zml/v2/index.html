@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1">
+<meta name="description" content="一个非常巨大的、可随处漫步的，也相当吓人的城堡，有些塔式建筑和垛口。就像卫斯理家的洞穴屋，这不是麻瓜可以建造的建筑物，因为它需要魔法的支持才能做到。">
+<meta name="keywords" content="魔法禁书，霍格沃兹魔法">
 <title>魔法禁书 - とある魔術の禁書目録（インデックス）</title>
 <style>
 body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-color:#f4f4f4}.container{max-width:800px;margin:2rem auto;padding:0 1rem}h1{font-size:1.5rem;margin-bottom:1rem}h2{font-size:1.2rem;margin-bottom:1rem}.file-list{background-color:#fff;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,0.1);overflow:hidden}.file-list-header{display:flex;background-color:#f1f3f5;padding:0.5rem 1rem;font-weight:bold;color:#495057}.column-name{flex:1}.column-size,.column-modified{flex:0 0 25%}ul{list-style-type:none;padding:0;margin:0}li,.vcard{display:flex;align-items:center;padding:0.75rem 1rem;background-color:#fff;border-bottom:1px solid #e9ecef}a{text-decoration:none}li:last-child{border-bottom:none}li:hover{background-color:#f8f9fa}.file-icon{width:25px;height:25px;margin-right:0.5rem}.file-name{flex:1;color:#228be6}.file-size,.file-modified{flex:0 0 25%;color:#868e96}.file-name:hover{text-decoration:underline;cursor:pointer}#share a{color:#ff0000;margin-left:6px;margin-right:6px;font-size:larger}#share a:hover{text-decoration:underline;cursor:pointer}.box{margin-top:1rem;padding:0.75rem 1rem;background-color:#fff;background-color:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.1);overflow:hidden;border-bottom:1px solid #e9ecef}
@@ -18,8 +21,9 @@ body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-
 <div class="file-list-header"><div class="column-name">名前</div><div class="column-size">大きさ</div><div class="column-modified">変更時刻</div></div>
 <ul id="fileList"></ul>
 </div>
-<div class="box">
 <h2>サブスクリプション アドレス <span id="time" style="font-size: small;">更新时间</span></h2>
+<div class="file-list">
+<div class="file-list-header"><div class="column-name">名前</div><div class="column-size">大きさ</div><div class="column-modified">変更時刻</div></div>
 <ul id="subscribe"></ul>
 </div>
 <div class="box">
@@ -48,9 +52,11 @@ const listFiles=async()=>{const headers=getHeaders();const data=JSON.stringify({
 document.addEventListener('DOMContentLoaded', listFiles);
 })();
 (function(){
-const subscribelist = [{name:"encryptcfg_clash_en",url:"Node/encryptcfg_clash_en"},{name:"encryptcfg_clash_global_en",url:"Node/encryptcfg_clash_global_en"},{name:"encryptcfg_en",url:"Node/encryptcfg_en"}];
+const formatSize=(sizeInBytes)=>{const sizes=['Bytes','KB','MB','GB','TB'];if(sizeInBytes==0)return'0 Byte';let i=parseInt(Math.floor(Math.log(sizeInBytes)/Math.log(1024)));if(i==0)return`${sizeInBytes}${sizes[i]}`;return`${(sizeInBytes/Math.pow(1024,i)).toFixed(1)}${sizes[i]}`};
 fetch('Node/time').then(res=>{return res.text()}).then(data=>{document.getElementById('time').innerHTML='最后更新时间：'+data;});
-const list=()=>{document.getElementById('subscribe').innerHTML=subscribelist.map(result=>`<li style="padding: 0.1rem 1rem;"><a class="file-name"href="${result.url}">${result.name}</a></li>`).join('')};
+const list=()=>{fetch('../../folder/api/do.json').then(res=>{return res.json()}).then(data=>{
+document.getElementById('subscribe').innerHTML=data.map(result=>`<li><a class="file-name"href="Node/${result.filename}">${result.filename}</a><span class="file-size">${formatSize(result.size)}</span><span class="file-modified">${result.last_modified}</span></li>`).join('');
+}).catch(err=>{console.log('获取失败',err)})};
 document.addEventListener('DOMContentLoaded', list);
 })();
 (function(){
