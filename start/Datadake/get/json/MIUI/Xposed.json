@@ -1,0 +1,1928 @@
+{
+    "data": {
+        "localSearchRepositories": {
+            "store": [
+                {
+                    "title": "Draw2SaveBanAds\n",
+                    "content": "Ban ads for game named Draw2Save with version v1.1.0.4. Other version do not test.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.example.myapplication",
+                    "Source": "https:\/\/github.com\/helloworld10010\/draw2saveBanADs-xposed-module"
+                },
+                {
+                    "title": "AllTrans\n",
+                    "content": "Like Chrome's translation of webpages, but for Android apps. It replaces ALL TEXT IN AN APP from one language to another at runtime.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/akhil.alltrans",
+                    "Source": "https:\/\/github.com\/akhilkedia\/AllTrans"
+                },
+                {
+                    "title": "\u756a\u8304\u5c0f\u8bf4Web\u670d\u52a1\n",
+                    "content": "\u4e3a\u756a\u8304\u5c0f\u8bf4\u6dfb\u52a0Web\u670d\u52a1\n",
+                    "Website": "https:\/\/github.com\/fengyuecanzhu\/FQWeb",
+                    "Source": "https:\/\/github.com\/fengyuecanzhu\/FQWeb"
+                },
+                {
+                    "title": "\u53fc\u6bdb\u7f51\u6291\u4e91\n",
+                    "content": "\u7f51\u6291\u53fc\u6bdb\u4e91\uff0c\u7f51\u6613\u4e91\u6362\u6e90\u63d2\u4ef6\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.blanke.diaomao163",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.blanke.diaomao163"
+                },
+                {
+                    "title": "\u8054\u74a7\u6a21\u5757\n",
+                    "content": "\u539f\u817e\u7231\u4f18\u8292\u6a21\u5757\n",
+                    "Website": "http:\/\/39.101.174.49\/qqlive?p=57",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/club.youppgd.adhook"
+                },
+                {
+                    "title": "\u95f0\u4e8c\u6708\uff0c\u4e00\u4e2a\u5c0f\u800c\u7f8e\u7684\u5fae\u4fe1\u6a21\u5757\n",
+                    "content": "\u95f0\u4e8c\u6708\uff0c\u4e00\u4e2a\u7b80\u5355\u7684\u5fae\u4fe1\u6a21\u5757\u3002\n",
+                    "Website": "https:\/\/t.me\/leapfebruary",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.r.leapfebruary"
+                },
+                {
+                    "title": "\u5feb\u901f\u6536\u53d6\u8682\u8681\u68ee\u6797\u80fd\u91cf\n",
+                    "content": "\u829d\u9ebb\u7c92-\u5feb\u901f\u6536\u53d6\u8682\u8681\u68ee\u6797\u80fd\u91cf\n",
+                    "Website": "https:\/\/github.com\/constanline\/XQuickEnergy",
+                    "Source": "https:\/\/github.com\/constanline\/XQuickEnergy"
+                },
+                {
+                    "title": "\u7f51\u7edc\u6c11\u5de5\n",
+                    "content": "\u9017\u97f3\u79d2\u62a2\u804a\u5929\u7ea2\u5305\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.worker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.worker"
+                },
+                {
+                    "title": "\u957f\u6c5f\u4e5d\u53f7\n",
+                    "content": "\u9017\u97f3\u76f8\u5173\u9ad8\u8d28\u91cf\u6a21\u5757\r\n\u7f51\u76d8\u5730\u5740\uff1ahttps:\/\/onesicong.lanzoui.com\/b00nwzquh\r\n14\uff0c\u53bb\u9664\u9752\u5c11\u5e74\u5f39\u7a97\r\n12\uff0c\u5168\u5c4f\u6c89\u6d78\u5f0f\u89c2\u770b\u4f53\u9a8c\r\n13\uff0c\u7981\u7528\u53cc\u51fb\u70b9\u8d5e\r\n01\uff0c\u4e0b\u8f7d\u65e0\u6c34\u5370\u89c6\u9891\r\n02\uff0c\u4e0b\u8f7d\u9ad8\u6e05\u97f3\u9891\r\n03\uff0c\u81ea\u52a8\u64ad\u653e\u4e0b\u4e00\u4e2a\r\n04\uff0c\u5feb\u6377\u590d\u5236\u6587\u6848\r\n05\uff0c\u53bb\u9664\u89c6\u9891\u6d41\u5e7f\u544a\r\n06\uff0c\u7981\u6b62\u66f4\u65b0\u5f39\u7a97\r\n07\uff0c\u53ef\u91cd\u547d\u540d\u89c6\u9891\u540d\u79f0\r\n08\uff0c\u8df3\u8fc7\u90e8\u5206\u95ea\u5c4f\u5e7f\u544a\r\n10\uff0c\u8fc7\u6ee4\u89c6\u9891\u6d41\u7684\u76f4\u64ad\r\n11\uff0c\u8fc7\u6ee4\u89c6\u9891\u6d41\u7684\u5173\u952e\u8bcd\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.demo",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.demo"
+                },
+                {
+                    "title": "QAuxiliary\n",
+                    "content": "\u4e3a QQ \u548c TIM \u6dfb\u52a0\u66f4\u591a\u529f\u80fd\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.qauxv",
+                    "Source": "https:\/\/github.com\/cinit\/QAuxiliary"
+                },
+                {
+                    "title": "PlusNE\n",
+                    "content": "soul\t\u957f\u6309\u53f3\u8fb9\u8868\u60c5\u6309\u94ae\u53d1\u9001\u6e38\u620f\u4f5c\u5f0a\t\u9ed8\u8ba4\u6253\u5f00,\u4e0d\u9700\u8981\u8bbe\u7f6e\r\nsoul\t\u57fa\u672c\u8bbe\u7f6e\t\r\nsoul\t\u7981\u6b62\u68c0\u67e5\u66f4\u65b0\t\r\nsoul\t\u53bb\u9664\u9752\u5c11\u5e74\u5f39\u7a97\t\r\nsoul\t\u8bed\u97f3\u76f8\u5173\t\r\nsoul\t\u53bb\u9664\u77ac\u95f4\u672c\u5730\u8bed\u97f3\u622a\u53d6\u65f6\u957f\t\r\nsoul\t\u6279\u91cf\u53d6\u6d88\u5173\u6ce8\t\r\nsoul\t\u6279\u91cf\u53d6\u6d88\u5173\u6ce8\t\u70b9\u51fb\u5173\u6ce8\u5217\u8868,\u6ed1\u52a8\u65e2\u6267\u884c\u53d6\u6d88\r\nsoul\t\u804a\u5929\u76f8\u5173\t\r\nsoul\t\u89e3\u9664\u804a\u5929\u9650\u5236\t\u53bb\u9664\u7b2c\u4e00\u6b21\u5fc5\u987b\u9001\u793c\u7269\u624d\u80fd\u53d1\u9001\u4fe1\u606f\r\nsoul\t\u6bcf30\u79d2\u663e\u793a\u4e00\u6b21\u804a\u5929\u65f6\u95f4\t\r\nsoul\t\u4fee\u6539\u804a\u5929\u6c14\u6ce1\t\u514dSoul\u4f1a\u5458\r\nsoul\t\u56de\u8f66\u952e\u53d1\u9001\u6d88\u606f\t\r\nsoul\t\u6821\u56ed\u5427\u6743\u9650\t\u53ef\u70b9\u51fb\u5934\u50cf\u8fdb\u5165\u522b\u4eba\u4e3b\u9875\r\nsoul\t\u672c\u5730\u4fee\u6539\t\r\nsoul\t\u5f00\u542f\u672c\u5730\u4fee\u6539\t\r\nsoul\t\u6211\u5173\u6ce8\u7684\u6570\u91cf\t\u522b\u4eba\u4e0d\u53ef\u89c1\r\nsoul\t\u5173\u6ce8\u6211\u7684\u6570\u91cf\t\u522b\u4eba\u4e0d\u53ef\u89c1\r\nsoul\t\u770b\u8fc7\u6211\u7684\u6570\u91cf\t\u522b\u4eba\u4e0d\u53ef\u89c1\r\nsoul\t\u6700\u65b0\u770b\u8fc7\u6211\u7684\u6570\u91cf\t\u522b\u4eba\u4e0d\u53ef\u89c1\r\nsoul\t\u5f3a\u5236\u5f00\u542f\u6700\u65b0\u77ac\u95f4\u6309\u94ae\t\u4fee\u6539\u540e\u9700\u91cd\u542fSoul\r\nsoul\t\u66ff\u6362\u79c1\u804a\\\u7fa4\u804a\u8bed\u97f3\t\u66ff\u6362\u79c1\u804a\\\u7fa4\u804a\u8bed\u97f3\u6587\u4ef6,\u652f\u6301MP3\r\nsoul\t\u81ea\u5b9a\u4e49\u4f4d\u7f6e\t\u5947\u9047\u94c3\u7b49\u7684\u5b9a\u4f4d\u90fd\u4f1a\u6539\u53d8\r\nsoul\t\u6d3e\u5bf9\u65e0\u9650\u5c0f\u9ec4\u9e2d\t\r\nsoul\t\u6d3e\u5bf9\u76f8\u5173\t\r\nsoul\t\u79d2\u6362\u6d3e\u5bf9\t\u53bb\u966415\u79d2\u968f\u673a\u6362\u6d3e\u5bf9\u9650\u5236\r\nsoul\t\u6d3e\u5bf9\u6d88\u606f\u53d1\u9001\u6dfb\u52a0\u5c0f\u5c3e\u5df4\t\u652f\u6301\u65f6\u95f4\u53d8\u91cf{tim\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.nnnen.plusne",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.nnnen.plusne"
+                },
+                {
+                    "title": "TSBattery\n",
+                    "content": "TSBattery \u662f\u4e00\u4e2a\u65e8\u5728\u4f7f QQ\u3001TIM\u3001\u5fae\u4fe1 \u53d8\u5f97\u66f4\u7701\u7535\u7684\u5f00\u6e90 Xposed \u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/fankes\/TSBattery",
+                    "Source": "https:\/\/github.com\/fankes\/TSBattery"
+                },
+                {
+                    "title": "XAutoDaily\n",
+                    "content": "\u4e00\u4e2a\u517c\u5bb9QQ\u5927\u90e8\u5206\u7248\u672c\u7684\u5f00\u6e90\u7b7e\u5230 Xposed \u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/LuckyPray\/XAutoDaily",
+                    "Source": "https:\/\/github.com\/teble\/XAutoDaily"
+                },
+                {
+                    "title": "ZuiYouHook\n",
+                    "content": "\u6700\u53f3\u53bb\u5e7f\u544a\/\u89c6\u9891\u4e0b\u8f7d\u6c34\u5370\/\u9752\u5c11\u5e74\u5f39\u7a97\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.xiaoniu.zuiyouhook",
+                    "Source": "https:\/\/github.com\/klxiaoniu\/ZuiYouHook"
+                },
+                {
+                    "title": "Re Telegram\n",
+                    "content": "An Xposed module to enhance the Telegram\r\nSupported Telegram, Nekogram and other third client\n",
+                    "Website": "https:\/\/github.com\/Nep-Timeline\/Re-Telegram\/issues",
+                    "Source": "https:\/\/github.com\/Nep-Timeline\/Re-Telegram"
+                },
+                {
+                    "title": "\u9177\u8dd1\u4e0d\u770b\u5e7f\u544a\n",
+                    "content": "\u5929\u5929\u9177\u8dd1\u770b\u5e7f\u544a\u9886\u5956\u52b1\uff0c\u5e7f\u544a\u9875\u9762\u5f39\u51fa1\u79d2\u540e\u81ea\u52a8\u5173\u95ed\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.ttkp",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.ttkp"
+                },
+                {
+                    "title": "ChromeXt\n",
+                    "content": "Add UserScript and DevTools supports to Chromium based and WebView based browsers using Xposed framework.\r\n\r\nFor example, Android Chrome, Edge, Vivaldi, Bromite, and FOSS browsers are supported.\r\nSee README for some other bonus features.\n",
+                    "Website": "https:\/\/github.com\/JingMatrix\/ChromeXt",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/org.matrix.chromext"
+                },
+                {
+                    "title": "StatusBar Lyric\n",
+                    "content": "StatusBar Lyric \/ \u58a8\u2022\u72b6\u6001\u680f\u6b4c\u8bcd\n",
+                    "Website": "https:\/\/github.com\/Block-Network\/StatusBarLyric\/",
+                    "Source": "https:\/\/github.com\/577fkj\/StatusBarLyric"
+                },
+                {
+                    "title": "QuoteLockX\n",
+                    "content": "Displays quotes on your lockscreen, because why not.\r\n\r\nA continuously maintained project forked from archived Quotelock.\n",
+                    "Website": "https:\/\/github.com\/Yubyf\/QuoteLockX\/issues",
+                    "Source": "https:\/\/github.com\/Yubyf\/QuoteLockX"
+                },
+                {
+                    "title": "Lyric Getter\n",
+                    "content": "Lyric Getter\n",
+                    "Website": "https:\/\/github.com\/xiaowine\/Lyric-Getter",
+                    "Source": "https:\/\/github.com\/xiaowine\/Lyric-Getter"
+                },
+                {
+                    "title": "\u7535\u62a5\u52a9\u624b\n",
+                    "content": "Telegram Helper (\u7535\u62a5\u52a9\u624b)\r\n\u4ec5\u652f\u6301\u672a\u6df7\u6dc6\u3001\u672a\u4fee\u6539 Telegram \u5b98\u65b9\u5f00\u6e90\u65b9\u6cd5\u7684\u5b98\u65b9\u7248\u672c\u548c\u7b2c\u4e09\u65b9\u7248\u672c\n",
+                    "Website": "https:\/\/t.me\/ReFantasyCity",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.unexpected.th"
+                },
+                {
+                    "title": "Telionslate\n",
+                    "content": "\u89e3\u9664\u8c37\u6b4c\u79bb\u7ebf\u7ffb\u8bd1\u5728\u5927\u9646\u7684\u9650\u5236\u5e76\u4f7f\u7528\u5c4f\u5e55\u7ffb\u8bd1!\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ailr.SeemNetOfTranslate",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ailr.SeemNetOfTranslate"
+                },
+                {
+                    "title": "NGA \u51c0\u5316\u6a21\u5757 \u652f\u6301 Lspatch\n",
+                    "content": "\u5c4f\u853dNGA\u8bba\u575bAPP\u7684\u7edd\u5927\u90e8\u5206\u5185\u5d4c\u5e7f\u544a\u4ee5\u53ca\u5f00\u5c4f\u5e7f\u544a\n",
+                    "Website": "https:\/\/github.com\/chr233\/PureNGA\/issues",
+                    "Source": "https:\/\/github.com\/chr233\/PureNGA"
+                },
+                {
+                    "title": "IGExperiments\n",
+                    "content": "IGExperiments Allow you to enable developer options in Instagram! When the module is enabled, kill Instagram and long press home button. You will be able go to developer page and sometimes other stuff. It might not work for all versions because clas\u2026\n",
+                    "Website": "https:\/\/github.com\/xHookman\/IGexperiments",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.chacha.igexperiments"
+                },
+                {
+                    "title": "\u78a7\u84dd\u822a\u7ebf\u53cd\u548c\u8c10\n",
+                    "content": "AzurlaneUncensored \u78a7\u84dd\u822a\u7ebf\u53cd\u548c\u8c10\n",
+                    "Website": "https:\/\/github.com\/liusj5257\/azurlane_anti_name",
+                    "Source": "https:\/\/github.com\/liusj5257\/azurlane_anti_name"
+                },
+                {
+                    "title": "MIUI\u81ea\u7531\u5c0f\u7a97X \/ MiuiFreeFormX\n",
+                    "content": "MIUI\u5c0f\u7a97\u589e\u5f3a\u6269\u5c55\u6a21\u5757\uff0c\u5b9e\u73b0\u7c7bFlyme\u7684\u624b\u52bf\u64cd\u4f5c\u903b\u8f91\n",
+                    "Website": "https:\/\/github.com\/LiuYiGL\/MiFreeFormX",
+                    "Source": "https:\/\/github.com\/LiuYiGL\/MiFreeFormX"
+                },
+                {
+                    "title": "Yet Another Mi-FreeForm \/ \u53e6\u4e00\u4e2a\u7c73\u7a97\n",
+                    "content": "\u53e6\u4e00\u4e2a\u7c73\u7a97\r\n\u4e3a\u7c7b\u539f\u751f\u7cfb\u7edf\u8bbe\u8ba1\u7684\u5c0f\u7a97\r\n\u76ee\u524d\u4ec5\u652f\u6301 Android 12-13\n",
+                    "Website": "https:\/\/github.com\/duzhaokun123\/YAMF",
+                    "Source": "https:\/\/github.com\/duzhaokun123\/YAMF"
+                },
+                {
+                    "title": "\u58a8\u2022\u606f\uff08\u606f\u5c4f\u6b4c\u8bcd\uff09\n",
+                    "content": "\u5728\u652f\u6301\u7684\u606f\u5c4f\u4e0a\u663e\u793a\u6b4c\u8bcd\u548c\u90e8\u5206\u589e\u5f3a\u529f\u80fd\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.aodlyric.xiaowine",
+                    "Source": "https:\/\/github.com\/Wine-Network\/AOD_For_MIUI"
+                },
+                {
+                    "title": "\u9690\u85cf\u5e94\u7528\u5217\u8868 \/ Hide My Applist\n",
+                    "content": "Reject applist requests\r\n\u963b\u6b62\u83b7\u53d6\u5e94\u7528\u5217\u8868\n",
+                    "Website": "https:\/\/github.com\/Dr-TSNG\/Hide-My-Applist",
+                    "Source": "https:\/\/github.com\/Dr-TSNG\/Hide-My-Applist"
+                },
+                {
+                    "title": "Alfa Bank Patcher\n",
+                    "content": "\u0421\u043a\u0440\u044b\u0432\u0430\u0435\u0442 \u0440\u0435\u043a\u043b\u0430\u043c\u0443 \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u0410\u043b\u044c\u0444\u0430 \u0411\u0430\u043d\u043a, \u0430 \u0442\u0430\u043a \u0436\u0435 \u0440\u044f\u0434 \u0434\u0440\u0443\u0433\u0438\u0445 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432.\n",
+                    "Website": "https:\/\/4pda.to\/forum\/index.php?showtopic=603033 &amp;view=findpost &amp;p=117766501",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.bluecat.alfabankpatcher"
+                },
+                {
+                    "title": "Mir Pay Security\n",
+                    "content": "\u041e\u0431\u0445\u043e\u0434 \u043f\u0440\u043e\u0432\u0435\u0440\u043e\u043a \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f Mir Pay\n",
+                    "Website": "https:\/\/4pda.to\/forum\/index.php?showtopic=603033 &amp;view=findpost &amp;p=117340204",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.bluecat.mirpaysecurity"
+                },
+                {
+                    "title": "Sberbank Patcher\n",
+                    "content": "\u0420\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u0421\u0431\u0435\u0440\u0411\u0430\u043d\u043a.\n",
+                    "Website": "https:\/\/t.me\/+TfQezz2RmU9ytDvd",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.bluecat.sberbankpatcher"
+                },
+                {
+                    "title": "Megafon Cleaner\n",
+                    "content": "\u0421\u043a\u0440\u044b\u0442\u0438\u0435 \u0431\u0430\u043d\u043d\u0435\u0440\u043e\u0432 \u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u0439 \u0432 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0438 \u041c\u0435\u0433\u0430\u0444\u043e\u043d\n",
+                    "Website": "https:\/\/4pda.to\/forum\/index.php?showtopic=603033 &amp;view=findpost &amp;p=111257541",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.bluecat.megafoncleaner"
+                },
+                {
+                    "title": "\u8682\u8681\u68ee\u6797\u5feb\u901f\u6536\u53d6\u80fd\u91cf\n",
+                    "content": "#\u505c\u66f4\u4e86 image\r\nimage\r\nimage\r\nimage\r\nimage\r\nimage\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/pansong291.xposed.quickenergy",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/pansong291.xposed.quickenergy"
+                },
+                {
+                    "title": "Cemiuiler\n",
+                    "content": "\u8ba9 MIUI \u518d\u6b21\u4f1f\u5927\uff01\r\nMake MIUI Great Again!\n",
+                    "Website": "https:\/\/cemiuiler.sevtinge.cc\/",
+                    "Source": "https:\/\/github.com\/Sevtinge\/Cemiuiler"
+                },
+                {
+                    "title": "QDReadHook\n",
+                    "content": "\u8d77\u70b9\u9605\u8bfb-\u81ea\u5b9a\u4e49\u589e\u5f3a\u529f\u80fd\r\n1.\u4e3b\u8981\u529f\u80fd\r\n2.\u5e7f\u544a\u76f8\u5173\r\n3.\u95ea\u5c4f\u9875\u76f8\u5173\r\n4.\u9690\u85cf\u63a7\u4ef6\r\n5.\u66ff\u6362\u51c0\u5316\r\n\r\n\u76ee\u524d\u652f\u6301 758+ \u6b63\u5f0f\u7248\n",
+                    "Website": "https:\/\/github.com\/xihan123\/QDReadHook",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.xihan.qdds"
+                },
+                {
+                    "title": "PPBuff\n",
+                    "content": "\u76ae\u76ae\u641e\u7b11 &amp;\u6700\u53f3\u589e\u5f3a\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.lliiooll.ppbuff",
+                    "Source": "https:\/\/github.com\/lliioollcn\/PPBuff"
+                },
+                {
+                    "title": "StarVoyager\n",
+                    "content": "\u4e3a\u6211\u7684Mix4\u7f16\u5199\u7684\u4e00\u4e2a\u81ea\u7528\u578b\u5927\u6742\u70e9\u6a21\u5757\r\nA xposed module written for my Mix4\n",
+                    "Website": "https:\/\/github.com\/hosizoraru\/StarVoyager",
+                    "Source": "https:\/\/github.com\/hosizoraru\/StarVoyager"
+                },
+                {
+                    "title": "Messenger Pro\n",
+                    "content": "A mod that enhances Facebook Messenger with loads of powerful features !\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/tn.amin.mpro2",
+                    "Source": "https:\/\/github.com\/Mino260806\/MessengerPro\/"
+                },
+                {
+                    "title": "HookFanqie\n",
+                    "content": "\u7ed9\u756a\u8304\u5c0f\u8bf4(com.dragon.read)\u53bb\u5e7f\u544a\uff0c\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookfanqie",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookfanqie"
+                },
+                {
+                    "title": "\u8981\u59b3\u547d\u4e09\u5343Xposed\u6a21\u7d44\n",
+                    "content": "- \u4e00\u52a05T\/7Pro\/8Pro\u6c27OS, \u6296\u97f3, \u6296\u97f3\u8c37\u6b4c\u7248, \u6296\u97f3\u6975\u901f\u7248, \u6296\u97f3\u706b\u5c71\u7248, Tik Tok, Musical.ly, \u5feb\u624b, \u5feb\u624b\u6975\u901f\u7248, \u5feb\u624b\u570b\u969b\u7248, \u5feb\u624b\u5927\u5c4f\u7248, \u5c0f\u8349, Tumblr, \u76ae\u76ae\u641e\u7b11, \u76ae\u76ae\u8766, \u5fae\u4fe1, MX Taka Tak, Snacky Taka Tak, Telegram, Likee, Likee Lite, SnackVideo, \u6dd8\u5bf6 \u589e\u5f37\u63d2\u4ef6\r\n- Extension for One Plus 5T\/7Pro\/8Pro Oxygen OS, Aweme, Aweme Google Play, HuoShan, Aweme Lite,  Tik Tok, Musical.ly, Kwai(CN), Kwai Lite, Kwai(Google Play), Kwai TV, T66Y, Tumblr, NeiHanDuanZi,SuperB WeChat, MX Taka Tak, Snacky Taka Tak, Telegram, Likee, Likee Lite, SnackVideo, TaoBao\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.kwaiching.hook",
+                    "Source": "http:\/\/www.starsdisk.com\/space_kwaiching.html"
+                },
+                {
+                    "title": "MaxFreeForm\n",
+                    "content": "\u4e3a\u5404\u79cdMIUI13\u8bbe\u5907\u89e3\u9664\u591a\u5c0f\u7a97\u9650\u5236\r\nUnlock multi freeform limits for MIUI 13 devices\n",
+                    "Website": "https:\/\/github.com\/YifePlayte\/MaxFreeForm",
+                    "Source": "https:\/\/github.com\/YifePlayte\/MaxFreeForm"
+                },
+                {
+                    "title": "ModemPro \u57fa\u5e26\u8fdb\u5316\n",
+                    "content": "ModemPro MIUI\u57fa\u5e26\u8fdb\u5316\r\n\u4e3a\u57fa\u5e26\u589e\u52a0\u4e00\u4e9b\u529f\u80fd\n",
+                    "Website": "https:\/\/github.com\/Weverses\/ModemPro",
+                    "Source": "https:\/\/github.com\/Weverses\/ModemPro"
+                },
+                {
+                    "title": "HookCimoc\n",
+                    "content": "\u7ed9Cimoc\u6f2b\u753b\u53bb\u5e7f\u544a\uff0c\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookcimoc",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookcimoc"
+                },
+                {
+                    "title": "KnoxPatch\n",
+                    "content": "Get Knox features working again in your rooted Samsung Galaxy device.\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/app-xposed-magisk-knoxpatch-v0-3-6-restore-samsung-knox-features.4549179\/",
+                    "Source": "https:\/\/github.com\/BlackMesa123\/KnoxPatch"
+                },
+                {
+                    "title": "\u65cb\u98ce\u52a0\u901f\u5668 &amp;&amp;\u871c\u8702\u52a0\u901f\u5668VIP\u7834\u89e3\n",
+                    "content": "\u65cb\u98ce\u52a0\u901f\u5668 &amp;&amp;\u871c\u8702\u52a0\u901f\u5668VIP\u7834\u89e3 \u652f\u6301\u6240\u6709\u7248\u672c\u65cb\u98ce\u52a0\u901f\u5668\u548c\u871c\u8702\u52a0\u901f\u5668VIP\u7834\u89e3 \u6a21\u5757\u95ee\u9898\u53cd\u9988\uff1a\u73a9\u673a\u7834\u89e3QQ\u7fa4578389871\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.somebody.vipFucker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.somebody.vipFucker"
+                },
+                {
+                    "title": "HookPicACG\n",
+                    "content": "\u7ed9\u54d4\u5494\u53bb\u5e7f\u544a\uff0c\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookpicacg",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.hookpicacg"
+                },
+                {
+                    "title": "\u94a5\u5319\u5b9d\u6362\u673a\u52a9\u624b\n",
+                    "content": "\u94a5\u5319\u5b9d\u6362\u673a\u52a9\u624b\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.ysb_helper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.ysb_helper"
+                },
+                {
+                    "title": "\u5730\u4e3b\u4e0d\u770b\u5e7f\u544a\n",
+                    "content": "\u6b22\u4e50\u6597\u5730\u4e3b\u770b\u5e7f\u544a\u9886\u5956\u52b1\uff0c\u5e7f\u544a\u9875\u9762\u5f39\u51fa1\u79d2\u540e\u81ea\u52a8\u5173\u95ed\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.hlddz",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.hlddz"
+                },
+                {
+                    "title": "BFunHelper\n",
+                    "content": "BFunHelper\u3010B\u53cb\u5c0f\u52a9\u624b-just for fun\u3011 \u9002\u914dB\u7ad9\u7248\u672c [7.36.0] \u5f53\u524d\u5b9e\u73b0\u529f\u80fd\uff0c\u9002\u914d\u7248\u672c \u8bc4\u8bba\u533a\u56fe\u7247\u4e0b\u8f7d TODO_LIST 0\u8d5e\u622a\u56fe\u52a9\u624b \u7247\u54e5\u4e0d\u8981 \u4e0d\u8981\u5728\u8fd9\u91cc@\u6765@\u53bb\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zxl.bfunhelper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zxl.bfunhelper"
+                },
+                {
+                    "title": "WeXposed \uff08\u5faeX\u6a21\u5757\uff09\n",
+                    "content": "com.fkzhang.wechatxposed \u4e0b\u8f7d\u955c\u50cf (Download mirrors): http:\/\/0i.gs\/fkz https:\/\/pan.lanzou.com\/b44314 https:\/\/mega.nz\/#F!2lxySJbA!Yk_SfUikRqtQcwKCXyml_w https:\/\/sourceforge.net\/projects\/wxposed\/files\/ \u865a\u62df\u6846\u67b6\uff1a\r\n\u5982\u679c\u624b\u673a\u4e0d\u80fdroot\u6216\u4e0d\u80fd\u5b89\u88c5xposed\u6846\u67b6 \u53ef\u4ee5\u8bd5\u8bd5\u4ee5\u4e0b\u865a\u62df\u6846\u67b6 \u4e0d\u80fd\u4fdd\u8bc1100%\u517c\u5bb9 h\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fkzhang.wechatxposed",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fkzhang.wechatxposed"
+                },
+                {
+                    "title": "Geergit - Protect Your Privacy\n",
+                    "content": "The main aim is to spoof the values from third party apps which tracks users and their personal data.\n",
+                    "Website": "https:\/\/github.com\/pyshivam\/geergit-discussion\/issues",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.pyshivam.geergit"
+                },
+                {
+                    "title": "LuckyTool\n",
+                    "content": "\u5bf9ColorOS\u7cfb\u7edf\u8fdb\u884c\u7684\u6269\u5c55\u4f18\u5316\u7684Xposed\u6a21\u5757\r\nXposed module for extended optimization of ColorOS system\n",
+                    "Website": "https:\/\/luckyzyx.github.io\/LuckyTool_Doc",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.luckyzyx.luckytool"
+                },
+                {
+                    "title": "TaskLabelAsTaskTitle\n",
+                    "content": "use taskDescription.label as task title in recent task list\n",
+                    "Website": "https:\/\/github.com\/duzhaokun123\/TaskLabelAsTaskTitle",
+                    "Source": "https:\/\/github.com\/duzhaokun123\/TaskLabelAsTaskTitle"
+                },
+                {
+                    "title": "Pseudo DC Dimming\n",
+                    "content": "Enable alternative modulation (likely DC-like) on low brightness for some OLED displays by using software brightness gain.\r\n\u901a\u8fc7\u8f6f\u4ef6\u4eae\u5ea6\u589e\u76ca\u4e3a\u90e8\u5206 OLED \u5c4f\u5e55\u5728\u4f4e\u4eae\u5ea6\u4e0b\u542f\u7528\u66ff\u4ee3\uff08\u7c7b DC\uff09\u8c03\u5236\u65b9\u5f0f\u3002\n",
+                    "Website": "https:\/\/github.com\/dantmnf\/PseudoDCDimming",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/xyz.cirno.pseudodcdimming"
+                },
+                {
+                    "title": "Unlock MIUI IME\/\u89e3\u9501 MIUI \u952e\u76d8\u4f18\u5316\n",
+                    "content": "Unlock MIUI Enhance keyboard\r\n\u89e3\u9501 MIUI \u5168\u9762\u5c4f\u4f18\u5316\u9650\u5236\n",
+                    "Website": "https:\/\/github.com\/RC1844\/MIUI_IME_Unlock",
+                    "Source": "https:\/\/github.com\/RC1844\/MIUI_IME_Unlock"
+                },
+                {
+                    "title": "UC \u6d4f\u89c8\u5668\u4ee3\u7406\u6293\u53d6\n",
+                    "content": "UC \u6d4f\u89c8\u5668\u514d\u6d41\u4ee3\u7406\u4fe1\u606f\u6293\u53d6\n",
+                    "Website": "https:\/\/github.com\/unexpecteds\/UCProxyCapture",
+                    "Source": "https:\/\/github.com\/unexpecteds\/UCProxyCapture"
+                },
+                {
+                    "title": "UnlockMIUICameraSnap\n",
+                    "content": "\u89e3\u9501\/\u8865\u5168 MIUI \u8857\u62cd\u6a21\u5f0f\n",
+                    "Website": "https:\/\/github.com\/GSWXXN\/UnlockMIUICameraSnap",
+                    "Source": "https:\/\/github.com\/GSWXXN\/UnlockMIUICameraSnap"
+                },
+                {
+                    "title": "\u7231\u7f8e\u5267\u6a21\u5757\n",
+                    "content": "\u7231\u7f8e\u5267\u6c38\u4e45\u4f1a\u5458\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.tcgg.imjhook",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.tcgg.imjhook"
+                },
+                {
+                    "title": "\u7cca\u8138WeChat\n",
+                    "content": "\u5fae\u4fe1\u7cca\u8138\u6a21\u5757\u3002\u9690\u85cf\u7279\u5b9a\u7528\u6237\u7684\u804a\u5929\u8bb0\u5f55\uff0c\u9632\u6b62\u79c1\u5bc6\u7684\u804a\u5929\u88ab\u7b2c\u4e09\u4eba\u5077\u770b\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.lu.wxmask",
+                    "Source": "https:\/\/github.com\/Mingyueyixi\/MaskWechat"
+                },
+                {
+                    "title": "Dia\n",
+                    "content": "For App debug\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/dialog.box",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/dialog.box"
+                },
+                {
+                    "title": "SnapEnhance\n",
+                    "content": "An Xposed Mod for Snapchat meant to enhance your experience.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/me.rhunk.snapenhance",
+                    "Source": "https:\/\/github.com\/rhunk\/SnapEnhance"
+                },
+                {
+                    "title": "CustoMIUIzer14(\u7c73\u5ba2)\n",
+                    "content": "\u5ba2\u5236\u5316\u4f60\u7684MIUI - \u652f\u6301\u57fa\u4e8eAndroid 12\u4ee5\u4e0a\u7684 MIUI 13 &amp;14\r\nCustomize MIUI to your liking - For MIUI13 &amp;MIUI14 based on android 12 above\n",
+                    "Website": "https:\/\/github.com\/monwf\/customiuizer",
+                    "Source": "https:\/\/github.com\/monwf\/customiuizer"
+                },
+                {
+                    "title": "\u54d4\u54e9\u53d1\u8bc4\u53cd\u8bc8\n",
+                    "content": "\u54d4\u54e9\u54d4\u54e9\u53d1\u9001\u8bc4\u8bba\u81ea\u52a8\u68c0\u67e5\uff0c\u6062\u590d\u5728\u963f\u74e6\u9686\u7cfb\u7edf\u4e0b\u4f60\u5bf9\u8bc4\u8bba\u72b6\u6001\u7684\u77e5\u60c5\u6743\uff01\n",
+                    "Website": "https:\/\/github.com\/freedom-introvert\/biliSendCommAntifraud\/",
+                    "Source": "https:\/\/github.com\/freedom-introvert\/biliSendCommAntifraud"
+                },
+                {
+                    "title": "\u56e2\u56e2\u52a9\u624b\n",
+                    "content": "\u672c\u6a21\u5757\u4e3a\u56e2\u56e2\u5206\u8eab\u8f85\u52a9\u6a21\u5757\uff0c\u65b9\u4fbf\u5206\u8eab\u4e0e\u7b2c\u4e09\u65b9\u5e94\u7528\u4ea4\u4e92\u3001\u6216\u7b2c\u4e09\u65b9\u5e94\u7528\u4e0e\u5206\u8eab\u4ea4\u4e92\r\n\u5982\uff1a\u5206\u8eab\u4f7f\u7528\u5b98\u65b9wx\u767b\u5f55\u3001\u7b2c\u4e09\u65b9\u5e94\u7528\u4f7f\u7528\u5206\u8eabwx\u767b\u5f55\u7b49\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.tt.auth",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.tt.auth"
+                },
+                {
+                    "title": "flyme10\u52a9\u624b\n",
+                    "content": "\u4e00\u4e2a\u7528\u4e8eflyme10\u7cfb\u7edf\u7684lsposed\u63d2\u4ef6\r\n\u4e3b\u8981\u529f\u80fd\u5982\u4e0b:\r\n\u7981\u7528\u5b89\u88c5APK\u65f6\u5019\u7684\u5b89\u5168\u68c0\u67e5\r\n\u4f7f\u7528\u539f\u751f\u7684apk\u5b89\u88c5\u754c\u9762\r\n\u81ea\u52a8apk\r\n\u9690\u85cf\u684c\u9762\u5e94\u7528\u6807\u7b7e\r\n\u5c4f\u853d\u5145\u7535\u52a8\u753b\r\n\u4fa7\u6ed1\u8fd4\u56de\u9707\u52a8\r\n\u9690\u85cf\u72b6\u6001\u770b\u7f51\u901f\r\n\u4e3b\u9898\u548c\u8c10\r\n...\n",
+                    "Website": "https:\/\/blog.coderstory.cn\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.flyme10"
+                },
+                {
+                    "title": "\u77e5\u4e86 (Zhiliao)\n",
+                    "content": "\u76ee\u524d\u8fd8\u53ea\u662f\u4e2a\u77e5\u4e4e\u53bb\u5e7f\u544a\u6a21\u5757\u3002\r\nA plugin for Zhihu, currently an ad blocker.\n",
+                    "Website": "https:\/\/github.com\/shatyuka\/Zhiliao",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.shatyuka.zhiliao"
+                },
+                {
+                    "title": "MIUI \u751f\u6d3b\u8d28\u91cf\u63d0\u5347\n",
+                    "content": "MIUI\u751f\u6d3b\u8d28\u91cf\u63d0\u5347\r\nMIUI Quality of Life Improvement (MIUI QOL)\n",
+                    "Website": "https:\/\/t.me\/miuiqol",
+                    "Source": "https:\/\/github.com\/chsbuffer\/MIUIQOL"
+                },
+                {
+                    "title": "NotifyIntercept\n",
+                    "content": "\u5229\u7528\u5173\u952e\u8bcd\u5339\u914d\u5bf9\u901a\u77e5\u8fdb\u884c\u62e6\u622a\r\nUse keyword matching to intercept notifications\n",
+                    "Website": "https:\/\/t.me\/LuckyTool",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.luckyzyx.notifyintercept"
+                },
+                {
+                    "title": "CustoMIUIzerMod\n",
+                    "content": "A mod version of CustoMIUIzer, to adapt Android11+ &amp;MIUI12.5+\n",
+                    "Website": "https:\/\/github.com\/liyafe1997\/CustoMIUIzerMod",
+                    "Source": "https:\/\/github.com\/liyafe1997\/CustoMIUIzerMod"
+                },
+                {
+                    "title": "TwiFucker\n",
+                    "content": "Yet Another Adkiller for Twitter\n",
+                    "Website": "https:\/\/github.com\/Dr-TSNG\/TwiFucker",
+                    "Source": "https:\/\/github.com\/Dr-TSNG\/TwiFucker"
+                },
+                {
+                    "title": "BootloaderSpoofer\n",
+                    "content": "BootloaderSpoofer Modify certificate extension to bypass hardware integrity local attestations.\r\nIf the app send the certificate to a secure server, you are fucked and this app is useless.\r\nOnly select apps which check the presence of an unlocked boot\u2026\n",
+                    "Website": "https:\/\/github.com\/chiteroman\/BootloaderSpoofer",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/es.chiteroman.bootloaderspoofer"
+                },
+                {
+                    "title": "FunDex(\u57fa\u4e8eXposed\u5b9e\u73b0\u7684\u8131\u58f3\u673a,\u652f\u63015-13,\u652f\u6301\u7c7b\u62bd\u53d6\u3002)\n",
+                    "content": "FunDex2 \u57fa\u4e8eXposed\u73b0\u5b9e\u7684Dex\u8131\u58f3\u673a\uff1a \u652f\u63015-13\u7cfb\u7edf \u4f7f\u7528\u65b9\u5f0f\uff1a 1\u3001\u5728\u6a21\u5757\u9875\u9762\u9009\u62e9\u9700\u8981\u8131\u58f3\u5bf9\u5e94\u7684Apk\u3002 2\u3001Lsposed\u6fc0\u6d3b\u63d2\u4ef6\u3002 3\u3001\u542f\u52a8\u76ee\u6807Apk\u5373\u53ef\u3002 \u8131\u6389\u7684Dex\u6587\u4ef6\u4fdd\u5b58\u5728\/data\/data\/\u5305\u540d\/\u76ee\u5f55\u4e0b\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.fundex2",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.fundex2"
+                },
+                {
+                    "title": "\u5fae\u535a\u732a\u624b\n",
+                    "content": "\u53bb\u9664\u5fae\u535a\u7684\u5e7f\u544a\u548c\u66f4\u591a\u597d\u7528\u7684\u529f\u80fd~\r\nRemove Weibo ads and more useful features~\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.skyhand.sinahelper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.skyhand.sinahelper"
+                },
+                {
+                    "title": "Fuck AD\n",
+                    "content": "\u53bb\u4ed6\u5988\u7684\u5e7f\u544a\r\nFuck Ads\n",
+                    "Website": "https:\/\/github.com\/hujiayucc\/Fuck-AD",
+                    "Source": "https:\/\/github.com\/hujiayucc\/Fuck-AD"
+                },
+                {
+                    "title": "\u6211\u4e0d\u662f\u5f00\u53d1\u8005 \/ IAmNotADeveloper\n",
+                    "content": "\u9690\u85cf\u5f00\u53d1\u8005\u6a21\u5f0f\u3001USB \u8c03\u8bd5\u548c\u65e0\u7ebf\u8c03\u8bd5\u3002\r\nHide development mode, USB debugging mode and wireless debugging mode.\n",
+                    "Website": "https:\/\/github.com\/xfqwdsj\/IAmNotADeveloper",
+                    "Source": "https:\/\/github.com\/xfqwdsj\/IAmNotADeveloper"
+                },
+                {
+                    "title": "Bili\u8c03\u901f\n",
+                    "content": "\u54d4\u54e9\u54d4\u54e9B\u7ad9, \u63a8\u7279, \u6296\u97f3\u9ed8\u8ba4\u64ad\u653e\u901f\u5ea6\u8c03\u8282\uff0c\u53ef\u4ee5\u4efb\u610f\u500d\u6570:)\r\nBilibili, Twitter, Douyin Playback Default Speed Tuner\n",
+                    "Website": "https:\/\/github.com\/V-E-O\/biliSpeed\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.veo.hook.bili.speed"
+                },
+                {
+                    "title": " \uff08\u5fae\u4fe1\u7fa4\u6d88\u606f\u52a9\u624b\uff09WechatChatroomHelper\n",
+                    "content": "\u5fae\u4fe1\u7fa4\u6d88\u606f\u52a9\u624b - \u6574\u7406\u7fa4\u6d88\u606f\u3001\u670d\u52a1\u53f7\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zdy.project.wechat_chatroom_helper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zdy.project.wechat_chatroom_helper"
+                },
+                {
+                    "title": "Loyalty - Hide chats in the Telegram messenger\n",
+                    "content": "Hide chats in the Telegram messenger\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.loyalty",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.loyalty"
+                },
+                {
+                    "title": "FuckCainiao\n",
+                    "content": "\u83dc\u9e1f\u754c\u9762\u4f18\u5316\u548c\u5e7f\u544a\u79fb\u9664\n",
+                    "Website": "https:\/\/github.com\/duzhaokun123\/FuckCainiao",
+                    "Source": "https:\/\/github.com\/duzhaokun123\/FuckCainiao"
+                },
+                {
+                    "title": "\u6c34\u5370\/waterMark\n",
+                    "content": "\u5728\u4efb\u610f\u5e94\u7528\u4e0a\u589e\u52a0\u6c34\u5370\uff0c\u53ef\u81ea\u5b9a\u4e49\u6587\u5b57\u3001\u989c\u8272\u3001\u5927\u5c0f\n",
+                    "Website": "https:\/\/github.com\/1248774172\/WaterMark",
+                    "Source": "https:\/\/github.com\/1248774172\/WaterMark"
+                },
+                {
+                    "title": "Tarnhelm\n",
+                    "content": "The magic to clean sharing links up.\r\n\u6e05\u7406\u5206\u4eab\u94fe\u63a5\u7684\u9b54\u6cd5\u3002\n",
+                    "Website": "https:\/\/tarnhelm.project.ac.cn",
+                    "Source": "https:\/\/github.com\/lz233\/Tarnhelm"
+                },
+                {
+                    "title": "\u7b97\u6cd5\u52a9\u624b\n",
+                    "content": "\u7b97\u6cd5\u52a9\u624b \u7248\u672c\uff1a2.1.2 \u91cd\u8981\u63d0\u793a\uff1a\u7531\u4e8e\u66f4\u6539\u4e86\u914d\u7f6e\u4fe1\u606f\u548c\u6570\u636e\u5e93\u7684\u5b58\u50a8\u65b9\u5f0f\uff0c\u6b64\u6b21\u66f4\u65b0\u4f1a\u5bfc\u81f4\u65e7\u7248\u7684\u6570\u636e\u914d\u7f6e\u5168\u90e8\u4e22\u5931\uff0c\u8bf7\u63d0\u524d\u505a\u597d\u5907\u4efd\u5904\u7406 \u529f\u80fd\u65b0\u589e\uff1a 1\u3001\u4fee\u6539\u4e86\u914d\u7f6e\u6587\u4ef6\u7684\u5b58\u50a8\u65b9\u5f0f\uff0c\u907f\u514d\u5bbf\u4e3bApp\u5378\u8f7d\u91cd\u88c5\u540e\u7b97\u6cd5\u52a9\u624b\u914d\u7f6e\u4e22\u5931 2\u3001\u517c\u5bb9Android13 3\u3001\u4fee\u6539\u65e5\u5fd7\u5217\u8868\u5e03\u5c40\uff0c\u63d0\u5347\u65e5\u5fd7\u67e5\u627e\u4f53\u9a8c 4\u3001\u65e5\u5fd7\u5217\u8868\u5bf9\u65e5\u5fd7\u8fdb\u884c\u7b80\u5355\u5206\u7c7b 5\u3001\u4f9d\u8d56\u7cfb\u7edf\u670d\u52a1\uff0cLsposed\u7528\u6237\u8bf7\u5728\u4f5c\u7528\u57df\u4e2d\u52fe\u9009\"\u7cfb\u7edf\u6846\u67b6\" 6\u3001\u65b0\u589e\u81ea\u5b9a\u4e49Hook\u914d\u7f6e\u7684\u5206\u4eab\u548c\u5bfc\u5165 7\u3001\u81ea\u5b9a\u4e49Hook\u652f\u6301\u4fee\u6539\u53c2\u6570\u503c 8\u3001\u65b0\u589e\u6570\u636e\u8f93\u51fa\u7684\u8bbe\u7f6e\u529f\u80fd\uff0chex\u548cba\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.junge.algorithmaide",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.junge.algorithmaide"
+                },
+                {
+                    "title": "\u54d4\u54e9\u6f2b\u6e38\/BiliRoaming\n",
+                    "content": "\u89e3\u9664B\u7ad9\u5ba2\u6237\u7aef\u756a\u5267\u533a\u57df\u9650\u5236\uff0c\u5e76\u4e14\u63d0\u4f9b\u5176\u4ed6\u5c0f\u529f\u80fd\r\nUnblock bangumi area limit of BILIBILI, and miscellaneous features\n",
+                    "Website": "https:\/\/github.com\/yujincheng08\/BiliRoaming",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/me.iacn.biliroaming"
+                },
+                {
+                    "title": "XAppDebug\n",
+                    "content": "Debug any application of your choice!\n",
+                    "Website": "https:\/\/github.com\/Palatis\/XAppDebug",
+                    "Source": "https:\/\/github.com\/Palatis\/XAppDebug"
+                },
+                {
+                    "title": "\u753b\u6daf\u6f2b\u753b\u53bb\u5e7f\u544a\n",
+                    "content": "\u753b\u6daf\u6f2b\u753b\u53bb\u5e7f\u544a\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.xtaolabs.fuck_huaya",
+                    "Source": "https:\/\/github.com\/Xtao-Labs\/fuck_huaya"
+                },
+                {
+                    "title": "NoStorageRestrict\n",
+                    "content": "Removes the restriction when selecting folders (Downloads\/Android) through the file manager on Android 11 and higher\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.github.dan.nostoragerestrict",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.github.dan.nostoragerestrict"
+                },
+                {
+                    "title": "Android Faker \n",
+                    "content": "Android Faker a Simple Xposed Module Which Spoof Your Device IDs Values. Supporting Android 5.0+\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.android1500.androidfaker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.android1500.androidfaker"
+                },
+                {
+                    "title": "\u7981\u7528\u65e5\u5fd7\u8bbf\u95ee\u8bf7\u6c42(DisableLogRequest)\n",
+                    "content": "Automatic approve for app to access device logs (Android 13+)\r\n\u81ea\u52a8\u540c\u610f\u5e94\u7528\u8bbf\u95ee\u8bbe\u5907\u65e5\u5fd7 (Android 13+)\n",
+                    "Website": "https:\/\/github.com\/QueallyTech\/DisableLogRequest",
+                    "Source": "https:\/\/github.com\/QueallyTech\/DisableLogRequest"
+                },
+                {
+                    "title": "\u4f20\u9001\u95e8\u589e\u5f3a(TaplusExtension)\n",
+                    "content": "\u4e3a MIUI\u4f20\u9001\u95e8 \u91cf\u8eab\u5b9a\u505a\u7684\u589e\u5f3a\u6a21\u5757\u3002\r\nEnhanced modules tailored for MIUI Taplus.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.yangyiyu08.taplusext",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.yangyiyu08.taplusext"
+                },
+                {
+                    "title": "\u84dd\u7259\u8c03\u8bd5\u3001\u6a21\u62df\n",
+                    "content": "Read this in other languages: English\u3001\u7b80\u4f53\u4e2d\u6587. Introduction This is a tool for debugging low-power Bluetooth, which has functions such as Bluetooth discovery, vendor identification, data simulation, and data synchronization. Compatibility Warning If yo\u2026\n",
+                    "Website": "https:\/\/github.com\/dreamncn\/bluetooth",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/net.ankio.bluetooth"
+                },
+                {
+                    "title": "FunELF(\u57fa\u4e8eXposed\u5b9e\u73b0\u7684SO\u8131\u58f3\u673a,\u7528\u4e8e\u8fd8\u539f\u5185\u5b58\u4e2d\u91ca\u653e\u7684SO\u6587\u4ef6\u3002)\n",
+                    "content": "FunELF \u57fa\u4e8eXposed\u73b0\u5b9e\u7684SO\u6587\u4ef6\u8131\u58f3\u673a: \u901a\u8fc7hook linker\u7684\u65b9\u5f0f\u5728So\u52a0\u8f7d\u5b8c\u6bd5\u7684\u65f6\u5019\u5bf9So\u6587\u4ef6\u8fdb\u884cdump\u548c\u4fee\u590d\u3002 \u652f\u6301\u65e0ELF\u5934\u7684soinfo dump\u4fee\u590d \u3002\u6838\u5fc3\u4fee\u590d\u4f7f\u7528\u7684sofix\u3002\r\n(https:\/\/github.com\/F8LEFT\/SoFixer) \u652f\u63015-13\u7cfb\u7edf\u3002 \u4f7f\u7528\u65b9\u5f0f\uff1a 1\u3001Lsposed\u6fc0\u6d3b\u63d2\u4ef6\r\n2\u3001\u5728\u6a21\u5757\u9875\u9762\u9009\u62e9\u9700\u8981\u8131\u58f3\u5bf9\u5e94\u7684Apk\u3002\r\n3\u3001\u542f\u52a8\u76ee\u6807Apk\u5373\u53ef\u3002 \u4fee\u590d\u7684So\u6587\u4ef6\u4fdd\u5b58\u5728\/data\/data\/\u5305\u540d\/FunELF\/\u76ee\u5f55\u4e0b\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.funelf",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.funelf"
+                },
+                {
+                    "title": "MIUI 5G\u5f00\u5173\n",
+                    "content": "\u4ec5\u9002\u7528\u4e8eMIUI\uff0c\u5728\u79fb\u52a8\u7f51\u7edc\u9762\u677f\u6216\u5feb\u6377\u5f00\u5173\u4e2d\u6dfb\u52a0 5G \u5f00\u5173\r\nFor MIUI only, add 5G switch in the network panel or qs tile.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.qingyu.mi5g",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.qingyu.mi5g"
+                },
+                {
+                    "title": "App Settings Reborn\n",
+                    "content": "Fork of the original App Settings by Rovo89. Supporting Android 8.0+\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/mod-xposed-app-settings-reborn.4141339\/",
+                    "Source": "https:\/\/github.com\/BlueCat300\/XposedAppSettings"
+                },
+                {
+                    "title": "MIUI \u539f\u751f\u901a\u77e5\u56fe\u6807\n",
+                    "content": "\u4fee\u590d\u88ab MIUI \u5f00\u53d1\u7ec4\u4e22\u5f03\u7684\u539f\u751f\u901a\u77e5\u56fe\u6807\uff0c\u652f\u6301 MIUI 12\u300112.5\u300113 \u4ee5\u53ca\u6700\u65b0\u7248\u672c\n",
+                    "Website": "https:\/\/github.com\/fankes\/MIUINativeNotifyIcon",
+                    "Source": "https:\/\/github.com\/fankes\/MIUINativeNotifyIcon"
+                },
+                {
+                    "title": "[\u5f00\u6e90][\u505c\u66f4]HdTool\n",
+                    "content": "\u53c2\u8003[\u7b97\u6cd5\u52a9\u624b|\u5bf9\u8bdd\u6846\u53d6\u6d88|SimpleHook]\u7b49\u6a21\u5757\u5f00\u53d1\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hd.hdtool",
+                    "Source": "https:\/\/gitee.com\/hd_share\/HdTool"
+                },
+                {
+                    "title": "FunJni(JNITrace &amp;hook ,So\u5206\u6790\u795e\u5668  )\n",
+                    "content": "FunJni \u524d\u8a00\uff1a \u5728\u5206\u6790Apk\u7684\u65f6\u5019\u96be\u514d\u53bb\u5206\u6790So\u5c42\uff0c\u5927\u591a\u6570native\u5c42\u90fd\u9700\u8981IDA\u8c03\u8bd5\uff0c\u7279\u522b\u662f\u5206\u6790\u6570\u91cf\u5f88\u591a\u7684Apk\u7684\u65f6\u5019\u3002\u6211\u4e4b\u524d\u5c31\u60f3\u7740\uff0c\u80fd\u4e0d\u80fd\u5bf9\u5404\u79cdNaitive\u5c42\u8fdb\u884c\u76d1\u542c\u3002Apk\u653e\u8fdb\u53bb\u5c31\u53ef\u4ee5\u5b9e\u73b0\u81ea\u52a8\u5316\u5206\u6790\uff0c\u5305\u62ec\u8c03\u7528\u4e86\u54ea\u4e9b\u65b9\u6cd5\uff0c\u6bcf\u4e2aJava\u7c7b\u91cc\u9762\u4fdd\u5b58\u4e86\u54ea\u4e9b\u6570\u636e\u3002\u505a\u4e86\u4ec0\u4e48\u4e8b\u60c5\u3002\u7279\u522b\u662f\u5206\u6790\u8bbe\u5907\u6307\u7eb9\u7684\u65f6\u5019\uff0cApk\u4f1a\u91c7\u96c6\u975e\u5e38\u591a\u7684\u8bbe\u5907\u4fe1\u606f\u3002\u4f46\u662f\u8fd9\u4e9b\u8bbe\u5907\u4fe1\u606f\uff0c\u65e0\u4ece\u4e0b\u624b\uff0c\u4e0d\u77e5\u9053\u5e94\u8be5\u4ece\u54ea\u91cc\u6539\u8d77\uff0c\u52a0\u4e0a\u5f88\u591aApk\u90fd\u6709\u6df7\u6dc6\uff0c\u5206\u6790\u8d77\u6765\u662f\u4e00\u4ef6\u5f88\u8d39\u52b2\u7684\u4e8b\u60c5\u3002\u6211\u4eec\u5b8c\u5168\u53ef\u4ee5\u628a\u4e00\u4e9b\u5173\u952e\u4fe1\u606f\uff0c\u8fdb\u884c\u5feb\u901f\u5e8f\u5217\u5316\uff0c\u4fdd\u5b58\u8d77\u6765\uff0c\u5bf9\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.jnitrace",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.jnitrace"
+                },
+                {
+                    "title": "\u9524\u9524\n",
+                    "content": "\u9489\u9489\u7684\u8001\u670b\u53cb\uff01\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fuck.android.rimet",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fuck.android.rimet"
+                },
+                {
+                    "title": "FunIl2cpp(il2cpp\u6e38\u620fdump &amp;il2cpp\u65b9\u6cd5\u8c03\u7528\u8ddf\u8e2a)\n",
+                    "content": "\u4e3b\u8981\u4e24\u4e2a\u529f\u80fd \u3002 il2cpp\u7684\u6e90\u7801dump\u548c\u65b9\u6cd5\u8c03\u7528\u8ddf\u8e2a \u3002 \u5728\u4e0d\u52fe\u9009il2cppTrace\u7684\u65f6\u5019\u9ed8\u8ba4\u4f7f\u7528Dump\u529f\u80fd \u3002 Dump\u529f\u80fd\u7b80\u4ecb\uff1a Dump\u4e3b\u8981\u53c2\u8003\u81ea\uff1a\uff08\u5c0a\u91cd\u539f\u521b\uff09 https:\/\/github.com\/Perfare\/Zygisk-Il2CppDumper \u4e3b\u8981\u4f7f\u7528Xposed\u53bb\u5b9e\u73b0Dump\uff0c\u800c\u975eMagisk\u6a21\u5757\u6ce8\u5165\u7684\u65b9\u5f0f\u53bbdump \u3002 Hook\u4e86 Linker\u5728libil2cpp.so\u52a0\u8f7d\u5230\u5185\u5b58\u91cc\u4ee5\u540e\u7acb\u523b\u8fdb\u884cdump\u548c\u89e3\u5bc6 \uff0c\u9632\u6b62\u88ab\u52a0\u56fa \u3002 dump\u6587\u4ef6\u4fdd\u5b58\u5728\/data\/da\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.il2cpptrace",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zhenxi.il2cpptrace"
+                },
+                {
+                    "title": "\u8d34\u5427TS\n",
+                    "content": "\u63d0\u4f9b\u4fee\u6539\u767e\u5ea6\u8d34\u5427\u5e95\u680f\u7b49\u4e2a\u6027\u5316\u529f\u80fd\u3002\r\nAn Xposed module for Baidu Tieba with personalized functions.\n",
+                    "Website": "https:\/\/github.com\/GuhDoy\/TiebaTS",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/gm.tieba.tabswitch"
+                },
+                {
+                    "title": "\u8fd9\u4e2a\u4e16\u754c\u592a\u4e71\n",
+                    "content": "\u4e00\u4e2a\u5f00\u6e90\u7684\u53bb\u5e7f\u544a\u6a21\u5757\uff0c\u4f1a\u9010\u6b65\u652f\u6301\u8d8a\u6765\u8d8a\u591a\u7684\u5e94\u7528\n",
+                    "Website": "https:\/\/github.com\/CoolestEnoch\/TheMessWorld",
+                    "Source": "https:\/\/github.com\/CoolestEnoch\/TheMessWorld"
+                },
+                {
+                    "title": "MotionEmulator\n",
+                    "content": "A motion simulator with sensor support\r\n\u5e26\u6709\u4f20\u611f\u5668\u652f\u6301\u7684\u8fd0\u52a8\u6a21\u62df\u5668\uff0c\u53ef\u5bf9\u4ed8\u6821\u56ed\u8dd1\n",
+                    "Website": "https:\/\/github.com\/zhufucdev\/MotionEmulator\/pulls",
+                    "Source": "https:\/\/github.com\/zhufucdev\/MotionEmulator"
+                },
+                {
+                    "title": "DarkAISchedule \/ \u5c0f\u7231\u8bfe\u7a0b\u8868\u6697\u8272\n",
+                    "content": "\u5c0f\u7231\u8bfe\u7a0b\u8868\u6697\u8272\u652f\u6301\n",
+                    "Website": "https:\/\/github.com\/duzhaokun123\/DarkAISchedule",
+                    "Source": "https:\/\/github.com\/duzhaokun123\/DarkAISchedule"
+                },
+                {
+                    "title": "Utilities for Launcher3 customization\n",
+                    "content": "Customization For Launcher3\n",
+                    "Website": "https:\/\/github.com\/gitofleonardo\/Launcher30",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hhvvg.launcher3customizer"
+                },
+                {
+                    "title": "\u8fd0\u52a8\u4fee\u6539\u5668\n",
+                    "content": "\u652f\u6301\u4ee5\u4e00\u5b9a\u7684\u500d\u7387\u4fee\u6539\u5fae\u4fe1\u8fd0\u52a8\u3001QQ\u5065\u5eb7\u3001\u60a6\u52a8\u5708\u3001\u4e50\u52a8\u529b\u3001\u4e09\u661f\u5065\u5eb7\u3001\u652f\u4ed8\u5b9d\u3001\u6625\u96e8\u8ba1\u6b65\u5668\u3001\u8d70\u5411\u5065\u5eb7\u3001KEEP\u3001\u9489\u9489\u3001\u5fae\u535a\u3001\u534e\u4e3a\u5065\u5eb7\u3001\u6b65\u591a\u591a\u3001\u5e73\u5b89\u5065\u5eb7\u3001\u6dd8\u5b9d\u3001\u56fd\u5bffAI\u3001\u8da3\u6b65\u3001\u4e50\u5fc3\u5065\u5eb7\u7b49\u7684\u8fd0\u52a8\u6b65\u6570\uff0c\u652f\u6301\u81ea\u5b9a\u4e49\u500d\u7387\uff0c\u81ea\u5b9a\u4e49\u5f00\u5173\uff0c\u540c\u65f6\u4e0d\u5f71\u54cd\u5176\u4ed6\u5fae\u4fe1QQ\u5176\u4ed6\u529f\u80fd\u7684\u6b63\u5e38\u4f7f\u7528\u6bd4\u5982\u5fae\u4fe1\u6447\u4e00\u6447\u3002\n",
+                    "Website": "https:\/\/caiyao.name\/releases",
+                    "Source": "https:\/\/github.com\/YiuChoi\/SportEditor"
+                },
+                {
+                    "title": "InstallerPlus(Installer++)\n",
+                    "content": "Show app's package info for Package Installer.\r\n\u4e3aPackage Installer\u63d0\u4f9b\u5b89\u88c5\u5305\u8be6\u60c5\u663e\u793a\n",
+                    "Website": "https:\/\/github.com\/NextAlone\/InstallerPlus",
+                    "Source": "https:\/\/github.com\/NextAlone\/InstallerPlus"
+                },
+                {
+                    "title": "555\u7535\u5f71\u53bb\u5e7f\u544a\n",
+                    "content": "555\u7535\u5f71\u53bb\u5e7f\u544a\u63d2\u4ef6\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.hhvideo",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.kgg.hhvideo"
+                },
+                {
+                    "title": "\u65cb\u98ce\u52a0\u901f\u5668\u7834\u89e3\u63d2\u4ef6\n",
+                    "content": "\u65cb\u98ce\u52a0\u901f\u5668\u7834\u89e3\u63d2\u4ef6 \u652f\u6301\u6700\u65b0\u7248\u548c\u65e7\u7248\u65f6\u957f\u9650\u5236\u548c\u8d85\u7ea7\u7ebf\u8def\u7834\u89e3\r\n\u95ee\u9898\u53cd\u9988\r\nQQ=&gt;3238640698\r\nQQ\u7fa4=&gt;578389871 \u95ee\u9898\u53cd\u9988 1.QQ=&gt;3238640698\r\n2.QQ\u7fa4=&gt;578389871 \u4f7f\u7528 \u4eceRelease\u4e0b\u8f7d\u6700\u65b0\u7248\u672c\u5e76\u5b89\u88c5\u5230\u624b\u673a \u534f\u8bae GPL 3.0 \u8d5e\u8d4f \u5982\u679c\u8fd9\u4e2a\u5de5\u5177\u5bf9\u4f60\u6709\u5e2e\u52a9\u53ef\u4ee5\u8bf7\u6211\u559d\u676f\u5496\u5561 image\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.yotagit.xfucker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.yotagit.xfucker"
+                },
+                {
+                    "title": "\u91ce\u8349\u96c6\n",
+                    "content": "\u9802\u9ede\u5c0f\u8aaa; \u7b46\u8da3\u95a3; \u706b\u661f\u5c0f\u8aaa; \u5929\u5929\u8b80\u66f8; \u6dd8\u5c0f\u8aaa; \u5fc5\u770b\u5c0f\u8aaa; 51\u6f2b\u756b; 91\u6b21\u5143: \u53bb\u5ee3\u544a\/\u66f4\u65b0\/VIP\u6a21\u584a\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/vn.kwaiching.yauyin",
+                    "Source": "http:\/\/www.starsdisk.com\/space_kwaiching.html"
+                },
+                {
+                    "title": "MIUI\u906e\u7f69\u8fdb\u5316 \/ RestoreSplashScreen\n",
+                    "content": "\u81ea\u5b9a\u4e49MIUI\u7684Splash Screen\n",
+                    "Website": "https:\/\/github.com\/GSWXXN\/RestoreSplashScreen",
+                    "Source": "https:\/\/github.com\/GSWXXN\/RestoreSplashScreen"
+                },
+                {
+                    "title": "\u4f2a DC \u8c03\u5149\n",
+                    "content": "Enable Extra dim when the brightness is lower than the minimum screen brightness. \r\n\u5728\u4eae\u5ea6\u4f4e\u4e8e\u6700\u4f4e\u5c4f\u5e55\u4eae\u5ea6\u65f6\u542f\u7528\u6781\u6697\u3002\n",
+                    "Website": "https:\/\/www.coolapk.com\/feed\/38508813?shareKey=OGU3NjI4MTY2ZDAyNjJmZjUyNjU~",
+                    "Source": "https:\/\/github.com\/ztc1997\/FakeDCBacklight"
+                },
+                {
+                    "title": "ColorOS \u901a\u77e5\u56fe\u6807\u589e\u5f3a\n",
+                    "content": "\u4e3a ColorOS \u4f18\u5316\u901a\u77e5\u56fe\u6807\u4ee5\u53ca\u9002\u914d\u539f\u751f\u901a\u77e5\u56fe\u6807\u89c4\u8303\uff0c\u7406\u8bba\u652f\u6301 OxygenOS \u548c RealmeUI\n",
+                    "Website": "https:\/\/github.com\/fankes\/ColorOSNotifyIcon",
+                    "Source": "https:\/\/github.com\/fankes\/ColorOSNotifyIcon"
+                },
+                {
+                    "title": "View Attributes Modifier\/View\u5c5e\u6027\u4fee\u6539\n",
+                    "content": "Like element inspection on browser platform, this module provides similar functions like text editing, image editing, and changing spec of views.\r\n\u7c7b\u4f3c\u6d4f\u89c8\u5668\u7684\u5143\u7d20\u5ba1\u67e5\u80fd\u591f\u4fee\u6539\u4e00\u4e9b\u63a7\u4ef6\u7684\u5185\u5bb9\uff0c\u672c\u6a21\u5757\u4e5f\u63d0\u4f9b\u4e86\u7c7b\u4f3c\u7684\u529f\u80fd\uff0c\u53ef\u4ee5\u4fee\u6539\u4e00\u4e9b\u6587\u672c\uff0c\u56fe\u7247\uff0c\u63a7\u4ef6\u5927\u5c0f\u7b49\u3002\n",
+                    "Website": "https:\/\/github.com\/gitofleonardo\/AnyDebug",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hhvvg.anydebug"
+                },
+                {
+                    "title": "MaxMiPad\n",
+                    "content": "\u4e3a\u5c0f\u7c73\u5e73\u677f\u7684\u8f93\u5165\u7cfb\u7edf\u63d0\u4f9b\u4e00\u4e9b\u589e\u5f3a\u529f\u80fd\r\nProvide some enhancements to Mi Pad's input system\n",
+                    "Website": "https:\/\/github.com\/YifePlayte\/MaxMiPad",
+                    "Source": "https:\/\/github.com\/YifePlayte\/MaxMiPadInput"
+                },
+                {
+                    "title": "HCEFUnlocker\n",
+                    "content": "An Xposed module that unlocks HCE-F (Host Card Emulation Type-F) IDm and System code restrictions.\n",
+                    "Website": "https:\/\/github.com\/OLIET2357\/HCEFUnlocker",
+                    "Source": "https:\/\/github.com\/OLIET2357\/HCEFUnlocker"
+                },
+                {
+                    "title": "\u9017\u97f3\u5c0f\u80fd\u624b\n",
+                    "content": "\u4e00\u4e2a\u9017\u97f3\u5c0f\u63d2\u4ef6, \u529f\u80fd\uff1a &lt;\u590d\u5236\u94fe\u63a5 &gt;\u77ed\u6309\uff1a\u590d\u5236\u89c6\u9891\u6216\u8005\u56fe\u7247\u94fe\u63a5; \u957f\u6309\uff1a\u590d\u5236\u6587\u6848; &lt;\u89c6\u9891\u4e0b\u8f7d &gt;\u4e0b\u8f7d\u5f53\u524d\u65e0\u6c34\u5370\u89c6\u9891\u6216\u8005\u56fe\u7247; &lt;\u97f3\u9891\u4e0b\u8f7d &gt;\u4e0b\u8f7d\u5f53\u524d\u64ad\u653e\u89c6\u9891\u7684\u97f3\u9891; &lt;UI\u8bbe\u7f6e &gt;--\u79fb\u9664\u4e3b\u9875\u53d1\u5e03\u52a0\u53f7\u56fe\u6807 --\u72b6\u6001\u680f\u900f\u660e --\u72b6\u6001\u680f\u9690\u85cf --\u5e95\u90e8\u9009\u9879\u5361\u900f\u660e --\u4e3b\u9875\u9876\u680f\u900f\u660e\u5316 --\u4e3b\u9875\u53f3\u680f\u900f\u660e\u5316 --\u4e3b\u9875\u5e95\u680f\u900f\u660e\u5316 --\u8bc4\u8bba\u533a\u8272\u8c03\u8ddf\u968f\u4e3b\u9898 --\u4e3b\u9875\u6dfb\u52a0\u81ea\u52a8\u64ad\u653e\u6309\u94ae --\u4e3b\u9875\u6807\u7b7e\u9690\u85cf\u8bbe\u7f6e &lt;\u5176\u4ed6\u8bbe\u7f6e &gt;--\u79fb\u9664\u4e3b\u9875\/\u5f00\u5c4f\u5e7f\u544a --\u7981\u6b62\u9752\u5c11\u5e74\u63d0\u793a\u6846 --\u7981\u6b62\u7248\u672c\u66f4\u65b0\u5f39\u6846 --\u81ea\u52a8\u64ad\u653e\u4e0b\u4e00\u4e2a\u89c6\u2026\n",
+                    "Website": "https:\/\/github.com\/rong862\/bear",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.rong862.bear"
+                },
+                {
+                    "title": "\u94b1\u8ff9\u81ea\u52a8\u8bb0\u8d26\n",
+                    "content": "\u7f18\u8d77 \u8d44\u672c\u5728\u884c\u52a8\uff0c\u4ed6\u4eec\u7528\u6d88\u8d39\u4e3b\u4e49\u56db\u5904\u6492\u7f51\uff0c\u5c11\u5e74\u4eec\u7eb7\u7eb7\u5377\u5165\u9677\u9631\u4e4b\u4e2d\uff0c\u539f\u672c\u5bcc\u8db3\u7684\u5c11\u5e74\u5f00\u59cb\u6162\u6162\u53d8\u7a77\u3002 \u5c11\u5e74\u4eec\u5f88\u8d39\u89e3\uff0c\u4e3a\u4ec0\u4e48\u8d5a\u7684\u94b1\u8d8a\u6765\u8d8a\u591a\uff0c\u751f\u6d3b\u5374\u8d8a\u6765\u8d8a\u62ee\u636e\u3002 \u5c11\u5e74\u4eec\u627e\u5230\u4e86\u9605\u5386\u4e30\u5bcc\u7684\u8001\u4eba\uff0c\u8001\u4eba\u544a\u8bc9\u4ed6\u4eec\uff1a\u4f60\u4eec\u8981\u5b66\u4f1a\u7406\u8d22\u3002\u7406\u8d22\uff1f \u54e6\uff01\u90a3\u53ef\u771f\u662f\u4e2a\u5927\u96be\u9898\u3002 \u53ef\u5c11\u5e74\u4eec\u8fd8\u662f\u884c\u52a8\u4e86\uff0c\u5e74\u8f7b\u4eba\u603b\u662f\u90a3\u4e48\u7684\u52c7\u6562\u3002 \u60f3\u8981\u7406\u8d22\uff0c\u9996\u5148\u5f97\u5f04\u6e05\u6bcf\u4e00\u7b14\u8d22\u5bcc\u7684\u53bb\u5411\u3002 \u4e8e\u662f\uff0c\u5c11\u5e74\u4eec\u627e\u5230\u4e86\u8bb0\u8d26\u8f6f\u4ef6\uff1a\u94b1\u8ff9 \u5b83\u662f\u4e00\u6b3e\u597d\u8f6f\u4ef6\u3002 \u4f46\uff0c\u8bb0\u5f55\u90a3\u4e9b\u7410\u788e\u800c\u96f6\u6563\u7684\u6d88\u8d39\uff0c\u4f1a\u8017\u8d39\u5927\u91cf\u7684\u7cbe\u529b\u3002\u8fd9\u5bf9\u4e8e\u75b2\u60eb\u4e0d\u582a\u7684\u5c11\u5e74\u4eec\u6765\u8bf4\uff0c\u7b80\u76f4\u5c31\u662f\u707e\u96be\u3002 \u5982\u679c\u8fd9\u4e9b\u5de5\u4f5c\u7531\u673a\u5668\u6765\u5b8c\u6210\uff0c\u90a3\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.dreamn.qianji_auto",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.dreamn.qianji_auto"
+                },
+                {
+                    "title": "AppErrorsTracking\n",
+                    "content": "\u4e3a\u539f\u751f FC \u5bf9\u8bdd\u6846\u589e\u52a0\u66f4\u591a\u529f\u80fd\u5e76\u4fee\u590d\u56fd\u5185\u5b9a\u5236 ROM \u5220\u9664 FC \u5bf9\u8bdd\u6846\u7684\u95ee\u9898\uff0c\u7ed9 Android \u5f00\u53d1\u8005\u5e26\u6765\u66f4\u597d\u7684\u4f53\u9a8c\u3002\n",
+                    "Website": "https:\/\/github.com\/KitsunePie\/AppErrorsTracking",
+                    "Source": "https:\/\/github.com\/KitsunePie\/AppErrorsTracking"
+                },
+                {
+                    "title": "Maps tweaks\n",
+                    "content": "Hide unwanted views of Google and Yandex maps &amp;navi\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.mapstweaks",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.mapstweaks"
+                },
+                {
+                    "title": "\u89e3\u9664\u533a\u57df\u9650\u5236 Bypass regional limits \n",
+                    "content": "No Region Limit GitHub release (latest by date) \u89e3\u9664\u5730\u533a\u9650\u5236\u7684 Xposed \u6a21\u5757 - Bypass the region limits Example \u672c\u9879\u76ee\u53c2\u8003\u4e86\u4ee5\u4e0b\u9879\u76ee\u7684\u6e90\u4ee3\u7801 - Thanks YukiHookAPI\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.cyanc.xposed.noregionlimits",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.cyanc.xposed.noregionlimits"
+                },
+                {
+                    "title": "StethoX\n",
+                    "content": "Inspect Android App with Chrome Devtools \/ \u4f7f\u7528 Chrome \u5f00\u53d1\u8005\u5de5\u5177\u8c03\u8bd5 Android App\n",
+                    "Website": "https:\/\/github.com\/5ec1cff\/StethoX",
+                    "Source": "https:\/\/github.com\/5ec1cff\/StethoX"
+                },
+                {
+                    "title": "\u9690\u79d8\u7a7a\u95f4\/PrivacySpace\n",
+                    "content": "Hide the apps.\r\n    \u628aApp\u9690\u85cf\u8d77\u6765\n",
+                    "Website": "https:\/\/github.com\/GeekTR\/PrivacySpace",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.geektang.privacyspace"
+                },
+                {
+                    "title": "CheckBlue\n",
+                    "content": "A module that allows you to find out if a Twitter user is Blue Verified.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.checkblue"
+                },
+                {
+                    "title": "\u4f60\u8fd9\u8fd0\u8425\u6d88\u606f\u6839\u672c\u5c31\u5168\u90fd\u662f\u5e7f\u544a\u5427\n",
+                    "content": "\u4e00\u952e\u7ba1\u7406\u6240\u6709\u5e94\u7528\u7684\u8fd0\u8425\u6d88\u606f\u901a\u77e5\u901a\u9053\uff0c\u4ec5\u652f\u6301 MIUI\n",
+                    "Website": "https:\/\/github.com\/GSWXXN\/XMSFNotiChannel",
+                    "Source": "https:\/\/github.com\/GSWXXN\/XMSFNotiChannel"
+                },
+                {
+                    "title": "Location Indicator Whitelist\n",
+                    "content": "Prevent packages to trigger the location indicator in status bar.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/fr.netstat.locationindicatorwhitelist",
+                    "Source": "https:\/\/github.com\/gilbsgilbs\/LocationIndicatorWhitelist"
+                },
+                {
+                    "title": "\u7528js\u5b9e\u73b0hook \/ JsHook\n",
+                    "content": "\u7528js\u5b9e\u73b0hook \u652f\u6301java\u5c42\u548cnative\u5c42 \/ Implements hook with js support java layer and native layer\n",
+                    "Website": "https:\/\/jshook.org",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/me.jsonet.jshook"
+                },
+                {
+                    "title": "MIUI XXL\n",
+                    "content": "\u4fee\u6539\uff0c\u6dfb\u52a0MIUI\u7684\u529f\u80fd\u7684\u4e00\u4e2aXposed\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Wine-Network\/Miui_XXL",
+                    "Source": "https:\/\/github.com\/Wine-Network\/Miui_XXL"
+                },
+                {
+                    "title": "Dark Tricks\n",
+                    "content": "A simple module for Android 8.0, 8.1, 9, 10, 11, 12, 12.1 and 13 that puts together a collection of different mods (tricks).\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/mod-xposed-android-8-0-8-1-9-10-11-and-12-dark-tricks-2-15-10-30-2021.3750586\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.darkeyes.tricks"
+                },
+                {
+                    "title": "Call Recording\n",
+                    "content": "Enable call recording for Google Dialer\n",
+                    "Website": "https:\/\/github.com\/vvb2060\/CallRecording",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.vvb2060.callrecording"
+                },
+                {
+                    "title": "\u5f00\u5c4f\u5c0f\u80fd\u624b\n",
+                    "content": "\u53bb\u9664\u4e00\u4e9bapp\u7684\u542f\u52a8\u5e7f\u544a &lt;--\u7f51\u6613\u65b0\u95fb--&gt;\r\n    com.netease.newsreader.activity &lt;--\u767e\u5ea6\u5730\u56fe--&gt;\r\n    com.baidu.BaiduMap &lt;--\u5c0f\u7c73\u5e94\u7528\u5e02\u573a--&gt;\r\n    com.xiaomi.market &lt;--\u5c0f\u7c73\u97f3\u4e50--&gt;\r\n    com.miui.player &lt;--\u7231\u5947\u827a\u89c6\u9891--&gt;\r\n    com.qiyi.video &lt;--\u65b0\u6d6a\u5fae\u535a--&gt;\r\n    com.sina.weibo &lt;--\u8109\u8109--&gt;\r\n    com.taou.maimai &lt;--\u5c0f\u7c73\u94b1\u5305--&gt;\r\n    com.mipay.wallet\u2026\n",
+                    "Website": "https:\/\/github.com\/rong862\/Splash_AD",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.rong862.splashad"
+                },
+                {
+                    "title": "MIUI \u6027\u80fd\u6551\u661f \/ MIUI Performance Saver\n",
+                    "content": "\u79fb\u9664 MIUI \u5bf9\u5e94\u7528\u7684\u6027\u80fd\u9650\u5236\uff0c\u4ee5\u6700\u9ad8\u5e27\u7387\u8fd0\u884c\u5e94\u7528\u3002Remove MIUI's performance limit, run app at maximum FPS\n",
+                    "Website": "https:\/\/github.com\/test01wrk\/MIUIPerfSaver",
+                    "Source": "https:\/\/github.com\/test01wrk\/MIUIPerfSaver"
+                },
+                {
+                    "title": "Pixel Mods\n",
+                    "content": "Hide apps from the Pixel Launcher\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/pixel-mods-hide-apps-from-the-pixel-launcher-xposed.4288973\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.metris.xposed.pmods"
+                },
+                {
+                    "title": "XLogger\n",
+                    "content": "Xposed module that allows to sniff and record logs of NFC and Bluetooth communication on device\n",
+                    "Website": "https:\/\/github.com\/LuigiVampa92\/XLogger",
+                    "Source": "https:\/\/github.com\/LuigiVampa92\/XLogger"
+                },
+                {
+                    "title": "Notification Shade Transparency\n",
+                    "content": "Makes Notification Shade scrims transparent like in Android 11\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.asyjaiz.a12blur",
+                    "Source": "https:\/\/github.com\/AsyJAIZ\/Notification-Shade-Transparency"
+                },
+                {
+                    "title": "NoTask\n",
+                    "content": "\u9690\u85cf\u6700\u8fd1\u4efb\u52a1\u5217\u8868\u89c6\u56fe\n",
+                    "Website": "https:\/\/github.com\/hujiayucc\/NoTask",
+                    "Source": "https:\/\/github.com\/hujiayucc\/NoTask"
+                },
+                {
+                    "title": "LuoS: Soul App\u589e\u5f3a\u52a9\u624b\n",
+                    "content": "Soul App\u589e\u5f3a\u52a9\u624b\n",
+                    "Website": "https:\/\/github.com\/ChengmingFan\/LuoS",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fan.soulkiller"
+                },
+                {
+                    "title": "ChatHeadEnabler - ChatHead or Bubble in Messenger\n",
+                    "content": "This module lets you choose between ChatHead and Bubble in Facebook Messenger\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/4305391",
+                    "Source": "https:\/\/github.com\/NeonOrbit\/ChatHeadEnabler"
+                },
+                {
+                    "title": "Telegram UserID Viewer\n",
+                    "content": "This module allows you to view a user's ID directly in their profile.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.tguseridviewer"
+                },
+                {
+                    "title": "\u8fd9\u771f\u8f7b\u4eab\n",
+                    "content": "\u5fae\u535a\u8f7b\u4eab\u7248\/\u6781\u901f\u7248 \u53bb\u5e7f\u544a\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/me.zhenxin.thisreallylite",
+                    "Source": "https:\/\/github.com\/RealHeart\/ThisReallyLite"
+                },
+                {
+                    "title": "HMS Push\n",
+                    "content": "\u8ba9\u975e\u534e\u4e3a\u8bbe\u5907\u652f\u6301 HMS \u63a8\u9001\uff0c\u540c\u65f6\u907f\u514d\u5524\u9192\u76ee\u6807\u5e94\u7528\n",
+                    "Website": "https:\/\/github.com\/fei-ke\/HMSPush",
+                    "Source": "https:\/\/github.com\/fei-ke\/HMSPush"
+                },
+                {
+                    "title": "\u957f\u6c5f\u4e03\u53f7\n",
+                    "content": "\u9017\u97f3\u76f8\u5173\u9ad8\u8d28\u91cf\u6a21\u5757\r\n    \u7f51\u76d8\u5730\u5740\uff1ahttps:\/\/onesicong.lanzoui.com\/b00nwzquh\r\n    14\uff0c\u53bb\u9664\u9752\u5c11\u5e74\u5f39\u7a97\r\n    12\uff0c\u5168\u5c4f\u6c89\u6d78\u5f0f\u89c2\u770b\u4f53\u9a8c\r\n    13\uff0c\u7981\u7528\u53cc\u51fb\u70b9\u8d5e\r\n    01\uff0c\u4e0b\u8f7d\u65e0\u6c34\u5370\u89c6\u9891\r\n    02\uff0c\u4e0b\u8f7d\u9ad8\u6e05\u97f3\u9891\r\n    03\uff0c\u81ea\u52a8\u64ad\u653e\u4e0b\u4e00\u4e2a\r\n    04\uff0c\u5feb\u6377\u590d\u5236\u6587\u6848\r\n    05\uff0c\u53bb\u9664\u89c6\u9891\u6d41\u5e7f\u544a\r\n    06\uff0c\u7981\u6b62\u66f4\u65b0\u5f39\u7a97\r\n    07\uff0c\u53ef\u91cd\u547d\u540d\u89c6\u9891\u540d\u79f0\r\n    08\uff0c\u8df3\u8fc7\u90e8\u5206\u95ea\u5c4f\u5e7f\u544a\r\n    10\uff0c\u8fc7\u6ee4\u89c6\u9891\u6d41\u7684\u76f4\u64ad\r\n    11\uff0c\u8fc7\u6ee4\u89c6\u9891\u6d41\u7684\u5173\u952e\u8bcd\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.plus.dy",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.plus.dy"
+                },
+                {
+                    "title": "SimpleHook\n",
+                    "content": "\u81ea\u5b9a\u4e49\u7b80\u5355\u7684Hook\uff0c\u7b97\u6cd5\u5206\u6790\u7b49\n",
+                    "Website": "https:\/\/github.com\/littleWhiteDuck\/SimpleHook",
+                    "Source": "https:\/\/github.com\/littleWhiteDuck\/SimpleHookShare"
+                },
+                {
+                    "title": "OnePlus App Cloner Extender\n",
+                    "content": "Xposed module to add any app to the OnePlus's \"App Cloner\" supported apps list.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.opacextender"
+                },
+                {
+                    "title": "Q\u97f3\u52a9\u624b\n",
+                    "content": "Q\u97f3\u52a9\u624b\uff0c\u8fd8\u4f60\u4e00\u4e2a\u5e72\u51c0\u7684Q\u97f3 Android \u5ba2\u6237\u7aef\u3002\n",
+                    "Website": "https:\/\/github.com\/zjns\/QMHelper",
+                    "Source": "https:\/\/github.com\/zjns\/QMHelper"
+                },
+                {
+                    "title": "SoulFrog\n",
+                    "content": "SoulFrog hook vip and \u5e7f\u544a\ud83d\udc38\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/xmnh.soulfrog",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/xmnh.soulfrog\/tree\/main"
+                },
+                {
+                    "title": "WooBox For MIUI\n",
+                    "content": "\u4e00\u4e2a\u57fa\u4e8e MIUI13+\uff08Android12+\uff09\u9002\u914d\u7684\u7cfb\u7edf\u62d3\u5c55Xposed\u6a21\u5757 \/\/ A system extension Xposed module based on MIUI13+ (Android12+)\n",
+                    "Website": "https:\/\/github.com\/Simplicity-Team\/WooBoxForMIUI",
+                    "Source": "https:\/\/github.com\/Simplicity-Team\/WooBoxForMIUI"
+                },
+                {
+                    "title": "McDonalds Global App security fix\n",
+                    "content": "McRoot: disable root and security check (SafetyNet requested!)\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.mcroot",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.mcroot"
+                },
+                {
+                    "title": "HxReadHook\n",
+                    "content": "\u7ea2\u8896\u8bfb\u4e66-\u81ea\u5b9a\u4e49\u589e\u5f3a\u529f\u80fd\r\n    \u7b80\u5355\u51e0\u4e2a\u529f\u80fd\r\n    \u76ee\u524d\u652f\u6301 8.29.50 \u6b63\u5f0f\u7248\n",
+                    "Website": "https:\/\/github.com\/xihan123\/HXReadHook",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.xihan.hxds"
+                },
+                {
+                    "title": "Guise\n",
+                    "content": "Guise\u662f\u4e00\u4e2a\u5bf9\u6807\u5e94\u7528\u53d8\u91cf\u7684Xposed\u6a21\u5757\uff0c\u5176\u4e3b\u8981\u4f5c\u7528\u662f\u4e3a\u4f60\u7684\u5b89\u5353\u8bbe\u5907\u4e0a\u7684\u8f6f\u4ef6\u4f20\u9012\u4e0d\u540c\u7684\u7cfb\u7edf\u53c2\u6570\u3002\u4f60\u53ef\u4ee5\u968f\u5fc3\u6240\u6b32\u7684\u8bbe\u7f6e\u5b83\u4eec\u3002\n",
+                    "Website": "https:\/\/github.com\/Houvven\/Guise.git",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.houvven.guise"
+                },
+                {
+                    "title": "Disable FLAG_SECURE\n",
+                    "content": "Disable FLAG_SECURE on all windows, enabling screenshots in apps that normally wouldn't allow it.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.lsposed.disableflagsecure",
+                    "Source": "https:\/\/github.com\/LSPosed\/DisableFlagSecure"
+                },
+                {
+                    "title": "YouTube AdAway\n",
+                    "content": "Xposed module to block YouTube in-video ads and enable background playback on the official YouTube app.\r\n\r\n        Pull requests are more than welcome!\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ma.wanam.youtubeadaway",
+                    "Source": "https:\/\/github.com\/wanam\/YouTubeAdAway"
+                },
+                {
+                    "title": "FCSDK\n",
+                    "content": "\u5c3d\u91cf\u89e3\u9664\u8054\u60f3\u65b0 CSDK \u7ba1\u63a7\u5e26\u6765\u7684\u9650\u5236 \u9002\u7528\u4e8e\u5b9a\u5236\u673a\u6216\u89e3\u9664\u81ea\u5e26\u7684\u5bb6\u957f\u63a7\u5236\uff08\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.th7.fcsdk",
+                    "Source": "https:\/\/github.com\/Tonyha7\/FCSDK"
+                },
+                {
+                    "title": "FLinspirer\n",
+                    "content": "Hook\u9886\u521b\uff0c\u8ba9\u60a8\u7684\u7ba1\u7406\u5458\u61f5\u903c\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.th7.flinspirer.admin",
+                    "Source": "https:\/\/github.com\/FLinspirer\/FLinspirer"
+                },
+                {
+                    "title": "Digitales Amt Liberator\n",
+                    "content": "Removes root and bootloader checks from the Austrian e-government apps\n",
+                    "Website": "https:\/\/github.com\/Crazyphil\/digitales-amt-liberator",
+                    "Source": "https:\/\/github.com\/Crazyphil\/digitales-amt-liberator"
+                },
+                {
+                    "title": "OplusHideZoomWindow\n",
+                    "content": "ColorOS 13 \/ OxygenOS 13\r\n        Magic to hide zoom window from screenshots &amp;screen-records.\r\n        \u4ece\u622a\u56fe\u548c\u5f55\u5c4f\u4e2d\u9690\u85cf\u5c0f\u7a97\u7684\u9b54\u6cd5\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/moe.xzr.oplushidezoomwindow",
+                    "Source": "https:\/\/github.com\/libxzr\/OplusHideZoomWindow.git"
+                },
+                {
+                    "title": "Play Integrity bypass\n",
+                    "content": "Make your device pass Play Integrity check. Shamiko is required.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.disablehardwareattestation",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.disablehardwareattestation"
+                },
+                {
+                    "title": "Diia Tweaks: root checks removing &amp;other tweaks\n",
+                    "content": "Diia Tweaks: remove root checks\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.diiatweaks",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.diiatweaks"
+                },
+                {
+                    "title": "\u81ea\u52a8\u6388\u6743Data\u76ee\u5f55\/Auto auth Data dir\n",
+                    "content": "\u901a\u8fc7Hook\uff0c\u5f53\u6709APP\u7533\u8bf7\u8bbf\u95ee\u3010Android\/data\u3011\u76ee\u5f55\u65f6\uff0c\u81ea\u52a8\u8c03\u7528\u4ee3\u7801\u6388\u6743\uff0c\u7701\u53bb**\u4e24\u4e2a\u6b65\u9aa4**\n",
+                    "Website": "https:\/\/github.com\/littleWhiteDuck\/DocumentHook",
+                    "Source": "https:\/\/github.com\/littleWhiteDuck\/DocumentHook"
+                },
+                {
+                    "title": "FuckDevicePolicy \/ \u53bb\u4f60\u5927\u7237\u7684\u8bbe\u5907\u7b56\u7565\n",
+                    "content": "Make user restriction policy(e.g work profile policies) nonfunctional.\n",
+                    "Website": "https:\/\/github.com\/liyafe1997\/FuckDevicePolicy",
+                    "Source": "https:\/\/github.com\/liyafe1997\/FuckDevicePolicy"
+                },
+                {
+                    "title": "AndroidFwkDebug\n",
+                    "content": "Hooking framework system services debug variable. In order to get more useful log messages for security research or other purpose.\n",
+                    "Website": "https:\/\/github.com\/wrlu\/AndroidFwkDebug",
+                    "Source": "https:\/\/github.com\/wrlu\/AndroidFwkDebug"
+                },
+                {
+                    "title": "\u9053\u9053\u9053\n",
+                    "content": "A module for Turbo VPN, Turbo VPN Lite, AdGuard VPN, Fast VPN, Goat VPN, Hola VPN Plus, VPN Robot, Snap VPN, VPN Monster, VPN Proxy Master Lite, VPN Proxy Master, SuperVPN, Tenon VPN, Today VPN, X-VPN, Yoga VPN, Secure VPN, TX VPN, Green VPN, Power VPN, GalaxyVPN, GalaxyVPN Lite, FoTiaoQiang VPN, Bit VPN, AT VPN, Panda VPN, Ant VPN, BlackHole VPN, XiaoHa VPN, SmallWings VPN, Tom VPN, YaYa VPN, Delta VPN, Fast_VPN_Proxy_Secure_VPN, LeiTing VPN, Xwind VPN, HoneyBee VPN, BorderVPN, AuroraVPN\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/vn.kwaiching.tao",
+                    "Source": "http:\/\/www.starsdisk.com\/space_kwaiching.html"
+                },
+                {
+                    "title": "R-\u5b89\u88c5\u7ec4\u4ef6-\u6269\u5c55\n",
+                    "content": "R-\u5b89\u88c5\u7ec4\u4ef6\u6269\u5c55,\u5f3a\u5236\u8c03\u7528 R-\u5b89\u88c5\u7ec4\u4ef6 \u8fdb\u884c\u5b89\u88c5\u5e94\u7528.\n",
+                    "Website": "https:\/\/github.com\/yxsra\/RPackageRepository",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.yxer.compo.module"
+                },
+                {
+                    "title": "\u4e0d\u8981\u7ad6\u5c4f\n",
+                    "content": "\u5f3a\u5236\u5c06\u54d4\u54e9\u54d4\u54e9App\u4e2d\u7684\u7ad6\u5c4f\u89c6\u9891\u7531 \u770b\u4e00\u770b \u64ad\u653e\u5668\u6539\u4e3a \u4f20\u7edf \u64ad\u653e\u5668\u64ad\u653e\r\n        \u5173\u952e\u8bcd\uff1a\u54d4\u54e9\u54d4\u54e9\u3001bilibili\u3001B\u7ad9\u3001\u7ad6\u5c4f\u3001\u6a2a\u5c4f\u3001\u770b\u4e00\u770b\n",
+                    "Website": "https:\/\/github.com\/WankkoRee\/Portrait2Landscape\/issues",
+                    "Source": "https:\/\/github.com\/WankkoRee\/Portrait2Landscape"
+                },
+                {
+                    "title": "\u4e0d\u8981\u7ad6\u5c4f[\u65e7]\n",
+                    "content": "\u5f3a\u5236\u5c06\u54d4\u54e9\u54d4\u54e9App\u4e2d\u7684\u7ad6\u5c4f\u89c6\u9891\u7531 \u770b\u4e00\u770b \u64ad\u653e\u5668\u6539\u4e3a \u4f20\u7edf \u64ad\u653e\u5668\u64ad\u653e\r\n        \u5173\u952e\u8bcd\uff1a\u54d4\u54e9\u54d4\u54e9\u3001bilibili\u3001B\u7ad9\u3001\u7ad6\u5c4f\u3001\u6a2a\u5c4f\u3001\u770b\u4e00\u770b\n",
+                    "Website": "https:\/\/github.com\/WankkoRee\/Portrait2Landscape\/issues",
+                    "Source": "https:\/\/github.com\/WankkoRee\/Portrait2Landscape"
+                },
+                {
+                    "title": "WebViewPP\n",
+                    "content": "Enable WebView debugging and add vConsole in it. Support WebView, TBS X5, UC U4, Crosswalk(XWalk), XWeb.\r\n        \u542f\u7528 WebView \u8c03\u8bd5\u5e76\u6dfb\u52a0 vConsole\uff0c\u652f\u6301 WebView\u3001TBS X5\u3001UC U4\u3001Crosswalk(XWalk)\u3001XWeb\u3002\n",
+                    "Website": "https:\/\/github.com\/WankkoRee\/WebViewPP\/issues",
+                    "Source": "https:\/\/github.com\/WankkoRee\/WebViewPP"
+                },
+                {
+                    "title": "FuckCoolapk R\n",
+                    "content": "Fuck coolapk again\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/org.hello.coolapk",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/org.hello.coolapk"
+                },
+                {
+                    "title": "DisableAltTab\n",
+                    "content": "\u7981\u7528\u5b89\u5353\u7684Alt-Tab\u5feb\u6377\u952e\uff0c\u8fd9\u6837\u5c31\u53ef\u4ee5\u7528\u8fdc\u7a0b\u684c\u9762\u7684Alt-Tab\u4e86\r\n        A Xposed module to disable Alt-Tab hotkey for generic android devices, so we can use Alt-Tab in Remote Desktop.\n",
+                    "Website": "https:\/\/github.com\/CwithW\/DisableAltTab",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/pub.chara.disablealttab"
+                },
+                {
+                    "title": "MiuiPadMeta\n",
+                    "content": "\u4e3a\u5c0f\u7c73\u5e73\u677f5\u7cfb\u5217\u548c\u5176\u4ed6MIUI\u8bbe\u5907\u6062\u590d\u952e\u76d8Meta\/Win\u952e\u529f\u80fd\uff0c\u540c\u65f6\u7981\u7528Alt-Tab\u5feb\u6377\u952e\u3002\u8fd9\u6837\u5c31\u53ef\u4ee5\u5728\u8fdc\u7a0b\u684c\u9762\u91cc\u7528Meta\u952e\u548cAlt-Tab\u4e86\u3002\r\n        Restore Meta\/Win key function for Xiaomi Pad 5 Series and other MIUI devices, and disable Alt-Tab hotkey. Allows you to use Meta and Alt-Tab key in Remote Desktop\u3002\n",
+                    "Website": "https:\/\/github.com\/CwithW\/MiuiPadMeta",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/pub.chara.miuipadmeta"
+                },
+                {
+                    "title": "\u58a8\u2022\u684c\n",
+                    "content": "MIUI\u684c\u9762\u589e\u5f3a\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Wine-Network\/Fuck_Home",
+                    "Source": "https:\/\/github.com\/Wine-Network\/Fuck_Home"
+                },
+                {
+                    "title": "QXposed \uff08QX\u6a21\u5757\uff09\n",
+                    "content": "com.fkzhang.qqxposed QQUnrecalled \uff08QQ\u9632\u64a4\u56de\u6a21\u5757\uff09\u6539\u540d\u91cd\u65b0\u53d1\u5e03 \u4e0b\u8f7d\u955c\u50cf (Download mirrors): http:\/\/0i.gs\/fkz https:\/\/pan.lanzou.com\/b44314 https:\/\/mega.nz\/#F!2lxySJbA!Yk_SfUikRqtQcwKCXyml_w https:\/\/sourceforge.net\/projects\/wxposed\/files\/ \u865a\u62df\u6846\u67b6\uff1a\r\n        \u5982\u679c\u624b\u673a\u4e0d\u80fdroot\u6216\u4e0d\u80fd\u5b89\u88c5xposed\u6846\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fkzhang.qqxposed",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fkzhang.qqxposed"
+                },
+                {
+                    "title": "\u4f01\u4e1a\u5fae\u4fe1\u6253\u5361\u5c0f\u63d2\u4ef6...\n",
+                    "content": "\u53ef\u4fee\u6539\u5b9a\u4f4d\u3002 \u53ef\u4fee\u6539\u6253\u5361\u62cd\u7167\u5e26\u6c34\u5370\u7167\u7247\u3002 \u53ef\u6a21\u62dfwifi\u4fe1\u606f\u3002 \u4f01\u5fae\u4e3b\u9875\uff0c\u957f\u6309\u6807\u9898\u680f\u6700\u53f3\u8fb9\"+\"\u6309\u94ae\u5f39\u51fa\u8bbe\u7f6e\u3002 \u9002\u914d\u7248\u672c\uff1a\u5c0f\u871c\u8702\u9002\u914d\u624b\u6cd5\uff0c\u81ea\u52a8\u9002\u914d\u3002 PLGJ{Z19C7MJLWMKQJXYH\n",
+                    "Website": "https:\/\/github.com\/rong862\/fqywx",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.rong862.fqywx"
+                },
+                {
+                    "title": "Force Dark\n",
+                    "content": "Override force-dark for apps in module scope  \r\n        \u4e3a\u4f5c\u7528\u57df\u5185\u5e94\u7528\u5f3a\u5236\u542f\u7528 SmartDark\r\n        \r\n        Android 10+\n",
+                    "Website": "https:\/\/github.com\/Henry-ZHR\/force_dark",
+                    "Source": "https:\/\/github.com\/Henry-ZHR\/force_dark"
+                },
+                {
+                    "title": "\u590d\u5236\u7c89\u7b14\u8bc4\u8bba\/CopyFenBiComment\n",
+                    "content": "\u590d\u5236\u7c89\u7b14app\u7528\u6237\u7684\u8bc4\u8bba\u5230\u526a\u8d34\u677f\u4e2d\uff08\u957f\u6309\u8bc4\u8bba\uff09\n",
+                    "Website": "https:\/\/github.com\/zerorooot\/CopyFenBiComment",
+                    "Source": "https:\/\/github.com\/zerorooot\/CopyFenBiComment"
+                },
+                {
+                    "title": "\u76ae\u76ae\u641e\u7b11\u8f85\u52a9\u6a21\u5757\n",
+                    "content": "\u76ae\u76ae\u641e\u7b11\u8f85\u52a9\u6a21\u5757\r\n        \u76ee\u524d\u6709\u4ee5\u4e0b\u529f\u80fd:\r\n        1. \u53bb\u6c34\u5370\r\n        2. \u53bb\u5e7f\u544a\r\n        3. \u53bb\u8bed\u97f3\u623f\r\n        4. \u7b49\u5f85\u4f60\u7684\u5efa\u8bae...\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.lliiooll.pphelper",
+                    "Source": "https:\/\/github.com\/lliioollcn\/PPHelper"
+                },
+                {
+                    "title": "\u98de\u54e5\u4f20\u8bf4\n",
+                    "content": "\u98de\u54e5\u4f20\u8bf4\r\n        \u4f01\u4e1a\u5fae\u4fe1\u79d2\u62a2\u7ea2\u5305\r\n        \u7f51\u76d8\u4e0b\u8f7d\u5730\u5740\uff1ahttps:\/\/www.123pan.com\/s\/1IGKVv-skXNv\r\n        \u5bc6\u7801\uff1a1188\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.world",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hello.world"
+                },
+                {
+                    "title": "ChiMi\n",
+                    "content": "MIUI13 \u589e\u5f3a\u6269\u5c55\u6a21\u5757 (LSPosed\/Xposed) \r\n        \r\n        MIUI13 MIUI enhancement extension module\n",
+                    "Website": "https:\/\/github.com\/yonghen\/chimi-\/issues",
+                    "Source": "https:\/\/github.com\/yonghen\/chimi-"
+                },
+                {
+                    "title": "mObywatel: be an obywatel with root\n",
+                    "content": "Be an obywatel with root!\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.rootobywatel",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.rootobywatel"
+                },
+                {
+                    "title": "Firefds Kit [Tiramisu]\n",
+                    "content": "Firefds Kit Xposed module for Samsung Tiramisu (Android 13) devices\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/sb.firefds.t.firefdskit",
+                    "Source": "https:\/\/github.com\/Firefds\/FirefdsKit\/tree\/Tiramisu"
+                },
+                {
+                    "title": "Google Voice Mark Read\n",
+                    "content": "An Xposed module to add a \"mark as read\" option to Google Voice message notifications\n",
+                    "Website": "https:\/\/github.com\/zehuanli\/Google-Voice-Mark-Read\/issues",
+                    "Source": "https:\/\/github.com\/zehuanli\/Google-Voice-Mark-Read"
+                },
+                {
+                    "title": "\u6dd8\u996d\u996d\n",
+                    "content": "\u8d2d\u7269\u81ea\u52a8\u9886\u5238\u8fd4\u5229\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.taofanfan",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.taofanfan"
+                },
+                {
+                    "title": "Oneplus No Red One\n",
+                    "content": "\u53bb\u9664\u4e00\u52a0\u6c27\u7cfb\u7edf\u7684\u6570\u5b57\u65f6\u949f\u7684\u7ea2\u82721\u6570\u5b57\u3002\r\n            Prevent Oneplus from making red \"1\" digits on the clocks.\n",
+                    "Website": "https:\/\/github.com\/zehuanli\/Oneplus-No-Red-One\/issues",
+                    "Source": "https:\/\/github.com\/zehuanli\/Oneplus-No-Red-One"
+                },
+                {
+                    "title": "\u5f3a\u5236\u9ad8\u5237\u65b0\u7387\n",
+                    "content": "\u9002\u7528\u4e8e OPPO\u3001\u4e00\u52a0\u3001\u4e09\u661f\u7cfb\u5217\u8bbe\u5907\u7cfb\u7edf\u7684\u5f3a\u5236\u9ad8\u5237\u65b0\u7387\uff0c\u5176\u4f59\u7cfb\u7edf\u672a\u505a\u6d4b\u8bd5\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.enforcehighrefreshrate",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.enforcehighrefreshrate"
+                },
+                {
+                    "title": "\u53bb\u4f60\u5988\u7684DM\u4e4b\u5bb6\n",
+                    "content": "\u51c0\u5316\u52a8\u6f2b\u4e4b\u5bb6\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ss.colytitse.fuckdmzj",
+                    "Source": "https:\/\/github.com\/cokkeijigen\/FuckDMZJ\/"
+                },
+                {
+                    "title": "AD\u5feb\u6d88\n",
+                    "content": "\u81ea\u52a8\u8df3\u8fc7App\u5f00\u5c4f\u9875\u3001\u5c4f\u853d\u5404\u5927\u5e7f\u544a\u8054\u76df\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.xposed.skip",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.xposed.skip"
+                },
+                {
+                    "title": "\u989c\u8272\u56de\u6765\n",
+                    "content": "\u4e0d\u8ba9\u5e94\u7528\u53d8\u9ed1\u767d\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.satback",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.satback"
+                },
+                {
+                    "title": "MIUI \u901a\u77e5\u4fee\u590d\n",
+                    "content": "\u7981\u7528 MIUI \u901a\u77e5\u767d\u540d\u5355\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.miuinotificationfix",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.miuinotificationfix"
+                },
+                {
+                    "title": "XPrivacyLua\n",
+                    "content": "Really simple to use privacy manager for Android 6.0 Marshmallow and later\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/app-xposed-6-0-xprivacylua-android-privacy-manager.3730663\/",
+                    "Source": "https:\/\/github.com\/M66B\/XPrivacyLua"
+                },
+                {
+                    "title": "CorePatch \/ \u6838\u5fc3\u7834\u89e3\n",
+                    "content": "Disable signature verification\r\n            \u7248\u672c\u964d\u7ea7,\u7b7e\u540d\u4e0d\u4e00\u81f4,\u7b7e\u540d\u9519\u8bef\u7684apk\u90fd\u80fd\u5b89\u88c5\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.toolkit",
+                    "Source": "https:\/\/github.com\/coderstory\/CorePatch"
+                },
+                {
+                    "title": "TeleSpeed\n",
+                    "content": "Speed up your Telegram download.\r\n            \u63d0\u5347\u4f60\u7684 Telegram \u4e0b\u8f7d\u901f\u5ea6\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.telespeed",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.telespeed"
+                },
+                {
+                    "title": "Flyme8\u52a9\u624b\n",
+                    "content": "Flyme\u7cfb\u7edf\u5b9a\u5236\u4fee\u6539\u5de5\u5177\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.flyme",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.flyme"
+                },
+                {
+                    "title": "Flyme9\u52a9\u624b\n",
+                    "content": "Flyme\u7cfb\u7edf\u5b9a\u5236\u4fee\u6539\u5de5\u5177\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.flyme9",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.coderstory.flyme9"
+                },
+                {
+                    "title": "\u6dd8\u7c73\u6c34\n",
+                    "content": "\u6dd8\u7c73\u6c34 For MIUI\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.coderstory.miui.water",
+                    "Source": "https:\/\/github.com\/coderstory\/mi_water"
+                },
+                {
+                    "title": "Update Locker: stop update your apps\n",
+                    "content": "Stop update your apps\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.updatelocker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.updatelocker"
+                },
+                {
+                    "title": "IMEI Masker\n",
+                    "content": "Utility To Mask IMEI Of Device.\r\n            \r\n            The Main Aim Is To Spoof The Values From Third Party Apps Which Tracks Users And Their Personal Data.\n",
+                    "Website": "https:\/\/github.com\/pyshivam\/imeimasker\/issues",
+                    "Source": "https:\/\/github.com\/pyshivam\/imeimasker\/"
+                },
+                {
+                    "title": "FakeGApps\n",
+                    "content": "FakeGApps Used in combination with MicroG to enable Google Cloud Messaging (GCM) and much more without proprietary Google Play Services. Supports Android 4.0 - 13 Original repository\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/inc.whew.android.fakegapps",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/inc.whew.android.fakegapps"
+                },
+                {
+                    "title": "NoActive\n",
+                    "content": "\u6b63\u5982\u5176\u540d\uff0c\u8ba9Android\u540e\u53f0CPU\u4e0d\u518d\u6d3b\u8dc3\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.myflv.noactive",
+                    "Source": "https:\/\/github.com\/myflavor\/NoActive-UI"
+                },
+                {
+                    "title": "\u542f\u7528 WebView \u8c03\u8bd5[\u65e7](Enable WebView Debugging[old])\n",
+                    "content": "Enable WebView debugging and add vConsole in it. Support WebView, TBS X5, UC U4, Crosswalk(XWalk), XWeb.\r\n            \u542f\u7528 WebView \u8c03\u8bd5\u5e76\u6dfb\u52a0 vConsole\uff0c\u652f\u6301 WebView\u3001TBS X5\u3001UC U4\u3001Crosswalk(XWalk)\u3001XWeb\u3002\n",
+                    "Website": "https:\/\/github.com\/WankkoRee\/WebViewPP\/issues",
+                    "Source": "https:\/\/github.com\/WankkoRee\/WebViewPP"
+                },
+                {
+                    "title": "GPS Setter\n",
+                    "content": "A simple module to spoof device location. Supporting Android 8.1+\n",
+                    "Website": "https:\/\/github.com\/Android1500\/GpsSetter",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.android1500.gpssetter"
+                },
+                {
+                    "title": "Bluetooth ToolKit\n",
+                    "content": "Many Modifications to the Bluetooth App\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/free-w-purchase-xposed-bluetooth-toolkit-free-your-bluetooth.2805347\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.metris.xposed.bluetoothtoolkitfree"
+                },
+                {
+                    "title": "MACsposed\n",
+                    "content": "MACsposed - Add support for MAC Address spoofing to Android 12 and 13!\n",
+                    "Website": "https:\/\/github.com\/DavidBerdik\/MACsposed",
+                    "Source": "https:\/\/github.com\/DavidBerdik\/MACsposed"
+                },
+                {
+                    "title": "Let Me Downgrade\n",
+                    "content": "Let Me Downgrade - Add support for downgrading apps on Android 12 and 13.\n",
+                    "Website": "https:\/\/github.com\/DavidBerdik\/Let-Me-Downgrade",
+                    "Source": "https:\/\/github.com\/DavidBerdik\/Let-Me-Downgrade"
+                },
+                {
+                    "title": "\u53bb\u4f60\u5988b\u7ad9\u89c6\u9891\u6295\u7968\u5f39\u7a97\/FuckBilibiliVote\n",
+                    "content": "remove vote(\u6295\u7968) \u3001attention(\u4e00\u952e\u4e09\u8fde)\u3001link(\u9884\u544a)\u3001up(up\u4e3b\u5f39\u5e55)\u3001grade(\u6253\u5206) of Bilibili\n",
+                    "Website": "https:\/\/github.com\/zerorooot\/FuckBilibiliVote",
+                    "Source": "https:\/\/github.com\/zerorooot\/FuckBilibiliVote"
+                },
+                {
+                    "title": "Kill Domain Verification\n",
+                    "content": "This xposed module prevents the system (and also yourself) from allowing apps to always open supported links.\r\n            \u6253\u5f00 http \/ https \u94fe\u63a5\u65f6\u603b\u662f\u8be2\u95ee\uff0c\u800c\u4e0d\u662f\u76f4\u63a5\u5728 app \u4e2d\u6253\u5f00\n",
+                    "Website": "https:\/\/github.com\/Henry-ZHR\/KillDomainVerification\/",
+                    "Source": "https:\/\/github.com\/Henry-ZHR\/KillDomainVerification"
+                },
+                {
+                    "title": "XposedSmsCode\n",
+                    "content": "\u8bc6\u522b\u77ed\u4fe1\u9a8c\u8bc1\u7801\u7684Xposed\u6a21\u5757\uff0c\u5e76\u5c06\u9a8c\u8bc1\u7801\u62f7\u8d1d\u5230\u526a\u5207\u677f\uff0c\u4ea6\u53ef\u4ee5\u81ea\u52a8\u8f93\u5165\u9a8c\u8bc1\u7801\u3002\r\n            An Xposed module which can recognize, parse SMS code and copy it to clipboard when a new message arrives. It can also input SMS code automatically.\n",
+                    "Website": "https:\/\/github.com\/tianma8023\/XposedSmsCode",
+                    "Source": "https:\/\/github.com\/tianma8023\/XposedSmsCode"
+                },
+                {
+                    "title": "\u89e3\u9501juicessh\u9ad8\u7ea7\u7248\n",
+                    "content": "\u89e3\u9501juicessh\u9ad8\u7ea7\u7248 \u5f00\u542f juicessh \u9ad8\u7ea7\u7248 \u4f7f\u7528\u65b9\u6cd5 \u5e94\u7528\u672c\u8eab\u6ca1\u6709\u754c\u9762\uff0c\u6fc0\u6d3b\u540e\u6309\u7167\u5982\u4e0b\u6d41\u7a0b\u64cd\u4f5c\u5373\u53ef JuiceSSH\u4e3b\u754c\u9762  --&gt;\u89e3\u9501\u9ad8\u7ea7\u7248\u529f\u80fd  --&gt;\u5df2\u8d2d\u4e70 --&gt;\u9009\u62e9google\u8d26\u53f7 --&gt;\u6b63\u5728\u9a8c\u8bc1\u8d2d\u4e70 --&gt;\u63d0\u793a\u5df2\u9a8c\u8bc1 \u7248\u672c\u652f\u6301 \u76ee\u524d\u652f\u6301\u6700\u65b03.2.2 \u7406\u8bba\u652f\u6301\u5168\u7248\u672c \u5f00\u53d1\u8005 CoolApk@sbmatch\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ma.juicesshbypass",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ma.juicesshbypass\/releases\/"
+                },
+                {
+                    "title": "Disable-FLAG_KEEP_SCREEN_ON\n",
+                    "content": "Disable FLAG_KEEP_SCREEN_ON. \u963b\u6b62\u5e94\u7528\u5e38\u4eae\uff0c\u6309\u7167\u7cfb\u7edf\u5c4f\u5e55\u8d85\u65f6\u65f6\u95f4\u606f\u5c4f\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.w311ang.disable_flag_keep_screen_on",
+                    "Source": "https:\/\/github.com\/w311ang\/Xposed-Disable-FLAG_KEEP_SCREEN_ON"
+                },
+                {
+                    "title": "Fucking Internet Tile\n",
+                    "content": "Bring back the Mobile data and Wi-Fi Quick Settings tiles.\r\n            \u8fd8\u539f \u79fb\u52a8\u6570\u636e \u548c WLAN \u5feb\u901f\u8bbe\u7f6e\u56fe\u5757\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/fucking.internet.tile",
+                    "Source": "https:\/\/github.com\/YULIANGMAX\/FuckingInternetTile"
+                },
+                {
+                    "title": "\u6a21\u62df\u84dd\u7259\u8bbe\u5907\n",
+                    "content": "Mock a BLE peripheral advertisement in bluetooth scan results.   \r\n            \u5728\u84dd\u7259\u626b\u63cf\u7ed3\u679c\u4e2d\u6a21\u62df\u4e00\u4e2a BLE \u5916\u56f4\u8bbe\u5907\u901a\u544a\u3002\u4ec5\u7528\u4e8e\u84dd\u7259\u8bbe\u5907\u7684\u5f00\u53d1\u4e0e\u8c03\u8bd5\uff0c\u8bf7\u52ff\u7528\u4e8e\u7b7e\u5230\u6253\u5361\u7b49\u8fdd\u6cd5\u8fdd\u7eaa\u7528\u9014\u3002\n",
+                    "Website": "https:\/\/www.coolapk.com\/feed\/38760517?shareKey=OTNkN2I0YzkzOWQzNjMwOWFkODQ~",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ztc1997.mockbluetoothdevice"
+                },
+                {
+                    "title": "XDowngrader\n",
+                    "content": "Allows you to downgrade any app on Android 5 and newer.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.xdowngrader"
+                },
+                {
+                    "title": "Matrix Rain\n",
+                    "content": "Allow you to add a customisable matrix rain in your notifications panel !\n",
+                    "Website": "https:\/\/github.com\/Jck0day\/MatrixRain ! :)",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.chacha.matrixrain"
+                },
+                {
+                    "title": "Duolingo\u65f6\u533a\u4fee\u590d\n",
+                    "content": "\u5c06\u591a\u90bb\u56fd\u7684\u65f6\u533a\u9501\u5b9a\u4e3a\u4e2d\u56fd\u9999\u6e2f\uff0c\u4f7f\u300c\u975e\u4e2d\u56fd\u5927\u9646\u8d26\u6237\u300d\u80fd\u591f\u5728\u4e0d\u9700\u8981\u4fee\u6539\u7cfb\u7edf\u5168\u5c40\u7684\u60c5\u51b5\u4e0b\u6b63\u5e38\u4f7f\u7528\u6392\u884c\u699c\u7b49\u529f\u80fd\n",
+                    "Website": "https:\/\/github.com\/TigerBeanst\/DuolingoTimezoneFixed",
+                    "Source": "https:\/\/github.com\/TigerBeanst\/DuolingoTimezoneFixed"
+                },
+                {
+                    "title": "\u5c0f\u7c73\u4e0d\u5999\u00b7\u4eab\n",
+                    "content": "\u6fc0\u6d3b\u6a21\u5757\u540e\uff0c\u4e0d\u9700\u8981\u5728\u7535\u8111\u7aef\u914d\u7f6e\uff0c\u5373\u53ef\u8ba9\u6240\u6709\u7535\u8111\u5747\u652f\u6301\u5c0f\u7c73\u5999\u4eab\u7684\u5e94\u7528\u6d41\u8f6c\uff0c\u8ba9\u5999\u4eab\u4e0d\u6b62\u5999\u5728\u5c0f\u7c73\u7b14\u8bb0\u672c\u4e0a\u3002\n",
+                    "Website": "https:\/\/github.com\/GSWXXN\/UnlockMiLink",
+                    "Source": "https:\/\/github.com\/GSWXXN\/UnlockMiLink"
+                },
+                {
+                    "title": "\u76ae\u76ae\u867e\u52a9\u624b\n",
+                    "content": "\u76ae\u76ae\u867e\u52a9\u624b \u4e0b\u8f7d \u84dd\u594f\u4e91 \u5bc6\u7801\uff1apipix \u8bb8\u53ef GNU General Public License v3.0 \u58f0\u660e \u672c\u6a21\u5757\u5b8c\u5168\u514d\u8d39\uff0c\u9119\u89c6\u4e8c\u6539\u540e\u53d8\u76f8\u6536\u8d39\u7684\u67d0\"\u4f5c\u8005\"\ud83d\udc4e\n",
+                    "Website": "https:\/\/github.com\/Secack\/ppx",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.akari.ppx"
+                },
+                {
+                    "title": "Ironbridge\n",
+                    "content": "The bridge between apps and modules\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.qqlittleice.ironbridge",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.qqlittleice.ironbridge"
+                },
+                {
+                    "title": "Auto NFC\n",
+                    "content": "\u4ec5\u9002\u7528\u4e8eMIUI\uff0c\u8fdb\u5165\/\u9000\u51fa \u5237\u5361\u9875\u9762\u65f6\u81ea\u52a8 \u5f00\u542f\/\u5173\u95ed NFC\n",
+                    "Website": "https:\/\/github.com\/GSWXXN\/AutoNFC",
+                    "Source": "https:\/\/github.com\/GSWXXN\/AutoNFC"
+                },
+                {
+                    "title": "RelaxHelper\n",
+                    "content": "\u89e3\u9664 Relax \u7684\u9650\u5236\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.agoines.relaxhelp",
+                    "Source": "https:\/\/github.com\/Agoines\/RelaxHelper"
+                },
+                {
+                    "title": "\u9690\u85cfmiui\u526a\u8d34\u677f\u5bf9\u8bdd\u6846\/HideMiuiClipboardDialog\n",
+                    "content": "\u9690\u85cfmiui\u526a\u8d34\u677f\u5bf9\u8bdd\u6846\n",
+                    "Website": "https:\/\/github.com\/zerorooot\/HideMiuiClipboardDialog",
+                    "Source": "https:\/\/github.com\/zerorooot\/HideMiuiClipboardDialog"
+                },
+                {
+                    "title": "KillRedOne\n",
+                    "content": "OnePlus For ColorOS Fuck RedOne\r\n\u65e8\u5728\u5e72\u6389\u4e00\u52a0ColorOS\u7684\u7ea2\u4e00\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.luckyzyx.killredone",
+                    "Source": "https:\/\/github.com\/luckyzyx\/FuckRedOne"
+                },
+                {
+                    "title": "AlwaysThemedIcon\n",
+                    "content": "Let third-party launcher always get themed icon in MIUI (Maybe also works for other Android based OS).\n",
+                    "Website": "https:\/\/github.com\/liyafe1997\/AlwaysThemedIcon",
+                    "Source": "https:\/\/github.com\/liyafe1997\/AlwaysThemedIcon"
+                },
+                {
+                    "title": "\u675c\u6bd4\u5927\u5587\u53ed\u03b2\u7248\n",
+                    "content": "\u675c\u6bd4\u5927\u5587\u53ed\u7684\u03b2\u7248\uff0c\u5b8c\u5168\u8131\u79bb\u4e86\u670d\u52a1\u5668\u7684\u4f9d\u8d56\uff0c\u4f46\u662f\u4e5f\u5931\u53bb\u4e86\u64ad\u653e\u9ad8\u97f3\u8d28\u7248\u6743\u97f3\u4e50\u7684\u80fd\u529b\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.raincat.dolby_beta",
+                    "Source": "https:\/\/github.com\/nining377\/dolby_beta"
+                },
+                {
+                    "title": "MIUI\u5de5\u5177\u7bb1\n",
+                    "content": "\u89e3\u9501\u5c0f\u7c73\u5e73\u677fMIUI+\u8fde\u7535\u8111, \u540c\u65f6\u8ba9\u4e0d\u652f\u6301MIUI+\u7684\u624b\u673a\u652f\u6301MIUI+\n",
+                    "Website": "https:\/\/github.com\/CoolestEnoch\/MIUI_Tools",
+                    "Source": "https:\/\/github.com\/CoolestEnoch\/MIUI_Tools"
+                },
+                {
+                    "title": "An Extended Clipboard Manager\n",
+                    "content": "\u4e00\u4e2a\u589e\u5f3a\u7248\u7684\u526a\u5207\u677f\u7ba1\u7406\u5668\uff0c\u63d0\u4f9b\u81ea\u52a8\u6e05\u9664\u526a\u5207\u677f\u5185\u5bb9\u7b49\u529f\u80fd\n",
+                    "Website": "https:\/\/github.com\/gitofleonardo\/ExtClipboardManager",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hhvvg.ecm"
+                },
+                {
+                    "title": "DeepSleep\n",
+                    "content": "The Xposed module that controls application wake-up, runs on Android N ~ versions.\r\n\u63a7\u5236\u5e94\u7528\u5524\u9192\u7684 Xposed \u6a21\u5757,\u8fd0\u884c\u5728 Android N ~ \u7248\u672c,\u9650\u5236\u5e94\u7528 wakelock\/alarm\/service\/sync.\n",
+                    "Website": "https:\/\/github.com\/Jasper-1024\/DeepSleep",
+                    "Source": "https:\/\/github.com\/Jasper-1024\/DeepSleep"
+                },
+                {
+                    "title": "\u957f\u6309\u590d\u5236\u94fe\u63a5\n",
+                    "content": "\u957f\u6309\u590d\u5236WebView\u94fe\u63a5\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.xp.lk",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.jy.xp.lk"
+                },
+                {
+                    "title": "BoardDeepHook\n",
+                    "content": "\u300c\u9633\u5149\u81ea\u5f8b\u300d\u65e0\u9650\u671f\u4f1a\u5458\u3002\n",
+                    "Website": "https:\/\/github.com\/JackuXL\/BoardDeepHook",
+                    "Source": "https:\/\/github.com\/JackuXL\/BoardDeepHook"
+                },
+                {
+                    "title": "Mi Translator +\n",
+                    "content": "Enhance mi translator experience.\n",
+                    "Website": "https:\/\/mitranslator.project.ac.cn",
+                    "Source": "https:\/\/github.com\/lz233\/MiTranslatorPlus"
+                },
+                {
+                    "title": "setAppFull - \u8bbe\u7f6e\u5e94\u7528\u5168\u5c4f\n",
+                    "content": "set app to full screen run.\r\n\u5c06\u5e94\u7528\u7a81\u7834\u6b21\u5143\u58c1\uff0c\u8986\u76d6\u5f02\u5f62\u5c4f\u5e55\u9650\u5236\u5168\u9762\u663e\u793a_(:\u0437\u300d\u2220)_\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ss.colytitse.setappfull",
+                    "Source": "https:\/\/github.com\/cokkeijigen\/setAppFull"
+                },
+                {
+                    "title": "AkinatorHelper \/ \u795e\u706f\u731c\u540d\u4eba\u5c0f\u52a9\u624b\n",
+                    "content": "Unlock the game\r\n\u89e3\u9501\u6e38\u620f\u9650\u5236\n",
+                    "Website": "https:\/\/github.com\/KyuubiRan\/AkinatorHelper",
+                    "Source": "https:\/\/github.com\/KyuubiRan\/AkinatorHelper"
+                },
+                {
+                    "title": "\u6a2a\u5c4f\u4f20\u9001\u95e8\/HorizontalContentextension\n",
+                    "content": "\u5f3a\u884c\u5728\u6a2a\u5c4f\u6a21\u5f0f\u4e0b\u542f\u7528miui\u4f20\u9001\u95e8\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/github.zerorooot.horizontalcontentextension",
+                    "Source": "https:\/\/github.com\/zerorooot\/HorizontalContentextension"
+                },
+                {
+                    "title": "\u5e94\u7528\u4f2a\u88c5\n",
+                    "content": "\u4e3a\u4f60\u9009\u62e9\u7684\u5e94\u7528\u7a0b\u5e8f\u4f20\u9012\u4f60\u4f2a\u9020\u7684\u624b\u673a\u4fe1\u606f\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.variable.apkhook",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.variable.apkhook"
+                },
+                {
+                    "title": "NoVPNDetect\n",
+                    "content": "Prevent some apps detect your phone connected to VPN.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/me.hoshino.novpndetect",
+                    "Source": "https:\/\/bitbucket.org\/yuri-project\/novpndetect"
+                },
+                {
+                    "title": "MiuiPadESC\n",
+                    "content": "\u4e3a\u5c0f\u7c73\u5e73\u677f5\u7cfb\u5217\u6062\u590d\u952e\u76d8ESC\u952e\u529f\u80fd\r\nRestore ESC function on Mi Pad 5 series\n",
+                    "Website": "https:\/\/github.com\/YifePlayte\/MiuiPadESC",
+                    "Source": "https:\/\/github.com\/YifePlayte\/MiuiPadESC"
+                },
+                {
+                    "title": "install hook\n",
+                    "content": "ColorOS \u5e94\u7528\u5305\u5b89\u88c5\u7a0b\u5e8f\u81ea\u52a8\u70b9\u51fb\u5b89\u88c5\u4e0e\u5b8c\u6210\u6309\u94ae\uff0c\u8bb0\u5f97\u914d\u5408ColorOSTool\u5f00\u542f\u539f\u751f\u5b89\u88c5\u7a0b\u5e8f\u54e6\uff01\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.example.installhook",
+                    "Source": "https:\/\/github.com\/W2725730722\/install-hook"
+                },
+                {
+                    "title": "ONScripter Plus+\n",
+                    "content": "ONScripterPlus\u589e\u5f3a\u63d2\u4ef6\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ws.onscripterplus",
+                    "Source": "https:\/\/github.com\/W2725730722\/ONScripterPlus"
+                },
+                {
+                    "title": "Gmail Dark Theme Enabler \n",
+                    "content": "[Partially abandoned - READ THE DESCRIPTION]\r\nAllow to use the official dark theme in Gmail on Android 9 and earlier.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.gmdtenabler"
+                },
+                {
+                    "title": "B\u7ad9\u6e38\u620f\u7ed5\u8fc7\uff0c\u5173\u952e\u5b57:B\u7ad9\u6e38\u620f BiliBili\u6e38\u620f \u5b9e\u540d\u8ba4\u8bc1 \u9632\u6c89\u8ff7\n",
+                    "content": "cn.enaium.bb \u8bf7\u8f6c\u5230 https:\/\/github.com\/FuckAntiAddiction\/BiligameBypass \u529f\u80fd \u5230\u65f6\u95f4\u4e0d\u88ab\u8e22\u51fa \u767b\u5f55\u9650\u5236(\u4ec5\u652f\u6301\u5355\u673a\u6e38\u620f,\u5e76\u4e14\u6bcf\u6b21\u90fd\u8981\u767b\u5f55)\u6709\u7684\u5355\u673a\u6e38\u620f\u6709\u5b58\u6863\u4e0a\u4f20\u529f\u80fd,\u9700\u8981\u5728\/data\/data\/\u6e38\u620f\u5305\u540d\/files\u4e0b\u521b\u5efa\u4e00\u4e2abilibili-uid.txt(\u7b2c\u4e00\u6b21\u767b\u9646\u4f1a\u81ea\u52a8\u521b\u5efa)\u6587\u4ef6\u586b\u5165\u4f60\u7684B\u7ad9uid,\u8fd9\u4e2a\u529f\u80fd\u548c\u7b2c\u4e00\u4e2a\u529f\u80fd\u6709\u51b2\u7a81,\u6587\u4ef6\u5185\u5bb9\u7559\u7a7a\u5c31\u53ef\u4ee5\u4e86 \u6e38\u620f\u4e0d\u4f1a\u88ab\u5f3a\u884c\u9000\u51fa \u66f4\u591a\u529f\u80fd\u6b63\u5728\u5f00\u53d1\u4e2d \u652f\u6301\u7684\u6e38\u620f \u4f7f\u7528\u54e9\u54d4\u54e9\u6e38\u620fSDK\u7684\u6e38\u620f\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.enaium.bb",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.enaium.bb"
+                },
+                {
+                    "title": "Samsung-ClockFix\n",
+                    "content": "\u89e3\u9664\u4e09\u661f\u7cfb\u7edf\u65f6\u949f\u901a\u8bdd\u4e2d\u4e0d\u63d0\u9192\u4e0d\u54cd\u94c3\u7684\u9650\u5236\n",
+                    "Website": "https:\/\/github.com\/yin-ol\/Samsung-ClockFix",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.yhfcn.samsung_clockfix"
+                },
+                {
+                    "title": "MiPushFaker\n",
+                    "content": "\u4f2a\u88c5\u673a\u578b\u8ba9\u975e\u5c0f\u7c73\u624b\u673a\u80fd\u591f\u6b63\u786e\u8bc6\u522b\u5230MiPush\uff0c\u642d\u914dMiPushFramework\u4f7f\u7528\n",
+                    "Website": "https:\/\/github.com\/yin-ol\/MiPushFaker",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.yhfcn.mipushfaker"
+                },
+                {
+                    "title": "Orange\n",
+                    "content": "Xposed module for specifying orientation per app\n",
+                    "Website": "https:\/\/github.com\/Erbzur\/Orange",
+                    "Source": "https:\/\/github.com\/Erbzur\/Orange"
+                },
+                {
+                    "title": "Healergram\n",
+                    "content": "An Xposed module to heal your Telegram addiction\n",
+                    "Website": "https:\/\/github.com\/droserasprout\/healergram",
+                    "Source": "https:\/\/github.com\/droserasprout\/healergram"
+                },
+                {
+                    "title": "AnyWebView \/ Any WebView is OK!\n",
+                    "content": "Set Bromite System WebView, Android System WebView stable\/beta\/canary, Chrome stable\/beta\/canary to be system WebView implementation without installing them as system apps.\n",
+                    "Website": "https:\/\/github.com\/neoblackxt\/AnyWebView\/issues",
+                    "Source": "https:\/\/github.com\/neoblackxt\/AnyWebView"
+                },
+                {
+                    "title": "\u76ae\u76ae\u867eShare\n",
+                    "content": "\u3010\u5fae\u4fe1\uff0cQQ\u3011\u6253\u5f00 [\u76ae\u76ae\u867e , \u6296\u97f3] \u5206\u4eab\u7684\u5730\u5740\u5e76\u8df3\u8f6c\u5230\u5e94\u7528\r\n\r\n    MIUI13 \u53cc\u6392\u72b6\u6001\u680f \uff08\u6839\u636e\u5c0f\u7c7310s \u5c0f\u7c7311U \u5de6\u6316\u5b54\u8bbe\u5907\u5f00\u53d1\uff09[\u9ed8\u8ba4\u4e0d\u52fe\u9009MIUI\u7684 SystemUI ]\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/android.xiaolan.ppxshare.tools",
+                    "Source": "https:\/\/github.com\/killall-love\/ppxShare"
+                },
+                {
+                    "title": "\u9489\u9489\u53cd\u64a4\u56de\u795e\u5668\n",
+                    "content": "\u9489\u9489\u53cd\u64a4\u56de\u795e\u5668\n",
+                    "Website": "https:\/\/github.com\/kazutoiris\/anti-dingtalk-recall",
+                    "Source": "https:\/\/github.com\/kazutoiris\/anti-dingtalk-recall"
+                },
+                {
+                    "title": "ColorOSTool\n",
+                    "content": "ColorOS 12 For OnePlus \u7684\u90e8\u5206\u201c\u4f18\u5316\u201d\n",
+                    "Website": "https:\/\/github.com\/Oosl\/ColorOSTool",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.oosl.colorostool"
+                },
+                {
+                    "title": "\u5f00\u5c4f\u4f2a\u88c5|FakeScreen\n",
+                    "content": "\u6c38\u4e0d\u4f11\u7720\u5374\u4e0d\u60f3\u5c4f\u5e55\u4eae\u7740\u3002\r\n    Never sleep but don't want the screen to be on.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/me.neversleep.plusplus\/issues",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/me.neversleep.plusplus"
+                },
+                {
+                    "title": "Firefds Kit [S]\n",
+                    "content": "Firefds Kit Xposed module for Samsung S (Android 12) devices\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/xposed-s-firefds-kit-12-0-0-1-alpha-1-customize-samsung-oneui-4-x-05-03-22.4411655\/",
+                    "Source": "https:\/\/github.com\/Firefds\/FirefdsKit\/tree\/S"
+                },
+                {
+                    "title": "Firefds Kit [R]\n",
+                    "content": "Firefds Kit Xposed module for Samsung R (Android 11) devices\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/xposed-r-firefds-kit-1-0-0-0-alpha-1-customize-samsung-oneui-3-0-02-01-21.4212051\/",
+                    "Source": "https:\/\/github.com\/Firefds\/FirefdsKit\/tree\/R"
+                },
+                {
+                    "title": "Firefds Kit [Q]\n",
+                    "content": "Firefds Kit Xposed module for Samsung Q (Android 10) devices\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/xposed\/modules\/xposed-firefds-kit-0-0-1-0-alpha-1-t4044757",
+                    "Source": "https:\/\/github.com\/Firefds\/FirefdsKit\/tree\/Q"
+                },
+                {
+                    "title": "Firefds Kit [P]\n",
+                    "content": "Firefds Kit Xposed module for Samsung Pie (Android 9) devices\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/xposed\/modules\/xposed-firefds-kit-customization-t3908114",
+                    "Source": "https:\/\/github.com\/Firefds\/FirefdsKit\/tree\/pie"
+                },
+                {
+                    "title": "Cancel startActive Market,\u53d6\u6d88\u8df3\u8f6c\u5230\u5e94\u7528\u5546\u5e97\n",
+                    "content": "FuckMarket Select market app and target app Forked from https:\/\/github.com\/Enaium-Xposed\/FuckMarket\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.enaium.fuckmarket",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.enaium.fuckmarket"
+                },
+                {
+                    "title": "\u5c0f\u7c73\u5e73\u677f\u6307\u9488\u66ff\u6362\n",
+                    "content": "\u66ff\u6362\u5c0f\u7c73\u5e73\u677f5\u7cfb\u5217\u5783\u573eMagicPointer\u9f20\u6807\u6307\u9488\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.xunflash.setMiPad5Pointer",
+                    "Source": "https:\/\/github.com\/Xunflash\/SetMiPad5Pointer"
+                },
+                {
+                    "title": "WooBox For ColorOS\n",
+                    "content": "\u4e00\u4e2a\u57fa\u4e8e ColorOS12\uff08Android12\uff09\u9002\u914d\u7684\u7cfb\u7edf\u62d3\u5c55Xposed\u6a21\u5757 \/\/ A system extension Xposed module based on ColorOS12 (Android12)\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.lt2333.wooboxforcoloros",
+                    "Source": "https:\/\/github.com\/Simplicity-Team\/WooBoxForColorOS"
+                },
+                {
+                    "title": "YouTube\u53bb\u5e7f\u544a\uff0c\u9501\u5c4f\u64ad\u653e | NoAdsBackgroundPlaybackYT\n",
+                    "content": "YouTube\u53bb\u5e7f\u544a\uff0c\u9501\u5c4f\u64ad\u653e | NoAdsBackgroundPlaybackYT YouTube\u53bb\u5e7f\u544a\uff0c\u540e\u53f0\u64ad\u653e\uff0c\u606f\u5c4f\u64ad\u653e \u4ecb\u7ecd: \u5220\u9664YouTube\u4e2d\u51e0\u4e4e\u6240\u6709\u7684\u5e7f\u544a\uff0c\u5305\u62ec\u89c6\u9891\u64ad\u653e\u8fc7\u7a0b\u4e2d\u7684\u5e7f\u544a\uff0c\u5b9e\u73b0\u5168\u7a0b\u65e0\u5e7f\u544a\u89c2\u770b\u89c6\u9891 \u57fa\u4e8e\u7279\u5f81\u7801\u5b9a\u4f4d\u5e7f\u544a\u4fe1\u606f\uff0c\u5b9e\u73b0\u81ea\u52a8\u9002\u914d\u65b0\u7248\u672c\u7684YouTube\uff0c\u65e0\u9700\u62c5\u5fc3\u5347\u7ea7\u540e\u529f\u80fd\u5931\u6548 \u5b9e\u73b0\u540e\u53f0\u64ad\u653e\uff0c\u5173\u95ed\u5c4f\u5e55\u64ad\u653e\uff0c\u6781\u81f4\u7701\u7535 \u5982\u4f55\u5b89\u88c5: \u5b89\u88c5 Xposed Installer \u5e94\u7528\u7a0b\u5e8f \u5b89\u88c5 Xposed\u6846\u67b6 \u5b89\u88c5 NoAds-For-YouTube \u5e94\u7528\u7a0b\u5e8f \u6253\u5f00 Xpos\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.wovow.youtubehelper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.wovow.youtubehelper"
+                },
+                {
+                    "title": "\u5f3a\u5236MIUI\u624b\u52bf\/Fuck MIUI Gesture\n",
+                    "content": "Force enable gesture for third-party launcher in MIUI.\r\n    \u5f3a\u5236\u5728\u4f7f\u7528\u7b2c\u4e09\u65b9\u542f\u52a8\u5668\u65f6\u4f7f\u7528MIUI\u5168\u9762\u5c4f\u624b\u52bf\n",
+                    "Website": "https:\/\/github.com\/HCGStudio\/FuckMIUIGesture",
+                    "Source": "https:\/\/github.com\/HCGStudio\/FuckMIUIGesture"
+                },
+                {
+                    "title": "\u3010MIUI 12\u3011\u9632\u6b62\u5e94\u7528\u88ab\u4fa7\u6ed1\u6740\u6b7b\u6216\u4e00\u952e\u6e05\u7406\n",
+                    "content": "AppLock Build\r\n    Download\r\n    License\r\n    Stars \u9632\u6b62\u7279\u5b9a\u5e94\u7528\u88ab\u4fa7\u6ed1\u6740\u6b7b\u6216\u4e00\u952e\u6e05\u7406 \u7406\u8bba\u4e0a\u652f\u6301 Android 9~12\uff0cMIUI 12+ \u53ef\u80fd\u4e5f\u652f\u6301\u66f4\u4f4e\u7248\u672c\u7684 Android \u548c MIUI 11\uff0c\u5982\u9700\u4f7f\u7528\u8bf7\u81ea\u884c\u6d4b\u8bd5  \u9879\u76ee\u5730\u5740\uff1aMufanc\/AppLock \u53d1\u884c\u7248\u4e0b\u8f7d\uff1a\u6a21\u5757\u4ed3\u5e93\n",
+                    "Website": "https:\/\/github.com\/Mufanc\/AppLock",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/mufanc.tools.applock"
+                },
+                {
+                    "title": "\u81ea\u7531\u5c4f\u5e55\u65cb\u8f6c\n",
+                    "content": "\u89e3\u9664 APP \u5bf9\u5c4f\u5e55\u65cb\u8f6c\u7684\u63a7\u5236\uff0c\u9488\u5bf9\u6240\u6709 Android Pad \u8bbe\u8ba1\uff0c\u62d2\u7edd\u5f3a\u5236\u7ad6\u5c4f\u4ece\u6211\u505a\u8d77\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.forcerotate",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.forcerotate"
+                },
+                {
+                    "title": "\u62d2\u7edd\u5f3a\u5236\u4eae\u5ea6\n",
+                    "content": "\u62d2\u7edd APP \u5f3a\u5236\u8bbe\u7f6e\u6307\u5b9a\u6d3b\u52a8\u7a97\u53e3\u7684\u5c4f\u5e55\u4eae\u5ea6\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.refusebrightness",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.fankes.refusebrightness"
+                },
+                {
+                    "title": "\u865a\u62df\u5b9a\u4f4d \/ Fuck Location\n",
+                    "content": "Fuck Location Stars\r\n    Release\r\n    Download\r\n    Channel\r\n    GitHub license\r\n    GitHub Workflow Status A simple xposed module that helps you fully control your location. \u4e00\u4e2a\u53ef\u4ee5\u5e2e\u52a9\u4f60\u5b8c\u5168\u63a7\u5236\u4f4d\u7f6e\u6388\u6743\u7684\u6a21\u5757 Currently, you may return custom location to specific apps. \u76ee\u524d\uff0c\u4f60\u53ef\u4ee5\u5bf9\u7279\u5b9a\u7684\u5e94\u7528\u8fd4\u56de\u81ea\u5b9a\u4e49\u4f4d\u7f6e\u4fe1\u2026\n",
+                    "Website": "https:\/\/github.com\/Mikotwa\/FuckLocation",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/fuck.location"
+                },
+                {
+                    "title": "HelloCiwong\n",
+                    "content": "\u4e60\u4e60\u5411\u4e0a\u4f18\u5316\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/xyz.xfqlittlefan.ciwong.hello",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/xyz.xfqlittlefan.ciwong.hello"
+                },
+                {
+                    "title": "\u7ea2\u85af\u732a\u624b\n",
+                    "content": "\u53bb\u9664\u5c0f\u7ea2\u4e66\u7684\u5e7f\u544a\u548c\u66f4\u591a\u597d\u7528\u7684\u529f\u80fd~\r\n    Remove XiaoHongShu ads and more useful features~\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.skyhand.redbookhelper",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.skyhand.redbookhelper"
+                },
+                {
+                    "title": "Undo\n",
+                    "content": "Add undo and redo to all EditText context menus.\r\n    \u5c06\u64a4\u6d88\u548c\u91cd\u505a\u6dfb\u52a0\u5230\u6240\u6709 EditText \u4e0a\u4e0b\u6587\u83dc\u5355\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.undo",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.undo"
+                },
+                {
+                    "title": "Zepp Life Hook\n",
+                    "content": "Let Zepp Life treat third-party telegram clients as official Telegram.\r\n    \u8ba9 Zepp Lift \u5c06\u7b2c\u4e09\u65b9 Telegram \u5ba2\u6237\u7aef\u89c6\u4e3a\u5b98\u65b9 Telegram\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.mifit",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.mifit"
+                },
+                {
+                    "title": "Pixelify GPhotos\n",
+                    "content": "Pixelify-Google-Photos LSPosed \/ EdXposed module to add Google Pixel features on Google Photos for any device. Tested on EdXposed by Jim Wu LSPosed module repo Development repo Telegram group link Steps to use: Install Magisk, LSPosed Or EdXposed. I\u2026\n",
+                    "Website": "https:\/\/t.me\/pixelifyGooglePhotos",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/balti.xposed.pixelifygooglephotos"
+                },
+                {
+                    "title": "Hide Mock Location\n",
+                    "content": "Xposed module to hide the mock location setting.\n",
+                    "Website": "https:\/\/github.com\/ThePieMonster\/HideMockLocation",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.github.thepiemonster.hidemocklocation"
+                },
+                {
+                    "title": "Tsubonofuta\n",
+                    "content": "F*ck ChMate's ads\n",
+                    "Website": "https:\/\/github.com\/AioiLight\/Tsubonofuta",
+                    "Source": "https:\/\/github.com\/AioiLight\/Tsubonofuta"
+                },
+                {
+                    "title": "\u7626\u8eab\u6a21\u5757(QQCleaner)\n",
+                    "content": "\u5728\u4e0d\u5f71\u54cd\u804a\u5929\u8bb0\u5f55\u7684\u60c5\u51b5\u4e0b\u5c3d\u53ef\u80fd\u5730\u51cf\u5c11QQ\/TIM\/\u5fae\u4fe1\u7684\u5185\u5b58\u5360\u7528\r\n    \u652f\u6301\u5b9a\u65f6\u6e05\u7406\u3001\u624b\u52a8\u6e05\u7406\u4ee5\u53ca\u81ea\u5b9a\u4e49\u6e05\u7406\n",
+                    "Website": "https:\/\/github.com\/KyuubiRan\/QQCleaner",
+                    "Source": "https:\/\/github.com\/KyuubiRan\/QQCleaner"
+                },
+                {
+                    "title": "\u4f20\u611f\u5668\u6ee4\u955c\n",
+                    "content": "\u964d\u4f4e\u4f20\u611f\u5668\u91c7\u6837\u7387\uff08\u6240\u6709\u4f20\u611f\u5668\u964d\u4f4e\u523050HZ\u53ca\u4ee5\u4e0b\uff09\u548c\u91c7\u6837\u6df1\u5ea6(\u5bf9\u52a0\u901f\u5ea6\u4f20\u611f\u5668\u53d6\u6574)\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.w2016.sensorfilter",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.w2016.sensorfilter"
+                },
+                {
+                    "title": "Killergram\n",
+                    "content": "Remove sponsored messages of Telegram. Also allows you to copy or save messages when \"Restrict saving content\" is enabled.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.shatyuka.killergram",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.shatyuka.killergram"
+                },
+                {
+                    "title": "CustoMIUIzer\n",
+                    "content": "Customize your MIUI ROM\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/3910732\/",
+                    "Source": "https:\/\/code.highspec.ru\/Mikanoshi\/CustoMIUIzer"
+                },
+                {
+                    "title": "\u865a\u62df\u6444\u50cf\u5934 virtual camera\n",
+                    "content": "\u5b89\u5353\u865a\u62df\u6444\u50cf\u5934 android virtual camera\n",
+                    "Website": "https:\/\/github.com\/w2016561536\/android_virtual_cam",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.example.vcam"
+                },
+                {
+                    "title": "WaveCharge\n",
+                    "content": "\u4e3aMIUI\uff0cAndroid 11\u53ca\u4ee5\u4e0a\u542f\u7528\u88ab\u9690\u85cf\u7684\u6ce2\u6d6a\u5145\u7535\u52a8\u753b\r\n        Enable the wave charge animation for MIUI, Android 11 and above\n",
+                    "Website": "https:\/\/github.com\/YifePlayte\/WaveCharge",
+                    "Source": "https:\/\/github.com\/YifePlayte\/WaveCharge"
+                },
+                {
+                    "title": "DJkwaiching\n",
+                    "content": "\u97f3\u6a02\u8edf\u4ef6NhacCuaTui\/Zing MP3\/DJ\u591a\u591a\/\u9177\u6211\u97f3\u6a02\/\u9177\u72d7\u97f3\u6a02\/ChiaSeNhac\u589e\u5f37\u63d2\u4ef6\r\n        VIP for NhacCuaTui, Zing MP3, DJ Music, KuWo Music, KuGou Music and ChiaSeNhac\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/vn.kwaiching.dj",
+                    "Source": "http:\/\/www.starsdisk.com\/space_kwaiching.html"
+                },
+                {
+                    "title": "Automatic Advanced Settings Expander\n",
+                    "content": "Automatically expands the advanced settings in the Settings app by hooking setInitialExpandedChildrenCount in PreferenceGroup.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/de.binarynoise.automaticadvancedsettingsexpander",
+                    "Source": "https:\/\/github.com\/binarynoise\/AutomaticAdvancedSettingsExpander"
+                },
+                {
+                    "title": "Physical Button Master Control\n",
+                    "content": "No more need to turn on screen to control the music player! Get the ultimate control over buttons on your device!\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/showthread.php?t=2620777",
+                    "Source": "https:\/\/github.com\/XspeedPL\/PhysicalButtonMod"
+                },
+                {
+                    "title": "\u7121\u9593\u9053\n",
+                    "content": "\u53d7\u8eab\u7121\u9593\u6c38\u9060\u4e0d\u6b7b\uff0c\u58fd\u9577\u4e43\u7121\u9593\u5730\u7344\u4e2d\u4e4b\u5927\u52ab\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/vn.kwaiching.anantaryamarga",
+                    "Source": "http:\/\/www.starsdisk.com\/space_kwaiching.html"
+                },
+                {
+                    "title": "\u89e3\u9501MIUI+\n",
+                    "content": "\u89e3\u9501MIUI12.5\u7684MIUI+\n",
+                    "Website": "https:\/\/github.com\/zhang0281\/UnlockMiui",
+                    "Source": "https:\/\/github.com\/zhang0281\/UnlockMiui"
+                },
+                {
+                    "title": "\u4e0d\u8bb8\u5361\u7c73\/FuckMiMarket\n",
+                    "content": "\u53ef\u4ee5\u5378\u8f7d\u9884\u88c5app\u800c\u4e14\u4e0d\u4f1a\u5361\u7c73\r\n        allow uninstall some miui preinstall apps\n",
+                    "Website": "https:\/\/github.com\/gfbjngjibn\/RemoveMiuiSystemSelfProtection",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hook.fuckmimarket"
+                },
+                {
+                    "title": "AnyText\/\u6587\u672c\u4fee\u6539\n",
+                    "content": "\u80fd\u591f\u5c06\u624b\u673a\u754c\u9762\u7684\u6587\u672c\u4fee\u6539\u6210\u60f3\u8981\u7684\u5185\u5bb9\u3002Provides features to change text content in native Android App.\n",
+                    "Website": "https:\/\/github.com\/gitofleonardo\/AnyText",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hhvvg.anytext"
+                },
+                {
+                    "title": "QNotified\n",
+                    "content": "\u4e00\u4e2a\u65e8\u5728\u4f7fQQ\u53d8\u5f97\u66f4\u597d\u7528\u7684\u5f00\u6e90Xposed\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/ferredoxin\/QNotified\/",
+                    "Source": "https:\/\/github.com\/ferredoxin\/QNotified"
+                },
+                {
+                    "title": "Cast Enabler for A12\n",
+                    "content": "Simple module to enable cast volume control with the rocker or in the input switcher when disabled by the manufacturer. The purpose of the app is to only enable cast volume control when this was mistakenly disabled by the manufacturer and by no mean\u2026\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/cast-enabler-for-android-12-xposed.4394713\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.metris.xposed.castenabler"
+                },
+                {
+                    "title": "Disable app link verify \/ \u7981\u7528\u5e94\u7528\u94fe\u63a5\u9a8c\u8bc1\n",
+                    "content": "Disable app link verify on Android 12, restore to old behaviour when opening links. \u5728 Android 12 \u4e0a\u7981\u7528\u5e94\u7528\u94fe\u63a5\u9a8c\u8bc1\uff0c\u6253\u5f00\u94fe\u63a5\u65f6\u6062\u590d\u5230\u65e7\u884c\u4e3a\u3002\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.applinkverify",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.applinkverify"
+                },
+                {
+                    "title": "\u975e\u6b8b\uff01\n",
+                    "content": "\u5047\u88c5\u81ea\u5df1\u6ca1\u6709\u4f7f\u7528\u65e0\u969c\u788d\u670d\u52a1\uff0c\n",
+                    "Website": "https:\/\/github.com\/AoEiuV020\/IAmNotDisabled",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cc.aoeiuv020.iamnotdisabled.hook"
+                },
+                {
+                    "title": "Alipay High Headsome Rich (\u652f\u4ed8\u5b9d\u88c5X\u6a21\u5757)\n",
+                    "content": "Alipay High Headsome Rich (\u652f\u4ed8\u5b9d\u88c5X\u6a21\u5757)\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/im.hoho.alipayinstallb",
+                    "Source": "https:\/\/github.com\/nov30th\/AlipayHighHeadsomeRichAndroid"
+                },
+                {
+                    "title": "DualGuard\uff08AdGuard \u6388\u6743\u591a\u5f00\uff09\n",
+                    "content": "DualGuard Stars\r\n        Release\r\n        Download\r\n        Channel\r\n        License A simple xposed module that helps you use your AdGuard subscription in multiple (&gt;3) devices. Monstor ahead! \/ \u8b66\u544a This is NOT a module that helps you bypass validation of AdGuard for free. VALID SUBSC\u2026\n",
+                    "Website": "https:\/\/github.com\/Mikotwa\/DualGuard",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.dualguard"
+                },
+                {
+                    "title": "NoDisplayCutout\n",
+                    "content": "\u5f3a\u5236\u5e94\u7528\u5728\u5218\u6d77\/\u6316\u63a7\u533a\u57df\u4e2d\u5448\u73b0. \u4e3b\u8981\u7528\u4e8e\u5c0f\u7c73Mix4\u8fd9\u79cd\u6316\u4e86\u5b54\u4f46\u53c8\u6ca1\u6316\u5b54\u7684\u5c4f\u4e0b\u6444\u50cf\u5934\u624b\u673a.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/xyz.ccat3z.nodisplaycutout",
+                    "Source": "https:\/\/github.com\/ccat3z\/no-display-cutout"
+                },
+                {
+                    "title": "Notigif\n",
+                    "content": "Allow you to add a gif or a picture in your notifications panel !\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/xposed-notigif-add-a-gif-to-notifications-panel.4165259\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.chacha.notigif"
+                },
+                {
+                    "title": "\u5c0f\u7c73push\u589e\u5f3a\u6a21\u5757\n",
+                    "content": "\u51bb\u7ed3\u6d41\u6c13app\u4e5f\u80fd\u63a5\u6536\u91cd\u8981\u901a\u77e5\r\n        Freeze the app to receive mipush messages,no longer miss transaction messages.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.vivian8421.mipushenhance",
+                    "Source": "https:\/\/github.com\/vivian8421\/MiPush-Enhance"
+                },
+                {
+                    "title": "\u526a\u8d34\u677f\u8fc7\u6ee4\u5668\n",
+                    "content": "\u8fc7\u6ee4\u526a\u8d34\u677f\u5199\u5165\u5185\u5bb9\uff0c\u91cd\u70b9\u9632\u6b62\u67d0\u4e9b\u7f51\u7ad9\u5f3a\u8feb\u526a\u8d34\u677f\u3002\u4f5c\u7528\u4e8e\u9009\u62e9\u6d4f\u89c8\u5668\u7b49\u9700\u8981\u88ab\u8fc7\u6ee4\u7684app\u3002\n",
+                    "Website": "https:\/\/github.com\/Thiasap\/ClipboardFilter",
+                    "Source": "https:\/\/github.com\/Thiasap\/ClipboardFilter"
+                },
+                {
+                    "title": "MIUI12.5\u6269\u5c55\n",
+                    "content": "MIUI12.5\u6269\u5c55\n",
+                    "Website": "https:\/\/github.com\/lamprose\/MIUltra",
+                    "Source": "https:\/\/github.com\/lamprose\/MIUltra"
+                },
+                {
+                    "title": "ViewPerf\n",
+                    "content": "\u68c0\u6d4bView\u6d4b\u91cf\u3001\u5e03\u5c40\u548c\u7ed8\u5236\u6027\u80fd\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.janking.viewperf",
+                    "Source": "https:\/\/github.com\/JankingWon\/ViewPerf"
+                },
+                {
+                    "title": "Mikanoshi's CustoMIUIzer plugin for MIUI 12.5 &amp;Android 11\n",
+                    "content": "Mikanoshi's CustoMIUIzer plugin for MIUI 12.5 &amp;Android 11\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.customiuizer125plugin",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/ru.mike.customiuizer125plugin"
+                },
+                {
+                    "title": "An Intent traffic monitoring tool.\n",
+                    "content": "An Intent traffic monitoring tool.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.zwk.xintent",
+                    "Source": "https:\/\/github.com\/2Y2s1mple\/xintent"
+                },
+                {
+                    "title": "Secure Lockscreen Camera\n",
+                    "content": "Xposed Framework module to skip authentication on \"Quickly open camera\" gesture.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.github.droserasprout.lockscreencamera",
+                    "Source": "https:\/\/github.com\/droserasprout\/com.github.droserasprout.lockscreencamera"
+                },
+                {
+                    "title": "Nekumori MOD\n",
+                    "content": "A collection of fixes for some apps to work properly, especially on OnePlus7. Remove Lock Screen Album Art.\n",
+                    "Website": "https:\/\/github.com\/jeffshee\/nekumori-mod",
+                    "Source": "https:\/\/github.com\/jeffshee\/nekumori-mod"
+                },
+                {
+                    "title": "OPLongshotXposed\n",
+                    "content": "A Xposed module for OPLongshot on OxygenOS, forces saving screenshot in PNG format.\r\n        \u5c06\u4e00\u52a0\u6c27OS\u622a\u56fe\u683c\u5f0f\u6539\u56dePNG\u3002\n",
+                    "Website": "https:\/\/github.com\/Noisyfox\/OPLongshotXposed",
+                    "Source": "https:\/\/github.com\/Noisyfox\/OPLongshotXposed"
+                },
+                {
+                    "title": "GravityBox [R]\n",
+                    "content": "All-in-one complex module for devices running vanilla Android 11 (R)\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/showthread.php?t=3908768",
+                    "Source": "https:\/\/github.com\/GravityBox\/GravityBox\/tree\/r"
+                },
+                {
+                    "title": "UpsideWiFi\n",
+                    "content": "Turn your WiFi icon upside down!\n",
+                    "Website": "https:\/\/github.com\/programminghoch10\/UpsideWifi",
+                    "Source": "https:\/\/github.com\/programminghoch10\/UpsideWifi"
+                },
+                {
+                    "title": "MobileIconChanger (Fake5GIcon)\n",
+                    "content": "Change your mobile data icons! For example you can change the 3G\/4G icons into 5G!\n",
+                    "Website": "https:\/\/github.com\/programminghoch10\/MobileIconChanger",
+                    "Source": "https:\/\/github.com\/programminghoch10\/MobileIconChanger"
+                },
+                {
+                    "title": "\u52a8\u6f2b\u4e4b\u5bb6\u589e\u5f3a\u6a21\u5757\n",
+                    "content": "\u52a8\u6f2b\u4e4b\u5bb6\u589e\u5f3a\u6a21\u5757\n",
+                    "Website": "https:\/\/github.com\/Dr-TSNG\/Fuck-Dmzj",
+                    "Source": "https:\/\/github.com\/Dr-TSNG\/Fuck-Dmzj"
+                },
+                {
+                    "title": "CameraControl\n",
+                    "content": "Next level camera control! Control access to the cameras depending on which side they face.\n",
+                    "Website": "https:\/\/github.com\/programminghoch10\/CameraControl",
+                    "Source": "https:\/\/github.com\/programminghoch10\/CameraControl"
+                },
+                {
+                    "title": "Samsung Music Customiser\n",
+                    "content": "This module allow you to customise colors of Samsung Music app !\r\n            This app works for versions higher than 16.2.25.9\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/xposed-lsposed-samsung-music-customiser-change-app-colors.4076893\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.chacha.samsungmusiccustomiser"
+                },
+                {
+                    "title": "FuckCoolapk\n",
+                    "content": "Best present for 316 and 423.\n",
+                    "Website": "https:\/\/github.com\/ejiaogl\/FuckCoolapk",
+                    "Source": "https:\/\/github.com\/ejiaogl\/FuckCoolapk"
+                },
+                {
+                    "title": "Samsung Messages Customiser\n",
+                    "content": "This module allow you to customise colors of Samsung Messages app !\r\n             \/!\\ THIS IS NOT COMPATIBLE WITH THE ONEUI 2.x MESSAGES VERSION \/!\\\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/t\/xposed-lsposed-samsung-messages-customiser-change-app-colors.4104635\/",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.chacha.smessagescustom"
+                },
+                {
+                    "title": "SecureDisplay\n",
+                    "content": "This enables FLAG_SECURE everywhere to give you the absolute maximum privacy possible.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.programminghoch10.securedisplay",
+                    "Source": "https:\/\/github.com\/programminghoch10\/XPosedSecureDisplay"
+                },
+                {
+                    "title": "smobajump\n",
+                    "content": "\u8df3\u8fc7\u738b\u8005\u8425\u5730\u7684\u542f\u52a8\u52a8\u753b\u548c\u63a8\u5e7f\u7684\u754c\u9762,\u7248\u672c\u53f7\u5e26\u201cDisableUpdate\u201d\u7684\u4f1a\u5c4f\u853d\u542f\u52a8\u65f6\u7684\u81ea\u52a8\u66f4\u65b0\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.bit747.smobajump",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.bit747.smobajump"
+                },
+                {
+                    "title": "Disable-FLAG_SECURE\n",
+                    "content": "Xposed Module to Disable FLAG_SECURE, enabling screenshots, screen sharing and recording in apps that normally wouldn't allow it.\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.varuns2002.disable_flag_secure",
+                    "Source": "https:\/\/github.com\/VarunS2002\/Xposed-Disable-FLAG_SECURE"
+                },
+                {
+                    "title": "BCR\/PCR\u5f3a\u5236\u5168\u5c4f(BCRfullscreen)\n",
+                    "content": "\u8ba9BCR\/PCR\u6700\u65b0\u7248\u5168\u5c4f\u663e\u793a\n",
+                    "Website": "https:\/\/github.com\/KitsunePie\/BCRfullscreen",
+                    "Source": "https:\/\/github.com\/KitsunePie\/BCRfullscreen"
+                },
+                {
+                    "title": "SSLUnpinning\n",
+                    "content": "Android Xposed Module to bypass SSL certificate validation (Certificate Pinning).\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.sslunpinning",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/io.github.tehcneko.sslunpinning"
+                },
+                {
+                    "title": "Sensible Android Auto:Xposed\n",
+                    "content": "Sensible Android Auto:Xposed Xposed module for Android Auto app to make the interface restrictions configurable Because Android Auto is integrated into certain vehicles, Google either felt the need to, or regulations required that they build in some\u2026\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.dr8.xposed.saax",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.dr8.xposed.saax"
+                },
+                {
+                    "title": "OnePlus Camera Debug Mode Enabler\n",
+                    "content": "Enable the hidden internal menu in the OnePlus camera app.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.opcameradebug"
+                },
+                {
+                    "title": "\u5fae\u4fe1\u5b66\u82f1\u8bedwechat\n",
+                    "content": "\u5fae\u4fe1\u5b66\u82f1\u8bed \u5fae\u4fe1\u5b66\u82f1\u8bedapp\u662f\u4e00\u6b3e\u57fa\u4e8eXPosed\u6a21\u5757\u7684\u5e94\u7528\u5c0f\u7a0b\u5e8f\uff0c\u53ef\u4ee5\u5feb\u901f\u5c06\u5fae\u4fe1\u4e2d\u7684\u5bf9\u8bdd\u8f6c\u53d8\u6210\u82f1\u6587\uff0c\u8ba9\u4f60\u4e00\u8fb9\u804a\u5929\u4e00\u8fb9\u5b66\u4e60\u65e5\u5e38\u7528\u8bed\u3002 QQ\u7fa4:168140779 \u5fae\u4fe1\u5b66\u82f1\u8bed\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hiwechart.translate",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.hiwechart.translate"
+                },
+                {
+                    "title": "\u5927\u5723\u51c0\u5316\n",
+                    "content": "\u5927\u5723\u51c0\u5316 \u5168\u65b9\u4f4d\u53bb\u9664\u5e7f\u544a\u5e94\u7528 \u8df3\u8fc7\/\u66ff\u6362\u5e7f\u544a\u9875\u9762 \u5c4f\u853d\u5e7f\u544a View Url \u62e6\u622a \u81ea\u5b9a\u4e49 Hook \u5e7f\u544a\u6587\u4ef6\u66ff\u6362 \u7cfb\u7edf hosts \u66ff\u6362 \u516c\u4f17\u53f7: Android\u5e94\u7528\u94fe \u5b98\u7f51 \u4f7f\u7528\u6559\u7a0b - http:\/\/wiki.ad-gone.com\/ \u4e0b\u8f7d \u5e94\u7528\u4e0b\u8f7d - https:\/\/wiki.ad-gone.com\/adWars.html Telegram \u4ea4\u6d41 - https:\/\/t.me\/adwars\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ext.star.wars",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.ext.star.wars"
+                },
+                {
+                    "title": "OnePlus Parallel Apps Extender\n",
+                    "content": "Adds any app to the Parallel Apps's supported apps list.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.paextender"
+                },
+                {
+                    "title": "Integrity Verification Disabler\n",
+                    "content": "Google seems to be blocking sideloading some app updates on Android 11, such as the Google Camera v8.0+, this module bypass that block.\n",
+                    "Website": "https:\/\/twitter.com\/alex193a",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/com.alex193a.ivdisabler"
+                },
+                {
+                    "title": "MIUI Force FPS \/ MIUI \u5168\u5c40\u9ad8\u5e27\n",
+                    "content": "Force MIUI to have highest FPS globally\r\n            \u5f3a\u5236 MIUI \u5168\u5c40\u9ad8\u5e27\n",
+                    "Website": "https:\/\/github.com\/yujincheng08\/MIUIForceFPS",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/cn.lovesykun.miui_force_fps"
+                },
+                {
+                    "title": "GravityBox [Q]\n",
+                    "content": "All-in-one complex module for devices running vanilla Android 10 (Q)\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/showthread.php?t=3974497",
+                    "Source": "https:\/\/github.com\/GravityBox\/GravityBox\/tree\/q"
+                },
+                {
+                    "title": "GravityBox [P]\n",
+                    "content": "All-in-one complex module for devices running vanilla Android 9 Pie\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/showthread.php?t=3908768",
+                    "Source": "https:\/\/github.com\/GravityBox\/GravityBox\/tree\/pie"
+                },
+                {
+                    "title": "\u79cb\u98ce\n",
+                    "content": "\u8682\u8681\u68ee\u6797\u5feb\u901f\u6536\u53d6\u80fd\u91cf\n",
+                    "Website": "https:\/\/github.com\/Xposed-Modules-Repo\/pansong291.xposed.quickenergy.qiufeng",
+                    "Source": "https:\/\/github.com\/Xposed-Modules-Repo\/pansong291.xposed.quickenergy.qiufeng"
+                },
+                {
+                    "title": "GravityBox [O]\n",
+                    "content": "All-in-one complex module for devices running vanilla Android 8 Oreo\n",
+                    "Website": "https:\/\/forum.xda-developers.com\/showthread.php?t=3739929",
+                    "Source": "https:\/\/github.com\/GravityBox\/GravityBox\/tree\/oreo-as-edxposed"
+                },
+                {
+                    "title": "QuoteLock\n",
+                    "content": "Displays quotes on your phone lockscreen!\n",
+                    "Website": "https:\/\/github.com\/apsun\/QuoteLock",
+                    "Source": "https:\/\/github.com\/apsun\/QuoteLock"
+                }
+            ]
+        }
+    }
+}

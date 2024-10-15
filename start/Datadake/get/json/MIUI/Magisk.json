@@ -1,0 +1,548 @@
+{
+    "data": {
+        "localSearchRepositories": {
+            "store": [
+                {
+                    "title": "Nano for Android NDK",
+                    "content": "Static ARM nano binary for Android built with the NDK",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/nano-ndk\/archive\/6167a6a6f1f378a83cda64a73fbcfc22dd4a8cd1.zip"
+                },
+                {
+                    "title": "vr25",
+                    "content": "VR25",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/acc\/archive\/c609dfb9bc426d978d509d948a016e46ad6c778f.zip"
+                },
+                {
+                    "title": "Font Manager",
+                    "content": "The best way to theme fonts and emojis. with over 200 choices and counting! Website: https:\/\/www.androidacy.com\/?f=fm%20prop. Check out the new magisk repository: https:\/\/www.androidacy.com\/modules-repo\/?f=fm%20prop",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/fontrevival\/archive\/6ce0e249d357b27c5ac8edb96f6a88881505140a.zip"
+                },
+                {
+                    "title": "Riru",
+                    "content": "Inject into zygote and run codes from \"Riru\" modules in apps or the system server. Support modules which use Riru API v24+.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru-core\/archive\/0de0642f706eea899f1f79a7523beceda8fa1602.zip"
+                },
+                {
+                    "title": "Daily Job Scheduler (DJS)",
+                    "content": "Runs commands and scripts on boot and at HH:MM. Any root solution is supported. The installation is always \"system-less\", whether or not the system is rooted with Magisk.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/djs\/archive\/83e2a7e1ca9bafa6c38e6db84eab656c4525ba41.zip"
+                },
+                {
+                    "title": "MagiskFrida",
+                    "content": "Run frida-server on boot",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/magisk-frida\/archive\/6de458daed8ecdc617b00bd14daccb9b22eadff9.zip"
+                },
+                {
+                    "title": "Riru - LSPosed",
+                    "content": "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12, 12L DP1. Requires Riru 25.0.1 or above installed.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_lsposed\/archive\/e212149d3a5826c6397c56dab98941c30af81642.zip"
+                },
+                {
+                    "title": "Cross Compiled Binaries",
+                    "content": "A growing collection of cross compiled binaries for android",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ccbins\/archive\/90952f162cdb380cbf5564715bb7494c3dc2ea46.zip"
+                },
+                {
+                    "title": "microG Installer Revived",
+                    "content": "Install microG GmsCore, GsfProxy, FakeStore (or Play Store if you want so) & DroidGuard Helper (optional) to \/system\/priv-app and MapsV1 to \/system\/framework",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/microG_installer\/archive\/f88930c0d04101f202fd658a338168134b897039.zip"
+                },
+                {
+                    "title": "Allow apps access clipboard in background.",
+                    "content": "com.github.kr328.clipboard.Injector",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_clipboard_whitelist\/archive\/a494d5c5ccc54aea62df08fc638e1dc13d3d79be.zip"
+                },
+                {
+                    "title": "Oxygen OS gesture bar for AOSP",
+                    "content": "Oxygen OS Gesture Bar for AOSP 10\/11 devices",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/oosbar\/archive\/e784dfb6bbb454af232be52aedc6b186c12dde14.zip"
+                },
+                {
+                    "title": "Busybox for Android NDK",
+                    "content": "Static busybox binary for all Android architectures built with the NDK",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/busybox-ndk\/archive\/6670659fea481131e0cb8be186dc1506fda786f3.zip"
+                },
+                {
+                    "title": "JamesDSP Manager",
+                    "content": "JamesDSPManager is a reformed audio engine based of AOSP and OmniROM DSPManager source code with enhanced features and tuning",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ainur_jamesdsp\/archive\/97174f3d2ccb6bd76b180c806f16f77bb5991511.zip"
+                },
+                {
+                    "title": "Ainur Narsil",
+                    "content": "NARSIL is system-wide audio modification that helps keeping android playback tract clean from most sound FX (OpenSL & hardware DSPs). This might be especially handy for devices with great internal codecs & DACs - leaving pure hardware audio tuned by manufacturer.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ainur_narsil\/archive\/78a70005c712413b74c9bac537fa8bf8d651fbc6.zip"
+                },
+                {
+                    "title": "ViPER4Android FX ",
+                    "content": "ViPER4AndroidFX reborn - v2.7.x",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ViPER4Android-FX\/archive\/b9dd6b0d869caff625c048203162f8ce20faccfc.zip"
+                },
+                {
+                    "title": "Audio Compatibility Patch",
+                    "content": "Fixes music and streaming apps (Spotify, Pandora, etc) that aren't processing audio effects for various equalizer applications through the modification of audio policy",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/acp\/archive\/8f9b6266cbd7713c822faee69e4bd4b7d4530d78.zip"
+                },
+                {
+                    "title": "Webview Manager",
+                    "content": "Change your WebView and browser systemless-ly. Block ads and fingerprinting, increase privacy, and more. Website and how to get support: https:\/\/www.androidacy.com\/?f=wmv%20prop. Check out our new magisk module repo: https:\/\/www.androidacy.com\/modules-repo\/?f=wmv%20prop",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/bromitewebview\/archive\/bf9f2de741e18e961fe8c26ce719d5edff571946.zip"
+                },
+                {
+                    "title": "TWRP A\/B Retention Script",
+                    "content": "Keep TWRP installed after an A\/B OTA - Flash this after each OTA has installed, but before you install Magisk to Inactive Slot from the Magisk app",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/twrp-keep\/archive\/b9675dacfde8c52d43de4fc97b677a0e729176fe.zip"
+                },
+                {
+                    "title": "Overlay Mount Fix",
+                    "content": "Fixes overlay mounting problems conflicting with magisk (often seen in with \/product)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/overlayfix\/archive\/1bf80851e3e9c540f9ab15e41f864217b3df887d.zip"
+                },
+                {
+                    "title": "Fullscreen\/Immersive Gestures (Q-S)",
+                    "content": "Customize Android 10-12's navigation gestures ",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/HideNavBar\/archive\/a2aba3e19104b80920906df84d1ec8b89e903bd0.zip"
+                },
+                {
+                    "title": "Bluetooth Library Patcher",
+                    "content": "Magisk module avoiding loss of bluetooth pairings after reboot or airplane mode switch on rooted samsung devices.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/BluetoothLibraryPatcher\/archive\/170f34b7305fedd5c39a3565daac55085bad369f.zip"
+                },
+                {
+                    "title": "Call Recorder - SKVALEX",
+                    "content": "App to record phone calls from the line with a power of root and Magisk",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/callrecorder-skvalex\/archive\/b7eaea81421c2e35d3a2e334f43d1840106e9a6e.zip"
+                },
+                {
+                    "title": "MagiskHide Props Config",
+                    "content": "Didgeridoohan",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/MagiskHidePropsConf\/archive\/b6f4b20a92908ae6a67d1fd4ab656f61ad197f26.zip"
+                },
+                {
+                    "title": "ADB & Fastboot for Android NDK",
+                    "content": "Static ARM adb and fastboot binaries for Android built with the NDK",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/adb-ndk\/archive\/881d2e69646baac463d08698c8fc8545f9a80224.zip"
+                },
+                {
+                    "title": "Adreno GPU Developer Preview Drivers",
+                    "content": "Replace ROM Adreno GPU drivers from Qualcomm",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/adreno-dev\/archive\/68411e15b6f22b6f974d0dea93e3108450d4f854.zip"
+                },
+                {
+                    "title": "ZipSigner & Zip for Android NDK",
+                    "content": "Wrapped dexed zipsigner.jar, and static ARM zip and zipalign binaries for Android built with the NDK",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/zipsigner\/archive\/ca66ad3c46dc02d62642a759ae9b6934be4acc28.zip"
+                },
+                {
+                    "title": "Nexus Media",
+                    "content": "Replace ROM ringtones\/notification\/system sounds and bootanimation with those from the recently-retired Nexus devices (chosen at flash-time)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/nexusmedia\/archive\/1070b5b6cb88af84f1e8a24e4708fd305e973997.zip"
+                },
+                {
+                    "title": "mtd-utils for Android NDK",
+                    "content": "Static ARM mtd-utils (flash_erase, nanddump and nandwrite) binaries for Android built with the NDK",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/mtd-ndk\/archive\/709c3d5cebc84715ddc5c460b16926ac978d6013.zip"
+                },
+                {
+                    "title": "QuickSwitch (Android Pie+)",
+                    "content": "Pie recents for any supported launcher",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/quickstepswitcher\/archive\/e54c4b05deacb39c2a9a914263acc447c854337e.zip"
+                },
+                {
+                    "title": "WiFi5GhzDisabler",
+                    "content": "Disable WiFi 5Ghz Band on your Qualcomm device",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/wifi5ghzdisabler\/archive\/f8ea8451c7c1c0bf1df4f222eb17ce4e0adf6144.zip"
+                },
+                {
+                    "title": "AOSP Gesture bar for OxygenOS 10-11",
+                    "content": "AOSP Pill for Oxygen OS 10-11",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/aospill\/archive\/817a26f5bb17f8588935ca8cf374c42d66f43fdf.zip"
+                },
+                {
+                    "title": "Dialer Framework for Google Phone",
+                    "content": "Framework for installing the Google Dialer\/Google Phone on Android",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/GoogleDialerFramework\/archive\/4bb8df38d195997a7914840917db861b04ea13dd.zip"
+                },
+                {
+                    "title": "[Re-continued]Active Edge Mod for Pixel devices",
+                    "content": "Allows customization of Active Edge in combination with Edge Sense Plus",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/active_edge_system_mod\/archive\/def9febe82abd24de766152be2bb301a5b33a324.zip"
+                },
+                {
+                    "title": "AirMusic - stream your music!",
+                    "content": "This module enables AirMusic's (aka AirAudio) \"system-mode\" and allows you to stream all your audio to any network-enabled receiver.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/airaudio\/archive\/93450fc497f38c9ea17239a0b1dcb93c639c1017.zip"
+                },
+                {
+                    "title": "Riru - Enhanced mode for Storage Isolation",
+                    "content": "Enable Enhanced mode for Storage Isolation v6.0.0 or above. Storage Isolation is an app that allows you control how apps use your files.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_storage_redirect\/archive\/4618462fe66f6dc7f3bfac7f78fd954a72b44adc.zip"
+                },
+                {
+                    "title": "Sui",
+                    "content": "Modern superuser interface implementation, shares the same API design from Shizuku. This modules requires Riru v25.0.0 or above.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru-sui\/archive\/38753eb2e482fed875440ac328ed32ae5ccb6a3a.zip"
+                },
+                {
+                    "title": "",
+                    "content": "",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/com.piyushgarg.rclone\/archive\/a0b0d7f4fa96c0f1d87a150c2f5e6576e83f4177.zip"
+                },
+                {
+                    "title": "Terminal Modifications",
+                    "content": "Android terminal - The way it should be",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/terminalmods\/archive\/fcd0c770c0e9cf383aefa24bece47bd3acf6a6d3.zip"
+                },
+                {
+                    "title": "F-Droid Privileged Extension",
+                    "content": "Installs F-Droid Privileged Extension systemlessly",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/Fdroid-Priv\/archive\/525f43756e05982c20446dcbb918ad89dfa1c834.zip"
+                },
+                {
+                    "title": "Detach",
+                    "content": "Detach Market Links for Theme Ready Apps, originaly created by hinxnz, ported by Rom to works with Magisk.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/Detach\/archive\/2902932f88011ff01201961216a57590b2898886.zip"
+                },
+                {
+                    "title": "1Controller - 1 Module to support all Controllers.",
+                    "content": "This module adds .kl file (keylayout) for Dualshock 4\/3, Xbox Series X|S, Xbox One\/S, Xbox 360.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/OneController\/archive\/5703dbc85aec07fca3ed4f7f9ec324d7e63fa13e.zip"
+                },
+                {
+                    "title": "NFC Screen Off",
+                    "content": "Read NFC tags when screen is off. Disable NFC tagging sound.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/NfcScreenOff\/archive\/ca5c0bb3adcdee3b642387338d26e7e6e6819fa8.zip"
+                },
+                {
+                    "title": "MIUI 10 Sound Pack",
+                    "content": "This module adds the nice MIUI 10 sounds to any ROM, systemlessly.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/miui-10-sounds\/archive\/2c87f88441ae829c543c5685591933140aaa5b40.zip"
+                },
+                {
+                    "title": "Energized Protection",
+                    "content": "Let's make an annoyance free better open internet, altogether! https:\/\/energized.pro",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/energizedprotection\/archive\/ffccf253f07902c0f8cd92143b3c81b5debd7af5.zip"
+                },
+                {
+                    "title": "SSH for Magisk",
+                    "content": "OpenSSH and Rsync bundled with simple start scripts for Android with Magisk",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ssh\/archive\/ba874b18ce9496a9d85a892bdcdb9ae83253e933.zip"
+                },
+                {
+                    "title": "Benchkit",
+                    "content": "A developer-centric toolkit to facilitate in-depth profiling and benchmarking.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/benchkit\/archive\/7d8a521a0237f2af19d01916b853f1d2a427ba1b.zip"
+                },
+                {
+                    "title": "Riru - Location Report Enabler",
+                    "content": "Enable Google Feed & Timeline & Location reprot in unsupported regions by changing system properties in related packages.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_location_report_enabler\/archive\/3bbbd99177fcac2ab7f255086da7550eabe28d71.zip"
+                },
+                {
+                    "title": "Riru - IFW Enhance",
+                    "content": "A module of Riru. Enhance intent firewall.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_ifw_enhance\/archive\/ad13b4ddf9166fbb830d10f69580b9c402d2e7ab.zip"
+                },
+                {
+                    "title": "Riru - EdXposed",
+                    "content": "93",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/riru_edxposed\/archive\/7293bf52ad17b0cdded2bc94027168481bdea55a.zip"
+                },
+                {
+                    "title": "BootAMoji Switcher",
+                    "content": "A module that helps to switch the Boot Animation, Shutdown Anmation and Emojis to one of the Animations and Emojis included in this module for any supported device using volumekeys during installation.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/WDAnimationcxair\/archive\/1543a802c05d1155881471acb8d92cad69ec4866.zip"
+                },
+                {
+                    "title": "Magisk DRM Disabler (MDD)",
+                    "content": "A Magisk Module aiming to eliminate DRM from Android systemlessly.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/magisk-drm-disabler\/archive\/7a4d2d6a76b52765c9656ae251084628ff13178e.zip"
+                },
+                {
+                    "title": "Systemless TZData",
+                    "content": "Update your ROM's tzdata (timezone data) file systemlessly. 2020F is installed on Android 10 and above, 2020A is installed on older versions.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/Systemless_TZData\/archive\/a0ef44f4586b9055da16d64d2b8baee25ee8855f.zip"
+                },
+                {
+                    "title": "G-Visual Mod",
+                    "content": "Systemlessy customize your Android's Visual!",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/G-VisualMod\/archive\/48cf48b1ac4d3e91f76af36d2a31320b45421f3f.zip"
+                },
+                {
+                    "title": "None Display Cutout",
+                    "content": "This module provide you a option for hide your devices display cutout(notch). QQ chat group 855219808.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/noneDisplayCutout\/archive\/66a55724b69316a968d32da14c3b52886a6b1bc5.zip"
+                },
+                {
+                    "title": "aria2c for android",
+                    "content": "aria2 is a lightweight multi-protocol & multi-source command-line download utility. Upstream version 1.35.0 for aarch64 architecture.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/aria2c\/archive\/9de8660d134fe743fb28faba05a5a12885275bb1.zip"
+                },
+                {
+                    "title": "DNSCrypt-Proxy2",
+                    "content": "A flexible DNS proxy, with support for modern encrypted DNS protocols such as DNSCrypt v2, DNS-over-HTTP\/2 & Anonymized DNSCrypt. Using upstream version DNSCrypt-proxy 2.0.44",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/dnscrypt-proxy2\/archive\/d22ee061bd384eef8d2b1450033f2435f25164ca.zip"
+                },
+                {
+                    "title": "liboemcrypto disabler",
+                    "content": "Disables liboemcrypto.so on rooted devices to allow DRM-protected content to play (e.g. Netflix, My5, etc.).",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/liboemcryptodisabler\/archive\/05623efc7a44ec33044694e6ac772eb80c9ed24f.zip"
+                },
+                {
+                    "title": "Wireless Firmware for Nethunter",
+                    "content": "This module adds the required firmware for external wireless adapters to be used with NetHunter.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/wirelessFirmware\/archive\/602ffe0a7d2defcaf43550d754f659dc4554dacf.zip"
+                },
+                {
+                    "title": "ExSDCard Access Enabler",
+                    "content": "Enables external SDCard write access for your Apps on Nougat and Oreo, including Oreo dedicated feature ! New path for your sdcard: \"\/mnt\/media_rw\/\".",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ExSDCard\/archive\/db6c552e46158ba70a5784cc56af4be638cabc48.zip"
+                },
+                {
+                    "title": "V2ray for Android",
+                    "content": "V2ray core with service scripts for Android",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/v2ray\/archive\/1a55755932c5dc3475d0ac986fb28c26d24aa642.zip"
+                },
+                {
+                    "title": "Oxy-ify",
+                    "content": "Get Oxygen OS apps, custom media and OnePlus Slate font.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/Oxy-ify\/archive\/022ce5fd9e5e9fa3f2a276f8540adc2e5b0ded5d.zip"
+                },
+                {
+                    "title": "Audio Modification Library",
+                    "content": "AudModLib is a framework that allows the seamless integration of multiple audio mods in Magisk.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/aml\/archive\/a135adc1c713219aa6e2014193e58f663a442105.zip"
+                },
+                {
+                    "title": "Wifi Bonding (Qcom)",
+                    "content": "Doubles your wi-fi bandwith by modifying WCNSS_qcom_cfg.ini.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/wifi-bonding\/archive\/5072c1fda550d3fa9d2b5bbc115f799466a1cc1b.zip"
+                },
+                {
+                    "title": "Moto Clock Widget",
+                    "content": "Systemless install Motorola Clock widget",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/motoclockwidget\/archive\/246ff9c12a43de3fa0b6766a26cda1afd00dff38.zip"
+                },
+                {
+                    "title": "Immersive Gestural Navigation Bar (Q)",
+                    "content": "Enable immersive gestural navigation bar for Android 10.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/HideGesBar\/archive\/2ed3cf94aaba2970f51057715ec31c64e96b3001.zip"
+                },
+                {
+                    "title": "China Telecom Enabler",
+                    "content": "Let New foreign devices support China Telecom",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ctenabler\/archive\/7d8cf9fe9b9bcfdf7cd1be2d58e53807c0bedb92.zip"
+                },
+                {
+                    "title": "libsecure_storage companion for rooted Samsung devices",
+                    "content": "Modified system libraries to restore retention of Bluetooth pairings on various rooted Samsung devices.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/libsecure_storage\/archive\/cfa87726d4e64e4fd08f089aa107063761ac4cae.zip"
+                },
+                {
+                    "title": "Move Certificates",
+                    "content": "Moves certificates from the user certificate store to the system store. Removes the *Network may be monitored* warning.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/movecert\/archive\/ec2345a430bc6595535b80a4825092eab5c7b091.zip"
+                },
+                {
+                    "title": "Sony Music Player",
+                    "content": " Enable's Sony Music App and Playstore Updatable Install Sony Music From Playstore.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/sonymusic\/archive\/d455eff47b30453ba963af44c1b5195d430093bd.zip"
+                },
+                {
+                    "title": "Axet's Call Recorder",
+                    "content": "Record calls with axet's Call Recorder (compatible with F-Droid updates)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/callrecorder-axet\/archive\/1e9a7db24ec014857e1de4f240b26cd42c8c9955.zip"
+                },
+                {
+                    "title": "PIXELARITY",
+                    "content": "Contains pixel exclusives, fix and tweaks to boost user experience on devices running Android 9\/10",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/PIXELARITY\/archive\/2293d64c11e50182ac66cfba181436bdb4dbdc3e.zip"
+                },
+                {
+                    "title": "ARCore\/Playground Patcher",
+                    "content": "Enables ARCore support for unsupported devices and allows to install Playground packages and other apps that support ARCore directly via Play Store or Play Store add-ons.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ARCore_enabler\/archive\/04337da385e25f3d6dbe1917324b4a1291185a54.zip"
+                },
+                {
+                    "title": "Static AARCH64 tcpdump v4.9.2",
+                    "content": "Add the static AARCH64 Tcpdump binary - a command-line tool for capturing network packets from the device's network interfaces.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/tcpdump_static_aarch64\/archive\/a6e32ad9b59d7cc430d6bb497480e44e9704e173.zip"
+                },
+                {
+                    "title": "Xposed Framework (Dalvik)",
+                    "content": "The official Dalvik Xposed Framework, packaged by @MlgmXyysd. Supports Android 4.2, 4.3, 4.4, 4.4W. Telegram: @EdXposed",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/xposed_dalvik\/archive\/b15b3442bb33154a7f89767a536920460c0e22d6.zip"
+                },
+                {
+                    "title": "Sony Device Dummy",
+                    "content": "Add dummy Sony device libraries for Walkman, Album, Weather and other sony apps. Please read the readme first.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/sony-device-dummy\/archive\/5b756f6fec2774695bafe73499b4578d31bae3cc.zip"
+                },
+                {
+                    "title": "Debloater (Terminal Emulator)",
+                    "content": "Debloat your device Systemless-ly! With choices for debloating in Terminal Emulator for every device.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/terminal_debloater\/archive\/c2bfb3c66510052428733b06740c5e1e391619c0.zip"
+                },
+                {
+                    "title": "CloudflareDNS4Magisk IPv6",
+                    "content": "Using the new Cloudflare DNS by Magisk! As simple as that.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/CloudflareDNS4Magisk-IPv6\/archive\/8516fb41b1050577109ff3ae3a48976831b588a8.zip"
+                },
+                {
+                    "title": "CloudflareDNS4Magisk",
+                    "content": "Using the new Cloudflare DNS system-lessy! As simple as that.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/CloudflareDNS4Magisk\/archive\/bdcd605cc59849392e967280c87e93f6bfef5a96.zip"
+                },
+                {
+                    "title": "HiddenSettings",
+                    "content": "A graphical interface to modify settings via terminal.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/hidden_settings\/archive\/715e537e17a5fde94293bca7cb9a0de736a2bda6.zip"
+                },
+                {
+                    "title": "Disable screenshot and camera sounds",
+                    "content": "Systemlessly disable both screenshot and camera sounds(added android 10 support @compliment)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/disable-screenshot-camera-sounds\/archive\/5d10ffdb7f6598eb0848b8ab55a49fd012a52be0.zip"
+                },
+                {
+                    "title": "System Accent Theme (Colors) for P",
+                    "content": "Simple module to add some system accent theme colors to your android P custom rom, after flash though magisk and reboot go to Settings> Display> Color theme. Files are pushed to \/vendor\/overlay.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/sap\/archive\/68c00cd28da69c11c849ef6d5a106e6dd7b16f71.zip"
+                },
+                {
+                    "title": "Vold - exFAT\/NTFS\/EXT4\/F2FS Support",
+                    "content": "Add exfat\/ntfs\/ext4\/f2fs filesystem support for external sdcard. Only for AOSP-like system. (f2fs only available if your kernel support it.)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/vold-posix\/archive\/d65a4b5729124b5ba260bcfa2ddfefaf07efb863.zip"
+                },
+                {
+                    "title": "Adreno 630 GPU Driver",
+                    "content": "Latest GPU driver for Adreno 630 (SDM845).",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/adreno-630-gpu-driver\/archive\/ac21c91ce21bf6c135ffe2bb69c7586e2d9e2dfb.zip"
+                },
+                {
+                    "title": "Clash for Magisk",
+                    "content": "A rule-based tunnel in Go.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/clash_for_magisk\/archive\/61e429c314308dd8b438a44108f10f5fe6cf8a3c.zip"
+                },
+                {
+                    "title": "xmlpak \u00e2\u0080\u0093 a road to vendor apps",
+                    "content": "This module enables you to download and install vendor apps from Google Play. Compatibility is not guaranteed.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/xmlpak\/archive\/4e73846a50a640f4fc502bb9071d5e5cd40718d1.zip"
+                },
+                {
+                    "title": "App Systemizer (Terminal Emulator)",
+                    "content": "Turn apps to System Apps Systemlessly! Supports all device running Magisk.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/terminal_systemizer\/archive\/3144ec547a66f948d57e9e73fa765dc7f76f0deb.zip"
+                },
+                {
+                    "title": "Pix3lify",
+                    "content": "Ports Pixel-range exclusive features; Pixel Blue theme accent, Product Sans font, Alarms, Notification sounds, Ringtones, UI audio; enables Pixel Wallpapers, enables Google Call Screening, enables Night Light (device dependent), Daydream VR support, adds Device Gestures to Settings, enables Camera2 API and EIS support (varies per device)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/Pix3lify\/archive\/e60bbc90477cf9fa268b9e35c82b4e69145c1292.zip"
+                },
+                {
+                    "title": "Input Power Control",
+                    "content": "Completely native input power control tool written purely in C++ for performance and stability",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/IPControl\/archive\/0934acc1362fe88fafbf58b79ef9705ccac8b2c4.zip"
+                },
+                {
+                    "title": "ViPER4Android FX Legacy",
+                    "content": "ViPER4Android FX is an audio enhancing software to provide everyone with a better audio experience (You can choose between Material 2.5, 2.5.0.5, and 2.3.4.0 during install)",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ViPER4AndroidFX-Legacy\/archive\/9241c9801e33505a1cc63b60c7e7f281c97dfc15.zip"
+                },
+                {
+                    "title": "ViPER4Android XHiFi",
+                    "content": "ViPER4Android XHiFi is an audio enhancing software to provide everyone with a better audio experience",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ViPER4AndroidXHiFi\/archive\/8fd7726fc6c8be3d3040542dea86429d1564707c.zip"
+                },
+                {
+                    "title": "ZSH for Arm",
+                    "content": "Zsh is a modern *nix shell with many advanced features.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/zsh_arm64\/archive\/ffbb5fbf9aa59e6a5c146d960e4e60082d7afb37.zip"
+                },
+                {
+                    "title": "KaliNethunter",
+                    "content": "A module that installs a lightweight version Kali Nethunter on any phone.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/KaliNethunter\/archive\/c9248fce11d35fad0faffce0bbd6c86ad87a54ac.zip"
+                },
+                {
+                    "title": "Miracast Enabler",
+                    "content": "Enables Miracast screen mirroring on Pie. Not tested on non-Pixel devices.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/miracast-enabler\/archive\/a259f35c7c033c3dcd7254d9e5b29d141afa70d1.zip"
+                },
+                {
+                    "title": "System Plugin for App Ops",
+                    "content": "Enable System Plugin mode of App Ops by Rikka (works on pre-Pie).",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/AppOpsPlugin\/archive\/64344cdb707d4df5369e73320a8311fbec67760c.zip"
+                },
+                {
+                    "title": "One UI Sounds",
+                    "content": "One UI system sounds",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/OneUISounds\/archive\/35279951c3b02e49b500234ee6ac4b23a9f06a0f.zip"
+                },
+                {
+                    "title": "KFMark Enabler",
+                    "content": "A module can enable KFMark when device start.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/kfmark\/archive\/d346823d97ca3b287dcaaab05f2024f3101225fd.zip"
+                },
+                {
+                    "title": "PS4 Remote Play Enabler",
+                    "content": "For non-Sony devices enable PS4 Remote Play from PlayStore",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/PS4RE\/archive\/d7fc0d9e3eeb01b237593d26cc6cfd607cec95ef.zip"
+                },
+                {
+                    "title": "TWRP Helper",
+                    "content": "This module provides dynamic, in-situ patching of the device's TWRP recovery image to include Internal Storage in future Data back-ups.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/twrp-helper\/archive\/7b0cb12e4c4b190a8943d5055e6c7ab734890ff8.zip"
+                },
+                {
+                    "title": "Disable multicast DNS daemon",
+                    "content": "Systemlessly disable multicast DNS daemon",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/disable-mdnsd\/archive\/4a76dcb2bb687852109e6768c44cdd0806189371.zip"
+                },
+                {
+                    "title": "HEVC+SM GC OP3&3T and OP5",
+                    "content": "Enable the HEVC(High Efficiency Video Codec) on OnePlus 3\/3T and 5 with stock bitrate and 60fps video recording and Slow Motion in Google Camera.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/HEVCEnabler\/archive\/f6a3fa6bbd77af140ba49aa20763efea30a5e9f6.zip"
+                },
+                {
+                    "title": "Foxy Boot",
+                    "content": "Replace Android boot animation with the kernel ring buffer or Android log",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/foxy-boot\/archive\/891054661c9b4475347a7e399ab1841b9242ed23.zip"
+                },
+                {
+                    "title": "",
+                    "content": "",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/com.catchingnow.icebox\/archive\/cdeb14777846c5015398fe85971dac411b52a04e.zip"
+                },
+                {
+                    "title": "Xposed Framework",
+                    "content": "The official Xposed Framework, packaged by @topjohnwu",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/xposed\/archive\/11e46aadc516b1227e1b3f98a0785b7eecb88c26.zip"
+                },
+                {
+                    "title": "Log Catcher",
+                    "content": "Catch boot log to \/data\/local\/boot\/boot-.log. QQ chat group 855219808.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/logcat\/archive\/294165640a286475c9bc0f0a34bd641da606cbd5.zip"
+                },
+                {
+                    "title": "APTX for Android Oreo & Pie",
+                    "content": "Add APTX libraries to system. Adroid 8+ should work.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/apt-x\/archive\/26597124bdfacbc7b43320cee892f88030fc88cf.zip"
+                },
+                {
+                    "title": "Magisk Manager for Recovery Mode (mm)",
+                    "content": "Manage your Magisk v17-19 modules from recovery (e.g., TWRP) -- run \" sh \/sdcard\/mm\" on recovery terminal.",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/mm\/archive\/569d2ef21a0dccfb0c827af1dea76adfbf8aab6c.zip"
+                },
+                {
+                    "title": "ASUS Style Suite ",
+                    "content": "ROG Phone Apps Ports - Live Wallpaper + Camera ported for Magisk",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/ASUS-Style-Suite\/archive\/5ea9cabd62446efa34fda2ad9b5be6a0cb5f1306.zip"
+                },
+                {
+                    "title": "SQLite for ARM aarch64 devices",
+                    "content": "Provides a statically linked sqlite3 binary for ARM aarch64 devices",
+                    "zip_url": "https:\/\/github.com\/Magisk-Modules-Repo\/sqlite3\/archive\/585959ddf14e8e3b24cd4d4b0cf0ddfb62999c5c.zip"
+                }
+            ]
+        }
+    }
+}

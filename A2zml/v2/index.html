@@ -1,202 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>魔法禁书</title>
-<link rel="icon" href="../../favicon.ico">
-<link href="../../start/index.css" rel="stylesheet">
-<!-- 引入 bootstrap css 文件 -->
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- 引入 Icon Font 文件 -->
-<link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
-<!-- 引入 jquery js 文件 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../../start/origin.js"></script>
-<!-- 引入 js-base64 js 文件 -->
-<script src="./js-base64.js"></script>
-<!-- 引入 md5 js 文件 -->
-<script src="./md5.js"></script>
-<!-- 引入 Valine js 文件 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/valine/1.5.1/Valine.min.js"></script>
-</head>
-<body>
-<!--- header -->
-<header class="navbar navbar-expand-lg shadow bg-body-tertiary sticky-top mb-4">
-<nav class="container-xxl flex-wrap flex-lg-nowrap">
-<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#right-Side-navigation"><i class="bi bi-caret-left"></i></button>
-<a class="navbar-brand me-lg-2 font-monospace" href="" aria-label="Bootstrap">魔法禁书</a>
-<div></div>
-<div class="offcanvas-lg offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="right-Side-navigation">
-<div class="offcanvas-header pb-0 mb-5"><h5 class="offcanvas-title">魔法禁书</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#right-Side-navigation"></button></div>
-<div class="offcanvas-body pt-0 p-lg-0">
-<ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="https://afdian.net/a/JIXIEJIDIGUAN" title="爱发电"><i class="bi bi-activity"></i><small class="d-lg-none ms-2">爱发电</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#编码工具" title="编码工具"><i class="bi bi-braces-asterisk"></i><small class="d-lg-none ms-2">编码工具</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#评论留言" title="评论留言"><i class="bi bi-chat-square-dots"></i><small class="d-lg-none ms-2">评论留言</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#节点分享" title="节点分享"><i class="bi bi-database-up"></i><small class="d-lg-none ms-2">节点分享</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#机场分享" title="机场分享"><i class="bi bi-device-ssd"></i><small class="d-lg-none ms-2">机场分享</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#常见问题" title="常见问题"><i class="bi bi-exclamation-square"></i><small class="d-lg-none ms-2">常见问题</small></a></li>
-<li class="nav-item col-12 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 ms-1" href="#软件下载" title="软件下载"><i class="bi bi-android2"></i><small class="d-lg-none ms-2">软件下载</small></a></li>
-</ul>
-</div>
-</div>
-</nav>
-</header>
-<div class="container">
-<div class="ms-3 fs-5" id="编码工具"><i class="me-2 bi bi-braces-asterisk"></i>编码工具</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<ul class="nav nav-pills mb-3" id="myTab">
-<li class="nav-item"><a class="nav-link active" data-bs-toggle="list" href="#Base64">BASE64 编码</a></li>
-<li class="nav-item"><a class="nav-link" href="#Md5">MD5 编码</a></li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane active" id="Base64"><div class="row">
-<div class="col-lg-6"><div class="mb-3"><label class="form-label text-secondary">输入要转换的内容</label><textarea class="form-control text-secondary-emphasis" id="Base64text" rows="4"></textarea></div><div class="btn-group btn-group-sm mb-1"><button class="btn btn-outline-primary" type="button" id="Base64start">Base64 编码</button><button class="btn btn-outline-secondary" type="button" id="Base64end">Base64 解密</button></div></div>
-<div class="col-lg-6"><div class="mb-3"><label class="form-label text-body-tertiary">转换结果</label><textarea class="form-control text-black-50" id="Base64code" rows="4"></textarea></div></div>
-</div></div>
-<div class="tab-pane" id="Md5"><div class="row">
-<div class="col-lg-6"><div class="mb-3"><label class="form-label text-secondary">输入要转换的内容</label><textarea class="form-control text-secondary-emphasis" id="md5text" rows="4"></textarea></div><div class="btn-group btn-group-sm mb-1"><button class="btn btn-outline-primary" type="button" id="md5start">md5 编码</button></div></div>
-<div class="col-lg-6"><div class="mb-3"><label class="form-label text-body-tertiary">转换结果</label><textarea class="form-control text-black-50" id="md5code" rows="4"></textarea></div></div>
-</div></div>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="ms-3 fs-5" id="评论留言"><i class="me-2 bi bi-chat-square-dots"></i>评论留言</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<div id="vcomments" class="font-monospace"></div>
-</div>
-</div>
-<div class="container">
-<div class="ms-3 fs-5" id="节点分享"><i class="me-2 bi bi-database-up"></i>节点分享</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<p class="fw-lighter"><i class="me-2 bi bi-bookmark-check"></i>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
-<ul class="icon-list ps-0">
-<li class="d-flex align-items-start mb-1"><a href="https://github.com/XIU2/CloudflareSpeedTest"><i class="me-2 text-black bi bi-arrow-right-circle-fill"></i>Cloudflare「自选优选 IP」工具</a></li>
-<li class="text-muted d-flex align-items-start mb-1"><a href="https://github.com/ip-scanner/cloudflare"><i class="me-2 text-black bi bi-arrow-right-circle-fill"></i>Cloudflare 的ip段</a></li>
-</ul>
-<div id="v2" class="font-monospace"></div>
-</div>
-</div>
-<div class="container">
-<div class="ms-3 fs-5" id="机场分享"><i class="me-2 bi  bi-device-ssd"></i>机场分享</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<p class="fw-lighter"><i class="me-2 bi bi-ethernet"></i>所有机场来源于网络收集，速度因人而异，自行测试选择测试体验</p>
-<div class="my-3">
-<div class="pb-2 mb-0 fs-5">工具<span class="ms-2 badge bg-body-secondary text-black">在线测速IP查询</span></div>
-网速测试：<a class="badge text-bg-secondary text-decoration-none" href="https://speed.cloudflare.com/">Speed Test</a>
-<a class="badge text-bg-secondary text-decoration-none" href="https://fast.com/">Fast</a>
-<a class="badge text-bg-secondary text-decoration-none" href="https://www.speedtest.net/zh-Hans">Speedtest</a><br>
-IP查询：<a class="badge text-bg-secondary text-decoration-none" href="https://ip.skk.moe/">ip.skk.moe</a>
-<a class="badge text-bg-secondary text-decoration-none" href="https://www.ipaddress.com/">IPAddress.com</a>
-<a class="badge text-bg-secondary text-decoration-none" href="https://www.ipaddress.my/">IPAddress.my</a>
-</div>
-<div class="my-3">
-<div class="pb-2 mb-0 fs-5">ACL4SSR<span class="ms-2 badge bg-body-secondary text-black">订阅转换</span></div>
-<ul class="list-group">
-<li class="list-group-item"><a class="badge text-bg-light" href="https://acl4ssr-sub.github.io/">ACL4SSR 在线订阅转换</a></li>
-<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.dler.io/">Subscription Converter</a></li>
-<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.xeton.dev/">Subscription Converter</a></li>
-<li class="list-group-item"><a class="badge text-bg-light" href="https://sub.tsutsu.one/">つつの订阅转换 · 鲸歌</a></li>
-<li class="list-group-item"><a class="badge text-bg-light" href="https://bianyuan.xyz/">边缘@订阅转换API</a></li>
-</ul>
-</div>
-<div class="my-3">
-<div class="pb-2 mb-0 fs-5">临时邮箱<span class="ms-2 badge bg-body-secondary text-black">一般用处，懂的都懂</span></div>
-<div class="row row-cols-2 row-cols-lg-5 text-break">
-<div class="col"><a class="badge text-bg-light" href="http://24mail.chacuo.net">24mail.chacuo.net</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://mail.tm/zh">mail.tm/zh</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://mail.td/zh">mail.td/zh </a></div>
-<div class="col"><a class="badge text-bg-light" href="https://linshiyou.com">linshiyou.com</a></div>
-<div class="col"><a class="badge text-bg-light" href="http://f.omail.cc">f.omail.cc</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://linshiyouxiang.net">linshiyouxiang.net</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://10minutemail.net">10minutemail.net</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://10minemail.com/zh">10minemail.com/zh</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://www.linshi-email.com">www.linshi-email.com</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://ihotmails.com">ihotmails.com</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://moakt.com">moakt.com</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://temp-mail.org/zh">temp-mail.org/zh</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://bonds.id">bonds.id</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://tempmail.cn">tempmail.cn</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://www.moakt.com/zh">www.moakt.com/zh</a></div>
-<div class="col"><a class="badge text-bg-light" href="https://www.guerrillamail.com">www.guerrillamail.com</a></div>
-</div>
-</div>
-<div class="my-3">
-<div class="pb-2 mb-0 fs-5">第三方免费机场<span class="ms-2 badge bg-body-secondary text-black">来源网络收集</span></div>
-<a class="text-decoration-none" href="https://lncn.org/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">免费节点 - Lncn.org</strong><span class="d-block">一个纯公益免费节点分享网站,提供免费shadowsockR(SSR)账号</span></div></a>
-<a class="text-decoration-none" href="https://free-ss.site/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">免费vless账号</strong><span class="d-block">-</span></div></a>
-<a class="text-decoration-none" href="https://getafreenode.com/"><div class="text-muted pt-2 small lh-sm border-bottom w-100"><strong class="text-gray-dark">获取免费节点</strong><span class="d-block">我们提供免费的 V2Ray 节点！为了帮助您保护您的隐私和安全，请绕过审核、逃避跟踪并跳过身份验证！</span></div></a>
-</div>
-<div class="my-3">
-<div class="pb-2 mb-0 fs-5">机场广告列表<span class="ms-2 badge bg-body-secondary text-black">(随机排序)</span></div>
-<ul id="airportList" class="list-group"></ul>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="ms-3 fs-5" id="常见问题"><i class="me-2 bi bi-exclamation-square"></i>常见问题</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<div id="sections"></div>
-</div>
-</div>
-<div class="container">
-<div class="ms-3 fs-5" id="软件下载"><i class="me-2 bi bi-android2"></i>软件下载</div>
-<div class="shadow p-2 mx-2 my-3 mb-5 bg-body-tertiary rounded">
-<div class="row">
-<div class="text-center mb-3 py-2"><div class="h4 mb-2">客户端</div><p class="text-muted">SS/SSR/V2Ray/Trojan/Clash 客户端软件下载</p></div>
-<div class="col-lg-6 mb-1">
-<div class="fs-5">介绍</div>
-<ul><li>SS = <a href="https://zh.wikipedia.org/wiki/Shadowsocks">Shadowsocks</a></li><li>SSR = <a href="https://zh.wikipedia.org/wiki/ShadowsocksR">ShadowsocksR</a></li><li>SS ≠ SOCKS5</li><li>SS ≠ VPN</li><li><a href="https://www.v2ray.com">V2Ray</a></li><li><a href="https://www.v2fly.org/config/protocols/vless.html">VLESS</a></li><li><a href="https://github.com/trojan-gfw/trojan">Trojan</a></li><li><a href="https://github.com/Dreamacro/clash">Clash</a></li><li><a href="https://github.com/JadaGates/ShadowsocksBio">Shadowsocks的前世今生</a></li></ul>
-</div>
-<div class="col-lg-6 mb-1">
-<div class="fs-5">推荐客户端</div>
-<ul><li><code>iOS</code>: Surge 5, Quantumult X, Shadowrocket, Loon, Stash</li><li><code>Android/安卓</code>: Clash for Android, Surfboard</li><li><code>macOS</code>: Surge Mac, ClashX Pro, Clash for Windows, Stash for macOS</li><li><code>Windows</code>: Clash for Windows, Clash.Mini</li><li><code>Linux</code>: Clash for Windows <br><em>(下方有下载地址)</em></li></ul>
-<div class="fs-5">Clash全平台客户端</div>
-<ul><li><code>iOS</code>: Stash, Choc, Maomi</li><li><code>Android/安卓</code>: Clash for Android</li><li><code>macOS</code>: ClashX Pro, Clash for Windows, Stash for macOS</li><li><code>Windows</code>: Clash for Windows, Clash.Mini</li><li><code>Linux</code>: Clash for Windows, Clash <br><em>(下方有下载地址)</em></li></ul>
-</div>
-</div>
-<div id="clientLinks" class="row row-cols-1 row-cols-lg-3 text-break"></div>
-</div>
-</div>
 
-<!-- 引入 bootstrap js 文件 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
-<script>
-$(document).ready(function () {
-$(function(){
-$('#myTab a').on('click', function (event) {
-event.preventDefault();
-$(this).tab('show');
-});
-$("#Base64start").click(function () {$("#Base64code").val(Base64.encode($("#Base64text").val()))});
-$("#Base64end").click(function () {$("#Base64code").val(Base64.decode($("#Base64text").val()))});
-$("#md5start").click(function () {$("#md5code").val(md5($("#md5text").val()))});
-});
-$(function(){
-new Valine({el:'#vcomments',appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',hide:true,emojiCDN:'//i0.hdslb.com/bfs/emote/',emojiMaps:{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_热词系列_三连":"21f15fe11b7a84d2f2121c16dec50a4e4556f865.png","tv_热词系列_知识增加":"5637557320fbfb3292307735f0b8acd53a791241.png","tv_热词表情_哎呦不错哦":"6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png","tv_热词系列_好耶":"ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png","tv_热词系列_你币有了":"84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png","tv_热词系列_对象":"a41763740a90c2b11bf282bf44ccee78066c98ff.png","tv_热词系列_不孤鸟":"7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png","tv_热词系列_洛水天依":"ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png","tv_热词系列_优雅":"d41bc3db2a0d5ac32eee0b454062c057e6198a21.png","tv_热词系列_吹爆":"9c78c14bd395d75afeecd20276ec71324e9b97df.png","tv_热词系列_秀":"1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png","tv_热词系列_妙啊":"3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png","tv_热词系列_标准结局":"6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png","tv_热词系列_B站有房":"e2aeda75690b72b49ebc82f12e340678f5fc47c0.png","tv_热词系列_破防了":"d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png","tv_热词系列_多谢款待":"a4789b0eceb8fb9719c3a214aa89180528369091.png","tv_白色情人节_555":"ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png","tv_白色情人节_555":"f0bde472c5b6490435e9f948500d3dca84407253.png","tv_白色情人节_chou你":"cde2941ac0653ded2499ed3c06c02513e021b594.png","tv_白色情人节_mua":"8a155f0df789f66d6af55a0f47456445211e2129.png","tv_白色情人节_ok":"cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png","tv_白色情人节_out":"2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png","tv_白色情人节_shot":"a746aab2877af0dd1688caa3b2e29982d3215778.png","tv_白色情人节_yyds":"e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png","tv_白色情人节_爱了爱了":"2918b857f228e4444e151b77bb6847167b8b1e21.png"}}); 
-});
-$(function(){
-$.ajax({
-type: "GET",
-url: "../../start/Datadake/get/json/A2zml/v2/v2.json",
-dataType: "json",
-success: (data) => {
-const shuffleArray=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
-const htmlContent=data[0]&&data[0].list?data[0].list.map(item=>`<div class="col text-break"><div class="d-flex text-muted pt-3"><i class="me-2 bi bi-diagram-3"></i><p class="pb-2 mb-0 small lh-sm border-bottom w-100"><strong class="d-block text-gray-dark">${item.title}</strong>${item.content}</p></div></div>`).join(''):`<div class="col text-break"><div class="d-flex text-muted pt-3"><i class="me-2 bi bi-badge-wc"></i><p class="pb-2 mb-0 small lh-sm border-bottom w-100"><strong class="d-block text-gray-dark">暂无内容</strong>空</p></div></div>`;
-$("#v2").append(`<div class="row row-cols-1 row-cols-md-2 g-4">${htmlContent}</div>`);
-const listItem = data[1].airportList?shuffleArray(data[1].airportList).map(item => `<li class="list-group-item"><p>${item.desp}</p><a href="${item.url}" target="_blank" class="btn btn-sm btn-primary me-2 mt-1">新页面打开</a>${item.picTaoCan ? `<a href="${item.picTaoCan}" target="_blank" class="btn btn-sm btn-secondary me-2 mt-1">套餐预览</a>` : ''}${item.picJieDian ? `<a href="${item.picJieDian}" target="_blank" class="btn btn-sm btn-secondary me-2 mt-1">节点预览</a>` : ''}</li>`).join(''):'<li class="list-group-item">暂无内容</li>';
-$("#airportList").append(listItem);
-const sections = data[2].sections.map(item => `<div class="card-body mt-2"><div class="card-title fw-bolder fs-6">${item.title}</div><p class="card-text fw-lighter">${item.content.replace(/\n/g, '<br>')}</p></div>`).join('');
-$("#sections").append(sections);
-const clientLinks = data[3].client.map(item =>`<div class="col"><div class="fs-5 mt-2">${item.title}</div>${item.list.length > 0 ? '<ul class="list-group">' : '<p>No links available for this category</p>'}${item.list.map(link => `${link.href ? `<li class="list-group-item"><a href="${link.href}">${link.text}</a>${link.description ? link.description : ''}</li>` : `<p class="fw-bold mt-2">${link.text}</p>`} `).join('')}${item.list.length > 0 ? '</ul>' : ''}</div>`);
-$("#clientLinks").append(clientLinks);
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>魔法禁书 - とある魔術の禁書目録（インデックス）</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .file-list {
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .file-list-header {
+      display: flex;
+      background-color: #f1f3f5;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      color: #495057;
+    }
+
+    .column-name {
+      flex: 1;
+    }
+
+    .column-size,
+    .column-modified {
+      flex: 0 0 25%;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background-color: #fff;
+      border-bottom: 1px solid #e9ecef;
+    }
+    a {
+    text-decoration: none;
 }
-});
-});
-});
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li:hover {
+      background-color: #f8f9fa;
+    }
+
+    .file-icon {
+      width: 25px;
+    height: 25px;
+      margin-right: 0.5rem;
+    }
+
+    .file-name {
+      flex: 1;
+      color: #228be6;
+    }
+
+    .file-size,
+    .file-modified {
+      flex: 0 0 25%;
+      color: #868e96;
+    }
+
+    .file-name:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+#share a {
+  color: #ff0000;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: larger;
+}
+
+#share a:hover {
+  text-decoration: underline;
+      cursor: pointer;
+}
+    .box {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: #fff;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-bottom: 1px solid #e9ecef;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+<h1>ディレクトリ ネットワーク ディスク</h1>
+<div class="file-list">
+<div class="file-list-header"><div class="column-name">名前</div><div class="column-size">大きさ</div><div class="column-modified">変更時刻</div></div>
+<ul id="fileList"></ul>
+</div>
+<div class="box">
+<h2>サブスクリプション アドレス <span id="time" style="font-size: small;">更新时间</span></h2>
+<ul id="subscribe"></ul>
+</div>
+<div class="box">
+<h2>ノード共有</h2>
+<p>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
+<p><a class="file-name" href="https://github.com/XIU2/CloudflareSpeedTest">CloudflareSpeedTest (GitHub)</a>「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
+<ul id="share"></ul>
+</div>
+<div class="box">
+<h2> オンラインでメッセージを残す </h2>
+<div id="vcomments"></div>
+</div>
+<div class="box">
+<h2>よくある質問 </h2>
+<ol id="issue"></ol>
+</div>
+</div>
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+(function(){
+const gettype=(type)=>{return type==='1'?'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"></path></svg>':'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M280-200h400q-4-49-30-90t-68-65l38-68q2-4 1-9t-6-7q-4-2-8.5-1t-6.5 5l-39 70q-20-8-40-12.5t-41-4.5q-21 0-41 4.5T399-365l-39-70q-2-5-6.5-5t-9.5 2l-4 15 38 68q-42 24-68 65t-30 90Zm110-60q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6Zm180 0q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"></path></svg>'};
+const convertISOToDateComponents=isoString=>{const date=new Date(isoString);const year=date.getFullYear();const month=(date.getMonth()+1).toString().padStart(2,'0');const day=date.getDate().toString().padStart(2,'0');const hour=date.getHours().toString().padStart(2,'0');const minute=date.getMinutes().toString().padStart(2,'0');return`${year}-${month}-${day}${hour}:${minute}`};
+const formatSize=(sizeInBytes)=>{const sizes=['Bytes','KB','MB','GB','TB'];if(sizeInBytes==0)return'0 Byte';let i=parseInt(Math.floor(Math.log(sizeInBytes)/Math.log(1024)));if(i==0)return`${sizeInBytes}${sizes[i]}`;return`${(sizeInBytes/Math.pow(1024,i)).toFixed(1)}${sizes[i]}`};
+const fetchApi=async(url,options)=>{try{const response=await fetch(url,options);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('请求失败:',error)}};
+const getHeaders =()=>{const headers = new Headers();headers.append('Accept', 'application/json, text/plain, */*');headers.append('content-type', 'application/json;charset=UTF-8');return headers;};
+const listFiles=async()=>{const headers=getHeaders();const data=JSON.stringify({"path":"/doc/魔法禁书","password":"","page":1,"per_page":20,"refresh":false});const options={method:'POST',headers:headers,body:data};const result=await fetchApi('https://c.jixiejidiguan.top/api/fs/list',options);const fileList=document.getElementById('fileList');fileList.innerHTML=result.data.content.map(result=>`<li><span class="file-icon">${gettype(result.type)}</span><a class="file-name"href="https://c.jixiejidiguan.top/doc/%E9%AD%94%E6%B3%95%E7%A6%81%E4%B9%A6/${result.name}">${result.name}</a><span class="file-size">${formatSize(result.size)}</span><span class="file-modified">${convertISOToDateComponents(result.modified)}</span></li>`).join('')};
+document.addEventListener('DOMContentLoaded', listFiles);
+})();
+(function(){
+const subscribelist = [{name:"encryptcfg_clash_en",url:"Node/encryptcfg_clash_en"},{name:"encryptcfg_clash_global_en",url:"Node/encryptcfg_clash_global_en"},{name:"encryptcfg_en",url:"Node/encryptcfg_en"}];
+fetch('Node/time').then(res=>{return res.text()}).then(data=>{document.getElementById('time').innerHTML='最后更新时间：'+data;});
+const list=()=>{document.getElementById('subscribe').innerHTML=subscribelist.map(result=>`<li style="padding: 0.1rem 1rem;"><a class="file-name"href="${result.url}">${result.name}</a></li>`).join('')};
+document.addEventListener('DOMContentLoaded', list);
+})();
+(function(){
+fetch('../../folder/api/v2.json').then(res=>{return res.json()}).then(data=>{
+document.getElementById('share').innerHTML=data[0].list.map(result=>`<li style="display: list-item;padding: 0.1rem 1rem;"><span>${result.title}</span><p style="word-wrap: break-word;">${result.content}</p></li>`).join('');
+document.getElementById('issue').innerHTML=data[1].sections.map(result=>`<li style="display: list-item;padding: 0rem 0rem;"><span style="font-weight: bold;color: #8fff00;">${result.title}</span><p style="word-wrap: break-word;    font-size: small;font-weight: 100;">${result.content}</p></li>`).join('');
+}).catch(err=>{console.log('获取失败',err)});
+})();
+(function(){
+new Valine({el:'#vcomments',appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',hide:true,emojiCDN:'//i0.hdslb.com/bfs/emote/',emojiMaps:{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_热词系列_三连":"21f15fe11b7a84d2f2121c16dec50a4e4556f865.png","tv_热词系列_知识增加":"5637557320fbfb3292307735f0b8acd53a791241.png","tv_热词表情_哎呦不错哦":"6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png","tv_热词系列_好耶":"ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png","tv_热词系列_你币有了":"84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png","tv_热词系列_对象":"a41763740a90c2b11bf282bf44ccee78066c98ff.png","tv_热词系列_不孤鸟":"7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png","tv_热词系列_洛水天依":"ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png","tv_热词系列_优雅":"d41bc3db2a0d5ac32eee0b454062c057e6198a21.png","tv_热词系列_吹爆":"9c78c14bd395d75afeecd20276ec71324e9b97df.png","tv_热词系列_秀":"1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png","tv_热词系列_妙啊":"3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png","tv_热词系列_标准结局":"6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png","tv_热词系列_B站有房":"e2aeda75690b72b49ebc82f12e340678f5fc47c0.png","tv_热词系列_破防了":"d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png","tv_热词系列_多谢款待":"a4789b0eceb8fb9719c3a214aa89180528369091.png","tv_白色情人节_555":"ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png","tv_白色情人节_555":"f0bde472c5b6490435e9f948500d3dca84407253.png","tv_白色情人节_chou你":"cde2941ac0653ded2499ed3c06c02513e021b594.png","tv_白色情人节_mua":"8a155f0df789f66d6af55a0f47456445211e2129.png","tv_白色情人节_ok":"cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png","tv_白色情人节_out":"2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png","tv_白色情人节_shot":"a746aab2877af0dd1688caa3b2e29982d3215778.png","tv_白色情人节_yyds":"e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png","tv_白色情人节_爱了爱了":"2918b857f228e4444e151b77bb6847167b8b1e21.png"}}); 
+})();
 </script>
 </body>
 </html>
