@@ -1,127 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>魔法禁书 - とある魔術の禁書目録（インデックス）</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .file-list {
-      background-color: #fff;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .file-list-header {
-      display: flex;
-      background-color: #f1f3f5;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      color: #495057;
-    }
-
-    .column-name {
-      flex: 1;
-    }
-
-    .column-size,
-    .column-modified {
-      flex: 0 0 25%;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 1rem;
-      background-color: #fff;
-      border-bottom: 1px solid #e9ecef;
-    }
-    a {
-    text-decoration: none;
-}
-    li:last-child {
-      border-bottom: none;
-    }
-
-    li:hover {
-      background-color: #f8f9fa;
-    }
-
-    .file-icon {
-      width: 25px;
-    height: 25px;
-      margin-right: 0.5rem;
-    }
-
-    .file-name {
-      flex: 1;
-      color: #228be6;
-    }
-
-    .file-size,
-    .file-modified {
-      flex: 0 0 25%;
-      color: #868e96;
-    }
-
-    .file-name:hover {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-#share a {
-  color: #ff0000;
-    margin-left: 6px;
-    margin-right: 6px;
-    font-size: larger;
-}
-
-#share a:hover {
-  text-decoration: underline;
-      cursor: pointer;
-}
-    .box {
-      margin-top: 1rem;
-      padding: 0.75rem 1rem;
-      background-color: #fff;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border-bottom: 1px solid #e9ecef;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>魔法禁书 - とある魔術の禁書目録（インデックス）</title>
+<style>
+body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-color:#f4f4f4}.container{max-width:800px;margin:2rem auto;padding:0 1rem}h1{font-size:1.5rem;margin-bottom:1rem}h2{font-size:1.2rem;margin-bottom:1rem}.file-list{background-color:#fff;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,0.1);overflow:hidden}.file-list-header{display:flex;background-color:#f1f3f5;padding:0.5rem 1rem;font-weight:bold;color:#495057}.column-name{flex:1}.column-size,.column-modified{flex:0 0 25%}ul{list-style-type:none;padding:0;margin:0}li,.vcard{display:flex;align-items:center;padding:0.75rem 1rem;background-color:#fff;border-bottom:1px solid #e9ecef}a{text-decoration:none}li:last-child{border-bottom:none}li:hover{background-color:#f8f9fa}.file-icon{width:25px;height:25px;margin-right:0.5rem}.file-name{flex:1;color:#228be6}.file-size,.file-modified{flex:0 0 25%;color:#868e96}.file-name:hover{text-decoration:underline;cursor:pointer}#share a{color:#ff0000;margin-left:6px;margin-right:6px;font-size:larger}#share a:hover{text-decoration:underline;cursor:pointer}.box{margin-top:1rem;padding:0.75rem 1rem;background-color:#fff;background-color:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.1);overflow:hidden;border-bottom:1px solid #e9ecef}
+</style>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true})</script>
 </head>
-
 <body>
 <div class="container">
 <h1>ディレクトリ ネットワーク ディスク</h1>
@@ -148,7 +37,6 @@
 <ol id="issue"></ol>
 </div>
 </div>
-<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
 (function(){
 const gettype=(type)=>{return type==='1'?'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z"></path></svg>':'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M280-200h400q-4-49-30-90t-68-65l38-68q2-4 1-9t-6-7q-4-2-8.5-1t-6.5 5l-39 70q-20-8-40-12.5t-41-4.5q-21 0-41 4.5T399-365l-39-70q-2-5-6.5-5t-9.5 2l-4 15 38 68q-42 24-68 65t-30 90Zm110-60q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6Zm180 0q-8 0-14-6t-6-14q0-8 6-14t14-6q8 0 14 6t6 14q0 8-6 14t-14 6ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"></path></svg>'};
@@ -172,7 +60,7 @@ document.getElementById('issue').innerHTML=data[1].sections.map(result=>`<li sty
 }).catch(err=>{console.log('获取失败',err)});
 })();
 (function(){
-new Valine({el:'#vcomments',appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',hide:true,emojiCDN:'//i0.hdslb.com/bfs/emote/',emojiMaps:{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_热词系列_三连":"21f15fe11b7a84d2f2121c16dec50a4e4556f865.png","tv_热词系列_知识增加":"5637557320fbfb3292307735f0b8acd53a791241.png","tv_热词表情_哎呦不错哦":"6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png","tv_热词系列_好耶":"ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png","tv_热词系列_你币有了":"84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png","tv_热词系列_对象":"a41763740a90c2b11bf282bf44ccee78066c98ff.png","tv_热词系列_不孤鸟":"7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png","tv_热词系列_洛水天依":"ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png","tv_热词系列_优雅":"d41bc3db2a0d5ac32eee0b454062c057e6198a21.png","tv_热词系列_吹爆":"9c78c14bd395d75afeecd20276ec71324e9b97df.png","tv_热词系列_秀":"1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png","tv_热词系列_妙啊":"3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png","tv_热词系列_标准结局":"6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png","tv_热词系列_B站有房":"e2aeda75690b72b49ebc82f12e340678f5fc47c0.png","tv_热词系列_破防了":"d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png","tv_热词系列_多谢款待":"a4789b0eceb8fb9719c3a214aa89180528369091.png","tv_白色情人节_555":"ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png","tv_白色情人节_555":"f0bde472c5b6490435e9f948500d3dca84407253.png","tv_白色情人节_chou你":"cde2941ac0653ded2499ed3c06c02513e021b594.png","tv_白色情人节_mua":"8a155f0df789f66d6af55a0f47456445211e2129.png","tv_白色情人节_ok":"cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png","tv_白色情人节_out":"2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png","tv_白色情人节_shot":"a746aab2877af0dd1688caa3b2e29982d3215778.png","tv_白色情人节_yyds":"e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png","tv_白色情人节_爱了爱了":"2918b857f228e4444e151b77bb6847167b8b1e21.png"}}); 
+new Valine({el:'#vcomments',appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',avatar: 'hide',emojiCDN:'//i0.hdslb.com/bfs/emote/',emojiMaps:{"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png","tv_热词系列_三连":"21f15fe11b7a84d2f2121c16dec50a4e4556f865.png","tv_热词系列_知识增加":"5637557320fbfb3292307735f0b8acd53a791241.png","tv_热词表情_哎呦不错哦":"6209c2cdcdeb014efd9eae4e9d55b9efb9c18263.png","tv_热词系列_好耶":"ee2d354d3e67e5d77bab31ad8af99cd5ac89c009.png","tv_热词系列_你币有了":"84820c2b147a8ca02f3c4006b63f76c6313cbfa0.png","tv_热词系列_对象":"a41763740a90c2b11bf282bf44ccee78066c98ff.png","tv_热词系列_不孤鸟":"7b94a0c3fe95c603a85a13bacbaf726b8e5882dc.png","tv_热词系列_洛水天依":"ab3845edcdc3bb8852c502f472a8caa9e921ae3a.png","tv_热词系列_优雅":"d41bc3db2a0d5ac32eee0b454062c057e6198a21.png","tv_热词系列_吹爆":"9c78c14bd395d75afeecd20276ec71324e9b97df.png","tv_热词系列_秀":"1f8ab5644a10c3a01cc32cfe8f4d000296b06fb4.png","tv_热词系列_妙啊":"3ed5b0b2e1f632884d93abe6ae2a387e6f4395fd.png","tv_热词系列_标准结局":"6b812dc41844ae4bdb3d6b7dd66067db6b922a5d.png","tv_热词系列_B站有房":"e2aeda75690b72b49ebc82f12e340678f5fc47c0.png","tv_热词系列_破防了":"d2c5d5a131f9d247e4ab4eed875c752d6e89d69e.png","tv_热词系列_多谢款待":"a4789b0eceb8fb9719c3a214aa89180528369091.png","tv_白色情人节_555":"ea0bae055e17c0d8c010ef9da2c7558ce63cdddf.png","tv_白色情人节_555":"f0bde472c5b6490435e9f948500d3dca84407253.png","tv_白色情人节_chou你":"cde2941ac0653ded2499ed3c06c02513e021b594.png","tv_白色情人节_mua":"8a155f0df789f66d6af55a0f47456445211e2129.png","tv_白色情人节_ok":"cbe8d06132e3399bcf3939adf0c14a0fa83b6ae3.png","tv_白色情人节_out":"2ea561d3d0bb4f24b6f52c0cebf9330efffe0249.png","tv_白色情人节_shot":"a746aab2877af0dd1688caa3b2e29982d3215778.png","tv_白色情人节_yyds":"e5dbf11a2f1c6e1447b103b07122cd12b7a72cf3.png","tv_白色情人节_爱了爱了":"2918b857f228e4444e151b77bb6847167b8b1e21.png"}}); 
 })();
 </script>
 </body>
