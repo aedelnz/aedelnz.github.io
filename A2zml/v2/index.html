@@ -31,6 +31,7 @@ body{font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-
 <p>此为免费提供，不定时更新，节点存活随缘。所有节点来源于网络搜索，速度因人而异，自行测试选择测试体验</p>
 <p><a class="file-name" href="https://github.com/XIU2/CloudflareSpeedTest">CloudflareSpeedTest (GitHub)</a>「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~</p>
 <ul id="share"></ul>
+<ul id="share1"></ul>
 </div>
 <div class="box">
 <h2> オンラインでメッセージを残す </h2>
@@ -67,7 +68,7 @@ document.getElementById('issue').innerHTML=data[1].sections.map(result=>`<li sty
 })();
 (function(){
 fetch('../../folder/api/servers.json').then(res=>{return res.json()}).then(data=>{
-document.getElementById('share').innerHTML=data.map(result=>`<li style="display: list-item;padding: 0.1rem 1rem;"><span>来自网络收集${result.title}</span><p style="word-wrap: break-word;">${result.ss_url}</p></li>`).join('');
+document.getElementById('share1').innerHTML=data.map(result=>`<li style="display: list-item;padding: 0.1rem 1rem;"><span>来自网络收集 【${result.title}】</span><p style="word-wrap: break-word;">${result.ss_url}</p></li>`).join('');
 }).catch(err=>{console.log('获取失败',err)});
 })();
 (function(){
