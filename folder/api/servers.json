@@ -1,50 +1,50 @@
 [
     {
-        "title": "US, Houston",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU16VXVPVFF1TVRZdU1UZzJPalEwTXc9PSNVUywgSG91c3Rvbg=="
+        "title": "TW, Taipei",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU15NHpOaTQ0Tnk0ek5EbzBORE09I1RXLCBUYWlwZWk="
+    },
+    {
+        "title": "JP, Tokyo",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5ETXVNakF4TGpJMU5DNHlNVEU2TkRReiNKUCwgVG9reW8="
     },
     {
         "title": "CA, Vancouver",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5EUXVNalF6TGpFeE5TNHlORFk2TkRReiNDQSwgVmFuY291dmVy"
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5UUXVNakV6TGpJeU9DNDJNVG8wTkRNPSNDQSwgVmFuY291dmVy"
+    },
+    {
+        "title": "KR, Incheon",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5ETXVNakF4TGpjeUxqSTRPalEwTXc9PSNLUiwgSW5jaGVvbg=="
+    },
+    {
+        "title": "SG, Singapore",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU1UTXVNVEkxTGpVeExqRXhPRG8wTkRNPSNTRywgU2luZ2Fwb3Jl"
+    },
+    {
+        "title": "HK, New Territories",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5ETXVNakF6TGpJeE9DNDROem8wTkRNPSNISywgTmV3IFRlcnJpdG9yaWVz"
+    },
+    {
+        "title": "JP, Tokyo 2",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU1UTXVNakk1TGprNExqZzNPalEwTXc9PSNKUCwgVG9reW8gMg=="
     },
     {
         "title": "US, Dallas 2",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5UUXVNakV6TGpJME55NHhNalU2TkRReiNVUywgRGFsbGFzIDI="
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5UUXVNVFE1TGpFNE1pNDJOem8wTkRNPSNVUywgRGFsbGFzIDI="
     },
     {
-        "title": "HK, Kowloon",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU1UTXVNVEV6TGpFM0xqSTBOam8wTkRNPSNISywgS293bG9vbg=="
+        "title": "US, Houston",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5UUXVNVGczTGpJME5DNHlNam8wTkRNPSNVUywgSG91c3Rvbg=="
     },
     {
         "title": "JP, Osaka",
         "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5ETXVNakF4TGpJMU5DNDNORG8wTkRNPSNKUCwgT3Nha2E="
     },
     {
-        "title": "TW, Taipei",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5EY3VNVEk1TGpVd0xqRXpNVG8wTkRNPSNUVywgVGFpcGVp"
-    },
-    {
-        "title": "JP, Tokyo",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5EY3VNVEk1TGpJME5DNHhNam8wTkRNPSNKUCwgVG9reW8="
-    },
-    {
-        "title": "HK, New Territories",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5USXVNVGs0TGpFNU5DNHhOekE2TkRReiNISywgTmV3IFRlcnJpdG9yaWVz"
-    },
-    {
-        "title": "KR, Incheon",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5USXVOamt1TWpNMkxqRXdNam8wTkRNPSNLUiwgSW5jaGVvbg=="
-    },
-    {
-        "title": "JP, Tokyo 2",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU1UTXVNalV3TGpNdU5ETTZORFF6I0pQLCBUb2t5byAy"
-    },
-    {
         "title": "HK, Los Angeles",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU1UZ3VNalEyTGpJek5TNHlORGM2TkRReiNISywgTG9zIEFuZ2VsZXM="
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU16VXVNVFkxTGpRd0xqYzRPalEwTXc9PSNISywgTG9zIEFuZ2VsZXM="
     },
     {
-        "title": "SG, Singapore",
-        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5UY3VNVGd4TGpReUxqRTRNVG8wTkRNPSNTRywgU2luZ2Fwb3Jl"
+        "title": "HK, Kowloon",
+        "ss_url": "c3M6Ly9ZV1Z6TFRJMU5pMWpabUk2WVcxaGVtOXVjMnR5TURWQU5USXVOemt1TVRVM0xqRTFNem8wTkRNPSNISywgS293bG9vbg=="
     }
 ]
