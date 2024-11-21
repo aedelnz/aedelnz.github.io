@@ -62,7 +62,9 @@ document.addEventListener('DOMContentLoaded', list);
 })();
 (function(){
 fetch('../../folder/api/v2.json').then(res=>{return res.json()}).then(data=>{
+document.getElementById('subscribe').innerHTML=data[0].gather_subscribe.map(result=>`<li><a class="file-name"href="Node/${result.filename}">${result.filename}</a><span class="file-size">${formatSize(result.size)}</span><span class="file-modified">${result.last_modified}</span></li>`).join('');
 document.getElementById('share').innerHTML=data[1].prop_node.map(result=>`<li style="display: list-item;padding: 0.1rem 1rem;"><span>${result.title}</span><p style="word-wrap: break-word;">${result.content}</p></li>`).join('');
+document.getElementById('share1').innerHTML=data[2].Internet_node.map(result=>`<li style="display: list-item;padding: 0.1rem 1rem;"><span>${result.title}</span><p style="word-wrap: break-word;">${result.content}</p></li>`).join('');
 document.getElementById('issue').innerHTML=data[3].help.map(result=>`<li style="display: list-item;padding: 0rem 0rem;"><span style="font-weight: bold;color: #8fff00;">${result.title}</span><p style="word-wrap: break-word;    font-size: small;font-weight: 100;">${result.content}</p></li>`).join('');
 }).catch(err=>{console.log('获取失败',err)});
 })();
