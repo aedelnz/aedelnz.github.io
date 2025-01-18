@@ -37,12 +37,15 @@
 </style>
 </head>
 <body>
-<div class="card-list" id="list">
-<div class="card">
-<h2>加载中</h2>
-<p>Loading</p>
-</div>
-</div>
+    <div class="card-list" id="list">
+        <div class="card">span
+            <h2>网站 1</h2>
+            <p>这是一个很棒的网站，提供了很多有用的资源。</p>
+            <a href="https://example.com" target="_blank">访问网站</a>
+        </div>
+    </div>
+
+
 <script>
 (function() {
 const ask=async(url)=>{try{const response=await fetch(url);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('Fetch operation failed:',error);throw error;}};
