@@ -1,0 +1,22 @@
+name: Hourly Repo Update
+on:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  update - repo:
+    runs - on: ubuntu - latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update file
+        run: |
+          echo $(date) >> updated_file.txt
+      - name: Commit changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add.
+          git commit -m "Hourly update at $(date)"
+          git push
