@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROM 网站合集</title>
+<link rel="icon" type="image/x-icon" href="https://s01.mifile.cn/favicon.ico">
+<script src="/folder/0o0oIlI.js"></script>
+<style>
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card h2 {
+        margin-top: 0;
+    }
+    .card span {
+        color: #ff0000;
+        font-size: medium;
+    }
+    .card a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .card a:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="card-list" id="list">
+        <div class="card">span
+            <h2>网站 1</h2>
+            <p>这是一个很棒的网站，提供了很多有用的资源。</p>
+            <a href="https://example.com" target="_blank">访问网站</a>
+        </div>
+    </div>
+
+
+<script>
+(function() {
+const ask=async(url)=>{try{const response=await fetch(url);if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return await response.json()}catch(error){console.error('Fetch operation failed:',error);throw error;}};
+(function() {
+ask('/folder/api/rom/sos.json').then(data => {
+const datalist = data.map(function(i){return`<div class="card"><h2>${i.name}<span>【${i.brand}】</span></h2><p>${i.description}</p><a href="${i.link}" target="_blank">访问网站</a></div>`;}).join('');
+document.getElementById('list').innerHTML = datalist;
+});
+})();
+})();
+</script>
+</body>
+</html>
