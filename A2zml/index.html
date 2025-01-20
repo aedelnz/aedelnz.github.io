@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     rowDiv.addEventListener('click', function (event) {
                         if (event.target.tagName === 'BUTTON' || event.target.closest('button')) {
                             var button = event.target.tagName === 'BUTTON' ? event.target : event.target.closest('button');
-                            var newWindow = window.open('/go.html#tpurl=' + button.getAttribute('Urls'), '_blank');
+                            var newWindow = window.open(button.getAttribute('Urls'), '_blank');
                             if (newWindow) {
                                 newWindow.focus();
                             } else {
