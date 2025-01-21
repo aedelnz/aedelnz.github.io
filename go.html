@@ -1,218 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跳转中</title>
-
-    <style>
-        body,
-        h1,
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        button {
-            padding: 0;
-            font-family: inherit;
-            background: none;
-            border: none;
-            outline: none;
-            cursor: pointer;
-        }
-
-        html {
-            width: 100%;
-            height: 100%;
-            background-color: #eff2f5;
-        }
-
-        body {
-            padding-top: 100px;
-            color: #222;
-            font-size: 13px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.5;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-        @media (max-width: 620px) {
-            body {
-                font-size: 15px;
-            }
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 16px;
-            color: #fff;
-            font-size: 14px;
-            line-height: 1;
-            background-color: #0077d9;
-            border-radius: 3px;
-        }
-
-        @media (max-width: 620px) {
-            .button {
-                font-size: 16px;
-            }
-        }
-
-        .button:hover {
-            background-color: #0070cd;
-        }
-
-        .button:active {
-            background-color: #0077d9;
-        }
-
-        .link-button {
-            color: #105cb6;
-            font-size: 13px;
-        }
-
-        @media (max-width: 620px) {
-            .link-button {
-                font-size: 15px;
-            }
-        }
-
-        .logo,
-        .wrapper {
-            margin: auto;
-            padding-left: 30px;
-            padding-right: 30px;
-            max-width: 540px;
-            font-size: larger;
-        }
-
-        .wrapper {
-            padding-top: 25px;
-            padding-bottom: 25px;
-            background-color: #f7f7f7;
-            border: 1px solid #babbbc;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 620px) {
-            .logo,
-            .wrapper {
-                margin: 0 10px;
-            }
-        }
-
-        h1 {
-            margin-bottom: 12px;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 1;
-        }
-
-        @media (max-width: 620px) {
-            h1 {
-                font-size: 18px;
-            }
-        }
-
-        .warning {
-            color: #c33;
-        }
-
-        .link {
-            margin-top: 12px;
-            word-wrap: normal;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            cursor: pointer;
-        }
-
-        .link.is-expanded {
-            word-wrap: break-word;
-            white-space: normal;
-        }
-
-        .actions {
-            margin-top: 15px;
-            padding-top: 30px;
-            text-align: right;
-            border-top: 1px solid #d8d8d8;
-        }
-
-        .actions .link-button + .link-button {
-            margin-left: 30px;
-        }
-
-        .tip {
-            position: relative;
-            display: none;
-            margin-top: 30px;
-            padding-top: 18px;
-            color: #999;
-            text-align: left;
-            background: #f7f7f7;
-            border-top: 1px solid #d8d8d8;
-            opacity: 0;
-            transition: opacity .2s ease-out;
-        }
-
-        .tip.is-visible {
-            opacity: 1;
-        }
-
-        .tip:after, .tip:before {
-            position: absolute;
-            bottom: 100%;
-            right: 5em;
-            content: " ";
-            height: 0;
-            width: 0;
-            border: solid transparent;
-            pointer-events: none;
-        }
-
-        .tip:after {
-            margin-right: -6px;
-            border-color: rgba(247, 247, 247, 0);
-            border-bottom-color: #f7f7f7;
-            border-width: 6px;
-        }
-
-        .tip:before {
-            margin-right: -7px;
-            border-color: rgba(216, 216, 216, 0);
-            border-bottom-color: #d2d2d2;
-            border-width: 7px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>准备好出发啦！</title>
+<style>body,h1,p{margin:0;padding:0}a{text-decoration:none}button{padding:0;font-family:inherit;background:none;border:none;outline:none;cursor:pointer}html{width:100%;height:100%;background-color:#ffe6f2}body{padding-top:100px;color:#ff66b2;font-size:13px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;line-height:1.5;-webkit-tap-highlight-color:rgba(0,0,0,0)}@media (max-width:620px){body{font-size:15px}}.button{display:inline - block;padding:10px 16px;color:#fff;font-size:14px;line-height:1;background-color:#EC407A;border-radius:3px;backdrop - filter:blur(5px);box-shadow:0 4px 6px rgba(0,0,0,0.2);transition:background - color 0.2s ease-in-out,transform 0.2s ease-in-out}.button:active{background-color:#FF80AB;transform:scale(0.98)}@media (max-width:620px){.button{font-size:16px}}.button:hover{background-color:#FF80AB}.button:active{background-color:#FF80AB}.logo,.wrapper{margin:auto;padding-left:30px;padding-right:30px;max-width:540px;font-size:larger}.logo a{color:#ff66b2}.wrapper{padding-top:25px;padding-bottom:25px;background-color:rgba(255,255,255,0.5);border-radius:5px;backdrop-filter:blur(10px);box-shadow:0 4px 6px rgba(0,0,0,0.1)}@media (max-width:620px){.logo,.wrapper{margin:0 10px}}h1{margin-bottom:12px;font-size:18px;font-weight:700;line-height:1}h3{margin-bottom:12px;font-size:16px;font-weight:700;line-height:1}@media (max-width:620px){h1{font-size:24px}h3{font-size:18px}}.link{margin-top:12px;word-wrap:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}.actions{margin-top:15px;padding-top:30px;text-align:right;border-top:1px solid #d8d8d8}</style>
+<script src="/folder/0o0oIlI.js"></script>
 </head>
-
 <body>
-    <div class="logo">
-        <a href="https://www.zhihu.com"><h1>二次元导航</h1></a>
-    </div>
-    <div class="wrapper">
-        <div class="content">
-            <h1>准备好出发啦！</h1>
-            <p class="info">您即将爱莫能助，请注意您的帐号和财产安全。</p>
-            <p class="link">https://jixiejidiguan.top/A2zml/</p>
-        </div>
-        <div class="actions">
-            <a class="button" href="https://jixiejidiguan.top/A2zml/">继续访问</a>
-        </div>
-    </div>
-    <script>
-        
-    </script>
-    
-    
-    </body>
-
-
+<div class="logo">
+<a href="https://jixiejidiguan.top/A2zml/"><h1>二次元导航</h1></a>
+</div>
+<div class="wrapper">
+<div class="content">
+<h3><span class="span"></span>准备好出发啦！</h3>
+<p class="link">https://jixiejidiguan.top/A2zml/</p>
+</div>
+<div class="actions">
+<button class="button">继续访问</button>
+</div>
+</div>
+<script>const HASH_PREFIX='#url=';const SPAN_SELECTOR='.span';const LINK_SELECTOR='.link';const BUTTON_SELECTOR='.button';(function(){document.addEventListener('DOMContentLoaded',function(){const hash=window.location.hash;const span=document.querySelector(SPAN_SELECTOR);const link=document.querySelector(LINK_SELECTOR);const button=document.querySelector(BUTTON_SELECTOR);let text;if(hash.startsWith(HASH_PREFIX)){const value=hash.substring(HASH_PREFIX.length);link.textContent=value;text=value}else{text=link.textContent}const titles=['准备好出发啦！','跳转中 -'+text];let index=0;const changeTitle=()=>{document.title=titles[index];index=(index+1)%titles.length};setInterval(changeTitle,1000);button.addEventListener('click',function(){window.open(text,'_blank')});let count=3;const countdownInterval=setInterval(()=>{span.textContent=count+'s';count--;if(count<0){clearInterval(countdownInterval);window.open(text,'_blank')}},1000)})})();</script>
+</body>
 </html>

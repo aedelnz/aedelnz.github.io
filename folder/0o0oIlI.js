@@ -26,3 +26,13 @@
 	hashMode: true,
 	screenRecord: true
 });
+
+function checkIE() {
+    const isIE = typeof window.ActiveXObject === 'function' || 'ActiveXObject' in window;
+    if (isIE) {
+        alert('朋友，IE浏览器未适配哦~\n 请关闭 IE 模式！');
+    }
+}
+
+// 调用函数
+checkIE();
