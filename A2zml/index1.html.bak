@@ -1,24 +1,106 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="这是一个展示网格布局的页面">
-<title>404 未找到</title>
-<style>/* styles.css */
 
-</style>
-<script src="/folder/0o0oIlI.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta name="description" content="这是一个展示网格布局的页面">
+    <title>404 未找到</title>
+    <style>
+        /* 统一盒模型 */
+        * {
+           -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* 优化container类 */
+       .container {
+            margin: 0 auto;
+            padding: 0 8px;
+            max-width: 1280px;
+        }
+
+        @media (min-width: 600px) {
+          .container {
+                width: 94%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+          .container {
+                width: 92%;
+            }
+        }
+
+        /* row类 */
+       .row {
+            margin: 0 -8px;
+        }
+
+       .row::after {
+            display: table;
+            clear: both;
+            content: '';
+        }
+
+        /* col类 */
+      .col {
+            position: relative;
+            min-height: 1px;
+            padding: 0 8px;
+        }
+
+       .row.col {
+            float: left;
+            width: 50%;
+        }
+
+        @media (min-width: 1440px) {
+          .row.col {
+                float: left;
+                width: 16.666667%;
+            }
+        }
+
+      .card {
+            width: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+      .card div {
+            color: #333;
+        }
+
+      .card p {
+            color: #666;
+        }
+    </style>
+    <script src="/folder/0o0oIlI.js"></script>
 </head>
 
-<body>
-  <div class="wrapper-2">
-    <div class="item">项目 1</div>
-    <div class="item">项目 2</div>
-    <div class="item">项目 3</div>
-    <div class="item">项目 4</div>
-    <div class="item">项目 5</div>
-  </div>
+<body class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
+        </div>
+        <div class="col">
+            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
+        </div>
+        <div class="col">
+            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
+        </div>
+        <div class="col">
+            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
+        </div>
+        <div class="col">
+            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
+        </div>
+    </div>
 </body>
 
 </html>
