@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <meta name="description" content="这是一个展示网格布局的页面">
-    <title>404 未找到</title>
-    <style>
-        /* 统一盒模型 */
-        * {
-           -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        /* 优化container类 */
-       .container {
-            margin: 0 auto;
-            padding: 0 8px;
-            max-width: 1280px;
-        }
-
-        @media (min-width: 600px) {
-          .container {
-                width: 94%;
-            }
-        }
-
-        @media (min-width: 1024px) {
-          .container {
-                width: 92%;
-            }
-        }
-
-        /* row类 */
-       .row {
-            margin: 0 -8px;
-        }
-
-       .row::after {
-            display: table;
-            clear: both;
-            content: '';
-        }
-
-        /* col类 */
-      .col {
-            position: relative;
-            min-height: 1px;
-            padding: 0 8px;
-        }
-
-       .row.col {
-            float: left;
-            width: 50%;
-        }
-
-        @media (min-width: 1440px) {
-          .row.col {
-                float: left;
-                width: 16.666667%;
-            }
-        }
-
-      .card {
-            width: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            padding: 6px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-      .card div {
-            color: #333;
-        }
-
-      .card p {
-            color: #666;
-        }
-    </style>
-    <script src="/folder/0o0oIlI.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>爱莫能助 - 二次元导航</title>  
+<meta name="description" content="爱欲于人，犹如执炬，逆风而行，必有烧手之患。">  
+<style>
+html{line-height:1.15;-webkit-text-size-adjust:100%}
+body{margin:0;display: block;height: 100vh;}
+@media (min-width:600px){body{display: flex;}}
+@media (min-width:1024px){body{display: flex;}}
+@media (min-width:1440px){body{display: flex;}}
+.container{width:96%;max-width:1280px;margin-right:auto;margin-left:auto;padding-right:8px;padding-left:8px;box-sizing:border-box}
+/* 容器列表 */
+.row,[class*=row-]{margin-right:-8px;margin-left:-8px}
+.row::after,[class*=row-]::after{display:table;clear:both;content:''}
+.col{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:1px;padding-right:2px;padding-left:2px}
+.row-xs-2 .col{float:left;width:50%}
+@media (min-width:600px){.row-sm-3 .col{float:left;width:33.333333%}}
+@media (min-width:1024px){.row-md-4 .col{float:left;width:25%}}
+@media (min-width:1440px){.row-lg-6 .col{float:left;width:16.666667%}}
+/* 卡片 */
+.card{position:relative;padding:6px;box-sizing:border-box;overflow:hidden;color:#000;border-radius:5px;background:rgba(255,255,255,.3);box-shadow:0 4px 6px rgba(0,0,0,.1);backdrop-filter:blur(10px);margin-top:4px;margin-bottom:4px}
+.card div{font-weight:700;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;overflow:hidden;text-overflow:ellipsis}
+.card p{font-weight:100;font-size:12px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis}
+/* 侧边栏 */
+.left,.right{box-sizing:border-box}
+.left{width:300px;display:none}
+.left{position:relative;box-sizing:border-box;overflow:hidden;color:#000;background:rgba(255,255,255,.3);box-shadow:0 1px 4px rgba(0,0,0,.1);backdrop-filter:blur(10px)}
+.left.active{position:fixed;display:block;height:100%;z-index:1}
+@media (min-width:600px){.left{display: block;}}
+@media (min-width:1024px){.left{display: block;}}
+@media (min-width:1440px){.left{display: block;}}
+/* 列表 */
+.list{list-style-type:none;padding:0;margin:0}
+.list li{padding:4px 10px;width:100%;border-radius:0;box-shadow:0 1px 2px rgba(0,0,0,0.1);transition:transform 0.3s ease}
+.list li:hover{transform:scale(1.05);box-shadow:0 4px 8px rgba(0,0,0,0.2)}
+/* 顶部应用栏 */
+.app-bar{box-sizing:border-box;overflow:hidden;color:#000;background:rgba(255,255,255,0.5);box-shadow:0 1px 4px rgba(0,0,0,0.1);backdrop-filter:blur(10px);height:60px;display:flex;justify-content:space-between;align-items:center;padding:10px 15px;margin:0 0 10px 0;position:relative}
+.app-bar-title h2{margin:0;font-size:16px}
+.app-bar-actions{display:flex;gap:10px}
+.app-bar-actions button{background-color:transparent;border:none;color:#000;font-size:14px;font-weight:100;cursor:pointer}
+.app-bar-actions button:hover{text-decoration:underline}
+</style>
+<script src="/folder/0o0oIlI.js"></script>
 </head>
+<body>
+<div class="left">
+<div class="app-bar"></div>
+<ul class="list"></ul>
+</div>
+<div>
+<div class="app-bar">
+<div class="app-bar-title"><h2>二次元导航</h2></div>
+<div class="app-bar-actions">
+<button>科学</button>
+<button>友链</button>
+<button onclick="toggleSidebar()">菜单</button>
+</div>
+</div>
 
-<body class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
-        </div>
-        <div class="col">
-            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
-        </div>
-        <div class="col">
-            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
-        </div>
-        <div class="col">
-            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
-        </div>
-        <div class="col">
-            <div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>
-        </div>
-    </div>
+<div class="container">
+
+<div>动画</div>
+<div class="row-xs-2 row-sm-3 row-md-4 row-lg-6">
+<div class="col">
+<div class="card"><div>新年新气象</div><p>新的一年，希望大家都能收获满满，实现自己的小目标，开启幸福美好的新篇章！</p></div>  </div>
+</div>
+</div>
+
+</div>
+</div>
+<script>  
+// 通用的HTTP请求函数
+const http=(url,options={})=>{return fetch(url,{method:"GET",...options,headers:{"Content-Type":"application/json",...options.headers}}).then(response=>{if(!response.ok){throw new Error(`HTTP error!status:${response.status}`)}return response.json()}).catch(error=>{console.error("Fetch error:",error);throw error;})};
+
+// 加载数据并渲染到页面
+const loadData = async (url, container) => {
+  try {
+    container.innerHTML = '<li class="loading">加载中...</li>'; // 显示加载状态
+    const data = await http(url);
+    container.innerHTML = ''; // 清空加载状态
+    data.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.title; // 设置标题文本
+      li.dataset.key = item.key;
+      container.appendChild(li);
+    });
+  } catch (error) {
+    container.innerHTML = '<li class="error">加载失败，请稍后再试</li>'; // 显示错误信息
+  }
+};
+const commitData = async (url, container) => {
+  try {
+    container.innerHTML = '<li class="loading">加载中...</li>'; // 显示加载状态
+    const data = await http(url);
+    container.innerHTML = ''; // 清空加载状态
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = item.title; // 设置标题文本
+      container.appendChild(div);
+    });
+  } catch (error) {
+    container.innerHTML = '<li class="error">加载失败，请稍后再试</li>'; // 显示错误信息
+  }
+};
+
+// 初始化加载数据
+document.addEventListener("DOMContentLoaded", () => {
+loadData('/folder/api/a2zml/zzoz.json', document.querySelector(".list"));
+commitData('/folder/api/a2zml/a.json', document.querySelector(".container"));
+});
+
+function toggleSidebar() {
+document.querySelector('.left').classList.toggle('active');
+}
+</script>
 </body>
-
 </html>
