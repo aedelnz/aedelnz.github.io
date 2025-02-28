@@ -58,9 +58,9 @@ function loadJS(url) {
 
 // 使用示例
 const resources = [
-  { type: 'css', url: '/ROOT/PORT/library/mdui.css' },
-  { type: 'js', url: '/ROOT/PORT/library/mdui.global.js' },
-  { type: 'css', url: '/ROOT/PORT/library/normalize.min.css' }
+  { type: 'css', url: 'https://jixiejidiguan.top/ROOT/PORT/library/mdui.css' },
+  { type: 'js', url: 'https://jixiejidiguan.top/ROOT/PORT/library/mdui.global.js' },
+  { type: 'css', url: 'https://jixiejidiguan.top/ROOT/PORT/library/normalize.min.css' }
 ];
 
 loadResources(resources);
