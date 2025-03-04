@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN" class="mdui-theme-auto">
+<head>
+<meta charset="UTF-8">
+<title>爱莫能助 - 二次元导航</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="二次元导航站">
+<meta name="keywords" content="jixiejidiguan.top, JIXIEJIDIGUAN, 爱莫能助, 二次元导航">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+mdui-top-app-bar{position:fixed!important}@media (min-width:840px){mdui-button-icon[icon="menu"]{display:none}}
+mdui-navigation-drawer{position:fixed!important;display:none}@media (min-width:840px){mdui-navigation-drawer{display:block;bottom:0;left:0;top:4rem;width:22.5rem}}
+mdui-layout-main{overflow:visible;display:block;padding-top:4rem}mdui-layout-main:not(:defined){visibility:visible}@media (min-width:840px){mdui-layout-main{padding-left:22.5rem}}
+div.main{display:flex;justify-content:center}
+div.container{flex:1;min-width:0;padding:1rem;max-width:63.875rem}@media (min-width:840px){.container{padding:1rem 3rem}}
+section{display: none;}
+section[active]{display: block;}
+h3{padding-top:1em}
+mdui-card{width:100%}
+mdui-card.k{display:flex;flex-direction: column}@media (min-width:840px){mdui-card.k{flex-direction: row;align-items:center}}
+mdui-card.mdui-card{padding:1rem}
+a.k{position: absolute;top:1rem;right:1rem}
+mdui-avatar.k.avatar{border-radius:var(--mdui-shape-corner-medium);margin:0.5rem;width:5rem;height:5rem}@media (min-width:840px){mdui-avatar.k.avatar{width:7rem;height:7rem}}
+h1.k.title{margin:auto;font-size:1.5em;}@media (min-width:840px){h1.k.title{font-size:2.5em;}}
+footer{padding:20px 0;font-size:1rem;text-align:center}
+</style>
+<script src="/ROOT/PORT/library/framework.js"></script>
+</head>
+<body>
+<mdui-layout>
+<mdui-top-app-bar scroll-behavior="elevate">
+<mdui-button-icon icon="menu"></mdui-button-icon>
+<mdui-top-app-bar-title>二次元导航站</mdui-top-app-bar-title>
+</mdui-top-app-bar>
+<mdui-navigation-drawer close-on-overlay-click>
+<mdui-list class="list">
+<mdui-list-subheader>分类</mdui-list-subheader>
+<mdui-list-item href="#Home" active>首页</mdui-list-item>
+<mdui-list-item href="#About">关于</mdui-list-item>
+<mdui-list-item href="#Links">友链</mdui-list-item>
+<mdui-list-subheader>标签</mdui-list-subheader>
+</mdui-list>
+</mdui-navigation-drawer>
+<mdui-layout-main>
+<div class="main">
+<div class="container mdui-prose">
+<section active>
+<div>
+<mdui-card variant="outlined" class="k mdui-card">
+<a href="https://b23.tv/vuY9zMJ" class="k" target="_blank">主页</a>
+<mdui-avatar src="/ROOT/PORT/gallery/头像.jpg" class="k avatar"></mdui-avatar>
+<span>
+<h1 class="k title">麗姫を描く</h1>
+<mdui-list>
+<mdui-chip>关注数：9</mdui-chip>
+<mdui-chip>粉丝数：926</mdui-chip>
+<mdui-chip>获赞数：6001</mdui-chip>
+<mdui-chip>播放数：37.2万</mdui-chip>
+</mdui-list>
+</span>
+</mdui-card>
+</div>
+<div>
+<h3>关注方式</h3>
+<mdui-card variant="filled" class="mdui-card">
+<mdui-list-subheader>社交</mdui-list-subheader>
+<mdui-chip href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zVtAKkeD-Oz21BW1THXpH3-IWp_c-bhv&authKey=FgF%2BjI3xyhV3JyWuBW%2FAwaJ2y3SwQDAmOcUaH1d%2FNUs4mvFK1IZ3J5ohXWG5M4eR&noverify=0&group_code=707126150" target="_blank">群聊</mdui-chip>
+<mdui-chip href="https://pd.qq.com/s/ark05ovvc?businessType=9" target="_blank">腾讯频道</mdui-chip>
+<mdui-chip href="https://mp.weixin.qq.com/s/b3lyRkQlIZ-gRwkKW21ZOw" target="_blank">微信公众号</mdui-chip>
+<mdui-chip href="https://weibo.com/u/7882405990" target="_blank">微博</mdui-chip>
+<mdui-chip href="https://www.missevan.com/21564822?share_channel=copy" target="_blank">猫耳FM</mdui-chip>
+<mdui-list-subheader>视频</mdui-list-subheader>
+<mdui-chip href="https://b23.tv/vuY9zMJ" target="_blank">哔哩哔哩</mdui-chip>
+<mdui-chip href="https://v.kuaishou.com/mA1jZi" target="_blank">快手</mdui-chip>
+<mdui-list-subheader>音乐</mdui-list-subheader>
+<mdui-chip href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=2e0df7766e16410cad7d09993cbf8240" target="_blank">酷狗音乐</mdui-chip>
+<mdui-chip href="https://y.music.163.com/m/user?id=2070612671" target="_blank">网易云音乐</mdui-chip>
+<mdui-chip href="https://i.y.qq.com/n2/m/share/details/taoge.html?platform=11&appshare=android_qq&appversion=14010108&hosteuin=oi4PNK45Ne-l7v**&id=2374300209&ADTAG=qfshare" target="_blank">QQ音乐</mdui-chip>
+<mdui-list-subheader>捐赠</mdui-list-subheader>
+<mdui-chip href="https://afdian.com/a/JIXIEJIDIGUAN" target="_blank">爱发电</mdui-chip>
+</mdui-card>
+</div>
+<div>
+<h3>页面服务</h3>
+<mdui-card>
+<mdui-list>
+<mdui-list-item href="/A2zml" icon="bookmark" end-icon="arrow_right">
+爱莫能助
+<span slot="description">二次元导航站</span>
+</mdui-list-item>
+<mdui-list-item href="/MIUI" icon="wb_cloudy" end-icon="arrow_right">
+ROM合集
+<span slot="description">网络ROM收集汇总</span>
+</mdui-list-item>
+<mdui-list-item href="/A2zml/v2" icon="public_off" end-icon="arrow_right">
+魔法禁书
+<span slot="description">霍格沃兹魔法</span>
+</mdui-list-item>
+</mdui-list>
+</mdui-card>
+</div>
+<div>
+<h3>我的项目</h3>
+<mdui-card>
+<mdui-list>
+<mdui-list-item href="https://s.jixiejidiguan.top" end-icon="arrow_right">
+画的博客
+<span slot="description"><mdui-chip>提供API技术服务</mdui-chip></span>
+</mdui-list-item>
+<mdui-list-item href="https://z.jixiejidiguan.top" end-icon="arrow_right">
+画的社区
+<span slot="description"><mdui-chip>提供在线交流平台</mdui-chip></span>
+</mdui-list-item>
+<mdui-list-item href="https://c.jixiejidiguan.top" end-icon="arrow_right">
+AOL 存储
+<span slot="description"><mdui-chip>提供资源下载服务</mdui-chip></span>
+</mdui-list-item>
+</mdui-list>
+</mdui-card>
+</div>
+<div>
+<h3>公益服务</h3>
+<mdui-card>
+<mdui-list>
+<mdui-list-item href="https://bili.jixiejidiguan.eu.org/" end-icon="arrow_right">
+<mdui-chip>BiliRoaming Service</mdui-chip>
+<span slot="description">哔哩哔哩漫游服务</span>
+</mdui-list-item>
+<mdui-list-item href="https://v2.jixiejidiguan.eu.org/84db2e79-5a3f-4daf-8d1b-53e778011f17" end-icon="arrow_right">
+<mdui-chip>v2ray & clash-meta</mdui-chip>
+<span slot="description">科学魔法上网服务</span>
+</mdui-list-item>
+</mdui-list>
+</mdui-card>
+</div>
+</section>
+<section>
+<div>
+<h3>关于我们</h3>
+<mdui-card class="mdui-card" style="font-family: cursive;">
+<h4>画的个人记录【原名：机械极地馆工作室】 | jixiejidiguan.top</h4>
+<p>您好！欢迎来到 jixiejidiguan.top —— 您的【JIXIEJIDIGUAN】数字伙伴！</p>
+<h4>🌟 核心业务领域</h4>
+<ul>
+<li>暂无</li>
+</ul>
+<h4>💡 我们的特色</h4>
+<ul>
+<li>极简设计：界面直观，操作零门槛，适配多终端设备。</li>
+<li>其它：暂无</li>
+</ul>
+<h4>📌 近期动态</h4>
+<ul>
+<li>新改版「<a href="/">画的个人记录</a>」，遵循 Material Design 3（Material You）设计规范的 Web 前端组件库！</li>
+</ul>
+<h4>📩 加入我们</h4>
+<ul>
+<li>技术交流：<a href="https://z.jixiejidiguan.top/">画的社区</a></li>
+<li>商务合作：<a href="mailto:root@z.jixiejidiguan.top?subject=商务合作：&body=">root@z.jixiejidiguan.top</a></li>
+<li>意见反馈： <a href="https://mp.weixin.qq.com/mp/qrcode?scene=10000005&size=102&__biz=Mzk2NDQ4ODQwNw==&mid=2247483662&idx=1&sn=84790525aaf319066eea65abfe8b0468&send_time=">微信公众号</a>
+</li>
+</ul>
+<p>“让科技更简单，让生活更有趣！” <br>&emsp; —— jixiejidiguan.top 团队</p>
+</mdui-card>
+</div>
+</section>
+<section>
+<div>
+<h3>模板 (<a href="mailto:aedelnz@111.com?subject=友情链接申请&body=" title="aedelnz@111.com">去申请</a>)</h3>
+<mdui-card class="mdui-card">
+<ul>
+<li>名称：画的个人记录</li>
+<li>描述：一条咸鱼躺平养成计划！</li>
+<li>地址：https://jixiejidiguan.top</li>
+<li>图标：https://jixiejidiguan.top/favicon.ico</li>
+</ul>
+<p>申请友链前请先添加本站为友链,必须部署HTTPS,不接受任何推广、广告或是资源性质的博客,希望每天都能好好过好每一天！</p>
+</mdui-card>
+</div>
+<div>
+<h3>友情链接</h3>
+<mdui-card>
+<mdui-list class="mdui-links">
+<mdui-list-item href="https://jixiejidiguan.top" end-icon="arrow_right">
+画的个人记录
+<mdui-avatar slot="icon" src="/favicon.ico"></mdui-avatar>
+<span slot="description">一条咸鱼躺平养成计划！</span>
+</mdui-list-item>
+</mdui-card>
+</div>
+<div>
+<h3>死链记录</h3>
+<mdui-card class="mdui-table">
+<table>
+<thead><tr><th>标题</th><th>域名</th><th>原因</th></tr></thead>
+<tbody class="mdui-tbody">
+<tr><td>...</td><td>...</td><td>...</td></tr>
+</tbody>
+</table>
+</mdui-card>
+</div>
+</section>
+<footer>
+© 2025 <a href="https://jixiejidiguan.top">画的个人记录</a>
+<span> | </span>
+<a href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
+<a href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
+<span> | </span>
+<a href="https://www.12377.cn">违法和不良信息举报中心</a>
+</footer>
+</div>
+</div>
+</mdui-layout-main>
+</mdui-layout>
+<script>
+(function(){document.querySelector("mdui-button-icon[icon='menu']").addEventListener("click", () => document.querySelector("mdui-navigation-drawer").open = true)})();
+(function(){document.addEventListener('DOMContentLoaded',_=>{const c=window.location.hash.slice(1);if(c){const e=document.querySelector(`mdui-list.list mdui-list-item[href="#${c}"]`);e&&e.click()}});const l=document.querySelectorAll('mdui-list.list mdui-list-item'),s=document.querySelectorAll('div section');l.forEach((i,j)=>{i.addEventListener('click',_=>{l.forEach(i=>i.removeAttribute('active'));i.toggleAttribute('active');s.forEach(s=>s.removeAttribute('active'));s[j].toggleAttribute('active')})})})();
+async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>{controller.abort()},timeout);try{let attempt=0;while(attempt<maxRetries){attempt++;try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries){throw error;}console.warn(`请求失败，尝试第${attempt}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
+(async()=>{const mduilinks=document.querySelector("mdui-list.mdui-links");const mduitbody=document.querySelector("tbody.mdui-tbody");try{const datalinks=await string('/ROOT/API/A2ZML/data.json');const shuffle=array=>{return array.reduce((acc,_,i)=>{const j=Math.floor(Math.random()*(i+1));acc[i]=acc[j];acc[j]=array[i];return acc},[...array])};mduilinks.innerHTML+=shuffle(datalinks[0]).map(item=>`<mdui-list-item href="${item.href}"target="_blank"end-icon="arrow_right">${item.title}<mdui-avatar slot="icon"src="${item.src}"></mdui-avatar><span slot="description">${item.description}</span></mdui-list-item>`).join('');mduitbody.innerHTML='';mduitbody.innerHTML+=datalinks[1].map(item=>`<tr><td>${item.title}</td><td>${item.href}</td><td>${item.description}</td></tr>`).join('')}catch(error){mduilinks.innerHTML=`<mdui-list-item>请求失败：${error.message}</mdui-list-item>`;console.error('请求失败:',error.message)}})();
+</script>
+</body>
+</html>

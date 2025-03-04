@@ -1,0 +1,44 @@
+[
+    {
+        "title": "默认专区",
+        "data": [
+            {
+                "title": "在线动漫",
+                "data": []
+            },{
+                "title": "在线动画",
+                "data": []
+            }
+        ]
+    },{
+        "title": "软件专区",
+        "data": [
+            {
+                "title": "视频播放",
+                "data": [
+                    {
+                        "title": "PotPlayer",
+                        "description": "支持 DXVA, CUDA, QuickSync 等等，以最少的资源制造最华丽的表现。",
+                        "href": "https://potplayer.tv/?lang=zh_CN"
+                    }
+                ]
+            },
+            {},
+            {},
+            {},
+            {},
+            {}
+        ]
+    },{
+        "title": "论坛专区",
+        "data": [
+            {
+                "title": "在线动漫",
+                "data": []
+            },{
+                "title": "在线动画",
+                "data": []
+            }
+        ]
+    }
+]
