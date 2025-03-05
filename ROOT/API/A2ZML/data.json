@@ -4,40 +4,158 @@
         "data": [
             {
                 "title": "在线动漫",
-                "data": []
-            },{
-                "title": "在线动画",
-                "data": []
-            }
-        ]
-    },{
-        "title": "软件专区",
-        "data": [
-            {
-                "title": "视频播放",
                 "data": [
                     {
-                        "title": "PotPlayer",
-                        "description": "支持 DXVA, CUDA, QuickSync 等等，以最少的资源制造最华丽的表现。",
-                        "href": "https://potplayer.tv/?lang=zh_CN"
+                        "title": "哔哩哔哩番剧",
+                        "description": "正版高清动漫平台，涵盖日本新番、国产动画等。",
+                        "href": "https://www.bilibili.com/anime"
+                    },
+                    {
+                        "title": "AcFun番剧",
+                        "description": "弹幕视频网站，提供热门动漫连载和经典动画。",
+                        "href": "https://www.acfun.cn/anime"
                     }
                 ]
             },
-            {},
-            {},
-            {},
-            {},
-            {}
+            {
+                "title": "在线动画",
+                "data": [
+                    {
+                        "title": "Netflix动画",
+                        "description": "国际流媒体平台，含《进击的巨人》《鬼灭之刃》等正版资源。",
+                        "href": "https://www.netflix.com"
+                    },
+                    {
+                        "title": "优酷动漫",
+                        "description": "国产动画与日本番剧的综合观看平台。",
+                        "href": "https://www.youku.com/channel/anime"
+                    }
+                ]
+            }
         ]
-    },{
+    },
+    {
+        "title": "软件专区",
+        "data": [
+  {
+    "title": "视频播放",
+    "data": [
+      {
+        "title": "PotPlayer",
+        "description": "支持 DXVA/CUDA/QuickSync 硬解码，低资源高画质，独家 3D 眼镜兼容性和多字幕格式支持，提供场景截图与章节管理功能。",
+                        "href": "https://potplayer.tv/?lang=zh_CN"
+        "platforms": ["Windows"],
+        "pros": ["硬件加速优秀", "3D播放支持", "轻量高效"],
+        "cons": ["仅限Windows", "非开源"]
+      },
+      {
+        "title": "VLC Media Player",
+        "description": "全平台开源播放器，内置万能解码器，支持蓝光/DVD/网络串流，无广告无追踪，提供基础视频转换功能。",
+                             "href": "https://www.videolan.org/vlc/"
+   "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+        "pros": ["全格式支持", "隐私安全", "跨平台同步"],
+        "cons": ["界面较传统", "高级功能隐藏深"]
+      },
+      {
+        "title": "MPV",
+        "description": "极客向命令行播放器，支持 Vulkan/OpenGL 高级渲染，可通过Lua脚本深度定制，具备帧插值/HDR等专业级画质增强功能。",
+               "href": "https://mpv.io"
+                 "platforms": ["Windows", "macOS", "Linux"],
+        "pros": ["高度可定制", "画质优化强", "硬件解码灵活"],
+        "cons": ["无图形界面", "学习曲线陡峭"]
+      },
+      {
+        "title": "5KPlayer",
+        "description": "支持AirPlay/DLNA投屏，可下载YouTube等平台视频，提供360°VR播放和硬件加速功能。",
+        "href": "https://www.5kplayer.com",
+        "platforms": ["Windows", "macOS"],
+        "pros": ["视频下载能力", "无线投屏便捷"],
+        "cons": ["部分功能需付费", "界面广告较多"]
+      },
+      {
+        "title": "KMPlayer",
+        "description": "支持8K/60FPS超清播放，内置字幕实时翻译，提供屏幕录制和音频提取工具。",
+        "href": "https://www.kmplayer.com",
+        "platforms": ["Windows", "macOS", "Android"],
+        "pros": ["超高清支持", "实用工具集成"],
+        "cons": ["安装包含推广软件", "资源占用较高"]
+      },
+      {
+        "title": "GOM Player",
+        "description": "自动查找缺失编解码器，支持变速播放和AB循环，提供高级字幕同步调整功能。",
+        "href": "https://www.gomlab.com",
+        "platforms": ["Windows"],
+        "pros": ["编解码器自动修复", "播放控制精细"],
+        "cons": ["仅限Windows", "部分格式需额外插件"]
+      }
+    ]
+  }
+]
+            },
+            {
+                "title": "图像处理",
+                "data": [
+                    {
+                        "title": "Adobe Photoshop",
+                        "description": "专业图像编辑软件，支持图层、滤镜、3D建模等功能。",
+                        "href": "https://www.adobe.com/products/photoshop.html"
+                    },
+                    {
+                        "title": "GIMP",
+                        "description": "免费开源图像编辑器，提供媲美Photoshop的基础功能。",
+                        "href": "https://www.gimp.org"
+                    }
+                ]
+            },
+            {
+                "title": "开发工具",
+                "data": [
+                    {
+                        "title": "Visual Studio Code",
+                        "description": "微软开源代码编辑器，支持扩展插件和Git集成。",
+                        "href": "https://code.visualstudio.com"
+                    },
+                    {
+                        "title": "IntelliJ IDEA",
+                        "description": "Java/Kotlin开发首选IDE，智能代码提示和重构功能。",
+                        "href": "https://www.jetbrains.com/idea/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "title": "论坛专区",
         "data": [
             {
-                "title": "在线动漫",
-                "data": []
-            },{
-                "title": "在线动画",
-                "data": []
+                "title": "动漫讨论",
+                "data": [
+                    {
+                        "title": "Stage1st动漫区",
+                        "description": "中文综合动漫讨论社区，含新番评测和资源交流。",
+                        "href": "https://bbs.saraba1st.com/2b/forum-83-1.html"
+                    },
+                    {
+                        "title": "Bangumi番组计划",
+                        "description": "日本动画数据库与评分社区，支持追番进度管理。",
+                        "href": "https://bgm.tv"
+                    }
+                ]
+            },
+            {
+                "title": "技术交流",
+                "data": [
+                    {
+                        "title": "V2EX",
+                        "description": "创意工作者社区，涵盖编程、硬件、网络技术等话题。",
+                        "href": "https://www.v2ex.com"
+                    },
+                    {
+                        "title": "Stack Overflow",
+                        "description": "全球最大编程问答平台，解决代码报错和技术难题。",
+                        "href": "https://stackoverflow.com"
+                    }
+                ]
             }
         ]
     }

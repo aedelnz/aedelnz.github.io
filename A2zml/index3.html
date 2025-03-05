@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>资源导航中心</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="二次元导航站">
+<meta name="keywords" content="jixiejidiguan.top, JIXIEJIDIGUAN, 爱莫能助, 二次元导航">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f5f6fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-group {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .section-group {
+            margin: 1.5rem 0;
+        }
+
+        .section-title {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 1rem 0;
+        }
+
+        .item-list {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem;
+        }
+
+        .card-title a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            text-decoration: underline;
+        }
+
+        .card-desc {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="app"></div>
+
+    <script>
+        // 原始数据
+        const data = [
+    {
+        "title": "默认专区",
+        "data": [
+            {
+                "title": "在线动漫",
+                "data": [
+                    {
+                        "title": "哔哩哔哩番剧",
+                        "description": "正版高清动漫平台，涵盖日本新番、国产动画等。",
+                        "href": "https://www.bilibili.com/anime"
+                    },
+                    {
+                        "title": "AcFun番剧",
+                        "description": "弹幕视频网站，提供热门动漫连载和经典动画。",
+                        "href": "https://www.acfun.cn/anime"
+                    }
+                ]
+            },
+            {
+                "title": "在线动画",
+                "data": [
+                    {
+                        "title": "Netflix动画",
+                        "description": "国际流媒体平台，含《进击的巨人》《鬼灭之刃》等正版资源。",
+                        "href": "https://www.netflix.com"
+                    },
+                    {
+                        "title": "优酷动漫",
+                        "description": "国产动画与日本番剧的综合观看平台。",
+                        "href": "https://www.youku.com/channel/anime"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "软件专区",
+        "data": [
+            {
+                "title": "视频播放",
+                "data": [
+                    {
+                        "title": "PotPlayer",
+                        "description": "支持 DXVA, CUDA, QuickSync 等硬解技术，资源占用低，功能强大。",
+                        "href": "https://potplayer.tv/?lang=zh_CN"
+                    },
+                    {
+                        "title": "VLC Media Player",
+                        "description": "开源跨平台播放器，支持几乎所有视频格式和流媒体协议。",
+                        "href": "https://www.videolan.org/vlc/"
+                    },
+                    {
+                        "title": "MPV",
+                        "description": "极简主义播放器，支持高度自定义脚本和快捷键操作。",
+                        "href": "https://mpv.io"
+                    }
+                ]
+            },
+            {
+                "title": "图像处理",
+                "data": [
+                    {
+                        "title": "Adobe Photoshop",
+                        "description": "专业图像编辑软件，支持图层、滤镜、3D建模等功能。",
+                        "href": "https://www.adobe.com/products/photoshop.html"
+                    },
+                    {
+                        "title": "GIMP",
+                        "description": "免费开源图像编辑器，提供媲美Photoshop的基础功能。",
+                        "href": "https://www.gimp.org"
+                    }
+                ]
+            },
+            {
+                "title": "开发工具",
+                "data": [
+                    {
+                        "title": "Visual Studio Code",
+                        "description": "微软开源代码编辑器，支持扩展插件和Git集成。",
+                        "href": "https://code.visualstudio.com"
+                    },
+                    {
+                        "title": "IntelliJ IDEA",
+                        "description": "Java/Kotlin开发首选IDE，智能代码提示和重构功能。",
+                        "href": "https://www.jetbrains.com/idea/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "论坛专区",
+        "data": [
+            {
+                "title": "动漫讨论",
+                "data": [
+                    {
+                        "title": "Stage1st动漫区",
+                        "description": "中文综合动漫讨论社区，含新番评测和资源交流。",
+                        "href": "https://bbs.saraba1st.com/2b/forum-83-1.html"
+                    },
+                    {
+                        "title": "Bangumi番组计划",
+                        "description": "日本动画数据库与评分社区，支持追番进度管理。",
+                        "href": "https://bgm.tv"
+                    }
+                ]
+            },
+            {
+                "title": "技术交流",
+                "data": [
+                    {
+                        "title": "V2EX",
+                        "description": "创意工作者社区，涵盖编程、硬件、网络技术等话题。",
+                        "href": "https://www.v2ex.com"
+                    },
+                    {
+                        "title": "Stack Overflow",
+                        "description": "全球最大编程问答平台，解决代码报错和技术难题。",
+                        "href": "https://stackoverflow.com"
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+        // 页面渲染函数
+        function renderPage() {
+            const container = document.getElementById('app');
+            
+            data.forEach(category => {
+                // 创建分类容器
+                const categoryEl = document.createElement('div');
+                categoryEl.className = 'category-group';
+                
+                // 添加分类标题
+                const titleEl = document.createElement('h2');
+                titleEl.className = 'category-title';
+                titleEl.textContent = category.title;
+                categoryEl.appendChild(titleEl);
+                
+                // 处理子分类
+                const sectionContainer = document.createElement('div');
+                category.data.forEach(section => {
+                    const sectionEl = document.createElement('div');
+                    sectionEl.className = 'section-group';
+                    
+                    // 添加子分类标题
+                    const sectionTitle = document.createElement('h3');
+                    sectionTitle.className = 'section-title';
+                    sectionTitle.textContent = section.title;
+                    sectionEl.appendChild(sectionTitle);
+                    
+                    // 创建项目列表
+                    const listEl = document.createElement('div');
+                    listEl.className = 'item-list';
+                    
+                    section.data.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        
+                        const titleLink = document.createElement('a');
+                        titleLink.className = 'card-title';
+                        titleLink.href = item.href;
+                        titleLink.target = '_blank';
+                        titleLink.rel = 'noopener noreferrer';
+                        titleLink.textContent = item.title;
+                        
+                        const desc = document.createElement('p');
+                        desc.className = 'card-desc';
+                        desc.textContent = item.description;
+                        
+                        card.appendChild(titleLink);
+                        card.appendChild(desc);
+                        listEl.appendChild(card);
+                    });
+                    
+                    sectionEl.appendChild(listEl);
+                    sectionContainer.appendChild(sectionEl);
+                });
+                
+                categoryEl.appendChild(sectionContainer);
+                container.appendChild(categoryEl);
+            });
+        }
+
+        // 初始化渲染
+        window.addEventListener('DOMContentLoaded', renderPage);
+    </script>
+</body>
+</html>
