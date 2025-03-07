@@ -3,20 +3,51 @@
         "title": "默认专区",
         "data": [
             {
-                "title": "在线动漫",
-                "data": [
-                    {
-                        "title": "哔哩哔哩番剧",
-                        "description": "正版高清动漫平台，涵盖日本新番、国产动画等。",
-                        "href": "https://www.bilibili.com/anime"
-                    },
-                    {
-                        "title": "AcFun番剧",
-                        "description": "弹幕视频网站，提供热门动漫连载和经典动画。",
-                        "href": "https://www.acfun.cn/anime"
-                    }
-                ]
-            },
+    "title": "主流平台在线番剧索引",
+    "data": [
+        {
+            "title": "哔哩哔哩番剧 | 2023年新番《咒术回战》独播",
+            "description": "国内最大ACG社区，日本季度新番同步更新率超95%，独家《凡人修仙传》《天官赐福》等30+部国创动画。支持8K超高清/360°全景播放，弹幕礼仪系统保障观影体验。大会员专享海外动画无删减版。",
+            "href": "https://www.bilibili.com/anime"
+        },
+        {
+            "title": "AcFun番剧 | 经典动画弹幕二创基地",
+            "description": "硬核二次元文化阵地，独家修复500+部90年代经典动画，鬼畜区UP主专属创作素材库。每周更新《伍六七之暗影宿命》等原创国漫，支持弹幕时间轴高级玩法。",
+            "href": "https://www.acfun.cn/bangumilist"
+        },
+        {
+            "title": "腾讯视频动漫专区 | 全网首播《斗罗大陆》终极篇",
+            "description": "中国最大国漫发行平台，独家连载《魔道祖师》《吞噬星空》等头部IP。杜比视界+全景声技术，TV端支持IMAX Enhanced格式。港澳台及东南亚地区专线加速。",
+            "href": "https://v.qq.com/feature/cartoon"
+        },
+        {
+            "title": "爱奇艺动漫 | 独家《神印王座》4K HDR版",
+            "description": "帧绮映画技术提升老番画质，独播《雾山五行》等水墨风动画。TV端支持240FPS插帧技术，提供动画创作人扶持计划作品专区。",
+            "href": "https://www.iqiyi.com/anime"
+        },
+        {
+            "title": "优酷动漫 | 热血武侠《少年歌行》风火山林篇",
+            "description": "阿里文娱战略重点，专攻3D动画技术研发。独家《秦时明月》系列4K重制版，支持HDR Vivid国产超高清标准，海外用户免翻墙观看。",
+            "href": "https://www.youku.com/channel/cartoon"
+        },
+        {
+            "title": "芒果TV动漫 | 女性向《通灵妃》动态漫独播",
+            "description": "湖南广电旗下动画分发平台，联合金鹰卡通推出亲子向内容。独播《非人哉》等泡面番，TV端支持AI语音弹幕互动功能。",
+            "href": "https://www.mgtv.com/anime"
+        },
+        {
+            "title": "西瓜视频动漫 | 字节跳动免费动画库",
+            "description": "整合抖音动画二创生态，免费观看《镖人》等全网IP。支持TikTok风格竖屏播放模式，AI自动生成动画解说短视频。",
+            "href": "https://www.ixigua.com/animation"
+        },
+        {
+            "title": "微博动漫 | 条漫改编《步天歌》动态连载",
+            "description": "社交属性最强的动画平台，实时更新300+部漫画改动态漫。支持弹幕抽奖挂件玩法，明星配音作品独家花絮直发。",
+            "href": "https://weibo.com/dongman"
+        }
+    ]
+}
+,
             {
                 "title": "在线动画",
                 "data": [
