@@ -24,6 +24,17 @@ a.k{position: absolute;top:1rem;right:1rem}
 mdui-avatar.k.avatar{border-radius:var(--mdui-shape-corner-medium);margin:0.5rem;width:5rem;height:5rem}@media (min-width:840px){mdui-avatar.k.avatar{width:7rem;height:7rem}}
 h1.k.title{margin:auto;font-size:1.5em;}@media (min-width:840px){h1.k.title{font-size:2.5em;}}
 footer{padding:20px 0;font-size:1rem;text-align:center}
+
+.container{width:96%;max-width:1280px;margin-right:auto;margin-left:auto;padding-right:8px;padding-left:8px;box-sizing:border-box}
+/* 容器列表 */
+.row,[class*=row-]{margin-right:-8px;margin-left:-8px}
+.row::after,[class*=row-]::after{display:table;clear:both;content:''}
+.col{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:1px;padding-right:2px;padding-left:2px}
+.row-xs-2 .col{float:left;width:50%}
+@media (min-width:600px){.row-sm-3 .col{float:left;width:33.333333%}}
+@media (min-width:1024px){.row-md-4 .col{float:left;width:25%}}
+@media (min-width:1440px){.row-lg-5 .col{float:left;width:20%}}
+
 </style>
 <script src="/ROOT/PORT/library/framework.js"></script>
 </head>
@@ -78,10 +89,10 @@ async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={
                     ${zone.data.map(category => `
                         <div>
                             <h3>${category.title}</h3>
-                            <mdui-card class="mdui-card">
-                                <mdui-list>
+                            <mdui-card>
+                                <mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5">
                                     ${category.data.map(item => `
-                                        <mdui-list-item href="${item.href}" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
+                                        <mdui-list-item class="col" href="${item.href}" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
                                     `).join('')}
                                 </mdui-list>
                             </mdui-card>
