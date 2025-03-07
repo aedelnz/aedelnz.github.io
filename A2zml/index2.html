@@ -43,23 +43,6 @@ footer{padding:20px 0;font-size:1rem;text-align:center}
 <div class="main">
 <div class="container mdui-prose">
 
-<section active>
-<div>
-<h3>公益服务</h3>
-<mdui-card>
-<mdui-list>
-<mdui-list-item href="https://bili.jixiejidiguan.eu.org/" end-icon="arrow_right">
-<mdui-chip>BiliRoaming Service</mdui-chip>
-<span slot="description">哔哩哔哩漫游服务</span>
-</mdui-list-item>
-<mdui-list-item href="https://v2.jixiejidiguan.eu.org/84db2e79-5a3f-4daf-8d1b-53e778011f17" end-icon="arrow_right">
-<mdui-chip>v2ray & clash-meta</mdui-chip>
-<span slot="description">科学魔法上网服务</span>
-</mdui-list-item>
-</mdui-list>
-</mdui-card>
-</div>
-</section>
 
 <footer>
 © 2025 <a href="https://jixiejidiguan.top">画的个人记录</a>
@@ -75,9 +58,9 @@ footer{padding:20px 0;font-size:1rem;text-align:center}
 </mdui-layout>
 <script>
 (function(){document.querySelector("mdui-button-icon[icon='menu']").addEventListener("click", () => document.querySelector("mdui-navigation-drawer").open = true)})();
-(function(){document.addEventListener('DOMContentLoaded',_=>{const c=window.location.hash.slice(1);if(c){const e=document.querySelector(`mdui-list.list mdui-list-item[href="#${c}"]`);e&&e.click()}});const l=document.querySelectorAll('mdui-list.list mdui-list-item'),s=document.querySelectorAll('div section');l.forEach((i,j)=>{i.addEventListener('click',_=>{l.forEach(i=>i.removeAttribute('active'));i.toggleAttribute('active');s.forEach(s=>s.removeAttribute('active'));s[j].toggleAttribute('active')})})})();
-async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>{controller.abort()},timeout);try{let attempt=0;while(attempt<maxRetries){attempt++;try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries){throw error;}console.warn(`请求失败，尝试第${attempt}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
 
+
+async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>{controller.abort()},timeout);try{let attempt=0;while(attempt<maxRetries){attempt++;try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries){throw error;}console.warn(`请求失败，尝试第${attempt}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
 (async () => {
     const contentContainer = document.querySelector(".container");
     const mdui_list = document.querySelector("mdui-list");
@@ -87,34 +70,50 @@ async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={
         let list = '';
         let html = '';
         
-        data.forEach((zone,index) => {
-        list += `<mdui-list-item href="#${zone.title}"${index===0 ? ' active':''}>${zone.title}</mdui-list-item>`;
-        
+        data.forEach((zone, index) => {
+            list += `<mdui-list-item${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
+       
             html += `
-            
-<section${index===0 ? ' active':''}>
-
+                <section${index === 0 ? ' active' : ''}>
                     ${zone.data.map(category => `
                         <div>
                             <h3>${category.title}</h3>
-<mdui-card class="mdui-card">
-<mdui-list>                     ${category.data.map(item => `
-
-  <mdui-list-item href="${item.href}" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
-           
-                                `).join('')}
+                            <mdui-card class="mdui-card">
+                                <mdui-list>
+                                    ${category.data.map(item => `
+                                        <mdui-list-item href="${item.href}" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
+                                    `).join('')}
                                 </mdui-list>
-
                             </mdui-card>
                         </div>
                     `).join('')}
-</section>
-                
+                </section>
             `;
         });
         mdui_list.innerHTML = list;
         contentContainer.innerHTML = html;
         
+
+            // 获取所有的列表项和内容区域
+            const listItems = document.querySelectorAll('mdui-list.list mdui-list-item');
+            const contentSections = document.querySelectorAll('div section');
+
+            // 为每个列表项添加点击事件监听器
+            listItems.forEach((item, index) => {
+                item.addEventListener('click', (e) => {
+                    // 移除所有列表项的 'active' 类
+                    listItems.forEach(li => li.removeAttribute('active'));
+                    // 为当前点击的列表项添加 'active' 类
+                    item.setAttribute('active', '');
+
+                    // 移除所有内容区域的 'active' 类
+                    contentSections.forEach(section => section.removeAttribute('active'));
+                    // 为对应的内容区域添加 'active' 类
+                    contentSections[index].setAttribute('active', '');
+                });
+            });
+     
+
     } catch (error) {
         contentContainer.innerHTML = `
             <mdui-alert type="error" class="mdui-m-t-3">
@@ -125,6 +124,7 @@ async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={
     }
 })();
 
+    
 </script>
 </body>
 </html>
