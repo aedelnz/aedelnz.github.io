@@ -153,6 +153,32 @@
                 ]
             },
             {
+                "title": "追番软件",
+                "data": [
+                    {
+                        "title": "Animeko",
+                        "description": "一站式在线弹幕追番平台。[<a href=https://github.com/open-ani/animeko>github</a>]",
+                        "href": "https://myani.org/"
+                    },
+                    {
+                        "title": "Kazumi",
+                        "description": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
+                        "href": "https://github.com/Predidit/Kazumi"
+                    },
+                    {
+                        "title": "one动漫",
+                        "description": "一款简洁清爽无广告的看番软件。一款带弹幕的 anime1 第三方客户端，界面符合 Material You 规范。",
+                        "href": "https://github.com/Predidit/oneAnime"
+                    },
+                    {
+                        "title": "LaQoo",
+                        "description": "【LaQoo】一个简洁的播放动漫的App，支持下载，弹幕等功能。[<a href=https://github.com/laqoome/LaQoo>github</a>]",
+                        "href": "https://app.laqoo.eu.org/"
+                    }
+                
+                ]
+            },
+            {
                 "title": "番组计划",
                 "data": [
                     {

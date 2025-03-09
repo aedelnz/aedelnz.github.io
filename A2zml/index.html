@@ -26,6 +26,7 @@ section[active]{display: block;}
 h3{padding-top:1em}
 mdui-card{width:100%}
 mdui-card.mdui-card{padding:1rem}
+mdui-fab{position: fixed;bottom: 30px;right: 30px;display: none;border: none;cursor: pointer;z-index: 9999}
 footer{padding:20px 0;font-size:1rem;text-align:center}
 </style>
 <script id="JIXIEJIDIGUAN" src="/ROOT/PORT/library/framework.js"></script>
@@ -50,6 +51,7 @@ footer{padding:20px 0;font-size:1rem;text-align:center}
 <div class="main">
 <div class="container mdui-prose">
 <div id="const"><mdui-linear-progress></mdui-linear-progress><div style="font-size: var(--mdui-typescale-display-large-size);">加载中</div></div>
+<mdui-fab variant="primary" icon="arrow_drop_up"></mdui-fab>
 <footer>
 © 2025 <a href="https://jixiejidiguan.top/A2zml">爱莫能助</a>
 <span> | </span>
@@ -76,10 +78,10 @@ let list = '';
 let html = '';
 
 data.forEach((zone, index) => {
-list += `<mdui-list-item${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
+list += `<mdui-list-item href="#${zone.title}" ${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
 
 html += `
-<section${index === 0 ? ' active' : ''}>
+<section id="${zone.title}" ${index === 0 ? ' active' : ''}>
 ${zone.data.map(category => `
 <div>
 <h3>${category.title}</h3>
@@ -119,6 +121,22 @@ contentContainer.innerHTML = `
 console.error('请求失败:', error);
 }
 })();
+window.addEventListener('scroll', function() {
+  const btn = document.querySelector('mdui-fab[icon="arrow_drop_up"]');
+  // 当滚动超过300px时显示按钮[4](@ref)
+  if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+});
+document.querySelector('mdui-fab[icon="arrow_drop_up"]').addEventListener('click', function() {
+  // 平滑滚动动画[5](@ref)
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 </script>
 </body>
