@@ -41,13 +41,15 @@ footer{padding:20px 0;font-size:1rem;text-align:center}
 <mdui-tooltip content="友情链接"><mdui-button-icon href="/#Links" variant="standard" icon="link"></mdui-button-icon></mdui-tooltip>
 </mdui-top-app-bar>
 <mdui-navigation-drawer close-on-overlay-click>
-<mdui-list class="list"></mdui-list>
+<mdui-list>
+<mdui-list-subheader>分类</mdui-list-subheader>
+<div id="list"></div>
+</mdui-list>
 </mdui-navigation-drawer>
 <mdui-layout-main>
 <div class="main">
 <div class="container mdui-prose">
-
-
+<div id="const"><mdui-linear-progress></mdui-linear-progress><div style="font-size: var(--mdui-typescale-display-large-size);">加载中</div></div>
 <footer>
 © 2025 <a href="https://jixiejidiguan.top">画的个人记录</a>
 <span> | </span>
@@ -65,66 +67,57 @@ footer{padding:20px 0;font-size:1rem;text-align:center}
 async function fetchData(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>controller.abort(),timeout);try{for(let attempt=0;attempt<maxRetries;attempt++){try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal,});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries-1){throw error;}console.warn(`请求失败，尝试第${attempt+1}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
 
 (async () => {
-  const contentContainer = document.querySelector('.container');
-  const mduiList = document.querySelector('mdui-list');
+const contentContainer = document.querySelector('#const');
+const mduiList = document.querySelector('#list');
 
-  try {
-    const data = await fetchData('/ROOT/API/A2ZML/data.json');
-    let list = '<mdui-list-subheader>分类</mdui-list-subheader>';
-    let html = '';
+try {
+const data = await fetchData('/ROOT/API/A2ZML/data.json');
+let list = '';
+let html = '';
 
-    data.forEach((zone, index) => {
-      list += `<mdui-list-item${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
+data.forEach((zone, index) => {
+list += `<mdui-list-item${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
 
-      html += `
-        <section${index === 0 ? ' active' : ''}>
-          ${zone.data.map(category => `
-            <div>
-              <h3>${category.title}</h3>
-              <mdui-card>
-                <mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5">
-                  ${category.data.map(item => `
-                    <mdui-tooltip>
-                      <mdui-list-item class="col" href="${item.href}" target="_blank" headline-line="1" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
-                      <div slot="content"><div style="font-size: 1.4em">${item.title}</div><div>${item.description}</div></div>
-                    </mdui-tooltip>
-                  `).join('')}
-                </mdui-list>
-              </mdui-card>
-            </div>
-          `).join('')}
-        </section>
-      `;
-    });
-    mduiList.innerHTML = list;
-    contentContainer.innerHTML = html;
-
-    // 获取所有的列表项和内容区域
-    const listItems = document.querySelectorAll('mdui-list.list mdui-list-item');
-    const contentSections = document.querySelectorAll('div section');
-
-    // 为每个列表项添加点击事件监听器
-    listItems.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        // 移除所有列表项的 'active' 类
-        listItems.forEach(li => li.removeAttribute('active'));
-        // 为当前点击的列表项添加 'active' 类
-        item.setAttribute('active', '');
-
-        // 移除所有内容区域的 'active' 类
-        contentSections.forEach(section => section.removeAttribute('active'));
-        // 为对应的内容区域添加 'active' 类
-        contentSections[index].setAttribute('active', '');
-      });
-    });
-  } catch (error) {
-    contentContainer.innerHTML = `
-      <mdui-alert type="error" class="mdui-m-t-3">
-        数据加载失败: ${error.message}
-      </mdui-alert>
-    `;
-    console.error('请求失败:', error);
-  }
+html += `
+<section${index === 0 ? ' active' : ''}>
+${zone.data.map(category => `
+<div>
+<h3>${category.title}</h3>
+<mdui-card>
+<mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5">
+${category.data.map(item => `
+<mdui-tooltip>
+<mdui-list-item class="col" href="${item.href}" target="_blank" headline-line="1" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
+<div slot="content"><div style="font-size: 1.4em">${item.title}</div><div>${item.description}</div></div>
+</mdui-tooltip>
+`).join('')}
+</mdui-list>
+</mdui-card>
+</div>
+`).join('')}
+</section>
+`;
+});
+mduiList.innerHTML = list;
+contentContainer.innerHTML = html;
+const listItems = document.querySelectorAll('div#list mdui-list-item');
+const contentSections = document.querySelectorAll('div section');
+listItems.forEach((item, index) => {
+item.addEventListener('click', (e) => {
+listItems.forEach(li => li.removeAttribute('active'));
+item.setAttribute('active', '');
+contentSections.forEach(section => section.removeAttribute('active'));
+contentSections[index].setAttribute('active', '');
+});
+});
+} catch (error) {
+contentContainer.innerHTML = `
+<mdui-alert type="error" class="mdui-m-t-3">
+数据加载失败: ${error.message}
+</mdui-alert>
+`;
+console.error('请求失败:', error);
+}
 })();
 
 </script>
