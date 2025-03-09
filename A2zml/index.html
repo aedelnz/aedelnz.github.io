@@ -1,213 +1,132 @@
-<!DOCTYPE html>    
-<html lang="zh-CN">    
-<head>    
-<meta charset="UTF-8">  
-<title>爱莫能助 - 二次元导航</title>  
-<meta name="description" content="爱欲于人，犹如执炬，逆风而行，必有烧手之患。">  
-<meta name="referrer" content="no-referrer"/>  
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>  
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico">    <!-- MUI CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
-<!-- Bootstrap CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
-<!-- MUI JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
-<script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>  
-<script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF",autoTrack:true,hashMode:true,screenRecord:true})</script>
-<script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
-<script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK",sendSuspicious:true,sendSpaPv:true});</script>
-</head>  
-<body class="mdui-drawer-body-left">
-<header class="mdui-appbar navbar navbar-expand-lg sticky-top shadow-sm bg-body-tertiary border-bottom">
-<div class="container-fluid">
-<div class="d-flex align-items-center">
-<a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left'}"><i class="mdui-icon material-icons">menu</i></a>
-<a class="mdui-typo-headline navbar-brand" href="#">爱莫能助</a>
-</div>
-<a href="javascript:;" class="navbar-toggler mdui-btn mdui-btn-icon" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"><i class="mdui-icon material-icons">more_vert</i></a>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav me-auto mb-1"></ul>
-<hr class="d-lg-none">
-<ul class="navbar-nav bd-navbar-nav mb-1">
-<li class="nav-item"><a class="nav-link" href="https://afdian.net/a/JIXIEJIDIGUAN"><small>爱发电</small></a></li>
-<li class="nav-item"><a class="nav-link" href="/A2zml/Monitor/"><small>站点监控</small></a></li>
-<li class="nav-item"><a class="nav-link" href="/A2zml/v2/"><small>魔法禁书</small></a></li>
-<li class="nav-item"><a class="nav-link" href="/#Links"><small>友情链接</small></a></li>
-</ul>
-</div>
-</div>
-</header>
-<aside class="mdui-drawer shadow-sm bg-body-tertiary border-end" id="left">
-<div class="mdui-list" id="list"></div>
-</aside>
+<!doctype html>
+<html lang="zh-CN" class="mdui-theme-auto">
+<head>
+<meta charset="UTF-8">
+<title>爱莫能助 - 二次元导航</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="二次元导航站">
+<meta name="keywords" content="jixiejidiguan.top, JIXIEJIDIGUAN, 爱莫能助, 二次元导航">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+mdui-top-app-bar{position:fixed!important}@media (min-width:840px){mdui-button-icon[icon="menu"]{display:none}}
+mdui-navigation-drawer{position:fixed!important;display:none}@media (min-width:840px){mdui-navigation-drawer{display:block;bottom:0;left:0;top:4rem;width:22.5rem}}
+mdui-layout-main{overflow:visible;display:block;padding-top:4rem}mdui-layout-main:not(:defined){visibility:visible}@media (min-width:840px){mdui-layout-main{padding-left:22.5rem}}
+div.main{display:flex;justify-content:center}
+div.container{flex:1;min-width:0;padding:1rem}@media (min-width:840px){.container{padding:1rem 3rem}}
+[class*=row-]{margin-right:-8px;margin-left:-8px}
+[class*=row-]::after{display:table;clear:both;content:''}
+.col{position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;min-height:1px;padding-right:2px;padding-left:2px}
+.row-xs-2 .col{float:left;width:50%}
+@media (min-width:600px){.row-sm-3 .col{float:left;width:33.333333%}}
+@media (min-width:1024px){.row-md-4 .col{float:left;width:25%}}
+@media (min-width:1440px){.row-lg-5 .col{float:left;width:20%}}
+section{display: none;}
+section[active]{display: block;}
+h3{padding-top:1em}
+mdui-card{width:100%}
+mdui-card.mdui-card{padding:1rem}
+footer{padding:20px 0;font-size:1rem;text-align:center}
+</style>
+<script id="JIXIEJIDIGUAN" src="/ROOT/PORT/library/framework.js"></script>
+</head>
+<body>
+<mdui-layout>
+<mdui-top-app-bar scroll-behavior="elevate">
+<mdui-button-icon icon="menu"></mdui-button-icon>
+<mdui-top-app-bar-title>二次元导航站</mdui-top-app-bar-title>
+<mdui-tooltip content="爱发电"><mdui-button-icon href="https://afdian.com/a/JIXIEJIDIGUAN" target="_blank" variant="standard" icon="bolt"></mdui-button-icon></mdui-tooltip>
+<mdui-tooltip content="网站首页"><mdui-button-icon href="/#Home" variant="standard" icon="home"></mdui-button-icon></mdui-tooltip>
+<mdui-tooltip content="魔法禁书"><mdui-button-icon href="/A2zml/v2" variant="standard" icon="public_off"></mdui-button-icon></mdui-tooltip>
+<mdui-tooltip content="友情链接"><mdui-button-icon href="/#Links" variant="standard" icon="link"></mdui-button-icon></mdui-tooltip>
+</mdui-top-app-bar>
+<mdui-navigation-drawer close-on-overlay-click>
+<mdui-list class="list"></mdui-list>
+</mdui-navigation-drawer>
+<mdui-layout-main>
+<div class="main">
+<div class="container mdui-prose">
 
-<div class="clearfix">
-<button type="button" class="btn btn-sm btn-outline-light text-dark rounded-0 float-end" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false">设置</button>
-<div class="collapse" id="collapse">
-<div class="card card-body rounded-0">
-待开发
-</div>
-</div>
-</div>
-<section class="container-fluid">
-<div class="container my-5">
-<div class="my-3 py-3"></div> 
-<form class="d-flex input-group shadow-sm bg-body-tertiary border" style="border-radius: 8px;" id="searchForm">  
-<input type="text" class="form-control" id="searchInput" placeholder="输入搜索内容">
-<span class="input-group-text"><select class="form-select mdui-select" id="engineSelect" mdui-select><option value="bing">Bing</option><option value="google">Google</option><option value="baidu">Baidu</option><option value="github">GitHub</option></select></span>
-<span class="input-group-text" id="searchButton">搜索</span>
-</form>  
-<div class="my-3 py-3"></div> 
-</div>
-<div id="Section"></div>
-</section>
-<div class="container-fluid shadow-sm bg-body-tertiary border-top">
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
-<div class="col-md-4 d-flex align-items-center"><span class="mb-3 text-muted">版权所有 © 2020-2024 爱莫能助</span></div>
-<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"><li class="ms-3">由「<a class="text-muted" href="#">机械极地馆</a>」提供技术支持</li></ul>
+
+<footer>
+© 2025 <a href="https://jixiejidiguan.top">画的个人记录</a>
+<span> | </span>
+<a href="https://beian.miit.gov.cn">湘ICP备2022000040号</a>
+<a href="https://icp.gov.moe/?keyword=20220440">萌ICP备20220440号</a>
+<span> | </span>
+<a href="https://www.12377.cn">违法和不良信息举报中心</a>
 </footer>
 </div>
-<script>  
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('searchButton').addEventListener('click', function () {
-        var si = document.getElementById('searchInput').value;
-        var se = document.getElementById('engineSelect').value;
-        var e = {
-            bing: "https://www.bing.com/search?q=",
-            google: "https://www.google.com/search?q=",
-            baidu: "https://www.baidu.com/s?wd=",
-            github: "https://github.com/search?q="
-        };
-        if (si && e.hasOwnProperty(se)) {
-            window.open(e[se] + encodeURIComponent(si), '_blank');
-        } else {
-            alert('请输入搜索内容。');
-        }
+</div>
+</mdui-layout-main>
+</mdui-layout>
+<script>
+(function(){document.querySelector("mdui-button-icon[icon='menu']").addEventListener("click", () => document.querySelector("mdui-navigation-drawer").open = true)})();
+async function fetchData(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>controller.abort(),timeout);try{for(let attempt=0;attempt<maxRetries;attempt++){try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal,});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries-1){throw error;}console.warn(`请求失败，尝试第${attempt+1}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
+
+(async () => {
+  const contentContainer = document.querySelector('.container');
+  const mduiList = document.querySelector('mdui-list');
+
+  try {
+    const data = await fetchData('/ROOT/API/A2ZML/data.json');
+    let list = '<mdui-list-subheader>分类</mdui-list-subheader>';
+    let html = '';
+
+    data.forEach((zone, index) => {
+      list += `<mdui-list-item${index === 0 ? ' active' : ''}>${zone.title}</mdui-list-item>`;
+
+      html += `
+        <section${index === 0 ? ' active' : ''}>
+          ${zone.data.map(category => `
+            <div>
+              <h3>${category.title}</h3>
+              <mdui-card>
+                <mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5">
+                  ${category.data.map(item => `
+                    <mdui-tooltip>
+                      <mdui-list-item class="col" href="${item.href}" target="_blank" headline-line="1" headline="${item.title}" description-line="1" description="${item.description}" end-icon="arrow_right"></mdui-list-item>
+                      <div slot="content"><div style="font-size: 1.4em">${item.title}</div><div>${item.description}</div></div>
+                    </mdui-tooltip>
+                  `).join('')}
+                </mdui-list>
+              </mdui-card>
+            </div>
+          `).join('')}
+        </section>
+      `;
     });
+    mduiList.innerHTML = list;
+    contentContainer.innerHTML = html;
 
-    document.getElementById('searchInput').addEventListener('keyup', function (event) {
-        if (event.keyCode == 13) {
-            document.getElementById('searchButton').click();
-        }
+    // 获取所有的列表项和内容区域
+    const listItems = document.querySelectorAll('mdui-list.list mdui-list-item');
+    const contentSections = document.querySelectorAll('div section');
+
+    // 为每个列表项添加点击事件监听器
+    listItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        // 移除所有列表项的 'active' 类
+        listItems.forEach(li => li.removeAttribute('active'));
+        // 为当前点击的列表项添加 'active' 类
+        item.setAttribute('active', '');
+
+        // 移除所有内容区域的 'active' 类
+        contentSections.forEach(section => section.removeAttribute('active'));
+        // 为对应的内容区域添加 'active' 类
+        contentSections[index].setAttribute('active', '');
+      });
     });
+  } catch (error) {
+    contentContainer.innerHTML = `
+      <mdui-alert type="error" class="mdui-m-t-3">
+        数据加载失败: ${error.message}
+      </mdui-alert>
+    `;
+    console.error('请求失败:', error);
+  }
+})();
 
-    let address = '../start/Datadake/get/json/A2zml/';
-    fetch(address + 'A2zml.json')
-        .then(response => response.json())
-        .then(data => {
-            var navbarNav = document.querySelector('#navbarNav ul');
-            data.forEach(function (n) {
-                var li = document.createElement('li');
-                li.className = 'nav-item';
-                var a = document.createElement('a');
-                a.className = 'nav-link';
-                a.href = '#' + n.url;
-                a.textContent = n.title;
-                li.appendChild(a);
-                navbarNav.appendChild(li);
-            });
-        })
-        .catch(error => console.error('请求失败: ', error));
-
-    document.querySelectorAll('[data-bs-toggle="collapse"] i').forEach(function (icon) {
-        icon.addEventListener('click', function () {
-            if (this.textContent === 'more_vert') {
-                this.textContent = 'more_horiz';
-            } else {
-                this.textContent = 'more_vert';
-            }
-        });
-    });
-
-    document.querySelector('#navbarNav ul').addEventListener('click', function (event) {
-        if (event.target.tagName === 'A') {
-            Section(event.target.getAttribute('href').split("#")[1]);
-        }
-    });
-
-    Section('Animation_Zone');
-
-    document.getElementById('list').addEventListener('click', function (event) {
-        if (event.target.tagName === 'A') {
-            event.preventDefault();
-            var target = document.querySelector(event.target.getAttribute('href'));
-            window.scrollTo({
-                top: target.offsetTop - window.innerHeight * 0.08,
-                behavior: 'smooth'
-            });
-        }
-    });
-
-    function Section(nav) {
-        document.getElementById('list').innerHTML = '';
-        document.getElementById('Section').innerHTML = '';
-        fetch(address + nav + '.json')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(function (n) {
-                    var a = document.createElement('a');
-                    a.className = 'mdui-list-item mdui-ripple';
-                    a.href = '#' + n.classification;
-                    a.textContent = n.classification;
-                    document.getElementById('list').appendChild(a);
-
-                    var div = document.createElement('div');
-                    div.className = 'fs-3 pb-2 mt-3 mb-0';
-                    div.id = n.classification;
-                    div.textContent = n.classification;
-                    document.getElementById('Section').appendChild(div);
-
-                    var rowDiv = document.createElement('div');
-                    rowDiv.className = 'row row-cols-2 row-cols-lg-5 g-0 g-lg-1 mdui-list';
-                    n.content.forEach(function (m) {
-                        var colDiv = document.createElement('div');
-                        colDiv.className = 'col';
-                        var li = document.createElement('li');
-                        li.className = 'mdui-list-item mdui-ripple';
-                        var contentDiv = document.createElement('div');
-                        contentDiv.className = 'mdui-list-item-content';
-                        var titleDiv = document.createElement('div');
-                        titleDiv.className = 'mdui-list-item-title mdui-list-item-one-line';
-                        titleDiv.title = m.title;
-                        titleDiv.textContent = m.title;
-                        var introDiv = document.createElement('div');
-                        introDiv.className = 'mdui-list-item-text mdui-list-item-one-line';
-                        introDiv.textContent = m.intro;
-                        contentDiv.appendChild(titleDiv);
-                        contentDiv.appendChild(introDiv);
-                        li.appendChild(contentDiv);
-                        var button = document.createElement('button');
-                        button.className = 'btn btn-sm btn-outline-secondary rounded-0';
-                        button.setAttribute('Urls', m.url);
-                        var icon = document.createElement('i');
-                        icon.className = 'mdui-list-item-icon text-dark bi bi-chevron-right';
-                        button.appendChild(icon);
-                        li.appendChild(button);
-                        colDiv.appendChild(li);
-                        rowDiv.appendChild(colDiv);
-                    });
-                    rowDiv.addEventListener('click', function (event) {
-                        if (event.target.tagName === 'BUTTON' || event.target.closest('button')) {
-                            var button = event.target.tagName === 'BUTTON' ? event.target : event.target.closest('button');
-                            var newWindow = window.open(button.getAttribute('Urls'), '_blank');
-                            if (newWindow) {
-                                newWindow.focus();
-                            } else {
-                                alert('新窗口未能打开，可能是因为弹出窗口被阻止了。');
-                            }
-                            return false;
-                        }
-                    });
-                    document.getElementById('Section').appendChild(rowDiv);
-                });
-            })
-            .catch(error => console.error('请求失败: ', error));
-    }
-});
-</script>       
-</body>  
+</script>
+</body>
 </html>
