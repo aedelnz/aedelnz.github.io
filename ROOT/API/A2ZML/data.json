@@ -1203,7 +1203,7 @@
                 ]
             },
             {
-                "title": "问答交流",
+                "title": "技术交流",
                 "data": [
                     {
                         "title": "V2EX",
@@ -1224,6 +1224,16 @@
                         "title": "NodeLoc",
                         "description": "自由地讨论互联网资源",
                         "href": "https://www.nodeloc.com/"
+                    },
+                    {
+                        "title": "MT论坛",
+                        "description": "MT论坛",
+                        "href": "https://bbs.binmt.cc"
+                    },
+                    {
+                        "title": "吾爱破解",
+                        "description": "吾爱破解",
+                        "href": "https://www.52pojie.cn/"
                     }
                 ]
             },
