@@ -27,6 +27,12 @@ a.k{position: absolute;top:1rem;right:1rem}
 mdui-avatar.k.avatar{border-radius:var(--mdui-shape-corner-medium);margin:0.5rem;width:5rem;height:5rem}@media (min-width:840px){mdui-avatar.k.avatar{width:7rem;height:7rem}}
 h1.k.title{margin:auto;font-size:1.5em;}@media (min-width:840px){h1.k.title{font-size:2.5em;}}
 footer{padding:20px 0;font-size:1rem;text-align:center}
+canvas{
+  background-color: #ff0000; /* 备用颜色 */
+  background-color: rgba(255, 0, 0, 0.5);
+
+
+}
 </style>
 <script src="/ROOT/PORT/library/framework.js"></script>
 </head>
@@ -220,6 +226,178 @@ AOL 存储
 (function(){document.addEventListener('DOMContentLoaded',_=>{const c=window.location.hash.slice(1);if(c){const e=document.querySelector(`mdui-list.list mdui-list-item[href="#${c}"]`);e&&e.click()}});const l=document.querySelectorAll('mdui-list.list mdui-list-item'),s=document.querySelectorAll('div section');l.forEach((i,j)=>{i.addEventListener('click',_=>{l.forEach(i=>i.removeAttribute('active'));i.toggleAttribute('active');s.forEach(s=>s.removeAttribute('active'));s[j].toggleAttribute('active')})})})();
 async function string(url,options={}){const{timeout=10000,maxRetries=2,headers={}}=options;const controller=new AbortController();const timeoutId=setTimeout(()=>{controller.abort()},timeout);try{let attempt=0;while(attempt<maxRetries){attempt++;try{const response=await fetch(url,{method:'GET',headers:{'Content-Type':'application/json',...headers},signal:controller.signal});if(!response.ok){throw new Error(`HTTP error!Status:${response.status}`)}const data=await response.json();clearTimeout(timeoutId);return data}catch(error){if(attempt===maxRetries){throw error;}console.warn(`请求失败，尝试第${attempt}次重试...`,error)}}}catch(error){if(error.name==='AbortError'){throw new Error('请求超时');}else{throw error;}}}
 (async()=>{const mduilinks=document.querySelector("mdui-list.mdui-links");const mduitbody=document.querySelector("tbody.mdui-tbody");try{const datalinks=await string('/ROOT/API/links.json');const shuffle=array=>{return array.reduce((acc,_,i)=>{const j=Math.floor(Math.random()*(i+1));acc[i]=acc[j];acc[j]=array[i];return acc},[...array])};mduilinks.innerHTML+=shuffle(datalinks[0]).map(item=>`<mdui-list-item href="${item.href}"target="_blank"end-icon="arrow_right">${item.title}<mdui-avatar slot="icon"src="${item.src}"></mdui-avatar><span slot="description">${item.description}</span></mdui-list-item>`).join('');mduitbody.innerHTML='';mduitbody.innerHTML+=datalinks[1].map(item=>`<tr><td>${item.title}</td><td>${item.href}</td><td>${item.description}</td></tr>`).join('')}catch(error){mduilinks.innerHTML=`<mdui-list-item>请求失败：${error.message}</mdui-list-item>`;console.error('请求失败:',error.message)}})();
+class Tentacle {
+    constructor(x, y, length, numSegments, angle) {
+        this.baseX = x;
+        this.baseY = y;
+        this.length = length;
+        this.numSegments = numSegments;
+        this.baseAngle = angle;
+        this.segments = [];
+        this.opacity = Math.random() * 0.3 + 0.7; // 更高透明度
+        this.phase = Math.random() * Math.PI * 2;
+        this.segmentSpacing = 8; // 更紧凑的段间距
+
+        const segmentLength = this.length / this.numSegments;
+        for (let i = 0; i < this.numSegments; i++) {
+            this.segments.push({
+                x: x + Math.cos(angle) * segmentLength * i,
+                y: y + Math.sin(angle) * segmentLength * i,
+                rotation: 0 // 用于几何变换
+            });
+        }
+    }
+
+    update(time) {
+        this.phase += 0.05;
+        
+        for (let i = 0; i < this.numSegments; i++) {
+            const segment = this.segments[i];
+            const prev = this.segments[i - 1];
+            
+            if (i === 0) {
+                // 更快速的鼠标跟随
+                segment.x = this.baseX + Math.cos(time/500 + this.phase) * 10;
+                segment.y = this.baseY + Math.sin(time/500 + this.phase) * 10;
+            } else {
+                // 规律性的几何运动
+                const angle = Math.atan2(prev.y - segment.y, prev.x - segment.x);
+                const wave = Math.sin(time/200 + i * 0.5) * 2;
+                
+                segment.x = prev.x - Math.cos(angle) * (this.segmentSpacing + wave);
+                segment.y = prev.y - Math.sin(angle) * (this.segmentSpacing + wave);
+                
+                // 机械性旋转
+                segment.rotation = angle + Math.PI/2;
+            }
+        }
+    }
+
+    draw(ctx) {
+        // 绘制主要光带
+        ctx.beginPath();
+        ctx.moveTo(this.segments[0].x, this.segments[0].y);
+        
+        // 创建更直线化的连接
+        for (let i = 1; i < this.segments.length; i++) {
+            const prev = this.segments[i - 1];
+            ctx.lineTo(prev.x, prev.y);
+            ctx.lineTo(this.segments[i].x, this.segments[i].y);
+        }
+        
+        // 蓝紫色主光带
+        const gradient = ctx.createLinearGradient(
+            this.segments[0].x, this.segments[0].y,
+            this.segments[this.segments.length-1].x, 
+            this.segments[this.segments.length-1].y
+        );
+        gradient.addColorStop(0, `hsla(250, 80%, 70%, ${this.opacity})`);
+        gradient.addColorStop(1, `hsla(210, 80%, 60%, ${this.opacity * 0.5})`);
+        
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.shadowColor = `hsla(210, 80%, 60%, ${this.opacity})`;
+        ctx.shadowBlur = 15;
+        ctx.stroke();
+
+        // 绘制辅助光带
+        ctx.beginPath();
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = `hsla(170, 80%, 60%, ${this.opacity * 0.4})`;
+        this.segments.forEach((seg, index) => {
+            if(index === 0) ctx.moveTo(seg.x, seg.y);
+            else ctx.lineTo(seg.x, seg.y);
+        });
+        ctx.stroke();
+
+        // 绘制几何节点
+        this.segments.forEach((seg, index) => {
+            ctx.save();
+            ctx.translate(seg.x, seg.y);
+            ctx.rotate(seg.rotation);
+            
+            // 节点发光体
+            ctx.fillStyle = `hsla(${210 + index*2}, 80%, 60%, ${0.3 + index/this.segments.length})`;
+            ctx.shadowColor = `hsla(210, 80%, 60%, 0.7)`;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.rect(-3, -3, 6, 6); // 方形节点更具科技感
+            ctx.fill();
+            
+            ctx.restore();
+        });
+    }
+}
+
+class Sketch {
+    constructor() {
+        this.canvas = document.createElement('canvas');
+        document.body.appendChild(this.canvas);
+        this.ctx = this.canvas.getContext('2d');
+        this.resize();
+        
+        this.tentacles = [];
+        for (let i = 0; i < 15; i++) {
+            this.tentacles.push(new Tentacle(
+                this.width/2,
+                this.height/2,
+                Math.random() * 120 + 80,
+                Math.floor(Math.random() * 12 + 10),
+                Math.random() * Math.PI * 2
+            ));
+        }
+
+        window.addEventListener('resize', () => this.resize());
+        document.addEventListener('mousemove', (e) => this.onMouseMove(e));
+        
+        this.mouseX = this.width/2;
+        this.mouseY = this.height/2;
+        this.time = 0;
+        this.animate();
+    }
+
+    resize() {
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+        this.ctx.fillStyle = '#00001a'; // 深蓝色背景
+        this.ctx.fillRect(0, 0, this.width, this.height);
+    }
+
+    onMouseMove(e) {
+        this.mouseX = e.clientX;
+        this.mouseY = e.clientY;
+    }
+
+    animate() {
+        this.time += 0.1;
+        this.update();
+        this.draw();
+        requestAnimationFrame(() => this.animate());
+    }
+
+    update() {
+        // 改为更清爽的残影效果
+        this.ctx.fillStyle = 'rgba(0, 0, 30, 0.08)';
+        this.ctx.fillRect(0, 0, this.width, this.height);
+        
+        this.tentacles.forEach(tentacle => {
+            tentacle.baseX += (this.mouseX - tentacle.baseX) * 0.08; // 更快响应
+            tentacle.baseY += (this.mouseY - tentacle.baseY) * 0.08;
+            tentacle.update(this.time);
+        });
+    }
+
+    draw() {
+        this.tentacles.forEach(tentacle => tentacle.draw(this.ctx));
+    }
+}
+
+new Sketch();
+
+
 </script>
 </body>
 </html>
