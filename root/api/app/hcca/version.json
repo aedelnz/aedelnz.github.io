@@ -1,0 +1,38 @@
+{
+  "version": {
+    "current": "1.2",
+    "previous": "1",
+    "release_date": "2025-05-07",
+    "status": "stable",
+    "announcement": "xxx",
+    "changelog": [
+      {
+        "type": "feature",
+        "description": "新增用户自定义主题功能",
+        "affected_modules": ["UI", "Settings"]
+      },
+      {
+        "type": "bugfix",
+        "description": "修复登录后闪退问题（Issue #456）",
+        "affected_modules": ["Auth"]
+      },
+      {
+        "type": "enhancement",
+        "description": "优化启动速度（减少 30% 加载时间）",
+        "affected_modules": ["Core"]
+      },
+      {
+        "type": "security",
+        "description": "修复敏感数据存储漏洞",
+        "affected_modules": ["Database"]
+      }
+    ],
+    "download": {
+      "android": "待定"
+    },
+    "mandatory_update": false,
+    "minimum_system_requirements": {
+      "os": "Android 8.1"
+    }
+  },
+}
