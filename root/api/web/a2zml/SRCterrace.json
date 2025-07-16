@@ -1,0 +1,63 @@
+[
+    {
+        "title": "SRC专区",
+        "prompt": "数据资料正在收集中，可以通过底部评论提交更多数据",
+        "data": [
+            {
+                "title": "在线SRC",
+                "data": [
+                    {
+                        "title": "小米安全中心",
+                        "description": " - 平台名称：MiSRC\n - 运营方：小米集团\n - 功能定位：漏洞报告与安全协作平台\n - 特色：专注智能终端生态安全建设",
+                        "href": "https://sec.xiaomi.com"
+                    },
+                    {
+                        "title": "哔哩哔哩安全",
+                        "description": " - 平台名称：哔哩哔哩安全应急响应中心\n - 运营方：哔哩哔哩公司\n - 功能定位：视频社区安全漏洞管理\n - 特色：覆盖ACG内容生态安全",
+                        "href": "https://security.bilibili.com/"
+                    },
+                    {
+                        "title": "蚂蚁集团安全",
+                        "description": " - 平台名称：蚂蚁安全响应中心\n - 运营方：蚂蚁科技集团\n - 功能定位：金融科技安全防护\n - 特色：聚焦支付风控与数据安全",
+                        "href": "https://security.alipay.com"
+                    },
+                    {
+                        "title": "网易安全中心",
+                        "description": " - 平台名称：网易安全中心\n - 运营方：网易集团\n - 功能定位：互联网业务安全协同\n - 特色：游戏与邮箱安全重点防护",
+                        "href": "https://aq.163.com"
+                    },
+                    {
+                        "title": "腾讯安全应急响应中心",
+                        "description": " - 平台名称：TSRC\n - 运营方：腾讯集团\n - 功能定位：全生态安全漏洞管理\n - 特色：覆盖社交、游戏、云服务等多业务线",
+                        "href": "https://security.tencent.com"
+                    },
+                    {
+                        "title": "阿里巴巴安全响应中心",
+                        "description": " - 平台名称：ASRC\n - 运营方：阿里巴巴集团\n - 功能定位：电商生态安全防护\n - 特色：双11等大促活动专项保障",
+                        "href": "https://security.alibaba.com"
+                    },
+                    {
+                        "title": "百度安全应急响应中心",
+                        "description": " - 平台名称：BSRC\n - 运营方：百度公司\n - 功能定位：搜索与AI业务安全\n - 特色：自动驾驶与智能云安全研究",
+                        "href": "https://bsrc.baidu.com"
+                    },
+                    {
+                        "title": "京东安全应急响应中心",
+                        "description": " - 平台名称：JSRC\n - 运营方：京东集团\n - 功能定位：零售物流安全体系\n - 特色：供应链全链路安全监控",
+                        "href": "https://security.jd.com"
+                    },
+                    {
+                        "title": "华为安全应急响应中心",
+                        "description": " - 平台名称：HSRC\n - 运营方：华为技术有限公司\n - 功能定位：ICT基础设施安全\n - 特色：5G与鸿蒙系统专项防护",
+                        "href": "https://www.huawei.com/cn/security/psirt"
+                    },
+                    {
+                        "title": "字节跳动安全应急响应中心",
+                        "description": " - 平台名称：BSRC\n - 运营方：字节跳动\n - 功能定位：内容平台安全治理\n - 特色：短视频与推荐算法安全研究",
+                        "href": "https://security.bytedance.com"
+                    }
+                ]
+            }
+        ]
+    }
+]

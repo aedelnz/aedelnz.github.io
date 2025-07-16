@@ -164,7 +164,6 @@ GameManager.prototype.startGame = function() {
 
 GameManager.prototype.generateNewTarget = function() {
   this.targetNumber = Math.floor(Math.random() * this.currentRange) + 1;
-  console.log('新目标数字:', this.targetNumber);
 };
 
 GameManager.prototype.updateUI = function() {

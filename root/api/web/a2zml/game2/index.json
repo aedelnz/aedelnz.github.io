@@ -8,5 +8,10 @@
         "title": "猜数字",
         "description": "在线猜数字游戏",
         "href": "guessnum"
+    },
+    {
+        "title": "二元一次方程",
+        "description": "在线二元一次方程游戏",
+        "href": "g21equation"
     }
 ]

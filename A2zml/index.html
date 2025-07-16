@@ -1,146 +1,102 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="一个二次元导航站！">
-    <title>爱莫能助</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/root/file/mdui.css">
-    <style>
-    body{margin:0}
-    mdui-top-app-bar,mdui-navigation-drawer,footer{box-shadow:var(--mdui-elevation-level1)}
-    .mdui-prose{padding:var(--mdui-typescale-body-small-size)}
-    mdui-card{padding:var(--mdui-typescale-label-small-line-height);width:100%}
-    .h1{margin-top:var(--mdui-typescale-label-large-line-height);font-size:var(--mdui-typescale-title-large-size);font-weight:var(--mdui-typescale-title-medium-weight);line-height:1;border-left:var(--mdui-typescale-label-small-line-height) solid rgb(var(--mdui-color-primary));padding-left:var(--mdui-typescale-body-medium-size)}
-
-
-    [class*=row-]{display:flex;flex-wrap:wrap;margin:0 -2px}
-    .col{border-radius:var(--mdui-shape-corner-medium);background-color:rgb(var(--mdui-color-surface-container-highest));position:relative;overflow:hidden;box-sizing:border-box;margin:0 2px 4px}
-    .row-xs-2 .col{flex:0 0 calc(50% - 4px)}
-    @media (min-width:600px){.row-sm-3 .col{flex:0 0 calc(33.33333% - 4px)}}
-    @media (min-width:1024px){.row-md-4 .col{flex:0 0 calc(25% - 4px)}}
-    @media (min-width:1440px){.row-lg-5 .col{flex:0 0 calc(20% - 4px)}}
-    mdui-list-item.col::part(container){padding: 0.35rem 0.15rem 0.35rem 0.25rem !important}
-   
-
-
-    
-    footer{display:block;text-align:center;padding:var(--mdui-typescale-body-small-line-height);background-color:rgb(var(--mdui-color-surface-container-low));line-height:var(--mdui-typescale-body-large-line-height)}
-    </style>  
-    <script src="/root/file/mdui.global.js"></script>
-    <script src="Valine.min.js"></script>
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF"})</script>
-    <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
-    <script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK"});</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <meta name="description" content="一个二次元导航站！">
+  <title>爱莫能助</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/root/file/mdui.css">
+  <style>body{margin:0;padding:0;box-sizing:border-box}.mdui-prose{padding:var(--mdui-typescale-body-small-size)}mdui-list-item .container{display:flex;align-items:center;cursor:pointer;user-select:none;text-decoration:none;color:inherit;min-height:56px}mdui-list-item .body{display:flex;flex:1 1 100%;flex-direction:column;justify-content:center;min-width:0;margin-left:var(--mdui-typescale-body-small-size)}mdui-list-item .headline{display:block;color:var(--mdui-color-on-surface);font-size:var(--mdui-typescale-body-large-size)}mdui-list-item .description{display:block;color:var(--mdui-color-on-surface-variant);font-size:var(--mdui-typescale-label-medium-size)}mdui-list-item .headline,mdui-list-item .description{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}mdui-list-item .icon{transform:scale(1);transition:color 0.1s,transform 0.2s}mdui-list-item .icon:hover{transform:scale(1.1)}mdui-list-item .icon:active{color:rgb(var(--mdui-color-inverse-primary));transform:scale(1.2)}mdui-list-item.col .icon{margin-right:var(--mdui-typescale-body-small-size)}@media (min-width:840px){.search{display:flex;margin:0 auto}mdui-select{width:200px}mdui-text-field{flex-grow:1}}mdui-tabs::part(container) {border-bottom:0.0825rem solid rgb(var(--mdui-color-outline));white-space: nowrap}mdui-tabs::part(container)::after {height: 0}.h1{margin-top:var(--mdui-typescale-label-large-line-height);font-size:var(--mdui-typescale-title-large-size);font-weight:var(--mdui-typescale-title-medium-weight);line-height:1;border-left:var(--mdui-typescale-label-small-line-height) solid rgb(var(--mdui-color-primary));padding-left:var(--mdui-typescale-body-medium-size)}mdui-card{padding:var(--mdui-typescale-label-small-line-height);width:100%}[class*=row-]{display:flex;flex-wrap:wrap;margin:0 -2px}.col{border-radius:var(--mdui-shape-corner-medium);background-color:rgb(var(--mdui-color-surface-container-highest));position:relative;overflow:hidden;box-sizing:border-box;margin:0 2px 4px}.row-xs-2 .col{flex:0 0 calc(50% - 4px)}@media (min-width:600px){.row-sm-3 .col{flex:0 0 calc(33.33333% - 4px)}}@media (min-width:1024px){.row-md-4 .col{flex:0 0 calc(25% - 4px)}}@media (min-width:1440px){.row-lg-5 .col{flex:0 0 calc(20% - 4px)}}footer{display:block;text-align:center;padding:var(--mdui-typescale-body-small-line-height);background-color:rgb(var(--mdui-color-surface-container-low));line-height:var(--mdui-typescale-body-large-line-height)}mdui-fab{position:fixed;right:0;bottom:0;margin:var(--mdui-typescale-body-small-size);background-color:rgba(var(--mdui-color-primary-container),0.5)}mdui-fab:active{transform:scale(1.2);transition:transform 0.3s ease}</style>
+  <script src="/root/file/mdui.global.js"></script>
+  <script src="/root/file/Valine.min.js"></script>
+  <script src="/root/file/marked.min.js"></script>
+  <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({ id: "JMIJZqK4MvC0pOsF", ck: "JMIJZqK4MvC0pOsF" })</script>
+  <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+  <script>new LingQue.Monitor().init({ id: "K5mJO6H2n6QPd4MK" })</script>
 </head>
 <body>
   <mdui-top-app-bar scroll-behavior="elevate">
     <mdui-button-icon icon="menu"></mdui-button-icon>
     <mdui-top-app-bar-title>爱莫能助</mdui-top-app-bar-title>
     <div style="flex-grow: 1"></div>
-    <mdui-button-icon icon="home" href="/"></mdui-button-icon>
+    <mdui-tooltip content="风纪委员研究所"><mdui-button-icon icon="verified_user" href="/A2zml/v2"></mdui-button-icon></mdui-tooltip>
+    <mdui-tooltip content="友情链接"><mdui-button-icon icon="links" href="/#links"></mdui-button-icon></mdui-tooltip>
+    <mdui-tooltip content="首页"><mdui-button-icon icon="home" href="/"></mdui-button-icon></mdui-tooltip>
+    <mdui-tooltip content="评论"><mdui-button-icon icon="message" href="#message"></mdui-button-icon></mdui-tooltip>
   </mdui-top-app-bar>
-  <div id="deputy" class="mdui-prose"></div>
-  <mdui-navigation-drawer close-on-overlay-click open>
+  <mdui-navigation-drawer close-on-overlay-click>
     <mdui-list></mdui-list>
   </mdui-navigation-drawer>
   <mdui-layout>
     <mdui-layout-main>
-      <mdui-tabs id="main" value="0"></mdui-tabs>
+      <div class="search">
+        <mdui-select></mdui-select>
+        <mdui-text-field variant="filled" placeholder="请输入搜索内容"></mdui-text-field>
+      </div>
+      <mdui-tabs id="main" value=""></mdui-tabs>
+      <div id="message" class="mdui-prose"><div class="h1">评论</div><mdui-card><div id="vcomments"></div></mdui-card></div>
       <footer><p>Copyright © 2020 - <span id="FullYear">2029</span> 爱莫能助. All Rights Reserved.</p><p>本网站提供的内容信息仅供参考，不构成专业建议或承诺，用户应自行判断并承担使用风险。</p></footer>
     </mdui-layout-main>
+    <mdui-fab icon="airplanemode_active"></mdui-fab>
   </mdui-layout>
 <script>
-document.getElementById('FullYear').textContent = (new Date().getFullYear());
-const { $, breakpoint, dialog } = mdui;
+document.getElementById('FullYear').textContent = new Date().getFullYear();
+const { $, breakpoint, snackbar, dialog } = mdui;
 const breakpointCondition = breakpoint();
-// 评论
-function Valinecont(el='#vcomments',config={}){const defaultConfig={appId:'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey:'z27CGdACRU9SqaK38an2ie5L',avatar:'hide',...config};if(!defaultConfig.appId||!defaultConfig.appKey){console.error('Valine 初始化失败：缺少 appId 或 appKey');return null}try{const valine=new Valine({el:el,...defaultConfig});console.log('Valine 评论系统初始化成功');return valine}catch(error){console.error('Valine 初始化失败:',error);return null}}
-// 初始化侧边栏抽屉行为
-function initNavigationDrawer() {
-  breakpointCondition.down('md') && $('mdui-navigation-drawer').attr('open', false);
-  $('mdui-navigation-drawer').on('click', () => {breakpointCondition.down('md') && $('mdui-navigation-drawer').attr('open', false)});
-  $('mdui-button-icon[icon="menu"]').on('click', () => $('mdui-navigation-drawer').attr('open', true));
-  $('mdui-navigation-drawer').css('top', $('mdui-top-app-bar').height());
-}
-// 导航抽屉内容生成
-function updateNavigationDrawer(index,data) {
-  $('mdui-navigation-drawer mdui-list').html(data.map((group) => `<mdui-list-subheader>${group.title}</mdui-list-subheader>${group.data.map((item, itemIndex) => `<mdui-list-item href="#${index}-${itemIndex}">${item.title}</mdui-list-item>`).join('')}`).join(''));
-}
-
-// 标签页内容生成
-function mduitab(data) {
-  return data.map((item, index) => `<mdui-tab value="${index}">${item.title}</mdui-tab>`).join('');
-}
-
-// 面板内容生成
-function mduipanel(data) {
-  return data.map((group, index) => `<mdui-tab-panel slot="panel" value="${index}"><div class="mdui-prose">${panel(index,group.data)}</div></mdui-tab-panel>`).join('');
-}
-// 面板内部内容生成
-function panel(index,data) {
-return data.map((item, itemIndex) => {
-return `<div class="h1" id="${index}-${itemIndex}">${item.title}</div><mdui-card><mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5">${item.data.map((subItem, subIndex) => {return `<mdui-list-item data-href="${index}-${itemIndex}-${subIndex}" data-src="${subItem.href}" class="col" headline-line="1" description-line="1" headline="${subItem.title}" description="${subItem.description || '- 暂无简介'}"></mdui-list-item>`;}).join('')}</mdui-list></mdui-card>`;}).join('');
-}
-
-// 初始化标签页切换事件
-function initTabEvents(data) {
-  const tabs = document.querySelector('mdui-tabs');
-  const observer = new MutationObserver((mutations) => {updateNavigationDrawer(tabs.getAttribute('value'),[data[tabs.getAttribute('value')]])});
-  observer.observe(tabs, { attributes: true, attributeFilter: ['value'] });
-}
-
-function Windowing() {
-const tabser = $('#main');
-const deputy = $('#deputy');
-$(document).on('click', 'mdui-list-item.col', function(e) {
-    const $this = $(this);
-    const headline = $this.attr('headline');
-    const description = $this.attr('description');
-    const dataHref = $this.attr('data-href');
-    const dataSrc = $this.attr('data-src');
-    const path = `A2zml/#${dataHref}`;
-    tabser.hide();
-    $('mdui-navigation-drawer').attr('open', false);
-    const Content = `<mdui-top-app-bar slot="header"><mdui-button-icon icon="close" id="close-btn"></mdui-button-icon><mdui-top-app-bar-title>${headline}</mdui-top-app-bar-title></mdui-top-app-bar>
-    <div class="mdui-prose">
-      <div>
-        <mdui-button href="${dataSrc}" end-icon="arrow_forward">点击直达</mdui-button>
-        <mdui-button target="_blank" href="${dataSrc}" end-icon="check_box_outline_blank">新窗口打开</mdui-button>
-      </div>
-      <p>${description}</p>
-      <div class="h1">交流</div>
-      <mdui-card><div id="vcomments"></div></mdui-card>
-    </div>`;
-    deputy.empty().append(Content);
-    window.history.replaceState({}, '', `#${dataHref}`);
-    Valinecont('#vcomments', {placeholder: '说点什么吧~', path: path});
-});
-$(document).on('click', '[icon="close"]', function(e) {
-  breakpointCondition.up('md') && $('mdui-navigation-drawer').attr('open', true);
-  deputy.empty();
-  tabser.show();
-  window.history.replaceState({}, '', '#');
-});
-}
-
-
-
-// 主函数
-initNavigationDrawer();
-$.ajax({url: '/root/api/web/a2zml/index.json',dataType: 'json',success: function(response) {
-$('mdui-tabs').append(`${mduitab(response)}${mduipanel(response)}`);
-$('mdui-tab').eq(0).trigger('click');
-updateNavigationDrawer(0,[response[0]]);
-initTabEvents(response);
-Windowing();
-},error: function(xhr, status, error) {
-      console.error('AJAX请求失败:', status, error);
-}});
+const $valine = new Valine();
+// 点击滚动到元素定位
+const scrollToMDUIElement = (s, t) => { const e = $(s); e.length && window.scrollTo({ top: e.offset().top - ($(t).outerHeight() + 10), behavior: 'smooth' }) };
+// 返回顶部
+const BacktoTopoMDUIElement = (t) => {window.onscroll = () => {$(t).css('display', (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) ? 'block' : 'none')},$(t).on('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))};
+// 顶部提示
+const Tip = t => ($('mdui-snackbar').remove(), snackbar({ placement: 'top', message: t }));
+// 存储获取设置
+const storage = {set(k, v) { localStorage.setItem(k, typeof v === 'string' ? v : JSON.stringify(v)); },get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return localStorage.getItem(k); } },remove(k) { localStorage.removeItem(k); },clear() { localStorage.clear(); }};
+// 当前时间年月日
+const yearMonthDay  = new Date().toISOString().split('T')[0]; 
+// 侧边栏
+const NavigationDrawer = () =>{if(breakpointCondition.up('md')) $('mdui-navigation-drawer').attr('open', function(i, attr) {return !attr || attr === 'false'});if(breakpointCondition.up('md')) $('mdui-navigation-drawer').css('top',$('mdui-top-app-bar').innerHeight());$('mdui-button-icon[icon=menu]').on('click', function (e) {$('mdui-navigation-drawer').attr('open', function(i, attr) {return !attr || attr === 'false'})});$('mdui-navigation-drawer').on('click', function (e) {if(breakpointCondition.down('md')) $('mdui-navigation-drawer').attr('open', false)})};
+// 搜索功能
+const Search = () => {const $searchField = $('.search mdui-text-field');const $searchEngineSelect = $('.search mdui-select');const searchEngines = {google: { name: '谷歌', url: 'https://www.google.com/search?q=' },bing: { name: '必应', url: 'https://www.bing.com/search?q=' },baidu: { name: '百度', url: 'https://www.baidu.com/s?wd=' },duckduckgo: { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=' },github: { name: 'GitHub', url: 'https://github.com/search?type=repositories&q=' }};const Rval = storage.get('SearchVal') || 'google';const initSearchEngineDropdown = () => {$searchEngineSelect.empty().append('<mdui-menu-item value="" disabled selected>选择搜索引擎</mdui-menu-item>').append(Object.entries(searchEngines).map(([id, { name }]) => `<mdui-menu-item value="${id}">${name}</mdui-menu-item>`).join('')).val(Rval);};const performSearch = () => {const query = $searchField.val().trim();const engineId = $searchEngineSelect.val();storage.set('SearchVal',engineId);if (!query) {Tip('请输入搜索内容');return;}if (!searchEngines[engineId]) {Tip('请选择搜索引擎');return;}window.open(`${searchEngines[engineId].url}${encodeURIComponent(query)}`, '_blank');};initSearchEngineDropdown();$searchField.on('keydown', (e) => {if (e.key === 'Enter') performSearch()});};
+// 生成标签页项
+const tab = (d, index) => `<mdui-tab value="${index}">${d.title}</mdui-tab>`;
+// 生成标签页内容面板
+const panel = (d, index) => `<mdui-tab-panel slot="panel" value="${index}"><div id="panel${index}" class="mdui-prose"></div></mdui-tab-panel>`;
+// 导航抽屉相关模板
+const DrawerList = (d) => `<mdui-list-subheader>${d.title}</mdui-list-subheader>`;
+const DrawerLists = (d, index, value) => `<mdui-list-item class="t" href="#t${value}${index}">${d.title}</mdui-list-item>`;
+// 主内容区模板
+const MainList1 = (d) => `<mdui-list-item class="col" headline-line="1" description-line="1" data-href="${d.href}" headline="${d.title}" description="${d.description}" end-icon="last_page"></mdui-list-item>`;
+const MainList = (d) => `<mdui-list-item class="col"><div slot="custom" class="container"><div class="body" data-href="${d.href}"><div class="headline">${d.title}</div><div class="description">${d.description}</div></div><mdui-icon name="last_page" class="icon" data-href="${d.href}"></mdui-icon></div></mdui-list-item>`;
+const MainLists = (d, index, panelId) => `<div class="h1" id="t${panelId}${index}">${d.title}</div><mdui-card variant="outlined" id="pos${index}"><mdui-list class="row-xs-2 row-sm-3 row-md-4 row-lg-5"></mdui-list></mdui-card>`;
+// 更新面板内容
+const updatePanelContent = (data, panelId) => {const $panel = $(`#panel${panelId}`);if ($panel.length) {$panel.empty();const S7Hide = storage.get('S7Hide') || {};const hideUntilDate = S7Hide[panelId];if (!hideUntilDate || hideUntilDate < yearMonthDay) {if (data.prompt) {$panel.append(`<mdui-card class="S7Hide"><p>${marked.parse(data.prompt, {gfm: true,breaks: true})}</p><mdui-button variant="elevated" S7Hide="${panelId}">7天不显示</mdui-button></mdui-card>`)}}data.data.forEach((item, index) => {$panel.append(MainLists(item, index, panelId));$(`#pos${index}`).find('mdui-list').append(item.data.map(subItem => MainList(subItem)).join(''))})}};
+// 板块请求函数
+const loadAndRender = (Hrefs) => {return new Promise((resolve, reject) => {$.ajax({url: '/root/api/web/a2zml/' + Hrefs,dataType: 'json',success: function(response) {resolve(response[0])},error: function(xhr, status, error) {Tip('网络连接失败，请重试');reject(error)}})})};
+// 标签页控制器
+const TriggerTabs = (response) => {$('mdui-tab').on('click', async function(e) {const value = $(this).attr('value');storage.set('PanelVal',value);const $drawerList = $('mdui-navigation-drawer mdui-list');$(`#panel${value}`).empty().append(`<div class="h1" id="ts404">预加载</div><mdui-card variant="outlined"><p>数据加载中……</p></mdui-card>`);try {const currentData = await loadAndRender(response[value].href);$drawerList.empty();$drawerList.append(DrawerList(currentData),...currentData.data.map((item, index) => DrawerLists(item, index, value)));updatePanelContent(currentData, value)} catch (error) {$drawerList.empty().append(`<mdui-list-item class="t s404" href="#ts404">加载失败</mdui-list-item>`);$(`#panel${value}`).empty().append(`<div class="h1" id="ts404">未知</div><mdui-card variant="outlined"><p>数据加载异常，渲染失败。</p></mdui-card>`)}})};
+// 初始化加载数据
+const loadAndData = () => {$.ajax({url: '/root/api/web/a2zml/Route.json',dataType: 'json',success: function(response) {
+$('#main').append(response.map((item, index) => tab(item, index)).join(''),response.map((item, index) => panel(item, index)).join(''));
+TriggerTabs(response);
+const Pval = storage.get('PanelVal') || '0';
+$('#main').attr('value', Pval);
+$(`mdui-tab[value="${Pval}"]`).trigger('click');
+},error: function() {Tip('网络连接失败，请重试')}})};
+// 初始化
+BacktoTopoMDUIElement('mdui-fab[icon=airplanemode_active]');
+NavigationDrawer();
+Search();
+loadAndData();
+$(document).on('click', 'mdui-list-item.t, [href="#message"]', function (e) {e.preventDefault(),scrollToMDUIElement($(this).attr('href'), 'mdui-top-app-bar')});
+$(document).on('click', 'mdui-list-item.col .body', function (e) {e.preventDefault();dialog({closeOnEsc:true,closeOnOverlayClick:true,headline: $(this).find('.headline').text(),body: marked.parse($(this).find('.description').text(), {gfm: true,breaks: true}),actions: [{text: '关闭',},{text: '打开',onClick: () => {window.open($(this).attr('data-href'), '_blank');return false;}}]})});
+$(document).on('click', 'mdui-list-item.col mdui-icon', function (e) {e.preventDefault();window.open($(this).attr('data-href'), '_blank')});
+$(document).on('click', '.S7Hide mdui-button', function (e) {e.preventDefault();const hideUntilDate=(d=new Date(),d.setDate(d.getDate()+7),d.toISOString().split('T')[0]);const currentS7Hide = storage.get('S7Hide') || {};currentS7Hide[$(this).attr('S7Hide')] = hideUntilDate;storage.set('S7Hide', currentS7Hide);$('.S7Hide').hide()});
+$valine.init({ el: '#vcomments', appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz', appKey: 'z27CGdACRU9SqaK38an2ie5L', avatar: 'hide', placeholder: '说点什么吧~' });
 </script>
 </body>
 </html>

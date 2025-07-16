@@ -1,0 +1,25 @@
+{
+"Firmware":[
+        {
+            "title": "vivo/iqoo 系统升级",
+            "description": "vivo/iqoo官方 com 地址",
+            "href": "https://www.vivo.com/upgrade/index"
+        },
+        {
+            "title": "vivo/iqoo 系统升级",
+            "description": "vivo/iqoo官方 cn 地址",
+            "href": "https://www.vivo.com.cn/upgrade/index"
+        },
+        {
+            "title": "vivo 系统升级",
+            "description": "vivo/iqoo官方 欧洲 地址",
+            "href": "https://www.vivo.com/eu/support/system-update"
+        },
+        {
+            "title": "vivo/iqoo 固件",
+            "description": "Find Vivo/iQOO Stock Firmware (ROM) for various Vivo/iQOO Devices. All the Vivo/iQOO Firmwares listed are available for free.",
+            "href": "https://vivofirmware.com"
+        }
+
+]
+}

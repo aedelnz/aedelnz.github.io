@@ -1,0 +1,136 @@
+{
+    "mobile": [
+        {
+            "title": "小米",
+            "english_name": "Xiaomi",
+            "icon": "https://s01.mifile.cn/favicon.ico",
+            "description": "小米系统包带MIUI，澎湃OS",
+            "os": ["MIUI", "HyperOS"],
+            "href": "xiaomi",
+            "country": "China"
+        },
+        {
+            "title": "华为",
+            "english_name": "Huawei",
+            "icon": "https://www.huawei.com/favicon.ico",
+            "description": "华为系统包带EMUI，鸿蒙HarmonyOS",
+            "os": ["EMUI", "HarmonyOS"],
+            "href": "huawei",
+            "country": "China"
+        },
+        {
+            "title": "苹果",
+            "english_name": "Apple",
+            "icon": "https://www.apple.com/favicon.ico",
+            "description": "iPhone 搭载 iOS/iPadOS 系统",
+            "os": ["iOS", "iPadOS"],
+            "href": "apple",
+            "country": "USA"
+        },
+        {
+            "title": "三星",
+            "english_name": "Samsung",
+            "icon": "https://www.samsung.com/favicon.ico",
+            "description": "Galaxy系列搭载One UI系统",
+            "os": ["One UI"],
+            "href": "samsung",
+            "country": "South Korea"
+        },
+        {
+            "title": "OPPO",
+            "english_name": "OPPO",
+            "icon": "https://www.oppo.com/favicon.ico",
+            "description": "ColorOS系统，主打影像技术",
+            "os": ["ColorOS"],
+            "href": "oppo",
+            "country": "China"
+        },
+        {
+            "title": "vivo",
+            "english_name": "vivo",
+            "icon": "https://www.vivo.com/favicon.ico",
+            "description": "OriginOS系统，专注Hi-Fi音质",
+            "os": ["OriginOS", "Funtouch OS"],
+            "href": "vivo",
+            "country": "China"
+        },
+        {
+            "title": "荣耀",
+            "english_name": "Honor",
+            "icon": "https://www.hihonor.com/favicon.ico",
+            "description": "MagicOS系统，原华为旗下品牌",
+            "os": ["MagicOS"],
+            "href": "honor",
+            "country": "China"
+        },
+        {
+            "title": "一加",
+            "english_name": "OnePlus",
+            "icon": "https://www.oneplus.com/favicon.ico",
+            "description": "OxygenOS系统，主打极简流畅",
+            "os": ["OxygenOS", "ColorOS"],
+            "href": "oneplus",
+            "country": "China"
+        },
+        {
+            "title": "谷歌",
+            "english_name": "Google",
+            "icon": "https://www.google.com/favicon.ico",
+            "description": "Pixel系列搭载原生Android系统",
+            "os": ["Android"],
+            "href": "google",
+            "country": "USA"
+        },
+        {
+            "title": "索尼",
+            "english_name": "Sony",
+            "icon": "https://www.sony.com/favicon.ico",
+            "description": "Xperia系列，保留3.5mm耳机孔",
+            "os": ["Android"],
+            "href": "sony",
+            "country": "Japan"
+        },
+        {
+            "title": "诺基亚",
+            "english_name": "Nokia",
+            "icon": "https://www.nokia.com/favicon.ico",
+            "description": "HMD运营，搭载原生Android系统",
+            "os": ["Android"],
+            "href": "nokia",
+            "country": "Finland"
+        },
+        {
+            "title": "真我",
+            "english_name": "realme",
+            "icon": "https://www.realme.com/favicon.ico",
+            "description": "realme UI系统，性价比品牌",
+            "os": ["realme UI"],
+            "href": "realme",
+            "country": "China"
+        }
+    ],
+    "Firmware": [
+    {
+    "title":"Firmware File - Database of Stock ROM (Flash File)",
+    "description": "FirmwareFile is a trustworthy website that provides original mobile firmware ROMs (flash files) along with flash tools, USB drivers, and installation instructions.",
+    "href": "https://firmwarefile.com"
+    },
+    {
+    "title":"Android MTK - Howto Guide and Root Tutorials",
+    "description": "Android MTK is one of the best website that provides latest root tutorial, USB driver, android tool, Stock Firmware and Howto Guide.",
+    "href": "https://androidmtk.com"
+    },
+    {
+    "title":"",
+    "description": "",
+    "href": ""
+    }
+    
+    ],
+    "doc":[
+    "title":"ADB 命令大全",
+    "description": "",
+    "href": "0.md"
+    
+    ]
+}
