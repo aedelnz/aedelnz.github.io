@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 未找到</title>
-<style>body{background-color:#ffe6f2;color:#ff66b2;font-family:'Comic Sans MS',cursive,sans-serif;text-align:center;height:100%;padding:50px;overflow:hidden}h1{font-size:100px}p{font-size:24px}.container{display:flex;justify-content:center;align-items:center;flex-direction:column}a{color:#ff66b2;text-decoration:none;font-weight:bold}a:hover{filter:blur(0.9px);opacity:0.8;font-size:1.05em;font-weight:bold;text-decoration:underline;color:#f8409c}</style>
-<script src="/folder/0o0oIlI.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="哎呀，页面走丢啦！">
+    <title>404 - 页面迷路啦！</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/root/file/mdui.css">
+    <style>body,html{height:100%;margin:0;padding:0;overflow:hidden}mdui-layout{padding:1rem;height:100%;display:flex;place-items:center}mdui-layout-main{display:grid;place-items:center;text-align:center;width:100%}</style>
+    <script src="/root/file/mdui.global.js"></script>
+    <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF"})</script>
+    <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+    <script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK"});</script>
 </head>
 <body>
-<div class="container"><div><h1 class="dynamic-text">404</h1><p>哎呀！您要查找的页面不存在.</p><p><a href="/">返回首页</a></p></div></div>
+  <mdui-layout>
+    <mdui-layout-main>
+      <div class="mdui-prose">
+        <mdui-card style="padding:var(--mdui-typescale-body-large-size)">
+          <mdui-icon name="looks_4" style="font-size: var(--mdui-typescale-display-large-size)"></mdui-icon>
+          <mdui-icon name="adjust" style="font-size: var(--mdui-typescale-display-large-size)"></mdui-icon>
+          <mdui-icon name="looks_4" style="font-size: var(--mdui-typescale-display-large-size)"></mdui-icon>
+        </mdui-card>
+        <h3>哎呀，页面走丢啦！亲，请返回试试~</h3>
+        <mdui-button icon="arrow_back_ios">返回</mdui-button>
+      </div>
+    </mdui-layout-main>
+  </mdui-layout>
+<script>
+const { $, snackbar } = mdui;
+$(document).on('click', 'mdui-button[icon=arrow_back_ios]',()=>{history.length>1?history.back():snackbar({message:'没有上一页，自动返回首页',placement:'top',closeable:!0,autoCloseDelay:1500,onClose:()=>{location.href='/'}})});
+</script>
 </body>
 </html>
