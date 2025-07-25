@@ -1,0 +1,838 @@
+[
+    {
+        "title": "软件专区",
+        "prompt": "内容失效或有新的内容可以通过评论提交。",
+        "data": [
+            {
+                "title": "视频播放",
+                "data": [
+                    {
+                        "title": "PotPlayer",
+                        "description": "支持 DXVA, CUDA, QuickSync 等硬解技术，资源占用低，功能强大。",
+                        "href": "https://potplayer.tv/?lang=zh_CN"
+                    },
+                    {
+                        "title": "VLC Media Player",
+                        "description": "VLC 是一款自由、开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。",
+                        "href": "https://www.videolan.org/vlc/index.zh_CN.html"
+                    },
+                    {
+                        "title": "MPV",
+                        "description": "免费、开源和跨平台的媒体播放器。",
+                        "href": "https://mpv.io"
+                    },
+                    {
+                        "title": "5kplayer",
+                        "description": "超劲爆的影音体验，无法遮掩的音乐播放品质，最有“范儿”的AirPlay镜像和DLNA传输功能，免费下载在线视频，一切尽在5KPlayer：",
+                        "href": "https://www.5kplayer.com/index-cn.htm"
+                    },
+                    {
+                        "title": "KMPlayer",
+                        "description": "最佳视频播放器。",
+                        "href": "https://www.kmplayer.com"
+                    },
+                    {
+                        "title": "GOM Player",
+                        "description": "支持内置字幕、音频滤镜、屏幕截图等功能。",
+                        "href": "https://www.gomlab.com/en/"
+                    },
+                    {
+                        "title": "IINA",
+                        "description": "适用于 macOS 的现代媒体播放器。",
+                        "href": "https://iina.io"
+                    },
+                    {
+                        "title": "MPC-HC",
+                        "description": "MPC-HC 是一款适用于 Windows 的极其轻量级的开源媒体播放器。它支持所有可用于播放的常见视频和音频文件格式。我们是 100% 无间谍软件的，没有广告或工具栏。®",
+                        "href": "https://mpc-hc.org"
+                    },
+                    {
+                        "title": "Kodi",
+                        "description": "Kodi 让您的智能电视相形见绌。Kodi 几乎可以播放您能找到的所有媒体，并且在这样做时看起来很棒！以下是 Kodi 擅长的几件事：",
+                        "href": "https://kodi.tv"
+                    },
+                    {
+                        "title": "Plex",
+                        "description": "个人媒体服务器软件，支持远程访问和在线同步。",
+                        "href": "https://www.plex.tv"
+                    },
+                    {
+                        "title": "Emby",
+                        "description": "使用 EMBY 将您的媒体带到任何地方",
+                        "href": "https://emby.media"
+                    }
+                ]
+            },
+            {
+                "title": "图像处理",
+                "data": [
+                    {
+                        "title": "Adobe Photoshop",
+                        "description": "专业图像编辑软件，支持图层、滤镜、3D建模等功能。",
+                        "href": "https://www.adobe.com/products/photoshop.html"
+                    },
+                    {
+                        "title": "Adobe Illustrator",
+                        "description": "矢量图形编辑软件，支持绘图、排版、图形设计等功能。",
+                        "href": "https://www.adobe.com/products/illustrator.html"
+                    },
+                    {
+                        "title": "Adobe Lightroom",
+                        "description": "专业摄影后期处理软件，支持调色、裁剪、滤镜等功能。",
+                        "href": "https://www.adobe.com/products/photoshop-lightroom.html"
+                    },
+                    {
+                        "title": "CorelDRAW",
+                        "description": "矢量图形设计软件，支持插图、排版、网页设计等功能。",
+                        "href": "https://www.coreldraw.com"
+                    },
+                    {
+                        "title": "Inkscape",
+                        "description": "免费开源矢量图形编辑器，支持SVG格式和插件扩展。",
+                        "href": "https://inkscape.org"
+                    },
+                    {
+                        "title": "RawTherapee",
+                        "description": "专注于RAW格式处理，支持非破坏性编辑和细节增强，适合摄影爱好者。",
+                        "href": "https://rawtherapee.com/"
+                    },
+                    {
+                        "title": "Capture One Pro",
+                        "description": "专业级RAW处理工具，色彩还原精准，支持联机拍摄和图层调整，适合商业摄影。",
+                        "href": "https://www.captureone.com/zh"
+                    },
+                    {
+                        "title": "GIMP",
+                        "description": "免费开源图像编辑器，提供媲美Photoshop的基础功能。",
+                        "href": "https://www.gimp.org"
+                    },
+                    {
+                        "title": "Krita",
+                        "description": "专业绘画软件，支持绘图、涂鸦、动画等功能。",
+                        "href": "https://krita.org/zh-cn/"
+                    },
+                    {
+                        "title": "Paint.NET",
+                        "description": "免费图像编辑软件，支持图层、滤镜、插件等功能。",
+                        "href": "https://www.getpaint.net"
+                    },
+                    {
+                        "title": "Affinity Photo",
+                        "description": "专业图像编辑软件，提供高级修图和图层功能，适合摄影师和设计师。",
+                        "href": "https://affinity.serif.com/zh-cn/photo/"
+                    },
+                    {
+                        "title": "Pixlr",
+                        "description": "[需代理]在线图像编辑器，提供基本的图像编辑功能，适合快速编辑。",
+                        "href": "https://pixlr.com/"
+                    },
+                    {
+                        "title": "PhotoScape",
+                        "description": "免费图像编辑软件，提供多种编辑工具和特效，适合初学者。",
+                        "href": "http://www.photoscape.org/ps/main/index.php"
+                    },
+                    {
+                        "title": "Fotor",
+                        "description": "在线图像编辑器，提供多种滤镜和编辑工具，适合快速处理图像。",
+                        "href": "https://www.fotor.com/"
+                    },
+                    {
+                        "title": "Canva",
+                        "description": "在线图形设计工具，提供多种模板和设计元素，适合创建社交媒体图像和海报。",
+                        "href": "https://www.canva.com/"
+                    }
+                ]
+            },
+            {
+                "title": "开发工具",
+                "data": [
+                    {
+                        "title": "Visual Studio Code",
+                        "description": "微软开源代码编辑器，支持扩展插件和Git集成。",
+                        "href": "https://code.visualstudio.com"
+                    },
+                    {
+                        "title": "IntelliJ IDEA",
+                        "description": "Java/Kotlin开发首选IDE，智能代码提示和重构功能。",
+                        "href": "https://www.jetbrains.com/idea/"
+                    },
+                    {
+                        "title": "Sublime Text",
+                        "description": "轻量级代码编辑器，支持多种编程语言和插件扩展。",
+                        "href": "https://www.sublimetext.com/"
+                    },
+                    {
+                        "title": "PyCharm",
+                        "description": "Python开发首选IDE，提供智能代码提示和调试功能。",
+                        "href": "https://www.jetbrains.com/pycharm/"
+                    },
+                    {
+                        "title": "Eclipse",
+                        "description": "经典的Java开发IDE，支持多种编程语言和插件扩展。",
+                        "href": "https://www.eclipse.org/"
+                    },
+                    {
+                        "title": "NetBeans",
+                        "description": "开源IDE，支持Java、PHP、HTML5等多种编程语言。",
+                        "href": "https://netbeans.apache.org/"
+                    },
+                    {
+                        "title": "Atom",
+                        "description": "GitHub推出的开源代码编辑器，支持插件扩展和Git集成。",
+                        "href": "https://atom.io/"
+                    },
+                    {
+                        "title": "WebStorm",
+                        "description": "JavaScript开发首选IDE，支持React、Angular、Vue等框架。",
+                        "href": "https://www.jetbrains.com/webstorm/"
+                    },
+                    {
+                        "title": "Xcode",
+                        "description": "苹果官方IDE，专为iOS和macOS开发设计。",
+                        "href": "https://developer.apple.com/xcode/"
+                    },
+                    {
+                        "title": "Android Studio",
+                        "description": "谷歌官方IDE，专为Android应用开发设计。",
+                        "href": "https://developer.android.google.cn/studio?hl=zh-cn"
+                    },
+                    {
+                        "title": "Vim",
+                        "description": "强大的文本编辑器，支持多种编程语言和插件扩展。",
+                        "href": "https://www.vim.org/"
+                    },
+                    {
+                        "title": "Emacs",
+                        "description": "可扩展的文本编辑器，支持多种编程语言和插件扩展。",
+                        "href": "https://www.gnu.org/software/emacs/"
+                    },
+                    {
+                        "title": "Visual Studio",
+                        "description": "微软开发的集成开发环境，支持多种编程语言和平台。",
+                        "href": "https://visualstudio.microsoft.com/"
+                    },
+                    {
+                        "title": "Rider",
+                        "description": "JetBrains推出的跨平台.NET IDE，支持C#、VB.NET等语言。",
+                        "href": "https://www.jetbrains.com/rider/"
+                    },
+                    {
+                        "title": "PhpStorm",
+                        "description": "PHP开发首选IDE，提供智能代码提示和调试功能。",
+                        "href": "https://www.jetbrains.com/phpstorm/"
+                    },
+                    {
+                        "title": "RubyMine",
+                        "description": "Ruby开发首选IDE，提供智能代码提示和调试功能。",
+                        "href": "https://www.jetbrains.com/ruby/"
+                    },
+                    {
+                        "title": "CLion",
+                        "description": "C/C++开发首选IDE，提供智能代码提示和调试功能。",
+                        "href": "https://www.jetbrains.com/clion/"
+                    },
+                    {
+                        "title": "GoLand",
+                        "description": "Go语言开发首选IDE，提供智能代码提示和调试功能。",
+                        "href": "https://www.jetbrains.com/go/"
+                    },
+                    {
+                        "title": "Komodo Edit",
+                        "description": "轻量级代码编辑器，支持多种编程语言和插件扩展。",
+                        "href": "https://www.activestate.com/products/komodo-edit/"
+                    },
+                    {
+                        "title": "Brackets",
+                        "description": "Adobe推出的开源代码编辑器，专为Web开发设计。",
+                        "href": "http://brackets.io/"
+                    }
+                ]
+            },
+            {
+                "title": "卸载工具",
+                "data": [
+                    {
+                        "title": "Geek Uninstaller",
+                        "description": "高效快速，小巧便携。100% 免费",
+                        "href": "https://geekuninstaller.com/"
+                    },
+                    {
+                        "title": "Uninstall Tool",
+                        "description": "快速而强大的卸载程序，用于完全删除程序",
+                        "href": "https://crystalidea.com/uninstall-tool"
+                    },
+                    {
+                        "title": "Revo Uninstaller",
+                        "description": "提供高级卸载功能和清理工具，支持强制卸载。",
+                        "href": "https://www.revouninstaller.com/"
+                    },
+                    {
+                        "title": "IObit Uninstaller",
+                        "description": "免费卸载工具，支持批量卸载和强力清理残留文件。",
+                        "href": "https://www.iobit.com/en/advanceduninstaller.php"
+                    },
+                    {
+                        "title": "Ashampoo UnInstaller",
+                        "description": "提供智能卸载和系统清理功能，支持实时监控安装过程。",
+                        "href": "https://www.ashampoo.com/en/usd/pin/2303/system-utilities/uninstaller-10"
+                    },
+                    {
+                        "title": "Wise Program Uninstaller",
+                        "description": "免费卸载工具，支持强制卸载和右键菜单集成。",
+                        "href": "https://www.wisecleaner.com/wise-program-uninstaller.html"
+                    },
+                    {
+                        "title": "BCUninstaller",
+                        "description": "免费开源的批量卸载工具，支持自动化卸载和清理。",
+                        "href": "https://www.bcuninstaller.com/"
+                    },
+                    {
+                        "title": "ZSoft Uninstaller",
+                        "description": "轻量级卸载工具，支持监控安装过程和清理残留文件。",
+                        "href": "http://www.zsoft.dk/index/software_details/4"
+                    },
+                    {
+                        "title": "Absolute Uninstaller",
+                        "description": "提供快速卸载和批量卸载功能，支持清理残留文件。",
+                        "href": "https://www.glarysoft.com/absolute-uninstaller/"
+                    }
+                ]
+            },
+            {
+                "title": "运行库",
+                "data": [
+                    {
+                        "title": "Microsoft Visual C++",
+                        "description": "Microsoft Visual C++ 可再发行程序包最新支持的下载。",
+                        "href": "https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170"
+                    },
+                    {
+                        "title": ".NET Framework",
+                        "description": "微软开发的应用程序框架，支持构建和运行Windows应用程序。",
+                        "href": "https://dotnet.microsoft.com/download/dotnet-framework"
+                    },
+                    {
+                        "title": ".NET Core",
+                        "description": "跨平台的开源框架，用于构建现代化的云应用和服务。",
+                        "href": "https://dotnet.microsoft.com/download/dotnet-core"
+                    },
+                    {
+                        "title": "Java Runtime Environment (JRE)",
+                        "description": "运行Java应用程序所需的运行时环境。",
+                        "href": "https://www.oracle.com/cn/java/technologies/"
+                    },
+                    {
+                        "title": "DirectX",
+                        "description": "微软的多媒体编程接口，支持高性能游戏和图形应用。",
+                        "href": "https://www.microsoft.com/en-us/download/details.aspx?id=35"
+                    },
+                    {
+                        "title": "Adobe Flash Player",
+                        "description": "用于播放Flash内容的浏览器插件和运行时环境。",
+                        "href": "https://www.flash.cn/download-wins"
+                    },
+                    {
+                        "title": "OpenAL",
+                        "description": "开源音频API，用于多平台的3D音频开发。",
+                        "href": "https://www.openal.org/downloads/"
+                    },
+                    {
+                        "title": "XNA Framework",
+                        "description": "微软的游戏开发框架，支持构建Windows和Xbox 360游戏。",
+                        "href": "https://www.microsoft.com/en-us/download/details.aspx?id=20914"
+                    },
+                    {
+                        "title": "Silverlight",
+                        "description": "微软的应用框架，用于构建富互联网应用程序。",
+                        "href": "https://www.microsoft.com/silverlight/"
+                    },
+                    {
+                        "title": "GTK+",
+                        "description": "用于构建图形用户界面的跨平台工具包。",
+                        "href": "https://www.gtk.org/"
+                    },
+                    {
+                        "title": "Qt",
+                        "description": "跨平台的C++应用程序开发框架。",
+                        "href": "https://www.qt.io/download"
+                    }
+                ]
+            },
+            {
+                "title": "BT下载",
+                "data": [
+                    {
+                        "title": "Motrix",
+                        "description": "一款全能的下载工具",
+                        "href": "https://motrix.app/zh-CN/"
+                    },
+                    {
+                        "title": "qBittorrent",
+                        "description": "开源的BT下载客户端，界面简洁，功能强大。",
+                        "href": "https://sourceforge.net/projects/qbittorrent/"
+                    },
+                    {
+                        "title": "uTorrent",
+                        "description": "轻量级BT下载客户端，支持多种高级功能。",
+                        "href": "https://utorrent-app.sourceforge.io/intl/zh_cn/"
+                    },
+                    {
+                        "title": "BitTorrent",
+                        "description": "[需代理]官方的BT下载客户端，提供稳定的下载体验。",
+                        "href": "https://webdev.bittorrent.com/zh-cn/products/win/bittorrent-classic-free/"
+                    },
+                    {
+                        "title": "Deluge",
+                        "description": "开源的跨平台BT下载客户端，支持插件扩展。",
+                        "href": "https://deluge-torrent.org/"
+                    },
+                    {
+                        "title": "Transmission",
+                        "description": "轻量级的BT下载客户端，支持多平台使用。",
+                        "href": "https://transmissionbt.com/"
+                    },
+                    {
+                        "title": "Tixati",
+                        "description": "功能丰富的BT下载客户端，支持详细的带宽管理。",
+                        "href": "https://www.tixati.com/"
+                    },
+                    {
+                        "title": "Vuze",
+                        "description": "功能强大的BT下载客户端，支持视频播放和RSS订阅。",
+                        "href": "https://sourceforge.net/projects/azureus/"
+                    },
+                    {
+                        "title": "BitComet",
+                        "description": "集成了BT和HTTP/FTP下载功能的客户端，支持多任务下载。",
+                        "href": "https://www.bitcomet.com/"
+                    },
+                    {
+                        "title": "FrostWire",
+                        "description": "开源的BT下载客户端，集成了云搜索和媒体播放器。",
+                        "href": "https://sourceforge.net/projects/frostwire/"
+                    }
+                ]
+            },
+            {
+                "title": "解压软件",
+                "data": [
+                    {
+                        "title": "7-Zip",
+                        "description": "7-Zip 是一个具有高压缩率的文件存档器。",
+                        "href": "https://www.7-zip.org/"
+                    },
+                    {
+                        "title": "WinRAR",
+                        "description": "流行的文件压缩和解压工具，支持RAR和ZIP格式。",
+                        "href": "https://www.win-rar.com/"
+                    },
+                    {
+                        "title": "WinZip",
+                        "description": "经典的文件压缩和解压工具，支持多种压缩格式。",
+                        "href": "https://www.winzip.com/"
+                    },
+                    {
+                        "title": "PeaZip",
+                        "description": "免费开源的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://peazip.github.io/"
+                    },
+                    {
+                        "title": "Bandizip",
+                        "description": "轻量级的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://www.bandisoft.com/bandizip/"
+                    },
+                    {
+                        "title": "The Unarchiver",
+                        "description": "Mac平台上的免费解压工具，支持多种压缩格式。",
+                        "href": "https://theunarchiver.com/"
+                    },
+                    {
+                        "title": "Keka",
+                        "description": "Mac平台上的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://www.keka.io/"
+                    },
+                    {
+                        "title": "IZArc",
+                        "description": "免费文件压缩和解压工具，支持多种压缩格式。",
+                        "href": "https://www.izarc.org/"
+                    },
+                    {
+                        "title": "Zipware",
+                        "description": "简单易用的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://www.zipware.org/"
+                    },
+                    {
+                        "title": "Ashampoo ZIP Free",
+                        "description": "功能丰富的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://www.ashampoo.com/zh-cn/zip-free?currency=cny"
+                    },
+                    {
+                        "title": "ZArchiver",
+                        "description": "Android平台上的文件压缩和解压工具，支持多种格式。",
+                        "href": "https://zarchiver.org/index.html"
+                    }
+                ]
+            },
+            {
+                "title": "数据恢复",
+                "data": [
+                    {
+                        "title": "Recuva",
+                        "description": "免费的文件恢复工具，支持多种存储设备和文件类型。",
+                        "href": "https://www.ccleaner.com/recuva"
+                    },
+                    {
+                        "title": "EaseUS Data Recovery Wizard Free",
+                        "description": "免费的数据恢复软件，支持多种文件类型和存储设备。",
+                        "href": "https://www.easeus.com/datarecoverywizard/free-data-recovery-software.htm"
+                    },
+                    {
+                        "title": "Disk Drill",
+                        "description": "数据恢复软件，支持多种文件系统和存储设备。",
+                        "href": "https://www.cleverfiles.com/"
+                    },
+                    {
+                        "title": "MiniTool Power Data Recovery",
+                        "description": "数据恢复软件，支持多种文件类型和存储设备。",
+                        "href": "https://www.minitool.com/data-recovery-software/"
+                    },
+                    {
+                        "title": "PhotoRec",
+                        "description": "免费的文件恢复工具，支持多种文件类型和存储设备。",
+                        "href": "https://www.cgsecurity.org/wiki/PhotoRec"
+                    },
+                    {
+                        "title": "TestDisk",
+                        "description": "免费的数据恢复工具，支持多种文件系统和存储设备。",
+                        "href": "https://www.cgsecurity.org/wiki/TestDisk"
+                    },
+                    {
+                        "title": "R-Studio",
+                        "description": "数据恢复软件，支持多种文件系统和存储设备。",
+                        "href": "https://www.r-studio.com/"
+                    },
+                    {
+                        "title": "Wondershare Recoverit",
+                        "description": "数据恢复软件，支持多种文件类型和存储设备。",
+                        "href": "https://recoverit.wondershare.com/"
+                    },
+                    {
+                        "title": "GetDataBack",
+                        "description": "数据恢复软件，支持多种文件系统和存储设备。",
+                        "href": "https://www.runtime.org/data-recovery-software.htm"
+                    },
+                    {
+                        "title": "Stellar Data Recovery",
+                        "description": "数据恢复软件，支持多种文件类型和存储设备。",
+                        "href": "https://www.stellarinfo.com/"
+                    },
+                    {
+                        "title": "DiskGenius",
+                        "description": "数据恢复软件，支持多种文件系统和存储设备。",
+                        "href": "https://www.diskgenius.com/"
+                    },
+                    {
+                        "title": "Data Rescue",
+                        "description": "数据恢复软件，支持多种文件类型和存储设备。",
+                        "href": "https://www.prosofteng.com/"
+                    }
+                ]
+            },
+            {
+                "title": "系统安装",
+                "data": [
+                    {
+                        "title": "微PE工具箱",
+                        "description": "超好用的装机维护工具",
+                        "href": "https://www.wepe.com.cn/"
+                    },
+                    {
+                        "title": "Rufus",
+                        "description": "轻量级的启动盘制作工具，支持多种操作系统。",
+                        "href": "https://rufus.ie/"
+                    },
+                    {
+                        "title": "UNetbootin",
+                        "description": "跨平台的启动盘制作工具，支持多种Linux发行版。",
+                        "href": "https://unetbootin.github.io/"
+                    },
+                    {
+                        "title": "Ventoy",
+                        "description": "开源的多启动U盘制作工具，支持直接启动ISO文件。",
+                        "href": "https://www.ventoy.net/"
+                    },
+                    {
+                        "title": "Etcher",
+                        "description": "简单易用的启动盘制作工具，支持多种操作系统。",
+                        "href": "https://www.balena.io/etcher/"
+                    },
+                    {
+                        "title": "WinToUSB",
+                        "description": "Windows系统的便携安装工具，支持将Windows安装到USB设备。",
+                        "href": "https://www.easyuefi.com/wintousb/"
+                    },
+                    {
+                        "title": "AOMEI Backupper",
+                        "description": "功能强大的系统备份和恢复工具，支持系统克隆和迁移。",
+                        "href": "https://www.aomeitech.com/aomei-backupper.html"
+                    },
+                    {
+                        "title": "Clonezilla",
+                        "description": "开源的系统克隆和备份工具，支持多种文件系统。",
+                        "href": "https://clonezilla.org/"
+                    },
+                    {
+                        "title": "Macrium Reflect",
+                        "description": "专业的系统备份和恢复工具，支持系统克隆和磁盘映像。",
+                        "href": "https://www.macrium.com/reflectfree"
+                    }
+                ]
+            },
+            {
+                "title": "镜像下载",
+                "data": [
+                    {
+                        "title": "Windows",
+                        "description": "微软官方镜像下载",
+                        "href": "https://www.microsoft.com/zh-cn/software-download"
+                    },
+                    {
+                        "title": "Ubuntu",
+                        "description": "Ubuntu官方镜像下载",
+                        "href": "https://ubuntu.com/download"
+                    },
+                    {
+                        "title": "CentOS",
+                        "description": "CentOS官方镜像下载",
+                        "href": "https://www.centos.org/download/"
+                    },
+                    {
+                        "title": "Debian",
+                        "description": "Debian官方镜像下载",
+                        "href": "https://www.debian.org/distrib/"
+                    },
+                    {
+                        "title": "Fedora",
+                        "description": "Fedora官方镜像下载",
+                        "href": "https://getfedora.org/"
+                    },
+                    {
+                        "title": "Arch Linux",
+                        "description": "Arch Linux官方镜像下载",
+                        "href": "https://www.archlinux.org/download/"
+                    },
+                    {
+                        "title": "Kali Linux",
+                        "description": "Kali Linux官方镜像下载",
+                        "href": "https://www.kali.org/get-kali/"
+                    },
+                    {
+                        "title": "Linux Mint",
+                        "description": "Linux Mint官方镜像下载",
+                        "href": "https://linuxmint.com/download.php"
+                    },
+                    {
+                        "title": "openSUSE",
+                        "description": "openSUSE官方镜像下载",
+                        "href": "https://www.opensuse.org/"
+                    },
+                    {
+                        "title": "Manjaro",
+                        "description": "Manjaro官方镜像下载",
+                        "href": "https://manjaro.org/download/"
+                    },
+                    {
+                        "title": "HotPE下载站",
+                        "description": "公开系统原版镜像直链下载",
+                        "href": "https://down.hotpe.top/OS/"
+                    },
+                    {
+                        "title": "MSDN镜像下载",
+                        "description": "第三方地址微软官方镜像下载",
+                        "href": "https://msdn.itellyou.cn/"
+                    },
+                    {
+                        "title": "TechBench镜像下载",
+                        "description": "第三方地址微软官方镜像下载",
+                        "href": "https://tb.rg-adguard.net/public.php?lang=zh-CN"
+                    },
+                    {
+                        "title": "NEXT, ITELLYOU",
+                        "description": "第三方地址微软官方镜像下载",
+                        "href": "https://next.itellyou.cn/"
+                    },
+                    {
+                        "title": "UUP dump",
+                        "description": "轻松地从 Windows 更新服务器下载 UUP 文件。",
+                        "href": "https://uupdump.net/?lang=zh-cn"
+                    },
+                    {
+                        "title": "HelloWindows.cn",
+                        "description": "精校 完整 极致 Windows系统下载仓储站",
+                        "href": "https://hellowindows.cn/"
+                    },
+                    {
+                        "title": "山己几子木",
+                        "description": "第三方地址微软官方镜像下载",
+                        "href": "https://msdn.sjjzm.com/"
+                    },
+                    {
+                        "title": "MSDN系统库",
+                        "description": "致力于原版windows生态服务",
+                        "href": "https://www.xitongku.com/"
+                    }
+                ]
+            },
+            {
+                "title": "开源软件镜像站",
+                "data": [
+                    {
+                        "title": "清华大学开源软件镜像站",
+                        "description": "OpenTUNA 镜像站作为 TUNA 镜像的兄弟站，由清华 TUNA 协会运行维护，提供和 TUNA 镜像站基本一致的镜像内容",
+                        "href": "https://mirrors.tuna.tsinghua.edu.cn/"
+                    },
+                    {
+                        "title": "中科大开源软件镜像站",
+                        "description": "中国科学技术大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirrors.ustc.edu.cn/"
+                    },
+                    {
+                        "title": "华中科技大学开源软件镜像站",
+                        "description": "华中科技大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirror.hust.edu.cn/"
+                    },
+                    {
+                        "title": "北京外国语大学开源软件镜像站",
+                        "description": "北京外国语大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirrors.bfsu.edu.cn/"
+                    },
+                    {
+                        "title": "南京大学开源软件镜像站",
+                        "description": "南京大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirror.nju.edu.cn/"
+                    },
+                    {
+                        "title": "上海交通大学开源软件镜像站",
+                        "description": "上海交通大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirror.sjtu.edu.cn/"
+                    },
+                    {
+                        "title": "浙江大学开源软件镜像站",
+                        "description": "浙江大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirrors.zju.edu.cn/"
+                    },
+                    {
+                        "title": "中国科学技术大学开源软件镜像站",
+                        "description": "中国科学技术大学开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirrors.ustc.edu.cn/"
+                    },
+                    {
+                        "title": "腾讯开源软件镜像站",
+                        "description": "腾讯开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://mirrors.cloud.tencent.com/"
+                    },
+                    {
+                        "title": "阿里巴巴开源软件镜像站",
+                        "description": "阿里巴巴开源软件镜像站，提供多种开源软件的镜像下载。",
+                        "href": "https://developer.aliyun.com/mirror/"
+                    }
+                ]
+            },
+            {
+                "title": "浏览器",
+                "data": [
+                    {
+                        "title": "Chrome",
+                        "description": "谷歌推出的浏览器，支持多种扩展和同步功能。",
+                        "href": "https://www.google.cn/intl/zh-CN/chrome/"
+                    },
+                    {
+                        "title": "Firefox",
+                        "description": "Mozilla推出的开源浏览器，注重隐私保护和扩展性。",
+                        "href": "https://www.mozilla.org/zh-CN/firefox/new/"
+                    },
+                    {
+                        "title": "Edge",
+                        "description": "微软推出的基于Chromium的浏览器，支持多种扩展和同步功能。",
+                        "href": "https://www.microsoft.com/edge"
+                    },
+                    {
+                        "title": "Safari",
+                        "description": "苹果推出的浏览器，专为macOS和iOS优化。",
+                        "href": "https://www.apple.com/safari/"
+                    },
+                    {
+                        "title": "Opera",
+                        "description": "功能丰富的浏览器，内置广告拦截和VPN功能。",
+                        "href": "https://www.opera.com/zh-cn"
+                    },
+                    {
+                        "title": "Kiwi Browser Next ",
+                        "description": " Kiwi Browser Next 是一个基于最新 Chromium 的开源项目，该项目致力于为用户提供一个更加个性化和功能丰富的浏览体验。 项目的主要编程语言包括 C++ 和 Java。",
+                        "href": "https://kiwibrowsercn.github.io/"
+                    },
+                    {
+                        "title": "Via",
+                        "description": "探索速度与简约的、极限、快速、简单、安全的浏览器",
+                        "href": "https://viayoo.com/zh-cn/"
+                    },
+                    {
+                        "title": "Tor 浏览器",
+                        "description": "注重隐私和匿名性的浏览器，基于Firefox开发。",
+                        "href": "https://torproject.netcologne.de/zh-CN/download/languages/"
+                    },
+                    {
+                        "title": "Maxthon",
+                        "description": "双核浏览器，支持多种扩展和云同步功能。",
+                        "href": "https://www.maxthon.com/"
+                    },
+                    {
+                        "title": "QQ浏览器",
+                        "description": "腾讯推出的浏览器，支持多种扩展和同步功能。",
+                        "href": "https://browser.qq.com/"
+                    }
+                ]
+            },
+            {
+                "title": "扩展程序",
+                "data": [
+                    {
+                        "title": "Chrome 应用商店 - 扩展程序",
+                        "description": "浏览并安装扩展程序以使用新特性和功能增强您的 Chrome 浏览器。查找 AI 研究、标签页管理、冥想、复古游戏等的扩展。",
+                        "href": "https://chromewebstore.google.com/category/extensions?hl=zh"
+                    },
+                    {
+                        "title": "Firefox 附加组件",
+                        "description": "浏览并安装扩展程序以增强您的 Firefox 浏览器。查找隐私保护、广告拦截、标签页管理等的扩展。",
+                        "href": "https://addons.mozilla.org/zh-CN/firefox/"
+                    },
+                    {
+                        "title": "Edge 附加组件",
+                        "description": "浏览并安装扩展程序以增强您的 Edge 浏览器。查找生产力工具、广告拦截、密码管理等的扩展。",
+                        "href": "https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home"
+                    },
+                    {
+                        "title": "Tampermonkey",
+                        "description": "用户脚本管理器，支持自定义网页脚本和样式。",
+                        "href": "https://www.tampermonkey.net/"
+                    },
+                    {
+                        "title": "Userscript.Zone 搜索",
+                        "description": "Userscript.Zone 搜索 是一个新网站，允许通过输入合适的URL或域来搜索用户脚本。",
+                        "href": "https://www.userscript.zone/"
+                    },
+                    {
+                        "title": "AdBlock Plus",
+                        "description": "广告拦截插件，支持自定义广告过滤规则。",
+                        "href": "https://adblockplus.org/"
+                    },
+                    {
+                        "title": "AdGuard",
+                        "description": "广告拦截插件，支持多种广告过滤规则和隐私保护功能。",
+                        "href": "https://adguard.com/"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -83,9 +83,9 @@
     ],
     "Opus": [
         {
-            "title": "暂无",
-            "description": "无作品",
-            "href": ""
+            "title": "密码生成器",
+            "description": "一款Android程序4到32位数随机大小写字母数学符号组合密码生成",
+            "href": "A2zml/app/passg"
         }
     ],
     "Serve": [
@@ -98,6 +98,11 @@
             "title": "Tool Firmware",
             "description": "系统包跟其它固件工具",
             "href": "/ROM"
+        },
+        {
+            "title": "流量消耗器",
+            "description": "流量多了无处发",
+            "href": "/FlowDeplete"
         },
         {
             "title": "悠然自得",

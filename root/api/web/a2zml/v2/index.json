@@ -39,6 +39,11 @@
             "title":"v2fly/v2ray-core",
             "description":"A platform for building proxies to bypass network restrictions.",
             "href":"https://github.com/v2fly/v2ray-core"
+        },
+        {
+            "title":"mihomo-party-org/mihomo-party",
+            "description":"Another Mihomo GUI.",
+            "href":"https://github.com/mihomo-party-org/mihomo-party"
         }    
     ],
     "Subscribe": [

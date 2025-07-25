@@ -1,48 +1,62 @@
-[
-    {
-        "name": "Xiaomi 全系列机型 ROM 包下载站汇总",
-        "description": "来源：小米论坛",
-        "brand": "MIUI",
-        "link": "https://s.xiaomi.cn/c/o0RFkdG5"
-    },{
-        "name": "HyperOS.fans",
-        "description": "新起点，第三方非小米旗下网站。作者：海力力",
-        "brand": "HyperOS",
-        "link": "https://hyperos.fans/"
-    },{
-        "name": "MIUI官方ROM仓库",
-        "description": "第三方非小米旗下网站。作者：海力力",
-        "brand": "MIUI",
-        "link": "https://roms.miuier.com/"
-    },{
-        "name": "MIUIROM",
-        "description": "链接到HyperOS和MIUI固件以及OTA更新。团队：Pavel Buinov，Yaroslav Dragun",
-        "brand": "HyperOS/MIUI",
-        "link": "https://miuirom.org/"
-    },{
-        "name": "XiaomiROM",
-        "description": "非小米旗下网站。作者：钟茵",
-        "brand": "MIUI",
-        "link": "https://xiaomirom.com/"
-    },{
-        "name": "MiFirm",
-        "description": "本网站非小米集团旗下网站。作者：Tungtata ",
-        "brand": "HyperOS",
-        "link": "https://mifirm.net/"
-    },{
-        "name": "Mi Firmware",
-        "description": "非小米旗下网站",
-        "brand": "MIUI",
-        "link": "https://mifirmware.com/"
-    },{
-        "name": "Xiaomi Tools",
-        "description": "本网站非小米集团旗下网站",
-        "brand": "MIUI",
-        "link": "https://xiaomitools.com/"
-    },{
-        "name": "Xiaomi Update",
-        "description": "本网站非小米集团旗下网站",
-        "brand": "MIUI",
-        "link": "https://xiaomiupdate.com/"
-    }
-]
+{
+    "Firmware": [
+        {
+            "title": "Xiaomi 全系列机型 ROM 包下载站汇总",
+            "description": "来源：小米论坛",
+            "href": "https://s.xiaomi.cn/c/o0RFkdG5"
+        },
+        {
+            "title": "HyperOS.fans",
+            "description": "新起点，第三方非小米旗下网站。作者：海力力",
+            "href": "https://hyperos.fans/"
+        },
+        {
+            "title": "MIUI官方ROM仓库",
+            "description": "第三方非小米旗下网站。作者：海力力",
+            "href": "https://roms.miuier.com/"
+        },
+        {
+            "title": "MIUIROM",
+            "description": "链接到HyperOS和MIUI固件以及OTA更新。团队：Pavel Buinov，Yaroslav Dragun",
+            "href": "https://miuirom.org/"
+        },
+        {
+            "title": "XiaomiROM",
+            "description": "非小米旗下网站。作者：钟茵",
+            "href": "https://xiaomirom.com/"
+        },
+        {
+            "title": "MiFirm",
+            "description": "本网站非小米集团旗下网站。作者：Tungtata ",
+            "href": "https://mifirm.net/"
+        },
+        {
+            "title": "Mi Firmware",
+            "description": "非小米旗下网站",
+            "href": "https://mifirmware.com/"
+        },
+        {
+            "title": "Xiaomi Tools",
+            "description": "本网站非小米集团旗下网站",
+            "href": "https://xiaomitools.com/"
+        },
+        {
+            "title": "Xiaomi Update",
+            "description": "本网站非小米集团旗下网站",
+            "href": "https://xiaomiupdate.com/"
+        }
+    ],
+    "Service": [
+        {
+            "title": "小米官网",
+            "description": "让全球每个人都能享受科技带来的美好生活",
+            "href": "https://www.mi.com/"
+        },
+        {
+            "title": "小米官网",
+            "description": "让全球每个人都能享受科技带来的美好生活",
+            "href": "https://www.mi.com/"
+        }
+
+    ]
+}

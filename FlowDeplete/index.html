@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta name="renderer" content="webkit">
+  <title>流量消耗器</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/root/file/mdui.css">
+  <style>body{margin:0;padding:0;box-sizing:border-box}mdui-top-app-bar{box-shadow:var(--mdui-elevation-level1)}.mdui-prose{padding:var(--mdui-typescale-body-small-size);margin:0 auto;max-width:840px;box-sizing:border-box}mdui-card{width:100%;margin-bottom:var(--mdui-typescale-display-medium-size);box-sizing:border-box}mdui-card .header,mdui-card[variant=elevated]{box-shadow:var(--mdui-elevation-level3)}mdui-card .header{padding:var(--mdui-typescale-body-medium-size);background-color:rgb(var(--mdui-color-primary));color:rgb(var(--mdui-color-on-primary));display:flex;align-items:center}mdui-card .header mdui-icon{margin-right:var(--mdui-typescale-body-medium-size);font-size:var(--mdui-typescale-display-small-size)}mdui-card .header h2{margin:0}mdui-card .content{padding:var(--mdui-typescale-display-medium-size);box-sizing:border-box}mdui-card .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--mdui-typescale-body-medium-size)}mdui-card .item{margin-bottom:0;text-align:center;padding:var(--mdui-typescale-display-medium-size);box-shadow:var(--mdui-elevation-level5)}mdui-card .label{color:rgb(var(--mdui-color-secondary-container-dark))}mdui-card .value{color:rgb(var(--mdui-color-primary));font-size:var(--mdui-typescale-title-large-size);font-weight:var(--mdui-typescale-display-large-weight)}#add{float:right}mdui-fab{display:none;position:fixed;right:0;bottom:0;margin:var(--mdui-typescale-body-small-size);background-color:rgba(var(--mdui-color-primary-container),0.5)}mdui-fab:active{transform:scale(1.2);transition:transform 0.3s ease}</style>
+  <script src="/root/file/mdui.global.js"></script>
+  <script src="/root/file/Valine.min.js"></script>
+  <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({ id: "JMIJZqK4MvC0pOsF", ck: "JMIJZqK4MvC0pOsF" })</script>
+  <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+  <script>new LingQue.Monitor().init({ id: "K5mJO6H2n6QPd4MK" })</script>
+</head>
+<body>
+  <mdui-top-app-bar scroll-behavior="elevate">
+    <mdui-top-app-bar-title>流量消耗器</mdui-top-app-bar-title>
+    <div style="flex-grow: 1"></div>
+    <mdui-tooltip content="首页"><mdui-button-icon icon="home" href="/"></mdui-button-icon></mdui-tooltip>
+  </mdui-top-app-bar>
+  <mdui-layout>
+    <mdui-layout-main>
+      <div class="mdui-prose">
+        <mdui-card variant="elevated">
+          <div class="header">
+            <mdui-icon name="monitoring"></mdui-icon>
+            <h2>实时流量统计</h2>
+          </div>
+          <div class="content">
+            <div class="grid">
+              <mdui-card variant="outlined" class="item">
+                <div class="label">当前下载速度</div>
+                <div class="value" id="currentSpeed">0 B/s</div>
+              </mdui-card>
+              <mdui-card variant="outlined" class="item">
+                <div class="label">当前流量消耗</div>
+                <div class="value" id="currentUsage">0 B</div>
+              </mdui-card>
+              <mdui-card variant="outlined" class="item">
+                <div class="label">总流量消耗</div>
+                <div class="value" id="totalUsage">0 B</div>
+              </mdui-card>
+            </div>
+          </div>
+        </mdui-card>
+        <mdui-card variant="elevated">
+          <div class="header">
+            <mdui-icon name="terminal"></mdui-icon>
+            <h2>测试控制台</h2>
+          </div>
+          <div class="content">
+            <div style="margin-bottom: var(--mdui-typescale-body-medium-size)">
+              <span style="display: flex;align-items: center;justify-content: space-between;margin-bottom: var(--mdui-typescale-body-medium-size)">
+              <b>测试地址选择</b>
+              <mdui-button variant="text" id="add">添加地址</mdui-button>
+              </span>
+              <mdui-select id="choose"></mdui-select>
+            </div>
+            <div style="margin-bottom: var(--mdui-typescale-body-medium-size)">
+              <b>多线程选择</b>
+              <mdui-slider min="1" max="32" id="Threads" style="height: 1.5rem"></mdui-slider>
+            </div>
+            <mdui-checkbox id="loop" checked>是否循环</mdui-checkbox>
+            <div class="grid" style="margin-top: var(--mdui-typescale-body-medium-size)">
+              <mdui-button icon="restart_alt" variant="elevated" id="start">开始测试</mdui-button>
+              <mdui-button icon="stop_circle" variant="tonal" id="stop" disabled>停止测试</mdui-button>
+            </div>
+          </div>
+        </mdui-card>
+        <mdui-card variant="elevated">
+          <div class="header">
+            <mdui-icon name="comment"></mdui-icon>
+            <h2>评论</h2>
+          </div>
+          <div style="padding: var(--mdui-typescale-body-small-size);"> 
+            <div id="vcomments"></div>
+          </div>
+        </mdui-card>
+      </div>
+    </mdui-layout-main>
+    <mdui-fab icon="airplanemode_active"></mdui-fab>
+  </mdui-layout>
+<script>
+const { $, snackbar, dialog } = mdui;
+const $valine = new Valine();
+const showTip=(m)=>{document.querySelectorAll('mdui-snackbar').forEach(e=>e.remove());snackbar({placement:'top',message:m})};
+const BacktoTopoMDUIElement = (t) => {window.onscroll = () => {$(t).css('display', (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) ? 'block' : 'none')},$(t).on('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))};
+const Storage={
+  key:'FlowDeplete/index',
+  get(){try{const d=localStorage.getItem(this.key);return d?JSON.parse(d):{}}catch(e){console.error('存储读取失败:',e);return{}}},
+  set(d){try{localStorage.setItem(this.key,JSON.stringify({...this.get(),...d}))}catch(e){console.error('存储写入失败:',e)}}
+};
+const FormatUtil={
+  formatBytes(b,isS=false){
+    if(b===0)return`0 ${isS?'B/s':'B'}`;
+    const u=isS?['B/s','KB/s','MB/s','GB/s','TB/s']:['B','KB','MB','GB','TB'];
+    const k=1024,i=Math.floor(Math.log(b)/Math.log(k));
+    return`${parseFloat((b/Math.pow(k,i)).toFixed(2))} ${u[i]}`;
+  }
+}
+const DownloadManager={
+  isActive:false,abortController:null,speedTimer:null,
+  totalUsage:0,currentUsage:0,threads:[],  
+  initStats(){
+    const d=Storage.get();
+    this.totalUsage=d.totalUsage||0;
+    $('#totalUsage').text(FormatUtil.formatBytes(this.totalUsage));
+  },  
+  startTest(url,threadCount,isLoop){
+    if(this.isActive)return showTip('已有测试进行中');
+    this.isActive=true;this.currentUsage=0;
+    this.abortController=new AbortController();this.threads=[];
+    this.updateButtonStates(true);
+    $('#currentUsage').text(FormatUtil.formatBytes(0));
+    this.startSpeedMonitor();
+    for(let i=0;i<threadCount;i++)this.threads.push(this.createDownloadThread(url,isLoop));
+  },
+  createDownloadThread(url,isLoop){
+    return new Promise(async(resolve)=>{
+      const dlLoop=async()=>{
+        if(!this.isActive)return resolve();
+        try{
+          const res=await fetch(`${url}?rand=${Math.random()}`,{
+            signal:this.abortController.signal,cache:'no-store'
+          });
+          if(!res.ok)throw new Error(`HTTP错误: ${res.status}`);          
+          const reader=res.body.getReader();
+          const procChunk=async()=>{
+            if(!this.isActive)return;
+            const{done,value}=await reader.read();
+            if(done){
+              if(!isLoop){
+                showTip('下载已完成');
+                this.updateButtonStates(false);
+                this.isActive=false;
+                return resolve();
+              }
+              return dlLoop();
+            }
+            this.currentUsage+=value.length;this.totalUsage+=value.length;
+            $('#currentUsage').text(FormatUtil.formatBytes(this.currentUsage));
+            $('#totalUsage').text(FormatUtil.formatBytes(this.totalUsage));
+            return procChunk();
+          };
+          await procChunk();
+        }catch(e){
+          if(e.name!=='AbortError'){
+            console.error('线程错误:',e);
+            showTip(`线程错误: ${e.message}`);
+            this.updateButtonStates(false);
+            this.isActive=false;
+          }
+          resolve();
+        }
+      };
+      await dlLoop();
+    });
+  },  
+  startSpeedMonitor(){
+    let last=0;this.speedTimer=setInterval(()=>{
+      if(!this.isActive)return;
+      const spd=this.currentUsage-last;
+      $('#currentSpeed').text(FormatUtil.formatBytes(spd,true));
+      last=this.currentUsage;
+    },1000);
+  },  
+  stopTest(){
+    if(!this.isActive)return;
+    this.isActive=false;
+    if(this.abortController)this.abortController.abort();
+    clearInterval(this.speedTimer);
+    Storage.set({totalUsage:this.totalUsage});
+    this.updateButtonStates(false);
+    $('#currentSpeed').text(FormatUtil.formatBytes(0,true));
+    showTip('测试已停止');
+  },
+  updateButtonStates(running){
+    $('#choose,#Threads,#loop,#start').prop('disabled',running);
+    $('#stop').prop('disabled',!running);
+  }
+};
+const UrlManager={
+  urls:[],
+  init(){
+    const d=Storage.get();
+    const defUrls=[
+      {title:'阿里云 imgextra',href:'https://img.alicdn.com/imgextra/i2/O1CN01bYc1m81RrcSAyOjMu_!!6000000002165-54-tps-60-60.apng'},
+      {title:'COS 客户端 cosbrowser-setup-latest.exe',href:'https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/releases/cosbrowser-setup-2.11.26.exe'},
+      {title:'腾讯视频TV版 202507101525198436_tv_video_17.3.0.1018_android_15000.apk',href:'https://vmat.gtimg.com/kt2/web/ktweb/protocol/202507101525198436_tv_video_17.3.0.1018_android_15000.apk'},
+      {title:'腾讯视频 imageView',href:'https://tv.puui.qpic.cn/tv/0/mz_tv_image_frontend_442f1e-8_1953322353_1752361975979799_pic_1920x800/0?imageView2/2/w/1800'},
+      {title:'百度网盘 BaiduNetdisk_7.59.0.103.exe',href:'https://f67c5b-987241423.antpcdn.com:19001/b/pkg-ant.baidu.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.59.0.103.exe'},
+      {title:'阿里网盘 imgextra',href:'https://img.alicdn.com/imgextra/i4/O1CN01ayOUUU1eYvHzJ2FA4_!!6000000003884-0-tps-5760-2080.jpg'}
+    ];
+    this.urls=[...(d.savedUrls||[]),...defUrls];
+    this.renderUrlSelect(d.lastSelectedUrl||0);
+  },  
+  renderUrlSelect(idx){
+    const sel=$('#choose')[0];sel.innerHTML='';
+    this.urls.forEach((u,i)=>{
+      const opt=document.createElement('mdui-menu-item');
+      opt.value=i.toString();opt.textContent=u.title;
+      if(i===idx)opt.selected=true;
+      sel.appendChild(opt);
+    });
+    sel.value=idx.toString();
+  },  
+  addNewUrl(t,url){
+    this.urls.push({title:t,href:url});
+    const d=Storage.get();
+    const su=d.savedUrls||[];su.push({title:t,href:url});
+    Storage.set({savedUrls:su});
+    this.renderUrlSelect(this.urls.length-1);
+    showTip('地址添加成功');
+  },  
+  getSelectedUrl(){
+    const i=parseInt($('#choose').val());
+    return this.urls[i]?.href;
+  }
+};
+const initPage=()=>{
+  BacktoTopoMDUIElement('mdui-fab[icon=airplanemode_active]');
+  $valine.init({ el: '#vcomments', appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz', appKey: 'z27CGdACRU9SqaK38an2ie5L', avatar: 'hide', placeholder: '说点什么吧~' });
+  DownloadManager.initStats();
+  UrlManager.init();
+  const d=Storage.get();
+  $('#Threads').val(d.threadCount||1);
+  $('#loop').prop('checked',d.isLoop||false);
+  bindEventListeners();
+};
+const bindEventListeners=()=>{
+  $('#start').on('click',()=>{
+    const url=UrlManager.getSelectedUrl();
+    const tc=parseInt($('#Threads').val())||1;
+    const loop=$('#loop').prop('checked');
+    if(!url)return showTip('请选择测试地址');
+    Storage.set({
+      lastSelectedUrl:parseInt($('#choose').val()),
+      threadCount:tc,isLoop:loop
+    });
+    DownloadManager.startTest(url,tc,loop);
+  });  
+  $('#stop').on('click',()=>DownloadManager.stopTest());  
+  $('#add').on('click',()=>{
+    dialog({
+      title:'添加测试地址',
+      body:`<mdui-text-field id="newUrlTitle" label="地址名称" required></mdui-text-field><mdui-text-field id="newUrlValue" label="URL地址" type="url" required style="margin-top:1rem;"></mdui-text-field>`,
+      actions:[
+        {text:'取消'},
+        {
+          text:'确定',
+          onClick:()=>{
+            const t=$('#newUrlTitle').val().trim();
+            const u=$('#newUrlValue').val().trim();
+            if(!t||!u){showTip('请填写完整信息');return false;}
+            UrlManager.addNewUrl(t,u);return true;
+          }
+        }
+      ]
+    });
+  });  
+  window.addEventListener('beforeunload',()=>{
+    if(DownloadManager.isActive)DownloadManager.stopTest();
+    Storage.set({totalUsage:DownloadManager.totalUsage});
+  });
+};
+document.addEventListener('DOMContentLoaded',initPage);
+</script>
+</body>
+</html>

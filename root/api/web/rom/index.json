@@ -1,9 +1,9 @@
 {
-    "mobile": [
+    "Brand": [
         {
             "title": "小米",
             "english_name": "Xiaomi",
-            "icon": "https://s01.mifile.cn/favicon.ico",
+            "icon": "/root/api/web/rom/xiaomi.svg",
             "description": "小米系统包带MIUI，澎湃OS",
             "os": ["MIUI", "HyperOS"],
             "href": "xiaomi",
@@ -12,7 +12,7 @@
         {
             "title": "华为",
             "english_name": "Huawei",
-            "icon": "https://www.huawei.com/favicon.ico",
+            "icon": "/root/api/web/rom/huawei.svg",
             "description": "华为系统包带EMUI，鸿蒙HarmonyOS",
             "os": ["EMUI", "HarmonyOS"],
             "href": "huawei",
@@ -21,7 +21,7 @@
         {
             "title": "苹果",
             "english_name": "Apple",
-            "icon": "https://www.apple.com/favicon.ico",
+            "icon": "/root/api/web/rom/apple.svg",
             "description": "iPhone 搭载 iOS/iPadOS 系统",
             "os": ["iOS", "iPadOS"],
             "href": "apple",
@@ -30,7 +30,7 @@
         {
             "title": "三星",
             "english_name": "Samsung",
-            "icon": "https://www.samsung.com/favicon.ico",
+            "icon": "/root/api/web/rom/samsung.svg",
             "description": "Galaxy系列搭载One UI系统",
             "os": ["One UI"],
             "href": "samsung",
@@ -39,7 +39,7 @@
         {
             "title": "OPPO",
             "english_name": "OPPO",
-            "icon": "https://www.oppo.com/favicon.ico",
+            "icon": "/root/api/web/rom/oppo.svg",
             "description": "ColorOS系统，主打影像技术",
             "os": ["ColorOS"],
             "href": "oppo",
@@ -48,7 +48,7 @@
         {
             "title": "vivo",
             "english_name": "vivo",
-            "icon": "https://www.vivo.com/favicon.ico",
+            "icon": "/root/api/web/rom/vivo.svg",
             "description": "OriginOS系统，专注Hi-Fi音质",
             "os": ["OriginOS", "Funtouch OS"],
             "href": "vivo",
@@ -57,7 +57,7 @@
         {
             "title": "荣耀",
             "english_name": "Honor",
-            "icon": "https://www.hihonor.com/favicon.ico",
+            "icon": "/root/api/web/rom/honor.svg",
             "description": "MagicOS系统，原华为旗下品牌",
             "os": ["MagicOS"],
             "href": "honor",
@@ -66,7 +66,7 @@
         {
             "title": "一加",
             "english_name": "OnePlus",
-            "icon": "https://www.oneplus.com/favicon.ico",
+            "icon": "/root/api/web/rom/oneplus.svg",
             "description": "OxygenOS系统，主打极简流畅",
             "os": ["OxygenOS", "ColorOS"],
             "href": "oneplus",
@@ -75,7 +75,7 @@
         {
             "title": "谷歌",
             "english_name": "Google",
-            "icon": "https://www.google.com/favicon.ico",
+            "icon": "/root/api/web/rom/google.svg",
             "description": "Pixel系列搭载原生Android系统",
             "os": ["Android"],
             "href": "google",
@@ -84,7 +84,7 @@
         {
             "title": "索尼",
             "english_name": "Sony",
-            "icon": "https://www.sony.com/favicon.ico",
+            "icon": "/root/api/web/rom/sony.svg",
             "description": "Xperia系列，保留3.5mm耳机孔",
             "os": ["Android"],
             "href": "sony",
@@ -93,7 +93,7 @@
         {
             "title": "诺基亚",
             "english_name": "Nokia",
-            "icon": "https://www.nokia.com/favicon.ico",
+            "icon": "/root/api/web/rom/nokia.svg",
             "description": "HMD运营，搭载原生Android系统",
             "os": ["Android"],
             "href": "nokia",
@@ -101,36 +101,74 @@
         },
         {
             "title": "真我",
-            "english_name": "realme",
-            "icon": "https://www.realme.com/favicon.ico",
+            "english_name": "Realme",
+            "icon": "/root/api/web/rom/realme.svg",
             "description": "realme UI系统，性价比品牌",
             "os": ["realme UI"],
             "href": "realme",
             "country": "China"
         }
     ],
-    "Firmware": [
+
+  "Firmware": [
     {
-    "title":"Firmware File - Database of Stock ROM (Flash File)",
-    "description": "FirmwareFile is a trustworthy website that provides original mobile firmware ROMs (flash files) along with flash tools, USB drivers, and installation instructions.",
-    "href": "https://firmwarefile.com"
+      "title": "Firmware File - Database of Stock ROM (Flash File)",
+      "description": "FirmwareFile provides original mobile firmware ROMs for 351 brands, including flash tools, USB drivers, and installation guides, hosted on Google Drive and MediaFire.",
+      "href": "https://firmwarefile.com"
     },
     {
-    "title":"Android MTK - Howto Guide and Root Tutorials",
-    "description": "Android MTK is one of the best website that provides latest root tutorial, USB driver, android tool, Stock Firmware and Howto Guide.",
-    "href": "https://androidmtk.com"
+      "title": "Android MTK - Howto Guide and Root Tutorials",
+      "description": "Android MTK offers root tutorials, USB drivers, Android tools, and stock firmware for MediaTek devices, with detailed how-to guides.",
+      "href": "https://androidmtk.com"
     },
     {
-    "title":"",
-    "description": "",
-    "href": ""
+      "title": "Xiaomi Firmware Updater",
+      "description": "Official Xiaomi firmware updates, including Recovery ROMs, Fastboot ROMs, and OTA packages for Xiaomi, Redmi, and POCO devices.",
+      "href": "https://xmfirmwareupdater.com"
+    },
+    {
+      "title": "MIUI Official Downloads",
+      "description": "Official MIUI website offering stable and developer ROMs for Xiaomi devices, including HyperOS and MIUI for global and Chinese markets.",
+      "href": "https://miuirom.org"
+    },
+    {
+      "title": "Xiaomi.eu Community ROMs",
+      "description": "Xiaomi.eu provides multi-language MIUI ROMs based on official Chinese firmware, optimized for global users with additional features.",
+      "href": "https://xiaomi.eu/community"
+    },
+    {
+      "title": "SamMobile Firmware Database",
+      "description": "SamMobile offers a comprehensive database of Samsung firmware for various devices, with detailed changelogs and installation guides.",
+      "href": "https://www.sammobile.com/firmwares"
+    },
+    {
+      "title": "Firmware Care - Mobile Stock ROMs",
+      "description": "Firmware Care provides stock firmware for 343 mobile brands, including drivers, flash tools, and manuals, hosted on Google Drive and MediaFire.",
+      "href": "https://firmwarecare.com"
+    },
+    {
+      "title": "RepairMyMobile - Android Flash Files",
+      "description": "RepairMyMobile offers flash files for over 30,000 models across 60+ brands, including stock ROMs and installation guides.",
+      "href": "https://repairmymobile.co"
+    },
+    {
+      "title": "Easy Firmware - All Brands Firmware",
+      "description": "Easy Firmware provides stock ROMs for brands like Huawei, OPPO, Vivo, Nokia, and more, with flash tools and drivers included.",
+      "href": "https://easy-firmware.com"
+    },
+    {
+      "title": "Hovatek - MediaTek Firmware Guides",
+      "description": "Hovatek offers firmware flashing guides and tools for MediaTek devices, including MTK Client and SP Flash Tool tutorials.",
+      "href": "https://www.hovatek.com"
     }
-    
-    ],
+  ],
     "doc":[
+        {
+            
     "title":"ADB 命令大全",
     "description": "",
     "href": "0.md"
     
+        }
     ]
 }
