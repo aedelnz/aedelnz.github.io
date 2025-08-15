@@ -50,7 +50,7 @@ EquationGameManager.prototype.saveGameState = function() {
   };
   
   try {
-    localStorage.setItem('equationGameState', JSON.stringify(gameState));
+    localStorage.setItem('A2zml/game2/g21equation', JSON.stringify(gameState));
   } catch (e) {
     console.error('保存失败:', e);
     mdui.snackbar('保存进度失败');
@@ -59,7 +59,7 @@ EquationGameManager.prototype.saveGameState = function() {
 
 EquationGameManager.prototype.loadGameState = function() {
   try {
-    const savedState = localStorage.getItem('equationGameState');
+    const savedState = localStorage.getItem('A2zml/game2/g21equation');
     if (!savedState) return this.showWelcomeDialog();
     
     const gameState = JSON.parse(savedState);
@@ -102,7 +102,7 @@ EquationGameManager.prototype.showResumeDialog = function(gameState) {
     description: `系数范围: -${gameState.maxCoefficient}到${gameState.maxCoefficient}`,
     actions: [
       { text: "恢复游戏", onClick: () => { Object.assign(this, gameState); this.startGame(); } },
-      { text: "重新开始", onClick: () => { localStorage.removeItem('equationGameState'); this.initNewGame(); } }
+      { text: "重新开始", onClick: () => { localStorage.removeItem('A2zml/game2/g21equation'); this.initNewGame(); } }
     ]
   });
 };
@@ -113,7 +113,7 @@ EquationGameManager.prototype.showCorruptedDataDialog = function() {
     description: '无法加载进度，将开始新游戏。',
     actions: [{
       text: "确定",
-      onClick: () => { localStorage.removeItem('equationGameState'); this.initNewGame(); }
+      onClick: () => { localStorage.removeItem('A2zml/game2/g21equation'); this.initNewGame(); }
     }]
   });
 };
@@ -238,7 +238,7 @@ EquationGameManager.prototype.handleCorrectSolution = function() {
       { 
         text: "重新开始", 
         onClick: () => {
-          localStorage.removeItem('equationGameState');
+          localStorage.removeItem('A2zml/game2/g21equation');
           this.initNewGame();
         }
       }

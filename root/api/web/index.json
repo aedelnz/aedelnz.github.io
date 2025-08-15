@@ -81,13 +81,6 @@
             "href": "https://activity.kugou.com/share/v-c7b4da67/index.html?id=2e0df7766e16410cad7d09993cbf8240"
         }
     ],
-    "Opus": [
-        {
-            "title": "密码生成器",
-            "description": "一款Android程序4到32位数随机大小写字母数学符号组合密码生成",
-            "href": "A2zml/app/passg"
-        }
-    ],
     "Serve": [
         {
             "title": "爱莫能助",
@@ -197,12 +190,6 @@
             "href": "https://xding.top"
         },
         {
-            "title": "摆渡娘",
-            "description": "摆渡博客",
-            "src": "https://q1.qlogo.cn/g?b=qq&nk=854380289&s=5",
-            "href": "https://www.baiduniang.com"
-        },
-        {
             "title": "星之阁API",
             "description": "不要和你的努力说对不起，那样会多对不起你的努力啊！",
             "src": "https://p.qlogo.cn/gh/905188643/905188643/0",
@@ -245,6 +232,12 @@
             "description": "无法访问 2023/08/26",
             "src": "",
             "href": "ejyuan.fun"
+        },
+        {
+            "title": "摆渡娘",
+            "description": "失效 2025/08/04",
+            "src": "https://q1.qlogo.cn/g?b=qq&nk=854380289&s=5",
+            "href": "www.baiduniang.com"
         }
     ]
 }

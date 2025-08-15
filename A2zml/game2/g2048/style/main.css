@@ -139,6 +139,7 @@ hr {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   -ms-touch-action: none;
   touch-action: none;
   width: 500px;
@@ -282,65 +283,58 @@ hr {
   -moz-transition-property: -moz-transform;
   transition-property: transform; }
   .tile .tile-inner {
-    background: #eee4da;
+    background: rgba(var(--mdui-color-primary));
     text-align: center;
     font-weight: bold;
     z-index: 10;
-    font-size: 55px; }
+    font-size: 55px;
+    box-shadow: var(--mdui-elevation-level3); }
   .tile.tile-2 .tile-inner {
-    background: #eee4da; }
+    color: rgba(var(--mdui-color-on-primary));
+    background: rgba(var(--mdui-color-primary)); }
   .tile.tile-4 .tile-inner {
-    background: #ede0c8; }
+    color: rgba(var(--mdui-color-on-primary-container));
+    background: rgba(var(--mdui-color-primary-container)); }
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    color: rgba(var(--mdui-color-on-primary-container));
+    background: rgba(var(--mdui-color-on-primary)); }
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
-    background: #f59563; }
+    color: rgba(var(--mdui-color-on-tertiary));
+    background: rgba(var(--mdui-color-tertiary)); }
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
-    background: #f67c5f; }
+    color: rgba(var(--mdui-color-on-primary-container));
+    background: rgba(var(--mdui-color-inverse-primary)); }
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    color: rgba(var(--mdui-color-on-tertiary-container));
+    background: rgba(var(--mdui-color-tertiary-container)); }
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
+    color: rgba(var(--mdui-color-on-primary-container));
+    background: rgba(var(--mdui-color-secondary-container));
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
-    background: #edc850;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
-    background: #edc53f;
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: #edc22e;
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
-    color: #f9f6f2;
-    background: #3c3a32;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
@@ -470,7 +464,7 @@ hr {
   margin-bottom: 0; }
 
 .restart-button {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -526,6 +520,7 @@ hr {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    user-select: none;
     -ms-touch-action: none;
     touch-action: none;
     width: 280px;
@@ -666,3 +661,4 @@ hr {
 
   .game-message p {
     font-size: 30px !important;}
+  }

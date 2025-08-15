@@ -54,7 +54,7 @@ GameManager.prototype.saveGameState = function() {
   };
   
   try {
-    localStorage.setItem('guessnumGameState', JSON.stringify(gameState));
+    localStorage.setItem('A2zml/game2/guessnum', JSON.stringify(gameState));
   } catch (e) {
     console.error('保存游戏状态失败:', e);
     mdui.snackbar('保存游戏进度失败，请确保浏览器支持本地存储');
@@ -62,7 +62,7 @@ GameManager.prototype.saveGameState = function() {
 };
 
 GameManager.prototype.loadGameState = function() {
-  const savedState = localStorage.getItem('guessnumGameState');
+  const savedState = localStorage.getItem('A2zml/game2/guessnum');
   
   if (!savedState) {
     this.showWelcomeDialog();
@@ -121,7 +121,7 @@ GameManager.prototype.showResumeDialog = function(gameState) {
       {
         text: "重新开始",
         onClick: () => {
-          localStorage.removeItem('guessnumGameState');
+          localStorage.removeItem('A2zml/game2/guessnum');
           this.initNewGame();
         }
       }
@@ -136,7 +136,7 @@ GameManager.prototype.showCorruptedDataDialog = function() {
     actions: [{
       text: "确定",
       onClick: () => {
-        localStorage.removeItem('guessnumGameState');
+        localStorage.removeItem('A2zml/game2/guessnum');
         this.initNewGame();
       }
     }]
@@ -233,7 +233,7 @@ GameManager.prototype.handleCorrectGuess = function() {
       {
         text: "重新开始",
         onClick: () => {
-          localStorage.removeItem('guessnumGameState');
+          localStorage.removeItem('A2zml/game2/guessnum');
           this.initNewGame();
         }
       }
