@@ -7,6 +7,16 @@
                 "title": "在线图片",
                 "data": [
                     {
+                        "title": "原神官方壁纸",
+                        "description": "",
+                        "href": "https://act.mihoyo.com/ys/event/community-content-collection/index.html#/wallpaper"
+                    },
+                    {
+                        "title": "绝区零节日壁纸合集",
+                        "description": "",
+                        "href": "https://baike.mihoyo.com/zzz/wiki/content/688/detail"
+                    },
+                    {
                         "title": "米画师",
                         "description": "专业约稿平台，轻松找到画师，高效完成绘画需求。",
                         "href": "https://www.mihuashi.com/"
@@ -60,6 +70,16 @@
                         "title": "Konachan",
                         "description": "经典二次元壁纸站点，汇聚大量动漫风格高清壁纸。",
                         "href": "https://konachan.com/"
+                    }
+                ]
+            },
+            {
+                "title": "",
+                "data": [
+                    {
+                        "title": "IFIXIT",
+                        "description": "探索维修世界",
+                        "href": "https://zh.ifixit.com/"
                     }
                 ]
             }
