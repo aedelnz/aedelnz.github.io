@@ -74,12 +74,67 @@
                 ]
             },
             {
-                "title": "",
+                "title": "其它内容",
                 "data": [
                     {
                         "title": "IFIXIT",
                         "description": "探索维修世界",
                         "href": "https://zh.ifixit.com/"
+                    }
+                ]
+            },
+            {
+                "title": "游戏平台",
+                "data": [
+                    {
+                        "title": "Steam",
+                        "description": "2003年维尔福集团发行的数字游戏社交平台",
+                        "href": "https://store.steampowered.com/"
+                    },
+                    {
+                        "title": "Epic Games Store",
+                        "description": "由Epic Games运营的数字游戏分发平台，以每周免费游戏和独占大作为特色",
+                        "href": "https://store.epicgames.com/"
+                    },
+                    {
+                        "title": "PlayStation Network",
+                        "description": "索尼互动娱乐为 PlayStation 游戏机和 PlayStation 系列开发的数字媒体娱乐服务",
+                        "href": "https://store.playstation.com/"
+                    },
+                    {
+                        "title": "Xbox Game Pass",
+                        "description": "微软提供的游戏订阅服务，可在 Xbox 主机、PC 和移动设备上使用",
+                        "href": "https://www.xbox.com/"
+                    },
+                    {
+                        "title": "Nintendo eShop",
+                        "description": "任天堂为 Nintendo Switch 和其他 Nintendo 系列游戏机提供的数字分发服务",
+                        "href": "https://www.nintendo.com/store/"
+                    },
+                    {
+                        "title": "GOG.com",
+                        "description": "CD Projekt运营的数字游戏分发平台，主打无DRM限制的游戏",
+                        "href": "https://www.gog.com/"
+                    },
+                    {
+                        "title": "Ubisoft Connect",
+                        "description": "育碧软件开发的游戏分发和数字版权管理平台",
+                        "href": "https://ubisoftconnect.com/"
+                    },
+                    {
+                        "title": "Origin",
+                        "description": "美国艺电公司（EA）开发的数字游戏分发平台",
+                        "href": "https://www.ea.com/ea-app"
+                    },
+                    {
+                        "title": "Roblox",
+                        "description": "大型多人在线游戏和游戏制作平台，用户可以编程创建游戏和虚拟世界",
+                        "href": "https://www.roblox.com/"
+                    },
+                    {
+                        "title": "itch.io",
+                        "description": "独立游戏分发平台，允许开发者上传和销售独立游戏",
+                        "href": "https://itch.io/"
                     }
                 ]
             }
