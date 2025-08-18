@@ -80,6 +80,11 @@
                         "title": "IFIXIT",
                         "description": "探索维修世界",
                         "href": "https://zh.ifixit.com/"
+                    },
+                    {
+                        "title": "ttyper",
+                        "description": "终端打字测试",
+                        "href": "https://github.com/max-niederman/ttyper"
                     }
                 ]
             },
