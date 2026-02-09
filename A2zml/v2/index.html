@@ -1,72 +1,26 @@
-<!DOCTYPE html>
-<html lang="zh-CN" class="mdui-theme-auto">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="魔法禁书目录和科学超电磁炮！">
-    <title>风纪委员研究所</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="/root/file/mdui.css">
-    <style>body{margin:0}.mdui-prose{padding:var(--mdui-typescale-title-medium-size)}.h1{margin:var(--mdui-typescale-label-large-line-height) 0;font-size:var(--mdui-typescale-title-large-size);font-weight:var(--mdui-typescale-title-large-weight);line-height:1;border-left:var(--mdui-typescale-label-small-line-height) solid rgb(var(--mdui-color-primary));padding-left:var(--mdui-typescale-body-medium-size)}mdui-card .v2,mdui-card.v1{padding:var(--mdui-typescale-title-medium-size)}mdui-card{margin-bottom:1.25em;width:100%}footer{border-top:var(--mdui-typescale-title-small-tracking) solid rgb(var(--mdui-color-surface-variant));text-align:center;padding:var(--mdui-typescale-title-medium-size);margin-top:var(--mdui-typescale-headline-small-line-height)}</style>
-    <script src="/root/file/mdui.global.js"></script>
-    <script src="/root/file/Valine.min.js"></script>
-    <script src="/root/file/qrcode.min.js"></script>
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"JMIJZqK4MvC0pOsF",ck:"JMIJZqK4MvC0pOsF"})</script>
-    <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
-    <script>new LingQue.Monitor().init({id:"K5mJO6H2n6QPd4MK"});</script>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>风纪委员研究所</title>
+  <meta name="description" content="魔法禁书目录 & 科学超电磁炮">
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({ id: "JMIJZqK4MvC0pOsF", ck: "JMIJZqK4MvC0pOsF" })</script>
+  <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+  <script>
+    new LingQue.Monitor().init({ id: "K5mJO6H2n6QPd4MK" });
+  </script>
+  <style>
+    .arco-popconfirm-btn {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <mdui-navigation-rail divider>
-    <mdui-button-icon icon="home" slot="top" href="/"></mdui-button-icon>
-    <mdui-button-icon variant="outlined" icon="airplanemode_active" slot="bottom"></mdui-button-icon>
-    <mdui-navigation-rail-item icon="folder_open" href="#source">开源</mdui-navigation-rail-item>
-    <mdui-navigation-rail-item icon="assistant_photo" href="#Subscribe">订阅</mdui-navigation-rail-item>
-    <mdui-navigation-rail-item icon="code" href="#Node">节点</mdui-navigation-rail-item>
-    <mdui-navigation-rail-item icon="align_horizontal_left" href="#discuss">讨论</mdui-navigation-rail-item>
-  </mdui-navigation-rail>
-  <mdui-layout>
-    <mdui-layout-main>
-      <div class="mdui-prose">
-        <div class="h1" id="source">开源</div>
-        <mdui-card><mdui-list class="source"></mdui-list></mdui-card>
-        <div class="h1" id="Subscribe">订阅</div>
-        <mdui-card><mdui-list class="Subscribe"></mdui-list><p class="v2"><strong>订阅地址默认base64编码显示，点击解码显示正常URL<br><mdui-button icon="edit_off" id="Decode" disabled="false">解码</mdui-button></strong></p></mdui-card>
-        <div class="h1" id="Node">节点</div>
-        <mdui-card><mdui-list class="Node"></mdui-list><p class="v2"><strong>节点来源网络搜集，会不定时更新。</strong></p></mdui-card>
-        <div class="h1">介绍</div>
-        <mdui-card class="v1"><p>（Virtual Private Network，虚拟专用网络）是一种通过加密和隧道技术在公共网络（如互联网）上建立私有网络连接的技术。它主要用于保护用户隐私、绕过地理限制以及增强网络安全。</p></mdui-card>
-        <div class="h1" id="discuss">讨论</div>
-        <mdui-card class="v1"><div id="vcomments"></div></mdui-card>
-      </div>
-      <footer><p>Copyright © 2020 - <span id="FullYear">2029</span> 风纪委员研究所. All Rights Reserved.</p><p>本网站提供的信息仅供参考，请遵守当地法律法规使用服务。</p></footer>
-    </mdui-layout-main>
-  </mdui-layout>
-<script>
-document.getElementById('FullYear').textContent = new Date().getFullYear();
-const { $, snackbar, alert, dialog } = mdui;
-const $valine = new Valine();
-// 点击滚动到元素定位
-const scrollToMDUIElement = (s, t) => { const e = $(s); e.length && window.scrollTo({ top: e.offset().top - ($(t).outerHeight() - 20), behavior: 'smooth' }) };
-// 返回顶部
-const BacktoTopoMDUIElement = (t) => {window.onscroll = () => {$(t).css('display', (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) ? 'block' : 'none')},$(t).on('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))};
-// 顶部提示
-const Tip = t => ($('mdui-snackbar').remove(), snackbar({ placement: 'top', message: t }));
-// 复制
-const Copy = async (text, msg = '已复制到剪贴板') => {try { await navigator.clipboard.writeText(text); msg && Tip(msg); return true; }catch (e) { Tip(e.name === 'NotAllowedError' ? '复制失败：请允许浏览器访问剪贴板权限' : '复制失败，请检查浏览器权限或手动复制'); return false; }};
-// 列表
-const populateList = (selector, items, template) => {$(selector).empty().append(items.map(template).join(''))};
-// 请求
-const loadAndRenderData = () => {$.ajax({url: '/root/api/web/a2zml/v2/index.json',dataType: 'json',success: (response) => {populateList('mdui-list.source', response.Open_Source, (v) =>`<mdui-list-item alignment="start" target="_top" href="${v.href}" headline="${v.title}" description="${v.description}"></mdui-list-item>`),populateList('mdui-list.Subscribe', response.Subscribe, (v) =>`<mdui-list-item alignment="start" target="_top" headline="${v.title}" description="${v.href}"></mdui-list-item>`),populateList('mdui-list.Node', response.Node, (v) =>`<mdui-list-item alignment="start" headline="${v.title}" description="${v.description}"></mdui-list-item>`)}})};
-// 初始化
-$(document).on('click', 'mdui-navigation-rail-item', function (e) {e.preventDefault(),scrollToMDUIElement($(this).attr('href'), 'mdui-button-icon[icon=home]')});
-BacktoTopoMDUIElement('mdui-button-icon[icon=airplanemode_active]');
-loadAndRenderData();
-$(document).on('click', '.Subscribe mdui-list-item, .Node mdui-list-item', function () {const text = $(this).attr('description');QRCode.toDataURL(text, (err, url) => {dialog({headline: '二维码',body: `<div style="display: flex;justify-content:center;align-items: center;"><mdui-avatar src="${url}" style="border-radius:var(--mdui-shape-corner-extra-large);width:100%;height:100%"></mdui-avatar></div>`,closeOnEsc: true,closeOnOverlayClick: true})}),Copy(text)});
-$('#Decode').on('click', () => {let successCount = 0, errorCount = 0;$('.Subscribe mdui-list-item').each(function () {const $item = $(this);['description'].forEach(attr => {const encodedValue = $item.attr(attr);if (encodedValue) {try {$item.attr(attr, atob(encodedValue)),successCount++} catch {errorCount++}}})});alert({headline: '解码完成', description: `成功解码 ${successCount} 项，失败 ${errorCount} 项`, confirmText: '关闭'}),$('#Decode').attr('disabled', true)});
-$valine.init({el: '#vcomments',appId: 'u0nv0CLmlIFk7S7f7xFFYmX4-gzGzoHsz',appKey: 'z27CGdACRU9SqaK38an2ie5L',avatar: 'hide',placeholder: '说点什么吧~'});
-</script>
+  <div id="root"></div>
+  <script type="module" src="main.tsx"></script>
 </body>
 </html>
