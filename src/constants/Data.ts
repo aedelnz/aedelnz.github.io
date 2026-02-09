@@ -54,7 +54,7 @@ export const MY_WORKS: MyWork[] = [
         link: '/A2zml/v2/'
     },
     {
-        title: '画的档案',
+        title: 'Draw Ofs 博客',
         description: 'A Plan to Lie Flat and Live Like a Salted Fish!',
         tag: 'blog',
         image: '/image/blog.jpg',
