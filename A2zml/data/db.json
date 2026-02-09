@@ -1918,6 +1918,41 @@
                 "icon": "https://www.firefox.com/media/img/favicons/firefox/browser/apple-touch-icon.79c2abeb4e35.png",
                 "url": "https://www.firefox.com/",
                 "id": 277
+              },
+              {
+                "name": "Opera",
+                "desc": "Opera GX is the browser built specifically for gamers. Get unparalleled gaming and browsing features, packed in a powerful revolutionary browser.",
+                "icon": "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/gx/images/welcomeGx/favicon/apple-touch-icon.16b2fb5b1ecc.png",
+                "url": "https://www.opera.com",
+                "id": 278
+              },
+              {
+                "name": "Brave",
+                "desc": "Brave 浏览器是一款快速、私密且安全的网络浏览器，适用于 PC、Mac 和移动设备。立即下载即可享受更快的无广告浏览体验，并通过阻止跟踪软件来节省数据和电池寿命。",
+                "icon": "https://brave.com/favicon.ico",
+                "url": "https://brave.com/zh/",
+                "id": 279
+              },
+              {
+                "name": "Yandex Browser",
+                "desc": "Yandex Browser got updated: it's a neural browser now. We enhanced it with neural networks that help users write appealing texts, create pictures, understand different languages, read texts, and get video summaries. Try it out — it's free.",
+                "icon": "https://browser.yandex.com/favicon.ico",
+                "url": "https://browser.yandex.com/#alice-ai",
+                "id": 280
+              },
+              {
+                "name": "DuckDuckGo",
+                "desc": "Windows 版 DuckDuckGo 是一款免费的浏览应用程序，默认情况下为你提供全面的在线隐私保护。保护。隐私。安心。",
+                "icon": "https://duckduckgo.com/favicon.ico",
+                "url": "https://duckduckgo.com/windows",
+                "id": 281
+              },
+              {
+                "name": "Tor Project",
+                "desc": "Anonymity Online | Defend yourself against tracking and surveillance. Circumvent censorship.",
+                "icon": "https://www.torproject.org/static/images/favicon/favicon.ico",
+                "url": "https://www.torproject.org/?noredirect=1",
+                "id": 282
               }
             ],
             "icon": "",
@@ -1931,32 +1966,32 @@
                 "desc": "首页",
                 "icon": "https://www.tampermonkey.net/favicon.ico",
                 "url": "https://www.tampermonkey.net/",
-                "id": 279
+                "id": 284
               },
               {
                 "name": "OpenUserJS",
                 "desc": "Download userscripts to enhance your browser.",
                 "icon": "https://openuserjs.org/images/favicon.ico",
                 "url": "https://openuserjs.org/",
-                "id": 280
+                "id": 285
               },
               {
                 "name": "Userscript.Zone",
                 "desc": "Userscript.Zone Search能让您找到最常用的用户脚本。",
                 "icon": "",
                 "url": "https://www.userscript.zone/",
-                "id": 281
+                "id": 286
               },
               {
                 "name": "AdGuard",
                 "desc": "AdGuard 是摆脱烦人广告，在线跟踪并使您的计算机原理恶意软件的最佳途径。其使您体验快速，安全，无广告的网络冲浪。",
                 "icon": "https://adguard.info/stf/favicons/adguard/favicon.ico",
                 "url": "https://adguard.info/zh_cn/welcome.html",
-                "id": 282
+                "id": 287
               }
             ],
             "icon": "",
-            "id": 278
+            "id": 283
           }
         ],
         "icon": "",
