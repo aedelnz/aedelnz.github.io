@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Select, AutoComplete, Input, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
+import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Select, Input, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
 import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconUpload } from '@arco-design/web-react/icon';
 import db from './data/db.json';
 import search from './data/search.json';
@@ -18,6 +18,11 @@ interface CardItemType {
   icon?: string;
   url?: string;
   id?: number;
+}
+
+interface SearchType {
+  name?: string;
+  url?: string;
 }
 
 function App() {
@@ -114,7 +119,7 @@ function App() {
   const [searchEngine, setSearchEngine] = useState(search[0].name);
   const [searchValue, setSearchValue] = useState('');
   const handleSearch = (value: string) => {
-    const engine = search.find((item: any) => item.name === searchEngine);
+    const engine = search.find((item: SearchType) => item.name === searchEngine);
     if (engine && value.trim()) {
       window.open(`${engine.url}${encodeURIComponent(value)}`, '_blank');
     }
@@ -159,8 +164,8 @@ function App() {
             <div style={{ margin: '1rem auto', display: 'flex', marginBottom: 12, alignItems: 'center', }}>
               <Input.Group compact style={{ width: '100%' }}>
                 <Select value={searchEngine} showSearch style={{ width: '30%' }} onChange={(value) => setSearchEngine(value)}>
-                  {search.map((item: any, index) => (
-                    <Select.Option key={`a0-${index}`} value={item.name}>{item.name}</Select.Option>
+                  {search.map((item: SearchType, index) => (
+                    <Select.Option key={`a0-${index}`} value={item.name || ''}>{item.name}</Select.Option>
                   ))}
                 </Select>
                 <Input.Search placeholder='请输入搜索内容' style={{ width: '70%' }} value={searchValue} onChange={setSearchValue} onSearch={handleSearch} />

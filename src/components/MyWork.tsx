@@ -6,12 +6,6 @@ function MyWork() {
     const { GridItem } = Grid;
     // 卡片元数据
     const { Meta } = Card;
-    // 自适应图片高度
-    const cardDivStyle: React.CSSProperties = {
-        borderRadius: '1rem 1rem 0 0',
-        overflow: 'hidden',
-        height: 'clamp(200px, 10vw, 500px)',
-    };
 
     return (
         <>
