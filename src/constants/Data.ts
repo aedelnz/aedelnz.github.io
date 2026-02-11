@@ -79,17 +79,20 @@ export const MY_WORKS: MyWork[] = [
 interface PublicService {
     title: string;
     description: string;
+    image: string;
     link: string;
 }
 export const PUBLIC_SERVICE: PublicService[] = [
     {
         title: "BiliRoaming Service",
-        description: "哔哩哔哩漫游服务",
+        description: " 一个停止运行的哔哩哔哩漫游服务！",
+        image: '/image/biliroaming.png',
         link: "https://bili.jixiejidiguan.eu.org"
     },
     {
         title: "Internet Speed Test",
         description: "详细内容请点击服务上面的【风纪委员研究所】",
+        image: '/image/speedCloudflare.png',
         link: "https://v2.jixiejidiguan.eu.org"
     }
 ];

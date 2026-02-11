@@ -1,10 +1,9 @@
-import { Divider, Space, Tag, Typography, Grid, Card } from '@arco-design/web-react';
-import { IconStar } from '@arco-design/web-react/icon';
+import { Divider, Space, Tag, Typography, Grid, Card, Avatar } from '@arco-design/web-react';
 import { PUBLIC_SERVICE } from '../constants/Data';
 
 function PublicService() {
     // 自适应列表布局
-    const { Row, Col } = Grid;
+    const { GridItem } = Grid;
 
     return (
         <>
@@ -18,21 +17,23 @@ function PublicService() {
                     </Typography>
                 </Space>
 
-                <Row gutter={[24, 12]} align='center' justify='center'>
+                <Grid cols={{ xs: 1, sm: 1, md: 2, lg: 3, xl: 3 }} colGap={16} rowGap={24}>
                     {PUBLIC_SERVICE.map((friend, index) => (
-                        <Col key={index} xs={24} sm={24} md={12} lg={12} xl={8} xxl={8}>
-                            <Card hoverable={true} className='card-custom-hover-style' style={{ borderRadius: '1rem' }} onClick={() => window.open(friend.link, '_blank')}>
+                        <GridItem key={index} xs={24} sm={24} md={12} lg={12} xl={8} xxl={8}>
+                            <Card hoverable={true} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
                                 <Space align='center'>
-                                    <IconStar style={{ fontSize: 64, color: '#ffcd00' }} />
+                                    <Avatar size={56} shape='square'>
+                                        <img alt='avatar' src={friend.image} />
+                                    </Avatar>
                                     <Typography>
                                         <Typography.Title heading={6} style={{ margin: '0', fontWeight: '700' }}>{friend.title}</Typography.Title>
                                         <Typography.Text type='secondary' ellipsis={true}>{friend.description}</Typography.Text>
                                     </Typography>
                                 </Space>
                             </Card>
-                        </Col>
+                        </GridItem>
                     ))}
-                </Row>
+                </Grid>
             </section>
         </>
     )
