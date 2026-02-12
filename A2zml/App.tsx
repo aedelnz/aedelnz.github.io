@@ -125,6 +125,8 @@ function App() {
     const engine = search.find((item: SearchType) => item.name === searchEngine);
     if (engine && value.trim()) {
       window.open(`${engine.url}${encodeURIComponent(value)}`, '_blank');
+    } else if (searchEngine === '本站') {
+      // 搜索功能
     }
   };
 
