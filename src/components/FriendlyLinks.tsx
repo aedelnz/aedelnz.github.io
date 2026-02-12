@@ -77,10 +77,10 @@ const FriendlyLinks = () => {
                                     <Avatar size={60} shape='square'>
                                         <img alt='avatar' src={friend.image} />
                                     </Avatar>
-                                    <Typography>
-                                        <Typography.Title heading={4} style={{margin: '0'}}>{friend.title}</Typography.Title>
-                                        <Typography.Ellipsis rows={2} expandable={false}>{friend.description}</Typography.Ellipsis>
-                                    </Typography>
+                                    <div>
+                                        <Typography.Text className='text-ellipsis' style={{fontSize: '18px', fontWeight: '700'}}>{friend.title}</Typography.Text>
+                                        <Typography.Text className='text-ellipsis-2'>{friend.description}</Typography.Text>
+                                    </div>
                                 </Space>
                             </Card>
                         </GridItem>

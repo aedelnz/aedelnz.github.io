@@ -23,25 +23,23 @@ function Header() {
 
     return (
         <>
-            <Affix offsetTop={0}>
-                <PageHeader
-                    style={{ background: 'var(--color-bg-2)' }}
-                    title={<span>画的<span style={{ color: '#165DFF' }}>个人记录</span></span>}
-                    extra={
-                        <>
-                            {isMobile ? (
-                                <Button type='secondary' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
-                            ) : (
-                                <Space>
-                                    {NAV_LINKS.map((friend, index) => (
-                                        <Button key={index} size='large' type='secondary' onClick={() => { setVisible(false); }} href={friend.link} style={{ fontWeight: '700' }}>{friend.title}</Button>
-                                    ))}
-                                </Space>
-                            )}
-                        </>
-                    }
-                />
-                <Divider style={{ margin: '0 auto' }} />
+            <Affix>
+                <div>
+                    <PageHeader
+                        style={{ background: 'var(--color-bg-2)' }}
+                        title={<span>画的<span style={{ color: 'var(--color-data-1)' }}>个人记录</span></span>}
+                        extra={isMobile ? (
+                            <Button type='secondary' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
+                        ) : (
+                            <Space>
+                                {NAV_LINKS.map((friend, index) => (
+                                    <Button key={index} size='large' type='text' href={friend.link} style={{ fontWeight: '700' }}>{friend.title}</Button>
+                                ))}
+                            </Space>
+                        )}
+                    />
+                    <Divider style={{ margin: '0 auto' }} />
+                </div>
             </Affix>
             <Drawer
                 width={260}
