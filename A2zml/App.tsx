@@ -4,35 +4,16 @@ import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconUpload } from '@arco
 import '../src/App.css'
 import db from './data/db.json';
 import search from './data/search.json';
-
-// 定义菜单数据类型
-interface MenuItemType {
-  title?: string;
-  nav?: MenuItemType[];
-  icon?: string;
-  id?: number;
-}
-
-interface CardItemType {
-  name?: string;
-  desc?: string;
-  icon?: string;
-  url?: string;
-  id?: number;
-}
-
-interface SearchType {
-  name?: string;
-  url?: string;
-}
+import { MenuItemType, CardItemType, SearchType } from '../constants/Data';
+import SubMenuItem from './SubMenuItem';
 
 function App() {
+  // 当前年份
+  const currentYear = new Date().getFullYear();
   // 菜单是否折叠
   const [collapsed, setCollapsed] = useState(false);
   // 状态管理
   const [selectedKeys, setSelectedKeys] = useState('0-0');
-  // 当前年份
-  const currentYear = new Date().getFullYear();
   // 递归渲染菜单函数
   const renderMenuItem = (menuData: MenuItemType[], parentKey = '') => {
     return menuData.map((item, index) => {
@@ -203,7 +184,7 @@ function App() {
               setSelectedKeys(key);
             }}
           >
-            {renderSubMenu(db)}
+            {SubMenuItem(db)}
           </Menu>
         </Layout.Sider>
         <Layout style={{ marginLeft: collapsed ? '46px' : '200px' }}>
