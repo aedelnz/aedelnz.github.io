@@ -118,12 +118,6 @@ export const FRIENDLY_LINKS: FriendlyLink[] = [
         link: 'https://srsg.moe'
     },
     {
-        title: 'Utermux博客',
-        description: '2096779623的个人博客',
-        image: 'https://q1.qlogo.cn/g?b=qq&nk=2096779623&s=5',
-        link: 'https://blog.utermux.dev'
-    },
-    {
         title: '青刻云记',
         description: '最简单的小站，记录自己的每时每刻',
         image: 'https://q1.qlogo.cn/g?b=qq&nk=1351856278&s=5',
@@ -134,12 +128,6 @@ export const FRIENDLY_LINKS: FriendlyLink[] = [
         description: '这是Xiwangly的博客，记录我自己的技术成长过程和我的日常',
         image: 'https://q1.qlogo.cn/g?b=qq&nk=1334850101&s=5',
         link: 'https://xiwangly.top'
-    },
-    {
-        title: '中二病晚期の物語',
-        description: '一只狐狸敲出的一个奇迹',
-        image: 'https://q1.qlogo.cn/g?b=qq&nk=1622912909&s=5',
-        link: 'https://imfurry.com'
     },
     {
         title: 'Magma Ink',
