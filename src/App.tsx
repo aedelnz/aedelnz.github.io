@@ -11,15 +11,21 @@ import { Layout } from '@arco-design/web-react'
 function App() {
   return (
     <>
-    <Layout style={{ background: 'var(--color-bg-2)' }}>
-      <Header />
-      <Homer />
-      <MySocial />
-      <MyWork />
-      <PublicService />
-      <FriendlyLinks />
-      <Footer />
-    </Layout>
+      <Layout style={{ background: 'var(--color-bg-2)' }}>
+        <Layout.Header>
+          <Header />
+        </Layout.Header>
+        <Layout.Content>
+          <Homer />
+          <MySocial />
+          <MyWork />
+          <PublicService />
+          <FriendlyLinks />
+        </Layout.Content>
+        <Layout.Footer>
+          <Footer />
+        </Layout.Footer>
+      </Layout>
     </>
   )
 }
