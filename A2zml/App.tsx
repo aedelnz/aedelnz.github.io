@@ -121,13 +121,66 @@ function App() {
   // 搜索功能处理
   const [searchEngine, setSearchEngine] = useState(search[0].name);
   const [searchValue, setSearchValue] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  
+  // 搜索功能
   const handleSearch = (value: string) => {
     const engine = search.find((item: SearchType) => item.name === searchEngine);
     if (engine && value.trim()) {
-      window.open(`${engine.url}${encodeURIComponent(value)}`, '_blank');
-    } else if (searchEngine === '本站') {
-      // 搜索功能
+      if (searchEngine === '本站') {
+        // 本站搜索
+        const results = searchInDb(value.trim());
+        setSearchResults(results);
+        setShowResults(true);
+      } else {
+        // 外部搜索引擎
+        window.open(`${engine.url}${encodeURIComponent(value)}`, '_blank');
+        setShowResults(false);
+      }
+    } else {
+      setShowResults(false);
     }
+  };
+  
+  // 在 db.json 中搜索
+  const searchInDb = (keyword: string): any[] => {
+    const results: any[] = [];
+    
+    // 递归搜索函数
+    const searchRecursive = (data: any[] | any) => {
+      if (Array.isArray(data)) {
+        data.forEach(item => {
+          searchRecursive(item);
+        });
+      } else if (typeof data === 'object' && data !== null) {
+        // 检查是否是网站条目
+        if (data.name && data.url) {
+          const nameMatch = data.name?.toLowerCase().includes(keyword.toLowerCase());
+          const descMatch = data.desc?.toLowerCase().includes(keyword.toLowerCase());
+          const urlMatch = data.url?.toLowerCase().includes(keyword.toLowerCase());
+          
+          if (nameMatch || descMatch || urlMatch) {
+            results.push({
+              name: data.name,
+              desc: data.desc,
+              url: data.url,
+              icon: data.icon
+            });
+          }
+        }
+        
+        // 继续递归搜索子项
+        Object.values(data).forEach(value => {
+          if (Array.isArray(value) || (typeof value === 'object' && value !== null)) {
+            searchRecursive(value);
+          }
+        });
+      }
+    };
+    
+    searchRecursive(db);
+    return results;
   };
 
   return (
@@ -178,6 +231,36 @@ function App() {
               </div>
               <Button type='primary' icon={<IconUpload />} onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')}>收录提交</Button>
             </Space>
+            
+            {/* 搜索结果显示 */}
+            {showResults && (
+              <div style={{ marginBottom: 24 }}>
+                <Card title={`搜索结果 (${searchResults.length})`}>
+                  {searchResults.length > 0 ? (
+                    <Space direction='vertical' style={{ width: '100%' }}>
+                      {searchResults.map((result, index) => (
+                        <Card key={index} hoverable={true} style={{ width: '100%' }} onClick={() => window.open(result.url, '_blank')}>
+                          <Space align='center'>
+                            <Avatar size={40} shape='square'>
+                              {result.icon ? <img alt='icon' src={result.icon} /> : null}
+                            </Avatar>
+                            <div style={{ flex: 1 }}>
+                              <Typography.Title heading={5} style={{ margin: '0' }}>{result.name}</Typography.Title>
+                              {result.desc && (
+                                <Typography.Paragraph style={{ margin: '0' }} className='text-ellipsis-2'>{result.desc}</Typography.Paragraph>
+                              )}
+                            </div>
+                          </Space>
+                        </Card>
+                      ))}
+                    </Space>
+                  ) : (
+                    <Typography.Paragraph style={{ textAlign: 'center' }}>没有找到匹配的结果</Typography.Paragraph>
+                  )}
+                </Card>
+              </div>
+            )}
+            
             {renderContent()}
             {renderContentBody()}
           </Layout.Content>
