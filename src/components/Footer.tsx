@@ -11,7 +11,7 @@ function Footer() {
                 <Typography style={{ textAlign: 'center', paddingBottom: '1rem' }}>
                     <Typography.Title heading={3}>喜欢我的记录吗？</Typography.Title>
                     <Typography.Paragraph>如果有帮到你，或者只是想支持一下这条咸鱼，欢迎请我喝杯咖啡 ~</Typography.Paragraph>
-                    <Button shape='round' size='large' type='outline' status='success' icon={<IconWechatpay />} anchorProps={{ target: '_blank' }} href="https://afdian.com/a/JIXIEJIDIGUAN">
+                    <Button type='outline' icon={<IconWechatpay />} anchorProps={{ target: '_blank' }} href="https://afdian.com/a/JIXIEJIDIGUAN">
                         前往 爱发电 支持
                     </Button>
                 </Typography>

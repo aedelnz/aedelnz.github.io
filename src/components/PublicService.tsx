@@ -21,8 +21,8 @@ function PublicService() {
                     {PUBLIC_SERVICE.map((friend, index) => (
                         <GridItem key={index}>
                             <Card hoverable={true} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
-                                <Space align='center'>
-                                    <Avatar size={56} shape='square'>
+                                <Space>
+                                    <Avatar size={80} shape='square'>
                                         <img alt='avatar' src={friend.image} />
                                     </Avatar>
                                     <Typography>
