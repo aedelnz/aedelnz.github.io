@@ -16,43 +16,11 @@
         "url": "https://www.bing.com/search?q="
     },
     {
-        "name": "知乎",
-        "url": "https://www.zhihu.com/search?q="
-    },
-    {
-        "name": "哔哩哔哩",
-        "url": "https://search.bilibili.com/all?keyword="
-    },
-    {
-        "name": "抖音",
-        "url": "https://www.douyin.com/search/"
-    },
-    {
-        "name": "豆瓣",
-        "url": "https://www.douban.com/search?q="
-    },
-    {
         "name": "Stack Overflow",
         "url": "https://stackoverflow.com/search?q="
     },
     {
         "name": "掘金",
         "url": "https://juejin.cn/search?query="
-    },
-    {
-        "name": "CSDN",
-        "url": "https://so.csdn.net/so/search?q="
-    },
-    {
-        "name": "维基百科",
-        "url": "https://zh.wikipedia.org/wiki/Special:Search/"
-    },
-    {
-        "name": "优酷",
-        "url": "https://so.youku.com/search_video/q_"
-    },
-    {
-        "name": "腾讯视频",
-        "url": "https://v.qq.com/x/search/?q="
     }
 ]
