@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Divider, Space, Typography, Button, Modal, Grid, Card, Avatar } from '@arco-design/web-react';
 import { IconPlus } from '@arco-design/web-react/icon';
 import { FRIENDLY_LINKS } from '../constants/Data';
 
 const FriendlyLinks = () => {
-    // 自适应列表布局
-    const { GridItem } = Grid;
+    // 自适应按钮判断
+    const [isMobile, setIsMobile] = useState(false);
+    // 友链交换弹窗状态
+    const [visible, setVisible] = useState(false);
     // 初始化时随机排序
     const getFriendlyLinks = () => {
         return [...FRIENDLY_LINKS].sort(() => Math.random() - 0.5);
@@ -17,18 +19,29 @@ const FriendlyLinks = () => {
         description: "一条咸鱼躺平养成计划！",
         avatar: "https://jixiejidiguan.top/favicon.ico"
     };
-    // 友链交换弹窗状态
-    const [visible, setVisible] = useState(false);
+    
+    // 监听窗口大小变化
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        // 初始化
+        checkScreenSize();
+        // 监听窗口变化
+        window.addEventListener('resize', checkScreenSize);
+        // 清理
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     return (
         <>
             <Divider style={{ margin: '0 auto' }} />
             <section id="FriendlyLinks" className="full-container">
-                <Space style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Typography>
+                <Space direction={isMobile ? 'vertical' : 'horizontal'} style={{width: '100%', justifyContent: 'space-between', margin: '12px auto'}}>
+                    <div>
                         <Typography.Title heading={4}>友情链接</Typography.Title>
                         <Typography.Paragraph>在这个卷王世界里寻找志同道合的小伙伴。</Typography.Paragraph>
-                    </Typography>
+                    </div>
                     <Button type='outline' icon={<IconPlus />} onClick={() => setVisible(true)}>申请友链</Button>
                 </Space>
 
@@ -71,7 +84,7 @@ const FriendlyLinks = () => {
 
                 <Grid cols={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 5 }} colGap={8} rowGap={6}>
                     {getFriendlyLinks().map((friend, index) => (
-                        <GridItem key={index}>
+                        <Grid.GridItem key={index}>
                             <Card hoverable={true} style={{height: '100px'}} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
                                 <Space align='center'>
                                     <Avatar size={60} shape='square'>
@@ -83,7 +96,7 @@ const FriendlyLinks = () => {
                                     </div>
                                 </Space>
                             </Card>
-                        </GridItem>
+                        </Grid.GridItem>
                     ))}
                 </Grid>
             </section>
