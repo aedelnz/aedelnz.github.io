@@ -40,7 +40,6 @@ function App() {
               <Divider style={{ margin: '0 auto' }} />
             </Layout.Header>
           </Affix>
-
           <Layout.Content style={{ padding: '8px' }}>
             <Typography.Title heading={4}>代理工具</Typography.Title>
             <Divider />
@@ -53,7 +52,6 @@ function App() {
                 </Grid.GridItem>
               ))}
             </Grid>
-
             <Typography.Title heading={4}>节点订阅</Typography.Title>
             <Divider />
             <Grid cols={{ xs: 1, sm: 2, md: 2, lg: 3 }} colGap={12} rowGap={16}>
@@ -81,22 +79,18 @@ function App() {
                 <Input.TextArea placeholder='结果' value={encodedResult} autoSize />
               </Grid.GridItem>
             </Grid>
-
           </Layout.Content>
 
           <Layout.Footer style={{ background: 'var(--color-neutral-1)' }}>
             <Divider style={{ margin: '0' }} />
-            <footer style={{ padding: '1rem' }}>
-              <Typography style={{ textAlign: 'center' }}>
-                <Typography.Paragraph bold>Copyright © 2020 - {currentYear}  <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.</Typography.Paragraph>
-                <Typography.Paragraph>本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。</Typography.Paragraph>
-              </Typography>
-            </footer>
+            <div style={{ padding: '1.25rem', textAlign: 'center' }}>
+              <Typography.Paragraph bold>Copyright © 2020 - {currentYear}  <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.</Typography.Paragraph>
+              <Typography.Text>本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。</Typography.Text>
+            </div>
+            <BackTop visibleHeight={80}>
+              <Button type='outline' icon={<IconUp />} style={{ width: 40, height: 40 }} />
+            </BackTop>
           </Layout.Footer>
-
-          <BackTop visibleHeight={80}>
-            <Button type='outline' icon={<IconUp />} style={{ width: 40, height: 40 }} />
-          </BackTop>
         </Layout>
       </Layout>
     </>

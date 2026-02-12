@@ -90,7 +90,7 @@ function App() {
   // 搜索功能处理
   const [searchEngine, setSearchEngine] = useState(search[0].name);
   const [searchValue, setSearchValue] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<CardItemType[]>([]);
   const [showResults, setShowResults] = useState(false);
   
   // 搜索功能
@@ -113,11 +113,11 @@ function App() {
   };
   
   // 在 db.json 中搜索
-  const searchInDb = (keyword: string): any[] => {
-    const results: any[] = [];
+  const searchInDb = (keyword: string): CardItemType[] => {
+    const results: CardItemType[] = [];
     
     // 递归搜索函数
-    const searchRecursive = (data: any[] | any) => {
+    const searchRecursive = (data: CardItemType[] | CardItemType) => {
       if (Array.isArray(data)) {
         data.forEach(item => {
           searchRecursive(item);
