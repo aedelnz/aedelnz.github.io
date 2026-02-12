@@ -14,8 +14,6 @@ function MyWork() {
                     </div>
                 </Space>
 
-
-
                 <Grid cols={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 5 }} colGap={8} rowGap={6}>
                     {MY_WORKS.map((friend, index) => (
                         <Grid.GridItem key={index}>

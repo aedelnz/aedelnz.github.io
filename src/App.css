@@ -1,18 +1,18 @@
 .full-container {
-    padding: 6rem 1.5rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
 }
 
-/* 自适应设备样式 */
 @media (max-width: 768px) {
-    .full-container {
-        padding: 3rem 1rem;
-    }
+  .full-container {
+    padding: 3rem 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .full-container {
-        padding: 2rem 0.8rem;
-    }
+  .full-container {
+    padding: 2rem 0.8rem;
+  }
 }
 
 .card-custom-hover-style {
@@ -23,7 +23,6 @@
   border-color: var(--color-data-1);
 }
 
-/* 文字超长隐藏样式 */
 .text-ellipsis {
   display: -webkit-box;
   display: box;
@@ -35,7 +34,6 @@
   text-overflow: ellipsis;
 }
 
-/* 多行文字超长隐藏样式 */
 .text-ellipsis-2 {
   display: -webkit-box;
   display: box;

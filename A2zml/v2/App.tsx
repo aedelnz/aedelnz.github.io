@@ -4,8 +4,6 @@ import { Layout, PageHeader, Typography, Link, Divider, Grid, Card, Button, Popc
 import { IconUp, IconDownload, IconInfoCircle, IconQrcode } from '@arco-design/web-react/icon';
 import { proxyTools, ProxyTool, nodeSubscriptions, NodeSubscription } from './data';
 
-
-
 function App() {
   // 当前年份
   const currentYear = new Date().getFullYear();
@@ -49,8 +47,8 @@ function App() {
             <Grid cols={{ xs: 1, sm: 2, md: 2, lg: 3 }} colGap={12} rowGap={16}>
               {proxyTools.map((item: ProxyTool) => (
                 <Grid.GridItem key={item.id}>
-                  <Card hoverable style={{overflow: 'hidden'}} actions={[<Button type='outline' icon={<IconInfoCircle />} href={item.github} target='_blank'>详细</Button>, <Button type='text' icon={<IconDownload />} href={item.download} target='_blank'>去下载</Button>]}>
-                    <Card.Meta title={item.name} description={<><Typography.Text style={{display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{item.description}</Typography.Text><Typography.Paragraph style={{display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{item.platform.map((platform) => <Tag key={platform} color='blue' style={{ margin: '2px' }}>{platform}</Tag>)}</Typography.Paragraph></>} />
+                  <Card hoverable style={{ overflow: 'hidden' }} actions={[<Button type='outline' icon={<IconInfoCircle />} href={item.github} target='_blank'>详细</Button>, <Button type='text' icon={<IconDownload />} href={item.download} target='_blank'>去下载</Button>]}>
+                    <Card.Meta title={item.name} description={<><Typography.Text style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.description}</Typography.Text><Typography.Paragraph style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.platform.map((platform) => <Tag key={platform} color='blue' style={{ margin: '2px' }}>{platform}</Tag>)}</Typography.Paragraph></>} />
                   </Card>
                 </Grid.GridItem>
               ))}
@@ -61,8 +59,8 @@ function App() {
             <Grid cols={{ xs: 1, sm: 2, md: 2, lg: 3 }} colGap={12} rowGap={16}>
               {nodeSubscriptions.map((item: NodeSubscription) => (
                 <Grid.GridItem key={item.id}>
-                  <Card hoverable style={{overflow: 'hidden'}} actions={[<Popconfirm icon={null} title={<QRCodeSVG value={item.url} size={200} />}><Button type='outline' icon={<IconQrcode />}>二维码</Button></Popconfirm>]}>
-                    <Card.Meta title={item.name} description={<><Input value={toBase64(item.url)} /><Typography.Paragraph style={{display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{item.platform.map((platform) => <Tag key={platform} color='blue' style={{ margin: '2px' }}>{platform}</Tag>)}</Typography.Paragraph></>} />
+                  <Card hoverable style={{ overflow: 'hidden' }} actions={[<Popconfirm icon={null} title={<QRCodeSVG value={item.url} size={200} />}><Button type='outline' icon={<IconQrcode />}>二维码</Button></Popconfirm>]}>
+                    <Card.Meta title={item.name} description={<><Input value={toBase64(item.url)} /><Typography.Paragraph style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.platform.map((platform) => <Tag key={platform} color='blue' style={{ margin: '2px' }}>{platform}</Tag>)}</Typography.Paragraph></>} />
                   </Card>
                 </Grid.GridItem>
               ))}
@@ -73,7 +71,7 @@ function App() {
               <Grid.GridItem>
                 <Typography.Text>输入</Typography.Text>
                 <Input.TextArea placeholder='输入' value={textToEncode} onChange={(value) => setTextToEncode(value)} allowClear autoSize />
-                <Space style={{marginTop: '1rem'}}>
+                <Space style={{ marginTop: '1rem' }}>
                   <Button type='primary' onClick={() => setEncodedResult(toBase64(textToEncode))}>编码</Button>
                   <Button type='primary' onClick={() => setEncodedResult(fromBase64(textToEncode))}>解码</Button>
                 </Space>

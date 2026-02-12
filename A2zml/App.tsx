@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Select, Input, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
 import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconUpload } from '@arco-design/web-react/icon';
+import '../src/App.css'
 import db from './data/db.json';
 import search from './data/search.json';
 
@@ -65,6 +66,7 @@ function App() {
     }
     return (
       <Affix offsetTop={64}>
+        <div>
         <Radio.Group mode='fill' type='button' defaultValue='small'>
           {navData.navToRender.map((item: MenuItemType, index) => (
             <Radio
@@ -79,6 +81,7 @@ function App() {
             </Radio>
           ))}
         </Radio.Group>
+        </div>
       </Affix>
     );
   }
@@ -104,7 +107,7 @@ function App() {
                           {subItem.icon ? (<img alt='avatar' src={subItem.icon} onError={(e) => { e.currentTarget.src = '/stop.png'; }} />) : (<IconCodeSandbox style={{ color: 'var(--color-text-1)' }} />)}
                         </Avatar>
                       </Tooltip>
-                      <Typography.Ellipsis rows={2} expandable={false} style={{ margin: 'auto', fontWeight: 'bold' }}>{subItem.name}</Typography.Ellipsis>
+                      <Typography.Text className='text-ellipsis-2' style={{ margin: 'auto', fontWeight: 'bold' }}>{subItem.name}</Typography.Text>
                     </Space>
                   </Card>
                 </Grid.GridItem>
@@ -159,18 +162,18 @@ function App() {
             </Layout.Header>
           </Affix>
           <Layout.Content style={{ padding: '8px' }}>
-            
-            <Space direction='vertical' style={{ marginBottom: 24, width: '100%',maxWidth: '600px' }}>
-            <div style={{ margin: '1rem auto', display: 'flex', marginBottom: 12, alignItems: 'center', }}>
-              <Input.Group compact style={{ width: '100%' }}>
-                <Select value={searchEngine} showSearch style={{ width: '30%' }} onChange={(value) => setSearchEngine(value)}>
-                  {search.map((item: SearchType, index) => (
-                    <Select.Option key={`a0-${index}`} value={item.name || ''}>{item.name}</Select.Option>
-                  ))}
-                </Select>
-                <Input.Search placeholder='请输入搜索内容' style={{ width: '70%' }} value={searchValue} onChange={setSearchValue} onSearch={handleSearch} />
-              </Input.Group>
-            </div>
+
+            <Space direction='vertical' style={{ marginBottom: 24, width: '100%', maxWidth: '600px' }}>
+              <div style={{ margin: '1rem auto', display: 'flex', marginBottom: 12, alignItems: 'center', }}>
+                <Input.Group compact style={{ width: '100%' }}>
+                  <Select value={searchEngine} showSearch style={{ width: '30%' }} onChange={(value) => setSearchEngine(value)}>
+                    {search.map((item: SearchType, index) => (
+                      <Select.Option key={`a0-${index}`} value={item.name || ''}>{item.name}</Select.Option>
+                    ))}
+                  </Select>
+                  <Input.Search placeholder='请输入搜索内容' style={{ width: '70%' }} value={searchValue} onChange={setSearchValue} onSearch={handleSearch} />
+                </Input.Group>
+              </div>
               <Button type='primary' icon={<IconUpload />} onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')}>收录提交</Button>
             </Space>
             {renderContent()}
