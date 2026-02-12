@@ -38,7 +38,7 @@ function App() {
         <Layout>
           <Affix>
             <Layout.Header style={{ background: 'var(--color-bg-1)' }}>
-              <PageHeader title='风纪委员研究所' subTitle='魔法禁书目录 & 科学超电磁炮' />
+              <PageHeader title='风纪委员研究所' subTitle='科学上网服务' />
               <Divider style={{ margin: '0 auto' }} />
             </Layout.Header>
           </Affix>

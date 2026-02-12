@@ -48,7 +48,7 @@ export const MY_WORKS: MyWork[] = [
     },
     {
         title: '风纪委员研究所',
-        description: '魔法禁书目录和科学超电磁炮',
+        description: '科学上网服务',
         tag: 'Wiki',
         image: '/image/v2.jpg',
         link: '/A2zml/v2/'

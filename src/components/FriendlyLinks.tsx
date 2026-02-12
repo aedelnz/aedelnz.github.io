@@ -39,7 +39,7 @@ const FriendlyLinks = () => {
             <section id="FriendlyLinks" className="full-container">
                 <Space direction={isMobile ? 'vertical' : 'horizontal'} style={{width: '100%', justifyContent: 'space-between', margin: '12px auto'}}>
                     <div>
-                        <Typography.Title heading={4}>友情链接</Typography.Title>
+                        <Typography.Title heading={3} style={{ fontWeight: '700', margin: '0' }}>友情链接</Typography.Title>
                         <Typography.Paragraph>在这个卷王世界里寻找志同道合的小伙伴。</Typography.Paragraph>
                     </div>
                     <Button type='outline' icon={<IconPlus />} onClick={() => setVisible(true)}>申请友链</Button>

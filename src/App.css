@@ -2,6 +2,19 @@
     padding: 6rem 1.5rem;
 }
 
+/* 自适应设备样式 */
+@media (max-width: 768px) {
+    .full-container {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-container {
+        padding: 2rem 0.8rem;
+    }
+}
+
 .card-custom-hover-style {
   transition-property: all;
 }

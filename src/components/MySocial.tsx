@@ -27,11 +27,11 @@ function MySocial() {
             <Divider style={{ margin: '0 auto' }} />
             <section id="MySocial" className="full-container">
                 <Space direction='vertical' align='center' style={{ width: '100%' }}>
-                    <Tag checkable color='green' defaultChecked>My Social</Tag>
-                    <Typography style={{ textAlign: 'center' }}>
-                        <Typography.Title heading={3} style={{ fontWeight: '700', marginTop: '0' }}>咸鱼的社交圈</Typography.Title>
-                        <Typography.Paragraph>在这些地方或许能抓到我（如果我没在睡觉的话）。</Typography.Paragraph>
-                    </Typography>
+                    <Tag size='large' color='arcoblue'>Contact me</Tag>
+                    <div style={{ textAlign: 'center' }}>
+                        <Typography.Title heading={3} style={{ fontWeight: '700', margin: '0' }}>社交圈</Typography.Title>
+                        <Typography.Paragraph></Typography.Paragraph>
+                    </div>
                 </Space>
 
                 <Space wrap style={{ display: 'flex', justifyContent: 'center' }}>
