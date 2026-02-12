@@ -4,7 +4,7 @@ import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconUpload } from '@arco
 import '../src/App.css'
 import db from './data/db.json';
 import search from './data/search.json';
-import { MenuItemType, CardItemType, SearchType } from '../constants/Data';
+import { MenuItemType, CardItemType, SearchType } from './Data';
 import SubMenuItem from './SubMenuItem';
 
 function App() {
@@ -14,19 +14,7 @@ function App() {
   const [collapsed, setCollapsed] = useState(false);
   // 状态管理
   const [selectedKeys, setSelectedKeys] = useState('0-0');
-  // 递归渲染菜单函数
-  const renderMenuItem = (menuData: MenuItemType[], parentKey = '') => {
-    return menuData.map((item, index) => {
-      return (<Menu.Item key={`${parentKey}-${index}`}>{item.title}</Menu.Item>);
-    });
-  }
-  // 递归渲染子菜单函数
-  const renderSubMenu = (menuData: MenuItemType[]) => {
-    return menuData.map((item, index) => {
-      const key = `${index}`;
-      return (<Menu.SubMenu key={key} title={<span>{item.icon ? <img className='arco-icon arco-icon-code-sandbox' src={item.icon} alt='icon' /> : <IconCodeSandbox />}{item.title}</span>}>{renderMenuItem(item.nav || [], key)}</Menu.SubMenu>);
-    });
-  };
+
   // 数据处理函数
   const getCurrentNavData = () => {
     const [penKey, navId] = selectedKeys.split('-').map(Number);

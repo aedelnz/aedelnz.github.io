@@ -1,12 +1,12 @@
 // 标题
-interface MenuItemType {
+export interface MenuItemType {
   title?: string;
   nav?: MenuItemType[];
   icon?: string;
   id?: number;
 }
 // 内容
-interface CardItemType {
+export interface CardItemType {
   name?: string;
   desc?: string;
   icon?: string;
@@ -14,7 +14,7 @@ interface CardItemType {
   id?: number;
 }
 // 搜索
-interface SearchType {
+export interface SearchType {
   name?: string;
   url?: string;
 }
