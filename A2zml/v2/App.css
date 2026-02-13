@@ -1,0 +1,194 @@
+/* 全局变量 */
+:root {
+    /* 御坂美琴主题色 */
+    --misaka-black: #000000;
+    --misaka-white: #ffffff;
+    --misaka-blue: #00a0e9;
+    --misaka-light-blue: #66c5ff;
+    --misaka-yellow: #ffd700;
+    --misaka-gold: #ffcc00;
+    --misaka-red: #ff4500;
+    --misaka-gray: #f0f0f0;
+    --misaka-dark-gray: #333333;
+
+    /* 电力效果渐变 */
+    --misaka-gradient: linear-gradient(135deg, var(--misaka-blue), var(--misaka-light-blue));
+    --misaka-button-gradient: linear-gradient(90deg, var(--misaka-blue), var(--misaka-yellow));
+
+    /* 阴影效果 */
+    --misaka-shadow: 0 4px 12px rgba(0, 160, 233, 0.3);
+    --misaka-hover-shadow: 0 6px 16px rgba(0, 160, 233, 0.4);
+}
+
+/* 全局样式 */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+/* 头部样式 */
+.misaka-header {
+    background: var(--misaka-white) !important;
+    color: var(--misaka-white);
+    box-shadow: var(--misaka-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.misaka-header .arco-page-header-title {
+    color: var(--misaka-white) !important;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--misaka-blue);
+}
+
+.misaka-header .arco-page-header-sub-title {
+    color: var(--misaka-light-blue) !important;
+}
+
+/* 卡片样式 */
+.misaka-card {
+    border-radius: 8px;
+    border: 1px solid var(--misaka-light-blue);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.misaka-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--misaka-hover-shadow);
+    border-color: var(--misaka-blue);
+}
+
+.misaka-card .arco-card-meta-title {
+    color: var(--misaka-dark-gray);
+    font-weight: bold;
+}
+
+.misaka-card .arco-card-meta-description {
+    color: var(--misaka-dark-gray);
+}
+
+/* 按钮样式 */
+.misaka-button {
+    transition: all 0.3s ease;
+}
+
+.misaka-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--misaka-shadow);
+}
+
+.misaka-primary-button {
+    background: var(--misaka-gradient) !important;
+    border: none !important;
+    color: var(--misaka-white) !important;
+}
+
+.misaka-outline-button {
+    border-color: var(--misaka-blue) !important;
+    color: var(--misaka-blue) !important;
+}
+
+.misaka-outline-button:hover {
+    background: var(--misaka-blue) !important;
+    color: var(--misaka-white) !important;
+}
+
+/* 标签样式 */
+.misaka-tag {
+    background: var(--misaka-light-blue) !important;
+    border-color: var(--misaka-blue) !important;
+    color: var(--misaka-white) !important;
+}
+
+/* 输入框样式 */
+.misaka-input .arco-input-inner-wrapper {
+    border-color: var(--misaka-light-blue) !important;
+}
+
+.misaka-input .arco-input-inner-wrapper:focus-within {
+    box-shadow: 0 0 0 2px rgba(0, 160, 233, 0.2) !important;
+    border-color: var(--misaka-blue) !important;
+}
+
+/* 标题样式 */
+.misaka-title {
+    color: var(--misaka-dark-gray);
+    position: relative;
+    display: inline-block;
+}
+
+.misaka-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--misaka-gradient);
+}
+
+/* 分隔线样式 */
+.misaka-divider {
+    background: var(--misaka-gradient) !important;
+    height: 2px !important;
+}
+
+/* 页脚样式 */
+.misaka-footer {
+    background: var(--misaka-white) !important;
+    color: var(--misaka-white);
+    position: relative;
+}
+
+.misaka-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--misaka-gradient);
+}
+
+.misaka-footer a {
+    color: var(--misaka-light-blue) !important;
+}
+
+.misaka-footer a:hover {
+    color: var(--misaka-yellow) !important;
+}
+
+/* 回到顶部按钮 */
+.misaka-backtop {
+    background: var(--misaka-gradient) !important;
+    border: none !important;
+    color: var(--misaka-white) !important;
+    box-shadow: var(--misaka-shadow);
+}
+
+.misaka-backtop:hover {
+    transform: scale(1.1);
+    box-shadow: var(--misaka-hover-shadow);
+}
+
+/* 电力效果动画 */
+@keyframes electric-pulse {
+    0% {
+        box-shadow: 0 0 5px var(--misaka-blue);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--misaka-blue), 0 0 30px var(--misaka-light-blue);
+    }
+
+    100% {
+        box-shadow: 0 0 5px var(--misaka-blue);
+    }
+}
+
+.electric-pulse {
+    animation: electric-pulse 2s infinite;
+}
