@@ -7,6 +7,10 @@ body {
     background-color: var(--color-bg-1);
 }
 
+.divider {
+    margin: 0
+}
+
 .footer {
     background-color: var(--color-bg-1);
 }
