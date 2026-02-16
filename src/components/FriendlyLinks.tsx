@@ -86,7 +86,7 @@ const FriendlyLinks = () => {
                     {getFriendlyLinks().map((friend, index) => (
                         <Grid.GridItem key={index}>
                             <Card hoverable={true} style={{height: '100px'}} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
-                                <Space align='center'>
+                                <Space align='center' style={{margin: 'auto 0'}}>
                                     <Avatar size={60} shape='square'>
                                         <img alt='avatar' src={friend.image} />
                                     </Avatar>

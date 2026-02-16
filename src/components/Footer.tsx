@@ -17,7 +17,7 @@ function Footer() {
                 </Typography.Paragraph>
             </div>
             <BackTop visibleHeight={600}>
-                <Button size='large' type='outline' icon={<IconCaretUp />} />
+                <Button type='outline' icon={<IconCaretUp />} />
             </BackTop>
         </>
     )
