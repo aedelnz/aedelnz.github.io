@@ -29,7 +29,7 @@ function Header() {
                         style={{ background: 'var(--color-bg-2)' }}
                         title={<span>画的<span style={{ color: 'var(--color-data-1)' }}>个人记录</span></span>}
                         extra={isMobile ? (
-                            <Button size='large' type='secondary' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
+                            <Button type='secondary' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
                         ) : (
                             <Space>
                                 {NAV_LINKS.map((friend, index) => (
