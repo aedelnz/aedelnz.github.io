@@ -1,5 +1,5 @@
 import { Divider, Typography, Button, Link, BackTop } from '@arco-design/web-react';
-import { IconCaretUp } from '@arco-design/web-react/icon';
+import { IconDoubleUp } from '@arco-design/web-react/icon';
 
 function Footer() {
     // 当前年份
@@ -8,7 +8,7 @@ function Footer() {
     return (
         <>
             <Divider style={{ margin: '0 auto' }} />
-            <div style={{ padding: '1.25rem', textAlign: 'center' }}>
+            <div style={{ padding: '1.45rem', textAlign: 'center' }}>
                 <Typography.Paragraph bold>Copyright © 2020 - {currentYear}  <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.</Typography.Paragraph>
                 <Typography.Paragraph>
                     <Link href='https://beian.miit.gov.cn'>湘ICP备2022000040号</Link>
@@ -17,7 +17,7 @@ function Footer() {
                 </Typography.Paragraph>
             </div>
             <BackTop visibleHeight={600}>
-                <Button type='outline' icon={<IconCaretUp />} />
+                <Button size='large' type='outline' icon={<IconDoubleUp />} />
             </BackTop>
         </>
     )
