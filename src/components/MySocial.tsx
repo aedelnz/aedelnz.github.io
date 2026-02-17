@@ -20,7 +20,7 @@ function MySocial() {
 
     return (
         <>
-            <Divider style={{ margin: '0 auto' }} />
+            <Divider />
             <section id="MySocial" className="full-container">
                 <Space direction='vertical' align='center' style={{ width: '100%' }}>
                     <Tag size='large' color='cyan'>Contact me</Tag>

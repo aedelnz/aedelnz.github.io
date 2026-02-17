@@ -5,7 +5,7 @@ function MyWork() {
 
     return (
         <>
-            <Divider style={{ margin: '0 auto' }} />
+            <Divider />
             <section id="MyWork" className="full-container">
                 <Space style={{margin: '12px auto' }}>
                     <div>

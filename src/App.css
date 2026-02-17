@@ -14,6 +14,9 @@
     padding: 2rem 0.8rem;
   }
 }
+.arco-divider.arco-divider-horizontal {
+  margin: 0px auto
+}
 
 .card-custom-hover-style {
   transition-property: all;

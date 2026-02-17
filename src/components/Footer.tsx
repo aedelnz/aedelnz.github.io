@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <>
-            <Divider style={{ margin: '0 auto' }} />
+            <Divider />
             <div style={{ padding: '1.45rem', textAlign: 'center' }}>
                 <Typography.Paragraph bold>Copyright © 2020 - {currentYear}  <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.</Typography.Paragraph>
                 <Typography.Paragraph>

@@ -29,7 +29,7 @@ function Header() {
                         style={{ background: 'var(--color-bg-2)' }}
                         title={<span>画的<span style={{ color: 'var(--color-data-1)' }}>个人记录</span></span>}
                         extra={isMobile ? (
-                            <Button type='secondary' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
+                            <Button type='text' icon={<IconMenuFold />} onClick={() => { setVisible(true); }} />
                         ) : (
                             <Space>
                                 {NAV_LINKS.map((friend, index) => (
@@ -38,7 +38,7 @@ function Header() {
                             </Space>
                         )}
                     />
-                    <Divider style={{ margin: '0 auto' }} />
+                    <Divider />
                 </div>
             </Affix>
             <Drawer

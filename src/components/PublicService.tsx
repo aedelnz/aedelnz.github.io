@@ -5,7 +5,7 @@ function PublicService() {
 
     return (
         <>
-            <Divider style={{ margin: '0 auto' }} />
+            <Divider />
             <section id="PublicService" className="full-container">
                 <Space direction='vertical' align='center' style={{ width: '100%' }}>
                     <Tag size='large' color='arcoblue'>Public welfare</Tag>

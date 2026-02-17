@@ -35,7 +35,7 @@ const FriendlyLinks = () => {
 
     return (
         <>
-            <Divider style={{ margin: '0 auto' }} />
+            <Divider />
             <section id="FriendlyLinks" className="full-container">
                 <Space direction={isMobile ? 'vertical' : 'horizontal'} style={{width: '100%', justifyContent: 'space-between', margin: '12px auto'}}>
                     <div>
