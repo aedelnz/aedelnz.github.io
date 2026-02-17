@@ -18,7 +18,7 @@ function PublicService() {
                 <Grid cols={{ xs: 1, sm: 1, md: 2, lg: 3, xl: 3 }} colGap={16} rowGap={24}>
                     {PUBLIC_SERVICE.map((friend, index) => (
                         <Grid.GridItem key={index}>
-                            <Card hoverable={true} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
+                            <Card hoverable={true} className='card-custom-hover-style card-custom' onClick={() => window.open(friend.link, '_blank')}>
                                 <Space>
                                     <Avatar size={80} shape='square'>
                                         <img alt='avatar' src={friend.image} />

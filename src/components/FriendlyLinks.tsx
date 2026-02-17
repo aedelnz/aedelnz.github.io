@@ -85,8 +85,8 @@ const FriendlyLinks = () => {
                 <Grid cols={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 5 }} colGap={8} rowGap={6}>
                     {getFriendlyLinks().map((friend, index) => (
                         <Grid.GridItem key={index}>
-                            <Card hoverable={true} style={{height: '100px'}} className='card-custom-hover-style' onClick={() => window.open(friend.link, '_blank')}>
-                                <Space align='center' style={{margin: 'auto 0'}}>
+                            <Card hoverable={true} style={{height: '100px'}} className='card-custom-hover-style card-custom' onClick={() => window.open(friend.link, '_blank')}>
+                                <Space align='center'>
                                     <Avatar size={60} shape='square'>
                                         <img alt='avatar' src={friend.image} />
                                     </Avatar>
