@@ -62,14 +62,14 @@ export const MY_WORKS: MyWork[] = [
     },
     {
         title: 'TP 下载站',
-        description: '存储网络搜集资源',
+        description: 'Storage network resource collection',
         tag: 'Download',
         image: '/image/tp.jpg',
         link: 'https://download.jixiejidiguan.top/'
     },
     {
         title: 'HP 状态仪表盘',
-        description: '监控HP服务器状态',
+        description: 'Monitor HP server status',
         tag: 'Monitor',
         image: '/image/hp.jpg',
         link: 'https://site.jixiejidiguan.eu.org'

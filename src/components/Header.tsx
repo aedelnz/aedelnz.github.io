@@ -41,13 +41,11 @@ function Header() {
                     <Divider />
                 </div>
             </Affix>
-            <Drawer
-                width={260}
+            <Drawer width={260}
                 title={<span>画的导航</span>}
                 visible={visible}
                 footer={null}
-                onCancel={() => { setVisible(false); }}
-            >
+                onCancel={() => { setVisible(false); }}>
                 <Space direction='vertical' style={{ width: '100%' }}>
                     {NAV_LINKS.map((friend, index) => (
                         <Button key={index} size='large' type='secondary' long onClick={() => { setVisible(false); }} href={friend.link} style={{ fontWeight: '700', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>{friend.title}</Button>
