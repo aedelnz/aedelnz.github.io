@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Select, Input, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
-import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconUpload } from '@arco-design/web-react/icon';
+import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
+import { IconSwap, IconShrink, IconCodeSandbox, IconUp } from '@arco-design/web-react/icon';
 import '../src/App.css'
 import db from './data/db.json';
 import search from './data/search.json';
-import { MenuItemType, CardItemType, SearchType } from './Data';
+import { MenuItemType, CardItemType } from './Data';
 import SubMenuItem from './SubMenuItem';
+import InputSearch from './InputSearch';
+
+
 
 function App() {
   // 当前年份
@@ -87,70 +90,7 @@ function App() {
       </>
     );
   }
-  // 搜索功能处理
-  const [searchEngine, setSearchEngine] = useState(search[0].name);
-  const [searchValue, setSearchValue] = useState('');
-  const [searchResults, setSearchResults] = useState<CardItemType[]>([]);
-  const [showResults, setShowResults] = useState(false);
-  
-  // 搜索功能
-  const handleSearch = (value: string) => {
-    const engine = search.find((item: SearchType) => item.name === searchEngine);
-    if (engine && value.trim()) {
-      if (searchEngine === '本站') {
-        // 本站搜索
-        const results = searchInDb(value.trim());
-        setSearchResults(results);
-        setShowResults(true);
-      } else {
-        // 外部搜索引擎
-        window.open(`${engine.url}${encodeURIComponent(value)}`, '_blank');
-        setShowResults(false);
-      }
-    } else {
-      setShowResults(false);
-    }
-  };
-  
-  // 在 db.json 中搜索
-  const searchInDb = (keyword: string): CardItemType[] => {
-    const results: CardItemType[] = [];
-    
-    // 递归搜索函数
-    const searchRecursive = (data: CardItemType[] | CardItemType) => {
-      if (Array.isArray(data)) {
-        data.forEach(item => {
-          searchRecursive(item);
-        });
-      } else if (typeof data === 'object' && data !== null) {
-        // 检查是否是网站条目
-        if (data.name && data.url) {
-          const nameMatch = data.name?.toLowerCase().includes(keyword.toLowerCase());
-          const descMatch = data.desc?.toLowerCase().includes(keyword.toLowerCase());
-          const urlMatch = data.url?.toLowerCase().includes(keyword.toLowerCase());
-          
-          if (nameMatch || descMatch || urlMatch) {
-            results.push({
-              name: data.name,
-              desc: data.desc,
-              url: data.url,
-              icon: data.icon
-            });
-          }
-        }
-        
-        // 继续递归搜索子项
-        Object.values(data).forEach(value => {
-          if (Array.isArray(value) || (typeof value === 'object' && value !== null)) {
-            searchRecursive(value);
-          }
-        });
-      }
-    };
-    
-    searchRecursive(db);
-    return results;
-  };
+
 
   return (
     <>
@@ -186,49 +126,9 @@ function App() {
             </Layout.Header>
           </Affix>
           <Layout.Content style={{ padding: '8px' }}>
+            {InputSearch(db, search)}
 
-            <Space direction='vertical' style={{ marginBottom: 24, width: '100%', maxWidth: '600px' }}>
-              <div style={{ margin: '1rem auto', display: 'flex', marginBottom: 12, alignItems: 'center', }}>
-                <Input.Group compact style={{ width: '100%' }}>
-                  <Select value={searchEngine} showSearch style={{ width: '30%' }} onChange={(value) => setSearchEngine(value)}>
-                    {search.map((item: SearchType, index) => (
-                      <Select.Option key={`a0-${index}`} value={item.name || ''}>{item.name}</Select.Option>
-                    ))}
-                  </Select>
-                  <Input.Search placeholder='请输入搜索内容' style={{ width: '70%' }} value={searchValue} onChange={setSearchValue} onSearch={handleSearch} />
-                </Input.Group>
-              </div>
-              <Button type='primary' icon={<IconUpload />} onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')}>收录提交</Button>
-            </Space>
             
-            {/* 搜索结果显示 */}
-            {showResults && (
-              <div style={{ marginBottom: 24 }}>
-                <Card title={`搜索结果 (${searchResults.length})`}>
-                  {searchResults.length > 0 ? (
-                    <Space direction='vertical' style={{ width: '100%' }}>
-                      {searchResults.map((result, index) => (
-                        <Card key={index} hoverable={true} style={{ width: '100%' }} onClick={() => window.open(result.url, '_blank')}>
-                          <Space align='center'>
-                            <Avatar size={40} shape='square'>
-                              {result.icon ? <img alt='icon' src={result.icon} /> : null}
-                            </Avatar>
-                            <div style={{ flex: 1 }}>
-                              <Typography.Title heading={5} style={{ margin: '0' }}>{result.name}</Typography.Title>
-                              {result.desc && (
-                                <Typography.Paragraph style={{ margin: '0' }} className='text-ellipsis-2'>{result.desc}</Typography.Paragraph>
-                              )}
-                            </div>
-                          </Space>
-                        </Card>
-                      ))}
-                    </Space>
-                  ) : (
-                    <Typography.Paragraph style={{ textAlign: 'center' }}>没有找到匹配的结果</Typography.Paragraph>
-                  )}
-                </Card>
-              </div>
-            )}
             
             {renderContent()}
             {renderContentBody()}
