@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
-import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconHome } from '@arco-design/web-react/icon';
+import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Button, BackTop, Affix } from '@arco-design/web-react';
+import { IconSwap, IconShrink, IconUp, IconHome } from '@arco-design/web-react/icon';
 import '../src/App.css'
 import ContentCard from './ContentCard';
 import db from './data/db.json';

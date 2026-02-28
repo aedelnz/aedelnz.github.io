@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Input, Space, Select, Button, Card, Typography, Grid, } from '@arco-design/web-react';
 import { IconUpload } from '@arco-design/web-react/icon';
 import { CardItemType, SearchType } from './Data';
