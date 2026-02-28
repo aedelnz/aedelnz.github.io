@@ -115,7 +115,7 @@ function App() {
                 subTitle='一个追番导航站'
                 extra={
                   <>
-                    <Button type='secondary' icon={<IconHome />}></Button>
+                    <Button type='secondary' icon={<IconHome />} href='/'></Button>
                   </>
                 }
               />

@@ -8,7 +8,6 @@ function InputSearch(db: CardItemType[], search: SearchType[]) {
   const [searchEngine, setSearchEngine] = useState(search[0].name);
   const [searchValue, setSearchValue] = useState('');
   const [showResults, setShowResults] = useState(false);
-  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const flattenedDb = useMemo(() => {
     const results: CardItemType[] = [];
@@ -62,25 +61,24 @@ function InputSearch(db: CardItemType[], search: SearchType[]) {
     }
   };
 
-  useEffect(() => {
-    if (searchTimeoutRef.current) {
-      clearTimeout(searchTimeoutRef.current);
-    }
-
-    if (searchEngine === '本站' && searchValue.trim()) {
-      searchTimeoutRef.current = setTimeout(() => {
+  const debouncedValue = useMemo(() => {
+    const handler = setTimeout(() => {
+      if (searchEngine === '本站' && searchValue.trim()) {
         setShowResults(true);
-      }, 200);
-    } else if (!searchValue.trim()) {
-      setShowResults(false);
-    }
-
-    return () => {
-      if (searchTimeoutRef.current) {
-        clearTimeout(searchTimeoutRef.current);
       }
+    }, 300);
+    
+    return () => {
+      clearTimeout(handler);
     };
   }, [searchValue, searchEngine]);
+
+  useEffect(() => {
+    if (!searchValue.trim()) {
+      setShowResults(false);
+    }
+    return debouncedValue;
+  }, [debouncedValue, searchValue]);
 
   return (
     <>
