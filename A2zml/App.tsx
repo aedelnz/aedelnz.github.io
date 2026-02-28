@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Card, Space, Avatar, Button, BackTop, Tooltip, Affix } from '@arco-design/web-react';
-import { IconSwap, IconShrink, IconCodeSandbox, IconUp } from '@arco-design/web-react/icon';
+import { IconSwap, IconShrink, IconCodeSandbox, IconUp, IconHome } from '@arco-design/web-react/icon';
 import '../src/App.css'
+import ContentCard from './ContentCard';
 import db from './data/db.json';
 import search from './data/search.json';
 import { MenuItemType, CardItemType } from './Data';
@@ -72,16 +73,7 @@ function App() {
             <Grid cols={{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6, xxl: 6 }} colGap={2} rowGap={3}>
               {item.nav?.map((subItem: CardItemType, index) => (
                 <Grid.GridItem key={index}>
-                  <Card hoverable={true} bodyStyle={{ padding: '2px', height: '45px', display: 'flex', alignItems: 'center' }} onClick={() => window.open(subItem.url, '_blank')}>
-                    <Space align='center'>
-                      <Tooltip content={subItem.desc}>
-                        <Avatar size={43} shape='square' style={{ backgroundColor: 'var(--color-menu-dark-hover)' }}>
-                          {subItem.icon ? (<img alt='avatar' src={subItem.icon} onError={(e) => { e.currentTarget.src = '/stop.png'; }} />) : (<IconCodeSandbox style={{ color: 'var(--color-text-1)' }} />)}
-                        </Avatar>
-                      </Tooltip>
-                      <Typography.Text className='text-ellipsis-2' style={{ margin: 'auto', fontWeight: 'bold' }}>{subItem.name}</Typography.Text>
-                    </Space>
-                  </Card>
+                  <ContentCard item={subItem} />
                 </Grid.GridItem>
               ))}
             </Grid>
@@ -121,6 +113,11 @@ function App() {
               <PageHeader
                 title='爱莫能助'
                 subTitle='一个追番导航站'
+                extra={
+                  <>
+                    <Button type='secondary' icon={<IconHome />}></Button>
+                  </>
+                }
               />
               <Divider style={{ margin: '0 auto' }} />
             </Layout.Header>

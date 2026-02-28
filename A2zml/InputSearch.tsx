@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
-import { Input, Space, Select, Button, Card, Avatar, Typography } from '@arco-design/web-react';
+import { Input, Space, Select, Button, Card, Typography, Grid, } from '@arco-design/web-react';
 import { IconUpload } from '@arco-design/web-react/icon';
 import { CardItemType, SearchType } from './Data';
+import ContentCard from './ContentCard';
 
 function InputSearch(db: CardItemType[], search: SearchType[]) {
   const [searchEngine, setSearchEngine] = useState(search[0].name);
@@ -100,23 +101,16 @@ function InputSearch(db: CardItemType[], search: SearchType[]) {
         <div style={{ marginBottom: 24 }}>
           <Card title={`搜索结果 (${searchResults.length})`}>
             {searchResults.length > 0 ? (
-              <Space direction='vertical' style={{ width: '100%' }}>
-                {searchResults.map((result, index) => (
-                  <Card key={index} hoverable={true} style={{ width: '100%' }} onClick={() => window.open(result.url, '_blank')}>
-                    <Space align='center'>
-                      <Avatar size={40} shape='square'>
-                        {result.icon ? <img alt='icon' src={result.icon} /> : null}
-                      </Avatar>
-                      <div style={{ flex: 1 }}>
-                        <Typography.Title heading={5} style={{ margin: '0' }}>{result.name}</Typography.Title>
-                        {result.desc && (
-                          <Typography.Paragraph style={{ margin: '0' }} className='text-ellipsis-2'>{result.desc}</Typography.Paragraph>
-                        )}
-                      </div>
-                    </Space>
-                  </Card>
-                ))}
-              </Space>
+              <>
+                <Grid cols={{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6, xxl: 6 }} colGap={2} rowGap={3}>
+                  {searchResults.map((subItem: CardItemType, index) => (
+                    <Grid.GridItem key={index}>
+                      <ContentCard item={subItem} />
+                    </Grid.GridItem>
+                  ))}
+                </Grid>
+              </>
+
             ) : (
               <Typography.Paragraph style={{ textAlign: 'center' }}>没有找到匹配的结果</Typography.Paragraph>
             )}
