@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Layout, PageHeader, Typography, Link, Divider, Grid, Card, Button, Popconfirm, BackTop, Affix, Tag, Input, Space } from '@arco-design/web-react';
-import { IconUp, IconDownload, IconInfoCircle, IconQrcode } from '@arco-design/web-react/icon';
+import { IconUp, IconDownload, IconInfoCircle, IconQrcode, IconHome } from '@arco-design/web-react/icon';
 import { proxyTools, ProxyTool, nodeSubscriptions, NodeSubscription } from './data';
 import './App.css';
 
@@ -37,7 +37,15 @@ function App() {
         <Layout>
           <Affix>
             <Layout.Header className="header">
-              <PageHeader title='风纪委员研究所' subTitle='科学上网服务' />
+              <PageHeader
+                title='风纪委员研究所'
+                subTitle='科学上网服务'
+                extra={
+                  <>
+                    <Button type='secondary' icon={<IconHome />} href='/'></Button>
+                  </>
+                }
+              />
               <Divider style={{ margin: '0 auto' }} />
             </Layout.Header>
           </Affix>
