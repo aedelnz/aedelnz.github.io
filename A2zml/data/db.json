@@ -2177,8 +2177,44 @@
             "id": 313
           },
           {
-            "title": "系统安装",
-            "nav": [],
+            "title": "系统制作",
+            "nav": [
+              {
+                "name": "ventoy",
+                "desc": "简单来说，Ventoy是一个制作可启动U盘的开源工具。",
+                "icon": "https://www.ventoy.net/static/img/ventoy.png",
+                "url": "https://www.ventoy.net/",
+                "id": 315
+              },
+              {
+                "name": "Rufus",
+                "desc": "Rufus是一个小巧但功能强大的工具，用于创建可启动USB驱动器，支持Windows、Linux等系统。",
+                "icon": "https://rufus.ie/favicon.ico",
+                "url": "https://rufus.ie/",
+                "id": 316
+              },
+              {
+                "name": "Etcher",
+                "desc": "Etcher是一个跨平台的系统镜像烧录工具，支持Windows、macOS和Linux。",
+                "icon": "https://etcher.io/favicon.ico",
+                "url": "https://etcher.io/",
+                "id": 317
+              },
+              {
+                "name": "Win32 Disk Imager",
+                "desc": "Win32 Disk Imager是一款经典的Windows系统U盘制作工具，支持将镜像文件写入USB设备。",
+                "icon": "https://sourceforge.net/favicon.ico",
+                "url": "https://sourceforge.net/projects/win32diskimager/",
+                "id": 318
+              },
+              {
+                "name": "UNetbootin",
+                "desc": "UNetbootin是一个跨平台的启动U盘创建工具，支持从ISO文件或网络下载创建启动U盘。",
+                "icon": "https://unetbootin.github.io/favicon.ico",
+                "url": "https://unetbootin.github.io/",
+                "id": 319
+              }
+            ],
             "icon": "",
             "id": 314
           },
