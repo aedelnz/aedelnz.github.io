@@ -2196,7 +2196,7 @@
               {
                 "name": "Etcher",
                 "desc": "Etcher是一个跨平台的系统镜像烧录工具，支持Windows、macOS和Linux。",
-                "icon": "https://etcher.io/favicon.ico",
+                "icon": "https://etcher.balena.io/images/balenaEtcher_logo_white.svg",
                 "url": "https://etcher.io/",
                 "id": 317
               },
