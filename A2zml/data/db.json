@@ -2192,10 +2192,67 @@
             "id": 315
           },
           {
-            "title": "解压软件",
-            "nav": [],
+            "title": "分区工具",
+            "nav": [
+              {
+                "name": "DiskGenius",
+                "desc": "DiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
+                "icon": "https://www.diskgenius.cn/favicon.ico",
+                "url": "https://www.diskgenius.cn/",
+                "id": 317
+              },
+              {
+                "name": "傲梅分区助手",
+                "desc": "傲梅致力于数据安全领域，为用户提供安全可靠的傲梅分区助手、轻松备份、数据恢复软件恢复之星以及远程控制软件Anyviewer等。",
+                "icon": "https://www.disktool.cn/favicon.ico",
+                "url": "https://www.disktool.cn/",
+                "id": 318
+              },
+              {
+                "name": "易我分区大师",
+                "desc": "易我分区大师专业版（EaseUS Partition Master）是最好的电脑硬盘分区工具，能快速解决磁盘容量不足问题和调整硬盘或RAID上的磁盘分区大小。适用于 Windows 10/8/7/Vista/XP。",
+                "icon": "https://www.easeus.com.cn/images_2016/fav.ico",
+                "url": "https://www.easeus.com.cn/chanpin-fenquzy.html",
+                "id": 319
+              },
+              {
+                "name": "TestDisk",
+                "desc": "",
+                "icon": "https://www.cgsecurity.org/favicon.ico",
+                "url": "https://www.cgsecurity.org/wiki/TestDisk_CN",
+                "id": 320
+              },
+              {
+                "name": "MiniTool",
+                "desc": "As a partition magic alternative, MiniTool Partition Wizard is the latest partition manager software that can be used to manage partitions on Windows 11/10/8/7 and Server 2003/2008/2012/2016/2019.",
+                "icon": "https://www.partitionwizard.com/favicon.ico",
+                "url": "https://www.partitionwizard.com/",
+                "id": 321
+              }
+            ],
             "icon": "",
             "id": 316
+          },
+          {
+            "title": "解压软件",
+            "nav": [
+              {
+                "name": "7-Zip(7Zip)",
+                "desc": "一款拥有极高压缩比的开源压缩软件，支持 7z、ZIP、RAR 等多种格式，基于 GNU LGPL 许可协议发布。",
+                "icon": "https://ts2.tc.mm.bing.net/th/id/OSAAS.D27DD120F3A38F51FB7851515FE91A65",
+                "url": "https://www.7-zip.org/",
+                "id": 323
+              },
+              {
+                "name": "Bandizip",
+                "desc": "Bandizip 是一个强大的多功能压缩文件管理工具，可提供很快的解压缩速度和其他各种实用功能。这是一个免费的软件，其付费版本更是可以使用更多的实用功能。",
+                "icon": "https://ts2.tc.mm.bing.net/th/id/ODF.keTrH3Do0A1CN10FDRQUSA",
+                "url": "https://www.bandisoft.com/bandizip/",
+                "id": 324
+              }
+            ],
+            "icon": "",
+            "id": 322
           },
           {
             "title": "系统制作",
@@ -2204,40 +2261,40 @@
                 "name": "ventoy",
                 "desc": "简单来说，Ventoy是一个制作可启动U盘的开源工具。",
                 "icon": "https://www.ventoy.net/static/img/ventoy.png",
-                "url": "https://www.ventoy.net/",
-                "id": 318
+                "url": "https://www.ventoy.net/cn/index.html",
+                "id": 326
               },
               {
                 "name": "Rufus",
                 "desc": "Rufus是一个小巧但功能强大的工具，用于创建可启动USB驱动器，支持Windows、Linux等系统。",
-                "icon": "https://rufus.ie/favicon.ico",
-                "url": "https://rufus.ie/",
-                "id": 319
+                "icon": "https://ts4.tc.mm.bing.net/th/id/ODF.MGCYQ-kaBJIOsCFW4IJ_Dw",
+                "url": "https://rufus.ie/zh/",
+                "id": 327
               },
               {
-                "name": "Etcher",
+                "name": "balenaEtcher",
                 "desc": "Etcher是一个跨平台的系统镜像烧录工具，支持Windows、macOS和Linux。",
-                "icon": "https://etcher.balena.io/images/balenaEtcher_logo_white.svg",
-                "url": "https://etcher.io/",
-                "id": 320
+                "icon": "https://ts1.tc.mm.bing.net/th/id/ODF.aF66vf4WK6vkmaxFilEBfg",
+                "url": "https://etcher.balena.io/",
+                "id": 328
               },
               {
                 "name": "Win32 Disk Imager",
                 "desc": "Win32 Disk Imager是一款经典的Windows系统U盘制作工具，支持将镜像文件写入USB设备。",
                 "icon": "https://sourceforge.net/favicon.ico",
                 "url": "https://sourceforge.net/projects/win32diskimager/",
-                "id": 321
+                "id": 329
               },
               {
                 "name": "UNetbootin",
                 "desc": "UNetbootin是一个跨平台的启动U盘创建工具，支持从ISO文件或网络下载创建启动U盘。",
                 "icon": "https://unetbootin.github.io/favicon.ico",
                 "url": "https://unetbootin.github.io/",
-                "id": 322
+                "id": 330
               }
             ],
             "icon": "",
-            "id": 317
+            "id": 325
           },
           {
             "title": "浏览器",
@@ -2247,60 +2304,60 @@
                 "desc": "Chrome 是 Google 的官方网络浏览器，速度飞快，安全可靠，并且支持自定义。欢迎立即下载，随心定制。",
                 "icon": "https://www.google.cn/chrome/static/images/favicons/favicon-16x16.png",
                 "url": "https://www.google.cn/intl/zh-CN/chrome/",
-                "id": 324
+                "id": 332
               },
               {
                 "name": "Microsoft Edge",
                 "desc": "Microsoft Edge is your AI browser. A new way to pilot the web. Learn more about built-in Edge features and capabilities that help you achieve more.",
                 "icon": "https://edgecdn-embza6g8cacagcbn.z01.azurefd.net/welcome/static/favicon.png",
                 "url": "https://www.microsoft.com/edge/",
-                "id": 325
+                "id": 333
               },
               {
                 "name": "Firefox",
                 "desc": "下载适用于 Windows、Mac 和 Linux 的 Firefox。Firefox 一款免费的网络浏览器，由致力于改善互联网健康与隐私的非营利组织 Mozilla 全力支持。",
                 "icon": "https://www.firefox.com/media/img/favicons/firefox/browser/apple-touch-icon.79c2abeb4e35.png",
                 "url": "https://www.firefox.com/",
-                "id": 326
+                "id": 334
               },
               {
                 "name": "Opera",
                 "desc": "Opera GX is the browser built specifically for gamers. Get unparalleled gaming and browsing features, packed in a powerful revolutionary browser.",
                 "icon": "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/gx/images/welcomeGx/favicon/apple-touch-icon.16b2fb5b1ecc.png",
                 "url": "https://www.opera.com",
-                "id": 327
+                "id": 335
               },
               {
                 "name": "Brave",
                 "desc": "Brave 浏览器是一款快速、私密且安全的网络浏览器，适用于 PC、Mac 和移动设备。立即下载即可享受更快的无广告浏览体验，并通过阻止跟踪软件来节省数据和电池寿命。",
-                "icon": "https://brave.com/favicon.ico",
+                "icon": "https://ts3.tc.mm.bing.net/th/id/OSAAS.E7D56858FA9104260B3B657AB1B5A649",
                 "url": "https://brave.com/zh/",
-                "id": 328
+                "id": 336
               },
               {
                 "name": "Yandex Browser",
                 "desc": "Yandex Browser got updated: it's a neural browser now. We enhanced it with neural networks that help users write appealing texts, create pictures, understand different languages, read texts, and get video summaries. Try it out — it's free.",
                 "icon": "https://browser.yandex.com/favicon.ico",
                 "url": "https://browser.yandex.com/#alice-ai",
-                "id": 329
+                "id": 337
               },
               {
                 "name": "DuckDuckGo",
                 "desc": "Windows 版 DuckDuckGo 是一款免费的浏览应用程序，默认情况下为你提供全面的在线隐私保护。保护。隐私。安心。",
-                "icon": "https://duckduckgo.com/favicon.ico",
+                "icon": "https://ts3.tc.mm.bing.net/th/id/ODL.07fd125e5e379408c6c9736415b9a5a9",
                 "url": "https://duckduckgo.com/windows",
-                "id": 330
+                "id": 338
               },
               {
                 "name": "Tor Project",
                 "desc": "Anonymity Online | Defend yourself against tracking and surveillance. Circumvent censorship.",
-                "icon": "https://www.torproject.org/static/images/favicon/favicon.ico",
+                "icon": "https://ts3.tc.mm.bing.net/th/id/ODF.CNopKwngam7hNGeQHDwPPA",
                 "url": "https://www.torproject.org/?noredirect=1",
-                "id": 331
+                "id": 339
               }
             ],
             "icon": "",
-            "id": 323
+            "id": 331
           },
           {
             "title": "扩展程序",
@@ -2310,32 +2367,32 @@
                 "desc": "首页",
                 "icon": "https://www.tampermonkey.net/favicon.ico",
                 "url": "https://www.tampermonkey.net/",
-                "id": 333
+                "id": 341
               },
               {
                 "name": "OpenUserJS",
                 "desc": "Download userscripts to enhance your browser.",
                 "icon": "https://openuserjs.org/images/favicon.ico",
                 "url": "https://openuserjs.org/",
-                "id": 334
+                "id": 342
               },
               {
                 "name": "Userscript.Zone",
                 "desc": "Userscript.Zone Search能让您找到最常用的用户脚本。",
                 "icon": "",
                 "url": "https://www.userscript.zone/",
-                "id": 335
+                "id": 343
               },
               {
                 "name": "AdGuard",
                 "desc": "AdGuard 是摆脱烦人广告，在线跟踪并使您的计算机原理恶意软件的最佳途径。其使您体验快速，安全，无广告的网络冲浪。",
                 "icon": "https://adguard.info/stf/favicons/adguard/favicon.ico",
                 "url": "https://adguard.info/zh_cn/welcome.html",
-                "id": 336
+                "id": 344
               }
             ],
             "icon": "",
-            "id": 332
+            "id": 340
           }
         ],
         "icon": "",
