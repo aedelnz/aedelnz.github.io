@@ -189,6 +189,13 @@
                 "icon": "https://vdm10.com/template/a_0001/images/favicon.png",
                 "url": "https://vdm10.com/",
                 "id": 29
+              },
+              {
+                "name": "peko.love - LINK START",
+                "desc": "打造全网最美的ACG动漫网",
+                "icon": "https://peko.love/static/picture/acglogo2.png",
+                "url": "https://acg.pekolove.net/",
+                "id": 0
               }
             ],
             "icon": "",
