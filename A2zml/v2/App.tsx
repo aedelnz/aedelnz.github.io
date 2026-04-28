@@ -1,134 +1,60 @@
-import { useState } from "react";
-import { QRCodeSVG } from "qrcode.react";
-import { Layout, PageHeader, Typography, Link, Divider, Grid, Card, Button, Popconfirm, BackTop, Affix, Tag, Input, Space } from '@arco-design/web-react';
-import { IconUp, IconDownload, IconInfoCircle, IconQrcode, IconHome } from '@arco-design/web-react/icon';
-import { proxyTools, ProxyTool, nodeSubscriptions, NodeSubscription } from './data';
-import './App.css';
+import { useState } from 'react'
+import { Layout, Nav, Avatar, Typography, Button, SideSheet } from '@douyinfe/semi-ui'
+import { IconMenu } from '@douyinfe/semi-icons'
+import SemiThemer from '../../src/components/SemiThemer' // 主题切换
+import SideNav from './components/SideNav' // 侧边栏
+import SubCards from './components/SubCards' // 内容卡片
 
-function App() {
-  // 当前年份
-  const currentYear = new Date().getFullYear();
-  // base64编码函数
-  const toBase64 = (str: string) => {
-    try {
-      return btoa(encodeURIComponent(str));
-    } catch (error) {
-      console.error('编码失败:', error);
-      return '';
-    }
-  };
-  // base64解码函数
-  const fromBase64 = (str: string) => {
-    try {
-      return decodeURIComponent(atob(str));
-    } catch (error) {
-      console.error('解码失败:', error);
-      return '';
-    }
-  };
-  // 待编码的文本
-  const [textToEncode, setTextToEncode] = useState('');
-  // 编码后的文本
-  const [encodedResult, setEncodedResult] = useState('');
+const App = () => {
+  // 侧边栏
+  const [visible, setVisible] = useState(false)
+  // 切换侧边栏
+  const change = () => setVisible(!visible)
+
+  // 布局
+  const { Header, Sider, Footer, Content } = Layout
+  const { Title, Text } = Typography
 
   return (
     <>
       <Layout>
-        <Layout>
-          <Affix>
-            <Layout.Header className="header">
-              <PageHeader
-                title='风纪委员研究所'
-                subTitle='科学上网服务'
-                extra={
-                  <>
-                    <Button type='secondary' icon={<IconHome />} href='/'></Button>
-                  </>
-                }
-              />
-              <Divider style={{ margin: '0 auto' }} />
-            </Layout.Header>
-          </Affix>
-          <Layout.Content style={{ padding: '8px' }}>
-            <Typography.Title heading={4}>代理工具</Typography.Title>
-            <Divider />
-            <Grid cols={{ xs: 1, sm: 2, md: 2, lg: 3 }} colGap={12} rowGap={16}>
-              {proxyTools.map((item: ProxyTool) => (
-                <Grid.GridItem key={item.id}>
-                  <Card hoverable actions={[
-                    <Button type='outline' icon={<IconInfoCircle />} href={item.github} target='_blank'>详细</Button>,
-                    <Button type='text' icon={<IconDownload />} href={item.download} target='_blank'>去下载</Button>
-                  ]}>
-                    <Card.Meta title={item.name} description={
-                      <>
-                        <Typography.Text style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.description}</Typography.Text>
-                        <Typography.Paragraph style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                          {item.platform.map((platform) => (
-                            <Tag key={platform} style={{ margin: '2px' }}>{platform}</Tag>
-                          ))}
-                        </Typography.Paragraph>
-                      </>
-                    } />
-                  </Card>
-                </Grid.GridItem>
-              ))}
-            </Grid>
-            <Typography.Title heading={4}>节点订阅</Typography.Title>
-            <Divider />
-            <Grid cols={{ xs: 1, sm: 2, md: 2, lg: 3 }} colGap={12} rowGap={16}>
-              {nodeSubscriptions.map((item: NodeSubscription) => (
-                <Grid.GridItem key={item.id}>
-                  <Card hoverable actions={[
-                    <Popconfirm icon={null} title={<QRCodeSVG value={item.url} size={200} />}>
-                      <Button type='outline' icon={<IconQrcode />}>二维码</Button>
-                    </Popconfirm>
-                  ]}>
-                    <Card.Meta title={item.name} description={
-                      <>
-                        <Input value={toBase64(item.url)} />
-                        <Typography.Paragraph style={{ display: 'block', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                          {item.platform.map((platform) => (
-                            <Tag key={platform} style={{ margin: '2px' }}>{platform}</Tag>
-                          ))}
-                        </Typography.Paragraph>
-                      </>
-                    } />
-                  </Card>
-                </Grid.GridItem>
-              ))}
-            </Grid>
-            <Typography.Title heading={4}>base64编码</Typography.Title>
-            <Divider />
-            <Grid cols={{ xs: 1, sm: 1, md: 2, lg: 2 }} colGap={12} rowGap={16}>
-              <Grid.GridItem>
-                <Typography.Text>输入</Typography.Text>
-                <Input.TextArea placeholder='输入' value={textToEncode} onChange={(value) => setTextToEncode(value)} allowClear autoSize />
-                <Space style={{ marginTop: '1rem' }}>
-                  <Button type='primary' onClick={() => setEncodedResult(toBase64(textToEncode))}>编码</Button>
-                  <Button type='primary' onClick={() => setEncodedResult(fromBase64(textToEncode))}>解码</Button>
-                </Space>
-              </Grid.GridItem>
-              <Grid.GridItem>
-                <Typography.Text>结果</Typography.Text>
-                <Input.TextArea placeholder='结果' value={encodedResult} autoSize />
-              </Grid.GridItem>
-            </Grid>
-          </Layout.Content>
-
-          <Layout.Footer className="footer">
-            <Divider className="divider" />
-            <div style={{ padding: '1.25rem', textAlign: 'center' }}>
-              <Typography.Paragraph bold>Copyright © 2020 - {currentYear}  <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.</Typography.Paragraph>
-              <Typography.Text>本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。</Typography.Text>
+        <Header>
+          <div>
+            <Nav mode="horizontal">
+              <Nav.Header>
+                <Avatar shape="square" size="small" src='/favicon.png' alt="来源：" />
+                <Title heading={4} style={{ margin: '0 4px' }}>魔法<span className="Highlight">网络</span></Title>
+              </Nav.Header>
+              <Nav.Footer>
+                <SemiThemer />
+                <Button id='menu' className="hf" type="tertiary" icon={<IconMenu />} onClick={change} />
+              </Nav.Footer>
+            </Nav>
+          </div>
+        </Header>
+        <Sider>
+          <SideNav />
+          <SideSheet placement="left" style={{ width: '240px' }} bodyStyle={{ padding: 0 }} title={<>画的<span className="Highlight">个人记录</span></>} visible={visible} onCancel={change}>
+            <SideNav />
+          </SideSheet>
+        </Sider>
+        <Content>
+          <div id='a2zml' className='contents'>
+            <SubCards />
+          </div>
+          <Footer>
+            <div>
+              <span>Copyright © 2020-{new Date().getFullYear()} <Text link={{ href: 'https://jixiejidiguan.top/A2zml/' }} underline>魔法网络</Text>. All Rights Reserved. </span>
             </div>
-            <BackTop visibleHeight={80}>
-              <Button type='outline' size='large' icon={<IconUp />} />
-            </BackTop>
-          </Layout.Footer>
-        </Layout>
+            <div>
+              <Text>本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。</Text>
+            </div>
+          </Footer>
+        </Content>
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+
+export default App

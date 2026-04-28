@@ -1,15 +1,3 @@
-// 咸鱼的社交圈
-interface NavLinks {
-    title: string;
-    link: string;
-}
-export const NAV_LINKS: NavLinks[] = [
-    { title: '主页', link: '#' },
-    { title: '社交', link: '#MySocial' },
-    { title: '项目', link: '#MyWork' },
-    { title: '公益', link: '#PublicService' },
-    { title: '友链', link: '#FriendlyLinks' }
-];
 
 // 咸鱼的社交圈
 interface MySocial {
@@ -31,70 +19,67 @@ export const MY_SOCIALS: MySocial[] = [
 ];
 
 // 咸鱼作品集
-interface MyWork {
+interface SubSite {
     title: string;
     description: string;
     tag: string;
     image: string;
     link: string;
 }
-export const MY_WORKS: MyWork[] = [
+export const Sub_Site: SubSite[] = [
     {
-        title: '爱莫能助',
-        description: '二次元导航站',
-        tag: 'Navigation',
-        image: '/image/a2zml.jpg',
-        link: '/A2zml/'
-    },
-    {
-        title: '风纪委员研究所',
-        description: '科学上网服务',
-        tag: 'Wiki',
-        image: '/image/v2.jpg',
-        link: '/A2zml/v2/'
-    },
-    {
-        title: 'Draw Ofs 博客',
-        description: 'A Plan to Lie Flat and Live Like a Salted Fish!',
-        tag: 'blog',
-        image: '/image/blog.jpg',
+        title: '画的博客',
+        description: '致力于提供通俗易懂的技术教程与踩坑经验。',
+        tag: 'Astro',
+        image: '/root/SubSite/blog.png',
         link: 'https://blog.jixiejidiguan.top/'
     },
     {
-        title: 'TP 下载站',
-        description: 'Storage network resource collection',
-        tag: 'Download',
-        image: '/image/tp.jpg',
+        title: '画的接口',
+        description: '专注开发测速与科研调用的API服务。',
+        tag: 'OpenList',
+        image: '/root/SubSite/jiekou.png',
+        link: 'https://s.jixiejidiguan.top/'
+    },
+    {
+        title: '画的工具',
+        description: '免安装·更高效·更便捷｜在线工具集合',
+        tag: 'OpenList',
+        image: '/root/SubSite/tools.png',
+        link: 'https://tools.jixiejidiguan.top/'
+    },
+    {
+        title: '画的资源',
+        description: '来自阿里云盘资源＆网易云音乐挂载',
+        tag: 'OpenList',
+        image: '/root/SubSite/ziyuan.png',
         link: 'https://download.jixiejidiguan.top/'
     },
     {
-        title: 'HP 状态仪表盘',
-        description: 'Monitor HP server status',
-        tag: 'Monitor',
-        image: '/image/hp.jpg',
+        title: '网站状态',
+        description: '每五分钟检查一次网站状态',
+        tag: ' UptimeRobot',
+        image: '/root/SubSite/start.png',
         link: 'https://site.jixiejidiguan.eu.org'
-    }
-];
-// 公益与服务
-interface PublicService {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
-}
-export const PUBLIC_SERVICE: PublicService[] = [
-    {
-        title: "BiliRoaming Service",
-        description: " 一个停止运行的哔哩哔哩漫游服务！",
-        image: '/image/biliroaming.png',
-        link: "https://bili.jixiejidiguan.eu.org"
     },
     {
         title: "Internet Speed Test",
-        description: "详细内容请点击服务上面的【风纪委员研究所】",
-        image: '/image/speedCloudflare.png',
+        description: "详细内容请点击【魔法网络】查看",
+        tag: 'Cloudflare',
+        image: '/root/SubSite/speedCloudflare.png',
         link: "https://v2.jixiejidiguan.eu.org"
     }
+];
+
+export const Sub_Site_Stop: SubSite[] = [
+    {
+        title: "BiliRoaming Service",
+        description: " 一个停止运行的哔哩哔哩漫游服务！",
+        tag: 'BiliRoaming',
+        image: '/root/SubSite/biliroaming.png',
+        link: "https://bili.jixiejidiguan.eu.org"
+    },
+
 ];
 
 // 友情链接
@@ -118,7 +103,7 @@ export const FRIENDLY_LINKS: FriendlyLink[] = [
         link: 'https://srsg.moe'
     },
     {
-        title: '青刻云记',
+        title: '团子笔记',
         description: '最简单的小站，记录自己的每时每刻',
         image: 'https://q1.qlogo.cn/g?b=qq&nk=1351856278&s=5',
         link: 'https://www.zhouzhou.work/'

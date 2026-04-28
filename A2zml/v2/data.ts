@@ -8,7 +8,7 @@ export interface ProxyTool {
   download?: string;
 }
 
-export const proxyTools: ProxyTool[] = [
+export const Proxy_Tools: ProxyTool[] = [
   {
     id: 2,
     name: 'Continuation of Clash Verge',
@@ -74,7 +74,7 @@ export interface NodeSubscription {
   platform: string[];
   url: string;
 }
-export const nodeSubscriptions: NodeSubscription[] = [
+export const Node_Subscriptions: NodeSubscription[] = [
   {
     id: 1,
     name: '站长自建订阅 Normal',

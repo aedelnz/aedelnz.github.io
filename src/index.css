@@ -1,0 +1,190 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  color: var(--semi-color-text-0);
+  background-color: var(--semi-color-bg-0);
+}
+
+/* 布局样式 */
+section.semi-layout {
+  box-sizing: border-box;
+}
+
+/* 头部样式 */
+header.semi-layout-header {
+  background-color: var(--semi-color-bg-2);
+  border-bottom: 1px solid var(--semi-color-border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+
+/* 头部按钮间距 */
+button.hf {
+  margin-left: 8px;
+}
+
+/* 菜单按钮 */
+button#menu {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  button#menu {
+    display: none;
+  }
+}
+
+/* 侧边栏 */
+aside.semi-layout-sider {
+  background-color: var(--semi-color-bg-4);
+  border-right: 1px solid var(--semi-color-border);
+  display: none;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  aside.semi-layout-sider {
+    display: block;
+  }
+}
+
+/* 侧边栏内容区域 */
+.semi-layout-sider-children {
+  overflow: auto;
+}
+
+/* 内容区域 */
+main.semi-layout-content {
+  width: 100%;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  main.semi-layout-content {
+    margin-left: 240px;
+  }
+}
+
+/* 内容区域间距 */
+.contents {
+  padding: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .contents {
+    padding: 24px;
+  }
+}
+
+/* 高亮文字 */
+.Highlight {
+  color: rgba(var(--semi-blue-5), 0.8);
+}
+
+/* 页脚样式 */
+footer.semi-layout-footer {
+  background-color: var(--semi-color-bg-3);
+  border-top: 1px solid var(--semi-color-border);
+  padding: 20px;
+}
+
+/* icp文字间距 */
+.ic span {
+  margin: 0 2px;
+}
+
+.homer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/root/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homer {
+  margin: -12px;
+}
+
+@media screen and (min-width: 768px) {
+  .homer {
+    margin: -24px;
+  }
+}
+
+.homer-content {
+  padding: 12px;
+  margin: auto 12px;
+  background-color: rgba(var(--semi-ai-purple-0), 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--semi-grey-1), 0.2);
+  border-radius: var(--semi-border-radius-medium);
+}
+
+/* 友情链接卡片描述超出部分省略号 */
+.semi-card-meta.carddesc {
+  flex: 1;
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 固定导航栏 */
+#a2zml-sub .semi-anchor.semi-anchor-size-default {
+  background-color: rgba(var(--semi-color-bg-3), 0.5);
+  box-shadow: var(--semi-shadow-elevated);
+  border-radius: var(--semi-border-radius-medium);
+  position: fixed;
+  right: 0;
+  top: 30%;
+  width: auto;
+  z-index: 3;
+}
+
+
+/* 导航栏链接间距 */
+#a2zml-sub .semi-anchor-link {
+  padding: 0 8px;
+}
+
+/* 设置描述项间距 */
+.semi-descriptions {
+  background-color: rgba(var(--semi-color-bg-2), 0.5);
+  box-shadow: var(--semi-shadow-elevated);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* ======== 规范布局 ======== */
+/* 容器内容间距 */
+.Cont-Cards {
+  margin-bottom: 24px;
+}
+
+/* 内容标题间距 */
+.Title-Sub {
+  margin-bottom: 12px;
+}
+
+/* 内容标题解释间距 */
+.Title-Sub p {
+  color: var(--semi-color-text-2);
+}
+
+/* ======== 规范布局 ======== */

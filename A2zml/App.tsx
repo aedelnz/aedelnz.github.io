@@ -1,153 +1,136 @@
-import { useState, useMemo, useCallback } from 'react';
-import { Layout, Menu, PageHeader, Radio, Typography, Link, Divider, Grid, Button, BackTop, Affix } from '@arco-design/web-react';
-import { IconSwap, IconShrink, IconUp, IconHome } from '@arco-design/web-react/icon';
-import '../src/App.css'
-import ContentCard from './ContentCard';
-import db from './data/db.json';
-import search from './data/search.json';
-import { MenuItemType, CardItemType } from './Data';
-import SubMenuItem from './SubMenuItem';
-import InputSearch from './InputSearch';
+import { useState, useEffect, useCallback } from 'react'
+import { Layout, Nav, Skeleton, Avatar, Typography, Button, SideSheet, Banner, Collapsible, Descriptions, Switch } from '@douyinfe/semi-ui'
+import { IconMenu, IconSetting } from '@douyinfe/semi-icons'
+import SemiThemer from '../src/components/SemiThemer' // 主题切换
+import SideNav from './components/SideNav' // 侧边栏
+import SubSearch from './components/SubSearch' // 搜索栏
+import SubCards from './components/SubCards' // 网站卡片
+import Customize from './components/Customize' // 自定义网站卡片
 
-// 滚动到指定元素
-const scrollToElement = (id: string) => {
-  const el = document.getElementById(id);
-  el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
+interface NavItem { nav: []; id: string | number; }
+interface DataItem { nav: NavItem[]; id: string | number; }
 
-// 获取当前导航数据
-const getCurrentNavData = (db: typeof import('./data/db.json'), selectedKeys: string) => {
-  const [penKey, navId] = selectedKeys.split('-').map(Number);
-  const currentItem = db[penKey];
-  if (!currentItem?.nav?.length) return null;
+const App = () => {
+  // 侧边栏
+  const [visible, setVisible] = useState(false)
+  // 加载中
+  const [loadings, setLoadings] = useState(true)
+  // 是否展开设置
+  const [isOpen, setIsOpen] = useState(false)
+  // 附属网站数据
+  const [data, setData] = useState([])
+  // 显示数据
+  const [displayData, setDisplayData] = useState([])
+  // 切换侧边栏
+  const change = () => setVisible(!visible)
 
-  const selectedNavItem = currentItem.nav[navId] || currentItem.nav[0];
-  return {
-    currentItem,
-    selectedNavItem,
-    navToRender: selectedNavItem?.nav || []
-  };
-};
+  // 是否关闭通知横幅
+  const [isCloseBanner, setIsCloseBanner] = useState(() => {
+    const saved = localStorage.getItem('isCloseBanner')
+    return saved !== null ? JSON.parse(saved) : true
+  })
+  // 搜索模式
+  const [isTabMode, setIsTabMode] = useState(() => {
+    const saved = localStorage.getItem('isTabMode')
+    return saved !== null ? JSON.parse(saved) : true
+  })
+  // 是否开启自定义网站
+  const [isCustomMode, setIsCustomMode] = useState(() => {
+    const saved = localStorage.getItem('isCustomMode')
+    return saved !== null ? JSON.parse(saved) : true
+  })
 
-function App() {
-  const currentYear = new Date().getFullYear();
-  const [collapsed, setCollapsed] = useState(false);
-  const [selectedKeys, setSelectedKeys] = useState('0-0');
+  // 保存状态到 localStorage
+  useEffect(() => {
+    localStorage.setItem('isTabMode', JSON.stringify(isTabMode));
+    localStorage.setItem('isCloseBanner', JSON.stringify(isCloseBanner));
+    localStorage.setItem('isCustomMode', JSON.stringify(isCustomMode));
+  }, [isTabMode, isCloseBanner, isCustomMode]);
 
-  // 使用 useMemo 缓存导航数据，避免重复计算
-  const navData = useMemo(() => getCurrentNavData(db, selectedKeys), [selectedKeys]);
+  // 加载数据
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const res = await fetch('/root/a2zml/db.json').then(res => res.json())
+        setData(res)
+        setDisplayData(res[0]?.nav[0].nav || [])
+        setLoadings(false)
+      } catch (error) {
+        console.error('加载失败:', error)
+        setLoadings(false)
+      }
+    }
+    loadData()
+  }, [])
+  // 新增：处理菜单点击的逻辑
+  const handleSelect = useCallback((itemKey: string | number) => {
+    // 1. 定义 nav 子项类型
 
-  // 菜单点击处理
-  const handleMenuClick = useCallback((key: string | number) => {
-    setSelectedKeys(String(key));
-  }, []);
 
-  const handleSubMenuClick = useCallback((key: string | number) => {
-    setSelectedKeys(`${key}-0`);
-  }, []);
-
-  // 渲染顶部标签栏
-  const renderNavTabs = () => {
-    if (!navData?.navToRender?.length) return null;
-
-    return (
-      <Affix offsetTop={64}>
-        <Radio.Group mode='fill' type='button' defaultValue='small'>
-          {navData.navToRender.map((item: MenuItemType, index: number) => (
-            <Radio key={index} value={index} onClick={() => scrollToElement(item.id?.toString() || '')}>
-              {item.title}
-            </Radio>
-          ))}
-        </Radio.Group>
-      </Affix>
-    );
-  };
-
-  // 渲染内容主体
-  const renderContentBody = () => {
-    if (!navData?.navToRender?.length) return null;
-
-    return (
-      <>
-        {navData.navToRender.map((item: MenuItemType, index: number) => (
-          <div key={`nav-${index}`}>
-            <Typography>
-              <Typography.Title heading={6} id={item.id?.toString()}>{item.title}</Typography.Title>
-            </Typography>
-            <Grid cols={{ xs: 2, sm: 3, md: 4, lg: 5, xl: 6, xxl: 6 }} colGap={2} rowGap={3}>
-              {item.nav?.map((subItem: CardItemType, idx: number) => (
-                <Grid.GridItem key={idx}>
-                  <ContentCard item={subItem} />
-                </Grid.GridItem>
-              ))}
-            </Grid>
-          </div>
-        ))}
-      </>
-    );
-  };
+    const selectedCategory = (data as DataItem[]).flatMap(item => item.nav).find(nav => nav.id === itemKey);
+    if (selectedCategory && selectedCategory.nav) {
+      setDisplayData(selectedCategory.nav);
+    }
+    // 如果是移动端（SideSheet 展开时），点击后自动关闭
+    setVisible(false);
+  }, [data]);
+  // 布局
+  const { Header, Sider, Footer, Content } = Layout
+  const { Title, Text } = Typography
 
   return (
-    <Layout>
-      <Layout.Sider
-        style={{ height: '100vh', position: 'fixed', top: 0, left: 0 }}
-        trigger={collapsed ? <IconSwap /> : <IconShrink />}
-        breakpoint='md'
-        onCollapse={setCollapsed}
-        collapsed={collapsed}
-        collapsible
-      >
-        <Menu
-          defaultSelectedKeys={[selectedKeys]}
-          selectedKeys={[selectedKeys]}
-          onClickSubMenu={handleSubMenuClick}
-          onClickMenuItem={handleMenuClick}
-        >
-          {SubMenuItem(db)}
-        </Menu>
-      </Layout.Sider>
-
-      <Layout style={{ marginLeft: collapsed ? 46 : 200 }}>
-        <Affix>
-          <Layout.Header style={{ background: 'var(--color-bg-1)' }}>
-            <PageHeader
-              title='爱莫能助'
-              subTitle='一个追番导航站'
-              extra={
-                <Button type='secondary' icon={<IconHome />} href='/' />
-              }
-            />
-            <Divider style={{ margin: '0 auto' }} />
-          </Layout.Header>
-        </Affix>
-
-        <Layout.Content style={{ padding: 8 }}>
-          {InputSearch(db, search)}
-          {renderNavTabs()}
-          {renderContentBody()}
-        </Layout.Content>
-
-        <Layout.Footer style={{ background: 'var(--color-neutral-1)' }}>
-          <Divider style={{ margin: 0 }} />
-          <footer style={{ padding: '1rem' }}>
-            <Typography style={{ textAlign: 'center' }}>
-              <Typography.Paragraph bold>
-                Copyright © 2020 - {currentYear} {' '}
-                <Link hoverable={false} href='https://jixiejidiguan.top'>画的个人记录</Link>. All Rights Reserved.
-              </Typography.Paragraph>
-              <Typography.Paragraph>
-                本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。
-              </Typography.Paragraph>
-            </Typography>
-          </footer>
-        </Layout.Footer>
-
-        <BackTop visibleHeight={80}>
-          <Button type='outline' status='success' icon={<IconUp />} style={{ width: 40, height: 40 }} />
-        </BackTop>
+    <>
+      <Layout>
+        <Header>
+          <div>
+            <Nav mode="horizontal">
+              <Nav.Header>
+                <Avatar shape="square" size="small" src='/favicon.png' alt="来源：" />
+                <Title heading={4} style={{ margin: '0 4px' }}>爱莫<span className="Highlight">能助</span></Title>
+              </Nav.Header>
+              <Nav.Footer>
+                <SemiThemer />
+                <Button className="hf" type="tertiary" icon={<IconSetting />} onClick={() => setIsOpen(!isOpen)} />
+                <Button id='menu' className="hf" type="tertiary" icon={<IconMenu />} onClick={change} />
+              </Nav.Footer>
+            </Nav>
+          </div>
+        </Header>
+        <Sider>
+          <SideNav datas={data} onSelectCategory={handleSelect} />
+          <SideSheet placement="left" style={{ width: '240px' }} bodyStyle={{ padding: 0 }} title={<>画的<span className="Highlight">个人记录</span></>} visible={visible} onCancel={change}>
+            <SideNav datas={data} onSelectCategory={handleSelect} />
+          </SideSheet>
+        </Sider>
+        <Content>
+          {isCloseBanner && <Banner onClose={() => setIsCloseBanner(true)} type="danger" description="本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。" bordered />}
+          <Collapsible isOpen={isOpen}>
+            <Descriptions layout='vertical' size="large">
+              <Descriptions.Item itemKey="是否开启通知横幅"><Switch defaultChecked={isCloseBanner} checkedText="关" uncheckedText="开" onChange={setIsCloseBanner} /></Descriptions.Item>
+              <Descriptions.Item itemKey="是否开启标签选择样式"><Switch defaultChecked={isTabMode} checkedText="关" uncheckedText="开" onChange={setIsTabMode} /></Descriptions.Item>
+              <Descriptions.Item itemKey="是否开启自定义网站"><Switch defaultChecked={isCustomMode} checkedText="关" uncheckedText="开" onChange={setIsCustomMode} /></Descriptions.Item>
+            </Descriptions>
+          </Collapsible>
+          <div id='a2zml' className='contents'>
+            <SubSearch isTabMode={isTabMode} data={data} />
+            {isCustomMode && <Customize />}
+            <Skeleton placeholder={<><Skeleton.Image style={{ width: '100%', height: 150 }} /><Skeleton.Paragraph rows={10} /></>} active={true} loading={loadings}>
+              <SubCards datas={displayData} />
+            </Skeleton>
+          </div>
+          <Footer>
+            <div>
+              <span>Copyright © 2020-{new Date().getFullYear()} <Text link={{ href: 'https://jixiejidiguan.top/A2zml/' }} underline>爱莫能助</Text>. All Rights Reserved. </span>
+            </div>
+            <div>
+              <Text>本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。</Text>
+            </div>
+          </Footer>
+        </Content>
       </Layout>
-    </Layout>
-  );
+    </>
+  )
 }
 
-export default App;
+
+export default App

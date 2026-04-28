@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
  * @param {Array} data - 导航数据数组
  * @param {number} startId - 起始 ID（默认从 1 开始）
  * @returns {Array} 重新分配 ID 后的导航数据
+ * @description 运行命令：node start.db.id.js
  */
 function reorderNavIds(data, startId = 1) {
   // 用闭包维护递增的 ID 计数器
@@ -31,7 +32,7 @@ const __dirname = path.dirname(__filename);
 // 自执行异步函数，用于处理文件读取和写入
 (async () => {
   try {
-    const dbPath = path.join(__dirname, 'db.json');
+    const dbPath = path.join(__dirname, '/public/api/a2zml/db.json');
     const dbContent = await fs.readFile(dbPath, 'utf8');
     const originalNavData = JSON.parse(dbContent);
     // ========== 使用示例 ==========
