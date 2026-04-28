@@ -32,7 +32,7 @@ const __dirname = path.dirname(__filename);
 // 自执行异步函数，用于处理文件读取和写入
 (async () => {
   try {
-    const dbPath = path.join(__dirname, '/public/api/a2zml/db.json');
+    const dbPath = path.join(__dirname, '/public/root/a2zml/db.json');
     const dbContent = await fs.readFile(dbPath, 'utf8');
     const originalNavData = JSON.parse(dbContent);
     // ========== 使用示例 ==========

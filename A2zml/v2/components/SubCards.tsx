@@ -20,7 +20,7 @@ const SubCards = () => {
             bodyStyle={{ padding: '8px 16px' }}
             footerLine={true}
             footerStyle={{ padding: '8px' }}
-            footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}><div>{item.platform.map((platform, index) => (<Tag style={{ margin: 2 }} key={index} colorful prefixIcon={<IconAIFilledLevel1 />} type="light" gradient>{platform}</Tag>))}</div><Button colorful theme="outline" type="primary" size='small' onClick={() => window.open(item.github)} icon={<IconAIFilledLevel3 />}>访问</Button></div>}>
+            footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}><div>{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index} colorful prefixIcon={<IconAIFilledLevel1 />} type="light" gradient>{platform}</Tag>))}</div><Button colorful theme="outline" type="primary" size='small' onClick={() => window.open(item.github)} icon={<IconAIFilledLevel3 />}>访问</Button></div>}>
             <Title heading={6} ellipsis={{ showTooltip: { opts: { content: item.name } } }}>{item.name}</Title>
             <Text style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ showTooltip: { opts: { content: item.description } } }}>{item.description}</Text>
         </Card>
@@ -40,7 +40,7 @@ const SubCards = () => {
                 }} />
             </div>}>
             <Title heading={6} ellipsis={{ showTooltip: { opts: { content: item.name } } }}>{item.name}</Title>
-            <Text style={{ color: 'var(--semi-color-text-2)' }}>{item.platform.map((platform, index) => (<Tag style={{ margin: 2 }} key={index}>{platform}</Tag>))}</Text>
+            <Text style={{ color: 'var(--semi-color-text-2)' }}>{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index}>{platform}</Tag>))}</Text>
         </Card>
     )
 
