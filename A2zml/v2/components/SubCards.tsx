@@ -1,6 +1,6 @@
 import { Typography, Button, Card, List, Tag, Input } from '@douyinfe/semi-ui'
 import { IconAIFilledLevel1, IconAIFilledLevel3, IconCopy } from '@douyinfe/semi-icons'
-import { Proxy_Tools, ProxyTool, Node_Subscriptions, NodeSubscription } from '../Data'
+import { Proxy_Tools, ProxyTool, Node_Subscriptions, NodeSubscription } from './Data'
 
 interface CardsProps {
     item: ProxyTool
