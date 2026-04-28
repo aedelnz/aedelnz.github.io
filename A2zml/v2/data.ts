@@ -1,9 +1,9 @@
 // 代理工具
 export interface ProxyTool {
-  id: number;
-  name: string;
-  description: string;
-  platform: string[];
+  id?: number;
+  name?: string;
+  description?: string;
+  platform?: string[];  
   github?: string;
   download?: string;
 }
@@ -69,10 +69,10 @@ export const Proxy_Tools: ProxyTool[] = [
 
 // 节点订阅
 export interface NodeSubscription {
-  id: number;
-  name: string;
-  platform: string[];
-  url: string;
+  id?: number;
+  name?: string;
+  platform?: string[];  
+  url?: string;
 }
 export const Node_Subscriptions: NodeSubscription[] = [
   {
