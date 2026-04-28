@@ -1010,45 +1010,59 @@
             "nav": [
               {
                 "name": "Magisk",
-                "desc": "The Magic Mask for Android. Contribute to topjohnwu/Magisk development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
+                "desc": "Magisk 是一套开源软件，用于定制 Android 系统，支持高于 Android 6.0 的设备。",
+                "icon": "https://th.bing.com/th/id/ODF.1rxsAhuD0ZLnwTE_3VYC0g",
                 "url": "https://github.com/topjohnwu/Magisk",
                 "id": 147
               },
               {
                 "name": "KernelSU",
-                "desc": "A Kernel based root solution for Android. Contribute to tiann/KernelSU development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/tiann/KernelSU",
+                "desc": "内核级root方案",
+                "icon": "https://th.bing.com/th/id/ODF.SQOtJcbSsKPOgWX5ujk1kg",
+                "url": "https://kernelsu.org/zh_CN/",
                 "id": 148
               },
               {
                 "name": "SukiSU-Ultra",
-                "desc": "Kernel-based Android Root Solution & KPM. Contribute to SukiSU-Ultra/SukiSU-Ultra development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/SukiSU-Ultra/SukiSU-Ultra",
+                "desc": "强大的内核级 Root 权限，安全性毫不让步",
+                "icon": "https://th.bing.com/th/id/OIP.AebTBSaL2HrMmgGSz4YuawHaD4",
+                "url": "https://sukisu.org/zh/",
                 "id": 149
               },
               {
-                "name": "APatch",
-                "desc": "The patching of Android kernel and Android system. Contribute to bmax121/APatch development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/bmax121/APatch",
+                "name": "FolkPatch",
+                "desc": "首款以高度自定义为理念的 ROOT 管理器",
+                "icon": "https://th.bing.com/th/id/ODF.RrJreJn48qEoatkiYWSsbA",
+                "url": "https://fp.mysqil.com/",
                 "id": 150
               },
               {
-                "name": "KitsuneMagisk",
-                "desc": "A fork of KitsuneMagisk. Thanks to the original author @HuskyDG. - 1q23lyc45/KitsuneMagisk",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/1q23lyc45/KitsuneMagisk",
+                "name": "APatch",
+                "desc": "APatch是一种类似于Magisk或KernelSU的root解决方案",
+                "icon": "https://th.bing.com/th/id/ODF.np8MzaGLAd9z6JarSl3Qrg",
+                "url": "https://apatch.dev/zh_CN/",
                 "id": 151
               },
               {
-                "name": "KernelSU-Next",
-                "desc": "An advanced Kernel based root solution for Android - KernelSU-Next/KernelSU-Next",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/KernelSU-Next/KernelSU-Next",
+                "name": "SkRoot",
+                "desc": "新一代 SKRoot，完美隐藏Root功能，无视全网检测手段，实现SELinux零触碰、无挂载！ 通杀所有内核，免源码直接 Patch 原厂内核，完美保留官方内核所有特性。",
+                "icon": "https://th.bing.com/th/id/OIP.ADFsDEpNjG08zUQjKkIR2QHaHa",
+                "url": "https://github.com/abcz316/SKRoot-linuxKernelRoot",
                 "id": 152
+              },
+              {
+                "name": "KitsuneMagisk",
+                "desc": "狐狸面具(Kitsune Mask原德尔塔面具)",
+                "icon": "https://th.bing.com/th/id/OIP.Xmw3RFdjQOBCMATdt4RJ6wAAAA",
+                "url": "https://github.com/search?q=KitsuneMagisk&type=repositories",
+                "id": 153
+              },
+              {
+                "name": "KernelSU-Next",
+                "desc": "新一代安卓内核级 Root 方案",
+                "icon": "https://th.bing.com/th/id/ODF.YraTItWVrlpQj_YsVQmoCA",
+                "url": "https://kernelsu-next.github.io/webpage/zh_CN/",
+                "id": 154
               }
             ],
             "icon": "",
@@ -1062,103 +1076,89 @@
                 "desc": "紫罗兰工具箱(VioletToolBox)是一款免费多功能的Android手机刷机工具，支持小米、OPPO、一加、真我等机型线刷、救砖、全自动投屏、一键ROOT，Twrp刷机，合并Super等60+强大功能。",
                 "icon": "https://th.bing.com/th/id/ODF.4iy13GQFyCZXINm39Q3H4w",
                 "url": "https://violettool.top/",
-                "id": 154
+                "id": 156
               },
               {
                 "name": "刷机匣",
                 "desc": "刷机匣GeekFlashTool资源仓库",
-                "icon": "https://gitee.com/static/images/logo_icon.png",
+                "icon": "https://th.bing.com/th/id/OIP.OOciPa1lcTttm1g_cHpQwgAAAA",
                 "url": "https://gitee.com/geekflashtool",
-                "id": 155
+                "id": 157
               },
               {
                 "name": "搞机助手",
                 "desc": "发现更多实用软件，尽在lsdy.top",
-                "icon": "https://lsdy.top/images/gjzs.ico",
+                "icon": "https://th.bing.com/th/id/OIP.bfiQ8M_AP2syHLHS1TkoCgAAAA",
                 "url": "https://lsdy.top/gjzs",
-                "id": 156
-              },
-              {
-                "name": "柚坛工具箱",
-                "desc": "",
-                "icon": "https://toolbox.uotan.cn/assets/icon.png",
-                "url": "https://toolbox.uotan.cn/",
-                "id": 157
-              },
-              {
-                "name": "Mindows工具箱",
-                "desc": "",
-                "icon": "https://img.js.design/assets/img/624c6a840726a8357c841a5e.png#3f82d68fe59889cc3b968db7dbb8b3ef",
-                "url": "https://mindows.cn/Mobile/index.html",
                 "id": 158
               },
               {
-                "name": "UnlockTool",
-                "desc": " - Flash - Unlock Bootloader Xiaomi - Without Credit (Find My Phone ON)",
-                "icon": "",
-                "url": "https://unlocktool.net/",
+                "name": "柚坛工具箱",
+                "desc": "为玩机发烧友而生",
+                "icon": "https://th.bing.com/th/id/ODF.7ozMGikBXdWE39f6glTMeQ",
+                "url": "https://toolbox.uotan.cn/",
                 "id": 159
               },
               {
-                "name": "Platform-Tools",
-                "desc": "Android SDK Platform-Tools 是 Android SDK 的一个组件。",
-                "icon": "https://www.gstatic.cn/devrel-devsite/prod/v9fbf2fc2e9c6161a9e3b16cd1fa448d29a6cc4e24bc54c4db944aa5e75d4972d/android/images/favicon.svg",
-                "url": "https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn",
+                "name": "Mindows工具箱",
+                "desc": "给你的Android刷上Windows",
+                "icon": "https://th.bing.com/th/id/ODF.C8ZNNzeZRv4--o1d0XC18g",
+                "url": "https://mindows.cn/Mobile/index.html",
                 "id": 160
               },
               {
-                "name": "mtkclient",
-                "desc": "MTK reverse engineering and flash tool. Contribute to CE1CECL/mtkclient development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/CE1CECL/mtkclient/tree/main",
+                "name": "UnlockTool",
+                "desc": "从UnlockTool下载解锁、刷写和管理移动设备的驱动程序和工具。",
+                "icon": "https://th.bing.com/th/id/ODF.LePxtk66zUEAZ0jfcPcKKA",
+                "url": "https://unlocktool.net/",
                 "id": 161
+              },
+              {
+                "name": "Platform-Tools",
+                "desc": "一个 ADB Fastboot Android SDK 的一个组件。",
+                "icon": "https://th.bing.com/th/id/ODF.n5FekavbQrTH3QtkWT3z4w",
+                "url": "https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn",
+                "id": 162
+              },
+              {
+                "name": "MTKClient",
+                "desc": " 一款专为联发科（MediaTek）芯片打造的强大逆向工程与刷机工具",
+                "icon": "https://th.bing.com/th/id/OIP.hC8miCvC9MSGvLW0T7HwDAAAAA",
+                "url": "https://github.com/CE1CECL/mtkclient/tree/main",
+                "id": 163
               },
               {
                 "name": "秋之盒",
                 "desc": "图形化ADB工具箱. Contribute to zsh2401/AutumnBox development by creating an account on GitHub.",
-                "icon": "https://github.com/fluidicon.png",
-                "url": "https://github.com/zsh2401/AutumnBox",
-                "id": 162
-              },
-              {
-                "name": " MiFlash",
-                "desc": "Download the official Xiaomi Flash Tool to flash or install Stock Firmware (ROM) on devices running on Qualcomm Chipsets.",
-                "icon": "https://xiaomiflashtool.com/apple-touch-icon.png",
-                "url": "https://xiaomiflashtool.com/",
-                "id": 163
-              },
-              {
-                "name": "SP Flash",
-                "desc": "Download the latest version of SP Flash Tool for Windows and Linux computers from the official MediaTek website.",
-                "icon": "https://spflashtools.com/apple-touch-icon.png",
-                "url": "https://spflashtools.com/",
+                "icon": "https://th.bing.com/th/id/ODF.OhxTz6cC4e76NlfibDhXlA",
+                "url": "https://atmb.top/",
                 "id": 164
               },
               {
-                "name": "QPST Tool",
-                "desc": "Download the latest QPST Tool (QPST Flash Tool) to flash or install the stock firmware on Qualcomm smartphones, feature phones, and tablets.",
-                "icon": "https://qpsttool.com/apple-touch-icon.png",
-                "url": "https://qpsttool.com/",
+                "name": " MiFlash 线刷工具",
+                "desc": "备用下载：https://file.miuiver.com/d/MiFlash/MiFlash2020-3-14-0.rar",
+                "icon": "https://th.bing.com/th/id/ODF.ufO5oCRghZiu7drvZ6N4gg",
+                "url": "https://cdn.alsgp0.fds.api.mi-img.com/micomm/MiFlash2020-3-14-0.rar",
                 "id": 165
               }
             ],
             "icon": "",
-            "id": 153
+            "id": 155
           },
           {
-            "title": "REC｜TWRP",
+            "title": "REC",
             "nav": [
               {
                 "name": "TWRP",
-                "desc": "This is the Team Win website and the official home of TWRP!  Here you will find the list of officially supported devices and instructions for installing TWRP on those devices.\n",
-                "icon": "",
+                "desc": "第三方REC",
+                "icon": "https://th.bing.com/th/id/ODF.5eQDAt9qW2SDKk67QnkKZg?w=32&h=32",
                 "url": "https://twrp.me/Devices/",
                 "id": 167
               },
               {
                 "name": "OrangeFox",
-                "desc": "Download OrangeFox Recovery for your Android device. OrangeFox is a custom recovery for Android devices with a modern interface and powerful features.",
-                "icon": "https://orangefox.download/fox_icon.png",
+                "desc": "橙狐Recovery",
+                "icon": "https://th.bing.com/th/id/ODF.zcWOW65LkJvIPRApYJ69nQ",
                 "url": "https://orangefox.download/",
                 "id": 168
               }

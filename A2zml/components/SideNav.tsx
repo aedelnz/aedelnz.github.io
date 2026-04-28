@@ -4,6 +4,7 @@ import { IconApartment } from '@douyinfe/semi-icons'
 import * as SemiIcons from '@douyinfe/semi-icons'
 import * as SemiIconsLab from '@douyinfe/semi-icons-lab'
 import { NavData } from '../Interfaces' // 寕入导航项和卡片项接口
+import { IconUpload } from '@douyinfe/semi-icons-lab'
 
 type IconComponentType = React.ComponentType<unknown>
 
@@ -61,6 +62,7 @@ const SideNav = ({ datas, onSelectCategory }: { datas: NavData[]; onSelectCatego
             onSelect={onSelect}
             onOpenChange={onOpenChange}
             header={<Button onClick={() => window.location.href = '/'} theme='borderless' type='tertiary' icon={<IconApartment />} block>个人主页</Button>}
+            footer={<Button onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')}  theme='borderless' type='tertiary' icon={<IconUpload />} block>收录提交</Button>}
         />
     )
 }
