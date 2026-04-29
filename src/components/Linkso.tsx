@@ -49,7 +49,7 @@ const Linkso = () => {
                         dataSource={dataSource()}
                         renderItem={item => (<List.Item><Cards item={item} /></List.Item>)} />
                 </div>
-                <Modal title="友情链接申请" visible={visible} footer={null} onCancel={handleCancel} centered closeOnEsc={true} bodyStyle={{ overflow: 'auto', height: '50vh', marginBottom: 24 }}>
+                <Modal title="友情链接申请" visible={visible} footer={null} onCancel={handleCancel} centered closeOnEsc={true} style={{ width: 'auto', margin: 'auto 12px' }} bodyStyle={{ overflow: 'auto', marginBottom: 24 }}>
                     <Title heading={4}>交换友链要求</Title>
                     <ol>
                         <li>先链后审：请贵站优先添加本站链接，我方审核通过后同步添加；</li>
