@@ -59,7 +59,7 @@ const Linkso = () => {
                     <Title heading={4}>我方友链信息</Title>
                     <ul>
                         <li>站点名称：画的个人记录</li>
-                        <li>站点链接：https://s.jixiejidiguan.top</li>
+                        <li>站点链接：https://jixiejidiguan.top</li>
                         <li>站点描述：一条咸鱼躺平养成计划！</li>
                         <li>站点图标：https://jixiejidiguan.top/favicon.png</li>
                     </ul>
