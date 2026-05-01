@@ -8,7 +8,9 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
   },
+  base: 'https://github.com/aedelnz/aedelnz.github.io', // 👈 必须加这个
    build: {
+    outDir: 'dist',
     rolldownOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
