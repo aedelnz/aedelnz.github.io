@@ -16,12 +16,6 @@ export default defineConfig({
         a2zml: resolve(import.meta.dirname, 'A2zml/index.html'),
         v2: resolve(import.meta.dirname, 'A2zml/v2/index.html'),
       },
-      onwarn(warning, warn) {
-        if (warning.code === 'EVAL' && warning.message.includes('lottie-web')) {
-          return
-        }
-        warn(warning)
-      },
     },
   },
 })
