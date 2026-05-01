@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
   },
-  base: 'https://github.com/aedelnz/aedelnz.github.io', // 👈 必须加这个
+  base: '/',
    build: {
     outDir: 'dist',
     rolldownOptions: {
