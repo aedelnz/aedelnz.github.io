@@ -1,1 +1,1 @@
-# 个人主页：[jixiejidiguan.top](https://jixiejidiguan.top)
+[点击这里前往](https://jixiejidiguan.top/)
