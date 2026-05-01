@@ -38,7 +38,7 @@
               },
               {
                 "name": "芒果TV",
-                "desc": "动漫频道，提供丰富的动漫内容。",
+                "desc": "动漫",
                 "icon": "https://www.mgtv.com/favicon.ico",
                 "url": "https://www.mgtv.com/cartoon/",
                 "id": 8
@@ -51,15 +51,15 @@
                 "id": 9
               },
               {
-                "name": "巴哈姆特動畫瘋",
-                "desc": "動畫瘋是由巴哈姆特所推出，正版授權的免費動畫平台，提供與日本同步的當季新番動畫，並含有高達上萬集的過往名作，供動畫迷們自由選擇！",
-                "icon": "https://i2.bahamut.com.tw/anime/baha_s.png",
+                "name": "巴哈姆特动画疯",
+                "desc": "巴哈姆特电玩资讯站开发的在线视频软件",
+                "icon": "https://th.bing.com/th/id/ODF.STuNojULZrXrEG7QOGQmYA",
                 "url": "https://ani.gamer.com.tw/",
                 "id": 10
               },
               {
                 "name": "ABEMA",
-                "desc": "ABEMAは好きな時間に好きな場所で話題の動画を無料で楽しめる新しい未来のテレビ。ニュースや恋愛番組、アニメ、スポーツなど、多彩な番組をお楽しみいただけます。©AbemaTV, Inc.",
+                "desc": "日本网络电视节目",
                 "icon": "https://th.bing.com/th/id/ODF.mdkrgxMNr0KYEmOIyPywdQ",
                 "url": "https://abema.tv/",
                 "id": 11
@@ -80,119 +80,119 @@
             "nav": [
               {
                 "name": "稀饭动漫",
-                "desc": " - 免费高清动漫分享\n\r备份站:https://xifan.moe/",
+                "desc": "有广告-免费高清动漫分享\n备份站:https://xifan.moe/",
                 "icon": "https://dm.xifanacg.com/template/dsn2/static/img/fav.png",
                 "url": "https://dm.xifanacg.com/",
                 "id": 14
               },
               {
                 "name": "喵物次元",
-                "desc": "有广告 - 致力高质量追番动漫网站\n\r备份站:https://mwcylink.github.io/",
+                "desc": "有广告-致力高质量追番动漫网站\n备份站:https://mwcylink.github.io/",
                 "icon": "https://th.bing.com/th/id/ODF.-G5FnbtRoWk5Mrh3m4DuzQ",
                 "url": "https://www.mwcy.net/",
                 "id": 15
               },
               {
                 "name": "girigiri愛動漫",
-                "desc": "高清動畫線上觀看｜彈幕番劇平台\n\r备份站:https://girigirilove.com/",
+                "desc": "有广告-高清动漫線上觀看\n备份站:https://girigirilove.com/",
                 "icon": "https://bgm.girigirilove.com/upload/anime.girigirilove.com_.png",
                 "url": "https://bgm.girigirilove.com/",
                 "id": 16
               },
               {
-                "name": "次元城动画",
-                "desc": " - 海量蓝光番剧免费看！\n\r备份站:https://www.cycity.pro/",
+                "name": "次元城动画 ",
+                "desc": "有广告-海量蓝光番剧免费看！\n备份站:https://www.cycity.pro/",
                 "icon": "https://th.bing.com/th/id/OIP-C.5vocRq_4tFPdW3gxa31OvgHaHa",
                 "url": "https://www.cycani.org/",
                 "id": 17
               },
               {
                 "name": "橘子动漫",
-                "desc": "橘子动漫拥有高清晰画质的在线动漫，最新电影，观看完全免费、高速播放、更新及时在线，我们致力为所有动漫迷们提供最好看的动漫",
+                "desc": "有广告-高清晰画质的在线动漫",
                 "icon": "https://r2img.nanoacg.com/favicon.png",
                 "url": "https://www.mgnacg.com/",
                 "id": 18
               },
               {
                 "name": "柒番",
-                "desc": "柒番（www.qifun.cc)是一个人动漫网站，这里有及时的动漫新番，活跃的ACG氛围，大家可以在这里找到许多欢乐。",
+                "desc": "有广告",
                 "icon": "https://www.qifun.cc/favicon.ico",
                 "url": "https://www.qifun.cc/",
                 "id": 19
               },
               {
                 "name": "嗷呜动漫",
-                "desc": "优质小众动漫门户网站",
+                "desc": "有广告-优质小众动漫门户网站",
                 "icon": "https://p.upyun.com/demo/tmp/F1fyqlFS.webp",
                 "url": "https://www.aowu.tv/",
                 "id": 20
               },
               {
-                "name": "异世界动漫",
-                "desc": "异世界动漫",
+                "name": "动漫MIKU",
+                "desc": "原异世界动漫",
                 "icon": "https://www.dmmiku.com/template/conch/asset/img/ios_fav.png",
                 "url": "https://www.dmmiku.com/",
                 "id": 21
               },
               {
                 "name": "AGE动漫",
-                "desc": "Age动漫专业的在线动漫网站，动漫免费在线观看，高品质画质，实时更新，追番利器!",
+                "desc": "地址容易丢失-在线动漫观看\n备份站:https://github.com/agefanscom/website\nhttps://rentry.org/agefans\nhttps://rentry.la/agefans",
                 "icon": "https://th.bing.com/th/id/ODF.73gimR8CUGR_HdJOWy5rTA",
                 "url": "https://www.age.tv/",
                 "id": 22
               },
               {
                 "name": "风铃动漫",
-                "desc": "风铃动漫(F站),一个专注于提供丰富多样的动漫内容和服务的在线平台。我们致力于满足动漫迷们的需求，为他们带来精彩纷呈的动漫世界。在我们的网站上，您可以畅享大量经典和最新的动画系列和电影。我们不仅提供高清的在线观看，还支持下载，让您可以随时随地欣赏您喜欢的动漫作品。我们致力于为用户提供高质量的动漫内容和良好的用户体验。我们的网站安全可靠，用户可以放心浏览和使用。无论您是新手还是资深的动漫迷，我们都欢迎您的加入，与我们一起探索无限的动漫世界。加入我们，开启一段奇妙的动漫之旅！",
+                "desc": "专注于丰富的动漫资源在线平台",
                 "icon": "https://www.aafun.cc/favicon.ico",
                 "url": "https://www.aafun.cc/",
                 "id": 23
               },
               {
                 "name": "Animoe动漫",
-                "desc": "Animoe是一个新一代高清动漫在线播放站点，可为您提供高清、迅速、无广告打扰的优质观赏体验。",
+                "desc": "高清动漫在线播放站点",
                 "icon": "https://github.elemecdn.com/mstatic616/images/logo/favicon.png",
                 "url": "https://animoe.org/",
                 "id": 24
               },
               {
                 "name": "番薯动漫",
-                "desc": "提供最新最快的动漫新番资讯和在线播放，观看完全免费、无须注册、高速播放、更新及时的专业在线番薯动漫站，我们致力为所有动漫迷们提供最好看的动漫。",
+                "desc": "您追番的最佳归属",
                 "icon": "https://p0.ssl.qhimg.com/t016852bd7df93fb9de.png",
                 "url": "https://www.fsdm02.com/",
                 "id": 25
               },
               {
                 "name": "花子动漫",
-                "desc": "花子动漫专注于资源收集整理 海量的有效的高质量的动漫，资源下载，观看完全免费、高速播放、更新及时在线，我们致力为所有动漫迷们提供最好看的动漫",
+                "desc": "有广告-新番在线观看",
                 "icon": "https://m.360buyimg.com/i/jfs/t1/333415/14/21252/24845/68eba166F0793b87a/e9f7221a68538d71.png",
                 "url": "https://www.huazidm.com/",
                 "id": 26
               },
               {
                 "name": "咕咕番",
-                "desc": "咕咕番 - 为广大二次元爱好者提供免费、高质量无广告的新番、老番、特摄动画在线观看！",
+                "desc": "有广告-在线日漫\n备份站:https://fb.gugufan.top/",
                 "icon": "https://www.gugu3.com/upload/site/20250105-1/392b1e1fa1fbe7b385e657eca0208ae5.png",
                 "url": "https://www.gugu3.com/",
                 "id": 27
               },
               {
                 "name": "SSRFun动漫",
-                "desc": "SSRFun专注于收集海量的高质量的动漫，资源下载，最新电影，观看完全免费、高速播放、更新及时在线的动漫电影，我们致力为所有动漫迷们提供最好看的动漫",
-                "icon": "",
+                "desc": "免费高清动漫网站",
+                "icon": "https://image.2481asd.com/process?url=https%3A%2F%2Fwww.ssrfun.com%2Fupload%2Fsite%2F20260211-1%2Fdaed04de15fd244b183407977462d851.png",
                 "url": "https://www.ssrfun.com/",
                 "id": 28
               },
               {
-                "name": "风车动漫",
-                "desc": "风车动漫拥有最齐全高清画质的在线动漫，观看完全免费、无须注册、高速播放、更新及时的专业在线动漫站，致力于提供最好的用户体验！",
-                "icon": "",
+                "name": "樱花动漫",
+                "desc": "风车动漫",
+                "icon": "https://vdm10.com/upload/mxprocms/20260114-1/39413662680be73e6ed7105f37bda70b.jpg",
                 "url": "https://vdm10.com/",
                 "id": 29
               },
               {
-                "name": "peko.love - LINK START",
-                "desc": "打造全网最美的ACG动漫网",
+                "name": "peko.love",
+                "desc": "有广告-打造全网最美的ACG动漫网",
                 "icon": "https://peko.love/static/picture/acglogo2.png",
                 "url": "https://acg.pekolove.net/",
                 "id": 30
@@ -213,21 +213,21 @@
               },
               {
                 "name": "番组放送",
-                "desc": "",
-                "icon": "",
+                "desc": "方便快捷的版权动画播放地址聚合站",
+                "icon": "https://th.bing.com/th/id/ODF.s7NyuU4N8jbL3mpEGXksqw",
                 "url": "https://bgmlist.com/",
                 "id": 33
               },
               {
-                "name": "番组计划",
-                "desc": "动画排行",
+                "name": "动画排行 | 番组计划",
+                "desc": "一个开源的 bgm.tv 客户端",
                 "icon": "https://th.bing.com/th/id/ODF.YEMU2H16GEW_gESfEeRxJQ",
                 "url": "https://www.bangumi.app/",
                 "id": 34
               },
               {
-                "name": "番組維基",
-                "desc": "Bangumi",
+                "name": "Bangumi | 番組維基",
+                "desc": "新番動畫播出時間、串流平台與授權地區整理。",
                 "icon": "",
                 "url": "https://bgm.wiki/",
                 "id": 35
@@ -242,7 +242,7 @@
               {
                 "name": "我的动漫列表",
                 "desc": "全球最大的英文动画评分网站",
-                "icon": "",
+                "icon": "https://th.bing.com/th/id/OIP-C.JxmytYMNr65gImOGGRUjrwAAAA",
                 "url": "https://myanimelist.net/",
                 "id": 37
               },
@@ -255,7 +255,7 @@
               },
               {
                 "name": "动漫趋势",
-                "desc": "你在动漫中的声音",
+                "desc": "动画投票类网站",
                 "icon": "https://th.bing.com/th/id/ODF.74G6lz9uTN9QFMxzEDCpmg",
                 "url": "https://www.anitrendz.com/",
                 "id": 39
