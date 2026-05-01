@@ -1,47 +1,59 @@
-import { Typography, Button, Card, List, Tag, Input } from '@douyinfe/semi-ui'
+import { Typography, Button, Card, List, Tag, Input, Toast } from '@douyinfe/semi-ui'
 import { IconAIFilledLevel1, IconAIFilledLevel3, IconCopy } from '@douyinfe/semi-icons'
 import { Proxy_Tools, ProxyTool, Node_Subscriptions, NodeSubscription } from './Data'
 
-interface CardsProps {
-    item: ProxyTool
-}
-interface NodeCardsProps {
-    item: NodeSubscription
-}
+// 布局
+const { Title, Text, Paragraph } = Typography
+
 const SubCards = () => {
-    // 布局
-    const { Title, Text, Paragraph } = Typography
+
+    const doCopy = async (text: string) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            Toast.success({ content: '复制文本成功', duration: 1, stack: true })
+        } catch (error) {
+            Toast.error({ content: `复制文本失败: ${error}`, duration: 1, stack: true })
+        }
+    }
 
     // 卡片组件
-    const Cards = ({ item }: CardsProps) => (
-        <Card
-            shadows='hover'
-            style={{ cursor: 'pointer', width: '100%', margin: '2px auto', }}
-            bodyStyle={{ padding: '8px 16px' }}
-            footerLine={true}
-            footerStyle={{ padding: '8px' }}
-            footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}><div>{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index} colorful prefixIcon={<IconAIFilledLevel1 />} type="light" gradient>{platform}</Tag>))}</div><Button colorful theme="outline" type="primary" size='small' onClick={() => window.open(item.github)} icon={<IconAIFilledLevel3 />}>访问</Button></div>}>
-            <Title heading={6} ellipsis={{ showTooltip: { opts: { content: item.name } } }}>{item.name}</Title>
-            <Text style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ showTooltip: { opts: { content: item.description } } }}>{item.description}</Text>
-        </Card>
+    const Cards = ({ item }: { item: ProxyTool }) => (
+        <>
+            <Card
+                shadows='hover'
+                style={{ width: '100%', margin: '4px 0' }}
+                bodyStyle={{ display: 'flex', alignItems: 'center', padding: '8px 12px' }}
+                footerLine={true}
+                footerStyle={{ padding: '8px' }}
+                footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}><div>{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index} colorful prefixIcon={<IconAIFilledLevel1 />} type="light" gradient>{platform}</Tag>))}</div><Button colorful theme="outline" type="primary" size='small' onClick={() => window.open(item.download)} icon={<IconAIFilledLevel3 />}>下载</Button></div>}>
+                <span style={{ overflow: 'hidden', flex: 1 }}>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold' }} ellipsis={{ rows: 1 }}>{item.name}</Text>
+                    <Paragraph style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ rows: 1 }} >{item.description}</Paragraph>
+                </span>
+                <Button colorful theme="light" type="primary" onClick={() => window.open(item.github)}>GitHub</Button>
+            </Card >
+        </>
     )
-    const NodeCards = ({ item }: NodeCardsProps) => (
-        <Card
-            shadows='hover'
-            style={{ cursor: 'pointer', width: '100%', margin: '2px auto', }}
-            bodyStyle={{ padding: '8px 16px' }}
-            footerLine={true}
-            footerStyle={{ padding: '8px' }}
-            footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
-                <Input style={{ marginRight: 8 }} defaultValue={item.url}></Input>
-                <Paragraph copyable={{
-                    content: item.url,
-                    render: (copied, doCopy) => { return (<Button colorful theme="outline" type="primary" onClick={doCopy} icon={<IconCopy />}>{copied ? '复制成功' : '点击复制'}</Button>) }
-                }} />
-            </div>}>
-            <Title heading={6} ellipsis={{ showTooltip: { opts: { content: item.name } } }}>{item.name}</Title>
-            <Text style={{ color: 'var(--semi-color-text-2)' }}>{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index}>{platform}</Tag>))}</Text>
-        </Card>
+
+    const NodeCards = ({ item }: { item: NodeSubscription }) => (
+        <>
+            <Card
+                shadows='hover'
+                style={{ width: '100%', margin: '4px 0' }}
+                bodyStyle={{ display: 'flex', alignItems: 'center', padding: '8px 12px' }}
+                footerLine={true}
+                footerStyle={{ padding: '8px' }}
+                footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
+                    <Input style={{ marginRight: 8 }} defaultValue={item.url}></Input>
+                    <Button type="primary" onClick={() => doCopy(item.url || '')} icon={<IconCopy />}></Button>
+                </div>}>
+                <span style={{ overflow: 'hidden', flex: 1 }}>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold' }} ellipsis={{ rows: 1 }}>{item.name}</Text>
+                    <Paragraph style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ rows: 1 }} >{item.platform?.map((platform, index) => (<Tag style={{ margin: 2 }} key={index}>{platform}</Tag>))}</Paragraph>
+                </span>
+            </Card >
+
+        </>
     )
 
     return (

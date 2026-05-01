@@ -1,6 +1,6 @@
 
 // 咸鱼的社交圈
-interface MySocial {
+export interface MySocial {
     title: string;
     link: string;
 }
@@ -19,14 +19,14 @@ export const MY_SOCIALS: MySocial[] = [
 ];
 
 // 咸鱼作品集
-interface SubSite {
+export interface SubSites {
     title: string;
     description: string;
     tag: string;
     image: string;
     link: string;
 }
-export const Sub_Site: SubSite[] = [
+export const Sub_Site: SubSites[] = [
     {
         title: '画的博客',
         description: '致力于提供通俗易懂的技术教程与踩坑经验。',
@@ -71,7 +71,7 @@ export const Sub_Site: SubSite[] = [
     }
 ];
 
-export const Sub_Site_Stop: SubSite[] = [
+export const Sub_Site_Stop: SubSites[] = [
     {
         title: "BiliRoaming Service",
         description: " 一个停止运行的哔哩哔哩漫游服务！",
@@ -83,11 +83,11 @@ export const Sub_Site_Stop: SubSite[] = [
 ];
 
 // 友情链接
-interface FriendlyLink {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
+export interface FriendlyLink {
+    title?: string;
+    description?: string;
+    image?: string;
+    link?: string;
 }
 export const FRIENDLY_LINKS: FriendlyLink[] = [
     {

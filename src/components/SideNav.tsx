@@ -19,9 +19,8 @@ const SideNav = () => {
     }
 
     return (
-        <>
+        <div style={{ width: '100%' }}>
             <Nav
-                style={{ width: '100%',paddingBottom: '16px' }}
                 items={[
                     { itemKey: 'home', text: '首页内容', icon: <IconAvatar /> },
                     {
@@ -36,7 +35,7 @@ const SideNav = () => {
                 ]}
                 onClick={key => handleNavClick(key)}
             />
-        </>
+        </div>
     )
 }
 

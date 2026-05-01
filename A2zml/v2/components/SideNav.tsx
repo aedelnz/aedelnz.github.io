@@ -19,15 +19,16 @@ const SideNav = () => {
         }
     }
     return (
-        <Nav
-            style={{ width: '100%', paddingBottom: '16px' }}
-            items={[
-                { itemKey: 'ProxyTool', text: '代理工具', icon: <IconBadgeStar /> },
-                { itemKey: 'SubsNode', text: '订阅节点', icon: <IconRating /> },
-            ]}
-            onClick={key => handleNavClick(key)}
-            header={<Button onClick={() => window.location.href = '/'} theme='borderless' type='tertiary' icon={<IconApartment />} block>个人主页</Button>}
-        />
+        <div style={{ width: '100%' }}>
+            <Nav
+                items={[
+                    { itemKey: 'ProxyTool', text: '代理工具', icon: <IconBadgeStar /> },
+                    { itemKey: 'SubsNode', text: '订阅节点', icon: <IconRating /> },
+                ]}
+                onClick={key => handleNavClick(key)}
+                header={<Button onClick={() => window.location.href = '/'} theme='borderless' type='tertiary' icon={<IconApartment />} block>个人主页</Button>}
+            />
+        </div>
     )
 }
 

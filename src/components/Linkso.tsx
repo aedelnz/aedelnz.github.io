@@ -1,11 +1,9 @@
 import { useState } from 'react'
-import { Button, Card, List, Modal, Typography } from '@douyinfe/semi-ui'
+import { Avatar, Button, Card, List, Modal, Typography } from '@douyinfe/semi-ui'
 import { IconAIFilledLevel1 } from '@douyinfe/semi-icons'
-import { FRIENDLY_LINKS } from '../Data'
+import { FRIENDLY_LINKS, type FriendlyLink } from '../Data'
 
-interface CardsProps {
-    item: { title: string; description: string; image: string; link: string; }
-}
+const { Title, Text, Paragraph } = Typography
 
 const Linkso = () => {
     // 友情链接申请弹窗
@@ -18,22 +16,19 @@ const Linkso = () => {
     const dataSource = () => {
         return [...FRIENDLY_LINKS].sort(() => Math.random() - 0.5)
     }
-    // 布局
-    const { Title, Text, Paragraph } = Typography
     // 卡片组件
-    const Cards = ({ item }: CardsProps) => (
+    const Cards = ({ item }: { item: FriendlyLink }) => (
         <Card
-            className='cardis'
             shadows='hover'
-            style={{ cursor: 'pointer', width: '100%', height: '60px', margin: '2px auto', }}
-            bodyStyle={{ display: 'flex', alignItems: 'center', gap: 12, padding: '8px 16px' }}>
-            <img src={item.image} alt={item.title} style={{ width: 40, height: 40, borderRadius: 8, objectFit: 'cover', flexShrink: 0 }} />
-            <Card.Meta
-                className='carddesc'
-                title={<Text ellipsis={{ showTooltip: { opts: { content: item.title } } }}>{item.title}</Text>}
-                description={<Text style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ showTooltip: { opts: { content: item.description } } }}>{item.description}</Text>} />
-            <Button type="primary" onClick={() => window.open(item.link)}>访问</Button>
-        </Card>
+            style={{ width: '100%', margin: '4px 0' }}
+            bodyStyle={{ display: 'flex', alignItems: 'center', padding: '8px 12px' }}>
+            <Card.Meta avatar={<Avatar shape="square" size="default" src={item.image} />} />
+            <span style={{ overflow: 'hidden', flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold' }} ellipsis={{ rows: 1 }}>{item.title}</Text>
+                <Paragraph style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ rows: 1 }} >{item.description}</Paragraph>
+            </span>
+            <Button colorful theme="light" type="primary" onClick={() => window.open(item.link)}>访问</Button>
+        </Card >
     )
 
     return (
@@ -41,7 +36,7 @@ const Linkso = () => {
             <div id='linkso'>
                 <div className='Cont-Cards'>
                     <div className='Title-Sub'>
-                        <Title heading={3}>友情链接<Button theme='solid' type='primary' onClick={showDialog} style={{ marginLeft: 10 }}>申请</Button></Title>
+                        <Title heading={3}>友情链接<Button colorful theme="light" type="primary" onClick={showDialog} style={{ marginLeft: 10 }}>申请</Button></Title>
                         <Paragraph>排名不分先后，随机排序。</Paragraph>
                     </div>
                     <List
@@ -49,7 +44,13 @@ const Linkso = () => {
                         dataSource={dataSource()}
                         renderItem={item => (<List.Item><Cards item={item} /></List.Item>)} />
                 </div>
-                <Modal title="友情链接申请" visible={visible} footer={null} onCancel={handleCancel} centered closeOnEsc={true} style={{ width: 'auto', margin: 'auto 12px' }} bodyStyle={{ overflow: 'auto', marginBottom: 24 }}>
+                <Modal
+                    visible={visible}
+                    onCancel={handleCancel}
+                    closeOnEsc={true}
+                    title="友情链接申请"
+                    footer={<Button colorful theme="light" type="primary" onClick={() => window.open('https://wj.qq.com/s2/25425052/c669/')} icon={<IconAIFilledLevel1 />}>点击申请</Button>}
+                    bodyStyle={{ overflow: 'auto', height: 300 }}>
                     <Title heading={4}>交换友链要求</Title>
                     <ol>
                         <li>先链后审：请贵站优先添加本站链接，我方审核通过后同步添加；</li>
@@ -63,7 +64,7 @@ const Linkso = () => {
                         <li>站点描述：一条咸鱼躺平养成计划！</li>
                         <li>站点图标：https://jixiejidiguan.top/favicon.png</li>
                     </ul>
-                    <Button colorful theme="solid" type="primary" onClick={() => window.open('https://wj.qq.com/s2/25425052/c669/')} icon={<IconAIFilledLevel1 />}>点击申请</Button>
+
                 </Modal>
             </div>
         </>

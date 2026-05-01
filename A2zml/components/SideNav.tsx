@@ -45,7 +45,7 @@ const SideNav = ({ datas, onSelectCategory }: { datas: NavData[]; onSelectCatego
         if (openKeys.length > 0) {
             const currentKey = openKeys[openKeys.length - 1]
             setOpenKeys([currentKey])
-        } 
+        }
     }
 
     const onSelect = ({ selectedKeys = [], itemKey }: { selectedKeys: (string | number)[]; itemKey?: string | number; }) => {
@@ -54,16 +54,17 @@ const SideNav = ({ datas, onSelectCategory }: { datas: NavData[]; onSelectCatego
     }
 
     return (
-        <Nav
-            style={{ width: '100%', paddingBottom: '16px' }}
-            openKeys={openKeys}
-            selectedKeys={selectedKeys}
-            items={navItems}
-            onSelect={onSelect}
-            onOpenChange={onOpenChange}
-            header={<Button onClick={() => window.location.href = '/'} theme='borderless' type='tertiary' icon={<IconApartment />} block>个人主页</Button>}
-            footer={<Button onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')}  theme='borderless' type='tertiary' icon={<IconUpload />} block>收录提交</Button>}
-        />
+        <div style={{ width: '100%' }}>
+            <Nav
+                openKeys={openKeys}
+                selectedKeys={selectedKeys}
+                items={navItems}
+                onSelect={onSelect}
+                onOpenChange={onOpenChange}
+                header={<Button onClick={() => window.location.href = '/'} theme='borderless' type='tertiary' icon={<IconApartment />} block>个人主页</Button>}
+                footer={<Button onClick={() => window.open('https://wj.qq.com/s2/25645278/5e9a/', '_blank')} theme='borderless' type='tertiary' icon={<IconUpload />} block>收录提交</Button>}
+            />
+        </div>
     )
 }
 

@@ -1,30 +1,33 @@
 import { Card, Avatar, Typography, Button } from '@douyinfe/semi-ui'
 import { CardItem } from '../Interfaces' // 寕入卡片项接口
-import { IconDelete } from '@douyinfe/semi-icons';
+import { IconCheckboxIndeterminate } from '@douyinfe/semi-icons';
 
-const { Text } = Typography
+const { Text, Paragraph } = Typography
 
 const Cards = ({ items, onDelete }: { items: CardItem; onDelete?: (id: string | number | undefined) => void }) => (
-    <Card
-        className='card'
-        shadows='hover'
-        style={{ cursor: 'pointer', width: '100%', height: '60px', margin: '2px auto', }}
-        bodyStyle={{ display: 'flex', alignItems: 'center', gap: 12, padding: '4px 8px' }}>
-        <Avatar shape="square" src={items.icon} alt={items.name} />
-        <Card.Meta
-            className='carddesc'
-            title={<Text onClick={() => window.open(items.url, '_blank')} ellipsis={{ showTooltip: false }}>{items.name}</Text>}
-            description={<Text style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ showTooltip: false }}>{items.desc}</Text>} />
-        {onDelete && (
-            <Button
-                type='tertiary'
-                icon={<IconDelete />}
-                onClick={(e) => {
-                    e.stopPropagation()
-                    onDelete(items.id)
-                }}
-            />
-        )}
-    </Card>
+    <>
+        <Card
+            shadows='hover'
+            style={{ width: '100%', margin: '4px 0' }}
+            bodyStyle={{ display: 'flex', alignItems: 'center', padding: '8px 12px' }}>
+            <Card.Meta avatar={<Avatar shape="square" size="default" src={items.icon} />} />
+            <span style={{ overflow: 'hidden', flex: 1 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold' }} onClick={() => window.open(items.url, '_blank')} ellipsis={{ rows: 1 }}>{items.name}</Text>
+                <Paragraph style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ rows: 1 }} >{items.desc}</Paragraph>
+            </span>
+            {onDelete && (
+                <Button
+                    type='tertiary'
+                    icon={<IconCheckboxIndeterminate />}
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        onDelete(items.id)
+                    }}
+                />
+            )}
+        </Card >
+
+    </>
+
 )
 export default Cards

@@ -5,31 +5,34 @@ import SemiThemer from '../../src/components/SemiThemer' // 主题切换
 import SideNav from './components/SideNav' // 侧边栏
 import SubCards from './components/SubCards' // 内容卡片
 
+// 布局
+const { Header, Sider, Footer, Content } = Layout
+const { Text } = Typography
+
 const App = () => {
   // 侧边栏
   const [visible, setVisible] = useState(false)
   // 切换侧边栏
   const change = () => setVisible(!visible)
 
-  // 布局
-  const { Header, Sider, Footer, Content } = Layout
-  const { Title, Text } = Typography
-
   return (
     <>
       <Layout>
         <Header>
           <div>
-            <Nav mode="horizontal">
-              <Nav.Header>
-                <Avatar shape="square" size="small" src='/favicon.png' alt="来源：" />
-                <Title heading={4} style={{ margin: '0 4px' }}>魔法<span className="Highlight">网络</span></Title>
-              </Nav.Header>
-              <Nav.Footer>
-                <SemiThemer />
-                <Button id='menu' className="hf" type="tertiary" icon={<IconMenu />} onClick={change} />
-              </Nav.Footer>
-            </Nav>
+            <Nav
+              mode={'horizontal'}
+              header={{
+                logo: <Avatar src="/favicon.png" size="default" shape="square" alt="图标" />,
+                text: '魔法网络'
+              }}
+              footer={
+                <>
+                  <SemiThemer />
+                  <Button id="button-sidesheet" type="tertiary" icon={<IconMenu />} onClick={change} />
+                </>
+              }
+            />
           </div>
         </Header>
         <Sider>

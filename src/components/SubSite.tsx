@@ -1,11 +1,7 @@
 import React from 'react'
 import { Typography, Button, Card, List, Tag } from '@douyinfe/semi-ui'
 import { IconAIFilledLevel1, IconAIFilledLevel3 } from '@douyinfe/semi-icons'
-import { Sub_Site, Sub_Site_Stop } from '../Data'
-
-interface CardsProps {
-    item: { title: string; description: string; tag: string; image: string; link: string; }
-}
+import { Sub_Site, Sub_Site_Stop, type SubSites } from '../Data'
 
 const { Title, Text, Paragraph } = Typography
 
@@ -24,18 +20,22 @@ const SubSite = () => {
         return description
     }
     // 卡片组件
-    const Cards = ({ item }: CardsProps) => (
-        <Card
-            shadows='hover'
-            style={{ cursor: 'pointer', width: '100%', margin: '2px auto', }}
-            bodyStyle={{ padding: '8px 16px' }}
-            cover={<img src={item.image} alt={item.title} style={{ width: '100%', height: 200, objectFit: 'cover' }} />}
-            footerLine={true}
-            footerStyle={{ padding: '8px' }}
-            footer={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}><Tag colorful prefixIcon={<IconAIFilledLevel1 />} type="solid" gradient>{item.tag}</Tag><Button colorful theme="solid" type="tertiary" onClick={() => window.open(item.link)} icon={<IconAIFilledLevel3 />}>访问</Button></div>}>
-            <Title heading={6} ellipsis={{ showTooltip: { opts: { content: item.title } } }}>{item.title}</Title>
-            <Text style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ showTooltip: { opts: { content: item.description } } }}>{handleDescription(item.description)}</Text>
-        </Card>
+    const Cards = ({ item }: { item: SubSites }) => (
+        <>
+            <Card
+                shadows='hover'
+                style={{ cursor: 'pointer', width: '100%', margin: '4px 0' }}
+                cover={<img src={item.image} alt={item.title} style={{ width: '100%', height: 200, objectFit: 'cover' }} />}
+                footerLine={true}
+                bodyStyle={{ display: 'flex', alignItems: 'center', padding: '8px 12px' }}>
+                <Tag style={{ position: 'absolute', top: 16 }} colorful prefixIcon={<IconAIFilledLevel1 />} type="solid" gradient>{item.tag}</Tag>
+                <span style={{ overflow: 'hidden', flex: 1 }}>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold' }} ellipsis={{ rows: 1 }}>{item.title}</Text>
+                    <Paragraph style={{ color: 'var(--semi-color-text-2)' }} ellipsis={{ rows: 1 }} >{handleDescription(item.description)}</Paragraph>
+                </span>
+                <Button colorful theme="solid" type="tertiary" icon={<IconAIFilledLevel3 />} onClick={() => window.open(item.link)}>访问</Button>
+            </Card >
+        </>
     )
 
     return (
