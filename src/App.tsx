@@ -43,10 +43,12 @@ const App = () => {
           </SideSheet>
         </Sider>
         <Content>
-          <div id='home' className='contents'>
+          <div id='home'>
             <Homer />
-            <SubSite />
-            <Linkso />
+            <div className='contents'>
+              <SubSite />
+              <Linkso />
+            </div>
           </div>
           <Footer>
             <div>
@@ -60,7 +62,7 @@ const App = () => {
           </Footer>
         </Content>
 
-      </Layout>
+      </Layout >
     </>
   )
 }

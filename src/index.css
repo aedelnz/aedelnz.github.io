@@ -113,3 +113,32 @@ footer.semi-layout-footer>div a {
 }
 
 /* ======== 规范布局 ======== */
+
+/* ======== index ======== */
+.homer {
+  background-image: url('/root/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: calc(100vh - 60px);
+}
+
+.homer-content {
+  background-color: rgba(var(--semi-grey-0), 0.8);
+  height: calc(100vh - 60px);
+  padding: 24px;
+}
+
+#hitokoto {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
+  width: auto;
+}
+
+#hitokoto h4 {
+  text-align: right;
+}
