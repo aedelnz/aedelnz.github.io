@@ -10,7 +10,7 @@ export default defineConfig({
   },
   base: '/',
    build: {
-    outDir: 'dist',
+    outDir: 'docs',
     rolldownOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
