@@ -119,7 +119,9 @@ const App = () => {
             <SubSearch isTabMode={isTabMode} data={data} />
             {isCustomMode && <Customize />}
             <Skeleton placeholder={<><Skeleton.Image style={{ width: '100%', height: 150 }} /><Skeleton.Paragraph rows={10} /></>} active={true} loading={loadings}>
-              <SubCards datas={displayData} />
+              <div id='mainShow'>
+                <SubCards datas={displayData} />
+              </div>
             </Skeleton>
           </div>
           <Footer>

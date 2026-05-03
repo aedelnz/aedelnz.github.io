@@ -18,7 +18,7 @@ const SubCards = ({ datas }: { datas: NavData[] }) => {
                 <List
                     dataSource={datas}
                     renderItem={item => (<>
-                        <div id={item.title} className='Cont-Cards'>
+                        <div id={`nav${item.id}`} className='Cont-Cards'>
                             <List
                                 grid={{ gutter: 8, xs: 12, sm: 12, md: 8, lg: 6 }}
                                 header={<Title heading={4}>{item.title}</Title>}
