@@ -2399,21 +2399,177 @@
           },
           {
             "title": "开发工具",
-            "nav": [],
-            "icon": "卸载工具",
+            "nav": [
+              {
+                "name": "Visual Studio Code",
+                "desc": "微软推出的免费开源代码编辑器，拥有极其丰富的插件生态和内置 Git 支持，是目前全球最流行的全能型编辑器。",
+                "icon": "https://code.visualstudio.com/assets/favicon.ico",
+                "url": "https://code.visualstudio.com/",
+                "id": 346
+              },
+              {
+                "name": "Android Studio",
+                "desc": "Android Studio 提供了一些应用构建器以及一个已针对 Android 应用进行优化的集成式开发环境 (IDE)。",
+                "icon": "https://www.gstatic.cn/devrel-devsite/prod/v579073a50c63499824df5a68b8922367066583d283ef78fdade1028efdb4ceb5/android/images/favicon.svg",
+                "url": "https://developer.android.google.cn/studio?hl=zh-cn",
+                "id": 347
+              },
+              {
+                "name": "JetBrains IntelliJ IDEA",
+                "desc": "业界公认的 Java 开发神器，提供极其智能的代码补全、深度代码分析和强大的重构工具，分为免费社区版和付费终极版。",
+                "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
+                "url": "https://www.jetbrains.com/idea/",
+                "id": 348
+              },
+              {
+                "name": "Sublime Text",
+                "desc": "一款轻量级、启动速度极快的商业文本编辑器，以其流畅的性能、强大的多行编辑功能和丰富的快捷键著称。",
+                "icon": "https://www.sublimetext.com/favicon.ico",
+                "url": "https://www.sublimetext.com/",
+                "id": 349
+              },
+              {
+                "name": "JetBrains PyCharm",
+                "desc": "专为 Python 开发者设计的 IDE，集成了科学计算、Web 开发（Django/Flask）和数据科学所需的专业工具。",
+                "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
+                "url": "https://www.jetbrains.com/pycharm/",
+                "id": 350
+              },
+              {
+                "name": "Vim / Neovim",
+                "desc": "高度可配置的终端文本编辑器，拥有独特的模态编辑模式，深受追求极致效率和键盘操作的开发人员喜爱。",
+                "icon": "https://www.vim.org/images/vim_shortcut.ico",
+                "url": "https://www.vim.org/",
+                "id": 351
+              },
+              {
+                "name": "JetBrains WebStorm",
+                "desc": "专为现代 JavaScript 和前端开发打造的 IDE，对 Vue、React、Angular 等主流框架提供深度智能支持。",
+                "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
+                "url": "https://www.jetbrains.com/webstorm/",
+                "id": 352
+              },
+              {
+                "name": "通义灵码 (Tongyi Lingma)",
+                "desc": "阿里云推出的 AI 智能编码助手，支持 200+ 编程语言，深度集成阿里云服务，具备智能体模式可拆解复杂需求并生成完整模块<websource>source_group_web_1</websource>。",
+                "icon": "https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg",
+                "url": "https://tongyi.aliyun.com/lingma",
+                "id": 353
+              },
+              {
+                "name": "CodeBuddy",
+                "desc": "腾讯云自研的 AI 原生 IDE，基于腾讯混元与 DeepSeek 双模型驱动，支持自然语言驱动开发，提供独立 IDE、插件及 CLI 多种形态<websource>source_group_web_2</websource>。",
+                "icon": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/web/ide/logo.svg",
+                "url": "https://www.codebuddy.ai/",
+                "id": 354
+              },
+              {
+                "name": "Trae",
+                "desc": "字节跳动推出的国内首款 AI 原生 IDE，具备 Builder 模式，可实现从需求、架构到代码、测试、部署的完整闭环<websource>source_group_web_3</websource>。",
+                "icon": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png",
+                "url": "https://www.trae.cn/",
+                "id": 355
+              },
+              {
+                "name": "百度 Comate",
+                "desc": "百度推出的企业级全栈 AI 开发环境，中文场景代码补全准确率高，支持跨语言翻译与重构，并提供设计稿转代码的多模态能力<websource>source_group_web_4</websource>。",
+                "icon": "https://comate.baidu.com/favicon.ico",
+                "url": "https://comate.baidu.com/",
+                "id": 356
+              },
+              {
+                "name": "Zed Editor",
+                "desc": "基于 Rust 从零构建的高性能代码编辑器，以极致速度、原生 AI 协作和无缝多人实时协同为核心优势，全面支持跨平台开发<websource>source_group_web_5</websource>。",
+                "icon": "https://zed.dev/favicon_black_16.png",
+                "url": "https://zed.dev/",
+                "id": 357
+              },
+              {
+                "name": "DevEco Studio",
+                "desc": "华为鸿蒙（HarmonyOS）应用开发的官方一站式工具，内置方舟编译器，支持一次开发多端部署，完美适配智能终端与车载设备<websource>source_group_web_6</websource>。",
+                "icon": "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/DevEcoStudiotubiao3x.webp",
+                "url": "https://developer.harmonyos.com/cn/develop/deveco-studio",
+                "id": 358
+              },
+              {
+                "name": "CodeGeeX",
+                "desc": "智谱 AI 推出的开源免费 AI 编程助手，支持 130+ 语言互译，内存占用极低，对本地部署和私有化训练非常友好<websource>source_group_web_7</websource>。",
+                "icon": "https://th.bing.com/th/id/ODF.ZhcjNV4C6lmzprZznpdWNA",
+                "url": "https://codegeex.cn/",
+                "id": 359
+              }
+            ],
+            "icon": "",
             "id": 345
           },
           {
             "title": "运行库",
             "nav": [],
             "icon": "",
-            "id": 346
+            "id": 360
           },
           {
             "title": "BT下载",
-            "nav": [],
+            "nav": [
+              {
+                "name": "Motrix Next",
+                "desc": "全功能下载管理器 — 从零重建。",
+                "icon": "https://motrix-next.pages.dev/assets/logo.png",
+                "url": "https://motrix-next.pages.dev/",
+                "id": 362
+              },
+              {
+                "name": "qBittorrent",
+                "desc": "qBittorrent Official Website",
+                "icon": "https://www.qbittorrent.org/favicon.ico",
+                "url": "https://www.qbittorrent.org/",
+                "id": 363
+              },
+              {
+                "name": "BitComet(比特彗星)",
+                "desc": "高效好用的BT下载软件，BT资源的下载利器",
+                "icon": "https://www.bitcomet.com/images/favicon.png",
+                "url": "https://www.bitcomet.com/cn",
+                "id": 364
+              },
+              {
+                "name": "µTorrent (uTorrent)",
+                "desc": "A Very Tiny BitTorrent Client",
+                "icon": "https://th.bing.com/th/id/ODF.gwgwOcgos7NvwKi4SNaTRA",
+                "url": "https://www.utorrent.com/",
+                "id": 365
+              },
+              {
+                "name": "Transmission",
+                "desc": "A Fast, Easy and Free Bittorrent Client For Mac, Windows and Linux",
+                "icon": "https://transmissionbt.com/favicon.ico",
+                "url": "https://transmissionbt.com/",
+                "id": 366
+              },
+              {
+                "name": "Free Download Manager",
+                "desc": "從網路下載任何東西",
+                "icon": "https://www.freedownloadmanager.org/favicon.ico",
+                "url": "https://www.freedownloadmanager.org/zh/",
+                "id": 367
+              },
+              {
+                "name": "Tixati",
+                "desc": "",
+                "icon": "https://tixati.com/files/favicon.png",
+                "url": "https://tixati.com/",
+                "id": 368
+              },
+              {
+                "name": "BiglyBT",
+                "desc": "BiglyBT is a feature filled, open source, bittorrent client. I2P integration, Swarm Merging, Advanced Tag System, WebTorrent support, built-in VPN kill switch, Meta-search, UPnP/DLNA access, and much more.",
+                "icon": "https://www.biglybt.com/apple-touch-icon.png",
+                "url": "https://www.biglybt.com/",
+                "id": 369
+              }
+            ],
             "icon": "",
-            "id": 347
+            "id": 361
           },
           {
             "title": "分区工具",
@@ -2423,39 +2579,39 @@
                 "desc": "DiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
                 "icon": "https://www.diskgenius.cn/favicon.ico",
                 "url": "https://www.diskgenius.cn/",
-                "id": 349
+                "id": 371
               },
               {
                 "name": "傲梅分区助手",
                 "desc": "傲梅致力于数据安全领域，为用户提供安全可靠的傲梅分区助手、轻松备份、数据恢复软件恢复之星以及远程控制软件Anyviewer等。",
                 "icon": "https://www.disktool.cn/favicon.ico",
                 "url": "https://www.disktool.cn/",
-                "id": 350
+                "id": 372
               },
               {
                 "name": "易我分区大师",
                 "desc": "易我分区大师专业版（EaseUS Partition Master）是最好的电脑硬盘分区工具，能快速解决磁盘容量不足问题和调整硬盘或RAID上的磁盘分区大小。适用于 Windows 10/8/7/Vista/XP。",
                 "icon": "https://www.easeus.com.cn/images_2016/fav.ico",
                 "url": "https://www.easeus.com.cn/chanpin-fenquzy.html",
-                "id": 351
+                "id": 373
               },
               {
                 "name": "TestDisk",
                 "desc": "",
                 "icon": "https://www.cgsecurity.org/favicon.ico",
                 "url": "https://www.cgsecurity.org/wiki/TestDisk_CN",
-                "id": 352
+                "id": 374
               },
               {
                 "name": "MiniTool",
                 "desc": "As a partition magic alternative, MiniTool Partition Wizard is the latest partition manager software that can be used to manage partitions on Windows 11/10/8/7 and Server 2003/2008/2012/2016/2019.",
                 "icon": "https://www.partitionwizard.com/favicon.ico",
                 "url": "https://www.partitionwizard.com/",
-                "id": 353
+                "id": 375
               }
             ],
             "icon": "",
-            "id": 348
+            "id": 370
           },
           {
             "title": "解压软件",
@@ -2465,18 +2621,32 @@
                 "desc": "一款拥有极高压缩比的开源压缩软件，支持 7z、ZIP、RAR 等多种格式，基于 GNU LGPL 许可协议发布。",
                 "icon": "https://th.bing.com/th/id/OSAAS.D27DD120F3A38F51FB7851515FE91A65",
                 "url": "https://www.7-zip.org/",
-                "id": 355
+                "id": 377
               },
               {
                 "name": "Bandizip",
                 "desc": "Bandizip 是一个强大的多功能压缩文件管理工具，可提供很快的解压缩速度和其他各种实用功能。这是一个免费的软件，其付费版本更是可以使用更多的实用功能。",
                 "icon": "https://th.bing.com/th/id/ODF.keTrH3Do0A1CN10FDRQUSA",
                 "url": "https://www.bandisoft.com/bandizip/",
-                "id": 356
+                "id": 378
+              },
+              {
+                "name": "PeaZip",
+                "desc": "Free file archiver utility for Windows, macOS, Linux, Open Source file compression and encryption software. Open, extract RAR TAR ZIP archives, 200+ formats supported",
+                "icon": "https://peazip.github.io/favicon.ico",
+                "url": "https://peazip.github.io/",
+                "id": 379
+              },
+              {
+                "name": "WinRAR",
+                "desc": "WinRAR - the data compression, encryption and archiving tool for Windows that opens RAR and ZIP files. Compatible with many other file formats.",
+                "icon": "https://www.win-rar.com/fileadmin/images/common/favicon.ico",
+                "url": "https://www.win-rar.com/start.html?&L=0",
+                "id": 380
               }
             ],
             "icon": "",
-            "id": 354
+            "id": 376
           },
           {
             "title": "系统制作",
@@ -2486,39 +2656,39 @@
                 "desc": "简单来说，Ventoy是一个制作可启动U盘的开源工具。",
                 "icon": "https://www.ventoy.net/static/img/ventoy.png",
                 "url": "https://www.ventoy.net/cn/index.html",
-                "id": 358
+                "id": 382
               },
               {
                 "name": "Rufus",
                 "desc": "Rufus是一个小巧但功能强大的工具，用于创建可启动USB驱动器，支持Windows、Linux等系统。",
                 "icon": "https://th.bing.com/th/id/ODF.MGCYQ-kaBJIOsCFW4IJ_Dw",
                 "url": "https://rufus.ie/zh/",
-                "id": 359
+                "id": 383
               },
               {
                 "name": "balenaEtcher",
                 "desc": "Etcher是一个跨平台的系统镜像烧录工具，支持Windows、macOS和Linux。",
                 "icon": "https://th.bing.com/th/id/ODF.aF66vf4WK6vkmaxFilEBfg",
                 "url": "https://etcher.balena.io/",
-                "id": 360
+                "id": 384
               },
               {
                 "name": "Win32 Disk Imager",
                 "desc": "Win32 Disk Imager是一款经典的Windows系统U盘制作工具，支持将镜像文件写入USB设备。",
                 "icon": "https://sourceforge.net/favicon.ico",
                 "url": "https://sourceforge.net/projects/win32diskimager/",
-                "id": 361
+                "id": 385
               },
               {
                 "name": "UNetbootin",
                 "desc": "UNetbootin是一个跨平台的启动U盘创建工具，支持从ISO文件或网络下载创建启动U盘。",
                 "icon": "https://unetbootin.github.io/favicon.ico",
                 "url": "https://unetbootin.github.io/",
-                "id": 362
+                "id": 386
               }
             ],
             "icon": "",
-            "id": 357
+            "id": 381
           },
           {
             "title": "浏览器",
@@ -2528,60 +2698,60 @@
                 "desc": "Chrome 是 Google 的官方网络浏览器，速度飞快，安全可靠，并且支持自定义。欢迎立即下载，随心定制。",
                 "icon": "https://www.google.cn/chrome/static/images/favicons/favicon-16x16.png",
                 "url": "https://www.google.cn/intl/zh-CN/chrome/",
-                "id": 364
+                "id": 388
               },
               {
                 "name": "Microsoft Edge",
                 "desc": "Microsoft Edge is your AI browser. A new way to pilot the web. Learn more about built-in Edge features and capabilities that help you achieve more.",
                 "icon": "https://edgecdn-embza6g8cacagcbn.z01.azurefd.net/welcome/static/favicon.png",
                 "url": "https://www.microsoft.com/edge/",
-                "id": 365
+                "id": 389
               },
               {
                 "name": "Firefox",
                 "desc": "下载适用于 Windows、Mac 和 Linux 的 Firefox。Firefox 一款免费的网络浏览器，由致力于改善互联网健康与隐私的非营利组织 Mozilla 全力支持。",
                 "icon": "https://www.firefox.com/media/img/favicons/firefox/browser/apple-touch-icon.79c2abeb4e35.png",
                 "url": "https://www.firefox.com/",
-                "id": 366
+                "id": 390
               },
               {
                 "name": "Opera",
                 "desc": "Opera GX is the browser built specifically for gamers. Get unparalleled gaming and browsing features, packed in a powerful revolutionary browser.",
                 "icon": "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/gx/images/welcomeGx/favicon/apple-touch-icon.16b2fb5b1ecc.png",
                 "url": "https://www.opera.com",
-                "id": 367
+                "id": 391
               },
               {
                 "name": "Brave",
                 "desc": "Brave 浏览器是一款快速、私密且安全的网络浏览器，适用于 PC、Mac 和移动设备。立即下载即可享受更快的无广告浏览体验，并通过阻止跟踪软件来节省数据和电池寿命。",
                 "icon": "https://th.bing.com/th/id/OSAAS.E7D56858FA9104260B3B657AB1B5A649",
                 "url": "https://brave.com/zh/",
-                "id": 368
+                "id": 392
               },
               {
                 "name": "Yandex Browser",
                 "desc": "Yandex Browser got updated: it's a neural browser now. We enhanced it with neural networks that help users write appealing texts, create pictures, understand different languages, read texts, and get video summaries. Try it out — it's free.",
                 "icon": "https://browser.yandex.com/favicon.ico",
                 "url": "https://browser.yandex.com/#alice-ai",
-                "id": 369
+                "id": 393
               },
               {
                 "name": "DuckDuckGo",
                 "desc": "Windows 版 DuckDuckGo 是一款免费的浏览应用程序，默认情况下为你提供全面的在线隐私保护。保护。隐私。安心。",
                 "icon": "https://th.bing.com/th/id/ODL.07fd125e5e379408c6c9736415b9a5a9",
                 "url": "https://duckduckgo.com/windows",
-                "id": 370
+                "id": 394
               },
               {
                 "name": "Tor Project",
                 "desc": "Anonymity Online | Defend yourself against tracking and surveillance. Circumvent censorship.",
                 "icon": "https://th.bing.com/th/id/ODF.CNopKwngam7hNGeQHDwPPA",
                 "url": "https://www.torproject.org/?noredirect=1",
-                "id": 371
+                "id": 395
               }
             ],
             "icon": "",
-            "id": 363
+            "id": 387
           },
           {
             "title": "扩展程序",
@@ -2591,32 +2761,32 @@
                 "desc": "首页",
                 "icon": "https://www.tampermonkey.net/favicon.ico",
                 "url": "https://www.tampermonkey.net/",
-                "id": 373
+                "id": 397
               },
               {
                 "name": "OpenUserJS",
-                "desc": "Download userscripts to enhance your browser.",
-                "icon": "https://openuserjs.org/images/favicon.ico",
+                "desc": "下载用户脚本以增强您的浏览器功能。",
+                "icon": "https://th.bing.com/th/id/ODF.-Ksr4OAO_xSO_BK1DSuCKA",
                 "url": "https://openuserjs.org/",
-                "id": 374
+                "id": 398
               },
               {
                 "name": "Userscript.Zone",
-                "desc": "Userscript.Zone Search能让您找到最常用的用户脚本。",
-                "icon": "",
+                "desc": "让您找到最常用的用户脚本。",
+                "icon": "https://th.bing.com/th/id/ODF.vSfrGoaLAlQ3ybNfQBkeng",
                 "url": "https://www.userscript.zone/",
-                "id": 375
+                "id": 399
               },
               {
                 "name": "AdGuard",
-                "desc": "AdGuard 是摆脱烦人广告，在线跟踪并使您的计算机原理恶意软件的最佳途径。其使您体验快速，安全，无广告的网络冲浪。",
+                "desc": "摆脱烦人广告",
                 "icon": "https://adguard.info/stf/favicons/adguard/favicon.ico",
                 "url": "https://adguard.info/zh_cn/welcome.html",
-                "id": 376
+                "id": 400
               }
             ],
             "icon": "",
-            "id": 372
+            "id": 396
           }
         ],
         "icon": "",
