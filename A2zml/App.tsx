@@ -10,7 +10,7 @@ import Customize from './components/Customize' // 自定义网站卡片
 
 // 布局
 const { Header, Sider, Footer, Content } = Layout
-const { Text } = Typography
+const { Text, Title, Paragraph } = Typography
 interface NavItem { nav: []; id: string | number; }
 interface DataItem { nav: NavItem[]; id: string | number; }
 
@@ -116,13 +116,22 @@ const App = () => {
             </Descriptions>
           </Collapsible>
           <div id='a2zml' className='contents'>
-            <SubSearch isTabMode={isTabMode} data={data} />
-            {isCustomMode && <Customize />}
-            <Skeleton placeholder={<><Skeleton.Image style={{ width: '100%', height: 150 }} /><Skeleton.Paragraph rows={10} /></>} active={true} loading={loadings}>
-              <div id='mainShow'>
+
+            <div id='mainHide'>
+              <Title heading={5}></Title>
+              <Paragraph>
+              </Paragraph>
+            </div>
+
+
+            <div id='mainShow'>
+              <SubSearch isTabMode={isTabMode} data={data} />
+              {isCustomMode && <Customize />}
+              <Skeleton placeholder={<><Skeleton.Image style={{ width: '100%', height: 150 }} /><Skeleton.Paragraph rows={10} /></>} active={true} loading={loadings}>
                 <SubCards datas={displayData} />
-              </div>
-            </Skeleton>
+              </Skeleton>
+            </div>
+
           </div>
           <Footer>
             <div>

@@ -33,10 +33,7 @@ const HsSearch = ({ keyword, data }: { keyword: string; data: NavData[] }) => {
             return result
         }
         // 过滤搜索结果
-        const filtered = flattenData(data).filter((item) =>
-            item.name?.toLowerCase().includes(lowerKeyword) ||
-            item.desc?.toLowerCase().includes(lowerKeyword)
-        )
+        const filtered = flattenData(data).filter((item) => item.name?.toLowerCase().includes(lowerKeyword) || item.desc?.toLowerCase().includes(lowerKeyword))
         return filtered;
     }, [lowerKeyword, data])
 
