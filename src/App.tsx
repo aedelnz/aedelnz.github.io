@@ -1,71 +1,68 @@
-import { useState } from 'react'
-import { Layout, Nav, Avatar, Typography, Button, SideSheet } from '@douyinfe/semi-ui'
-import { IconMenu } from '@douyinfe/semi-icons'
-import SemiThemer from './components/SemiThemer' // 主题切换
-import SideNav from './components/SideNav' // 侧边栏
-import Homer from './components/Homer' // 首页内容
-import SubSite from './components/SubSite' // 附属网站
-import Linkso from './components/Linkso' // 友情链接
-
-const { Header, Sider, Footer, Content } = Layout
-const { Text } = Typography
+import { useState, useEffect } from 'react'
+import { Fetchs } from './components/lib/Fetchs'
+import { Layout } from '@douyinfe/semi-ui'
+import { IconAvatar, IconToken, IconHeart, IconCascader, IconCollapse } from '@douyinfe/semi-icons-lab'
+import Headers from './components/element/Headers'
+import SideSheets from './components/element/SideSheets'
+import Carousels from './components/element/Carousels'
+import SubSite from './components/SubSite'
+import Links from './components/Links'
 
 const App = () => {
-  // 侧边栏
+  // 首页数据
+  const [data, setData] = useState<any>([])
+  // 侧边栏是否可见
   const [visible, setVisible] = useState(false)
-  // 切换侧边栏
+  // 页头配置
+  const configNav = {
+    siteLogo: '/favicon.png',
+    siteName: '画的个人记录',
+    items: [
+      { text: '首页内容', icon: <IconAvatar />, itemKey: 'home', },
+      {
+        text: '附属网站',
+        icon: <IconToken />,
+        itemKey: 'subsite',
+        items: [
+          { text: '爱莫能助', icon: <IconCascader />, itemKey: '/A2zml/' },
+          { text: '魔法网络', icon: <IconCollapse />, itemKey: '/A2zml/v2/' }],
+      },
+      { text: '友情链接', icon: <IconHeart />, itemKey: 'linkso', },
+    ]
+  }
+  // 切换侧边栏可见性
   const change = () => setVisible(!visible)
-
+  // 获取首页数据
+  useEffect(() => {
+    const load = async () => {
+      const data = await Fetchs('/root/index.json');
+      if (data) {
+        setData(data);
+      }
+    }
+    load();
+    
+  }, []);
   return (
     <>
       <Layout>
-        <Header>
-          <div>
-            <Nav
-              mode={'horizontal'}
-              header={{
-                logo: <Avatar src="/favicon.png" size="default" shape="square" alt="图标" />,
-                text: '画的个人记录'
-              }}
-              footer={
-                <>
-                  <SemiThemer />
-                  <Button id="button-sidesheet" type="tertiary" icon={<IconMenu />} onClick={change} />
-                </>
-              }
-            />
+        <Layout.Header>
+          <Headers configNav={configNav} onChange={change} />
+        </Layout.Header>
+        <Layout.Sider>
+          <SideSheets items={configNav.items} visible={visible} onChange={change} />
+        </Layout.Sider>
+        <Layout.Content>
+          <Carousels data={data.about} />
+          <div style={{ height: '100px' }} />
+          <div style={{ padding: '8px' }}>
+            <SubSite />
+            <Links />
           </div>
-        </Header>
-        <Sider>
-          <SideNav />
-          <SideSheet title='画的个人记录' visible={visible} onCancel={change} placement="left" style={{ width: 'auto' }}>
-            <SideNav />
-          </SideSheet>
-        </Sider>
-        <Content>
-          <div id='home'>
-            <Homer />
-            <div className='contents'>
-              <SubSite />
-              <Linkso />
-            </div>
-          </div>
-          <Footer>
-            <div>
-              <span>Copyright © 2020-{new Date().getFullYear()} <Text link={{ href: 'https://jixiejidiguan.top/' }} underline>画的<span className="Highlight">个人记录</span></Text>. All Rights Reserved. </span>
-            </div>
-            <div>
-              <Text link={{ href: 'https://jixiejidiguan.top/' }} underline>湘ICP备2022000040号</Text>
-              <Text link={{ href: 'https://icp.gov.moe/?keyword=20220440' }} underline>萌ICP备20220440号</Text>
-              <Text link={{ href: 'https://www.12377.cn/' }} underline>违法和不良信息举报中心</Text>
-            </div>
-          </Footer>
-        </Content>
-
+        </Layout.Content>
       </Layout >
     </>
   )
 }
-
 
 export default App

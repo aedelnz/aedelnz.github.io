@@ -1,0 +1,93 @@
+{
+    "about": [
+        {
+            "title": "爱发电",
+            "name": "麗姫を描く",
+            "button": "支持UP主",
+            "link": "https://afdian.com/a/JIXIEJIDIGUAN",
+            "image": "/root/about/afdian.png"
+        },
+        {
+            "title": "哔哩哔哩",
+            "name": "麗姫を描く",
+            "button": "关注UP主",
+            "link": "https://space.bilibili.com/359155821",
+            "image": "/root/about/bilibili.png"
+        },
+        {
+            "title": "抖音",
+            "name": "画丽姬",
+            "button": "关注UP主",
+            "link": "https://v.douyin.com/lRfkI3ENw98",
+            "image": "/root/about/douyin.png"
+        }
+    ],
+    "links": [
+        {
+            "title": "Ar-Sr-Na个人网站",
+            "description": "突破计算边界，构筑数字视界",
+            "image": "https://st1-res.arsrna.cn/logo.ico",
+            "link": "https://www.arsrna.cn"
+        },
+        {
+            "title": "白鹭学园",
+            "description": "白鹭学园是一个动漫同好社区，著力于分享ACG相关信息",
+            "image": "https://img.srsg.moe/2021/06/01/c5b555e3b8a17.png",
+            "link": "https://srsg.moe"
+        },
+        {
+            "title": "团子笔记",
+            "description": "最简单的小站，记录自己的每时每刻",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=1351856278&s=5",
+            "link": "https://www.zhouzhou.work/"
+        },
+        {
+            "title": "Xiwangly's Blog",
+            "description": "这是Xiwangly的博客，记录我自己的技术成长过程和我的日常",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=1334850101&s=5",
+            "link": "https://xiwangly.top"
+        },
+        {
+            "title": "Magma Ink",
+            "description": "为美好的生活献礼",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=823202450&s=5",
+            "link": "https://magma.ink"
+        },
+        {
+            "title": "小丁的屋舍",
+            "description": "谈笑有鸿儒，往来无白丁",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=2724962172&s=5",
+            "link": "https://xding.top"
+        },
+        {
+            "title": "星之阁API",
+            "description": "不要和你的努力说对不起，那样会多对不起你的努力啊！",
+            "image": "https://p.qlogo.cn/gh/905188643/905188643/0",
+            "link": "https://api.xingzhige.com"
+        },
+        {
+            "title": "二次元论坛",
+            "description": "按下F逃离世界！",
+            "image": "https://p.qlogo.cn/gh/892876555/892876555/0",
+            "link": "https://www.ecylt.top"
+        },
+        {
+            "title": "PangBai's Blog",
+            "description": "PangBai's Blog = 𝕺𝖚𝖗 𝕷𝖎𝖋𝖊 = 旁白博客",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=1642981619&s=5",
+            "link": "https://pangbai.work"
+        },
+        {
+            "title": "TomyJan",
+            "description": "一只菜的要死还每天不努力只知道bbll娱乐至死的废柴",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=2445387644&s=5",
+            "link": "https://blog.tomys.top/"
+        },
+        {
+            "title": "MCWQZSの小站",
+            "description": "MCWQZSの小站",
+            "image": "https://q1.qlogo.cn/g?b=qq&nk=3519137422&s=5",
+            "link": "https://www.mcwqzs.com"
+        }
+    ]
+}
