@@ -1,68 +1,44 @@
-import { useState, useEffect } from 'react'
-import { Fetchs } from './components/lib/Fetchs'
+import { useState } from 'react'
 import { Layout } from '@douyinfe/semi-ui'
-import { IconAvatar, IconToken, IconHeart, IconCascader, IconCollapse } from '@douyinfe/semi-icons-lab'
-import Headers from './components/element/Headers'
-import SideSheets from './components/element/SideSheets'
-import Carousels from './components/element/Carousels'
-import SubSite from './components/SubSite'
-import Links from './components/Links'
+import Headers from './component/Headers'
+import SideSheets from './component/SideSheets'
+import Carousels from './component/Carousels'
+import Hitokotos from './component/Hitokotos'
+import Works from './component/Works'
+import Links from './component/Links'
+import Footers from './component/Footers'
 
 const App = () => {
-  // 首页数据
-  const [data, setData] = useState<any>([])
-  // 侧边栏是否可见
-  const [visible, setVisible] = useState(false)
-  // 页头配置
-  const configNav = {
-    siteLogo: '/favicon.png',
-    siteName: '画的个人记录',
-    items: [
-      { text: '首页内容', icon: <IconAvatar />, itemKey: 'home', },
-      {
-        text: '附属网站',
-        icon: <IconToken />,
-        itemKey: 'subsite',
-        items: [
-          { text: '爱莫能助', icon: <IconCascader />, itemKey: '/A2zml/' },
-          { text: '魔法网络', icon: <IconCollapse />, itemKey: '/A2zml/v2/' }],
-      },
-      { text: '友情链接', icon: <IconHeart />, itemKey: 'linkso', },
-    ]
-  }
-  // 切换侧边栏可见性
-  const change = () => setVisible(!visible)
-  // 获取首页数据
-  useEffect(() => {
-    const load = async () => {
-      const data = await Fetchs('/root/index.json');
-      if (data) {
-        setData(data);
-      }
-    }
-    load();
-    
-  }, []);
+  // 侧边栏的显示状态
+  const [sideSheet, setSideSheet] = useState(false)
+  // 切换侧边栏显示状态的函数
+  const change = () => setSideSheet(!sideSheet)
   return (
-    <>
+    <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)' }}>
+      <Layout.Header className='semi-layout-header-diy'>
+        <Headers change={change} />
+        <SideSheets sideSheet={sideSheet} change={change} />
+      </Layout.Header>
       <Layout>
-        <Layout.Header>
-          <Headers configNav={configNav} onChange={change} />
-        </Layout.Header>
-        <Layout.Sider>
-          <SideSheets items={configNav.items} visible={visible} onChange={change} />
-        </Layout.Sider>
-        <Layout.Content>
-          <Carousels data={data.about} />
-          <div style={{ height: '100px' }} />
-          <div style={{ padding: '8px' }}>
-            <SubSite />
+        <Carousels />
+        <Hitokotos />
+        <Layout.Content className='semi-layout-content-diy' style={{ marginTop: 0 }}>
+          <div
+            style={{
+              borderRadius: '10px',
+              border: '1px solid var(--semi-color-border)',
+              padding: '8px',
+            }}
+          >
+            <Works />
             <Links />
           </div>
         </Layout.Content>
-      </Layout >
-    </>
+      </Layout>
+      <Footers />
+    </Layout>
   )
 }
+
 
 export default App

@@ -1,95 +1,137 @@
-
-// 咸鱼的社交圈
-export interface MySocial {
-    title: string;
-    link: string;
-}
-export const MY_SOCIALS: MySocial[] = [
-    { title: "爱发电", link: "https://afdian.com/a/JIXIEJIDIGUAN" },
-    { title: "哔哩哔哩", link: "https://b23.tv/BJULPJJ" },
-    { title: "快手", link: "https://v.kuaishou.com/2FvxsLA" },
-    { title: "抖音", link: "https://v.douyin.com/lRfkI3ENw98" },
-    { title: "微博", link: "https://weibo.com/u/7882405990" },
-    { title: "微信公众号", link: "https://mp.weixin.qq.com/mp/author?action=show&author_id=ofMoI4-2KfsxPOlxFS5_kuG4-YjA" },
-    { title: "QQ群聊", link: "https://qm.qq.com/q/zMafUp6LRe" },
-    { title: "腾讯频道", link: "https://pd.qq.com/s/29y1ect4g?b=9" },
-    { title: "猫耳FM", link: "https://www.missevan.com/21564822" },
-    { title: "网易云音乐", link: "https://y.music.163.com/m/user?id=2070612671" },
-    { title: "酷狗音乐", link: "https://activity.kugou.com/share/v-c7b4da67/index.html?id=2e0df7766e16410cad7d09993cbf8240" }
-];
-
-// 咸鱼作品集
-export interface SubSites {
-    title: string;
-    description: string;
-    tag: string;
-    image: string;
-    link: string;
-}
-export const Sub_Site: SubSites[] = [
-    {
-        title: '画的博客',
-        description: '致力于提供通俗易懂的技术教程与踩坑经验。',
-        tag: 'Astro',
-        image: '/root/SubSite/blog.png',
-        link: 'https://blog.jixiejidiguan.top/'
-    },
-    {
-        title: '画的接口',
-        description: '专注开发测速与科研调用的API服务。',
-        tag: 'OpenList',
-        image: '/root/SubSite/jiekou.png',
-        link: 'https://s.jixiejidiguan.top/'
-    },
-    {
-        title: '画的工具',
-        description: '免安装·更高效·更便捷｜在线工具集合',
-        tag: 'OpenList',
-        image: '/root/SubSite/tools.png',
-        link: 'https://tools.jixiejidiguan.top/'
-    },
-    {
-        title: '画的资源',
-        description: '来自阿里云盘资源＆网易云音乐挂载',
-        tag: 'OpenList',
-        image: '/root/SubSite/ziyuan.png',
-        link: 'https://download.jixiejidiguan.top/'
-    },
-    {
-        title: '网站状态',
-        description: '每五分钟检查一次网站状态',
-        tag: ' UptimeRobot',
-        image: '/root/SubSite/start.png',
-        link: 'https://site.jixiejidiguan.eu.org'
-    },
-    {
-        title: "Internet Speed Test",
-        description: "详细内容请点击【魔法网络】查看",
-        tag: 'Cloudflare',
-        image: '/root/SubSite/speedCloudflare.png',
-        link: "https://v2.jixiejidiguan.eu.org"
-    }
-];
-
-export const Sub_Site_Stop: SubSites[] = [
-    {
-        title: "BiliRoaming Service",
-        description: " 一个停止运行的哔哩哔哩漫游服务！",
-        tag: 'BiliRoaming',
-        image: '/root/SubSite/biliroaming.png',
-        link: "https://bili.jixiejidiguan.eu.org"
-    },
-
-];
-
-// 友情链接
-export interface FriendlyLink {
+export interface iContactMe {
     title?: string;
     description?: string;
     image?: string;
     link?: string;
 }
-export const FRIENDLY_LINKS: FriendlyLink[] = [
+export const ContactMe: iContactMe[] = [
+    {
+        title: '爱发电',
+        description: '支持UP主，一般都不在线。',
+        image: '/root/contact/afdian.png',
+        link: 'https://afdian.com/a/JIXIEJIDIGUAN'
+    },
+    {
+        title: '哔哩哔哩',
+        description: '关注UP主，两三天会上线查看。',
+        image: '/root/contact/bilibili.png',
+        link: 'https://space.bilibili.com/359155821'
+    },
+    {
+        title: '抖音',
+        description: 'UP主基本上每天都会刷抖音。',
+        image: '/root/contact/douyin.png',
+        link: 'https://v.douyin.com/HkSAkVAqgyQ/'
+    },
+    {
+        title: '网易云音乐',
+        description: 'UP主喜欢歌单音乐分享',
+        image: '/root/contact/music163.png',
+        link: 'https://music.163.com/m/playlist?id=3111626385&creatorId=2070612671'
+    },
+    {
+        title: '酷狗音乐',
+        description: 'UP主喜欢的音乐分享',
+        image: '/root/contact/kugou.png',
+        link: 'https://activity.kugou.com/page/v-3023b6a0/index.html?qrcode=https://activity.kugou.com/share/v-c7b4da67/index.html?id=2e0df7766e16410cad7d09993cbf8240'
+    },
+    {
+        title: 'QQ群',
+        description: 'QQ群文件存在一些资源',
+        image: '/root/contact/qmqq.png',
+        link: 'https://qm.qq.com/q/A692kYM8f0'
+    },
+    {
+        title: 'QQ频道',
+        description: '放在吃灰的频道',
+        image: '/root/contact/pdqq.png',
+        link: 'https://pd.qq.com/s/crozyfoaq?b=5'
+    },
+]
+
+export interface iOtherWorks {
+    status?: string;
+    title?: string;
+    description?: string;
+    tag?: string;
+    label?: string;
+    image?: string;
+    link?: string;
+}
+export const OtherWorks: iOtherWorks[] = [
+    {
+        status: '正常',
+        title: '画的博客',
+        description: '致力于提供通俗易懂的技术教程与踩坑经验。',
+        tag: 'Astro',
+        label: '博客',
+        image: '/root/works/blog.png',
+        link: 'https://blog.jixiejidiguan.top/'
+    },
+    {
+        status: '正常',
+        title: '画的接口',
+        description: '专注开发测速与科研调用的API服务。',
+        tag: 'Typecho',
+        label: '接口',
+        image: '/root/works/jiekou.png',
+        link: 'https://s.jixiejidiguan.top/'
+    },
+    {
+        status: '正常',
+        title: '画的工具',
+        description: '免安装·更高效·更便捷｜在线工具集合',
+        tag: 'React ',
+        label: '工具',
+        image: '/root/works/tools.png',
+        link: 'https://tools.jixiejidiguan.top/'
+    },
+    {
+        status: '正常',
+        title: '画的资源',
+        description: '来自阿里云盘资源＆网易云音乐挂载',
+        tag: 'OpenList',
+        label: '资源',
+        image: '/root/works/ziyuan.png',
+        link: 'https://download.jixiejidiguan.top/'
+    },
+    {
+        status: '正常',
+        title: '网站状态',
+        description: '每五分钟检查一次网站状态',
+        tag: ' UptimeRobot',
+        label: '状态',
+        image: '/root/works/start.png',
+        link: 'https://site.jixiejidiguan.eu.org'
+    },
+    {
+        status: '正常',
+        title: "Internet Speed Test",
+        description: "详细内容请点击【魔法网络】查看",
+        tag: 'Cloudflare',
+        label: '测速',
+        image: '/root/works/speedCloudflare.png',
+        link: "https://v2.jixiejidiguan.eu.org"
+    },
+    {
+        status: '暂停服务',
+        title: "BiliRoaming Service",
+        description: " 一个停止运行的哔哩哔哩漫游服务！",
+        tag: 'BiliRoaming',
+        label: '漫游',
+        image: '/root/works/biliroaming.png',
+        link: "https://bili.jixiejidiguan.eu.org"
+    },
+
+]
+
+export interface iFriendlyLinks {
+    title?: string;
+    description?: string;
+    image?: string;
+    link?: string;
+}
+export const FriendLinks: iFriendlyLinks[] = [
     {
         title: 'Ar-Sr-Na个人网站',
         description: '突破计算边界，构筑数字视界',
@@ -129,7 +171,7 @@ export const FRIENDLY_LINKS: FriendlyLink[] = [
     {
         title: '星之阁API',
         description: '不要和你的努力说对不起，那样会多对不起你的努力啊！',
-        image: 'https://p.qlogo.cn/gh/905188643/905188643/0',
+        image: 'https://api.xingzhige.com/favicon.ico',
         link: 'https://api.xingzhige.com'
     },
     {
@@ -155,5 +197,5 @@ export const FRIENDLY_LINKS: FriendlyLink[] = [
         description: 'MCWQZSの小站',
         image: 'https://q1.qlogo.cn/g?b=qq&nk=3519137422&s=5',
         link: 'https://www.mcwqzs.com'
-    }
+    },
 ];

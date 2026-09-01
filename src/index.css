@@ -4,141 +4,115 @@ body {
   background-color: var(--semi-color-bg-0);
 }
 
-/* 顶部导航栏 */
-header.semi-layout-header {
-  background-color: var(--semi-color-bg-2);
+/* Header styles */
+.semi-layout-header-diy {
   position: fixed;
+  width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
-/* 导航栏按钮边距 */
-header.semi-layout-header .semi-navigation-footer button {
-  margin-right: 4px;
-}
-
-/* 内容区域 */
-section.semi-layout.semi-layout-has-sider {
+/* Content styles */
+.semi-layout-content-diy {
+  padding: 24px;
   margin-top: 60px;
+  background-color: rgba(var(--semi-grey-0), 1);
 }
 
-/* 展开关闭侧边栏内容区域 */
-.semi-sidesheet .semi-sidesheet-body {
-  padding: 0;
-}
-
-#button-sidesheet {
-  display: none;
-}
-
-/* 侧边导航栏底部边距 */
-.semi-navigation.semi-navigation-vertical {
-  padding-bottom: 16px;
-}
-
-/* 展开侧边栏 */
-aside.semi-layout-sider {
-  background-color: var(--semi-color-bg-2);
-  border-right: 1px solid var(--semi-color-border);
-  position: fixed;
-  overflow: auto;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  z-index: 99;
-}
-
-@media screen and (max-width: 768px) {
-  aside.semi-layout-sider {
-    display: none;
-  }
-
-  #button-sidesheet {
-    display: block;
+@media (max-width: 768px) {
+  .semi-layout-content-diy {
+    padding: 12px;
   }
 }
 
-/* main 内容区域 */
-main.semi-layout-content {
-  margin-left: 240px;
-}
-
-.contents {
-  padding: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  main.semi-layout-content {
-    margin-left: 0;
-  }
-
-  .contents {
-    padding: 8px;
-  }
-}
-
-/* 页脚 */
-footer.semi-layout-footer {
-  border-top: 1px solid var(--semi-color-border);
-  padding: 24px 0;
-}
-
-/* 页脚内容区域 */
-footer.semi-layout-footer>div {
-  padding: 0 16px;
-}
-
-footer.semi-layout-footer>div a {
-  margin-right: 4px;
-}
-
-/* ========= 上面通用模板 ========= */
-
-/* ======== 规范布局 ======== */
-/* 容器内容间距 */
-.Cont-Cards {
-  margin-bottom: 24px;
-}
-
-/* 内容标题间距 */
-.Title-Sub {
-  margin-bottom: 12px;
-}
-
-/* 内容标题解释间距 */
-.Title-Sub p {
+/* Footer styles */
+.semi-layout-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
   color: var(--semi-color-text-2);
+  background-color: rgba(var(--semi-grey-0), 1);
 }
 
-/* ======== 规范布局 ======== */
-
-/* ======== index ======== */
-.homer {
-  background-image: url('/root/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: calc(100vh - 60px);
+@media (max-width: 768px) {
+  .semi-layout-footer {
+    flex-direction: column;
+  }
 }
 
-.homer-content {
-  background-color: rgba(var(--semi-grey-0), 0.8);
-  height: calc(100vh - 60px);
-  padding: 24px;
+.semi-layout-footer .footer-links span {
+  margin-left: 2px;
 }
 
-#hitokoto {
-  position: relative;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-sizing: content-box;
-  width: auto;
+
+/* a2zml styles */
+/* a2zml Acard styles */
+.acard .semi-card-body {
+  padding: 16px 20px;
 }
 
-#hitokoto h4 {
-  text-align: right;
+@media (max-width: 768px) {
+  .acard .semi-card-body {
+    padding: 2px 8px;
+  }
+}
+
+.acard .semi-typography-text {
+  flex: 1;
+  /* 占满剩余宽度 */
+  min-width: 0;
+  /* 允许收缩到内容以下，关键！ */
+  overflow: hidden;
+  /* 防止内容溢出 */
+  display: block;
+  /* 确保块级，方便 flex 子项生效 */
+}
+
+.acard .semi-card-meta {
+  min-width: 0;
+  /* 允许收缩 */
+  flex: 1;
+  /* 如果 Meta 是 flex 项，则让它占满 */
+}
+
+.acard .semi-card-meta-wrapper {
+  min-width: 0;
+  /* 允许收缩 */
+  flex: 1;
+  /* 与标题/描述配合，占满剩余宽度 */
+}
+
+.acard .semi-avatar-default {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.acard .semi-card-meta-wrapper-title,
+.acard .semi-card-meta-wrapper-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  /* 保证继承父容器宽度，或无需显式设置 */
+}
+
+@media (max-width: 768px) {
+  .acard .semi-avatar-default {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+  }
+
+  .acard .semi-card-meta-avatar {
+    margin-right: 6px;
+  }
+
+  .acard .semi-card-meta-wrapper-title {
+    font-size: 14px
+  }
+
+  .acard .semi-card-meta-wrapper-description {
+    font-size: 12px
+  }
 }

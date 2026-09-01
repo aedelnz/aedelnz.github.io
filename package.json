@@ -1,7 +1,7 @@
 {
   "name": "aedelnz.github.io",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
@@ -10,25 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@douyinfe/semi-icons": "^2.95.1",
-    "@douyinfe/semi-icons-lab": "^2.95.1",
-    "@douyinfe/semi-illustrations": "^2.96.0",
-    "@douyinfe/semi-ui": "^2.95.1",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "@douyinfe/semi-icons": "^2.102.0",
+    "@douyinfe/semi-icons-lab": "^2.102.0",
+    "@douyinfe/semi-ui": "^2.102.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^24.12.2",
-    "@types/react": "^19.2.14",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^10.2.1",
+    "@vitejs/plugin-react": "^6.0.4",
+    "eslint": "^10.8.0",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.5.0",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
     "typescript": "~6.0.2",
-    "typescript-eslint": "^8.58.2",
-    "vite": "^8.0.10"
+    "typescript-eslint": "^8.65.0",
+    "vite": "^8.2.0"
   }
 }
