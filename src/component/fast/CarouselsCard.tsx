@@ -5,7 +5,7 @@ const CarouselsCard = ({ data }: { data: iContactMe }) => {
     const { title, description, image, link } = data
     return (
         <div style={{
-            backgroundImage: `url('${image}')`,
+            backgroundImage: `url('https://img02.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/t/0/?appid=122&url=https://jixiejidiguan.top${image}')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

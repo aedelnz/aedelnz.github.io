@@ -26,7 +26,7 @@ const WorksCard = ({ data }: { data: iOtherWorks }) => {
                         style={{ height: 200, width: '100%' }}
                         shape="square"
                         size="default"
-                        src={image}
+                        src={`https://img02.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/t/0/?appid=122&url=https://jixiejidiguan.top${image}`}
                     />
                     <Space
                         align='center'
