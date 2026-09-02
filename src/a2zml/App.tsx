@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, Collapsible, Layout, Space, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui'
+import { Button, Collapsible, Layout, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui'
 import { IconSetting } from '@douyinfe/semi-icons'
 import { useDB } from '../component/lib/DB'
 import { useWindowHeight } from '../component/lib/Breakpoints'
@@ -14,6 +14,7 @@ import Footers from '../component/Footers'
 interface OpenData {
     isOpen: boolean;
     search: boolean;
+    center: boolean;
     custom: boolean;
     Show: boolean;
 }
@@ -21,11 +22,11 @@ interface OpenData {
 const App = () => {
     const [selectedKey, setSelectedKey] = useState<string | null>(null)
     const [onbreakpointBoot, setOnbreakpointBoot] = useState(false)
-    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, custom: true, Show: true })
+    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, center: true, custom: true, Show: true })
     const { data, loading, error } = useDB()
     const screenHeight = useWindowHeight()
     const onbreakpoint = (_screen: unknown, bool: boolean) => setOnbreakpointBoot(!bool)
-    
+
     useEffect(() => {
         const firstFetch = () => {
             const firstKey = data?.[0]?.nav?.[0]?.id
@@ -33,15 +34,18 @@ const App = () => {
                 setSelectedKey(String(firstKey))
             }
         }
-        if(!openData?.Show) {
+        if (openData?.Show) {
             firstFetch()
         }
     }, [data, selectedKey])
-const switchConfigs = [
-  { key: 'search', label: '搜索框' },
-  { key: 'custom', label: '自定义网站' },
-  { key: 'Show', label: '首页列表显示' },
-];
+
+    const switchConfigs: { key: keyof OpenData; label: string }[] = [
+        { key: 'search', label: '搜索框' },
+        { key: 'center', label: '搜索框居中' },
+        { key: 'custom', label: '自定义网站' },
+        { key: 'Show', label: '首页列表显示' },
+    ];
+
 
     return (
         <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height: `${screenHeight}px` }}>
@@ -71,22 +75,24 @@ const switchConfigs = [
                             <DarkMode />
                         </div>
                         <Collapsible isOpen={openData?.isOpen}>
-                            <Card style={{marginTop: '10px'}}>
+                            <Card style={{ marginTop: '10px' }}>
                                 <Descriptions align='left'>
-                                {switchConfigs.map(({ key, label }) => (
-                                    <Descriptions.Item key={key} itemKey={label}>
-                                    <Switch
-                                        checked={openData?.[key]}
-                                        onChange={(checked) => setOpenData(prev => ({ ...prev, [key]: checked, isOpen: !openData?.isOpen }))}
-                                    />
-                                    </Descriptions.Item>
-                                ))}
+                                    {switchConfigs.map(({ key, label }) => (
+                                        <Descriptions.Item key={key} itemKey={label}>
+                                            <Switch
+                                                checked={openData?.[key]}
+                                                onChange={(checked) => setOpenData(prev => ({ ...prev, [key]: checked, isOpen: !openData?.isOpen }))}
+                                            />
+                                        </Descriptions.Item>
+                                    ))}
                                 </Descriptions>
                             </Card>
                         </Collapsible>
-                        <div style={{height: screenHeight}}>
-                        <Searchs search={openData?.search} />
-                        <Customs custom={openData?.custom} />
+                        <div style={openData?.center ? { display: 'flex', alignItems: 'center', height: screenHeight - 200 } : undefined}>
+                            <div style={{ width: '100%' }}>
+                                <Searchs search={openData?.search} />
+                                <Customs custom={openData?.custom} />
+                            </div>
                         </div>
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
