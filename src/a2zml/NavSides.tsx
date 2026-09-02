@@ -1,4 +1,4 @@
-import { Avatar, Nav } from "@douyinfe/semi-ui"
+import { Avatar, Nav, Tooltip } from "@douyinfe/semi-ui"
 import { createElement, useState, type ElementType } from 'react'
 import { useDB } from '../component/lib/DB'
 import { useWindowHeight } from '../component/lib/Breakpoints'
@@ -54,7 +54,7 @@ const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect:
             items={navdata}
             onSelect={onSelects}
             header={{
-                logo: <Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.open('/') }} />,
+                logo: <Tooltip content={'首页'} position={'right'}><Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.location.assign('/') }} /></Tooltip>,
                 text: '爱莫能助',
             }}
             footer={{

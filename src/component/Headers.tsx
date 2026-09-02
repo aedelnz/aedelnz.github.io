@@ -55,7 +55,7 @@ const Headers = ({ mode = 'horizontal', change }: { mode?: 'horizontal' | 'verti
     const onSelect = (data: { itemKey: string | number }) => {
         const text = String(data.itemKey)
         if (text.startsWith('/')) {
-            window.open(text)
+            window.location.assign(text)
             return
         }
         scrollToId(text)

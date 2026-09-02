@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, Collapsible, Layout, Space, Spin, Switch, Typography } from '@douyinfe/semi-ui'
+import { Button, Collapsible, Layout, Space, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui'
 import { IconSetting } from '@douyinfe/semi-icons'
 import { useDB } from '../component/lib/DB'
 import { useWindowHeight } from '../component/lib/Breakpoints'
@@ -15,12 +15,13 @@ interface OpenData {
     isOpen: boolean;
     search: boolean;
     custom: boolean;
+    Show: boolean;
 }
 
 const App = () => {
     const [selectedKey, setSelectedKey] = useState<string | null>(null)
     const [onbreakpointBoot, setOnbreakpointBoot] = useState(false)
-    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, custom: true })
+    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, custom: true, Show: true })
     const { data, loading, error } = useDB()
     const screenHeight = useWindowHeight()
     const onbreakpoint = (_screen: unknown, bool: boolean) => setOnbreakpointBoot(!bool)
@@ -32,8 +33,15 @@ const App = () => {
                 setSelectedKey(String(firstKey))
             }
         }
-        firstFetch()
+        if(!openData?.Show) {
+            firstFetch()
+        }
     }, [data, selectedKey])
+const switchConfigs = [
+  { key: 'search', label: '搜索框' },
+  { key: 'custom', label: '自定义网站' },
+  { key: 'Show', label: '首页列表显示' },
+];
 
     return (
         <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height: `${screenHeight}px` }}>
@@ -63,29 +71,23 @@ const App = () => {
                             <DarkMode />
                         </div>
                         <Collapsible isOpen={openData?.isOpen}>
-                            <Space vertical>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <Typography.Text style={{ margin: 8 }}>
-                                        {openData?.search ? '已开启搜索' : '已关闭搜索'}
-                                    </Typography.Text>
+                            <Card style={{marginTop: '10px'}}>
+                                <Descriptions align='left'>
+                                {switchConfigs.map(({ key, label }) => (
+                                    <Descriptions.Item key={key} itemKey={label}>
                                     <Switch
-                                        checked={openData?.search}
-                                        onChange={(checked) => setOpenData(prev => ({ ...prev, search: checked, isOpen: !openData?.isOpen }))}
+                                        checked={openData?.[key]}
+                                        onChange={(checked) => setOpenData(prev => ({ ...prev, [key]: checked, isOpen: !openData?.isOpen }))}
                                     />
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
-                                    <Typography.Text style={{ margin: 8 }}>
-                                        {openData?.custom ? '已开启自定义' : '已关闭自定义'}
-                                    </Typography.Text>
-                                    <Switch
-                                        checked={openData?.custom}
-                                        onChange={(checked) => setOpenData(prev => ({ ...prev, custom: checked, isOpen: !openData?.isOpen }))}
-                                    />
-                                </div>
-                            </Space>
+                                    </Descriptions.Item>
+                                ))}
+                                </Descriptions>
+                            </Card>
                         </Collapsible>
+                        <div style={{height: screenHeight}}>
                         <Searchs search={openData?.search} />
                         <Customs custom={openData?.custom} />
+                        </div>
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}

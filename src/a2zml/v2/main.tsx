@@ -2,7 +2,7 @@ import '@douyinfe/semi-ui/react19-adapter'
 import '../../index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Avatar, Layout, List, Nav, Typography } from '@douyinfe/semi-ui'
+import { Avatar, Layout, List, Nav, Typography, Tooltip } from '@douyinfe/semi-ui'
 import { OpenTool, SubscribeNode } from './Data'
 import DarkMode from '../../component/fast/DarkMode'
 import Hitokotos from '../../component/Hitokotos'
@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
         <Nav
           mode={'horizontal'}
           header={{
-            logo: <Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.open('/') }} />,
+            logo: <Tooltip content={'首页'}><Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.location.assign('/') }} /></Tooltip>,
             text: '魔法网络'
           }}
           footer={
