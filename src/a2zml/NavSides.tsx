@@ -34,6 +34,11 @@ const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect:
     }
     // 处理选中项的变化
     const onSelects = ({itemKey}: {itemKey: string | number}) => {
+        const text = String(itemKey)
+            if (text.startsWith('/') || text.startsWith('https')) {
+                window.open(text)
+                return
+            }
         onSelect(String(itemKey))
         setSelectedKeys([itemKey])
     }
