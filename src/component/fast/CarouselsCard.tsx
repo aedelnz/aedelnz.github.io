@@ -32,7 +32,7 @@ const CarouselsCard = ({ data }: { data: iContactMe }) => {
                     <Typography.Paragraph>{description}</Typography.Paragraph>
                     <Button
                         size='large'
-                        onClick={() => { window.open(link, '_blank') }}
+                        onClick={() => { window.open(link) }}
                     >
                         查看
                     </Button>

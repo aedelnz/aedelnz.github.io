@@ -16,6 +16,11 @@ const ACard = ({ data }: { data: CardItem }) => {
         if (typeof text !== 'string') return undefined
         return text.split('\n\n')[0]
     }
+    const iconUrl = (icon: string | undefined) => {
+        if (!icon) return undefined
+        if (icon.startsWith('OIP-C')|| icon.startsWith('ODF.')) return `https://ts4.tc.mm.bing.net/th/id/${icon}`
+        return icon
+    }
     return (
         <Card
             className="acard"
@@ -28,7 +33,7 @@ const ACard = ({ data }: { data: CardItem }) => {
             }}
         >
             <div style={{ flex: 1, minWidth: 0, overflow: 'hidden' }}>
-                <Typography.Text link={{ href: `${data.url}` }}>
+                <Typography.Text onClick={() => window.open(data.url)}>
                     <Card.Meta
                         title={data.name}
                         description={truncate(data.desc)}
@@ -36,7 +41,7 @@ const ACard = ({ data }: { data: CardItem }) => {
                             <Avatar
                                 size="default"
                                 shape="square"
-                                src={data.icon}
+                                src={iconUrl(data.icon)}
                             />
                         }
                     />
@@ -48,12 +53,12 @@ const ACard = ({ data }: { data: CardItem }) => {
                     <Avatar
                         size="extra-large"
                         shape="square"
-                        src={data.icon}
+                        src={iconUrl(data.icon)}
                     />
                     <Typography.Title>{data.name}</Typography.Title>
-                     <Button colorful theme="solid" type="primary" icon={<IconAIFilledLevel1 />} onClick={() => { window.open(data.url, '_blank') }}>点击直达</Button>
+                    <Button colorful theme="solid" type="primary" icon={<IconAIFilledLevel1 />} onClick={() => { window.open(data.url, '_blank') }}>点击直达</Button>
                 </Space>
-                <MarkdownRender raw={data.desc} format="md" style={{margin: '20px 8px'}} />
+                <MarkdownRender raw={data.desc} format="md" style={{ margin: '20px 8px' }} />
             </SideSheet>
         </Card>
     )

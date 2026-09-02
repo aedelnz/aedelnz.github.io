@@ -2,6 +2,7 @@ import { Avatar, Nav, Tooltip } from "@douyinfe/semi-ui"
 import { createElement, useState, type ElementType } from 'react'
 import { useDB } from '../component/lib/DB'
 import { useWindowHeight } from '../component/lib/Breakpoints'
+import useLocalStorage from '../component/lib/LocalStorage'
 import * as SemiIcons from '@douyinfe/semi-icons'
 import * as SemiIconsLab from '@douyinfe/semi-icons-lab'
 
@@ -9,12 +10,14 @@ const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect:
     const [openKeys, setOpenKeys] = useState<(string | number)[]>([])
     const [selectedKeys, setSelectedKeys] = useState<(string | number)[]>([])
     const { data } = useDB()
+    const { setValue: setOpenSelected } = useLocalStorage('a2zml-data-Selected', '')
     const screenHeight = useWindowHeight()
     const iconComponents = { ...SemiIcons, ...SemiIconsLab, } as unknown as Record<string, ElementType>
     const getNavIcon = (iconName?: string) => {
         const Icon = iconName ? iconComponents[iconName] : undefined
         return Icon ? createElement(Icon) : undefined
     }
+    // 
     const navdata = (data ?? []).map((item) => ({
         itemKey: String(item.id ?? ''),
         text: item.title ?? '',
@@ -30,18 +33,22 @@ const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect:
         if (openKeys.length > 0) {
             const currentKey = openKeys[openKeys.length - 1]
             setOpenKeys([currentKey])
+
         }
+
     }
     // 处理选中项的变化
-    const onSelects = ({itemKey}: {itemKey: string | number}) => {
+    const onSelects = ({ itemKey }: { itemKey: string | number }) => {
         const text = String(itemKey)
-            if (text.startsWith('/') || text.startsWith('https')) {
-                window.open(text)
-                return
-            }
+        if (text.startsWith('/') || text.startsWith('https')) {
+            window.open(text)
+            return
+        }
+        setOpenSelected(String(itemKey))
         onSelect(String(itemKey))
         setSelectedKeys([itemKey])
     }
+
     return (
         <Nav
             openKeys={openKeys}

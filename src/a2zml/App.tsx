@@ -17,33 +17,40 @@ interface OpenData {
     center: boolean;
     custom: boolean;
     Show: boolean;
+    Selected: boolean;
 }
 
 const App = () => {
     const [selectedKey, setSelectedKey] = useState<string | null>(null)
     const [onbreakpointBoot, setOnbreakpointBoot] = useState(false)
-    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, center: true, custom: true, Show: true })
+    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, center: true, custom: true, Show: true, Selected: true })
+    const { value: openSelected } = useLocalStorage('a2zml-data-Selected', '')
     const { data, loading, error } = useDB()
     const screenHeight = useWindowHeight()
     const onbreakpoint = (_screen: unknown, bool: boolean) => setOnbreakpointBoot(!bool)
-
+    
     useEffect(() => {
         const firstFetch = () => {
-            const firstKey = data?.[0]?.nav?.[0]?.id
+            const firstKey = data?.[0]?.nav?.[0]?.id;
             if (firstKey !== undefined && !selectedKey) {
-                setSelectedKey(String(firstKey))
+                if (openData?.Selected) {
+                    setSelectedKey(String(openSelected));
+                } else {
+                    setSelectedKey(String(firstKey));
+                }
             }
-        }
+        };
         if (openData?.Show) {
-            firstFetch()
+            firstFetch();
         }
-    }, [data, selectedKey])
+    }, [data, openSelected, openData?.Selected, openData?.Show, selectedKey]);
 
     const switchConfigs: { key: keyof OpenData; label: string }[] = [
         { key: 'search', label: '搜索框' },
         { key: 'center', label: '搜索框居中' },
         { key: 'custom', label: '自定义网站' },
         { key: 'Show', label: '首页列表显示' },
+        { key: 'Selected', label: '侧边栏记忆' },
     ];
 
 
