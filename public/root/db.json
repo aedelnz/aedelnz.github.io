@@ -758,45 +758,185 @@
             "nav": [
               {
                 "name": "Steam",
-                "desc": "Valve 旗下全球最大的综合性数字游戏发行平台",
+                "desc": "Valve 旗下游戏发行平台\n\nSteam 是玩游戏、讨论游戏和创作游戏的终极目的地。",
                 "icon": "ODF.KO--9FKLdRe7BDLCTqcNJg",
                 "url": "https://store.steampowered.com",
                 "id": 111
               },
               {
                 "name": "Epic Games Store",
-                "desc": "每周喜加一\n\nEpic Games 推出的数字游戏发行平台，以每周免费游戏著称",
+                "desc": "\n\n一个为PC和Mac精心策划的数字商店，既为玩家也为创作者设计。",
                 "icon": "ODF.4Stc53dptYSF7aYQ80A0pQ",
                 "url": "https://store.epicgames.com",
                 "id": 112
               },
               {
                 "name": "GOG",
-                "desc": "CD Projekt 旗下无 DRM 数字游戏平台，专注于经典与独立游戏",
+                "desc": "波兰蠢驴 CD Projekt\n\n在 Windows、Mac 和 Mac 上下载最好的经典游戏和新游戏Linux。内容丰富，无 DRM，提供免费赠品和 30 天退款保证。",
                 "icon": "ODF.5PaGuaqP6G0quSoyv7Oxgw",
                 "url": "https://www.gog.com",
                 "id": 113
               },
               {
-                "name": "Ubisoft Connect",
-                "desc": "育碧官方游戏平台，整合了 Uplay 的玩家服务与商城功能",
+                "name": "UBISOFT",
+                "desc": "育碧\n\n育碧中国官网为您带来最新游戏大作、热门活动与专属玩家福利。探索《刺客信条》《彩虹六号》《纪元》《孤岛惊魂》等游戏资讯，汇聚你的游戏、好友与福利。立即加入，尽享PC、移动、主机及VR平台的无限精彩。",
                 "icon": "ODF.2WWSXtEXUMeV10PFHqJn9Q",
                 "url": "https://zh-cn.ubisoft.com/",
                 "id": 114
               },
               {
-                "name": "Origin",
-                "desc": "EA 旗下数字游戏发行平台（已逐步迁移至 EA App）",
+                "name": "EA官方中文网",
+                "desc": "\n\n我们的存在就是为了通过游戏来启发世界。Electronic Arts 是名列前茅的主机、PC 和手游的游戏发行商。",
                 "icon": "ODF.NmVqK8Ljp_6PFGU0g0amXA",
-                "url": "https://www.ea.com/ea-app",
+                "url": "https://www.ea.com/zh-hans",
                 "id": 115
               },
               {
-                "name": "Battle.net",
-                "desc": "暴雪娱乐旗下游戏平台，承载《魔兽世界》《守望先锋》等系列作品",
-                "icon": "ODF.k0TGmYvPRFRoNExFkOVb7w",
+                "name": "Blizzard Entertainment",
+                "desc": "暴雪娱乐\n\n暴雪娛樂的作品包括《魔獸世界》、《暗黑破壞神》、《星海爭霸》和《鬥陣特攻》系列遊戲，是業界首屈一指的遊戲開發商，專門打造有史以來最史詩的娛樂體驗。\n\n战网：https://shop.battlenet.com.cn/",
+                "icon": "ODF.bwSIJbPYNKo1f0wIKUoDvA",
                 "url": "https://www.blizzard.com",
                 "id": 116
+              },
+              {
+                "name": "WeGame",
+                "desc": "一起更好玩 WeGame More\n\nWeGame是中国最大的PC游戏平台。我们致力于给玩家带来更多高品质游戏和更好游玩体验，为开发者和运营商提供全生命周期的游戏发行和运营服务。一起玩，才更好玩。",
+                "icon": "ODF.qopY3QVaNJGTlauJdNrTXA",
+                "url": "https://www.wegame.com/",
+                "id": 0
+              },
+              {
+                "name": "网易游戏平台",
+                "desc": "发烧游戏\n\n我和你一样，我们都是游戏热爱者。作为网易官方游戏平台，发烧游戏将持续为你提供高品质游戏产品。已上线了《哈利波特：魔法觉醒》、《七日世界》、《我的世界》、《泰亚史诗》等。",
+                "icon": "ODF.8G5QdnhBCJpLFQBz6Ndnxw",
+                "url": "https://fever.163.com/",
+                "id": 0
+              },
+              {
+                "name": "米哈游启动器",
+                "desc": "miHoYo一站式游戏平台\n\n无限世界，一键启程",
+                "icon": "https://sdk.mihoyo.com/hyp/agreement/images/favicon.ico",
+                "url": "https://launcher.mihoyo.com/",
+                "id": 0
+              }
+            ],
+            "icon": "",
+            "id": 110
+          },
+          {
+            "title": "云游戏",
+            "nav": [
+              {
+                "name": "网易云游戏",
+                "desc": "网易云游戏是网易官方推出的云游戏平台\n\n并提供免费的云电脑，云手机。不占空间，不耗电，不吃配置，不发烫，突破了端和设备限制，已支持安卓、iPhone、iPad、网页版、Windows版、Mac、电视TV；低配手机电脑流畅运行。热门手游、端游免下载游玩。手游电脑版、端游手机版、想在手机、电脑、平板上随时游玩黑神话：悟空、蛋仔派对、光遇、第五人格、永劫无间、逆水寒、逆水寒手游、阴阳师、明日之后等游戏，一键畅玩，还有超多免费福利礼包。",
+                "icon": "https://cg.163.com/logo2.png",
+                "url": "https://cg.163.com/#/game-recommend",
+                "id": 0
+              },
+              {
+                "name": "START云游戏",
+                "desc": "腾讯官方，一键启动，让好玩触手可及！\n\nSTART云游戏是腾讯面向未来的跨终端游戏平台，无需下载游戏，众多热门网游和单机一网打尽。现已支持网页版一键启动，点击立玩命运方舟、英雄联盟、DNF、原神、崩铁、逆战、NBA2K等精品端游，数据互通，官方背书，账号安全有保障。",
+                "icon": "https://cdn.start.qq.com/web-assets/img/icon/start32.png",
+                "url": "https://start.qq.com/webgame/home?ADTAG=10000000",
+                "id": 0
+              },
+              {
+                "name": "腾讯先锋",
+                "desc": "腾讯官方云游戏平台\n\n腾讯先锋是腾讯游戏官方云游戏平台，新游内测官方平台。王者荣耀、和平精英等大作免下载、免更新，一点就玩。玩家能玩转海量热门游戏，也能抢先内测，先人一步体验新游。云游戏，就用腾讯先锋！",
+                "icon": "https://gamer.qpic.cn/paladin/images/1654699392958_57207.png",
+                "url": "https://gamer.qq.com/",
+                "id": 0
+              },
+              {
+                "name": "京东云游戏",
+                "desc": "\n\n京东云游戏平台，每小时低至0.94元！让热爱游戏的玩家摆脱硬件困扰，仅需浏览器即可满画质畅玩 3A 大作，首次注册，再送30分钟！名额有限，先到先得！ | 京东云游戏 - 官方云游戏平台，免下载，免安装，即点即玩。依托京东强大的云计算能力，为您提供高清、低延时、跨终端的流畅游戏体验。海量3A大作与热门手游，随时随地，想玩就玩。",
+                "icon": "https://www.jdcloud.com/static/img/favicon.ico",
+                "url": "https://play.jd.com/",
+                "id": 0
+              },
+              {
+                "name": "咪咕游戏",
+                "desc": "\n\n咪咕游戏（MiguPlay）是一个手机、电脑、电视机顶盒三端互通的云游戏平台。玩家可免费畅玩海量精品游戏，千余款3A主机/PC大作及高品质手游免下载免安装，即点即玩。",
+                "icon": "https://www.migufun.com/miguplay/staticResource/img/favicon.ico?v=1",
+                "url": "https://www.migufun.com/",
+                "id": 0
+              },
+              {
+                "name": "格来云游戏",
+                "desc": "3A大作即点即玩\n\n格来云游戏PC端，无需高配电脑即可畅玩500+款3A大作。云端串流最高4K 60FPS，支持键鼠和手柄双输入。",
+                "icon": "https://m.gelaiyun.com/favicon.ico",
+                "url": "https://m.gelaiyun.com/",
+                "id": 0
+              },
+              {
+                "name": "云游戏",
+                "desc": "小米云游戏",
+                "icon": "ODF.IaSQM2t5yQRix03gzyoriw",
+                "url": "https://static.g.mi.com/game/newAct/cloudWeb/cloudWebsite/index.html#/home",
+                "id": 0
+              }
+            ],
+            "icon": "",
+            "id": 110
+          },
+          {
+            "title": "游戏",
+            "nav": [
+              {
+                "name": "云・永劫",
+                "desc": "端游\n\n大神云游戏是网易游戏官方打造的云游戏平台，电脑端一键畅玩网易热门手游，免下载、免等待，解锁更高配置画面渲染和流畅顺滑的PC云游戏体验",
+                "icon": "https://cloudgame.ds.163.com/favicon/yjwj.ico",
+                "url": "https://cloudgame.ds.163.com/yjwj",
+                "id": 0
+              },
+              {
+                "name": "云·原神",
+                "desc": "云原神网页版\n\n云原神网页版是米哈游（miHoYo）旗下的原神云游戏版本。通过实时云端技术，你无需下载完整原神包体，也可尽享低延迟、高画质、高帧率游戏体验。《原神》是由米哈游自研的一款开放世界冒险RPG。你将在游戏中探索一个被称作「提瓦特」的幻想世界。在这广阔的世界中，你可以踏遍七国，邂逅性格各异、能力独特的同伴，与他们一同对抗强敌，踏上寻回血亲之路；也可以不带目的地漫游，沉浸在充满生机的世界里，让好奇心驱使自己发掘各个角落的奥秘……直到你与分离的血亲重聚，在终点见证一切事物的沉淀。",
+                "icon": "https://webstatic.mihoyo.com/common/clgm-web-app/ys/ico/favicon.7.0.0.ico",
+                "url": "https://ys.mihoyo.com/cloud/#/",
+                "id": 0
+              },
+              {
+                "name": "云·星穹铁道",
+                "desc": "云星穹铁道网页版\n\n云星穹铁道网页版是米哈游（miHoYo）旗下的崩坏：星穹铁道云游戏版本。通过实时云端技术，你无需下载完整星穹铁道包体，也可尽享低延迟、高画质、高帧率游戏体验。这片银河中有名为「星神」的存在，祂们造就现实，抹消星辰，在无数「世界」中留下祂们的痕迹。你——一名特殊的旅客，将与继承「开拓」意志的同伴一起，乘坐星穹列车穿越银河，沿着某位「星神」曾经所行之途前进。你将由此探索新的文明，结识新的伙伴，在无数光怪陆离的「世界」与「世界」之间展开新的冒险。所有你想知道的，都将在群星中找到答案。那么，准备好开始这段「开拓」之旅了吗？",
+                "icon": "https://webstatic.mihoyo.com/common/clgm-web-app/sr/ico/favicon.4.5.0.ico",
+                "url": "https://sr.mihoyo.com/cloud/#/",
+                "id": 0
+              },
+              {
+                "name": "云·绝区零",
+                "desc": "云绝区客服端\n\n《云·绝区零》是米哈游（miHoYo）旗下的绝区零云游戏版本。通过实时云端技术，您无需下载完整绝区零包体，也可极速开启在新艾利都的冒险之旅，尽享极速启动、PC原生画质、流畅高帧率的极致游戏体验。《绝区零》是米哈游自研的全新都市动作冒险游戏，故事发生在被神秘的超自然灾害[空洞]所侵袭的近未来不要进入空洞。我知道我知道空洞里有以太资源、有异化造物甚至有旧文明的遗产，全都是珍贵的财富。但是别忘了，那里面空间紊乱，怪物肆虐，异变横生,终究是一场吞没世界的灾难,不是一般人该去的地方。所以不要进入空洞。至少，不要“独自”进入空洞。\n如果你执意要进入险境，那先去新艾利都吧。那座鱼龙混杂的都市里有许多对空洞有需求的人权势遮天的财阀、蛰伏街头的帮派、暗藏阴谋的狂人或者铁面无情的官吏。在那里做好完全的准备,结交有实力的同伴，以及最重要的\n找到一位“绳匠”。只有他们有能力把人从迷宫般的空洞里引导出来。祝你好运。",
+                "icon": "https://webstatic.mihoyo.com/common/clgm-web-app/zzz-promotion/ico/favicon.ico",
+                "url": "https://zzz.mihoyo.com/cloud-feat/#/",
+                "id": 0
+              },
+              {
+                "name": "云·鸣潮",
+                "desc": "Wuthering Waves\n\n《云·鸣潮》是跨平台开放世界动作游戏《鸣潮》的云游戏版本。无需下载，一键启动。同时具备流畅帧率与画面，为漂泊者们带来云端畅快游戏体验。",
+                "icon": "https://mc.kurogames.com/cloud/favicon.ico",
+                "url": "https://mc.kurogames.com/cloud/#/",
+                "id": 0
+              },
+              {
+                "name": "异环",
+                "desc": "带云异环客户端\n\n《异环》是Hotta Studio自主研发的超自然都市开放世界RPG。故事将从海特洛市启篇，作为首位「无证上岗」的「异象猎人」，你将成为接取民间异象委托维持周转的古董店「伊波恩」的一员，与个性迥异、能力非凡的伙伴们一起探索各城市的大小谜团，历经有笑有泪的各式奇遇，演绎独属于你们的都市物语。",
+                "icon": "",
+                "url": "https://yh.wanmei.com/main.html",
+                "id": 0
+              },
+              {
+                "name": "云·二重螺旋",
+                "desc": "",
+                "icon": "https://s-static.yingxiong.com/web-cloud-game/game_logo.png",
+                "url": "https://dna.yingxiong.com/cloudgame/",
+                "id": 0
+              },
+              {
+                "name": "燕云十六声",
+                "desc": "带云燕云十六声客户端\n\n“中式志怪”主题月来袭！大型民俗规则怪谈关卡开放，荒庙探秘，竹海追凶，禁忌谜局待解！一亿游侠庆典正式开幕，获得超过30抽和鸣道具、侠名、配饰等好礼。杭州新区域开放，解锁不一样的江南风光！新武学“醉拳”登场！身姿踉跄，拳路变幻，醉态之下暗藏凌厉杀招！",
+                "icon": "ODF.tbhoBTuF4J3SKOWn_JRTJA",
+                "url": "https://www.yysls.cn/",
+                "id": 0
               }
             ],
             "icon": "",
