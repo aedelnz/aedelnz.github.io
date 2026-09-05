@@ -749,6 +749,62 @@
         ],
         "icon": "IconImage",
         "id": 89
+      },
+      {
+        "title": "游戏平台",
+        "nav": [
+          {
+            "title": "游戏平台",
+            "nav": [
+              {
+                "name": "Steam",
+                "desc": "Valve 旗下全球最大的综合性数字游戏发行平台",
+                "icon": "ODF.KO--9FKLdRe7BDLCTqcNJg",
+                "url": "https://store.steampowered.com",
+                "id": 111
+              },
+              {
+                "name": "Epic Games Store",
+                "desc": "每周喜加一\n\nEpic Games 推出的数字游戏发行平台，以每周免费游戏著称",
+                "icon": "ODF.4Stc53dptYSF7aYQ80A0pQ",
+                "url": "https://store.epicgames.com",
+                "id": 112
+              },
+              {
+                "name": "GOG",
+                "desc": "CD Projekt 旗下无 DRM 数字游戏平台，专注于经典与独立游戏",
+                "icon": "ODF.5PaGuaqP6G0quSoyv7Oxgw",
+                "url": "https://www.gog.com",
+                "id": 113
+              },
+              {
+                "name": "Ubisoft Connect",
+                "desc": "育碧官方游戏平台，整合了 Uplay 的玩家服务与商城功能",
+                "icon": "ODF.2WWSXtEXUMeV10PFHqJn9Q",
+                "url": "https://zh-cn.ubisoft.com/",
+                "id": 114
+              },
+              {
+                "name": "Origin",
+                "desc": "EA 旗下数字游戏发行平台（已逐步迁移至 EA App）",
+                "icon": "ODF.NmVqK8Ljp_6PFGU0g0amXA",
+                "url": "https://www.ea.com/ea-app",
+                "id": 115
+              },
+              {
+                "name": "Battle.net",
+                "desc": "暴雪娱乐旗下游戏平台，承载《魔兽世界》《守望先锋》等系列作品",
+                "icon": "ODF.k0TGmYvPRFRoNExFkOVb7w",
+                "url": "https://www.blizzard.com",
+                "id": 116
+              }
+            ],
+            "icon": "",
+            "id": 110
+          }
+        ],
+        "icon": "IconProgress",
+        "id": 109
       }
     ],
     "icon": "IconNavigation",
@@ -768,15 +824,15 @@
                 "desc": "需要代理-银河系中最有韧性的BitTorrent网站\n\n 下载音乐、电影、游戏、软件！",
                 "icon": "OIP-C.dj3RQLURm6aDQJifL1ORvAAAAA",
                 "url": "https://thepiratebay.org/index.html",
-                "id": 112
+                "id": 120
               }
             ],
             "icon": "",
-            "id": 111
+            "id": 119
           }
         ],
         "icon": "IconInput",
-        "id": 110
+        "id": 118
       },
       {
         "title": "在线阅读",
@@ -789,109 +845,109 @@
                 "desc": "起点中文网小说作品大全频道,提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说等小说作品,更多好看的小说尽在起点中文网。",
                 "icon": "https://imgservices-1252317822.image.myqcloud.com/coco/s03102023/b7b10602.w663ve.ico",
                 "url": "https://qidian.com/",
-                "id": 115
+                "id": 123
               },
               {
                 "name": "QQ阅读",
                 "desc": "QQ阅读,最新热门小说网站,提供玄幻小说、武侠小说、原创小说、网游小说、都市小说、言情小说、青春小说、科幻小说等首发小说,最新章节在线阅读.更多精彩尽在QQ阅读.",
                 "icon": "https://book.qq.com/favicon.ico",
                 "url": "https://book.qq.com/",
-                "id": 116
+                "id": 124
               },
               {
                 "name": "创世中文网",
                 "desc": "创世中文网网络各界小说高手，每日更新小说连载，小说 排行榜更是提供全网最受欢迎的小说下载。当下最好看的 content 小说，如玄幻小说、都市小说、武侠小说、科幻小说、首 发小说、最新章节免费小说、热门小说、精品小说、好看 小说、小说连载、小说排行榜、小说在线阅读、小说下 载，找最好看的网络小说就来创世中文网。",
                 "icon": "https://static.xiaoshuo.qq.com/common/static/chuangshi/favicon.ico",
                 "url": "https://www.chuangshi.com/",
-                "id": 117
+                "id": 125
               },
               {
                 "name": "微信阅读",
                 "desc": "微信读书提供海量正版书籍、小说、漫画、公众号、听书，多设备同步实现跨屏阅读。与微信好友一起发现更多精品好书，随时交流感想，让阅读不再孤独。",
                 "icon": "https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png",
                 "url": "https://weread.qq.com/",
-                "id": 118
+                "id": 126
               },
               {
                 "name": "网易云阅读",
                 "desc": "网易云阅读提供丰富的原创小说、畅销好书、热门新闻和文章免费在线阅读和下载。包括文学、传记、艺术、经济管理，官场小说、都市小说、言情小说，热血漫画，旅游、电影杂志等。手机上支持Android、iPhone、iPad、Android Pad、Windows Phone、Windows8等多平台免费下载！",
                 "icon": "https://yuedust.yuedu.126.net/favicon.ico",
                 "url": "https://yuedu.163.com/",
-                "id": 119
+                "id": 127
               },
               {
                 "name": "多看",
                 "desc": "提供精品正版电子书免费下载和购买；多看阅读APP目前支持Android、iPhone、iPad、Kindle等多种设备。多看阅读，享受精品阅读时光。好书，你值得多看。",
                 "icon": "https://cdn.browser.miui.com/micd-fe-static/duokan-pc/production/favicon.png",
                 "url": "http://www.duokan.com/",
-                "id": 120
+                "id": 128
               },
               {
                 "name": "书旗小说",
                 "desc": "书旗，小说，小说网,言情小说,青春小说,玄幻小说,武侠小说,都市小说,历史小说,网络小说,小说下载，原创网络文学,畅销图书,精品图书,传统出版,电子书，原创文学",
                 "icon": "https://img-tailor.11222.cn/cms/upload/img/1657519527055tubiao.png",
                 "url": "https://www.shuqi.com/",
-                "id": 121
+                "id": 129
               },
               {
                 "name": "红袖添香",
                 "desc": "又名“红袖添香”，国内知名网络文学原创小说门户。书城拥有海量完结全本小说，每日更新言情、都市、耽美、穿越、官场、重生、玄幻、女尊等小说的连载最新章节，定期发布阅读小说排行榜单，听有声小说推荐下载『红袖读书APP』。",
                 "icon": "https://yuxseocdn.yuewen.com/favicon/hongxiu.ico",
                 "url": "https://www.hongxiu.com/",
-                "id": 122
+                "id": 130
               },
               {
                 "name": "晋江文学城",
                 "desc": "全球最大的女性文学基地，以耽美、言情、同人等原创网络小说著称，拥有大量高人气作者和读者，是耽美及纯爱小说爱好者的首选平台。",
                 "icon": "https://www.jjwxc.net/favicon.ico",
                 "url": "https://www.jjwxc.net/",
-                "id": 123
+                "id": 131
               },
               {
                 "name": "纵横中文网",
                 "desc": "国内领先的原创小说创作平台，汇聚了大量知名大神作家，以玄幻、武侠、历史、悬疑等男性向题材见长，拥有众多高口碑的精品小说。",
                 "icon": "https://www.zongheng.com/favicon.ico",
                 "url": "https://www.zongheng.com/",
-                "id": 124
+                "id": 132
               },
               {
                 "name": "17K小说网",
                 "desc": "中文在线旗下核心网站，拥有庞大的作者群体和作品库，涵盖玄幻、都市、言情、历史、军事等多种类型，致力于挖掘和培养优秀网络文学人才。",
                 "icon": "https://www.17k.com/favicon.ico",
                 "url": "https://www.17k.com/",
-                "id": 125
+                "id": 133
               },
               {
                 "name": "潇湘书院",
                 "desc": "阅文集团旗下知名女生原创文学网站，专注于女性言情、古代言情、玄幻言情等题材，拥有众多经典古言和大女主作品。",
                 "icon": "https://www.xxsy.net/favicon.ico",
                 "url": "https://www.xxsy.net/",
-                "id": 126
+                "id": 134
               },
               {
                 "name": "飞卢小说网",
                 "desc": "以同人小说、二次元小说和轻小说起家的知名原创文学网站，以更新快、脑洞大、节奏快著称，涵盖动漫同人、游戏竞技、影视同人等多种题材。",
                 "icon": "https://img.faloo.com/favicon.ico",
                 "url": "https://www.faloo.com/",
-                "id": 127
+                "id": 135
               },
               {
                 "name": "掌阅",
                 "desc": "国内领先的数字阅读平台，拥有海量正版图书资源，涵盖网络小说、出版图书、漫画、有声书等多种内容，提供优质的阅读体验。",
                 "icon": "https://www.zhangyue.com/favicon.ico",
                 "url": "https://www.ireader.com/",
-                "id": 128
+                "id": 136
               },
               {
                 "name": "刺猬猫阅读",
                 "desc": "专注于二次元轻小说、同人小说及宅文阅读的ACG向平台，拥有独特的弹幕评论氛围，深受年轻二次元爱好者喜爱。",
                 "icon": "https://www.ciweimao.com/favicon.ico",
                 "url": "https://www.ciweimao.com/",
-                "id": 129
+                "id": 137
               }
             ],
             "icon": "",
-            "id": 114
+            "id": 122
           },
           {
             "title": "免费",
@@ -901,25 +957,25 @@
                 "desc": "抖音旗下免费阅读产品，拥有海量正版小说，涵盖玄幻、言情、悬疑、都市、历史等各类题材，提供听书、离线下载等便捷功能。",
                 "icon": "https://p1-tt.byteimg.com/origin/novel-static/a3621391ca2e537045168afda6722ee9",
                 "url": "https://fanqienovel.com/",
-                "id": 131
+                "id": 139
               },
               {
                 "name": "七猫中文网",
                 "desc": "七猫中文网是一家集数字阅读、版权运营、作者培育于一体的综合性互联网文化公司，主打免费阅读模式，涵盖都市、言情、玄幻、武侠、历史等多种题材的优质小说。",
                 "icon": "https://cdn-front.qimao.com/global/static/images/favicon2022.ico",
                 "url": "https://www.qimao.com/",
-                "id": 132
+                "id": 140
               },
               {
                 "name": "蛋花免费小说",
                 "desc": "轻松阅读尽情畅享",
                 "icon": "OIP-C.1rIrkklbZaq4vEWsE7X4PQAAAA",
                 "url": "https://hubeifurui.com/",
-                "id": 133
+                "id": 141
               }
             ],
             "icon": "",
-            "id": 130
+            "id": 138
           },
           {
             "title": "听书",
@@ -929,81 +985,81 @@
                 "desc": "免费听书尽在番茄",
                 "icon": "https://lf-fe.fqnovelstatic.com/obj/novel-fanqie-fe/growth/incentive-h5-monorepo/apps/novelfm-ssr/app-logo.png",
                 "url": "https://novelfm.changdunovel.com/",
-                "id": 135
+                "id": 143
               },
               {
                 "name": "懒人听书",
                 "desc": "国内领先的综合性有声阅读平台，拥有海量正版有声书、广播剧及主播节目。涵盖小说、评书、儿童、历史等多种分类，支持多端同步，是许多用户的首选听书应用。",
                 "icon": "https://assets.lrts.me/fed-assets/images/favicon.ico",
                 "url": "https://www.lrts.me/",
-                "id": 136
+                "id": 144
               },
               {
                 "name": "喜马拉雅",
                 "desc": "中国最大的音频分享平台，拥有超千万条有声内容。涵盖有声小说、相声评书、儿童故事、情感生活、商业财经等全方位领域，UGC与PGC内容极其丰富。",
                 "icon": "https://www.ximalaya.com/favicon.ico",
                 "url": "https://www.ximalaya.com/",
-                "id": 137
+                "id": 145
               },
               {
                 "name": "蜻蜓FM",
                 "desc": "以网络音频电台起家，现已成为综合音频平台。主打有声书、广播剧、相声评书及新闻资讯，拥有大量独家版权内容，音质优秀，适合车载及通勤场景。",
                 "icon": "https://www.qingting.fm/favicon.ico",
                 "url": "https://www.qingting.fm/",
-                "id": 138
+                "id": 146
               },
               {
                 "name": "荔枝FM",
                 "desc": "荔枝FM，发现精彩声音，创作无限可能",
                 "icon": "https://www.lizhi.fm/favicon.ico",
                 "url": "https://www.lizhi.fm/",
-                "id": 139
+                "id": 147
               },
               {
                 "name": "云听",
                 "desc": "中央广播电视总台推出的国家级音频平台。主打“耳朵经济”，内容涵盖有声书、广播剧、新闻、历史人文等，以高品质、正版内容和无广告体验著称。",
                 "icon": "https://www.radio.cn/pc-portal/image/icon_32.jpg",
                 "url": "https://www.radio.cn/",
-                "id": 140
+                "id": 148
               },
               {
                 "name": "猫耳FM",
                 "desc": "来自二次元的声音_ ( :3」∠)_M站",
                 "icon": "https://www.missevan.com/favicon.ico",
                 "url": "https://www.missevan.com/",
-                "id": 141
+                "id": 149
               },
               {
                 "name": "帆书",
                 "desc": "2023年，樊登读书品牌升级焕新，正式更名为“帆书”。帆书引领了“听书”的新阅读模式，通过精选好书与深入浅出的解读方式，为书友带来实用新知与智慧启发。此外，围绕书籍，也提供课程、训练营等服务，并拓展出版、图书销售、书店等领域。",
                 "icon": "https://www.fanshu.cn/favicon.ico",
                 "url": "https://www.fanshu.cn/",
-                "id": 142
+                "id": 150
               },
               {
                 "name": "微信听书",
                 "desc": "微信听书是微信官方听书应用，可以免费收听有声小说、书籍和各类音频节目。",
                 "icon": "https://weread-1258476243.file.myqcloud.com/web/wehearpage/icon/favicon_16h.png",
                 "url": "https://at.qq.com/",
-                "id": 143
+                "id": 151
               },
               {
                 "name": "七猫免费听书",
                 "desc": "七猫免费听书，拥有海量正版音频、小说内容，支持用户听书看书，致力于为读者提供畅快不花钱的极致听读体验。",
                 "icon": "https://cdn-front.qimao.com/global/static/images/favicon2022.ico",
                 "url": "https://xiaoshuo.wtzw.com/app-h5/activity/freereaderTingTask?source=qimao",
-                "id": 144
+                "id": 152
               },
               {
                 "name": "天方听书",
                 "desc": "天方听书",
                 "icon": "ODF.T588UAaQrX6jucrEepKLGA",
                 "url": "https://www.tingbook.com/",
-                "id": 145
+                "id": 153
               }
             ],
             "icon": "",
-            "id": 134
+            "id": 142
           },
           {
             "title": "电子书",
@@ -1013,25 +1069,25 @@
                 "desc": "古诗词国学名著免费阅读",
                 "icon": "https://www.diando.net/brand/icon.png",
                 "url": "https://www.diando.net/",
-                "id": 147
+                "id": 155
               },
               {
                 "name": "网易蜗牛读书",
                 "desc": "时间出新知",
                 "icon": "https://yuedust.yuedu.126.net/snail_st/static/images/favicon.ico?7cdb2857",
                 "url": "https://du.163.com/",
-                "id": 148
+                "id": 156
               },
               {
                 "name": "藏书馆官网",
                 "desc": "藏书馆是一个专注用户自我成长的云端在线阅读私人图书馆，致力于为用户的认知赋能，提供五大专属电子书服务：藏书、借书、读书、购书、荐书，庞大的云存储空间，让用户在云端轻松实现对自有图书的收藏与管理。同时，200万本正版电子出版物可供免费借阅，笔记、书摘、听书、思维导图、档案、共读等高效阅读工具一应俱全",
                 "icon": "https://www.zglibrary.com/favicon1.ico",
                 "url": "https://www.zglibrary.com/",
-                "id": 149
+                "id": 157
               }
             ],
             "icon": "",
-            "id": 146
+            "id": 154
           },
           {
             "title": "轻小说",
@@ -1041,43 +1097,43 @@
                 "desc": "SF轻小说网提供海量日本轻小说,国产轻小说,动漫小说,轻小说TXT下载,轻小说在线阅读,",
                 "icon": "https://book.sfacg.com/favicon.ico",
                 "url": "https://book.sfacg.com/",
-                "id": 151
+                "id": 159
               },
               {
                 "name": "轻之文库轻小说",
                 "desc": "轻之文库，中国的轻小说文库。让我们在二次元的世界里一同创作有趣的故事！定期举办轻小说新人赏，提供APP下载。",
                 "icon": "https://www.linovel.net/favicon.ico",
                 "url": "https://www.linovel.net/",
-                "id": 152
+                "id": 160
               },
               {
                 "name": "哔哩轻小说",
                 "desc": "哔哩轻小说是收录最全更新最快的轻小说文库，动漫sf轻小说网站，提供轻小说在线阅读,轻小说epub、txt下载。",
                 "icon": "https://www.linovelib.com/favicon.ico",
                 "url": "https://www.linovelib.com/",
-                "id": 153
+                "id": 161
               },
               {
                 "name": "首页 | L5仓鼠症候群",
                 "desc": "epub 仓库",
                 "icon": "https://hamster-epub.netlify.app/favicon.ico",
                 "url": "https://hamster-epub.netlify.app/",
-                "id": 154
+                "id": 162
               },
               {
                 "name": "轻之国度-专注分享的NACG社群",
                 "desc": "輕之國度是專註于分享的NACG社群，这里有用户分享的最新的NACG资源，有很好的社群与创作氛围",
                 "icon": "https://www.lightnovel.fun/favicon.ico",
                 "url": "https://www.lightnovel.fun/",
-                "id": 155
+                "id": 163
               }
             ],
             "icon": "",
-            "id": 150
+            "id": 158
           }
         ],
         "icon": "IconMarkdown",
-        "id": 113
+        "id": 121
       },
       {
         "title": "动漫图站",
@@ -1090,67 +1146,67 @@
                 "desc": "萌哩（moely）\n\n 萌萌的二次元美图。全网精选二次元美图，提供高质量原图下载。收藏美图，收获美好。",
                 "icon": "https://www.moely.link/assets/img/favicon.png",
                 "url": "https://www.moely.link/",
-                "id": 158
+                "id": 166
               },
               {
                 "name": "Chnci",
                 "desc": "探索无尽二次元之美ヽ(✿゜▽゜)ノ\n\n 欢迎来到Chnci壁纸网！这里汇聚了海量高清、精美的二次元壁纸，涵盖动漫、游戏、插画等多个领域。我们致力于为您提供最新、最热门的二次元美图，让您轻松找到心仪的壁纸，打造个性化的手机、电脑桌面。快来探索这个充满幻想与创意的二次元世界吧！",
                 "icon": "https://www.chnci.cc/wp-content/uploads/2023/10/53KB.png",
                 "url": "https://www.chnci.cc/",
-                "id": 159
+                "id": 167
               },
               {
                 "name": "ManyACG",
                 "desc": "二次元美图精选收集\n\n我会带上我的萝莉私奔",
                 "icon": "https://manyacg.top/favicon.ico",
                 "url": "https://manyacg.top/",
-                "id": 160
+                "id": 168
               },
               {
                 "name": "Cosine 🎨 Gallery",
                 "desc": "精选 ACG 好图壁纸集\n\n质量超高的 ACG 图片列表，包好看的！",
                 "icon": "https://pic.cosine.ren/favicon.ico",
                 "url": "https://pic.cosine.ren/",
-                "id": 161
+                "id": 169
               },
               {
                 "name": "SomeACG",
                 "desc": "做最棒的ACG插画作品分享平台",
                 "icon": "https://www.someacg.top/favicon.png",
                 "url": "https://www.someacg.top/",
-                "id": 162
+                "id": 170
               },
               {
                 "name": "PixivNow",
                 "desc": "Enjoy Pixiv Now (pixiv.js.org)",
                 "icon": "ODF.fNk4hbYraIwsE_ViZV48cQ",
                 "url": "https://www.pixivs.cn/",
-                "id": 163
+                "id": 171
               },
               {
                 "name": "ACG壁纸",
                 "desc": "次元の艺术回廊│萝丝图库\n\n萝丝图库（losi.cc）是一个精选的ACG图片频道网站，提供ACG壁纸高质量原图下载，深受二次元爱好者的喜爱！励志做最好看的免费壁纸图片网站，动漫、游戏、插画等Pixiv精选二次元壁纸美图。包好看的~",
                 "icon": "ODF.5rIr46VMG0ZSfU4cfROeug",
                 "url": "https://m.losi.cc/",
-                "id": 164
+                "id": 172
               },
               {
                 "name": "Safebooru",
                 "desc": "Anime picture search engine!\n\n Safebooru is a anime and manga picture search engine, images are being updated hourly.",
                 "icon": "https://safebooru.org/favicon.ico",
                 "url": "https://safebooru.org/",
-                "id": 165
+                "id": 173
               },
               {
                 "name": "konachan.net",
                 "desc": "",
                 "icon": "ODF.LbInQu4sL62fY7wi9CKy-Q",
                 "url": "https://konachan.net/post",
-                "id": 166
+                "id": 174
               }
             ],
             "icon": "",
-            "id": 157
+            "id": 165
           },
           {
             "title": "Galgame资源",
@@ -1160,159 +1216,159 @@
                 "desc": "世界上最萌的 Galgame 论坛! \n\n世界上最先进的 Galgame 资源资料库网站! 永远免费! Next Generation Galgame Encyclopedia Website!",
                 "icon": "https://www.kungal.com/favicon.ico",
                 "url": "https://www.kungal.com/",
-                "id": 168
+                "id": 176
               },
               {
                 "name": "宮代千紗ฺ",
                 "desc": "在下北泽度過無聊的每一天ฺ",
                 "icon": "https://gdqs.org/wp-content/uploads/2024/03/7702c05463eacc21b3c5380aed0f5916-150x150.png",
                 "url": "https://gdqs.org/",
-                "id": 169
+                "id": 177
               },
               {
                 "name": "Singureo",
                 "desc": "简洁·美观·人性化！\n\nSingureo是以Galgame为主的资源分享网站，贯彻简洁美观人性化的理念，为用户提供优质的体验！",
                 "icon": "https://www.singureo.com/favicon.ico",
                 "url": "https://www.singureo.com/",
-                "id": 170
+                "id": 178
               },
               {
                 "name": "柚盒",
                 "desc": "一个纯粹的Galgame资源分享站",
                 "icon": "https://yohe.one/assets/logo.webp",
                 "url": "https://yohe.one/",
-                "id": 171
+                "id": 179
               },
               {
                 "name": "真红小站",
                 "desc": "失落小站\n\n这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
                 "icon": "https://www.shinnku.com/favicon.ico",
                 "url": "https://www.shinnku.com/",
-                "id": 172
+                "id": 180
               },
               {
                 "name": "月幕",
                 "desc": "最戳你XP的美少女游戏综合交流平台\n\n月幕Galgame, 属于中国的美少女游戏交流平台！从资讯到评测、wiki到感想、CG到表情包，你想要的全都在这里，来和我们一起打造更适合Galgame爱好者的全生态！",
                 "icon": "https://www.ymgal.games/favicon.ico",
                 "url": "https://www.ymgal.games/",
-                "id": 173
+                "id": 181
               },
               {
                 "name": "Galgamer",
                 "desc": "<Galgamer/美少女>",
                 "icon": "https://galgamer.moe/logo.webp",
                 "url": "https://galgamer.moe/",
-                "id": 174
+                "id": 182
               },
               {
                 "name": "Hikarinagi",
                 "desc": "视觉小说图鉴\n\n浏览超全的 Galgame・视觉小说数据库，收录作品介绍、发售信息、角色 CV、Staff，以及大家的评价。记录你的游玩状态，写下你的犀利吐槽吧！",
                 "icon": "https://www.hikarinagi.org/favicon.ico",
                 "url": "https://www.hikarinagi.org/galgames",
-                "id": 175
+                "id": 183
               },
               {
                 "name": "TouchGal",
                 "desc": "一站式Galgame文化社区!\n\nhttps://www.gal.red/\n\nTouchGal 是一个一站式 Galgame 文化社区。提供Galgame 论坛、Galgame 下载等服务。承诺永久免费, 高质量。为Galgame 爱好者提供一片净土！",
                 "icon": "ODF.x7LvLalQhowKNKiuVGLwuQ",
                 "url": "https://www.touchgal.ink/",
-                "id": 176
+                "id": 184
               },
               {
                 "name": "GalZY",
                 "desc": "紫缘社\n\nhttps://galzy.top/\n\nGalgame 资源站, 这里收录了大部分电脑端与手机端的汉化 Galgame",
                 "icon": "https://galzy.top/favicon.ico",
                 "url": "https://www.galzy.moe/",
-                "id": 177
+                "id": 185
               },
               {
                 "name": "Sharotto",
                 "desc": "一站式的 Galgame 信息数据库\n\n一站式的 Galgame 信息数据库，您可以在此处找到您喜欢的 Galgame 内容及补丁，还可以参与评分及评论，发布您独特的见解！",
                 "icon": "https://www.sharotto.com/uploads/icons/7fb0eab9-6e68-432d-85b1-2398b72d5950.png",
                 "url": "https://www.sharotto.com/",
-                "id": 178
+                "id": 186
               },
               {
                 "name": "Galgamex",
                 "desc": "因热爱相聚，因故事而来。\n\nGalgamex是一个专注于Galgame交流的社区，在这里你可以分享游戏心得，交流技术话题，结识志同道合的朋友。",
                 "icon": "https://www.galgamex.net/apple-touch-icon.png",
                 "url": "https://www.galgamex.net/",
-                "id": 179
+                "id": 187
               },
               {
                 "name": "御爱同萌",
                 "desc": "论坛",
                 "icon": "https://www.ai2.moe/uploads/monthly_2023_06/logo.png",
                 "url": "https://www.ai2.moe/",
-                "id": 180
+                "id": 188
               },
               {
                 "name": "CnGal",
                 "desc": "中文GalGame资料站\n\nCnGal资料站的建站目的是收集，索引国产gal及中文化galgame资料、文章、攻略，为galgame同好们提供方便。",
                 "icon": "https://www.cngal.org/favicon.ico",
                 "url": "https://www.cngal.org/",
-                "id": 181
+                "id": 189
               },
               {
                 "name": "LyCorisGal",
                 "desc": "Galgame引导资源站\n\n提供Galgame下载、补丁下载、Galgame工具下载、Galgame教程等服务。帮助用户轻松迅速学习并获取资源",
                 "icon": "https://www.lycorisgal.com/favicon.ico",
                 "url": "https://www.lycorisgal.com/",
-                "id": 182
+                "id": 190
               },
               {
                 "name": "NekoGAL",
                 "desc": "Galgame传递者",
                 "icon": "https://www.nekogal.com/wp-content/uploads/2026/05/05175def-ede2-4132-bcac-3c4487425854.png",
                 "url": "https://www.nekogal.com/",
-                "id": 183
+                "id": 191
               },
               {
                 "name": "书音的图书馆",
                 "desc": "视觉小说/Galgame 档案库\n\n 免费、开源、零门槛的 视觉小说/Galgame 档案库",
                 "icon": "https://shionlib.com/favicon.ico",
                 "url": "https://shionlib.com/zh",
-                "id": 184
+                "id": 192
               },
               {
                 "name": "MikuGame",
                 "desc": "初音的游戏坛\n\n MikuGame初音的游戏坛是免费galgame资源站与游戏论坛，提供Galgame下载、视觉小说、Steam游戏资源、游戏MOD与补丁工具。玩家可在社区发表深度评测、参与热门讨论、分享攻略心得，是一站式的galgame网站、gal资源站与玩家交流平台。",
                 "icon": "ODF.BkwE0aDlAgfQZbVaqOM94Q",
                 "url": "https://mikugame.icu/",
-                "id": 185
+                "id": 193
               },
               {
                 "name": "SakuGAL",
                 "desc": "珍藏每一段恋之叙事",
                 "icon": "https://sakugal.com/favicon.ico",
                 "url": "https://sakugal.com/",
-                "id": 186
+                "id": 194
               },
               {
                 "name": "物语",
                 "desc": "GalGame档案库\n\n物语是面向中文玩家的 GalGame 档案库，系统收录游戏作品、角色、声优、制作社团、发行信息与社区资源。",
                 "icon": "https://monogatari.top/icon.png?icon.2fhiem610sx2g.png",
                 "url": "https://monogatari.top/",
-                "id": 187
+                "id": 195
               },
               {
                 "name": "ACG 搜索",
                 "desc": "Galgame 资源聚合搜索引擎\n\n 支持多站点搜索、游戏信息查询、补丁下载。一站式搜索体验，快速找到你想要的 Galgame 资源。",
                 "icon": "https://searchbox.club/logo.png",
                 "url": "https://searchbox.club/",
-                "id": 188
+                "id": 196
               }
             ],
             "icon": "",
-            "id": 167
+            "id": 175
           }
         ],
         "icon": "IconCarousel",
-        "id": 156
+        "id": 164
       }
     ],
     "icon": "IconLocaleProvider",
-    "id": 109
+    "id": 117
   },
   {
     "title": "玩机工具",
@@ -1328,95 +1384,95 @@
                 "desc": "",
                 "icon": "https://data.miuier.com/assets/logo/favicon.ico",
                 "url": "https://roms.miuier.com/zh-cn/",
-                "id": 192
+                "id": 200
               },
               {
                 "name": "HyperOS.fans",
                 "desc": "",
                 "icon": "https://data.hyperos.fans/favicon.ico",
                 "url": "https://hyperos.fans/",
-                "id": 193
+                "id": 201
               },
               {
                 "name": "小米所有机型的 MIUI 官方 ROM 下载专区 | XiaomiROM.com",
                 "desc": "从所有小米型号中选择你的小米手机、小米平板等小米机型并免费下载其小米官方刷机包，固件包括最新版本 MIUI 和 MIUI 历史版本。",
                 "icon": "ODF.svRLn45I-KSsa_LHvbW2mw",
                 "url": "https://xiaomirom.com/series/",
-                "id": 194
+                "id": 202
               },
               {
                 "name": "Official HyperOS & MIUI ROM",
                 "desc": "Download the latest HyperOS & MIUI version. Official stable firmware Recovery ROM, Fastboot ROM, OTA Updates for Xiaomi, Mi, Redmi, POCO. Phones, tablets, routers",
                 "icon": "https://miuirom.org/apple-touch-icon.png",
                 "url": "https://miuirom.org/",
-                "id": 195
+                "id": 203
               },
               {
                 "name": "澎湃OS/MIUI历史版本",
                 "desc": "追踪更新MIUI与澎湃OS历来发布版本信息，涵括各型号手机、平板、路由器等设备澎湃OS和MULI历史版本刷机包，并以线刷版、卡刷版、开发版、国际版、欧洲版整理分类，方便查找澎湃OS或iMIUI旧版本下载之用",
                 "icon": "https://miuiver.com/favicon.png",
                 "url": "https://miuiver.com/",
-                "id": 196
+                "id": 204
               },
               {
                 "name": "Mi Firmware",
                 "desc": "Get Xiaomi Software Update, and Download Mi Firmware, MIUI ROM, HyperOS ROM, Xiaomi Firmware, MIUI official, Redmi Firmware POCO Firmware.",
                 "icon": "https://mifirmware.com/favicon.ico",
                 "url": "https://mifirmware.com/",
-                "id": 197
+                "id": 205
               },
               {
                 "name": "MiFirm",
                 "desc": "Xiaomi Firmware ⭐ MIUI Download ROM ⭐ Mi ROM ⭐ Redmi ROM ⭐ Mi Unlock Tool ⭐ Global ROM ⭐ Mi Flashtool ⭐ Download free and high speed",
                 "icon": "https://mifirm.net/assets/img/xfavicon.ico",
                 "url": "https://mifirm.net/",
-                "id": 198
+                "id": 206
               },
               {
                 "name": "萤火虫资源站",
                 "desc": "萤火虫资源站，原酷米基地，提供多达22TB+的安卓玩机资源，包括各品牌手机的官方固件、第三方ROM、内核、TWRP、救砖包等。分类明确，免登录不限速下载。",
                 "icon": "https://yhcres.top/res/favicon_yhc.ico",
                 "url": "https://www.yhcres.top/",
-                "id": 199
+                "id": 207
               },
               {
                 "name": "奇兔rom",
                 "desc": "奇兔ROM市场为您提供最新最全的安卓(android)手机刷机包(ROM)、刷机教程，快来下载刷机包，体验一键刷机的乐趣吧！",
                 "icon": "http://m.rom.7to.cn/favicon.ico",
                 "url": "http://m.rom.7to.cn/",
-                "id": 200
+                "id": 208
               },
               {
                 "name": "OnePlus ROMs",
                 "desc": "Firmware – Fast Stock ROM & China ↔ Global Conversion",
                 "icon": "ODF.SjQqttDL0YB1zIG8oBXxpA",
                 "url": "https://roms.danielspringer.at/index.php?view=ota",
-                "id": 201
+                "id": 209
               },
               {
                 "name": "一加真我OPPO",
                 "desc": "本站提供一加OnePlus、真我Realme、OPPO全机型ROM下载，包含升级全量包、降级包、9008线刷救砖包等各种官方和原厂ROM，全部资源完全免费，不限速，无需登录",
                 "icon": "ODF.Jze5pm3aoHh8OKobDUsTGA",
                 "url": "https://yun.daxiaamu.com/OnePlus_Roms/",
-                "id": 202
+                "id": 210
               },
               {
                 "name": "ColorOS 助手",
                 "desc": "ColorOS 官网为您提供 OPPO 手机历史版本下载、升级工具下载服务，让您轻松提升手机系统安全性并拥有高效稳定的手机体验感。",
                 "icon": "https://www.coloros.com/favicon.ico",
                 "url": "https://www.coloros.com/upgrade/rom/",
-                "id": 203
+                "id": 211
               },
               {
                 "name": "Flyme 系统更新",
                 "desc": "",
                 "icon": "ODF.47WfVWqEwk6Xwkch6bxdAg",
                 "url": "https://www.flyme.com/firmware.html",
-                "id": 204
+                "id": 212
               }
             ],
             "icon": "",
-            "id": 191
+            "id": 199
           },
           {
             "title": "ROOT",
@@ -1426,60 +1482,60 @@
                 "desc": "Magisk 是一套开源软件，用于定制 Android 系统，支持高于 Android 6.0 的设备。",
                 "icon": "ODF.1rxsAhuD0ZLnwTE_3VYC0g",
                 "url": "https://github.com/topjohnwu/Magisk",
-                "id": 206
+                "id": 214
               },
               {
                 "name": "KernelSU",
                 "desc": "内核级root方案",
                 "icon": "ODF.SQOtJcbSsKPOgWX5ujk1kg",
                 "url": "https://kernelsu.org/zh_CN/",
-                "id": 207
+                "id": 215
               },
               {
                 "name": "SukiSU-Ultra",
                 "desc": "强大的内核级 Root 权限，安全性毫不让步",
                 "icon": "ODF.x66mk5DuyLzquIRI_rSP4Q",
                 "url": "https://sukisu.org/zh/",
-                "id": 208
+                "id": 216
               },
               {
                 "name": "FolkPatch",
                 "desc": "首款以高度自定义为理念的 ROOT 管理器",
                 "icon": "ODF.RrJreJn48qEoatkiYWSsbA",
                 "url": "https://fp.mysqil.com/",
-                "id": 209
+                "id": 217
               },
               {
                 "name": "APatch",
                 "desc": "APatch是一种类似于Magisk或KernelSU的root解决方案",
                 "icon": "ODF.np8MzaGLAd9z6JarSl3Qrg",
                 "url": "https://apatch.dev/zh_CN/",
-                "id": 210
+                "id": 218
               },
               {
                 "name": "SkRoot",
                 "desc": "新一代 SKRoot，完美隐藏Root功能，无视全网检测手段，实现SELinux零触碰、无挂载！ 通杀所有内核，免源码直接 Patch 原厂内核，完美保留官方内核所有特性。",
                 "icon": "OIP-C.ADFsDEpNjG08zUQjKkIR2QHaHa",
                 "url": "https://github.com/abcz316/SKRoot-linuxKernelRoot",
-                "id": 211
+                "id": 219
               },
               {
                 "name": "KitsuneMagisk",
                 "desc": "狐狸面具(Kitsune Mask原德尔塔面具)",
                 "icon": "OIP-C.wf3OMGELWzosrKTQzTva_gAAAA",
                 "url": "https://github.com/search?q=KitsuneMagisk&type=repositories",
-                "id": 212
+                "id": 220
               },
               {
                 "name": "KernelSU-Next",
                 "desc": "新一代安卓内核级 Root 方案",
                 "icon": "ODF.YraTItWVrlpQj_YsVQmoCA",
                 "url": "https://kernelsu-next.github.io/webpage/zh_CN/",
-                "id": 213
+                "id": 221
               }
             ],
             "icon": "",
-            "id": 205
+            "id": 213
           },
           {
             "title": "刷机工具",
@@ -1489,74 +1545,74 @@
                 "desc": "紫罗兰工具箱(VioletToolBox)是一款免费多功能的Android手机刷机工具，支持小米、OPPO、一加、真我等机型线刷、救砖、全自动投屏、一键ROOT，Twrp刷机，合并Super等60+强大功能。",
                 "icon": "ODF.4iy13GQFyCZXINm39Q3H4w",
                 "url": "https://violettool.top/",
-                "id": 215
+                "id": 223
               },
               {
                 "name": "刷机匣",
                 "desc": "刷机匣GeekFlashTool资源仓库",
                 "icon": "https://foruda.gitee.com/avatar/1752298906942432638/15301978_geekflashtool_1752298906.png",
                 "url": "https://gitee.com/geekflashtool",
-                "id": 216
+                "id": 224
               },
               {
                 "name": "搞机助手",
                 "desc": "发现更多实用软件，尽在lsdy.top",
                 "icon": "https://lsdy.top/images/gjzs.png",
                 "url": "https://lsdy.top/gjzs",
-                "id": 217
+                "id": 225
               },
               {
                 "name": "柚坛工具箱",
                 "desc": "为玩机发烧友而生",
                 "icon": "ODF.7ozMGikBXdWE39f6glTMeQ",
                 "url": "https://toolbox.uotan.cn/",
-                "id": 218
+                "id": 226
               },
               {
                 "name": "Mindows工具箱",
                 "desc": "给你的Android刷上Windows",
                 "icon": "ODF.C8ZNNzeZRv4--o1d0XC18g",
                 "url": "https://mindows.cn/Mobile/index.html",
-                "id": 219
+                "id": 227
               },
               {
                 "name": "UnlockTool",
                 "desc": "从UnlockTool下载解锁、刷写和管理移动设备的驱动程序和工具。",
                 "icon": "ODF.LePxtk66zUEAZ0jfcPcKKA",
                 "url": "https://unlocktool.net/",
-                "id": 220
+                "id": 228
               },
               {
                 "name": "Platform-Tools",
                 "desc": "一个 ADB Fastboot Android SDK 的一个组件。",
                 "icon": "ODF.n5FekavbQrTH3QtkWT3z4w",
                 "url": "https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn",
-                "id": 221
+                "id": 229
               },
               {
                 "name": "MTKClient",
                 "desc": " 一款专为联发科（MediaTek）芯片打造的强大逆向工程与刷机工具",
                 "icon": "OIP-C.hC8miCvC9MSGvLW0T7HwDAAAAA",
                 "url": "https://github.com/CE1CECL/mtkclient/tree/main",
-                "id": 222
+                "id": 230
               },
               {
                 "name": "秋之盒",
                 "desc": "图形化ADB工具箱. Contribute to zsh2401/AutumnBox development by creating an account on GitHub.",
                 "icon": "ODF.OhxTz6cC4e76NlfibDhXlA",
                 "url": "https://atmb.top/",
-                "id": 223
+                "id": 231
               },
               {
                 "name": " MiFlash 线刷工具",
                 "desc": "备用下载：https://file.miuiver.com/d/MiFlash/MiFlash2020-3-14-0.rar",
                 "icon": "ODF.ufO5oCRghZiu7drvZ6N4gg",
                 "url": "https://cdn.alsgp0.fds.api.mi-img.com/micomm/MiFlash2020-3-14-0.rar",
-                "id": 224
+                "id": 232
               }
             ],
             "icon": "",
-            "id": 214
+            "id": 222
           },
           {
             "title": "REC",
@@ -1566,40 +1622,40 @@
                 "desc": "第三方Recovery",
                 "icon": "ODF.5eQDAt9qW2SDKk67QnkKZg?w=32&h=32",
                 "url": "https://twrp.me/Devices/",
-                "id": 226
+                "id": 234
               },
               {
                 "name": "OrangeFox",
                 "desc": "橙狐Recovery",
                 "icon": "ODF.zcWOW65LkJvIPRApYJ69nQ",
                 "url": "https://orangefox.download/",
-                "id": 227
+                "id": 235
               },
               {
                 "name": "PBRP",
                 "desc": "增强TWRP更多定制功能",
                 "icon": "https://pitchblackrecovery.com/assets/images/Gradient-Red-Logo-1.png",
                 "url": "https://pitchblackrecovery.com/",
-                "id": 228
+                "id": 236
               },
               {
                 "name": "SHRP",
                 "desc": "基于TWRP的Recovery.",
                 "icon": "https://skyhawkrecovery.github.io/img/favICO.png",
                 "url": "https://skyhawkrecovery.github.io/Devices.html",
-                "id": 229
+                "id": 237
               }
             ],
             "icon": "",
-            "id": 225
+            "id": 233
           }
         ],
         "icon": "IconWheelChair",
-        "id": 190
+        "id": 198
       }
     ],
     "icon": "IconConfig",
-    "id": 189
+    "id": 197
   },
   {
     "title": "网络安全",
@@ -1615,186 +1671,186 @@
                 "desc": "企业和白帽子共赢的漏洞响应平台，帮助企业建立SRC",
                 "icon": "https://www.butian.net/favicon.ico",
                 "url": "https://www.butian.net/",
-                "id": 233
+                "id": 241
               },
               {
                 "name": "漏洞盒子",
                 "desc": " - 中国领先的漏洞平台与白帽社区|安全众测与安全运营服务平台",
                 "icon": "https://www.vulbox.com/favicon.svg",
                 "url": "https://www.vulbox.com/",
-                "id": 234
+                "id": 242
               },
               {
                 "name": "小米安全中心",
                 "desc": "MISRC",
                 "icon": "https://cdn.cnbj1.fds.api.mi-img.com/misrc/cdn/favicon.ico",
                 "url": "https://sec.xiaomi.com",
-                "id": 235
+                "id": 243
               },
               {
                 "name": "腾讯安全应急响应中心",
                 "desc": "TSRC",
                 "icon": "https://security.tencent.com/favicon.ico",
                 "url": "https://security.tencent.com",
-                "id": 236
+                "id": 244
               },
               {
                 "name": "阿里安全响应中心",
                 "desc": "ASRC",
                 "icon": "https://security.alibaba.com/favicon.ico",
                 "url": "https://security.alibaba.com",
-                "id": 237
+                "id": 245
               },
               {
                 "name": "百度安全应急响应中心",
                 "desc": "BSRC",
                 "icon": "https://bsrc.baidu.com/favicon.ico",
                 "url": "https://bsrc.baidu.com",
-                "id": 238
+                "id": 246
               },
               {
                 "name": "华为安全应急响应中心",
                 "desc": "HSRC",
                 "icon": "https://www.huawei.com/favicon.ico",
                 "url": "https://securitybulletin.huawei.com/",
-                "id": 239
+                "id": 247
               },
               {
                 "name": "字节跳动安全中心",
                 "desc": "ByteSRC",
                 "icon": "ODF.JrDrsQKTEuJdy_mLf4RwTA",
                 "url": "https://security.bytedance.com",
-                "id": 240
+                "id": 248
               },
               {
                 "name": "京东安全应急响应中心",
                 "desc": "JDSRC",
                 "icon": "https://security.jd.com/static/images/favicon.png",
                 "url": "https://security.jd.com",
-                "id": 241
+                "id": 249
               },
               {
                 "name": "美团安全应急响应中心",
                 "desc": "MTSRC",
                 "icon": "https://security.meituan.com/static/img/logo.png",
                 "url": "https://security.meituan.com",
-                "id": 242
+                "id": 250
               },
               {
                 "name": "网易安全中心",
                 "desc": "NSRC",
                 "icon": "https://aq.163.com/favicon.ico",
                 "url": "https://aq.163.com",
-                "id": 243
+                "id": 251
               },
               {
                 "name": "360安全应急响应中心",
                 "desc": "360SRC",
                 "icon": "ODF.b5YaAP-W62qhIuacrVWDdQ",
                 "url": "https://security.360.cn",
-                "id": 244
+                "id": 252
               },
               {
                 "name": "大疆安全应急响应中心",
                 "desc": "DJISRC",
                 "icon": "https://security.dji.com/favicon.ico",
                 "url": "https://security.dji.com/",
-                "id": 245
+                "id": 253
               },
               {
                 "name": "国家信息安全漏洞共享平台",
                 "desc": "CNVD",
                 "icon": "ODF.f3WL4vkPvIkstrBuDSBv3g",
                 "url": "https://www.cnvd.org.cn/",
-                "id": 246
+                "id": 254
               },
               {
                 "name": "快手安全应急响应中心",
                 "desc": "KSRC",
                 "icon": "https://security.kuaishou.com/title.png",
                 "url": "https://security.kuaishou.com",
-                "id": 247
+                "id": 255
               },
               {
                 "name": "哔哩哔哩安全应急响应中心",
                 "desc": "BILISRC",
                 "icon": "https://static.hdslb.com/images/favicon.ico",
                 "url": "https://security.bilibili.com",
-                "id": 248
+                "id": 256
               },
               {
                 "name": "滴滴出行安全应急响应中心",
                 "desc": "DSRC",
                 "icon": "https://sec.didichuxing.com/favicon.ico",
                 "url": "https://sec.didichuxing.com/",
-                "id": 249
+                "id": 257
               },
               {
                 "name": "顺丰安全应急响应中心",
                 "desc": "SFSRC",
                 "icon": "https://sfsrc.sf-express.com/logo.svg",
                 "url": "https://sfsrc.sf-express.com/",
-                "id": 250
+                "id": 258
               },
               {
                 "name": "魅族安全中心",
                 "desc": "MZSRC",
                 "icon": "https://sec.meizu.com/favicon.ico",
                 "url": "https://sec.meizu.com/",
-                "id": 251
+                "id": 259
               },
               {
                 "name": "金山办公安全应急响应中心",
                 "desc": "KOSRC",
                 "icon": "https://security.wps.cn/favicon.ico",
                 "url": "https://security.wps.cn/",
-                "id": 252
+                "id": 260
               },
               {
                 "name": "爱奇艺安全应急响应中心",
                 "desc": "71SRC",
                 "icon": "https://www.iqiyi.com/favicon.ico",
                 "url": "https://security.iqiyi.com/",
-                "id": 253
+                "id": 261
               },
               {
                 "name": "UCloud安全应急响应中心",
                 "desc": "USRC",
                 "icon": "https://src.ucloud.cn/Public/Index/images/logo.ico",
                 "url": "https://src.ucloud.cn/",
-                "id": 254
+                "id": 262
               },
               {
                 "name": "货拉拉安全应急响应中心",
                 "desc": "LLSRC",
                 "icon": "https://llsrc.huolala.cn/static/favicon.ico",
                 "url": "https://llsrc.huolala.cn/",
-                "id": 255
+                "id": 263
               },
               {
                 "name": "vivo安全应急响应中心",
                 "desc": "vivoSRC",
                 "icon": "https://security.vivo.com.cn/assets/favicon.ico",
                 "url": "https://security.vivo.com.cn/",
-                "id": 256
+                "id": 264
               },
               {
                 "name": "蚂蚁集团安全应急响应中心",
                 "desc": "AGSRC",
                 "icon": "https://i.alipayobjects.com/common/favicon/favicon.ico",
                 "url": "https://security.alipay.com",
-                "id": 257
+                "id": 265
               },
               {
                 "name": "OPPO 安全中心",
                 "desc": "OSRC",
                 "icon": "ODF.gAEOeQl0Kg0N0iXXaCksHA",
                 "url": "https://security.oppo.com/",
-                "id": 258
+                "id": 266
               }
             ],
             "icon": "",
-            "id": 232
+            "id": 240
           },
           {
             "title": "CTF平台",
@@ -1804,46 +1860,46 @@
                 "desc": " 专注网络安全_信息安全_白帽子的在线学习_教育_培训平台",
                 "icon": "https://static2.ichunqiu.com/icq/resources/images/favicon.ico",
                 "url": "https://www.ichunqiu.com/",
-                "id": 260
+                "id": 268
               },
               {
                 "name": "攻防世界",
                 "desc": "攻防世界是集实训、竞赛、办赛、社区于一体的在线网安能力提升平台，致力于为广大网络安全爱好者提供赛题资源与竞赛服务，营造专业、有趣的网络安全学习环境，助力网安人才成长成才。",
                 "icon": "https://adworld.xctf.org.cn/favicon.ico",
                 "url": "https://adworld.xctf.org.cn/",
-                "id": 261
+                "id": 269
               },
               {
                 "name": "舶文网安实验室",
                 "desc": "合天网安实验室是支持在线实验的信息安全学习的大型服务平台，支持学校教学，课程定制，支持注册用户自学。提供安全协议，WEB安全，网络攻防，恶意代码，防火墙技术，浏览器漏洞，android安全，脚本编程，XP挑战赛技能，逆向工程，网络工具，密码学，隐私保护，漏洞扫描，虚拟网VPN",
                 "icon": "https://www.hetianlab.com/favicon.ico",
                 "url": "https://www.hetianlab.com/",
-                "id": 262
+                "id": 270
               },
               {
                 "name": "Bugku CTF平台",
                 "desc": "国内最活跃的CTF在线训练平台，网络安全爱好者首选。提供丰富的CTF、AWD、渗透加固题目，助力信息安全人才实战演练和技能提升。",
                 "icon": "https://ctf.bugku.com/favicon.ico",
                 "url": "https://ctf.bugku.com/",
-                "id": 263
+                "id": 271
               },
               {
                 "name": "封神台",
                 "desc": " - 掌控安全在线攻防演练靶场，一个专为网络安全从业人员设计的白帽黑客渗透测试演练平台。",
                 "icon": "https://hack.zkaq.cn/favicon.ico",
                 "url": "https://hack.zkaq.cn/",
-                "id": 264
+                "id": 272
               },
               {
                 "name": "BUUCTF在线评测",
                 "desc": "BUUCTF 是一个 CTF 竞赛和训练平台，为各位 CTF 选手提供真实赛题在线复现等服务。",
                 "icon": "https://buuoj.cn/themes/buu_core/static/img/favicon.ico",
                 "url": "https://buuoj.cn/",
-                "id": 265
+                "id": 273
               }
             ],
             "icon": "",
-            "id": 259
+            "id": 267
           },
           {
             "title": "渗透工具",
@@ -1853,151 +1909,151 @@
                 "desc": "Nmap：网络映射器 - 免费安全扫描器",
                 "icon": "https://nmap.org/favicon.ico",
                 "url": "https://nmap.org/",
-                "id": 267
+                "id": 275
               },
               {
                 "name": "Metasploit",
                 "desc": "渗透测试软件，渗透测试安全",
                 "icon": "ODF.QWDUognZoK_TmyMZLfuytw",
                 "url": "https://www.metasploit.com/",
-                "id": 268
+                "id": 276
               },
               {
                 "name": "Burp Suite",
                 "desc": "用于Web应用程序安全测试的集成平台",
                 "icon": "ODF.w6syz1CPF2VCh4dxMjonQg",
                 "url": "https://portswigger.net/burp",
-                "id": 269
+                "id": 277
               },
               {
                 "name": "Wireshark",
                 "desc": "世界上最广泛使用的网络协议分析器",
                 "icon": "ODF.4bXTMJ7Y3pWeFd-qhCN_Og",
                 "url": "https://www.wireshark.org/",
-                "id": 270
+                "id": 278
               },
               {
                 "name": "John the Ripper",
                 "desc": "快速的密码破解工具",
                 "icon": "ODF.40AxSICOgkJ4GArN5RrYQQ",
                 "url": "https://www.openwall.com/john/",
-                "id": 271
+                "id": 279
               },
               {
                 "name": "Aircrack-ng",
                 "desc": "一套用于评估WiFi网络安全的工具",
                 "icon": "ODF.9mn-hR3UbKVCFGxl425cqA",
                 "url": "https://www.aircrack-ng.org/",
-                "id": 272
+                "id": 280
               },
               {
                 "name": "sqlmap",
                 "desc": "自动化的SQL注入和数据库接管工具",
                 "icon": "ODF.atKIvvIU8OX7D04G6Wlzcg",
                 "url": "https://sqlmap.org/",
-                "id": 273
+                "id": 281
               },
               {
                 "name": "Hydra【九头蛇】",
                 "desc": "一个非常快速的网络登录破解工具",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/vanhauser-thc/thc-hydra",
-                "id": 274
+                "id": 282
               },
               {
                 "name": "Nikto",
                 "desc": "Web服务器扫描器，用于检查危险的CGI文件等问题",
                 "icon": "ODF.AhiHP6phAZS9AdGH6034AQ",
                 "url": "https://cirt.net/Nikto2",
-                "id": 275
+                "id": 283
               },
               {
                 "name": "OpenVAS",
                 "desc": "功能齐全的漏洞扫描和管理系统",
                 "icon": "ODF.0vgf4N7ybVhQ-Obv103jCw",
                 "url": "https://www.openvas.org/",
-                "id": 276
+                "id": 284
               },
               {
                 "name": "Maltego",
                 "desc": "用于开源情报（OSINT）和图形化数据挖掘的工具",
                 "icon": "ODF.FNWQneKSsn6M2QEk753_Eg",
                 "url": "https://www.maltego.com/",
-                "id": 277
+                "id": 285
               },
               {
                 "name": "Shodan",
                 "desc": "搜索互联网连接设备的搜索引擎",
                 "icon": "ODF.r45osdTvYK1KsYDMuB4FtQ",
                 "url": "https://www.shodan.io/",
-                "id": 278
+                "id": 286
               },
               {
                 "name": "Cobalt Strike",
                 "desc": "用于对抗性攻击和红队行动的商业软件",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/Cobalt-Strike",
-                "id": 279
+                "id": 287
               },
               {
                 "name": "Nessus",
                 "desc": "一款流行的漏洞、配置和合规性评估扫描器",
                 "icon": "ODF.igzxKqwcYZeb_bsDog5rqQ",
                 "url": "https://www.tenable.com/products/nessus",
-                "id": 280
+                "id": 288
               },
               {
                 "name": "Empire",
                 "desc": "一个利用PowerShell进行后期利用的攻击框架",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/EmpireProject/Empire",
-                "id": 281
+                "id": 289
               },
               {
                 "name": "BeEF",
                 "desc": "浏览器开发框架，用于测试Web浏览器的安全性",
                 "icon": "ODF.1oL-DjBWXpOSDxDEBdQOdg",
                 "url": "https://beefproject.com/",
-                "id": 282
+                "id": 290
               },
               {
                 "name": "OWASP ZAP",
                 "desc": "开源的Web应用安全扫描器，易于使用",
                 "icon": "ODF.ehG3me_9fJLm14KRvwwgfQ",
                 "url": "https://www.zaproxy.org/",
-                "id": 283
+                "id": 291
               },
               {
                 "name": "Gobuster",
                 "desc": "用于暴力破解URI、目录、DNS子域等的工具",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/OJ/gobuster",
-                "id": 284
+                "id": 292
               },
               {
                 "name": "Mimikatz",
                 "desc": "一个从Windows中提取凭证和敏感信息的工具",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/gentilkiwi/mimikatz",
-                "id": 285
+                "id": 293
               },
               {
                 "name": "Responder",
                 "desc": "一个LLMNR、NBT-NS和MDNS毒害工具",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/lgandx/Responder",
-                "id": 286
+                "id": 294
               },
               {
                 "name": "TheHarvester",
                 "desc": "用于电子邮件、子域名等信息收集的工具",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/laramies/theHarvester",
-                "id": 287
+                "id": 295
               }
             ],
             "icon": "",
-            "id": 266
+            "id": 274
           },
           {
             "title": "调试工具",
@@ -2007,134 +2063,134 @@
                 "desc": "开源的内存扫描与调试工具，用于修改Windows应用程序（如游戏）",
                 "icon": "ODF.DAe7KdiAVOPwas9So3brTg",
                 "url": "https://www.cheatengine.org/",
-                "id": 289
+                "id": 297
               },
               {
                 "name": "x64dbg",
                 "desc": "Windows平台下强大的开源二进制调试器，支持32位和64位应用程序",
                 "icon": "ODF.4TrDC0O4JmVCXb0JxnuWZQ",
                 "url": "https://x64dbg.com/",
-                "id": 290
+                "id": 298
               },
               {
                 "name": "OllyDbg",
                 "desc": "经典的Windows平台汇编级调试器，广泛应用于二进制分析和逆向工程",
                 "icon": "https://www.ollydbg.de/ollydbg.gif",
                 "url": "http://www.ollydbg.de/",
-                "id": 291
+                "id": 299
               },
               {
                 "name": "GDB",
                 "desc": "GNU项目下的命令行调试器，是Linux/Unix系统C/C++程序调试的事实标准",
                 "icon": "ODF.BzymzaEQwrMx-zyxbUjKew",
                 "url": "https://www.sourceware.org/gdb/",
-                "id": 292
+                "id": 300
               },
               {
                 "name": "WinDbg",
                 "desc": "微软官方推出的强大的内核与用户模式调试器，集成于Windows SDK中",
                 "icon": "ODF.Y77AUHJ37M167GfxiS3cyg",
                 "url": "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/",
-                "id": 293
+                "id": 301
               },
               {
                 "name": "IDA Pro",
                 "desc": "业界顶级的交互式反汇编器和调试器，支持多架构，用于深度逆向工程",
                 "icon": "ODF.Z0fzKhwK10QxNAmOo8gbXA",
                 "url": "https://www.hex-rays.com/ida-pro/",
-                "id": 294
+                "id": 302
               },
               {
                 "name": "LLDB",
                 "desc": "LLVM项目下的下一代高性能调试器，是Xcode的默认调试器，支持多语言",
                 "icon": "ODF.FOECtiwFu1aEP7rPmOMmUg",
                 "url": "https://lldb.llvm.org/",
-                "id": 295
+                "id": 303
               },
               {
                 "name": "Fiddler",
                 "desc": "强大的HTTP/HTTPS网络代理调试工具，用于抓包、分析和修改网络流量",
                 "icon": "ODF.P49Np0_imOW4Q9Sm65QSZg",
                 "url": "https://www.telerik.com/fiddler",
-                "id": 296
+                "id": 304
               },
               {
                 "name": "Radare2",
                 "desc": "开源、可编写脚本的逆向工程框架，集成了反汇编、分析和调试功能",
                 "icon": "ODF.CvWrS3O4DhXqzp49owUc9g",
                 "url": "https://rada.re/n/",
-                "id": 297
+                "id": 305
               },
               {
                 "name": "dnSpy",
                 "desc": ".NET程序集强大的调试器和编辑器，支持反编译、修改和调试",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/dnSpy/dnSpy",
-                "id": 298
+                "id": 306
               },
               {
                 "name": "Process Monitor",
                 "desc": "微软出品的系统实时监视工具，监控文件系统、注册表、进程活动",
                 "icon": "https://learn.microsoft.com/en-us/sysinternals/downloads/media/shared/download_sm.png",
                 "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon",
-                "id": 299
+                "id": 307
               },
               {
                 "name": "API Monitor",
                 "desc": "用于监视应用程序调用的API函数的强大工具，支持32/64位",
                 "icon": "ODF.VWTN1Df6Cs6FcNsMKzNO6g",
                 "url": "http://www.rohitab.com/apimonitor",
-                "id": 300
+                "id": 308
               },
               {
                 "name": "调试诊断工具 (DebugDiag)",
                 "desc": "微软出品的工具，用于分析IIS应用程序崩溃、挂起和内存泄漏",
                 "icon": "ODF.Y77AUHJ37M167GfxiS3cyg",
                 "url": "https://www.microsoft.com/en-us/download/details.aspx?id=58210",
-                "id": 301
+                "id": 309
               },
               {
                 "name": "Sysinternals Suite",
                 "desc": "微软Sysinternals提供的强大系统工具集，包含Process Explorer、VMMap等多种调试和诊断工具",
                 "icon": "ODF.Y77AUHJ37M167GfxiS3cyg",
                 "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
-                "id": 302
+                "id": 310
               },
               {
                 "name": "Ghidra",
                 "desc": "美国国家安全局（NSA）发布的开源软件逆向工程框架，包含集成调试器",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/NationalSecurityAgency/ghidra",
-                "id": 303
+                "id": 311
               },
               {
                 "name": "PerfView",
                 "desc": ".NET平台性能分析工具，用于诊断CPU、内存和性能问题",
                 "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/microsoft/perfview",
-                "id": 304
+                "id": 312
               },
               {
                 "name": "Chrome DevTools",
                 "desc": "内置于Chrome浏览器中的网页调试与性能分析工具集",
                 "icon": "ODF.24Apu1lA0zLtl1Y2oBNV2Q",
                 "url": "https://developer.chrome.com/docs/devtools/",
-                "id": 305
+                "id": 313
               },
               {
                 "name": "Valgrind",
                 "desc": "Linux下用于内存调试、内存泄漏检测和性能分析的程序剖析工具集",
                 "icon": "ODF._0sMMCCA69oB8b4SusRYGw",
                 "url": "https://valgrind.org/",
-                "id": 306
+                "id": 314
               }
             ],
             "icon": "",
-            "id": 288
+            "id": 296
           }
         ],
         "icon": "IconSteps",
-        "id": 231
+        "id": 239
       },
       {
         "title": "镜像站源",
@@ -2147,158 +2203,158 @@
                 "desc": "",
                 "icon": "ODF.HEGHRnXH-lqPgoG1qfB1Jw",
                 "url": "https://mirrors.ustc.edu.cn/",
-                "id": 309
+                "id": 317
               },
               {
                 "name": "荆楚理工学院开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.jcut.edu.cn/favicon.svg",
                 "url": "https://mirrors.jcut.edu.cn/",
-                "id": 310
+                "id": 318
               },
               {
                 "name": "重庆邮电大学开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.cqupt.edu.cn/favicon.ico",
                 "url": "https://mirrors.cqupt.edu.cn/",
-                "id": 311
+                "id": 319
               },
               {
                 "name": "南方科技大学开源镜像站",
                 "desc": "",
                 "icon": "ODF.yp68IaXb43OWZCzQ7X_o5Q",
                 "url": "https://mirrors.sustech.edu.cn/",
-                "id": 312
+                "id": 320
               },
               {
                 "name": "重庆大学开源软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.cqu.edu.cn/static/favicon.png",
                 "url": "https://mirrors.cqu.edu.cn/#/",
-                "id": 313
+                "id": 321
               },
               {
                 "name": "南京大学开源镜像站",
                 "desc": "",
                 "icon": "ODF.th5cunuRYWqsmhdRRirnvw?PC=EMMX01",
                 "url": "https://mirror.nju.edu.cn/",
-                "id": 314
+                "id": 322
               },
               {
                 "name": "南阳理工学院开源镜像站",
                 "desc": "",
                 "icon": "https://mirror.nyist.edu.cn/static/img/favicon.png",
                 "url": "https://mirror.nyist.edu.cn/",
-                "id": 315
+                "id": 323
               },
               {
                 "name": "西安交通大学软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.xjtu.edu.cn/images/xjtuana-logo.svg",
                 "url": "https://mirrors.xjtu.edu.cn/",
-                "id": 316
+                "id": 324
               },
               {
                 "name": "齐鲁工业大学开源软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.qlu.edu.cn/static/img/favicon.png",
                 "url": "https://mirrors.qlu.edu.cn/",
-                "id": 317
+                "id": 325
               },
               {
                 "name": "兰州大学开源社区镜像站",
                 "desc": "",
                 "icon": "https://mirror.lzu.edu.cn/static/img/favicon.png",
                 "url": "https://mirror.lzu.edu.cn/",
-                "id": 318
+                "id": 326
               },
               {
                 "name": "清华大学开源软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.tuna.tsinghua.edu.cn/static/img/favicon.png",
                 "url": "https://mirrors.tuna.tsinghua.edu.cn/",
-                "id": 319
+                "id": 327
               },
               {
                 "name": "北京外国语大学开源软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.bfsu.edu.cn/static/img/favicon.png",
                 "url": "https://mirrors.bfsu.edu.cn/",
-                "id": 320
+                "id": 328
               },
               {
                 "name": "吉林大学开源镜像站",
                 "desc": "",
                 "icon": "ODF.Gl1sJxdVb86R3Vknfq0DAA",
                 "url": "https://mirrors.jlu.edu.cn/",
-                "id": 321
+                "id": 329
               },
               {
                 "name": "哈尔滨工业大学开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.hit.edu.cn/favicon.svg",
                 "url": "https://mirrors.hit.edu.cn/#/home",
-                "id": 322
+                "id": 330
               },
               {
                 "name": "ISCAS 镜像站",
                 "desc": "",
                 "icon": "ODF.ltK3g6XjASIlUuCoP2OHNg",
                 "url": "https://mirror.iscas.ac.cn/",
-                "id": 323
+                "id": 331
               },
               {
                 "name": "南京工业大学开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.njtech.edu.cn/favicon.ico",
                 "url": "https://mirrors.njtech.edu.cn/",
-                "id": 324
+                "id": 332
               },
               {
                 "name": "西北农林科技大学开源镜像站",
                 "desc": "",
                 "icon": "https://www.nwafu.edu.cn/images/favicon.ico",
                 "url": "https://mirrors.nwafu.edu.cn/",
-                "id": 325
+                "id": 333
               },
               {
                 "name": "北京大学开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.pku.edu.cn/static/favicon.ico",
                 "url": "https://mirrors.pku.edu.cn/",
-                "id": 326
+                "id": 334
               },
               {
                 "name": "山东大学镜像站",
                 "desc": "",
                 "icon": "https://mirrors.sdu.edu.cn/favicon.ico",
                 "url": "https://mirrors.sdu.edu.cn/",
-                "id": 327
+                "id": 335
               },
               {
                 "name": "上海交通大学软件源镜像站",
                 "desc": "",
                 "icon": "https://mirror.sjtu.edu.cn/favicon.ico",
                 "url": "https://mirror.sjtu.edu.cn/",
-                "id": 328
+                "id": 336
               },
               {
                 "name": "上海交通大学软件源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.sjtug.sjtu.edu.cn/favicon.ico",
                 "url": "https://mirrors.sjtug.sjtu.edu.cn/",
-                "id": 329
+                "id": 337
               },
               {
                 "name": "浙江大学开源软件镜像站",
                 "desc": "",
                 "icon": "https://mirrors.zju.edu.cn/index/favicon-32x32.png",
                 "url": "https://mirrors.zju.edu.cn/",
-                "id": 330
+                "id": 338
               }
             ],
             "icon": "",
-            "id": 308
+            "id": 316
           },
           {
             "title": "软件源",
@@ -2308,39 +2364,39 @@
                 "desc": "",
                 "icon": "ODF.F1CHLE42JiF2LtbOTEnRxw",
                 "url": "https://mirrors.tencent.com/",
-                "id": 332
+                "id": 340
               },
               {
                 "name": "阿里巴巴开源镜像站",
                 "desc": "",
                 "icon": "https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico",
                 "url": "https://developer.aliyun.com/mirror/",
-                "id": 333
+                "id": 341
               },
               {
                 "name": "华为开源镜像站",
                 "desc": "",
                 "icon": "https://devcloud-res.hc-cdn.com/MirrorPortal-CDN/2025.12.2/hws/favicon.ico",
                 "url": "https://mirrors.huaweicloud.com/home",
-                "id": 334
+                "id": 342
               },
               {
                 "name": "网易开源镜像站",
                 "desc": "",
                 "icon": "https://mirrors.163.com/.media/favicon.ico",
                 "url": "https://mirrors.163.com/",
-                "id": 335
+                "id": 343
               },
               {
                 "name": "火山引擎开源软件镜像站",
                 "desc": "",
                 "icon": "ODF.KgU9S6cyz9LGIJ32PIv97w",
                 "url": "https://mirrorvolc.volces.com/",
-                "id": 336
+                "id": 344
               }
             ],
             "icon": "",
-            "id": 331
+            "id": 339
           },
           {
             "title": "帮助",
@@ -2350,25 +2406,25 @@
                 "desc": "镜像使用帮助 - MirrorZ Help 致力于成为一个开源、开放、且持续更新的开源软件镜像的帮助文档整合站点，旨在帮助高校间推广开源软件的使用。",
                 "icon": "https://help.mirrors.cernet.edu.cn/favicon/favicon.svg",
                 "url": "https://help.mirrors.cernet.edu.cn/",
-                "id": 338
+                "id": 346
               },
               {
                 "name": "USTC Mirror Help",
                 "desc": "USTC Mirror Help",
                 "icon": "https://mirrors.ustc.edu.cn/static/img/favicon.png",
                 "url": "https://mirrors.ustc.edu.cn/help/index.html",
-                "id": 339
+                "id": 347
               },
               {
                 "name": "LinuxMirrors",
                 "desc": "GNU/Linux 更换系统软件源脚本及 Docker 安装与换源脚本",
                 "icon": "https://linuxmirrors.cn/assets/favicon.ico",
                 "url": "https://linuxmirrors.cn/",
-                "id": 340
+                "id": 348
               }
             ],
             "icon": "",
-            "id": 337
+            "id": 345
           },
           {
             "title": "系统",
@@ -2378,102 +2434,102 @@
                 "desc": "微软官方最新操作系统，支持家庭版、专业版等。提供 ISO 镜像和安装助手。",
                 "icon": "https://www.microsoft.com/favicon.ico",
                 "url": "https://www.microsoft.com/zh-cn/software-download/windows11",
-                "id": 342
+                "id": 350
               },
               {
                 "name": "Microsoft Windows 10",
                 "desc": "Windows 10 安全更新支持将持续至 2025 年 10 月 14 日，仍可从官方下载 ISO。",
                 "icon": "https://www.microsoft.com/favicon.ico",
                 "url": "https://www.microsoft.com/zh-cn/software-download/windows10",
-                "id": 343
+                "id": 351
               },
               {
                 "name": "Ubuntu",
                 "desc": "最流行的桌面 Linux 发行版，由 Canonical 维护，适合新手和开发者。",
                 "icon": "ODF.2JH2fJKOu2G4ZtofTgaVzQ",
                 "url": "https://ubuntu.com/download",
-                "id": 344
+                "id": 352
               },
               {
                 "name": "Debian",
                 "desc": "稳定、自由的社区发行版，是 Ubuntu 的上游基础，适合服务器和高级用户。",
                 "icon": "https://www.debian.org/favicon.ico",
                 "url": "https://www.debian.org/distrib/",
-                "id": 345
+                "id": 353
               },
               {
                 "name": "Fedora",
                 "desc": "由 Red Hat 赞助，集成最新开源技术，适合开发者和前沿用户。",
                 "icon": "ODF.tzPG1frW8ajrDdlajyAzNA",
                 "url": "https://getfedora.org/",
-                "id": 346
+                "id": 354
               },
               {
                 "name": "CentOS",
                 "desc": "Red Hat 推出的滚动预览版，替代传统 CentOS，面向开发者和测试者。",
                 "icon": "ODF.Cl4YWXEVjkRwdtHvbT4r3A",
                 "url": "https://www.centos.org/centos-stream/",
-                "id": 347
+                "id": 355
               },
               {
                 "name": "Rocky Linux",
                 "desc": "由 CentOS 创始人发起，100% 兼容 RHEL，是 CentOS 的社区替代品。",
                 "icon": "ODF.aRWe3ty5BYeVNSEhKebuwA",
                 "url": "https://rockylinux.org/download",
-                "id": 348
+                "id": 356
               },
               {
                 "name": "AlmaLinux",
                 "desc": "另一款 RHEL 兼容发行版，由 CloudLinux 团队支持，稳定且免费。",
                 "icon": "ODF.llC9SKEhNUi1GBL02os_Mw",
                 "url": "https://almalinux.org/",
-                "id": 349
+                "id": 357
               },
               {
                 "name": "openSUSE",
                 "desc": "提供 Leap（稳定版）和 Tumbleweed（滚动更新版），适合桌面和服务器。",
                 "icon": "https://www.opensuse.org/favicon.ico",
                 "url": "https://www.opensuse.org/",
-                "id": 350
+                "id": 358
               },
               {
                 "name": "Arch Linux",
                 "desc": "轻量、灵活的滚动发行版，适合高级用户，采用 DIY 安装方式。",
                 "icon": "https://archlinux.org/favicon.ico",
                 "url": "https://archlinux.org/download/",
-                "id": 351
+                "id": 359
               },
               {
                 "name": "Kali Linux",
                 "desc": "专为渗透测试和安全审计设计的 Debian 衍生版，由 Offensive Security 维护。",
                 "icon": "https://www.kali.org/favicon.ico",
                 "url": "https://www.kali.org/downloads/",
-                "id": 352
+                "id": 360
               },
               {
                 "name": "Linux Mint",
                 "desc": "基于 Ubuntu，界面友好，适合从 Windows 迁移的桌面用户。",
                 "icon": "https://linuxmint.com/favicon.ico",
                 "url": "https://linuxmint.com/download.php",
-                "id": 353
+                "id": 361
               },
               {
                 "name": "Zorin OS",
                 "desc": "专为 Windows 用户设计的美观易用 Linux 发行版，有免费和付费版。",
                 "icon": "ODF.PuyrZmArJ8rsgi6UqX-1jg",
                 "url": "https://zorinos.com/download/",
-                "id": 354
+                "id": 362
               },
               {
                 "name": "Manjaro",
                 "desc": "基于 Arch Linux 的用户友好发行版，提供图形化安装和预配置环境。",
                 "icon": "https://manjaro.org/favicon.ico",
                 "url": "https://manjaro.org/download/",
-                "id": 355
+                "id": 363
               }
             ],
             "icon": "",
-            "id": 341
+            "id": 349
           },
           {
             "title": "国产系统",
@@ -2483,71 +2539,71 @@
                 "desc": "统信软件致力于为不同行业的用户提供安全稳定、智能易用的操作系统产品与解决方案。基于国产芯片架构的操作系统产品已经和龙芯、飞腾、申威、鲲鹏、兆芯、海光等芯片厂商开展了广泛和深入的合作，与国内各主流整机厂商，以及数百家国内外软件厂商展开了全方位的兼容性适配工作。",
                 "icon": "https://www.chinauos.com/assets/images/logo/logoIcnNew.png",
                 "url": "https://www.chinauos.com/",
-                "id": 357
+                "id": 365
               },
               {
                 "name": "麒麟操作系统",
                 "desc": "麒麟软件是专业从事国产操作系统研发和产业化的高新技术企业，旗下麒麟操作系统连续十余年位列中国Linux市场占有率第一。",
                 "icon": "https://www.kylinos.cn/template/1/ky-default/images/favicon.ico",
                 "url": "https://www.kylinos.cn/",
-                "id": 358
+                "id": 366
               },
               {
                 "name": "深度操作系统",
                 "desc": "全球排名最高的中国 Linux 发行版，以 DDE 桌面环境著称，界面精美，社区活跃，完全开源免费，适合个人用户和开发者。",
                 "icon": "https://www.deepin.org/favicon.ico",
                 "url": "https://www.deepin.org/zh/download/",
-                "id": 359
+                "id": 367
               },
               {
                 "name": "openKylin",
                 "desc": "由麒麟软件主导的开源社区发行版，支持 X86、ARM、RISC-V 架构，搭载自研 UKUI 桌面，目标是构建根社区生态。",
                 "icon": "https://www.openkylin.top/favicon.ico",
                 "url": "https://www.openkylin.top/download",
-                "id": 360
+                "id": 368
               },
               {
                 "name": "华为 openEuler",
                 "desc": "面向企业级的开源 Linux 发行版，支持服务器、云、边缘计算，适配鲲鹏、昇腾等国产芯片，社区版免费下载。",
                 "icon": "https://openeuler.org/favicon.ico",
                 "url": "https://openeuler.org/zh/download/",
-                "id": 361
+                "id": 369
               },
               {
                 "name": "华为 HarmonyOS",
                 "desc": "华为自研分布式操作系统，PC 端目前主要通过 DevEco Studio 模拟器体验；纯血鸿蒙（HarmonyOS Next）已脱离安卓，逐步开放原生应用生态。",
                 "icon": "https://consumer.huawei.com/favicon.ico",
                 "url": "https://developer.huawei.com/consumer/cn/harmonyos",
-                "id": 362
+                "id": 370
               },
               {
                 "name": "中科方德",
                 "desc": "中科方德软件有限公司是国产操作系统核心厂商之一，拥有成熟完善的服务器操作系统、桌面操作系统产品线，提供信息安全、云计算、高可用集群软件等工具和解决方案，重点服务于电子政务、通信、金融、科教文卫、能源、交通等行业和领域。",
                 "icon": "https://www.nfschina.com/data/upload/image/20210906/1630914044118736.png",
                 "url": "https://www.nfschina.com/",
-                "id": 363
+                "id": 371
               },
               {
                 "name": "凝思软件",
                 "desc": "凝思软件由“中国Linux先行者”宫敏博士创办，是先进的国产安全操作系统厂商，提供高可靠、高安全、高性能的服务器、工作站、装置、嵌入式等各类操作系统及相关产品和服务，保障生产及关键业务系统的安全稳定运行，广泛应用于电力、电信、铁路、金融等重点行业。",
                 "icon": "https://www.linx-info.com/favicon.ico",
                 "url": "https://www.linx-info.com/",
-                "id": 364
+                "id": 372
               },
               {
                 "name": "StartOS",
                 "desc": "早期国产 Linux 发行版（原雨林木风 YlmfOS），现由广东瓦力网络维护，轻量简洁，适合老旧设备。",
                 "icon": "https://www.startos.com/favicon.ico",
                 "url": "https://www.startos.com/",
-                "id": 365
+                "id": 373
               }
             ],
             "icon": "",
-            "id": 356
+            "id": 364
           }
         ],
         "icon": "IconPopover",
-        "id": 307
+        "id": 315
       },
       {
         "title": "实用软件",
@@ -2560,60 +2616,60 @@
                 "desc": "功能强大的 Windows 视频播放器，支持硬件加速、多格式解码、自定义滤镜与皮肤，由 Daum（Kakao）开发。",
                 "icon": "https://t1.daumcdn.net/potplayer/main/img/favicon.ico",
                 "url": "https://potplayer.tv/?lang=zh_CN",
-                "id": 368
+                "id": 376
               },
               {
                 "name": "VLC Media Player",
                 "desc": "开源免费、跨平台的全能媒体播放器，支持几乎所有音视频格式和流媒体协议，无广告、无追踪。",
                 "icon": "https://images.videolan.org/images/favicon.ico",
                 "url": "https://www.videolan.org/vlc/index.zh_CN.html",
-                "id": 369
+                "id": 377
               },
               {
                 "name": "mpv",
                 "desc": "轻量级、开源、跨平台命令行媒体播放器，高度可定制，基于 MPlayer 和 mpv 项目，适合高级用户。",
                 "icon": "https://mpv.io/images/favicon-5d3b2a52.png",
                 "url": "https://mpv.io/",
-                "id": 370
+                "id": 378
               },
               {
                 "name": "5KPlayer",
                 "desc": "支持 4K/1080P 视频、AirPlay 串流及在线视频下载的免费多媒体播放器，适用于 Windows 和 macOS。",
                 "icon": "ODF.cMa93iGcphFrn5V9opVP0g",
                 "url": "https://www.5kplayer.com",
-                "id": 371
+                "id": 379
               },
               {
                 "name": "KMPlayer",
                 "desc": "支持全格式视频播放的多功能播放器，提供个性化设置与多平台支持（Windows、macOS、Android、iOS）。",
                 "icon": "https://img.kmplayer.com/kmp_rt/images/favicon/favicon.ico",
                 "url": "https://www.kmplayer.com/home",
-                "id": 372
+                "id": 380
               },
               {
                 "name": "GOM Player",
                 "desc": "由 GOM Lab 开发的高清视频播放器，集成 AI 字幕匹配、屏幕录制与基础视频编辑功能。",
                 "icon": "https://www.gomlab.com/live/ui/images/favicon/favicon.ico",
                 "url": "https://www.gomlab.com/en/",
-                "id": 373
+                "id": 381
               },
               {
                 "name": "IINA",
                 "desc": "专为 macOS 打造的现代媒体播放器，基于 mpv，支持触控板手势、画中画与原生系统集成。",
                 "icon": "https://iina.io/images/apple-touch-icon.png",
                 "url": "https://iina.io/",
-                "id": 374
+                "id": 382
               },
               {
                 "name": "Kodi",
                 "desc": "开源家庭影院软件，适用于电视大屏与小型设备，支持插件扩展、媒体库管理与远程控制。",
                 "icon": "https://kodi.tv/favicon-32x32.png?v=0f7311d6dfc6bbfa30848b0c28f33af2",
                 "url": "https://kodi.tv/",
-                "id": 375
+                "id": 383
               }
             ],
             "icon": "",
-            "id": 367
+            "id": 375
           },
           {
             "title": "图像处理",
@@ -2623,32 +2679,32 @@
                 "desc": "专业级图像编辑软件，提供丰富的编辑工具、滤镜效果和动画功能。",
                 "icon": "OIP-C.P28lGHIkdDv2tt21B33BuQAAAA",
                 "url": "https://www.adobe.com/products/photoshop.html",
-                "id": 377
+                "id": 385
               },
               {
                 "name": "Affinity",
                 "desc": "为专业创作者而生的一站式设计软件",
                 "icon": "https://static.canva.cn/domain-assets/affinity/static/images/favicon-1.ico",
                 "url": "https://www.canva.cn/affinity",
-                "id": 378
+                "id": 386
               },
               {
                 "name": "Luminar Neo",
                 "desc": "简易照片编辑器| 适用于 Mac 和 PC 的软件",
                 "icon": "https://media.macphun.com/img/uploads/uploads/skylum/fav/skylum-dots.png",
                 "url": "https://skylum.com/hans/luminar",
-                "id": 379
+                "id": 387
               },
               {
                 "name": "GIMP",
                 "desc": "GNU Image Manipulation Program",
                 "icon": "https://www.gimp.org/images/wilber32.png",
                 "url": "https://www.gimp.org/",
-                "id": 380
+                "id": 388
               }
             ],
             "icon": "",
-            "id": 376
+            "id": 384
           },
           {
             "title": "开发工具",
@@ -2658,108 +2714,108 @@
                 "desc": "微软推出的免费开源代码编辑器，拥有极其丰富的插件生态和内置 Git 支持，是目前全球最流行的全能型编辑器。",
                 "icon": "https://code.visualstudio.com/assets/favicon.ico",
                 "url": "https://code.visualstudio.com/",
-                "id": 382
+                "id": 390
               },
               {
                 "name": "Android Studio",
                 "desc": "Android Studio 提供了一些应用构建器以及一个已针对 Android 应用进行优化的集成式开发环境 (IDE)。",
                 "icon": "https://www.gstatic.cn/devrel-devsite/prod/v579073a50c63499824df5a68b8922367066583d283ef78fdade1028efdb4ceb5/android/images/favicon.svg",
                 "url": "https://developer.android.google.cn/studio?hl=zh-cn",
-                "id": 383
+                "id": 391
               },
               {
                 "name": "JetBrains IntelliJ IDEA",
                 "desc": "业界公认的 Java 开发神器，提供极其智能的代码补全、深度代码分析和强大的重构工具，分为免费社区版和付费终极版。",
                 "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
                 "url": "https://www.jetbrains.com/idea/",
-                "id": 384
+                "id": 392
               },
               {
                 "name": "Sublime Text",
                 "desc": "一款轻量级、启动速度极快的商业文本编辑器，以其流畅的性能、强大的多行编辑功能和丰富的快捷键著称。",
                 "icon": "https://www.sublimetext.com/favicon.ico",
                 "url": "https://www.sublimetext.com/",
-                "id": 385
+                "id": 393
               },
               {
                 "name": "JetBrains PyCharm",
                 "desc": "专为 Python 开发者设计的 IDE，集成了科学计算、Web 开发（Django/Flask）和数据科学所需的专业工具。",
                 "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
                 "url": "https://www.jetbrains.com/pycharm/",
-                "id": 386
+                "id": 394
               },
               {
                 "name": "Vim / Neovim",
                 "desc": "高度可配置的终端文本编辑器，拥有独特的模态编辑模式，深受追求极致效率和键盘操作的开发人员喜爱。",
                 "icon": "https://www.vim.org/images/vim_shortcut.ico",
                 "url": "https://www.vim.org/",
-                "id": 387
+                "id": 395
               },
               {
                 "name": "JetBrains WebStorm",
                 "desc": "专为现代 JavaScript 和前端开发打造的 IDE，对 Vue、React、Angular 等主流框架提供深度智能支持。",
                 "icon": "https://resources.jetbrains.com/storage/ui/favicons/favicon.ico",
                 "url": "https://www.jetbrains.com/webstorm/",
-                "id": 388
+                "id": 396
               },
               {
                 "name": "通义灵码 (Tongyi Lingma)",
                 "desc": "阿里云推出的 AI 智能编码助手，支持 200+ 编程语言，深度集成阿里云服务，具备智能体模式可拆解复杂需求并生成完整模块<websource>source_group_web_1</websource>。",
                 "icon": "https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg",
                 "url": "https://tongyi.aliyun.com/lingma",
-                "id": 389
+                "id": 397
               },
               {
                 "name": "CodeBuddy",
                 "desc": "腾讯云自研的 AI 原生 IDE，基于腾讯混元与 DeepSeek 双模型驱动，支持自然语言驱动开发，提供独立 IDE、插件及 CLI 多种形态<websource>source_group_web_2</websource>。",
                 "icon": "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/web/ide/logo.svg",
                 "url": "https://www.codebuddy.ai/",
-                "id": 390
+                "id": 398
               },
               {
                 "name": "Trae",
                 "desc": "字节跳动推出的国内首款 AI 原生 IDE，具备 Builder 模式，可实现从需求、架构到代码、测试、部署的完整闭环<websource>source_group_web_3</websource>。",
                 "icon": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png",
                 "url": "https://www.trae.cn/",
-                "id": 391
+                "id": 399
               },
               {
                 "name": "百度 Comate",
                 "desc": "百度推出的企业级全栈 AI 开发环境，中文场景代码补全准确率高，支持跨语言翻译与重构，并提供设计稿转代码的多模态能力<websource>source_group_web_4</websource>。",
                 "icon": "https://comate.baidu.com/favicon.ico",
                 "url": "https://comate.baidu.com/",
-                "id": 392
+                "id": 400
               },
               {
                 "name": "Zed Editor",
                 "desc": "基于 Rust 从零构建的高性能代码编辑器，以极致速度、原生 AI 协作和无缝多人实时协同为核心优势，全面支持跨平台开发<websource>source_group_web_5</websource>。",
                 "icon": "https://zed.dev/favicon_black_16.png",
                 "url": "https://zed.dev/",
-                "id": 393
+                "id": 401
               },
               {
                 "name": "DevEco Studio",
                 "desc": "华为鸿蒙（HarmonyOS）应用开发的官方一站式工具，内置方舟编译器，支持一次开发多端部署，完美适配智能终端与车载设备<websource>source_group_web_6</websource>。",
                 "icon": "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/DevEcoStudiotubiao3x.webp",
                 "url": "https://developer.harmonyos.com/cn/develop/deveco-studio",
-                "id": 394
+                "id": 402
               },
               {
                 "name": "CodeGeeX",
                 "desc": "智谱 AI 推出的开源免费 AI 编程助手，支持 130+ 语言互译，内存占用极低，对本地部署和私有化训练非常友好<websource>source_group_web_7</websource>。",
                 "icon": "ODF.ZhcjNV4C6lmzprZznpdWNA",
                 "url": "https://codegeex.cn/",
-                "id": 395
+                "id": 403
               }
             ],
             "icon": "",
-            "id": 381
+            "id": 389
           },
           {
             "title": "运行库",
             "nav": [],
             "icon": "",
-            "id": 396
+            "id": 404
           },
           {
             "title": "BT下载",
@@ -2769,60 +2825,60 @@
                 "desc": "全功能下载管理器 — 从零重建。",
                 "icon": "ODF.1kIzM3viGs8N1EBJqhYlQg",
                 "url": "https://motrix-next.pages.dev/",
-                "id": 398
+                "id": 406
               },
               {
                 "name": "qBittorrent BitTorrent client",
                 "desc": "qBittorrent 是一个用 C++ / Qt 编写的 BitTorrent 客户端，使用 Arvid Norberg 编写的 libtorrent（有时称为 libtorrent-rasterbar）。",
                 "icon": "ODF.Cb_MiZ5cmN58iU3pLMaPCg",
                 "url": "https://github.com/qbittorrent/qBittorrent/",
-                "id": 399
+                "id": 407
               },
               {
                 "name": "BitComet(比特彗星)",
                 "desc": "高效好用的BT下载软件，BT资源的下载利器",
                 "icon": "https://www.bitcomet.com/images/favicon.png",
                 "url": "https://www.bitcomet.com/cn",
-                "id": 400
+                "id": 408
               },
               {
                 "name": "µTorrent (uTorrent)",
                 "desc": "A Very Tiny BitTorrent Client",
                 "icon": "ODF.gwgwOcgos7NvwKi4SNaTRA",
                 "url": "https://www.utorrent.com/",
-                "id": 401
+                "id": 409
               },
               {
                 "name": "Transmission",
                 "desc": "A Fast, Easy and Free Bittorrent Client For Mac, Windows and Linux",
                 "icon": "ODF.-MmW9WIxg5Q1AEkyBFhhEg",
                 "url": "https://transmissionbt.com/",
-                "id": 402
+                "id": 410
               },
               {
                 "name": "Free Download Manager",
                 "desc": "從網路下載任何東西",
                 "icon": "https://www.freedownloadmanager.org/favicon.ico",
                 "url": "https://www.freedownloadmanager.org/zh/",
-                "id": 403
+                "id": 411
               },
               {
                 "name": "Tixati",
                 "desc": "",
                 "icon": "https://tixati.com/files/favicon.png",
                 "url": "https://tixati.com/",
-                "id": 404
+                "id": 412
               },
               {
                 "name": "BiglyBT",
                 "desc": "BiglyBT is a feature filled, open source, bittorrent client. I2P integration, Swarm Merging, Advanced Tag System, WebTorrent support, built-in VPN kill switch, Meta-search, UPnP/DLNA access, and much more.",
                 "icon": "https://www.biglybt.com/apple-touch-icon.png",
                 "url": "https://www.biglybt.com/",
-                "id": 405
+                "id": 413
               }
             ],
             "icon": "",
-            "id": 397
+            "id": 405
           },
           {
             "title": "分区工具",
@@ -2832,39 +2888,39 @@
                 "desc": "DiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
                 "icon": "https://www.diskgenius.cn/favicon.ico",
                 "url": "https://www.diskgenius.cn/",
-                "id": 407
+                "id": 415
               },
               {
                 "name": "傲梅分区助手",
                 "desc": "傲梅致力于数据安全领域，为用户提供安全可靠的傲梅分区助手、轻松备份、数据恢复软件恢复之星以及远程控制软件Anyviewer等。",
                 "icon": "https://www.disktool.cn/favicon.ico",
                 "url": "https://www.disktool.cn/",
-                "id": 408
+                "id": 416
               },
               {
                 "name": "易我分区大师",
                 "desc": "易我分区大师专业版（EaseUS Partition Master）是最好的电脑硬盘分区工具，能快速解决磁盘容量不足问题和调整硬盘或RAID上的磁盘分区大小。适用于 Windows 10/8/7/Vista/XP。",
                 "icon": "https://www.easeus.com.cn/images_2016/fav.ico",
                 "url": "https://www.easeus.com.cn/chanpin-fenquzy.html",
-                "id": 409
+                "id": 417
               },
               {
                 "name": "TestDisk",
                 "desc": "",
                 "icon": "https://www.cgsecurity.org/favicon.ico",
                 "url": "https://www.cgsecurity.org/wiki/TestDisk_CN",
-                "id": 410
+                "id": 418
               },
               {
                 "name": "MiniTool",
                 "desc": "As a partition magic alternative, MiniTool Partition Wizard is the latest partition manager software that can be used to manage partitions on Windows 11/10/8/7 and Server 2003/2008/2012/2016/2019.",
                 "icon": "https://www.partitionwizard.com/favicon.ico",
                 "url": "https://www.partitionwizard.com/",
-                "id": 411
+                "id": 419
               }
             ],
             "icon": "",
-            "id": 406
+            "id": 414
           },
           {
             "title": "解压软件",
@@ -2874,32 +2930,32 @@
                 "desc": "一款拥有极高压缩比的开源压缩软件，支持 7z、ZIP、RAR 等多种格式，基于 GNU LGPL 许可协议发布。",
                 "icon": "ODF.tW1DZ4ND3pOb43W0A2d2fQ",
                 "url": "https://www.7-zip.org/",
-                "id": 413
+                "id": 421
               },
               {
                 "name": "Bandizip",
                 "desc": "Bandizip 是一个强大的多功能压缩文件管理工具，可提供很快的解压缩速度和其他各种实用功能。这是一个免费的软件，其付费版本更是可以使用更多的实用功能。",
                 "icon": "ODF.keTrH3Do0A1CN10FDRQUSA",
                 "url": "https://www.bandisoft.com/bandizip/",
-                "id": 414
+                "id": 422
               },
               {
                 "name": "PeaZip",
                 "desc": "Free file archiver utility for Windows, macOS, Linux, Open Source file compression and encryption software. Open, extract RAR TAR ZIP archives, 200+ formats supported",
                 "icon": "https://peazip.github.io/favicon.ico",
                 "url": "https://peazip.github.io/",
-                "id": 415
+                "id": 423
               },
               {
                 "name": "WinRAR",
                 "desc": "WinRAR - the data compression, encryption and archiving tool for Windows that opens RAR and ZIP files. Compatible with many other file formats.",
                 "icon": "https://www.win-rar.com/fileadmin/images/common/favicon.ico",
                 "url": "https://www.win-rar.com/start.html?&L=0",
-                "id": 416
+                "id": 424
               }
             ],
             "icon": "",
-            "id": 412
+            "id": 420
           },
           {
             "title": "系统制作",
@@ -2909,39 +2965,39 @@
                 "desc": "简单来说，Ventoy是一个制作可启动U盘的开源工具。",
                 "icon": "https://www.ventoy.net/static/img/ventoy.png",
                 "url": "https://www.ventoy.net/cn/index.html",
-                "id": 418
+                "id": 426
               },
               {
                 "name": "Rufus",
                 "desc": "Rufus是一个小巧但功能强大的工具，用于创建可启动USB驱动器，支持Windows、Linux等系统。",
                 "icon": "ODF.MGCYQ-kaBJIOsCFW4IJ_Dw",
                 "url": "https://rufus.ie/zh/",
-                "id": 419
+                "id": 427
               },
               {
                 "name": "balenaEtcher",
                 "desc": "Etcher是一个跨平台的系统镜像烧录工具，支持Windows、macOS和Linux。",
                 "icon": "ODF.aF66vf4WK6vkmaxFilEBfg",
                 "url": "https://etcher.balena.io/",
-                "id": 420
+                "id": 428
               },
               {
                 "name": "Win32 Disk Imager",
                 "desc": "Win32 Disk Imager是一款经典的Windows系统U盘制作工具，支持将镜像文件写入USB设备。",
                 "icon": "https://sourceforge.net/favicon.ico",
                 "url": "https://sourceforge.net/projects/win32diskimager/",
-                "id": 421
+                "id": 429
               },
               {
                 "name": "UNetbootin",
                 "desc": "UNetbootin是一个跨平台的启动U盘创建工具，支持从ISO文件或网络下载创建启动U盘。",
                 "icon": "https://unetbootin.github.io/favicon.ico",
                 "url": "https://unetbootin.github.io/",
-                "id": 422
+                "id": 430
               }
             ],
             "icon": "",
-            "id": 417
+            "id": 425
           },
           {
             "title": "浏览器",
@@ -2951,60 +3007,60 @@
                 "desc": "Chrome 是 Google 的官方网络浏览器，速度飞快，安全可靠，并且支持自定义。欢迎立即下载，随心定制。",
                 "icon": "https://www.google.cn/chrome/static/images/favicons/favicon-16x16.png",
                 "url": "https://www.google.cn/intl/zh-CN/chrome/",
-                "id": 424
+                "id": 432
               },
               {
                 "name": "Microsoft Edge",
                 "desc": "Microsoft Edge is your AI browser. A new way to pilot the web. Learn more about built-in Edge features and capabilities that help you achieve more.",
                 "icon": "https://edgecdn-embza6g8cacagcbn.z01.azurefd.net/welcome/static/favicon.png",
                 "url": "https://www.microsoft.com/edge/",
-                "id": 425
+                "id": 433
               },
               {
                 "name": "Firefox",
                 "desc": "下载适用于 Windows、Mac 和 Linux 的 Firefox。Firefox 一款免费的网络浏览器，由致力于改善互联网健康与隐私的非营利组织 Mozilla 全力支持。",
                 "icon": "https://www.firefox.com/media/img/favicons/firefox/browser/apple-touch-icon.79c2abeb4e35.png",
                 "url": "https://www.firefox.com/",
-                "id": 426
+                "id": 434
               },
               {
                 "name": "Opera",
                 "desc": "Opera GX is the browser built specifically for gamers. Get unparalleled gaming and browsing features, packed in a powerful revolutionary browser.",
                 "icon": "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/gx/images/welcomeGx/favicon/apple-touch-icon.16b2fb5b1ecc.png",
                 "url": "https://www.opera.com",
-                "id": 427
+                "id": 435
               },
               {
                 "name": "Brave",
                 "desc": "Brave 浏览器是一款快速、私密且安全的网络浏览器，适用于 PC、Mac 和移动设备。立即下载即可享受更快的无广告浏览体验，并通过阻止跟踪软件来节省数据和电池寿命。",
                 "icon": "ODF.W0hJA7PwdoMoRba5Bj7VRw",
                 "url": "https://brave.com/zh/",
-                "id": 428
+                "id": 436
               },
               {
                 "name": "Yandex Browser",
                 "desc": "Yandex Browser got updated: it's a neural browser now. We enhanced it with neural networks that help users write appealing texts, create pictures, understand different languages, read texts, and get video summaries. Try it out — it's free.",
                 "icon": "https://browser.yandex.com/favicon.ico",
                 "url": "https://browser.yandex.com/#alice-ai",
-                "id": 429
+                "id": 437
               },
               {
                 "name": "DuckDuckGo",
                 "desc": "Windows 版 DuckDuckGo 是一款免费的浏览应用程序，默认情况下为你提供全面的在线隐私保护。保护。隐私。安心。",
                 "icon": "ODF.1RN9goC_QcMlBPf8eDDQsg",
                 "url": "https://duckduckgo.com/windows",
-                "id": 430
+                "id": 438
               },
               {
                 "name": "Tor Project",
                 "desc": "Anonymity Online | Defend yourself against tracking and surveillance. Circumvent censorship.",
                 "icon": "ODF.CNopKwngam7hNGeQHDwPPA",
                 "url": "https://www.torproject.org/?noredirect=1",
-                "id": 431
+                "id": 439
               }
             ],
             "icon": "",
-            "id": 423
+            "id": 431
           },
           {
             "title": "扩展程序",
@@ -3014,40 +3070,40 @@
                 "desc": "首页",
                 "icon": "https://www.tampermonkey.net/favicon.ico",
                 "url": "https://www.tampermonkey.net/",
-                "id": 433
+                "id": 441
               },
               {
                 "name": "OpenUserJS",
                 "desc": "下载用户脚本以增强您的浏览器功能。",
                 "icon": "ODF.-Ksr4OAO_xSO_BK1DSuCKA",
                 "url": "https://openuserjs.org/",
-                "id": 434
+                "id": 442
               },
               {
                 "name": "Userscript.Zone",
                 "desc": "让您找到最常用的用户脚本。",
                 "icon": "ODF.vSfrGoaLAlQ3ybNfQBkeng",
                 "url": "https://www.userscript.zone/",
-                "id": 435
+                "id": 443
               },
               {
                 "name": "AdGuard",
                 "desc": "摆脱烦人广告",
                 "icon": "https://adguard.info/stf/favicons/adguard/favicon.ico",
                 "url": "https://adguard.info/zh_cn/welcome.html",
-                "id": 436
+                "id": 444
               }
             ],
             "icon": "",
-            "id": 432
+            "id": 440
           }
         ],
         "icon": "IconSelect",
-        "id": 366
+        "id": 374
       }
     ],
     "icon": "IconTreeSelect",
-    "id": 230
+    "id": 238
   },
   {
     "title": "提交网站",
