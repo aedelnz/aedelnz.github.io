@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Layout } from '@douyinfe/semi-ui'
+import { useBreakpoint } from './hook/useBreakpoint'
 import Headers from './component/Headers'
 import SideSheets from './component/SideSheets'
 import Carousels from './component/Carousels'
@@ -11,10 +12,11 @@ import Footers from './component/Footers'
 const App = () => {
   // 侧边栏的显示状态
   const [sideSheet, setSideSheet] = useState(false)
+  const { height } = useBreakpoint()
   // 切换侧边栏显示状态的函数
   const change = () => setSideSheet(!sideSheet)
   return (
-    <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)' }}>
+    <Layout style={{ height: height, backgroundColor: 'rgba(var(--semi-grey-0), 1)' }}>
       <Layout.Header className='semi-layout-header-diy'>
         <Headers change={change} />
         <SideSheets sideSheet={sideSheet} change={change} />
