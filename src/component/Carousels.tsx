@@ -1,9 +1,12 @@
 import { Carousel } from '@douyinfe/semi-ui'
 import { ContactMe } from '../Data'
-import { useWindowHeight } from './lib/Breakpoints'
+import { useBreakpoint } from '../hook/useBreakpoint'
 import CarouselsCard from './fast/CarouselsCard'
 
 const Carousels = () => {
+  // 屏幕高度获取
+  const { height } = useBreakpoint()
+
     return (
         <Carousel
             theme='dark'
@@ -12,7 +15,7 @@ const Carousels = () => {
             animation='fade'
             style={{
                 width: '100%',
-                height: useWindowHeight(),
+                height: height,
             }}
         >
             {ContactMe.map((item, index) => (

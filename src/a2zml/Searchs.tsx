@@ -2,16 +2,16 @@ import { useEffect, useMemo, useState } from 'react'
 import { Button, Input, InputGroup, List, Select, Toast, Typography } from '@douyinfe/semi-ui'
 import { IconSearch } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from './Data'
-import { useDB } from '../component/lib/DB'
+
 import { useBreakpoint } from '../component/lib/Breakpoints'
 import useLocalStorage from '../component/lib/LocalStorage'
 import ACard from '../component/fast/ACard'
 
-const Searchs = ({ search = true }: { search?: boolean }) => {
+const Searchs = ({data, search = true }: {data:NavData; search?: boolean }) => {
     const [keyword, setKeyword] = useState('')
     const [debouncedKeyword, setDebouncedKeyword] = useState<string>('')
     const { value: engine, setValue: setEngine } = useLocalStorage('search-engine', 'GitHub')
-    const { data } = useDB()
+    
     const breakpoint = useBreakpoint('md')
     // 防抖处理：延迟更新用于过滤的关键词
     useEffect(() => {

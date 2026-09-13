@@ -1,17 +1,16 @@
 import { Avatar, Nav, Tooltip } from "@douyinfe/semi-ui"
 import { createElement, useState, type ElementType } from 'react'
-import { useDB } from '../component/lib/DB'
-import { useWindowHeight } from '../component/lib/Breakpoints'
+import { useBreakpoint } from '../hook/useBreakpoint'
 import useLocalStorage from '../component/lib/LocalStorage'
 import * as SemiIcons from '@douyinfe/semi-icons'
 import * as SemiIconsLab from '@douyinfe/semi-icons-lab'
 
-const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect: (key: string) => void, onbreakpointBoot: boolean, onCollapseChange?: (collapsed: boolean) => void, }) => {
+const NavSides = ({ data, onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect: (key: string) => void, onbreakpointBoot: boolean, onCollapseChange?: (collapsed: boolean) => void, }) => {
     const [openKeys, setOpenKeys] = useState<(string | number)[]>([])
     const [selectedKeys, setSelectedKeys] = useState<(string | number)[]>([])
-    const { data } = useDB()
     const { setValue: setOpenSelected } = useLocalStorage('a2zml-data-Selected', '')
-    const screenHeight = useWindowHeight()
+    const { height } = useBreakpoint()
+
     const iconComponents = { ...SemiIcons, ...SemiIconsLab, } as unknown as Record<string, ElementType>
     const getNavIcon = (iconName?: string) => {
         const Icon = iconName ? iconComponents[iconName] : undefined
@@ -54,7 +53,7 @@ const NavSides = ({ onSelect, onbreakpointBoot, onCollapseChange, }: { onSelect:
             openKeys={openKeys}
             selectedKeys={selectedKeys}
             style={{ maxWidth: 220, height: '100%' }}
-            bodyStyle={{ height: screenHeight - 192 }}
+            bodyStyle={{ height: height - 192 }}
             isCollapsed={onbreakpointBoot}
             onOpenChange={onOpenChange}
             onCollapseChange={onCollapseChange}

@@ -12,6 +12,7 @@ import Footers from './component/Footers'
 const App = () => {
   // 侧边栏的显示状态
   const [sideSheet, setSideSheet] = useState(false)
+  // 屏幕高度获取
   const { height } = useBreakpoint()
   // 切换侧边栏显示状态的函数
   const change = () => setSideSheet(!sideSheet)

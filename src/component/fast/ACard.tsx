@@ -1,16 +1,14 @@
 import { useState } from "react"
-import { Avatar, Button, Card, MarkdownRender, SideSheet, Space, Typography } from "@douyinfe/semi-ui"
-import { IconAIFilledLevel1, IconInfoCircle } from "@douyinfe/semi-icons"
+import { Avatar, Card, Typography } from "@douyinfe/semi-ui"
+import { IconInfoCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../../a2zml/Data'
-import { useWindowHeight } from '../lib/Breakpoints'
+import BottomSideSheet from '../../a2zml/BottomSideSheet'
 
 const ACard = ({ data }: { data: CardItem }) => {
-    // 底部栏弹窗开关存储
-    const [visible, setVisible] = useState(false)
-    // 底部栏弹窗切换函数
-    const change = () => setVisible(!visible)
-    // 屏幕高度获取函数
-    const screenHeight = useWindowHeight()
+const [visible, setVisible] = useState(false)
+
+const toggleVisible = () => setVisible(v => !v)
+
     // 文本截断函数
     const truncate = (text?: string) => {
         if (typeof text !== 'string') return undefined
@@ -47,19 +45,9 @@ const ACard = ({ data }: { data: CardItem }) => {
                     />
                 </Typography.Text>
             </div>
-            <IconInfoCircle onClick={change} style={{ color: 'var(--semi-color-primary)' }} />
-            <SideSheet title={data.name} height={screenHeight} visible={visible} onCancel={change} closeOnEsc={true} placement='bottom'>
-                <Space vertical align='start'>
-                    <Avatar
-                        size="extra-large"
-                        shape="square"
-                        src={iconUrl(data.icon)}
-                    />
-                    <Typography.Title>{data.name}</Typography.Title>
-                    <Button colorful theme="solid" type="primary" icon={<IconAIFilledLevel1 />} onClick={() => { window.open(data.url, '_blank') }}>点击直达</Button>
-                </Space>
-                <MarkdownRender raw={data.desc} format="md" style={{ margin: '20px 8px' }} />
-            </SideSheet>
+            <IconInfoCircle onClick={toggleVisible} style={{ color: 'var(--semi-color-primary)' }} />
+            <BottomSideSheet data={data} visible={visible} toggleVisible={toggleVisible}/>
+
         </Card>
     )
 }

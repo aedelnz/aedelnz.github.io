@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react'
-import { Button, Collapsible, Layout, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui'
-import { IconSetting } from '@douyinfe/semi-icons'
-import { useDB } from '../component/lib/DB'
-import { useWindowHeight } from '../component/lib/Breakpoints'
-import useLocalStorage from '../component/lib/LocalStorage'
-import DarkMode from '../component/fast/DarkMode'
-import NavSides from './NavSides'
-import Searchs from './Searchs'
-import Customs from './Customs'
-import Contents from './Contents'
-import Footers from '../component/Footers'
+import { useEffect, useState } from 'react';
+import { Button, Collapsible, Layout, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui';
+import { IconSetting } from '@douyinfe/semi-icons';
+import { useBreakpoint } from '../hook/useBreakpoint';
+import { useRequest } from '../hook/useRequest';
+import useLocalStorage from '../component/lib/LocalStorage';
+import DarkMode from '../component/fast/DarkMode';
+import NavSides from './NavSides';
+import Searchs from './Searchs';
+import Customs from './Customs';
+import Contents from './Contents';
+import Footers from '../component/Footers';
 
 interface OpenData {
     isOpen: boolean;
@@ -21,95 +21,113 @@ interface OpenData {
 }
 
 const App = () => {
-    const [selectedKey, setSelectedKey] = useState<string | null>(null)
-    const [onbreakpointBoot, setOnbreakpointBoot] = useState(false)
-    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>('a2zml-data', { isOpen: false, search: true, center: true, custom: true, Show: true, Selected: true })
-    const { value: openSelected } = useLocalStorage('a2zml-data-Selected', '')
-    const { data, loading, error } = useDB()
-    const screenHeight = useWindowHeight()
-    const onbreakpoint = (_screen: unknown, bool: boolean) => setOnbreakpointBoot(!bool)
-    
-    useEffect(() => {
-        const firstFetch = () => {
-            const firstKey = data?.[0]?.nav?.[0]?.id;
-            if (firstKey !== undefined && !selectedKey) {
-                if (openData?.Selected) {
-                    setSelectedKey(String(openSelected));
-                } else {
-                    setSelectedKey(String(firstKey));
-                }
-            }
-        };
-        if (openData?.Show) {
-            firstFetch();
-        }
-    }, [data, openSelected, openData?.Selected, openData?.Show, selectedKey]);
+    const [selectedKey, setSelectedKey] = useState<string | null>(null);
+    const [collapsed, setCollapsed] = useState(false);
 
-    const switchConfigs: { key: keyof OpenData; label: string }[] = [
+    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>(
+        'a2zml-data',
+        { isOpen: false, search: true, center: true, custom: true, Show: true, Selected: true }
+    );
+
+    const { value: savedKey } = useLocalStorage('a2zml-data-Selected', '');
+    const { data, loading, error } = useRequest('/root/db.json');
+    const { height } = useBreakpoint();
+
+useEffect(() => {
+    let initialized = false;
+
+    if (!openData.Show || !data || initialized) return;
+
+    const firstKey = data?.[0]?.nav?.[0]?.id;
+    const keyToSet = openData.Selected ? savedKey : firstKey;
+
+    if (keyToSet) {
+        setSelectedKey(String(keyToSet));
+        initialized = true;
+    }
+}, [data, savedKey, openData.Show, openData.Selected]);
+
+
+    const switches = [
         { key: 'search', label: '搜索框' },
         { key: 'center', label: '搜索框居中' },
         { key: 'custom', label: '自定义网站' },
         { key: 'Show', label: '首页列表显示' },
-        { key: 'Selected', label: '侧边栏记忆' },
-    ];
-
+        { key: 'Selected', label: '侧边栏记忆' }
+    ] as const;
 
     return (
-        <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height: `${screenHeight}px` }}>
+        <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height }}>
             <Layout.Sider
                 style={{ backgroundColor: 'var(--semi-color-bg-1)' }}
                 breakpoint={['md']}
-                onBreakpoint={onbreakpoint}
+                onBreakpoint={(_, b) => setCollapsed(!b)}
             >
                 <NavSides
+                    data={data}
                     onSelect={setSelectedKey}
-                    onbreakpointBoot={onbreakpointBoot}
-                    onCollapseChange={setOnbreakpointBoot}
+                    onbreakpointBoot={collapsed}
+                    onCollapseChange={setCollapsed}
                 />
             </Layout.Sider>
-            <Layout.Header className='semi-layout-header-diy'>
-            </Layout.Header>
+
+            <Layout.Header className="semi-layout-header-diy" />
+
             <Layout>
-                <Layout.Content className='semi-layout-content-diy' style={{ marginTop: 0 }}>
+                <Layout.Content className="semi-layout-content-diy" style={{ marginTop: 0 }}>
                     <div>
+                        {/* 顶部设置按钮 */}
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <Button
-                                theme='borderless'
+                                theme="borderless"
                                 type="tertiary"
                                 icon={<IconSetting />}
                                 onClick={() => setOpenData(prev => ({ ...prev, isOpen: !prev.isOpen }))}
                             />
                             <DarkMode />
                         </div>
-                        <Collapsible isOpen={openData?.isOpen}>
-                            <Card style={{ marginTop: '10px' }}>
-                                <Descriptions align='left'>
-                                    {switchConfigs.map(({ key, label }) => (
+
+                        {/* 设置面板 */}
+                        <Collapsible isOpen={openData.isOpen}>
+                            <Card style={{ marginTop: 10 }}>
+                                <Descriptions align="left">
+                                    {switches.map(({ key, label }) => (
                                         <Descriptions.Item key={key} itemKey={label}>
                                             <Switch
-                                                checked={openData?.[key]}
-                                                onChange={(checked) => setOpenData(prev => ({ ...prev, [key]: checked, isOpen: !openData?.isOpen }))}
+                                                checked={openData[key]}
+                                                onChange={checked =>
+                                                    setOpenData(prev => ({
+                                                        ...prev,
+                                                        [key]: checked,
+                                                        isOpen: !openData.isOpen
+                                                    }))
+                                                }
                                             />
                                         </Descriptions.Item>
                                     ))}
                                 </Descriptions>
                             </Card>
                         </Collapsible>
-                        <div style={openData?.center ? { display: 'flex', alignItems: 'center', height: screenHeight - 200 } : undefined}>
+
+                        {/* 搜索区 */}
+                        <div style={openData.center ? { display: 'flex', alignItems: 'center', height: height - 200 } : undefined}>
                             <div style={{ width: '100%' }}>
-                                <Searchs search={openData?.search} />
-                                <Customs custom={openData?.custom} />
+                                <Searchs data={data} search={openData.search} />
+                                <Customs custom={openData.custom} />
                             </div>
                         </div>
+
+                        {/* 内容区 */}
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}
                     </div>
                 </Layout.Content>
-                <Footers desc='本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。' />
+
+                <Footers desc="本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。" />
             </Layout>
         </Layout>
-    )
-}
+    );
+};
 
-export default App
+export default App;

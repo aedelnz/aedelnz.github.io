@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 import { Button, Popover } from "@douyinfe/semi-ui"
 import { IconMoon, IconSun } from "@douyinfe/semi-icons"
-import useLocalStorage from "../lib/LocalStorage"
+import { useLocalStorage } from '../../hook/useLocalStorage'
 
 const DarkMode = () => {
-    // 使用自定义的 useLocalStorage 钩子来管理主题模式
-    const { value: theme, setValue: setTheme } = useLocalStorage<'light' | 'dark'>('theme-mode', 'light')
+    const [theme, setCount] = useLocalStorage('theme-mode', 'light')
+
     // 切换主题模式的函数
-    const toggleTheme = () => setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
+    const toggleTheme = () => setCount((prev) => (prev === 'light' ? 'dark' : 'light'))
     // 当主题模式发生变化时，更新 body 元素的属性
     useEffect(() => {
         const body = document.body
