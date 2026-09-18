@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Button, Collapsible, Layout, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui';
 import { IconSetting } from '@douyinfe/semi-icons';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
 import useLocalStorage from '../component/lib/LocalStorage';
+import { type NavData } from './Data'
 import DarkMode from '../component/fast/DarkMode';
-import NavSides from './NavSides';
+import NavSides from './component/NavSides';
 import Searchs from './Searchs';
 import Customs from './Customs';
 import Contents from './Contents';
@@ -21,8 +22,8 @@ interface OpenData {
 }
 
 const App = () => {
-    const [selectedKey, setSelectedKey] = useState<string | null>(null);
-    const [collapsed, setCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
+    const [navId, setNavId] = useState<number>()
 
     const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>(
         'a2zml-data',
@@ -30,22 +31,17 @@ const App = () => {
     );
 
     const { value: savedKey } = useLocalStorage('a2zml-data-Selected', '');
-    const { data, loading, error } = useRequest('/root/db.json');
+    const { data, loading, error } = useRequest<NavData[]>('/root/db.json');
     const { height } = useBreakpoint();
 
-useEffect(() => {
-    let initialized = false;
+    const selectedKey = useMemo(() => {
+        if (!openData.Show || !data) return null;
 
-    if (!openData.Show || !data || initialized) return;
+        const firstKey = data[0]?.nav?.[0]?.id;
+        const keyToSet = openData.Selected ? savedKey : firstKey;
 
-    const firstKey = data?.[0]?.nav?.[0]?.id;
-    const keyToSet = openData.Selected ? savedKey : firstKey;
-
-    if (keyToSet) {
-        setSelectedKey(String(keyToSet));
-        initialized = true;
-    }
-}, [data, savedKey, openData.Show, openData.Selected]);
+        return keyToSet ? String(keyToSet) : null;
+    }, [data, savedKey, openData.Show, openData.Selected]);
 
 
     const switches = [
@@ -55,20 +51,20 @@ useEffect(() => {
         { key: 'Show', label: '首页列表显示' },
         { key: 'Selected', label: '侧边栏记忆' }
     ] as const;
+    const onbreakpoint = (_screen: string, bool: boolean) => {
+        setIsCollapsed(!bool)
+        console.log(bool);
+
+    };
 
     return (
         <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height }}>
             <Layout.Sider
                 style={{ backgroundColor: 'var(--semi-color-bg-1)' }}
                 breakpoint={['md']}
-                onBreakpoint={(_, b) => setCollapsed(!b)}
+                onBreakpoint={onbreakpoint}
             >
-                <NavSides
-                    data={data}
-                    onSelect={setSelectedKey}
-                    onbreakpointBoot={collapsed}
-                    onCollapseChange={setCollapsed}
-                />
+                <NavSides data={data ?? []} isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} setNavId={setNavId} />
             </Layout.Sider>
 
             <Layout.Header className="semi-layout-header-diy" />
@@ -112,7 +108,7 @@ useEffect(() => {
                         {/* 搜索区 */}
                         <div style={openData.center ? { display: 'flex', alignItems: 'center', height: height - 200 } : undefined}>
                             <div style={{ width: '100%' }}>
-                                <Searchs data={data} search={openData.search} />
+                                <Searchs data={data ?? []} search={openData.search} />
                                 <Customs custom={openData.custom} />
                             </div>
                         </div>

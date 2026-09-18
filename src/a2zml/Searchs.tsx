@@ -7,7 +7,7 @@ import { useBreakpoint } from '../component/lib/Breakpoints'
 import useLocalStorage from '../component/lib/LocalStorage'
 import ACard from '../component/fast/ACard'
 
-const Searchs = ({data, search = true }: {data:NavData; search?: boolean }) => {
+const Searchs = ({data, search = true }: {data: NavData[] | null; search?: boolean }) => {
     const [keyword, setKeyword] = useState('')
     const [debouncedKeyword, setDebouncedKeyword] = useState<string>('')
     const { value: engine, setValue: setEngine } = useLocalStorage('search-engine', 'GitHub')
