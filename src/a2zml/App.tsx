@@ -4,7 +4,7 @@ import { IconSetting } from '@douyinfe/semi-icons';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
 import useLocalStorage from '../component/lib/LocalStorage';
-import { type NavData } from './Data'
+import { type NavData, type NavItem } from './Data';
 import DarkMode from '../component/fast/DarkMode';
 import NavSides from './component/NavSides';
 import Searchs from './Searchs';
@@ -22,8 +22,8 @@ interface OpenData {
 }
 
 const App = () => {
-    const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
-    const [navId, setNavId] = useState<number>()
+    const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
+    const [navId, setNavId] = useState<number>();
 
     const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>(
         'a2zml-data',
@@ -34,15 +34,27 @@ const App = () => {
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json');
     const { height } = useBreakpoint();
 
+    // ✅ 1. 把 data 里所有 nav 拍平成 Map，O(1) 查询，data 变化时重建
+    const navMap = useMemo(() => {
+        const map = new Map<number, NavItem>();
+        data?.forEach((d) => {
+            d.nav?.forEach((n) => map.set(n.id, n));
+        });
+        return map;
+    }, [data]);
+
+
+    // ✅ 3. selectedKey：navId 优先，其次 savedKey，最后默认第一个
     const selectedKey = useMemo(() => {
         if (!openData.Show || !data) return null;
 
         const firstKey = data[0]?.nav?.[0]?.id;
-        const keyToSet = openData.Selected ? savedKey : firstKey;
+        const keyToSet =
+            navId ??
+            (openData.Selected && savedKey ? savedKey : firstKey);
 
-        return keyToSet ? String(keyToSet) : null;
-    }, [data, savedKey, openData.Show, openData.Selected]);
-
+        return keyToSet != null ? String(keyToSet) : null;
+    }, [data, savedKey, navId, openData.Show, openData.Selected]);
 
     const switches = [
         { key: 'search', label: '搜索框' },
@@ -51,10 +63,10 @@ const App = () => {
         { key: 'Show', label: '首页列表显示' },
         { key: 'Selected', label: '侧边栏记忆' }
     ] as const;
-    const onbreakpoint = (_screen: string, bool: boolean) => {
-        setIsCollapsed(!bool)
-        console.log(bool);
 
+    const onbreakpoint = (_screen: string, bool: boolean) => {
+        setIsCollapsed(!bool);
+        console.log(bool);
     };
 
     return (
@@ -64,7 +76,12 @@ const App = () => {
                 breakpoint={['md']}
                 onBreakpoint={onbreakpoint}
             >
-                <NavSides data={data ?? []} isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} setNavId={setNavId} />
+                <NavSides
+                    data={data ?? []}
+                    isCollapsed={isCollapsed}
+                    setIsCollapsed={setIsCollapsed}
+                    setNavId={setNavId}
+                />
             </Layout.Sider>
 
             <Layout.Header className="semi-layout-header-diy" />
@@ -112,6 +129,8 @@ const App = () => {
                                 <Customs custom={openData.custom} />
                             </div>
                         </div>
+
+
 
                         {/* 内容区 */}
                         {loading && <Spin size="large" />}

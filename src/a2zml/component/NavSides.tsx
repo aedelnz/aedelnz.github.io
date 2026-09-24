@@ -33,10 +33,8 @@ const NavSides = ({ data, isCollapsed, setIsCollapsed, setNavId }: { data: NavDa
             if (isValidHttpURL(id)) {
                 window.location.assign(id)
             }
-            console.log(id);
         } else if (typeof id === 'number') {
             setNavId(id)
-            console.log(id);
         }
     }
 
