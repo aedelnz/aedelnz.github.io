@@ -14,16 +14,12 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Layout>
       <Layout.Header className='semi-layout-header-diy'>
-        <Nav
-          mode={'horizontal'}
-          header={{ text: '魔法网络' }}
-          footer={<DarkMode />}
-        />
+        <Nav mode={'horizontal'} header={{ text: '魔法网络' }} footer={<DarkMode />} />
       </Layout.Header>
       <Layout>
         <Layout.Content className='semi-layout-content-diy'>
           <Hitokotos />
-          <div style={{}}>
+          <div style={{ marginTop: '80px', borderTop: '1px solid var(--semi-color-border)' }}>
             <section style={{ margin: '16px 0' }}>
               <Typography.Title heading={3}>开源工具</Typography.Title>
               <Typography.Paragraph>来源 GitHub 仓库</Typography.Paragraph>
@@ -31,9 +27,7 @@ createRoot(document.getElementById('root')!).render(
                 <List
                   grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6, }}
                   dataSource={OpenTool}
-                  renderItem={item => (
-                    <List.Item style={{ margin: '8px 2px' }}><OpenToolCard data={item} /></List.Item>
-                  )}
+                  renderItem={item => (<List.Item style={{ margin: '8px 2px' }}><OpenToolCard data={item} /></List.Item>)}
                 />
               </div>
             </section>
@@ -44,9 +38,7 @@ createRoot(document.getElementById('root')!).render(
                 <List
                   grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6, }}
                   dataSource={SubscribeNode}
-                  renderItem={item => (
-                    <List.Item style={{ margin: '8px 2px' }}><SubscribeNodeCard data={item} /></List.Item>
-                  )}
+                  renderItem={item => (<List.Item style={{ margin: '8px 2px' }}><SubscribeNodeCard data={item} /></List.Item>)}
                 />
               </div>
             </section>
