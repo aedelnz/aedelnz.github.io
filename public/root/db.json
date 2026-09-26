@@ -184,10 +184,10 @@
             "title": "番组计划",
             "nav": [
               {
-                "name": "Bangumi 番组计划",
-                "desc": "网页版关停-专注于动漫、音乐、游戏领域，帮助你分享、发现与结识同好的ACG网络",
+                "name": "Bangumi",
+                "desc": "番组计划\n\n专注于动漫、音乐、游戏领域，帮助你分享、发现与结识同好的ACG网络",
                 "icon": "OIP-C._74QUZvOH0f4jF_lztaGVwAAAA",
-                "url": "https://bangumiapp.com/",
+                "url": "https://bgm.tv/",
                 "id": 29
               },
               {
