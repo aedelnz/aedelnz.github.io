@@ -32,6 +32,7 @@ body {
   padding: 20px;
   color: var(--semi-color-text-2);
   background-color: rgba(var(--semi-grey-0), 1);
+  border-top: 1px solid var(--semi-color-border);
 }
 
 @media (max-width: 768px) {
