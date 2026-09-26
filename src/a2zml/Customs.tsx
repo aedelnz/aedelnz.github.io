@@ -2,15 +2,15 @@ import { useCallback, useState } from "react"
 import { Button, Card, Input, List, SideSheet, Space, Toast, Typography } from "@douyinfe/semi-ui"
 import { IconPlus } from "@douyinfe/semi-icons"
 import type { CardItem } from "./Data"
-import { useWindowHeight } from '../component/lib/Breakpoints'
-import useLocalStorage from '../component/lib/LocalStorage'
+import { useBreakpoint } from '../hook/useBreakpoint'
+import {useLocalStorage} from '../hook/useLocalStorage'
 import CACard from "../component/fast/CACard"
 
 const Customs = ({ custom = true }: { custom?: boolean }) => {
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
     const [visible, setVisible] = useState(false)
-    const { value: customData, setValue: setCustomData } = useLocalStorage<CardItem[]>('a2zml-custom', [])
-    const screenHeight = useWindowHeight()
+    const  [customData, setCustomData]  = useLocalStorage<CardItem[]>('a2zml-custom', [])
+    const {height} = useBreakpoint()
     const toggleVisible = useCallback(() => setVisible(v => !v), [])
     // 添加自定义网站项
     const handleAdd = () => {
@@ -54,7 +54,7 @@ const Customs = ({ custom = true }: { custom?: boolean }) => {
                             </List.Item>
                         )}
                     />
-                    <SideSheet title='添加自定义网站' height={screenHeight} visible={visible} onCancel={toggleVisible} closeOnEsc={true} placement='bottom'>
+                    <SideSheet title='添加自定义网站' height={height} visible={visible} onCancel={toggleVisible} closeOnEsc={true} placement='bottom'>
                         <Card style={{ maxWidth: '400px', margin: '16px auto' }}>
                             <Space vertical style={{ width: '100%' }}>
                                 {[

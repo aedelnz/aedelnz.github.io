@@ -2,15 +2,12 @@ import { useState } from "react"
 import { Avatar, Button, Card, MarkdownRender, SideSheet, Space, Typography } from "@douyinfe/semi-ui"
 import { IconAIFilledLevel1, IconInfoCircle, IconMinusCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../../a2zml/Data'
-import { useWindowHeight } from '../lib/Breakpoints'
 
 const ACard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string | number) => void }) => {
     // 底部栏弹窗开关存储
     const [visible, setVisible] = useState(false)
     // 底部栏弹窗切换函数
     const change = () => setVisible(!visible)
-    // 屏幕高度获取函数
-    const screenHeight = useWindowHeight()
     // 文本截断函数
     const truncate = (text?: string) => {
         if (typeof text !== 'string') return undefined
@@ -47,7 +44,7 @@ const ACard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string | n
                 onClick={() => onDelete?.(data.id)}
                 style={{ color: 'var(--semi-color-danger)', cursor: 'pointer', marginLeft: 8 }}
             />
-            <SideSheet title={data.name} height={screenHeight} visible={visible} onCancel={change} closeOnEsc={true} placement='bottom'>
+            <SideSheet title={data.name} visible={visible} onCancel={change} closeOnEsc={true} placement='bottom'>
                 <Space vertical align='start'>
                     <Avatar
                         size="extra-large"

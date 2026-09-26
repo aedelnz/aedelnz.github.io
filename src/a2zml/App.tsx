@@ -6,7 +6,7 @@ import { useRequest } from '../hook/useRequest';
 import { type NavData } from './Data';
 import DarkMode from '../component/fast/DarkMode';
 import NavSides from './component/NavSides';
-import Searchs from './Searchs';
+import Searchs from './component/Searchs';
 import Customs from './Customs';
 import Contents from './component/Contents';
 import Footers from '../component/Footers';

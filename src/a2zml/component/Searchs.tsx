@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Button, Input, InputGroup, List, Select, Toast, Typography } from '@douyinfe/semi-ui'
 import { IconSearch } from '@douyinfe/semi-icons'
-import { type NavData, type CardItem } from './Data'
-
-import { useBreakpoint } from '../hook/useBreakpoint'
-import { useLocalStorage } from '../hook/useLocalStorage'
-import ACard from '../component/fast/ACard'
+import { type NavData, type CardItem } from '../Data'
+import { useBreakpoint } from '../../hook/useBreakpoint'
+import { useLocalStorage } from '../../hook/useLocalStorage'
+import ItemCard from './ItemCard'
 
 // 常量提到组件外，避免每次渲染重建
 const SEARCH_ENGINES: Record<string, string> = {
@@ -118,7 +117,7 @@ const Searchs = ({ data, search = true }: Props) => {
                         dataSource={siteMatches}
                         renderItem={(item) => (
                             <List.Item style={{ margin: '4px 0px' }}>
-                                <ACard data={item} />
+                                <ItemCard data={item} />
                             </List.Item>
                         )}
                     />
