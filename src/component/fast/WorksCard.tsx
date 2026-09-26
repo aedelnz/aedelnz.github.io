@@ -26,7 +26,7 @@ const WorksCard = ({ data }: { data: iOtherWorks }) => {
                         style={{ height: 200, width: '100%' }}
                         shape="square"
                         size="default"
-                        src={`${image}`}
+                        src={image}
                     />
                     <Space
                         align='center'
