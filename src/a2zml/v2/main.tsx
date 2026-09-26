@@ -12,7 +12,7 @@ import Footers from '../../component/Footers'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)' }}>
+    <Layout>
       <Layout.Header className='semi-layout-header-diy'>
         <Nav
           mode={'horizontal'}
@@ -28,12 +28,10 @@ createRoot(document.getElementById('root')!).render(
       <Layout>
         <Layout.Content className='semi-layout-content-diy'>
           <Hitokotos />
-          <div style={{ borderRadius: '10px', border: '1px solid var(--semi-color-border)', padding: '8px', }}>
+          <div style={{  }}>
             <section style={{ margin: '16px 0' }}>
               <Typography.Title heading={3}>开源工具</Typography.Title>
-              <Typography.Paragraph>
-                来源 GitHub 仓库
-              </Typography.Paragraph>
+              <Typography.Paragraph>来源 GitHub 仓库</Typography.Paragraph>
               <div style={{ margin: '12px 0' }}>
                 <List
                   grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6, }}
