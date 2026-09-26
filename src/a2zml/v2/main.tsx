@@ -2,7 +2,7 @@ import '@douyinfe/semi-ui/react19-adapter'
 import '../../index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Avatar, Layout, List, Nav, Typography, Tooltip } from '@douyinfe/semi-ui'
+import { Layout, List, Nav, Typography } from '@douyinfe/semi-ui'
 import { OpenTool, SubscribeNode } from './Data'
 import DarkMode from '../../component/fast/DarkMode'
 import Hitokotos from '../../component/Hitokotos'
@@ -16,19 +16,14 @@ createRoot(document.getElementById('root')!).render(
       <Layout.Header className='semi-layout-header-diy'>
         <Nav
           mode={'horizontal'}
-          header={{
-            logo: <Tooltip content={'首页'}><Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.location.assign('/') }} /></Tooltip>,
-            text: '魔法网络'
-          }}
-          footer={
-            <DarkMode />
-          }
+          header={{ text: '魔法网络' }}
+          footer={<DarkMode />}
         />
       </Layout.Header>
       <Layout>
         <Layout.Content className='semi-layout-content-diy'>
           <Hitokotos />
-          <div style={{  }}>
+          <div style={{}}>
             <section style={{ margin: '16px 0' }}>
               <Typography.Title heading={3}>开源工具</Typography.Title>
               <Typography.Paragraph>来源 GitHub 仓库</Typography.Paragraph>
