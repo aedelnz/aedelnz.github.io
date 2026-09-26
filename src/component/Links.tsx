@@ -1,9 +1,10 @@
 import { Typography, List, Button } from '@douyinfe/semi-ui';
 import { IconAIFilledLevel1 } from '@douyinfe/semi-icons/lib/es/icons';
-import { FriendLinks } from '../Data';
+import { FriendLinks, type iFriendlyLinks } from '../Data';
 import LinksCard from './fast/LinksCard';
 
-const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+const shuffle = (arr: iFriendlyLinks[]) =>
+  [...arr].sort(() => Math.random() - 0.5);
 
 const Links = () => {
     const data = shuffle(FriendLinks);

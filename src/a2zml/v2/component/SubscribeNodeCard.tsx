@@ -1,6 +1,6 @@
 
 import { Card, Typography, Space, Tag } from '@douyinfe/semi-ui'
-import { type iSubscribeNode } from '../../a2zml/v2/Data'
+import { type iSubscribeNode } from '../Data'
 
 const SubscribeNodeCard = ({ data }: { data: iSubscribeNode }) => {
     const { title, platform = [], url } = data

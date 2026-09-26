@@ -14,8 +14,8 @@ const Headers = ({ mode = 'horizontal', change }: { mode?: 'horizontal' | 'verti
             text: '其他页面',
             icon: <IconToken />,
             items: [
-                { itemKey: 'A2zml', url: '/A2zml/', text: '爱莫能助', icon: <IconRating /> },
-                { itemKey: 'v2', url: '/A2zml/v2/', text: '魔法网络', icon: <IconBadgeStar /> }
+                { itemKey: '/A2zml/', text: '爱莫能助', icon: <IconRating /> },
+                { itemKey: '/A2zml/v2/', text: '魔法网络', icon: <IconBadgeStar /> }
             ]
         },
         { itemKey: 'works', text: '其他作品', icon: <IconHeart /> },
@@ -46,34 +46,24 @@ const Headers = ({ mode = 'horizontal', change }: { mode?: 'horizontal' | 'verti
         window.scrollTo({ top, behavior: 'smooth' });
     };
 
-    // 根据 itemKey 查找 item
-    const findItem = (key: string) => {
-        for (const item of items) {
-            if (item.itemKey === key) return item;
-            if (item.items) {
-                const child = item.items.find(i => i.itemKey === key);
-                if (child) return child;
+
+
+    // url地址判断函数
+    const isValidHttpURL = (url: string): boolean => {
+        if (!url || typeof url !== 'string') return false;
+        return /^https?:\/\/[^\s/$.?#].[^\s]*$/i.test(url.trim());
+    }
+    // 导航栏选择id
+    const onSelect = ({ itemKey }: { itemKey: number | string }) => {
+        const id = itemKey;
+        if (typeof id === 'string') {
+            if (isValidHttpURL(id)) {
+                window.location.assign(id)
             }
+            scrollToId(String(id))
         }
-        return null;
-    };
+    }
 
-    // 点击事件
-    const onSelect = ({ itemKey }: { itemKey: string | number }) => {
-        const key = String(itemKey);
-        const item = findItem(key);
-
-        if (!item) return;
-
-        // 存在 url → 跳转
-        if (item.url) {
-            window.location.assign(item.url);
-            return;
-        }
-
-        // 不存在 url → 滚动定位
-        scrollToId(key);
-    };
 
     return (
         <Nav

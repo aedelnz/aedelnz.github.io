@@ -1,81 +1,35 @@
 import { useMemo, useState } from 'react';
-import { Button, Collapsible, Layout, Spin, Switch, Typography, Descriptions, Card } from '@douyinfe/semi-ui';
+import { Button, Layout, Spin, Typography, } from '@douyinfe/semi-ui';
 import { IconSetting } from '@douyinfe/semi-icons';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
-import useLocalStorage from '../component/lib/LocalStorage';
-import { type NavData, type NavItem } from './Data';
+import { type NavData } from './Data';
 import DarkMode from '../component/fast/DarkMode';
 import NavSides from './component/NavSides';
 import Searchs from './Searchs';
 import Customs from './Customs';
-import Contents from './Contents';
+import Contents from './component/Contents';
 import Footers from '../component/Footers';
 
-interface OpenData {
-    isOpen: boolean;
-    search: boolean;
-    center: boolean;
-    custom: boolean;
-    Show: boolean;
-    Selected: boolean;
-}
+
 
 const App = () => {
-    const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
-    const [navId, setNavId] = useState<number>();
-
-    const { value: openData, setValue: setOpenData } = useLocalStorage<OpenData>(
-        'a2zml-data',
-        { isOpen: false, search: true, center: true, custom: true, Show: true, Selected: true }
-    );
-
-    const { value: savedKey } = useLocalStorage('a2zml-data-Selected', '');
-    const { data, loading, error } = useRequest<NavData[]>('/root/db.json');
-    const { height } = useBreakpoint();
-
-    // ✅ 1. 把 data 里所有 nav 拍平成 Map，O(1) 查询，data 变化时重建
-    const navMap = useMemo(() => {
-        const map = new Map<number, NavItem>();
-        data?.forEach((d) => {
-            d.nav?.forEach((n) => map.set(n.id, n));
-        });
-        return map;
-    }, [data]);
-
-
-    // ✅ 3. selectedKey：navId 优先，其次 savedKey，最后默认第一个
-    const selectedKey = useMemo(() => {
-        if (!openData.Show || !data) return null;
-
-        const firstKey = data[0]?.nav?.[0]?.id;
-        const keyToSet =
-            navId ??
-            (openData.Selected && savedKey ? savedKey : firstKey);
-
-        return keyToSet != null ? String(keyToSet) : null;
-    }, [data, savedKey, navId, openData.Show, openData.Selected]);
-
-    const switches = [
-        { key: 'search', label: '搜索框' },
-        { key: 'center', label: '搜索框居中' },
-        { key: 'custom', label: '自定义网站' },
-        { key: 'Show', label: '首页列表显示' },
-        { key: 'Selected', label: '侧边栏记忆' }
-    ] as const;
-
+    const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
+    const [navId, setNavId] = useState<number>()
+    const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
+    const { height } = useBreakpoint()
+    const selectedKey: number = useMemo(() => {
+        const defaultID = Number(data?.[0]?.nav?.[0]?.id) || 2
+        return navId != null ? Number(navId) : defaultID
+    }, [data, navId])
+    // 自适应手机电脑隐藏显示测边栏
     const onbreakpoint = (_screen: string, bool: boolean) => {
-        setIsCollapsed(!bool);
-        console.log(bool);
-    };
+        setIsCollapsed(!bool)
+    }
 
     return (
-        <Layout style={{ backgroundColor: 'rgba(var(--semi-grey-0), 1)', height }}>
-            <Layout.Sider
-                style={{ backgroundColor: 'var(--semi-color-bg-1)' }}
-                breakpoint={['md']}
-                onBreakpoint={onbreakpoint}
-            >
+        <Layout style={{ height }}>
+            <Layout.Sider breakpoint={['md']} onBreakpoint={onbreakpoint}>
                 <NavSides
                     data={data ?? []}
                     isCollapsed={isCollapsed}
@@ -83,7 +37,6 @@ const App = () => {
                     setNavId={setNavId}
                 />
             </Layout.Sider>
-
             <Layout.Header className="semi-layout-header-diy" />
 
             <Layout>
@@ -95,44 +48,17 @@ const App = () => {
                                 theme="borderless"
                                 type="tertiary"
                                 icon={<IconSetting />}
-                                onClick={() => setOpenData(prev => ({ ...prev, isOpen: !prev.isOpen }))}
                             />
                             <DarkMode />
                         </div>
 
-                        {/* 设置面板 */}
-                        <Collapsible isOpen={openData.isOpen}>
-                            <Card style={{ marginTop: 10 }}>
-                                <Descriptions align="left">
-                                    {switches.map(({ key, label }) => (
-                                        <Descriptions.Item key={key} itemKey={label}>
-                                            <Switch
-                                                checked={openData[key]}
-                                                onChange={checked =>
-                                                    setOpenData(prev => ({
-                                                        ...prev,
-                                                        [key]: checked,
-                                                        isOpen: !openData.isOpen
-                                                    }))
-                                                }
-                                            />
-                                        </Descriptions.Item>
-                                    ))}
-                                </Descriptions>
-                            </Card>
-                        </Collapsible>
-
-                        {/* 搜索区 */}
-                        <div style={openData.center ? { display: 'flex', alignItems: 'center', height: height - 200 } : undefined}>
+                        <div>
                             <div style={{ width: '100%' }}>
-                                <Searchs data={data ?? []} search={openData.search} />
-                                <Customs custom={openData.custom} />
+                                <Searchs data={data ?? []} />
+                                <Customs />
                             </div>
                         </div>
 
-
-
-                        {/* 内容区 */}
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}

@@ -1,5 +1,5 @@
 import { Card, Typography, Avatar, Button, Popover, Space, Tag } from '@douyinfe/semi-ui'
-import { type iOpenTool } from '../../a2zml/v2/Data'
+import { type iOpenTool } from '../Data'
 import { IconGithubLogo } from '@douyinfe/semi-icons'
 
 const OpenToolCard = ({ data }: { data: iOpenTool }) => {
@@ -26,7 +26,7 @@ const OpenToolCard = ({ data }: { data: iOpenTool }) => {
                         style={{ height: 200, width: '100%' }}
                         shape="square"
                         size="default"
-                        src={`https://img02.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/t/0/?appid=122&url=https://jixiejidiguan.top${image}`}
+                        src={image}
                     />
                     <Space
                         align='center'

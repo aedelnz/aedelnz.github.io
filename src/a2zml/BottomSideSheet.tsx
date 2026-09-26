@@ -6,7 +6,7 @@ import {
   SideSheet,
 } from '@douyinfe/semi-ui';
 import { IconAIFilledLevel1 } from '@douyinfe/semi-icons';
-import type { CardItem } from '../Data';
+import {type CardItem } from './Data';
 import { useBreakpoint } from '../hook/useBreakpoint';
 
 const BottomSideSheet = (

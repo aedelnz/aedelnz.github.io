@@ -6,8 +6,8 @@ import { Avatar, Layout, List, Nav, Typography, Tooltip } from '@douyinfe/semi-u
 import { OpenTool, SubscribeNode } from './Data'
 import DarkMode from '../../component/fast/DarkMode'
 import Hitokotos from '../../component/Hitokotos'
-import OpenToolCard from '../../component/fast/OpenToolCard'
-import SubscribeNodeCard from '../../component/fast/SubscribeNodeCard'
+import OpenToolCard from './component/OpenToolCard'
+import SubscribeNodeCard from './component/SubscribeNodeCard'
 import Footers from '../../component/Footers'
 
 createRoot(document.getElementById('root')!).render(
@@ -28,13 +28,7 @@ createRoot(document.getElementById('root')!).render(
       <Layout>
         <Layout.Content className='semi-layout-content-diy'>
           <Hitokotos />
-          <div
-            style={{
-              borderRadius: '10px',
-              border: '1px solid var(--semi-color-border)',
-              padding: '8px',
-            }}
-          >
+          <div style={{ borderRadius: '10px', border: '1px solid var(--semi-color-border)', padding: '8px', }}>
             <section style={{ margin: '16px 0' }}>
               <Typography.Title heading={3}>开源工具</Typography.Title>
               <Typography.Paragraph>
@@ -42,15 +36,7 @@ createRoot(document.getElementById('root')!).render(
               </Typography.Paragraph>
               <div style={{ margin: '12px 0' }}>
                 <List
-                  grid={{
-                    gutter: 12,
-                    xs: 24,
-                    sm: 12,
-                    md: 12,
-                    lg: 8,
-                    xl: 8,
-                    xxl: 6,
-                  }}
+                  grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6, }}
                   dataSource={OpenTool}
                   renderItem={item => (
                     <List.Item style={{ margin: '8px 2px' }}>
@@ -67,15 +53,7 @@ createRoot(document.getElementById('root')!).render(
               </Typography.Paragraph>
               <div style={{ margin: '12px 0' }}>
                 <List
-                  grid={{
-                    gutter: 12,
-                    xs: 24,
-                    sm: 12,
-                    md: 12,
-                    lg: 8,
-                    xl: 8,
-                    xxl: 6,
-                  }}
+                  grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6, }}
                   dataSource={SubscribeNode}
                   renderItem={item => (
                     <List.Item style={{ margin: '8px 2px' }}>

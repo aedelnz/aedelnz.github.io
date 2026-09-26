@@ -1,8 +1,8 @@
 import { Typography, List, Card, Avatar, Button, Popover, Space, Tag } from '@douyinfe/semi-ui';
 import { IconForward } from '@douyinfe/semi-icons';
-import { OtherWorks } from '../Data';
+import { OtherWorks, type iOtherWorks } from '../Data';
 
-const WorksCard = ({ data }) => {
+const WorksCard = ({ data }: {data: iOtherWorks}) => {
   const { status, title, description, tag, label, image, link } = data;
 
   const imgUrl = `https://img02.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/95/crop/xy/ai/t/0/?appid=122&url=https://jixiejidiguan.top${image}`;
