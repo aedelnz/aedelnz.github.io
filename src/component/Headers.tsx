@@ -49,15 +49,15 @@ const Headers = ({ mode = 'horizontal', change }: { mode?: 'horizontal' | 'verti
 
 
     // url地址判断函数
-    const isValidHttpURL = (url: string): boolean => {
-        if (!url || typeof url !== 'string') return false;
-        return /^https?:\/\/[^\s/$.?#].[^\s]*$/i.test(url.trim());
-    }
+    const isAbsolutePath = (path: string): boolean => {
+        if (typeof path !== 'string') return false;
+        return path.trim().startsWith('/');
+    };
     // 导航栏选择id
     const onSelect = ({ itemKey }: { itemKey: number | string }) => {
         const id = itemKey;
         if (typeof id === 'string') {
-            if (isValidHttpURL(id)) {
+            if (isAbsolutePath(id)) {
                 window.location.assign(id)
             }
             scrollToId(String(id))
