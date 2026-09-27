@@ -13,11 +13,12 @@ const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () 
         }
         return icon
     }
+    
     const cut = (text?: string) => {
         if (typeof text !== 'string') return undefined;
         const idx = text.indexOf('\n\n');
         return idx === -1 ? text : text.slice(0, idx);
-    };
+    }
 
     const cutAfter = (text?: string) =>
         typeof text === 'string' ? text.split('\n\n').slice(1).join('\n\n') : undefined;
@@ -25,7 +26,8 @@ const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () 
     const handleOpenUrl = () => {
         if (data.url) window.open(data.url, '_blank')
     }
-
+    
+    const config = { title: '标题'}
     return (
         <>
             <Card className="acard" shadows='hover'
@@ -43,22 +45,17 @@ const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () 
                     style={{ fontSize: 18, color: 'var(--semi-color-text-2)', cursor: 'pointer' }}
                     onClick={(e) => {
                         e.stopPropagation()
+                        Modal.confirm(config)
                         setVisible(true)
                     }}
                 />
             </Card>
 
             <Modal
-                title={
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                        <Avatar
-                            size="small"
-                            shape="square"
-                            src={iconUrl(data.icon)}
-                        />
+                title={<div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                        <Avatar size="small" shape="square" src={iconUrl(data.icon)} />
                         <span>{data.name}</span>
-                    </div>
-                }
+                    </div>}
                 visible={visible}
                 onCancel={() => setVisible(false)}
                 footer={
@@ -71,15 +68,8 @@ const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () 
                         </Button>
                     </>
                 }
-                style={{ width: 520, maxWidth: '90vw' }}
-                closeOnEsc
-                maskClosable
-            >
-                <MarkdownRender
-                    raw={cutAfter(data.desc)|| '暂无描述'}
-                    format="md"
-                    style={{ marginBottom: 20 }}
-                />
+                style={{ width: 520, maxWidth: '90vw' }} closeOnEsc maskClosable >
+                <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />
             </Modal>
         </>
     )
