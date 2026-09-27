@@ -1,10 +1,55 @@
-import { Typography, List, Button } from '@douyinfe/semi-ui';
+import { Typography, List, Button, Card, Avatar, Popover } from '@douyinfe/semi-ui';
 import { IconAIFilledLevel1 } from '@douyinfe/semi-icons/lib/es/icons';
 import { FriendLinks, type iFriendlyLinks } from '../Data';
-import LinksCard from './fast/LinksCard';
+import { IconShare } from '@douyinfe/semi-icons'
 
 const shuffle = (arr: iFriendlyLinks[]) =>
-  [...arr].sort(() => Math.random() - 0.5);
+    [...arr].sort(() => Math.random() - 0.5);
+
+const LinksCard = ({ data }: { data: iFriendlyLinks }) => {
+    const { title, description, image, link } = data
+    return (
+        <Card
+            shadows='hover'
+            style={{
+                width: '100%'
+            }}
+            bodyStyle={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '12px 16px',
+            }}
+        >
+            <Popover
+                position='top'
+                showArrow
+                content={
+                    <article style={{ padding: 6 }}>
+                        {description}
+                    </article>
+                }
+            >
+                <Card.Meta
+                    title={<Typography.Paragraph ellipsis={{ suffix: '.' }} style={{ width: '100% ' }}>{title}</Typography.Paragraph>}
+                    description={<Typography.Paragraph ellipsis={{ suffix: ' ' }} style={{ width: '100% ' }}>{description}</Typography.Paragraph>}
+                    avatar={
+                        <Avatar
+                            shape="square"
+                            size="default"
+                            src={image}
+                        />
+                    }
+                />
+            </Popover>
+            <Button
+                type="danger"
+                icon={<IconShare />}
+                onClick={() => { window.open(link, '_blank') }}
+            />
+        </Card>
+    )
+}
 
 const Links = () => {
     const data = shuffle(FriendLinks);
