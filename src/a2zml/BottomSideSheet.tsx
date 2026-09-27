@@ -6,15 +6,15 @@ import {
   SideSheet,
 } from '@douyinfe/semi-ui';
 import { IconAIFilledLevel1 } from '@douyinfe/semi-icons';
-import {type CardItem } from './Data';
+import { type CardItem } from './Data';
 import { useBreakpoint } from '../hook/useBreakpoint';
 
 const BottomSideSheet = (
-{ data, visible, toggleVisible }: {
-  data: CardItem;
-  visible: boolean;
-  toggleVisible: () => void;
-}) => {
+  { data, visible, toggleVisible }: {
+    data: CardItem;
+    visible: boolean;
+    toggleVisible: () => void;
+  }) => {
   const { height } = useBreakpoint();
 
   const cut = (text?: string) => {
