@@ -3,7 +3,7 @@ import { Avatar, Button, Card, MarkdownRender, Modal } from "@douyinfe/semi-ui"
 import { IconInfoCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../Data'
 
-const ItemCard = ({ data }: { data: CardItem }) => {
+const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () => void; }) => {
     const [visible, setVisible] = useState(false)
     // 必应地址
     const iconUrl = (icon: string | undefined) => {
