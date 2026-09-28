@@ -19,7 +19,6 @@ const LinksCard = ({ data: { title, description, image, link } }: { data: iFrien
                 gap: 8,
                 padding: '12px 16px',
             }}
-            onClick={open}
         >
             <Avatar shape="square" src={image} alt={title} />
 
