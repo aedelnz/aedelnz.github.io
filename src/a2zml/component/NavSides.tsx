@@ -33,12 +33,9 @@ const NavSides = ({ data, isCollapsed, setIsCollapsed, setNavId }: { data: NavDa
     // 导航栏选择id
     const onSelect = ({ itemKey }: { itemKey: number | string }) => {
         const id = itemKey;
-        if (isMobile) return setIsCollapsed(true)
-        
+        if (isMobile) setIsCollapsed(true)
         if (typeof id === 'string') {
-            if (isValidHttpURL(id)) {
-                window.location.assign(id)
-            }
+            if (isValidHttpURL(id)) window.location.assign(id)
         } else if (typeof id === 'number') {
             setNavId(id)
         }
@@ -52,13 +49,8 @@ const NavSides = ({ data, isCollapsed, setIsCollapsed, setNavId }: { data: NavDa
             onCollapseChange={setIsCollapsed}
             onSelect={onSelect}
             items={NavDataItems}
-            header={{
-                logo: <Tooltip content={'首页'} position={'right'}><Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.location.assign('/') }} /></Tooltip>,
-                text: '爱莫能助',
-            }}
-            footer={{
-                collapseButton: true,
-            }}
+            header={{ logo: <Tooltip content={'首页'} position={'right'}><Avatar shape="square" size="default" src='/favicon.png' onClick={() => { window.location.assign('/') }} /></Tooltip>, text: '爱莫能助' }}
+            footer={{ collapseButton: true }}
         />
     )
 }
