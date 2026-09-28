@@ -7,7 +7,6 @@ import { type NavData } from './Data';
 import DarkMode from '../module/DarkMode';
 import NavSides from './component/NavSides';
 import Searchs from './component/Searchs';
-import Customs from './component/Customs';
 import Contents from './component/Contents';
 import Footers from '../component/Footers';
 
@@ -53,7 +52,7 @@ const App = () => {
                         <div>
                             <div style={{ width: '100%' }}>
                                 <Searchs data={data ?? []} />
-                                <Customs />
+                                
                             </div>
                         </div>
 

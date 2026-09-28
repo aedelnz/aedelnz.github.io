@@ -27,8 +27,9 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
         if (data.url) window.open(data.url, '_blank')
     }
     
-    const config = { title: '标题',
-    style: {width: '100%'}
+    const config = { 
+       fullScreen: true,
+       title: data.name,
     
     }
     return (
