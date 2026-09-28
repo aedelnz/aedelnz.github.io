@@ -1,96 +1,103 @@
-import { Typography, List, Card, Avatar, Button, Popover, Space, Tag } from '@douyinfe/semi-ui';
+import { Typography, List, Card, Avatar, Button, Tag, Space, Empty } from '@douyinfe/semi-ui';
 import { IconForward } from '@douyinfe/semi-icons';
 import { OtherWorks, type iOtherWorks } from '../Data';
 
-const WorksCard = ({ data }: {data: iOtherWorks}) => {
-  const { status, title, description, tag, label, image, link } = data;
-  return (
-    <Card
-      shadows="hover"
-      style={{ width: '100%' }}
-      bodyStyle={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '12px 16px'
-      }}
-      cover={
-        <div style={{ position: 'relative', height: 200 }}>
-          <Avatar
-            shape="square"
-            size="default"
-            src={image}
-            style={{ height: 200, width: '100%' }}
-          />
+const WorksCard = ({ data: { status, title, description, tag, label, image, link } }: { data: iOtherWorks }) => {
+    const open = () => window.open(link, '_blank');
+    const tags = [tag, label, status].filter(Boolean);
 
-          <Space
-            align="center"
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              right: 0,
-              width: '100%',
-              padding: '8px',
-              boxSizing: 'border-box'
+    return (
+        <Card
+            shadows="hover"
+            style={{ width: '100%', cursor: 'pointer', height: '100%' }}
+            bodyStyle={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                padding: '12px 16px',
             }}
-          >
-            {[tag, label, status].map((item, index) => (
-              <Tag key={index} colorful type="light" shape="circle">
-                {item}
-              </Tag>
-            ))}
-          </Space>
-        </div>
-      }
-    >
-      <Popover
-        position="top"
-        showArrow
-        content={<article style={{ padding: 6 }}>{description}</article>}
-      >
-        <Card.Meta
-          title={
-            <Typography.Paragraph ellipsis={{ suffix: ' ' }}>
-              {title}
-            </Typography.Paragraph>
-          }
-          description={
-            <Typography.Paragraph ellipsis={{ suffix: ' ' }}>
-              {description}
-            </Typography.Paragraph>
-          }
-        />
-      </Popover>
+            cover={
+                <div style={{ position: 'relative', height: 200, overflow: 'hidden' }}>
+                    <Avatar
+                        shape="square"
+                        size={200}
+                        src={image}
+                        alt={title}
+                        style={{ width: '100%', height: 200, borderRadius: 0 }}
+                    />
+                    {tags.length > 0 && (
+                        <Space
+                            align="center"
+                            style={{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
+                                right: 0,
+                                padding: 8,
+                                boxSizing: 'border-box',
+                                background: 'linear-gradient(transparent, rgba(0,0,0,.35))',
+                            }}
+                        >
+                            {tags.map((item, i) => (
+                                <Tag key={i} colorful type="light" shape="circle" size="small">
+                                    {item}
+                                </Tag>
+                            ))}
+                        </Space>
+                    )}
+                </div>
+            }
+            onClick={open}
+        >
+            <div style={{ flex: 1, minWidth: 0 }}>
+                <Typography.Text
+                    strong
+                    ellipsis={{ showTooltip: true }}
+                    style={{ display: 'block', width: '100%' }}
+                >
+                    {title}
+                </Typography.Text>
+                <Typography.Text
+                    type="tertiary"
+                    size="small"
+                    ellipsis={{ showTooltip: true }}
+                    style={{ display: 'block', width: '100%' }}
+                >
+                    {description}
+                </Typography.Text>
+            </div>
 
-      <Button
-        type="primary"
-        icon={<IconForward />}
-        onClick={() => window.open(link, '_blank')}
-      />
-    </Card>
-  );
+            <Button
+                theme="borderless"
+                type="primary"
+                icon={<IconForward />}
+                aria-label="查看作品"
+                onClick={e => {
+                    e.stopPropagation();
+                    open();
+                }}
+            />
+        </Card>
+    );
 };
 
-const Works = () => {
-  return (
+const Works = () => (
     <section id="works" style={{ margin: '16px 0' }}>
-      <Typography.Title heading={3}>其他作品</Typography.Title>
-      <Typography.Paragraph>欢迎访问和使用。</Typography.Paragraph>
+        <Typography.Title heading={3}>其他作品</Typography.Title>
+        <Typography.Paragraph>欢迎访问和使用。</Typography.Paragraph>
 
-      <div style={{ margin: '12px 0' }}>
         <List
-          grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6 }}
-          dataSource={OtherWorks}
-          renderItem={item => (
-            <List.Item style={{ margin: '8px 2px' }}>
-              <WorksCard data={item} />
-            </List.Item>
-          )}
+            grid={{ gutter: 12, xs: 24, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6 }}
+            dataSource={OtherWorks}
+            emptyContent={<Empty description="暂无作品" />}
+            renderItem={item => (
+                <List.Item style={{ margin: '8px 2px' }}>
+                    <WorksCard data={item} />
+                </List.Item>
+            )}
+            style={{ margin: '12px 0' }}
         />
-      </div>
     </section>
-  );
-};
+);
 
 export default Works;
