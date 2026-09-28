@@ -30,6 +30,9 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
     const config = { 
        fullScreen: true,
        title: data.name,
+       
+       content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
+       bodyStyle: { margin: 0 }
     
     }
     return (

@@ -6,7 +6,7 @@ import { useBreakpoint } from '../../hook/useBreakpoint'
 import { type NavData } from "../Data"
 
 const NavSides = ({ data, isCollapsed, setIsCollapsed, setNavId }: { data: NavData[] | null; isCollapsed?: boolean; setIsCollapsed: Dispatch<SetStateAction<boolean>>; setNavId: Dispatch<number>; }) => {
-    const { height } = useBreakpoint()
+    const { height, isMobile } = useBreakpoint()
     // 汇总图标
     const iconComponents = { ...SemiIcons, ...SemiIconsLab, } as unknown as Record<string, ElementType>
     // 渲染图标
@@ -33,6 +33,8 @@ const NavSides = ({ data, isCollapsed, setIsCollapsed, setNavId }: { data: NavDa
     // 导航栏选择id
     const onSelect = ({ itemKey }: { itemKey: number | string }) => {
         const id = itemKey;
+        if (isMobile) return setIsCollapsed(true)
+        
         if (typeof id === 'string') {
             if (isValidHttpURL(id)) {
                 window.location.assign(id)
