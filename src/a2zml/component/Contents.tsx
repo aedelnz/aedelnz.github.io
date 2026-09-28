@@ -9,7 +9,7 @@ import {
     Toast,
     Typography,
 } from '@douyinfe/semi-ui'
-import { IconPlus } from '@douyinfe/semi-icons'
+import { IconPlus, IconEdit } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from '../Data'
 import { useBreakpoint } from '../../hook/useBreakpoint'
 import { useLocalStorage } from '../../hook/useLocalStorage'
@@ -26,13 +26,15 @@ const Contents = ({
     const selected = data
         .flatMap((item) => item.nav ?? [])
         .find((item) => item.id === selectedKey)
-
+    const [editable, setEditable] = useState(false)
     // 自定义网站状态
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
     const [visible, setVisible] = useState(false)
     const [customData, setCustomData] = useLocalStorage<CardItem[]>('a2zmlData', [])
     const { height } = useBreakpoint()
     const toggleVisible = useCallback(() => setVisible((v) => !v), [])
+    const toggleEditable = useCallback(() => setEditable((v) => !v), [])
+
 
     // 添加自定义网站项
     const handleAdd = () => {
@@ -75,13 +77,22 @@ const Contents = ({
                             onClick={toggleVisible}
                             style={{ marginLeft: '8px' }}
                         />
+                        <Button
+                            colorful
+                            theme="solid"
+                            type="primary"
+                            size="small"
+                            icon={<IconEdit />}
+                            onClick={toggleEditable}
+                            style={{ marginLeft: '8px' }}
+                        />
                     </Typography.Title>
                     <List
                         grid={{ gutter: 4, xs: 12, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6 }}
                         dataSource={customData ?? []}
                         renderItem={(item) => (
                             <List.Item style={{ margin: '4px 0px' }}>
-                                <ItemCard data={item} onDelete={handleDelete} />
+                                <ItemCard data={item} onDelete={handleDelete} editable={editable} />
                             </List.Item>
                         )}
                     />

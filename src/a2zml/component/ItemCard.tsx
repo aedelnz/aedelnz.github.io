@@ -3,7 +3,7 @@ import { Avatar, Button, Card, MarkdownRender, Modal } from "@douyinfe/semi-ui"
 import { IconInfoCircle, IconMinusCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../Data'
 
-const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string | number) => void }) => {
+const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boolean; onDelete?: (id?: string | number) => void }) => {
     const [visible, setVisible] = useState(false)
     // 必应地址
     const iconUrl = (icon: string | undefined) => {
@@ -30,11 +30,10 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
     const config = { 
        fullScreen: true,
        title: data.name,
-       
        content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
        bodyStyle: { margin: 0 }
-    
     }
+    
     return (
         <>
             <Card className="acard" shadows='hover'
@@ -56,7 +55,7 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
                       //  setVisible(true)
                     }}
                 />
-                {onDelete && (
+                {editable && (
                 <IconMinusCircle
                 onClick={() => onDelete?.(data.id)}
                 style={{ color: 'var(--semi-color-danger)', cursor: 'pointer' }}
