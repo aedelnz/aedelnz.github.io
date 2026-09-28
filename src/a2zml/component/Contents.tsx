@@ -41,24 +41,26 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
         <div>
             <section style={{ margin: '20px 0' }}>
                 <Typography.Title heading={3}>
-                    自定义网站
-                    <Button
-                        colorful
-                        theme="solid"
-                        type="primary"
-                        size="small"
-                        icon={<IconPlus />}
-                        onClick={toggleVisible}
-                        style={{ marginLeft: '8px' }}
-                    />
-                    <Button
-                        colorful
-                        type="tertiary"
-                        size="small"
-                        icon={<IconEdit />}
-                        onClick={toggleEditable}
-                        style={{ marginLeft: '8px' }}
-                    />
+                    <Space align='center'>
+                        自定义网站
+                        <Button
+                            colorful
+                            theme="solid"
+                            type="primary"
+                            size="small"
+                            icon={<IconPlus />}
+                            onClick={toggleVisible}
+                            style={{ marginLeft: '8px' }}
+                        />
+                        <Button
+                            colorful
+                            type="tertiary"
+                            size="small"
+                            icon={<IconEdit />}
+                            onClick={toggleEditable}
+                            style={{ marginLeft: '8px' }}
+                        />
+                    </Space>
                 </Typography.Title>
                 <List
                     grid={{ gutter: 4, xs: 12, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6 }}
