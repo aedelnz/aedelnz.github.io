@@ -27,7 +27,10 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
         if (data.url) window.open(data.url, '_blank')
     }
     
-    const config = { title: '标题'}
+    const config = { title: '标题',
+    style: {width: '100%'}
+    
+    }
     return (
         <>
             <Card className="acard" shadows='hover'
@@ -46,7 +49,7 @@ const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string 
                     onClick={(e) => {
                         e.stopPropagation()
                         Modal.confirm(config)
-                        setVisible(true)
+                      //  setVisible(true)
                     }}
                 />
                 {onDelete && (
