@@ -13,7 +13,7 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
         }
         return icon
     }
-    
+
     const cut = (text?: string) => {
         if (typeof text !== 'string') return undefined;
         const idx = text.indexOf('\n\n');
@@ -26,16 +26,16 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
     const handleOpenUrl = () => {
         if (data.url) window.open(data.url, '_blank')
     }
-    
-    const config = { 
-       fullScreen: true,
-       icon:data.icon,
-       title: data.name,
-       content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
-       bodyStyle: { margin: 0 },
-       footer: false
+
+    const config = {
+        fullScreen: true,
+        icon: <Avatar style={{width: 24,height:24}} src={iconUrl(data.icon)} />,
+        title: data.name,
+        content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
+        bodyStyle: { margin: 0 },
+        footer: false
     }
-    
+
     return (
         <>
             <Card className="acard" shadows='hover'
@@ -54,22 +54,22 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
                     onClick={(e) => {
                         e.stopPropagation()
                         Modal.confirm(config)
-                      //  setVisible(true)
+                        //  setVisible(true)
                     }}
                 />
                 {editable && (
-                <IconMinusCircle
-                onClick={() => onDelete?.(data.id)}
-                style={{ color: 'var(--semi-color-danger)', cursor: 'pointer' }}
-            />                
+                    <IconMinusCircle
+                        onClick={() => onDelete?.(data.id)}
+                        style={{ color: 'var(--semi-color-danger)', cursor: 'pointer' }}
+                    />
                 )}
             </Card>
 
             <Modal
                 title={<div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                        <Avatar size="small" shape="square" src={iconUrl(data.icon)} />
-                        <span>{data.name}</span>
-                    </div>}
+                    <Avatar size="small" shape="square" src={iconUrl(data.icon)} />
+                    <span>{data.name}</span>
+                </div>}
                 visible={visible}
                 onCancel={() => setVisible(false)}
                 footer={
