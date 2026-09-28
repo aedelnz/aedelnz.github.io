@@ -7,6 +7,7 @@ const WorksCard = ({ data: { status, title, description, tag, label, image, link
     const tags = [tag, label, status].filter(Boolean);
 
     return (
+    <div style={{ width: '100%' }} onClick={open}>
         <Card
             shadows="hover"
             style={{ width: '100%', cursor: 'pointer', height: '100%' }}
@@ -18,9 +19,7 @@ const WorksCard = ({ data: { status, title, description, tag, label, image, link
             }}
             cover={
                 <div style={{ position: 'relative', height: 200, overflow: 'hidden' }}>
-                    <Avatar
-                        shape="square"
-                        size={200}
+                    <Avatar shape="square"                       
                         src={image}
                         alt={title}
                         style={{ width: '100%', height: 200, borderRadius: 0 }}
@@ -47,7 +46,6 @@ const WorksCard = ({ data: { status, title, description, tag, label, image, link
                     )}
                 </div>
             }
-            onClick={open}
         >
             <div style={{ flex: 1, minWidth: 0 }}>
                 <Typography.Text
@@ -78,6 +76,7 @@ const WorksCard = ({ data: { status, title, description, tag, label, image, link
                 }}
             />
         </Card>
+    </div>
     );
 };
 

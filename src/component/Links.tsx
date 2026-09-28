@@ -9,6 +9,7 @@ const LinksCard = ({ data: { title, description, image, link } }: { data: iFrien
     const open = () => window.open(link, '_blank');
 
     return (
+    <div style={{ width: '100%' }} onClick={open}>
         <Card
             shadows="hover"
             style={{ width: '100%', cursor: 'pointer' }}
@@ -20,7 +21,7 @@ const LinksCard = ({ data: { title, description, image, link } }: { data: iFrien
             }}
             onClick={open}
         >
-            <Avatar shape="square" size={40} src={image} alt={title} />
+            <Avatar shape="square" src={image} alt={title} />
 
             <div style={{ flex: 1, minWidth: 0 }}>
                 <Typography.Text
@@ -51,6 +52,7 @@ const LinksCard = ({ data: { title, description, image, link } }: { data: iFrien
                 }}
             />
         </Card>
+    </div>
     );
 };
 
