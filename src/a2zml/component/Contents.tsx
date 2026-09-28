@@ -9,6 +9,7 @@ import ItemCard from './ItemCard'
 const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number }) => {
     // 获取当前 id 数据组
     const selected = data.flatMap((item) => item.nav ?? []).find((item) => item.id === selectedKey)
+    // 数据值
     const [visible, setVisible] = useState(false)
     const [editable, setEditable] = useState(false)
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
@@ -30,7 +31,6 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
         setForm({ name: '', desc: '', icon: '', url: '' })
         toggleVisible()
     }
-
     // 删除自定义网站项
     const handleDelete = (id?: string | number) => {
         if (id == null) return
