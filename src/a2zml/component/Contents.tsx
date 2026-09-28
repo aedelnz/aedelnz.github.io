@@ -6,27 +6,16 @@ import { useBreakpoint } from '../../hook/useBreakpoint'
 import { useLocalStorage } from '../../hook/useLocalStorage'
 import ItemCard from './ItemCard'
 
-const Contents = ({
-    data,
-    selectedKey,
-}: {
-    data: NavData[]
-    selectedKey: number
-}) => {
+const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number }) => {
     // 获取当前 id 数据组
-    const selected = data
-        .flatMap((item) => item.nav ?? [])
-        .find((item) => item.id === selectedKey)
-    const [editable, setEditable] = useState(false)
-    // 自定义网站状态
-    const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
+    const selected = data.flatMap((item) => item.nav ?? []).find((item) => item.id === selectedKey)
     const [visible, setVisible] = useState(false)
+    const [editable, setEditable] = useState(false)
+    const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
     const [customData, setCustomData] = useLocalStorage<CardItem[]>('a2zmlData', [])
     const { height } = useBreakpoint()
     const toggleVisible = useCallback(() => setVisible((v) => !v), [])
     const toggleEditable = useCallback(() => setEditable((v) => !v), [])
-
-
     // 添加自定义网站项
     const handleAdd = () => {
         const name = form.name.trim()
@@ -35,13 +24,7 @@ const Contents = ({
             Toast.info({ content: '标题地址不能为空', duration: 1.5, stack: true })
             return
         }
-        const newItem: CardItem = {
-            id: Date.now(),
-            name,
-            desc: form.desc.trim(),
-            icon: form.icon.trim(),
-            url,
-        }
+        const newItem: CardItem = { id: Date.now(), name, desc: form.desc.trim(), icon: form.icon.trim(), url }
         // 函数式更新，确保基于最新状态
         setCustomData((prev) => [newItem, ...prev])
         setForm({ name: '', desc: '', icon: '', url: '' })
