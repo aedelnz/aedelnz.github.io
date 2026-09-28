@@ -4,7 +4,7 @@ import { IconPlus } from "@douyinfe/semi-icons"
 import type { CardItem } from "./Data"
 import { useBreakpoint } from '../hook/useBreakpoint'
 import {useLocalStorage} from '../hook/useLocalStorage'
-import CACard from "../component/fast/CACard"
+import ItemCard from "./component/ItemCard"
 
 const Customs = ({ custom = true }: { custom?: boolean }) => {
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
@@ -50,7 +50,7 @@ const Customs = ({ custom = true }: { custom?: boolean }) => {
                         dataSource={customData ?? []}
                         renderItem={(item) => (
                             <List.Item style={{ margin: '4px 0px' }}>
-                                <CACard data={item} onDelete={handleDelete} />
+                                <ItemCard data={item} onDelete={handleDelete} />
                             </List.Item>
                         )}
                     />

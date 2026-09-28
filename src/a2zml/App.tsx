@@ -4,7 +4,7 @@ import { IconSetting } from '@douyinfe/semi-icons';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
 import { type NavData } from './Data';
-import DarkMode from '../component/fast/DarkMode';
+import DarkMode from '../module/DarkMode';
 import NavSides from './component/NavSides';
 import Searchs from './component/Searchs';
 import Customs from './Customs';

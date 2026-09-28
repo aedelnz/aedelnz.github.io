@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { Avatar, Button, Card, MarkdownRender, Modal } from "@douyinfe/semi-ui"
-import { IconInfoCircle } from "@douyinfe/semi-icons"
+import { IconInfoCircle, IconMinusCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../Data'
 
-const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () => void; }) => {
+const ItemCard = ({ data, onDelete }: { data: CardItem; onDelete?: (id?: string | number) => void }) => {
     const [visible, setVisible] = useState(false)
     // 必应地址
     const iconUrl = (icon: string | undefined) => {
@@ -42,13 +42,19 @@ const ItemCard = ({ data, setCustomData }: { data: CardItem; toggleVisible?: () 
                     />
                 </div>
                 <IconInfoCircle
-                    style={{ fontSize: 18, color: 'var(--semi-color-text-2)', cursor: 'pointer' }}
+                    style={{ color: 'var(--semi-color-text-2)', cursor: 'pointer' }}
                     onClick={(e) => {
                         e.stopPropagation()
                         Modal.confirm(config)
                         setVisible(true)
                     }}
                 />
+                {onDelete && (
+                <IconMinusCircle
+                onClick={() => onDelete?.(data.id)}
+                style={{ color: 'var(--semi-color-danger)', cursor: 'pointer' }}
+            />                
+                )}
             </Card>
 
             <Modal

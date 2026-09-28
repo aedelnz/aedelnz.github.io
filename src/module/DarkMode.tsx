@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Button, Popover } from "@douyinfe/semi-ui"
 import { IconMoon, IconSun } from "@douyinfe/semi-icons"
-import { useLocalStorage } from '../../hook/useLocalStorage'
+import { useLocalStorage } from '../hook/useLocalStorage'
 
 const DarkMode = () => {
     const [theme, setCount] = useLocalStorage('theme-mode', 'light')

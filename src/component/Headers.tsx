@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Nav, Avatar, Space, Button } from '@douyinfe/semi-ui';
 import { IconAccessibility, IconBadgeStar, IconHeart, IconRating, IconSideSheet, IconToken } from '@douyinfe/semi-icons-lab';
 import { useBreakpoint } from '../hook/useBreakpoint';
-import DarkMode from './fast/DarkMode';
+import DarkMode from '../module/DarkMode';
 
 const Headers = ({ mode = 'horizontal', change }: { mode?: 'horizontal' | 'vertical'; change?: () => void }) => {
     const [opacity, setOpacity] = useState(0);
