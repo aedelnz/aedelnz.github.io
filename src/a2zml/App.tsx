@@ -15,7 +15,7 @@ const App = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
     const [navId, setNavId] = useState<number>()
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
-    const { height, isMobile } = useBreakpoint()
+    const { height } = useBreakpoint()
     const selectedKey: number = useMemo(() => {
         const defaultID = Number(data?.[0]?.nav?.[0]?.id) || 2
         return navId != null ? Number(navId) : defaultID
