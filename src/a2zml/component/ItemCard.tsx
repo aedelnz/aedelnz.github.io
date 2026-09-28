@@ -29,9 +29,11 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
     
     const config = { 
        fullScreen: true,
+       icon:data.icon,
        title: data.name,
        content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
-       bodyStyle: { margin: 0 }
+       bodyStyle: { margin: 0 },
+       footer: false
     }
     
     return (
