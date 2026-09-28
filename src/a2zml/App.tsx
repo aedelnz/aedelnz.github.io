@@ -37,24 +37,17 @@ const App = () => {
             <Layout.Header className="semi-layout-header-diy" />
 
             <Layout>
-                <Layout.Content className="semi-layout-content-diy" style={{ marginTop: 0 }}>
+                <Layout.Content className="semi-layout-content-diy">
                     <div>
-                        {/* 顶部设置按钮 */}
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <Button
-                                theme="borderless"
-                                type="tertiary"
-                                icon={<IconSetting />}
-                            />
+                            <Button theme="borderless" type="tertiary" icon={<IconSetting />} />
                             <DarkMode />
                         </div>
 
-                        <div>
-                            <div style={{ width: '100%' }}>
-                                <Searchs data={data ?? []} />
-                                
-                            </div>
+                        <div style={{ width: '100%' }}>
+                            <Searchs data={data ?? []} />
                         </div>
+
 
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
