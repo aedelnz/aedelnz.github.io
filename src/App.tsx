@@ -26,13 +26,7 @@ const App = () => {
         <Carousels />
         <Hitokotos />
         <Layout.Content className='semi-layout-content-diy' style={{ marginTop: 0 }}>
-          <div
-            style={{
-              borderRadius: '10px',
-              border: '1px solid var(--semi-color-border)',
-              padding: '8px',
-            }}
-          >
+          <div>
             <Works />
             <Links />
           </div>
