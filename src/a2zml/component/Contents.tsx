@@ -79,8 +79,7 @@ const Contents = ({
                         />
                         <Button
                             colorful
-                            theme="solid"
-                            type="primary"
+                            type="tertiary"
                             size="small"
                             icon={<IconEdit />}
                             onClick={toggleEditable}
