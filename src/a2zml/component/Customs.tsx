@@ -2,9 +2,9 @@ import { useCallback, useState } from "react"
 import { Button, Card, Input, List, SideSheet, Space, Toast, Typography } from "@douyinfe/semi-ui"
 import { IconPlus } from "@douyinfe/semi-icons"
 import type { CardItem } from "./Data"
-import { useBreakpoint } from '../hook/useBreakpoint'
-import {useLocalStorage} from '../hook/useLocalStorage'
-import ItemCard from "./component/ItemCard"
+import { useBreakpoint } from '../../hook/useBreakpoint'
+import {useLocalStorage} from '../../hook/useLocalStorage'
+import ItemCard from "./ItemCard"
 
 const Customs = ({ custom = true }: { custom?: boolean }) => {
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
