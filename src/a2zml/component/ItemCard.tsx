@@ -1,10 +1,8 @@
-import { useState } from "react"
-import { Avatar, Button, Card, MarkdownRender, Modal } from "@douyinfe/semi-ui"
+import { Avatar, Card, MarkdownRender, Modal } from "@douyinfe/semi-ui"
 import { IconInfoCircle, IconMinusCircle } from "@douyinfe/semi-icons"
 import { type CardItem } from '../Data'
 
 const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boolean; onDelete?: (id?: string | number) => void }) => {
-    const [visible, setVisible] = useState(false)
     // 必应地址
     const iconUrl = (icon: string | undefined) => {
         if (!icon) return undefined
@@ -29,7 +27,7 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
 
     const config = {
         fullScreen: true,
-        icon: <Avatar style={{width: 24,height:24}} src={iconUrl(data.icon)} />,
+        icon: <Avatar style={{ width: 24, height: 24 }} src={iconUrl(data.icon)} />,
         title: data.name,
         content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
         bodyStyle: { margin: 0 },
@@ -54,7 +52,6 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
                     onClick={(e) => {
                         e.stopPropagation()
                         Modal.confirm(config)
-                        //  setVisible(true)
                     }}
                 />
                 {editable && (
@@ -64,27 +61,6 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
                     />
                 )}
             </Card>
-
-            <Modal
-                title={<div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <Avatar size="small" shape="square" src={iconUrl(data.icon)} />
-                    <span>{data.name}</span>
-                </div>}
-                visible={visible}
-                onCancel={() => setVisible(false)}
-                footer={
-                    <>
-                        <Button theme="borderless" onClick={() => setVisible(false)}>
-                            关闭
-                        </Button>
-                        <Button theme="solid" onClick={handleOpenUrl}>
-                            访问
-                        </Button>
-                    </>
-                }
-                style={{ width: 520, maxWidth: '90vw' }} closeOnEsc maskClosable >
-                <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />
-            </Modal>
         </>
     )
 }

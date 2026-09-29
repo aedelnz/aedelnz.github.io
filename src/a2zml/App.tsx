@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
-import { Button, Layout, Spin, Typography, } from '@douyinfe/semi-ui';
-import { IconSetting } from '@douyinfe/semi-icons';
+import { Button, Layout, Spin, Typography, Space } from '@douyinfe/semi-ui';
+import { IconDescend } from '@douyinfe/semi-icons';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
 import { type NavData } from './Data';
@@ -12,9 +12,10 @@ import Footers from '../component/Footers';
 
 const App = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
+    const [isMobiles, setIsMobiles] = useState<boolean>(true)
     const [navId, setNavId] = useState<number>()
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
-    const { height } = useBreakpoint()
+    const { height, isMobile } = useBreakpoint()
     const selectedKey: number = useMemo(() => {
         const defaultID = Number(data?.[0]?.nav?.[0]?.id) || 2
         return navId != null ? Number(navId) : defaultID
@@ -23,9 +24,13 @@ const App = () => {
     const onbreakpoint = (_screen: string, bool: boolean) => {
         setIsCollapsed(!bool)
     }
+    const onIsMobiles = () => {
+        setIsMobiles(!isMobiles)
+    }
 
     return (
         <Layout style={{ height }}>
+        {!isMobiles && (
             <Layout.Sider breakpoint={['md']} onBreakpoint={onbreakpoint}>
                 <NavSides
                     data={data ?? []}
@@ -34,15 +39,18 @@ const App = () => {
                     setNavId={setNavId}
                 />
             </Layout.Sider>
+        )}
             <Layout.Header className="semi-layout-header-diy" />
 
             <Layout>
-                <Layout.Content className="semi-layout-content-diy">
+                <Layout.Content className="semi-layout-content-diy" style={{ marginTop: 0 }}>
                     <div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <Button theme="borderless" type="tertiary" icon={<IconSetting />} />
+                        <Space align='center'>
+                            {isMobile && (
+                                <Button onClick={onIsMobiles} theme="borderless" icon={<IconDescend />} />                            
+                            )}
                             <DarkMode />
-                        </div>
+                        </Space>
 
                         <div style={{ width: '100%' }}>
                             <Searchs data={data ?? []} />
@@ -54,7 +62,6 @@ const App = () => {
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}
                     </div>
                 </Layout.Content>
-
                 <Footers desc="本网站提供的内容信息仅供参考，用户应自行判断并承担使用风险。" />
             </Layout>
         </Layout>
