@@ -15,7 +15,7 @@ const App = () => {
     const [isMobiles, setIsMobiles] = useState<boolean>(true)
     const [navId, setNavId] = useState<number>()
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
-    const { height, isMobile } = useBreakpoint()
+    const { height } = useBreakpoint()
     const selectedKey: number = useMemo(() => {
         const defaultID = Number(data?.[0]?.nav?.[0]?.id) || 2
         return navId != null ? Number(navId) : defaultID
@@ -30,7 +30,6 @@ const App = () => {
 
     return (
         <Layout style={{ height }}>
-        {!isMobiles && (
             <Layout.Sider breakpoint={['md']} onBreakpoint={onbreakpoint}>
                 <NavSides
                     data={data ?? []}
@@ -39,24 +38,18 @@ const App = () => {
                     setNavId={setNavId}
                 />
             </Layout.Sider>
-        )}
             <Layout.Header className="semi-layout-header-diy" />
 
             <Layout>
                 <Layout.Content className="semi-layout-content-diy" style={{ marginTop: 0 }}>
                     <div>
                         <Space align='center'>
-                            {isMobile && (
-                                <Button onClick={onIsMobiles} theme="borderless" icon={<IconDescend />} />                            
-                            )}
+                            <Button onClick={onIsMobiles} theme="borderless" icon={<IconDescend />} />
                             <DarkMode />
                         </Space>
-
                         <div style={{ width: '100%' }}>
                             <Searchs data={data ?? []} />
                         </div>
-
-
                         {loading && <Spin size="large" />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}
