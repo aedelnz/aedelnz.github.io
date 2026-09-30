@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Button, Layout, Spin, Typography, Space } from '@douyinfe/semi-ui';
-import { IconDescend } from '@douyinfe/semi-icons';
+import { Layout, Spin, Typography, Space } from '@douyinfe/semi-ui';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
 import { type NavData } from './Data';
@@ -12,7 +11,6 @@ import Footers from '../component/Footers';
 
 const App = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
-    const [isMobiles, setIsMobiles] = useState<boolean>(true)
     const [navId, setNavId] = useState<number>()
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
     const { height } = useBreakpoint()
@@ -23,9 +21,6 @@ const App = () => {
     // 自适应手机电脑隐藏显示测边栏
     const onbreakpoint = (_screen: string, bool: boolean) => {
         setIsCollapsed(!bool)
-    }
-    const onIsMobiles = () => {
-        setIsMobiles(!isMobiles)
     }
 
     return (
