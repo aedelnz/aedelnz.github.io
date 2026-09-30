@@ -1,119 +1,124 @@
 body {
-  margin: 0;
-  color: var(--semi-color-text-0);
-  background-color: var(--semi-color-bg-0);
+    margin: 0;
+    color: var(--semi-color-text-0);
+    background-color: var(--semi-color-bg-0);
 }
 
 /* Header styles */
 .semi-layout-header-diy {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 /* Content styles */
 .semi-layout-content-diy {
-  padding: 24px;
-  margin-top: 60px;
-  background-color: rgba(var(--semi-grey-0), 1);
+    padding: 24px;
+    margin-top: 60px;
+    background-color: rgba(var(--semi-grey-0), 1);
 }
 
 @media (max-width: 768px) {
-  .semi-layout-content-diy {
-    padding: 12px;
-  }
+    .semi-layout-content-diy {
+        padding: 12px;
+    }
 }
 
 /* Footer styles */
 .semi-layout-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  color: var(--semi-color-text-2);
-  background-color: rgba(var(--semi-grey-0), 1);
-  border-top: 1px solid var(--semi-color-border);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: var(--semi-color-text-2);
+    background-color: rgba(var(--semi-grey-0), 1);
+    border-top: 1px solid var(--semi-color-border);
 }
 
 @media (max-width: 768px) {
-  .semi-layout-footer {
-    flex-direction: column;
-  }
+    .semi-layout-footer {
+        flex-direction: column;
+    }
 }
 
 .semi-layout-footer .footer-links span {
-  margin-left: 2px;
+    margin-left: 2px;
 }
 
 
 /* a2zml styles */
 /* a2zml Acard styles */
 .acard .semi-card-body {
-  padding: 16px 20px;
+    padding: 16px 20px;
 }
 
 @media (max-width: 768px) {
-  .acard .semi-card-body {
-    padding: 2px 8px;
-  }
+    .acard .semi-card-body {
+        padding: 3px 4px;
+    }
 }
 
 .acard .semi-typography-text {
-  flex: 1;
-  /* 占满剩余宽度 */
-  min-width: 0;
-  /* 允许收缩到内容以下，关键！ */
-  overflow: hidden;
-  /* 防止内容溢出 */
-  display: block;
-  /* 确保块级，方便 flex 子项生效 */
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    display: block;
 }
 
 .acard .semi-card-meta {
-  min-width: 0;
-  /* 允许收缩 */
-  flex: 1;
-  /* 如果 Meta 是 flex 项，则让它占满 */
+    min-width: 0;
+    flex: 1;
 }
 
 .acard .semi-card-meta-wrapper {
-  min-width: 0;
-  /* 允许收缩 */
-  flex: 1;
-  /* 与标题/描述配合，占满剩余宽度 */
+    min-width: 0;
+    flex: 1;
 }
 
 .acard .semi-avatar-default {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
 }
 
 .acard .semi-card-meta-wrapper-title,
 .acard .semi-card-meta-wrapper-description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  /* 保证继承父容器宽度，或无需显式设置 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.acard .semi-card-meta-wrapper-title {
+    font-size: 24px;
+}
+
+.acard .semi-card-meta-wrapper-description {
+    font-size: 18px;
 }
 
 @media (max-width: 768px) {
-  .acard .semi-avatar-default {
-    width: 35px;
-    height: 35px;
-    border-radius: 4px;
-  }
 
-  .acard .semi-card-meta-avatar {
-    margin-right: 6px;
-  }
+    .acard .semi-card-meta-wrapper-title,
+    .acard .semi-card-meta-wrapper-description {
+        line-height: 14px;
+    }
 
-  .acard .semi-card-meta-wrapper-title {
-    font-size: 14px
-  }
+    .acard .semi-avatar-default {
+        width: 35px;
+        height: 35px;
+        border-radius: 4px;
+    }
 
-  .acard .semi-card-meta-wrapper-description {
-    font-size: 12px
-  }
+    .acard .semi-card-meta-avatar {
+        margin-right: 6px;
+    }
+
+    .acard .semi-card-meta-wrapper-title {
+        font-size: 14px
+    }
+
+    .acard .semi-card-meta-wrapper-description {
+        font-size: 12px
+    }
 }
