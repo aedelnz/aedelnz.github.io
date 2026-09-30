@@ -44,7 +44,6 @@ const App = () => {
                 <Layout.Content className="semi-layout-content-diy" style={{ marginTop: 0 }}>
                     <div>
                         <Space align='center'>
-                            <Button onClick={onIsMobiles} theme="borderless" icon={<IconDescend />} />
                             <DarkMode />
                         </Space>
                         <div style={{ width: '100%' }}>
