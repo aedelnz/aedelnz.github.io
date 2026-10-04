@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import { Button, Card, Input, List, SideSheet, Space, Toast, Typography } from '@douyinfe/semi-ui'
+import { Button, Card, Input, List, Modal, SideSheet, Space, Toast, Typography } from '@douyinfe/semi-ui'
 import { IconPlus, IconEdit } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from '../Data'
 import { useBreakpoint } from '../../hook/useBreakpoint'
@@ -37,6 +37,27 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
         setCustomData((prev) => prev.filter((item) => item.id !== id))
     }
 
+    const useModal = () => {
+        Modal.info({
+            title: '添加自定义网站', content:
+                [
+                    { key: 'name', placeholder: '站点名称' },
+                    { key: 'url', placeholder: 'https://example.com' },
+                    { key: 'icon', placeholder: '图标 URL（可选）' },
+                    { key: 'desc', placeholder: '描述（可选）' },
+                ].map(({ key, placeholder }) => (
+                    <Input
+                        key={key}
+                        placeholder={placeholder}
+                        value={form[key as keyof typeof form]}
+                        onChange={(val) =>setForm((prev) => ({ ...prev, [key]: val }))}
+                        style={{ margin: '6px 0'}}
+                    />
+                )),
+            onOk: handleAdd
+        })
+    }
+
     return (
         <div>
             <section style={{ margin: '20px 0' }}>
@@ -49,7 +70,7 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
                             type="primary"
                             size="small"
                             icon={<IconPlus />}
-                            onClick={toggleVisible}
+                            onClick={useModal}
                             style={{ marginLeft: '8px' }}
                         />
                         <Button
