@@ -1,23 +1,21 @@
 import { useCallback, useState } from 'react'
-import { Button, Card, Input, List, Modal, SideSheet, Space, Toast, Typography } from '@douyinfe/semi-ui'
+import { Button, Input, List, Modal, Space, Toast, Typography } from '@douyinfe/semi-ui'
 import { IconPlus, IconEdit } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from '../Data'
-import { useBreakpoint } from '../../hook/useBreakpoint'
 import { useLocalStorage } from '../../hook/useLocalStorage'
 import ItemCard from './ItemCard'
 
 const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number }) => {
-    // 获取当前 id 数据组
     const selected = data.flatMap((item) => item.nav ?? []).find((item) => item.id === selectedKey)
-    // 数据值
-    const [visible, setVisible] = useState(false)
+
+    const [modalVisible, setModalVisible] = useState(false) // 新增：受控 Modal 开关
     const [editable, setEditable] = useState(false)
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
     const [customData, setCustomData] = useLocalStorage<CardItem[]>('a2zmlData', [])
-    const { height } = useBreakpoint()
-    const toggleVisible = useCallback(() => setVisible((v) => !v), [])
+
     const toggleEditable = useCallback(() => setEditable((v) => !v), [])
-    // 添加自定义网站项
+    const toggleModal = useCallback(() => setModalVisible((v) => !v), [])
+
     const handleAdd = () => {
         const name = form.name.trim()
         const url = form.url.trim()
@@ -26,37 +24,26 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
             return
         }
         const newItem: CardItem = { id: Date.now(), name, desc: form.desc.trim(), icon: form.icon.trim(), url }
-        // 函数式更新，确保基于最新状态
         setCustomData((prev) => [newItem, ...prev])
         setForm({ name: '', desc: '', icon: '', url: '' })
-        toggleVisible()
+        // 同时关闭两个入口，避免 SideSheet 误开
+        setModalVisible(false)
     }
-    // 删除自定义网站项
+
     const handleDelete = (id?: string | number) => {
         if (id == null) return
         setCustomData((prev) => prev.filter((item) => item.id !== id))
     }
 
-    const useModal = () => {
-        Modal.info({
-            title: '添加自定义网站', content:
-                [
-                    { key: 'name', placeholder: '站点名称' },
-                    { key: 'url', placeholder: 'https://example.com' },
-                    { key: 'icon', placeholder: '图标 URL（可选）' },
-                    { key: 'desc', placeholder: '描述（可选）' },
-                ].map(({ key, placeholder }) => (
-                    <Input
-                        key={key}
-                        placeholder={placeholder}
-                        value={form[key as keyof typeof form]}
-                        onChange={(val) =>setForm((prev) => ({ ...prev, [key]: val }))}
-                        style={{ margin: '6px 0'}}
-                    />
-                )),
-            onOk: handleAdd
-        })
-    }
+    // 只负责打开弹窗
+    const openModal = () => setModalVisible(true)
+
+    const fields = [
+        { key: 'name', placeholder: '站点名称' },
+        { key: 'url', placeholder: 'https://example.com' },
+        { key: 'icon', placeholder: '图标 URL（可选）' },
+        { key: 'desc', placeholder: '描述（可选）' },
+    ] as const
 
     return (
         <div>
@@ -70,7 +57,7 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
                             type="primary"
                             size="small"
                             icon={<IconPlus />}
-                            onClick={useModal}
+                            onClick={openModal}
                             style={{ marginLeft: '8px' }}
                         />
                         <Button
@@ -83,6 +70,7 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
                         />
                     </Space>
                 </Typography.Title>
+
                 <List
                     grid={{ gutter: 4, xs: 12, sm: 12, md: 12, lg: 8, xl: 8, xxl: 6 }}
                     dataSource={customData ?? []}
@@ -92,38 +80,27 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
                         </List.Item>
                     )}
                 />
-                <SideSheet
+
+                {/* 受控 Modal：form 变化可以正常驱动输入框重渲染 */}
+                <Modal
                     title="添加自定义网站"
-                    height={height}
-                    visible={visible}
-                    onCancel={toggleVisible}
-                    closeOnEsc={true}
-                    placement="bottom"
+                    visible={modalVisible}
+                    onCancel={toggleModal}
+                    onOk={handleAdd}
+                    style={{ maxWidth: '320px' }}
                 >
-                    <Card style={{ maxWidth: '400px', margin: '16px auto' }}>
-                        <Space vertical style={{ width: '100%' }}>
-                            {[
-                                { key: 'name', placeholder: '站点名称' },
-                                { key: 'url', placeholder: 'https://example.com' },
-                                { key: 'icon', placeholder: '图标 URL（可选）' },
-                                { key: 'desc', placeholder: '描述（可选）' },
-                            ].map(({ key, placeholder }) => (
-                                <Input
-                                    key={key}
-                                    value={form[key as keyof typeof form]}
-                                    onChange={(val) =>
-                                        setForm((prev) => ({ ...prev, [key]: val }))
-                                    }
-                                    placeholder={placeholder}
-                                />
-                            ))}
-                            <Button theme="solid" type="primary" onClick={handleAdd}>
-                                保存
-                            </Button>
-                        </Space>
-                    </Card>
-                </SideSheet>
+                    {fields.map(({ key, placeholder }) => (
+                        <Input
+                            key={key}
+                            placeholder={placeholder}
+                            value={form[key]}
+                            onChange={(val) => setForm((prev) => ({ ...prev, [key]: val }))}
+                            style={{ margin: '6px 0' }}
+                        />
+                    ))}
+                </Modal>
             </section>
+
             {selected ? (
                 (selected.nav ?? []).map((group) => (
                     <section key={String(group.id)} style={{ margin: '20px 0' }}>
