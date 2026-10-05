@@ -29,7 +29,7 @@ const ItemCard = ({ data, editable, onDelete }: { data: CardItem; editable?: boo
         fullScreen: false,
         icon: <Avatar style={{ width: 24, height: 24 }} src={iconUrl(data.icon)} />,
         title: data.name,
-        content: <MarkdownRender raw={cutAfter(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
+        content: <MarkdownRender raw={cutAfter(data.desc) || cut(data.desc) || '暂无描述'} format="md" style={{ marginBottom: 20 }} />,
         bodyStyle: { margin: 0 },
         style: { maxWidth: '320px' },
         footer: false

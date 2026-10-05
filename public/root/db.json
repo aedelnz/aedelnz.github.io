@@ -10,49 +10,42 @@
             "nav": [
               {
                 "name": "哔哩哔哩",
-                "desc": "国创\n\n哔哩哔哩国创分区\n\n哔哩哔哩干杯",
+                "desc": "国创分区\n\n以弹幕为特色、从二次元起家，现已发展为涵盖视频、直播、学习的年轻人综合性文化社区。",
                 "icon": "https://www.bilibili.com/favicon.ico",
                 "url": "https://www.bilibili.com/guochuang/",
                 "id": 4
               },
               {
                 "name": "腾讯视频",
-                "desc": "动漫",
+                "desc": "动漫分区\n\n腾讯旗下的综合长视频平台，主打热播剧集、电影、综艺、动漫、《纪录片》和体育内容，靠会员+广告模式提供高清追剧体验。",
                 "icon": "https://v.qq.com/favicon.ico",
                 "url": "https://v.qq.com/channel/cartoon",
                 "id": 5
               },
               {
                 "name": "爱奇艺",
-                "desc": "动漫",
+                "desc": "动漫分区\n\n国内头部综合长视频平台，以自制剧综、高清画质和“迷雾剧场”等品质内容著称，靠会员+广告模式提供追剧看片服务。",
                 "icon": "https://www.iqiyi.com/favicon.ico",
                 "url": "https://www.iqiyi.com/dongman/",
                 "id": 6
               },
               {
-                "name": "优酷动漫",
-                "desc": "动漫",
+                "name": "优酷",
+                "desc": "动漫分区\n\n阿里旗下的老牌综合长视频平台，以港剧、悬疑剧、热血动漫和经典综艺见长，靠会员+广告模式提供追剧看片服务。",
                 "icon": "https://www.youku.com/favicon.ico",
                 "url": "https://www.youku.com/ku/webcomic/",
                 "id": 7
               },
               {
                 "name": "芒果TV",
-                "desc": "动漫",
+                "desc": "动漫分区\n\n湖南广电旗下的互联网视频平台，以湖南卫视独播资源 + 自制综艺，主打青春、综艺、恋爱悬疑剧和女性向内容。",
                 "icon": "https://www.mgtv.com/favicon.ico",
                 "url": "https://www.mgtv.com/cartoon/",
                 "id": 8
               },
               {
-                "name": "bilibili国际版",
-                "desc": "需要代理-哔哩哔哩国际版，提供更多动漫资源。",
-                "icon": "ODF.pIYnIOsuYUP2nEoFgCwQRQ",
-                "url": "https://www.bilibili.tv/",
-                "id": 9
-              },
-              {
                 "name": "巴哈姆特动画疯",
-                "desc": "需要代理-巴哈姆特电玩资讯站开发的在线视频软件",
+                "desc": "需要代理\n\n巴哈姆特电玩资讯站开发的在线视频软件",
                 "icon": "ODF.STuNojULZrXrEG7QOGQmYA",
                 "url": "https://ani.gamer.com.tw/",
                 "id": 10
@@ -66,112 +59,112 @@
             "nav": [
               {
                 "name": "AkiAnime",
-                "desc": "最新动漫尽在Aki",
+                "desc": "",
                 "icon": "https://www.akianime.cc/template/dsn2/static/img/ico.png",
                 "url": "https://www.akianime.cc/",
                 "id": 12
               },
               {
                 "name": "稀饭动漫",
-                "desc": "有广告-免费高清动漫分享\n\n 备份站:https://xifan.moe/",
-                "icon": "https://dm.xifanacg.com/template/dsn2/static/img/fav.png",
-                "url": "https://dm.xifanacg.com/",
+                "desc": "\n\n防丢失：https://xifan.moe/",
+                "icon": "https://next.xifanacg.com/favicon.ico",
+                "url": "https://next.xifanacg.com/",
                 "id": 13
               },
               {
                 "name": "喵物次元",
-                "desc": "有广告-致力高质量追番动漫网站\n\n 备份站:https://mwcylink.github.io/",
+                "desc": "",
                 "icon": "ODF.-G5FnbtRoWk5Mrh3m4DuzQ",
                 "url": "https://mwcylink.github.io/",
                 "id": 14
               },
               {
                 "name": "girigiri愛動漫",
-                "desc": "有广告-高清动漫線上觀看\n\n 备份站:https://girigirilove.com/",
+                "desc": "\n\n防丢失：https://girigirilove.com/",
                 "icon": "https://bgm.girigirilove.com/upload/anime.girigirilove.com_.png",
                 "url": "https://bgm.girigirilove.com/",
                 "id": 15
               },
               {
                 "name": "次元城动画 ",
-                "desc": "有广告-海量蓝光番剧免费看！\n\n 备份站:https://www.cycity.pro/",
+                "desc": "\n\n防丢失：https://www.cycity.pro/",
                 "icon": "OIP-C.5vocRq_4tFPdW3gxa31OvgHaHa",
                 "url": "https://www.cycani.org/",
                 "id": 16
               },
               {
                 "name": "萌哩番剧",
-                "desc": "优质番剧推荐。万千热爱，“萌”聚于此。拯救漫荒，这“哩”最懂你。戳中你的萌点，荐你所爱。",
+                "desc": "",
                 "icon": "https://anime.moely.link/favicon.png",
                 "url": "https://anime.moely.link/",
                 "id": 17
               },
               {
                 "name": "橘子动漫",
-                "desc": "有广告-高清晰画质的在线动漫",
+                "desc": "",
                 "icon": "https://r2img.nanoacg.com/favicon.png",
                 "url": "https://www.mgnacg.com/",
                 "id": 18
               },
               {
-                "name": "月之祠动漫",
-                "desc": "有广告-优质小众动漫门户网站",
+                "name": "月之祠",
+                "desc": "",
                 "icon": "https://p.upyun.com/demo/tmp/F1fyqlFS.webp",
-                "url": "https://www.aowu.tv/",
+                "url": "https://www.moonci.com/",
                 "id": 19
               },
               {
                 "name": "动漫MIKU",
-                "desc": "原异世界动漫",
+                "desc": "",
                 "icon": "https://www.dmmiku.com/template/conch/asset/img/ios_fav.png",
                 "url": "https://www.dmmiku.com/",
                 "id": 20
               },
               {
                 "name": "AGE动漫",
-                "desc": "地址容易丢失-在线动漫观看\n\n 备份站:https://github.com/agefanscom/website\n\n https://rentry.org/agefans\n\n https://rentry.la/agefans",
+                "desc": "地址容易失效\n\n防丢失：https://github.com/agefanscom/website\n\nhttps://rentry.org/agefans\n\nhttps://rentry.la/agefans",
                 "icon": "ODF.73gimR8CUGR_HdJOWy5rTA",
                 "url": "https://www.age.tv/",
                 "id": 21
               },
               {
                 "name": "Animoe动漫",
-                "desc": "高清动漫在线播放站点",
+                "desc": "",
                 "icon": "https://github.elemecdn.com/mstatic616/images/logo/favicon.png",
                 "url": "https://animoe.org/",
                 "id": 22
               },
               {
                 "name": "番薯动漫",
-                "desc": "您追番的最佳归属\n\n 备份站:https://www.fsdm.top/",
+                "desc": "\n\n防丢失：https://www.fsdm.top/",
                 "icon": "https://p0.ssl.qhimg.com/t016852bd7df93fb9de.png",
                 "url": "https://www.fsdm02.com/",
                 "id": 23
               },
               {
                 "name": "花子动漫",
-                "desc": "有广告-新番在线观看",
+                "desc": "",
                 "icon": "https://m.360buyimg.com/i/jfs/t1/333415/14/21252/24845/68eba166F0793b87a/e9f7221a68538d71.png",
                 "url": "https://www.huazidm.com/",
                 "id": 24
               },
               {
                 "name": "咕咕番",
-                "desc": "有广告-在线日漫\n\n 备份站:https://fb.gugufan.top/",
+                "desc": "",
                 "icon": "https://www.gugu3.com/upload/site/20250105-1/392b1e1fa1fbe7b385e657eca0208ae5.png",
                 "url": "https://www.gugu3.com/",
                 "id": 25
               },
               {
                 "name": "SSRFun动漫",
-                "desc": "免费高清动漫网站",
+                "desc": "",
                 "icon": "https://image.2481asd.com/process?url=https%3A%2F%2Fwww.ssrfun.com%2Fupload%2Fsite%2F20260211-1%2Fdaed04de15fd244b183407977462d851.png",
                 "url": "https://www.ssrfun.com/",
                 "id": 26
               },
               {
                 "name": "peko.love",
-                "desc": "有广告-打造全网最美的ACG动漫网",
+                "desc": "",
                 "icon": "https://peko.love/static/picture/acglogo2.png",
                 "url": "https://peko.love/",
                 "id": 27
