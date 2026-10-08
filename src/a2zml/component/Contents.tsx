@@ -1,8 +1,9 @@
 import { useCallback, useState } from 'react'
-import { Button, Input, List, Modal, Space, Toast, Typography } from '@douyinfe/semi-ui'
+import { Button, Input, List, Modal, Space, Typography } from '@douyinfe/semi-ui'
 import { IconPlus, IconEdit } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from '../Data'
 import { useLocalStorage } from '../../hook/useLocalStorage'
+import { useToast } from '../../module/useToast'
 import ItemCard from './ItemCard'
 
 const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number }) => {
@@ -12,7 +13,8 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
     const [editable, setEditable] = useState(false)
     const [form, setForm] = useState({ name: '', desc: '', icon: '', url: '' })
     const [customData, setCustomData] = useLocalStorage<CardItem[]>('a2zmlData', [])
-
+    const Toast = useToast()
+    
     const toggleEditable = useCallback(() => setEditable((v) => !v), [])
     const toggleModal = useCallback(() => setModalVisible((v) => !v), [])
 
@@ -20,7 +22,7 @@ const Contents = ({ data, selectedKey }: { data: NavData[]; selectedKey: number 
         const name = form.name.trim()
         const url = form.url.trim()
         if (!name || !url) {
-            Toast.info({ content: '标题地址不能为空', duration: 1.5, stack: true })
+            Toast.info('标题地址不能为空')
             return
         }
         const newItem: CardItem = { id: Date.now(), name, desc: form.desc.trim(), icon: form.icon.trim(), url }

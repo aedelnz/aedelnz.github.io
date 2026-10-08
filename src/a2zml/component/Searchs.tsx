@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Button, Input, InputGroup, List, Select, Toast, Typography } from '@douyinfe/semi-ui'
+import { Button, Input, InputGroup, List, Select, Typography } from '@douyinfe/semi-ui'
 import { IconSearch } from '@douyinfe/semi-icons'
 import { type NavData, type CardItem } from '../Data'
 import { useBreakpoint } from '../../hook/useBreakpoint'
 import { useLocalStorage } from '../../hook/useLocalStorage'
+import { useToast } from '../../module/useToast'
 import ItemCard from './ItemCard'
 
 // 常量提到组件外，避免每次渲染重建
@@ -46,6 +47,7 @@ const Searchs = ({ data, search = true }: Props) => {
     const [debouncedKeyword, setDebouncedKeyword] = useState('')
     const { isMobile } = useBreakpoint()
     const [engine, setEngine] = useLocalStorage('search-engine', 'GitHub')
+    const Toast = useToast()
 
     // 关键词防抖
     useEffect(() => {
@@ -75,7 +77,7 @@ const Searchs = ({ data, search = true }: Props) => {
     const handleSearch = () => {
         const q = keyword.trim()
         if (!q) {
-            Toast.info({ content: '搜索内容不能为空', duration: 0.5, stack: true })
+            Toast.info('搜索内容不能为空')
             return
         }
         if (engine === 'ThisSite') return

@@ -79,7 +79,7 @@ export const OtherWorks: iOtherWorks[] = [
     },
     {
         status: '正常',
-        title: '画的工具',
+        title: '在线工具箱',
         description: '免安装·更高效·更便捷｜在线工具集合',
         tag: 'React ',
         label: '工具',
