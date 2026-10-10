@@ -3076,6 +3076,69 @@
             ],
             "icon": "",
             "id": 424
+          },
+          {
+            "title": "下载器",
+            "nav": [
+              {
+                "name": "Gopeed",
+                "desc": "免费现代化开源下载器\n\nGopeed 是一款免费开源的现代化下载管理器，支持 HTTP、HTTPS、BitTorrent、磁力和 ed2k 链接下载。多线程高速下载，跨平台支持 Windows、macOS、Linux、Android 和 iOS。",
+                "icon": "ODF.6YtYBdtRDTKubGiNpDxCQQ",
+                "url": "https://gopeed.com/zh",
+                "id": 443
+              },
+              {
+                "name": "FluxDown",
+                "desc": "用 Rust 重写的下载管理器\n\nGPU 渲染的原生下载管理器，Rust 引擎运行时动态分段加速，支持 HTTP/FTP/BT 磁力/eD2K/HLS/DASH，浏览器接管、插件、CLI、API 与 Headless 服务器。免费开源。",
+                "icon": "ODF.vBscwaLZr6nwU0Y62HNN0A",
+                "url": "https://fluxdown.zerx.dev/zh/",
+                "id": 444
+              },
+              {
+                "name": "Motrix",
+                "desc": "全功能下载管理器\n\nMotrix 是一款全功能下载管理器,支持 HTTP、FTP、BitTorrent、磁力链接等。",
+                "icon": "ODF.1kIzM3viGs8N1EBJqhYlQg",
+                "url": "https://motrix.app/zh/",
+                "id": 445
+              },
+              {
+                "name": "Rayburst",
+                "desc": "重新定义开源下载器\n\n开源下载管理器，文件、种子、直播流一应俱全，原生支持 macOS、Windows 和 Linux。",
+                "icon": "https://rayburst.pages.dev/logo.svg",
+                "url": "https://rayburst.pages.dev/",
+                "id": 446
+              },
+              {
+                "name": "qBittorrent",
+                "desc": "\n\nqBittorrent 是一个用 C++ / Qt 编写的 BitTorrent 客户端，使用 Arvid Norberg 编写的 libtorrent（有时称为 libtorrent-rasterbar）。",
+                "icon": "ODF.Cb_MiZ5cmN58iU3pLMaPCg",
+                "url": "https://github.com/qbittorrent/qBittorrent/",
+                "id": 447
+              },
+              {
+                "name": "比特彗星",
+                "desc": "\n\n高效好用的BT下载软件，BT资源的下载利器",
+                "icon": "ODF.sDfvWSlnp6AD_zl6Sidrgw",
+                "url": "https://www.bitcomet.com/cn",
+                "id": 448
+              }
+            ],
+            "icon": "",
+            "id": 442
+          },
+          {
+            "title": "数据分区",
+            "nav": [
+              {
+                "name": "DiskGenius",
+                "desc": "\n\nDiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
+                "icon": "https://www.diskgenius.cn/favicon.ico",
+                "url": "https://www.diskgenius.cn/",
+                "id": 450
+              }
+            ],
+            "icon": "",
+            "id": 449
           }
         ],
         "icon": "IconBanner",
