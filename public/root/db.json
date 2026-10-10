@@ -3131,10 +3131,80 @@
             "nav": [
               {
                 "name": "DiskGenius",
-                "desc": "\n\nDiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
-                "icon": "https://www.diskgenius.cn/favicon.ico",
+                "desc": "DiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
+                "icon": "ODF.4eJriQck9l1d2ky070l6QQ",
                 "url": "https://www.diskgenius.cn/",
                 "id": 450
+              },
+              {
+                "name": "AOMEI Partition Assistant",
+                "desc": "傲梅分区助手\n\n免费磁盘分区管理软件，支持无损调整分区、合并/拆分分区、迁移系统到SSD、MBR/GPT互转。",
+                "icon": "ODF.-PXfgwokUDdtcRLgD3BC6A",
+                "url": "https://www.diskpart.com/",
+                "id": 451
+              },
+              {
+                "name": "MiniTool Partition Wizard",
+                "desc": "\n\n迷你兔分区向导：支持分区调整、磁盘基准测试、空间分析，并可将Windows系统迁移到新硬盘。",
+                "icon": "ODF.CYc49EjXGSQ1wY0SoDJUlQ",
+                "url": "https://www.minitool.com/",
+                "id": 452
+              },
+              {
+                "name": "GParted",
+                "desc": "\n\n跨平台开源分区工具，支持EXT4/XFS/Btrfs/NTFS/FAT32，可通过Live CD处理被锁定分区。",
+                "icon": "ODF.PkPmXqQ1mAfpsRDZcW0XQQ",
+                "url": "https://gparted.org/",
+                "id": 453
+              },
+              {
+                "name": "EaseUS Partition Master",
+                "desc": "易我分区大师\n\n支持调整/合并分区、磁盘克隆、分区恢复，兼容HDD/SSD/USB外接硬盘。",
+                "icon": "ODF.vUM95OXL92wNdHSel_Jx2Q",
+                "url": "https://www.easeus.com/partition-manager/",
+                "id": 454
+              },
+              {
+                "name": "Paragon Partition Manager",
+                "desc": "\n\n支持调整/移动/合并/拆分分区，具备Hot Resize在线调整分区技术，提供社区版。",
+                "icon": "ODF.__AnbT1-VkiOmcu8zf9LAA",
+                "url": "https://www.paragon-software.com/",
+                "id": 455
+              },
+              {
+                "name": "NIUBI Partition Editor",
+                "desc": "\n\n家庭用户免费，支持调整/扩展/移动/合并分区、磁盘克隆、MBR/GPT转换、坏道扫描。",
+                "icon": "ODF.rpm2KVasVAzwHBPmauI1SQ",
+                "url": "https://www.partition-editor.com/",
+                "id": 456
+              },
+              {
+                "name": "Macrorit Partition Expert",
+                "desc": "\n\n免费版支持扩展/创建/格式化分区，兼容MBR/GPT，具备取消与回滚数据保护。",
+                "icon": "ODF.ICRDsJczsZX_iCB6BRqEpg",
+                "url": "https://macrorit.com/",
+                "id": 457
+              },
+              {
+                "name": "TestDisk",
+                "desc": "\n\n开源免费数据恢复工具，可恢复丢失分区、修复无法启动磁盘，支持多种文件系统。",
+                "icon": "ODF.DIW8dSPrLkMCrT-lXi_lVQ",
+                "url": "https://www.cgsecurity.org/wiki/TestDisk",
+                "id": 458
+              },
+              {
+                "name": "R-Studio",
+                "desc": "专业级数据恢复工具，支持Windows/Mac/Linux，可从硬盘、RAID和闪存恢复数据。",
+                "icon": "ODF.kQiENg6mOCXajCxN5Yy5mA",
+                "url": "https://www.r-studio.com/",
+                "id": 459
+              },
+              {
+                "name": "数据恢复精灵",
+                "desc": "\n\n基于DiskGenius内核，支持恢复丢失分区、已删除文件及损坏分区中的文件。",
+                "icon": "ODF.qkctlhXxSeiNh6UuoCNasQ",
+                "url": "https://www.eassos.cn/",
+                "id": 460
               }
             ],
             "icon": "",
