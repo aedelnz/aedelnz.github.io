@@ -1,4 +1,4 @@
-import { Card, Typography, Space, Tag, Button, Input, Empty } from '@douyinfe/semi-ui'
+import { Card, Typography, Space, Tag, Button, Input } from '@douyinfe/semi-ui'
 import { IconCopy } from '@douyinfe/semi-icons'
 import { type iSubscribeNode } from '../Data'
 import { useCopy } from '../../../module/useCopy'
@@ -62,7 +62,7 @@ const SubscribeNodeCard = ({ data }: { data: iSubscribeNode }) => {
                     icon={<IconCopy />}
                     theme='solid'
                     type='primary'
-                    onClick={() => copy(url)}
+                    onClick={() => copy(url||'')}
                     style={{ flexShrink: 0 }}
                 >
                     复制
