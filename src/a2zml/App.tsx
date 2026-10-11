@@ -12,7 +12,7 @@ import Footers from '../component/Footers';
 
 const App = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
-    const [navId, setNavId] = useLocalStorage<number>('NavId', null)
+    const [navId, setNavId] = useLocalStorage<number | null>('NavId', null)
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
     const { height } = useBreakpoint()
     const selectedKey: number = useMemo(() => {
