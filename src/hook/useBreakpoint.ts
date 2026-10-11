@@ -1,105 +1,125 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
-/** 断点配置，可按项目自定义 */
 export const BREAKPOINTS = {
-  xs: 0,     // 手机
-  sm: 576,   // 小平板
-  md: 768,   // 平板
-  lg: 992,   // 小屏桌面
-  xl: 1200,  // 桌面
-  xxl: 1600, // 大屏
+  xs: 0, sm: 576, md: 768, lg: 992, xl: 1200, xxl: 1600,
 } as const;
 
 export type Breakpoint = keyof typeof BREAKPOINTS;
+export interface Size { width: number; height: number; }
 
-/** 升序排列的断点表 */
 const SORTED = (Object.entries(BREAKPOINTS) as [Breakpoint, number][])
   .sort((a, b) => a[1] - b[1]);
+const ZERO: Size = { width: 0, height: 0 };
 
-/** 根据宽度匹配断点 */
-function match(width: number): Breakpoint {
-  let current: Breakpoint = 'xs';
-  for (const [name, min] of SORTED) {
-    if (width >= min) current = name;
+const match = (w: number): Breakpoint =>
+  SORTED.reduce<Breakpoint>((cur, [name, min]) => (w >= min ? name : cur), 'xs');
+
+/** 元素模式：元素不存在返回 ZERO，避免误用视口宽度；视口模式读 window */
+function readSize(id?: string): Size {
+  if (typeof window === 'undefined') return ZERO;
+  if (!id) return { width: window.innerWidth, height: window.innerHeight };
+  const el = document.getElementById(id);
+  // offsetWidth 是 border-box，RO 也用 border-box 对齐
+  return el ? { width: el.offsetWidth, height: el.offsetHeight } : ZERO;
+}
+
+interface Snapshot { id?: string; size: Size; }
+
+export function useBreakpoint(debounce = 100, elementId?: string) {
+  // 用 state 保存「当前测量过的 elementId + 尺寸」，避免渲染期读写 ref
+  const [snapshot, setSnapshot] = useState<Snapshot>(
+    () => ({ id: elementId, size: readSize(elementId) })
+  );
+
+  // elementId 切换时，在渲染期派生新尺寸（官方推荐的 "adjust state during render"）
+  if (snapshot.id !== elementId) {
+    setSnapshot({ id: elementId, size: readSize(elementId) });
   }
-  return current;
-}
 
-/** 读取当前视口尺寸 */
-function getSize() {
-  return {
-    width: typeof window !== 'undefined' ? window.innerWidth : 0,
-    height: typeof window !== 'undefined' ? window.innerHeight : 0,
-  };
-}
+  const size = snapshot.size;
 
-/**
- * 响应式断点 Hook，返回屏幕宽高、当前断点及常用判断
- * @param debounce 防抖时间(ms)，默认 100
- *
- * @example
- * const { width, height, breakpoint, isMobile } = useBreakpoint();
- */
-export function useBreakpoint(debounce = 100) {
-  const [size, setSize] = useState(getSize);
-  const [breakpoint, setBreakpoint] = useState<Breakpoint>(() => match(size.width));
-
+  // debounce 只在 effect / RO 回调里读取，通过 ref 保存最新值，
+  // 且只在 effect 中更新 ref，满足 react-hooks/refs 规则
+  const debounceRef = useRef(debounce);
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
-
-    const handleResize = () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        const next = getSize();
-        setSize(next);
-        setBreakpoint(match(next.width));
-      }, debounce);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('resize', handleResize);
-    };
+    debounceRef.current = debounce;
   }, [debounce]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let raf = 0, tries = 0, cancelled = false;
+    let observer: ResizeObserver | undefined;
+
+    const commit = (next: Size) => {
+      if (cancelled) return;
+      setSnapshot(prev =>
+        prev.size.width === next.width && prev.size.height === next.height
+          ? prev
+          : { ...prev, size: next }
+      );
+    };
+
+    const schedule = () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => commit(readSize(elementId)), debounceRef.current);
+    };
+
+    const attach = () => {
+      if (cancelled) return;
+
+      // 视口模式：只需监听 window
+      if (!elementId) {
+        window.addEventListener('resize', schedule);
+        commit(readSize());
+        return;
+      }
+
+      const el = document.getElementById(elementId);
+      if (!el) {
+        // 元素未挂载：最多重试 1s
+        if (tries++ < 60) raf = requestAnimationFrame(attach);
+        else window.addEventListener('resize', schedule);
+        return;
+      }
+
+      if (typeof ResizeObserver !== 'undefined') {
+        // 直接用 entries，避免再读 offsetWidth 触发 reflow；border-box 与 offsetWidth 对齐
+        observer = new ResizeObserver(([entry]) => {
+          const box = entry.borderBoxSize?.[0];
+          const next = box
+            ? { width: box.inlineSize, height: box.blockSize }
+            : { width: entry.contentRect.width, height: entry.contentRect.height };
+          clearTimeout(timer);
+          timer = setTimeout(() => commit(next), debounceRef.current);
+        });
+        observer.observe(el, { box: 'border-box' });
+      } else {
+        window.addEventListener('resize', schedule);
+      }
+      commit(readSize(elementId));
+    };
+
+    attach();
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+      if (raf) cancelAnimationFrame(raf);
+      observer?.disconnect();
+      window.removeEventListener('resize', schedule);
+    };
+  }, [elementId]); // debounce 走 ref，不参与依赖
+
+  const { width, height } = size;
+  const ready = width > 0 || height > 0;
   return {
-    width: size.width,
-    height: size.height,
-    breakpoint,
-    isMobile: size.width < BREAKPOINTS.md,                       // < 768
-    isTablet: size.width >= BREAKPOINTS.md && size.width < BREAKPOINTS.lg, // 768~992
-    isDesktop: size.width >= BREAKPOINTS.lg,                     // >= 992
-    isPortrait: size.height >= size.width,                       // 竖屏
+    width, height,
+    breakpoint: useMemo(() => match(width), [width]),
+    ready,
+    isMobile: ready && width < BREAKPOINTS.md,
+    isTablet: width >= BREAKPOINTS.md && width < BREAKPOINTS.lg,
+    isDesktop: width >= BREAKPOINTS.lg,
+    isPortrait: ready && height >= width,
   };
 }
-
-// src/pages/ResponsiveDemo.tsx
-// import { Card, Space, Tag, Typography } from '@douyinfe/semi-ui';
-// import { useBreakpoint, type Breakpoint } from '@/hooks/useBreakpoint';
-//
-// const TAG_COLOR: Record<Breakpoint, string> = {
-//   xs: 'red', sm: 'orange', md: 'yellow',
-//   lg: 'green', xl: 'blue', xxl: 'violet',
-// };
-//
-// export default function ResponsiveDemo() {
-//   const { width, height, breakpoint, isMobile, isDesktop, isPortrait } = useBreakpoint();
-//
-//   return (
-//     <Card title="响应式断点演示" style={{ maxWidth: 720, margin: 24 }}>
-//       <Space vertical align="start">
-//         <Typography.Text>
-//           屏幕尺寸：<strong>{width} × {height}</strong> px
-//         </Typography.Text>
-//         <Typography.Text>
-//           当前断点：<Tag color={TAG_COLOR[breakpoint]}>{breakpoint}</Tag>
-//           <Tag>{isPortrait ? '竖屏' : '横屏'}</Tag>
-//         </Typography.Text>
-//
-//         {isMobile && <Tag color="red">移动端视图</Tag>}
-//         {isDesktop && <Tag color="green">桌面端视图</Tag>}
-//       </Space>
-//     </Card>
-//   );
-// }
