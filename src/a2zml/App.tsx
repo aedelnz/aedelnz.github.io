@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Layout, Spin, Typography, Space } from '@douyinfe/semi-ui';
 import { useBreakpoint } from '../hook/useBreakpoint';
 import { useRequest } from '../hook/useRequest';
+import { useLocalStorage } from '../hook/useLocalStorage'
 import { type NavData } from './Data';
 import DarkMode from '../module/DarkMode';
 import NavSides from './component/NavSides';
@@ -11,7 +12,7 @@ import Footers from '../component/Footers';
 
 const App = () => {
     const [isCollapsed, setIsCollapsed] = useState<boolean>(true)
-    const [navId, setNavId] = useState<number>()
+    const [navId, setNavId] = useLocalStorage<number>('NavId', null)
     const { data, loading, error } = useRequest<NavData[]>('/root/db.json')
     const { height } = useBreakpoint()
     const selectedKey: number = useMemo(() => {
