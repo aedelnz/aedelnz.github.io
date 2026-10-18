@@ -2956,101 +2956,185 @@
             "nav": [
               {
                 "name": "Visual Studio Code",
-                "desc": "微软推出的免费开源代码编辑器，拥有极其丰富的插件生态和内置 Git 支持，是目前全球最流行的全能型编辑器。",
-                "icon": "https://code.visualstudio.com/assets/favicon.ico",
+                "desc": "\n\n微软推出的免费开源代码编辑器，拥有极其丰富的插件生态和内置 Git 支持，是目前全球最流行的全能型编辑器。",
+                "icon": "ODF.-g0sg8HWLH6lfjy77LRUug",
                 "url": "https://code.visualstudio.com/",
                 "id": 425
               },
               {
-                "name": "Visual Studio",
-                "desc": "微软推出的重量级集成开发环境，专为 Windows 平台设计，集开发、编译、调试、测试和部署于一体，是 .NET、C++ 和 Windows 生态开发的首选工具。",
-                "icon": "https://visualstudio.microsoft.com/favicon.ico",
-                "url": "https://visualstudio.microsoft.com/",
+                "name": "Android Studio",
+                "desc": "\n\nAndroid Studio 提供了一些应用构建器以及一个已针对 Android 应用进行优化的集成式开发环境 (IDE)。立即下载 Android Studio。 | Android Studio 提供了一些应用构建器以及一个已针对 Android 应用进行优化的集成式开发环境 (IDE)。立即下载 Android Studio。\n",
+                "icon": "ODF.n5FekavbQrTH3QtkWT3z4w",
+                "url": "https://developer.android.google.cn/studio?hl=zh-cn",
                 "id": 426
               },
               {
                 "name": "IntelliJ IDEA",
-                "desc": "JetBrains 旗下旗舰级 Java/Kotlin IDE，以智能代码补全、静态代码分析和强大重构功能著称，被全球 72% 的 Java 开发者使用，是企业级 JVM 开发的标准工具。",
-                "icon": "https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg",
+                "desc": "\n\nJetBrains 出品的 Java/Kotlin 集成开发环境，企业级 Java 开发首选，智能提示与重构能力极强。",
+                "icon": "ODF._qcimGQZOhNhIrilnLkMZg",
                 "url": "https://www.jetbrains.com/idea/",
                 "id": 427
               },
               {
                 "name": "PyCharm",
-                "desc": "JetBrains 推出的专业 Python IDE，提供智能代码补全、可视化调试、版本控制集成及 Django/Flask 等 Web 框架支持，适用于 Python 开发、Web 开发和数据科学工作。",
-                "icon": "https://resources.jetbrains.com/storage/products/company/brand/logos/PyCharm_icon.svg",
+                "desc": "\n\nJetBrains 出品的 Python IDE，提供智能补全、调试、测试和 Web 框架支持，适合专业 Python 开发。",
+                "icon": "ODF._qcimGQZOhNhIrilnLkMZg",
                 "url": "https://www.jetbrains.com/pycharm/",
                 "id": 428
               },
               {
-                "name": "Eclipse",
-                "desc": "老牌免费开源的跨平台 IDE，原生支持 Java 开发，通过插件可扩展至 C/C++、Python、Web 前端等多种语言，拥有二十多年企业级应用积累，是 Java 开发的重要工具之一。",
-                "icon": "https://www.eclipse.org/favicon.ico",
-                "url": "https://www.eclipse.org/",
+                "name": "WebStorm",
+                "desc": "\n\nJetBrains 出品的 JavaScript/TypeScript IDE，对前端框架、Node.js 和现代 Web 开发支持完善。",
+                "icon": "ODF._qcimGQZOhNhIrilnLkMZg",
+                "url": "https://www.jetbrains.com/webstorm/",
                 "id": 429
               },
               {
-                "name": "Android Studio",
-                "desc": "Google 官方推出的 Android 应用开发 IDE，基于 IntelliJ IDEA 构建，内置 Gemini AI 编程助手和 Gradle 构建系统，是 Android 平台开发的官方标准工具。",
-                "icon": "https://developer.android.com/static/favicon.ico",
-                "url": "https://developer.android.com/studio",
+                "name": "Visual Studio",
+                "desc": "\n\n微软推出的完整集成开发环境，是 Windows 平台 C#/.NET/C++ 大型项目及 Unity 游戏开发的首选。",
+                "icon": "ODF.Y77AUHJ37M167GfxiS3cyg",
+                "url": "https://visualstudio.microsoft.com/",
                 "id": 430
               },
               {
-                "name": "Xcode",
-                "desc": "Apple 官方推出的 macOS 集成开发环境，提供预测代码补全、生成式 AI 智能、高级分析与调试工具以及 Apple 设备模拟器，是开发 iOS/iPadOS/macOS/watchOS/tvOS/visionOS 应用的必备工具。",
-                "icon": "https://developer.apple.com/favicon.ico",
-                "url": "https://developer.apple.com/xcode/",
+                "name": "Vim",
+                "desc": "\n\n经典终端文本编辑器，以键盘操作、轻量极速和高可定制性著称，深受运维与资深开发者喜爱。",
+                "icon": "ODF.BLsxv2kZvgPysCGIY8kRbQ",
+                "url": "https://www.vim.org/",
                 "id": 431
               },
               {
-                "name": "Cursor",
-                "desc": "基于 VS Code 构建的 AI 优先代码编辑器，由前 GitHub Copilot 团队成员打造，支持多文件智能体能力、跨文件重构和项目级代码理解，可将 AI 深度融入日常编码流程。",
-                "icon": "https://cursor.com/favicon.ico",
-                "url": "https://cursor.com/",
+                "name": "Neovim",
+                "desc": "\n\nVim 的现代重构版本，支持 Lua 配置、异步插件和内置 LSP，是终端编辑器中的高性能代表。",
+                "icon": "ODF.mlknQ9PGO3S-EHaWSYGm7w",
+                "url": "https://neovim.io/",
                 "id": 432
               },
               {
-                "name": "Windsurf",
-                "desc": "Codeium 出品的 AI 原生 IDE，内置原生 Agent 和上下文感知聊天，支持内联代码生成和多文件编辑，适合希望直接使用 AI 原生开发环境而非在普通编辑器上拼装插件能力的开发者。",
-                "icon": "https://windsurf.com/favicon.ico",
-                "url": "https://windsurf.com/",
+                "name": "Cursor",
+                "desc": "\n\n基于 VS Code 的 AI 原生 IDE，支持一句话修改整个项目代码，是目前最流行的 AI 编程编辑器之一。",
+                "icon": "ODF.CYVj7BYJQ_NVQJuVZ84LPQ",
+                "url": "https://www.cursor.com/",
                 "id": 433
               },
               {
-                "name": "Zed",
-                "desc": "由 Atom 和 Tree-sitter 创造者打造的高性能多人协作代码编辑器，以极快的响应速度和对多人实时协作的原生支持著称，适用于追求极致编辑体验的开发者。",
-                "icon": "https://zed.dev/favicon.ico",
-                "url": "https://zed.dev/",
+                "name": "Claude Code",
+                "desc": "\n\nAnthropic 推出的终端 AI 编程 Agent，拥有超大上下文，擅长理解和改造大型遗留项目。",
+                "icon": "ODF.RMAx37gt-2slZ6R1yzXuYw",
+                "url": "https://www.anthropic.com/claude-code",
                 "id": 434
               },
               {
-                "name": "Sublime Text",
-                "desc": "以极致性能和极简界面著称的跨平台代码编辑器，支持多光标编辑、项目感知导航和命令面板，通过包管理器可扩展丰富功能，适合追求轻量高效编辑体验的开发者。",
-                "icon": "https://www.sublimetext.com/favicon.ico",
-                "url": "https://www.sublimetext.com/",
+                "name": "Windsurf",
+                "desc": "\n\n主打 AI Agent 的代码编辑器，可自动规划方案、编写代码并运行测试，适合复杂项目重构。",
+                "icon": "ODF.Eco-foYOJteBhGvhC0Yucg",
+                "url": "https://windsurf.com/",
                 "id": 435
               },
               {
-                "name": "Vim",
-                "desc": "高度可配置的键盘驱动型文本编辑器，基于模式化工作流，支持多级撤销、强大的搜索替换和广泛插件系统，被许多开发者视为完整的 IDE，适用于追求高效键盘操作的程序员。",
-                "icon": "https://www.vim.org/favicon.ico",
-                "url": "https://www.vim.org/",
+                "name": "Zed",
+                "desc": "\n\nRust 编写的高性能代码编辑器，启动极快、内存占用低，并原生支持多人协作与 AI 辅助。",
+                "icon": "ODF.itWi-WOcEwP4U7vjCpw-ow",
+                "url": "https://zed.dev/",
                 "id": 436
               },
               {
-                "name": "NetBeans",
-                "desc": "Apache 基金会旗下的免费开源集成开发环境，提供语法高亮、代码重构、编辑器和模板等功能，支持 Java、PHP 等多种语言的桌面、Web 和移动应用开发。",
-                "icon": "https://netbeans.apache.org/favicon.ico",
-                "url": "https://netbeans.apache.org/",
+                "name": "Google Antigravity",
+                "desc": "\n\nGoogle 推出的代理优先开发平台，支持多个 AI 代理并行执行任务，并与 Google AI 生态深度集成。",
+                "icon": "ODF.LTJ4UWtPwq1QbgrMxsZ5qA",
+                "url": "https://antigravity.google/",
                 "id": 437
               },
               {
                 "name": "GitHub Copilot",
-                "desc": "微软与 OpenAI 合作推出的 AI 编程助手，作为插件集成到 VS Code、Visual Studio 等主流编辑器中，提供实时代码建议和智能补全，是微软生态的智能编码标配。",
-                "icon": "https://github.githubassets.com/favicons/favicon.svg",
+                "desc": "\n\n行业标准的 AI 结对编程助手，深度集成 VS Code、JetBrains 等主流 IDE，代码补全稳定成熟。",
+                "icon": "ODF.bYAvaN8MCaSZfP0o7q_Z_w",
                 "url": "https://github.com/features/copilot",
                 "id": 438
+              },
+              {
+                "name": "Cline",
+                "desc": "\n\nVS Code 上的开源自主编码代理，可运行命令、编辑文件，并支持自带 API Key 控制成本。",
+                "icon": "ODF.nfW7leY5Hfht7q_65l8j_w",
+                "url": "https://cline.bot/",
+                "id": 439
+              },
+              {
+                "name": "Supermaven",
+                "desc": "\n\n以极快补全速度和超大上下文窗口为卖点的 AI 编程助手，适合大型代码库快速理解与生成。",
+                "icon": "https://supermaven.com/apple-touch-icon.png",
+                "url": "https://supermaven.com/",
+                "id": 440
+              },
+              {
+                "name": "Trae",
+                "desc": "\n\n字节跳动推出的国内首款 AI 原生 IDE，个人版免费，中文理解强，支持 SOLO 全自动编程模式。",
+                "icon": "ODF.YIp5-bd6aV_n2t3WPPiW7w",
+                "url": "https://www.trae.com.cn/",
+                "id": 441
+              },
+              {
+                "name": "CodeBuddy",
+                "desc": "\n\n腾讯云推出的 AI 编程助手，定位产研一体全栈工程师，深度打通微信小程序和腾讯云生态。",
+                "icon": "ODF.xaDp-4TU4EG-lEoOwmtcPw",
+                "url": "https://www.codebuddy.cn",
+                "id": 442
+              },
+              {
+                "name": "通义灵码",
+                "desc": "\n\n阿里云推出的 AI 编程助手，在 Java、Go、Spring 生态积累深厚，具备工程记忆和多轮追问能力。",
+                "icon": "ODF.HoD4CQwd-EWP976m-V-yUA",
+                "url": "https://lingma.aliyun.com/",
+                "id": 443
+              },
+              {
+                "name": "Qoder CN",
+                "desc": "\n\n阿里云推出的 AI 原生开发工具，面向国内开发者优化，支持代码库理解与智能体协作开发。",
+                "icon": "ODF.lfSuy_jG5kSnIMX7ls-e4g",
+                "url": "https://qoder.com/",
+                "id": 444
+              },
+              {
+                "name": "文心快码 Comate",
+                "desc": "\n\n百度基于文心大模型推出的编程助手，主打企业级场景，支持私有化部署和多种编程语言。",
+                "icon": "ODF.0rCWrZIWSp0v1r12YNVvvw",
+                "url": "https://comate.baidu.com/",
+                "id": 445
+              },
+              {
+                "name": "Kimi Code",
+                "desc": "\n\n月之暗面推出的编程能力产品，终端能力突出，代码库理解强，提供 CLI、IDE 插件和 Web 形态。",
+                "icon": "ODF.1Wu_KQJtMNT-FWNwdFlLDg",
+                "url": "https://kimi.moonshot.cn/",
+                "id": 446
+              },
+              {
+                "name": "CodeArts",
+                "desc": "\n\n华为云推出的一站式软件开发平台，基于盘古大模型提供 CodeArts Snap 等智能编码能力。",
+                "icon": "https://res-static.hc-cdn.cn/cloudbu-site/intl/zh-cn/DevCloud/CodeArts.png",
+                "url": "https://www.huaweicloud.com/product/codearts.html",
+                "id": 447
+              },
+              {
+                "name": "DevEco Studio",
+                "desc": "\n\n华为推出的鸿蒙生态官方 IDE，面向 HarmonyOS 应用开发，提供预览、调试和模拟器支持。",
+                "icon": "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/DevEcoStudiotubiao3x.webp",
+                "url": "https://developer.huawei.com/consumer/cn/deveco-studio/",
+                "id": 448
+              },
+              {
+                "name": "CodeGeeX",
+                "desc": "\n\n智谱 AI 推出的开源模型驱动编程助手，提供 IDE 插件形态，支持代码生成、补全和翻译。",
+                "icon": "ODF.ZhcjNV4C6lmzprZznpdWNA",
+                "url": "https://codegeex.cn/",
+                "id": 449
+              },
+              {
+                "name": "AIDE",
+                "desc": "\n\n面向 Android 开发的移动端 IDE，支持 Java/Kotlin，可在手机上编写、编译并生成 APK。",
+                "icon": "ODF.9k3cMu4bDoQuIsIAkVvB0g",
+                "url": "https://www.android-ide.com/",
+                "id": 450
               }
             ],
             "icon": "",
@@ -3064,130 +3148,342 @@
                 "desc": "免费现代化开源下载器\n\nGopeed 是一款免费开源的现代化下载管理器，支持 HTTP、HTTPS、BitTorrent、磁力和 ed2k 链接下载。多线程高速下载，跨平台支持 Windows、macOS、Linux、Android 和 iOS。",
                 "icon": "ODF.6YtYBdtRDTKubGiNpDxCQQ",
                 "url": "https://gopeed.com/zh",
-                "id": 440
+                "id": 452
               },
               {
                 "name": "FluxDown",
                 "desc": "用 Rust 重写的下载管理器\n\nGPU 渲染的原生下载管理器，Rust 引擎运行时动态分段加速，支持 HTTP/FTP/BT 磁力/eD2K/HLS/DASH，浏览器接管、插件、CLI、API 与 Headless 服务器。免费开源。",
                 "icon": "ODF.vBscwaLZr6nwU0Y62HNN0A",
                 "url": "https://fluxdown.zerx.dev/zh/",
-                "id": 441
+                "id": 453
               },
               {
                 "name": "Motrix",
                 "desc": "全功能下载管理器\n\nMotrix 是一款全功能下载管理器,支持 HTTP、FTP、BitTorrent、磁力链接等。",
                 "icon": "ODF.1kIzM3viGs8N1EBJqhYlQg",
                 "url": "https://motrix.app/zh/",
-                "id": 442
+                "id": 454
               },
               {
                 "name": "Rayburst",
                 "desc": "重新定义开源下载器\n\n开源下载管理器，文件、种子、直播流一应俱全，原生支持 macOS、Windows 和 Linux。",
                 "icon": "https://rayburst.pages.dev/logo.svg",
                 "url": "https://rayburst.pages.dev/",
-                "id": 443
+                "id": 455
               },
               {
                 "name": "qBittorrent",
                 "desc": "\n\nqBittorrent 是一个用 C++ / Qt 编写的 BitTorrent 客户端，使用 Arvid Norberg 编写的 libtorrent（有时称为 libtorrent-rasterbar）。",
                 "icon": "ODF.Cb_MiZ5cmN58iU3pLMaPCg",
                 "url": "https://github.com/qbittorrent/qBittorrent/",
-                "id": 444
+                "id": 456
               },
               {
                 "name": "比特彗星",
                 "desc": "\n\n高效好用的BT下载软件，BT资源的下载利器",
                 "icon": "ODF.sDfvWSlnp6AD_zl6Sidrgw",
                 "url": "https://www.bitcomet.com/cn",
-                "id": 445
+                "id": 457
               }
             ],
             "icon": "",
-            "id": 439
+            "id": 451
           },
           {
             "title": "数据分区",
             "nav": [
               {
                 "name": "DiskGenius",
-                "desc": "DiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
+                "desc": "\n\nDiskGenius是专家级数据恢复软件，集数据恢复、硬盘分区、系统备份还原等多种功能于一身的超级工具软件",
                 "icon": "ODF.4eJriQck9l1d2ky070l6QQ",
                 "url": "https://www.diskgenius.cn/",
-                "id": 447
+                "id": 459
               },
               {
                 "name": "AOMEI Partition Assistant",
-                "desc": "傲梅分区助手\n\n免费磁盘分区管理软件，支持无损调整分区、合并/拆分分区、迁移系统到SSD、MBR/GPT互转。",
+                "desc": "\n\n免费磁盘分区管理软件，支持无损调整分区、合并/拆分分区、迁移系统到SSD、MBR/GPT互转。",
                 "icon": "ODF.-PXfgwokUDdtcRLgD3BC6A",
                 "url": "https://www.diskpart.com/",
-                "id": 448
+                "id": 460
               },
               {
                 "name": "MiniTool Partition Wizard",
                 "desc": "\n\n迷你兔分区向导：支持分区调整、磁盘基准测试、空间分析，并可将Windows系统迁移到新硬盘。",
                 "icon": "ODF.CYc49EjXGSQ1wY0SoDJUlQ",
                 "url": "https://www.minitool.com/",
-                "id": 449
+                "id": 461
               },
               {
                 "name": "GParted",
                 "desc": "\n\n跨平台开源分区工具，支持EXT4/XFS/Btrfs/NTFS/FAT32，可通过Live CD处理被锁定分区。",
                 "icon": "ODF.PkPmXqQ1mAfpsRDZcW0XQQ",
                 "url": "https://gparted.org/",
-                "id": 450
+                "id": 462
               },
               {
                 "name": "EaseUS Partition Master",
-                "desc": "易我分区大师\n\n支持调整/合并分区、磁盘克隆、分区恢复，兼容HDD/SSD/USB外接硬盘。",
+                "desc": "\n\n支持调整/合并分区、磁盘克隆、分区恢复，兼容HDD/SSD/USB外接硬盘。",
                 "icon": "ODF.vUM95OXL92wNdHSel_Jx2Q",
                 "url": "https://www.easeus.com/partition-manager/",
-                "id": 451
+                "id": 463
               },
               {
                 "name": "Paragon Partition Manager",
                 "desc": "\n\n支持调整/移动/合并/拆分分区，具备Hot Resize在线调整分区技术，提供社区版。",
                 "icon": "ODF.__AnbT1-VkiOmcu8zf9LAA",
                 "url": "https://www.paragon-software.com/",
-                "id": 452
+                "id": 464
               },
               {
                 "name": "NIUBI Partition Editor",
                 "desc": "\n\n家庭用户免费，支持调整/扩展/移动/合并分区、磁盘克隆、MBR/GPT转换、坏道扫描。",
                 "icon": "ODF.rpm2KVasVAzwHBPmauI1SQ",
                 "url": "https://www.partition-editor.com/",
-                "id": 453
+                "id": 465
               },
               {
                 "name": "Macrorit Partition Expert",
                 "desc": "\n\n免费版支持扩展/创建/格式化分区，兼容MBR/GPT，具备取消与回滚数据保护。",
                 "icon": "ODF.ICRDsJczsZX_iCB6BRqEpg",
                 "url": "https://macrorit.com/",
-                "id": 454
+                "id": 466
               },
               {
                 "name": "TestDisk",
                 "desc": "\n\n开源免费数据恢复工具，可恢复丢失分区、修复无法启动磁盘，支持多种文件系统。",
                 "icon": "ODF.DIW8dSPrLkMCrT-lXi_lVQ",
                 "url": "https://www.cgsecurity.org/wiki/TestDisk",
-                "id": 455
+                "id": 467
               },
               {
                 "name": "R-Studio",
-                "desc": "专业级数据恢复工具，支持Windows/Mac/Linux，可从硬盘、RAID和闪存恢复数据。",
+                "desc": "\n\n专业级数据恢复工具，支持Windows/Mac/Linux，可从硬盘、RAID和闪存恢复数据。",
                 "icon": "ODF.kQiENg6mOCXajCxN5Yy5mA",
                 "url": "https://www.r-studio.com/",
-                "id": 456
+                "id": 468
               },
               {
                 "name": "数据恢复精灵",
                 "desc": "\n\n基于DiskGenius内核，支持恢复丢失分区、已删除文件及损坏分区中的文件。",
                 "icon": "ODF.qkctlhXxSeiNh6UuoCNasQ",
                 "url": "https://www.eassos.cn/",
-                "id": 457
+                "id": 469
               }
             ],
             "icon": "",
-            "id": 446
+            "id": 458
+          },
+          {
+            "title": "解压工具",
+            "nav": [
+              {
+                "name": "7-Zip",
+                "desc": "\n\n一款拥有极高压缩比的开源压缩软件，支持 7z、ZIP、RAR 等多种格式，基于 GNU LGPL 许可协议发布，无广告且完全免费。",
+                "icon": "ODF.tW1DZ4ND3pOb43W0A2d2fQ",
+                "url": "https://www.7-zip.org/",
+                "id": 471
+              },
+              {
+                "name": "Bandizip",
+                "desc": "\n\n韩国 Bandisoft 出品的极速压缩工具，多核优化解压速度快，支持编码自动识别避免中文乱码，免费版有广告，付费专业版无广告并支持 SFTP/FTP 直连。",
+                "icon": "ODF.9I-QWaJY5qMTv_wY9Gg41g",
+                "url": "https://www.bandisoft.com/bandizip/",
+                "id": 472
+              },
+              {
+                "name": "WinRAR",
+                "desc": "\n\n全球最流行的经典压缩软件，RAR 格式开创者，支持 AES-256 加密、分卷压缩和独家文件修复技术，企业级文件安全传输首选。",
+                "icon": "ODF.-TDRfk42MA93W9NvUx45Bw",
+                "url": "https://www.win-rar.com/",
+                "id": 473
+              },
+              {
+                "name": "PeaZip",
+                "desc": "\n\n跨平台免费开源压缩工具，支持 Windows/macOS/Linux，兼容 200+ 格式，内置文件校验、哈希计算和双栏文件管理器，无广告无遥测。",
+                "icon": "ODF.VkPav48B4lqllzCFjH_5Zg",
+                "url": "https://peazip.github.io/",
+                "id": 474
+              },
+              {
+                "name": "WinZip",
+                "desc": "\n\n老牌商业压缩软件，集成 Dropbox/Google Drive 等云盘，支持 PDF 转换、文件加密和批量处理，主打商务文件分发与云协作场景。",
+                "icon": "ODF.rGdLBIyqCSxy4QST9jsz1g",
+                "url": "https://www.winzip.com/",
+                "id": 475
+              },
+              {
+                "name": "NanaZip",
+                "desc": "\n\n基于 7-Zip 开发的现代化 Windows 压缩工具，适配 Win11 右键菜单和深色模式，继承 7-Zip 全部功能，完全开源无广告。",
+                "icon": "ODF.wx7U65hVy-7lUuKmchg6RA",
+                "url": "https://nanazip.org/",
+                "id": 476
+              },
+              {
+                "name": "B1 Free Archiver",
+                "desc": "\n\n免费多平台通用压缩工具，支持 Windows/Linux/Mac/Android，界面简洁友好，支持近 40 种格式，个人和商业用途均完全免费。",
+                "icon": "ODF.b5HAO59nJgpHcsO-k5dLmA",
+                "url": "https://b1.org/",
+                "id": 477
+              },
+              {
+                "name": "The Unarchiver",
+                "desc": "\n\nmacOS 平台经典免费解压工具，深度集成 Finder，支持 RAR、7z、StuffIt 等几乎所有主流及老旧格式，具备强大的编码检测能力，有效解决中文乱码问题。",
+                "icon": "ODF.Oopju7iRi78TknUgVFOpyw",
+                "url": "https://theunarchiver.com/",
+                "id": 478
+              },
+              {
+                "name": "Keka",
+                "desc": "\n\nmacOS 平台轻量级压缩/解压工具，支持右键菜单快捷操作，可创建 7z、ZIP、TAR 等多种格式，界面简洁、操作直观。",
+                "icon": "ODF.nBZIS7ITb-ja7-67ru9Yhw",
+                "url": "https://www.keka.io/",
+                "id": 479
+              },
+              {
+                "name": "BetterZip",
+                "desc": "\n\nMac 平台专业级解压缩工具，支持 30 多种格式，可在不解压的情况下预览压缩包内容，内置密码管理器和 AES-256 加密功能。",
+                "icon": "ODF.d7rYaFDosJUJRypyl6zQ8Q",
+                "url": "https://macitbetter.com/",
+                "id": 480
+              },
+              {
+                "name": "IZArc",
+                "desc": "\n\nWindows 平台免费解压缩软件，支持 50 多种存档格式和 CD/DVD 镜像，内置 256 位 AES 加密，支持 40 多种语言，个人和商业用途均免费。",
+                "icon": "ODF.TZAQb88mkxFOkFSc0xirEw",
+                "url": "https://www.izarc.org/",
+                "id": 481
+              },
+              {
+                "name": "360压缩",
+                "desc": "\n\n360 安全中心推出的免费压缩软件，支持 rar、zip、7z、iso 等 42 种压缩格式，内置云安全引擎可检测木马，永久免费。",
+                "icon": "ODF.KZGKer0-CnZ1vvRFcCtvcg",
+                "url": "https://yasuo.360.cn/",
+                "id": 482
+              }
+            ],
+            "icon": "",
+            "id": 470
+          },
+          {
+            "title": "系统制作",
+            "nav": [
+              {
+                "name": "Ventoy",
+                "desc": "开源多合一 U 盘启动工具，直接将 ISO/WIM/IMG 等镜像复制到 U 盘即可启动，支持 BIOS/UEFI 和多个系统共存，无需反复格式化。",
+                "icon": "",
+                "url": "https://www.ventoy.net/cn/index.html",
+                "id": 484
+              },
+              {
+                "name": "Rufus",
+                "desc": "Windows 平台轻量开源 USB 启动盘制作工具，支持 BIOS/UEFI、GPT/MBR，可制作 Windows/Linux 安装盘，速度快且免安装。",
+                "icon": "",
+                "url": "https://rufus.ie/zh/",
+                "id": 485
+              },
+              {
+                "name": "balenaEtcher",
+                "desc": "跨平台开源镜像写入工具，支持 Windows/macOS/Linux，界面简洁，写入后自动校验，适合烧录树莓派和 Linux 镜像。",
+                "icon": "",
+                "url": "https://etcher.balena.io/",
+                "id": 486
+              },
+              {
+                "name": "UNetbootin",
+                "desc": "跨平台开源启动 U 盘制作工具，支持多种 Linux 发行版和自定义 ISO，可直接下载镜像并写入。",
+                "icon": "",
+                "url": "https://unetbootin.github.io/",
+                "id": 487
+              },
+              {
+                "name": "YUMI",
+                "desc": "多系统启动 U 盘制作工具，支持 Linux、Windows、杀毒救援工具等，可在一个 U 盘中添加多个系统。",
+                "icon": "",
+                "url": "https://www.pendrivelinux.com/yumi-multiboot-usb-creator/",
+                "id": 488
+              },
+
+              {
+                "name": "WinToUSB",
+                "desc": "将 Windows 系统安装到 USB 移动硬盘或 U 盘，制作 Windows To Go，支持 WinPE 和系统迁移。",
+                "icon": "",
+                "url": "https://www.easyuefi.com/wintousb/",
+                "id": 490
+              },
+              {
+                "name": "WoeUSB",
+                "desc": "Linux 下制作 Windows 安装 U 盘的开源工具，支持命令行和图形界面，适合在 Linux 环境中创建 Windows 启动盘。",
+                "icon": "",
+                "url": "https://github.com/WoeUSB/WoeUSB",
+                "id": 491
+              },
+              {
+                "name": "Fedora Media Writer",
+                "desc": "Fedora 官方启动盘制作工具，支持 Fedora 及其他 Linux ISO，跨平台，操作简单。",
+                "icon": "ODF.tzPG1frW8ajrDdlajyAzNA",
+                "url": "https://github.com/FedoraQt/MediaWriter",
+                "id": 492
+              },
+              {
+                "name": "Raspberry Pi Imager",
+                "desc": "树莓派官方镜像烧录工具，支持树莓派 OS 和其他系统镜像，可提前配置 Wi-Fi、SSH 等。",
+                "icon": "ODF.vuTujbzBsl4diSbqF6BD8Q",
+                "url": "https://www.raspberrypi.com/software/",
+                "id": 493
+              },
+              {
+                "name": "Windows Media Creation Tool",
+                "desc": "微软官方 Windows 安装介质制作工具，可下载并制作 Windows 10/11 安装 U 盘或 ISO。",
+                "icon": "ODF.lMFM_YO3i4sftI8wgMkxSw",
+                "url": "https://www.microsoft.com/software-download/windows11",
+                "id": 494
+              },
+
+              {
+                "name": "微PE",
+                "desc": "\n\n国产纯净 PE 维护盘制作工具，无广告无捆绑，支持 UEFI/BIOS 启动，常用于系统安装与故障修复。",
+                "icon": "ODF.gh7HNxtHWtDDPhzWmuphrQ",
+                "url": "https://www.wepe.com.cn/",
+                "id": 502
+              },
+              {
+                "name": "FirPE",
+                "desc": "\n\n国产新兴 PE 工具箱，界面现代，支持 UEFI/BIOS，纯净无广告，适合系统安装与维护。",
+                "icon": "ODF.1V5IJCX08KPY4aGbpkHzQQ",
+                "url": "https://firpe.cn/",
+                "id": 504
+              },
+              {
+                "name": "HotPE",
+                "desc": "\n\n开源免费的 PE 维护盘，支持 Windows 11 内核，集成常用工具，可自定义插件和驱动。",
+                "icon": "ODF.bI1NhvTiOFV_0HjKG8t3IA",
+                "url": "https://www.hotpe.top/",
+                "id": 505
+              },
+              {
+                "name": "Edgeless",
+                "desc": "\n\n基于 WinPE 的国产开源维护盘，支持插件扩展，适合系统安装、数据恢复和硬件检测。",
+                "icon": "ODF.JiMcHEo5RGMagzaL7tmOSg",
+                "url": "https://home.edgeless.top/",
+                "id": 506
+              }, 
+              {
+                "name": "NTLite",
+                "desc": "\n\nWindows 镜像定制与精简工具，可集成驱动、更新和组件，制作定制化 Windows 安装镜像。",
+                "icon": "ODF.G5jCKI2kBN4ydhlYL31hlA",
+                "url": "https://www.ntlite.com/",
+                "id": 516
+              },
+              {
+                "name": "Dism++",
+                "desc": "\n\nWindows 系统镜像管理与优化工具，支持 DISM 图形化操作、系统备份还原和镜像制作。",
+                "icon": "ODF.BzfHXvSfDkHk6O1c6tXQ7A",
+                "url": "https://github.com/Chuyu-Team/Dism-Multi-language",
+                "id": 518
+              }
+            ],
+            "icon": "",
+            "id": 483
           }
         ],
         "icon": "IconBanner",
