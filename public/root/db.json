@@ -3433,7 +3433,7 @@
               },
               {
                 "name": "Windows Media Creation Tool",
-                "desc": "微软官方 Windows 安装介质制作工具，可下载并制作 Windows 10/11 安装 U 盘或 ISO。",
+                "desc": "\n\n微软官方 Windows 安装介质制作工具，可下载并制作 Windows 10/11 安装 U 盘或 ISO。",
                 "icon": "ODF.lMFM_YO3i4sftI8wgMkxSw",
                 "url": "https://www.microsoft.com/software-download/windows11",
                 "id": 494
