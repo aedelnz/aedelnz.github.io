@@ -3369,53 +3369,31 @@
             "nav": [
               {
                 "name": "Ventoy",
-                "desc": "开源多合一 U 盘启动工具，直接将 ISO/WIM/IMG 等镜像复制到 U 盘即可启动，支持 BIOS/UEFI 和多个系统共存，无需反复格式化。",
-                "icon": "",
+                "desc": "新一代多系统启动U盘解决方案",
+                "icon": "ODF.QXjK2g2gxUhU9mbYbPDb-A",
                 "url": "https://www.ventoy.net/cn/index.html",
                 "id": 484
               },
               {
                 "name": "Rufus",
-                "desc": "Windows 平台轻量开源 USB 启动盘制作工具，支持 BIOS/UEFI、GPT/MBR，可制作 Windows/Linux 安装盘，速度快且免安装。",
-                "icon": "",
+                "desc": "轻松创建 USB 启动盘",
+                "icon": "ODF.MGCYQ-kaBJIOsCFW4IJ_Dw",
                 "url": "https://rufus.ie/zh/",
                 "id": 485
               },
               {
                 "name": "balenaEtcher",
-                "desc": "跨平台开源镜像写入工具，支持 Windows/macOS/Linux，界面简洁，写入后自动校验，适合烧录树莓派和 Linux 镜像。",
-                "icon": "",
+                "desc": "安全且轻松地将操作系统镜像刷入SD卡和U盘。",
+                "icon": "ODF.aF66vf4WK6vkmaxFilEBfg",
                 "url": "https://etcher.balena.io/",
                 "id": 486
               },
               {
                 "name": "UNetbootin",
-                "desc": "跨平台开源启动 U 盘制作工具，支持多种 Linux 发行版和自定义 ISO，可直接下载镜像并写入。",
-                "icon": "",
+                "desc": "UNetbootin 让你创建 Ubuntu 或者其他 Linux 发行版的可引导 Live U 盘，而无需烧录 CD。",
+                "icon": "ODF.ztbHkCCudt-9T6RDrAOJXQ",
                 "url": "https://unetbootin.github.io/",
                 "id": 487
-              },
-              {
-                "name": "YUMI",
-                "desc": "多系统启动 U 盘制作工具，支持 Linux、Windows、杀毒救援工具等，可在一个 U 盘中添加多个系统。",
-                "icon": "",
-                "url": "https://www.pendrivelinux.com/yumi-multiboot-usb-creator/",
-                "id": 488
-              },
-
-              {
-                "name": "WinToUSB",
-                "desc": "将 Windows 系统安装到 USB 移动硬盘或 U 盘，制作 Windows To Go，支持 WinPE 和系统迁移。",
-                "icon": "",
-                "url": "https://www.easyuefi.com/wintousb/",
-                "id": 490
-              },
-              {
-                "name": "WoeUSB",
-                "desc": "Linux 下制作 Windows 安装 U 盘的开源工具，支持命令行和图形界面，适合在 Linux 环境中创建 Windows 启动盘。",
-                "icon": "",
-                "url": "https://github.com/WoeUSB/WoeUSB",
-                "id": 491
               },
               {
                 "name": "Fedora Media Writer",
@@ -3425,14 +3403,14 @@
                 "id": 492
               },
               {
-                "name": "Raspberry Pi Imager",
+                "name": "树莓派",
                 "desc": "树莓派官方镜像烧录工具，支持树莓派 OS 和其他系统镜像，可提前配置 Wi-Fi、SSH 等。",
                 "icon": "ODF.vuTujbzBsl4diSbqF6BD8Q",
                 "url": "https://www.raspberrypi.com/software/",
                 "id": 493
               },
               {
-                "name": "Windows Media Creation Tool",
+                "name": "下载 Windows 11",
                 "desc": "\n\n微软官方 Windows 安装介质制作工具，可下载并制作 Windows 10/11 安装 U 盘或 ISO。",
                 "icon": "ODF.lMFM_YO3i4sftI8wgMkxSw",
                 "url": "https://www.microsoft.com/software-download/windows11",

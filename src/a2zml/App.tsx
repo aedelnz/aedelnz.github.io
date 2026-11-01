@@ -45,7 +45,7 @@ const App = () => {
                         <div style={{ width: '100%' }}>
                             <Searchs data={data ?? []} />
                         </div>
-                        {loading && <Spin size="large" />}
+                        {loading && <Spin size="large" style={{ display: 'block', margin: '0 auto' }} />}
                         {error && <Typography.Paragraph type="danger">导航数据加载失败：{error.message}</Typography.Paragraph>}
                         {data && selectedKey && <Contents data={data} selectedKey={selectedKey} />}
                     </div>
