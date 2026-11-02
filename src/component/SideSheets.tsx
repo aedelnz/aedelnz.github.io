@@ -9,6 +9,7 @@ interface SideSheetsProps {
 const SideSheets = ({ sideSheet, change }: SideSheetsProps) => {
     return (
         <SideSheet
+            placement='left'
             style={{ width: "auto" }}
             bodyStyle={{ padding: 0 }}
             visible={sideSheet}
