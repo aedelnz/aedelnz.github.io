@@ -35,8 +35,3 @@ export function useToast(): ToastApi {
     }
   }, [])
 }
-
-//const toast = useToast()
-//toast.info('操作成功提示')          // 默认：销毁其他，只显示这一条
-// 特殊场景想叠加多条时
-//toast.info('第二条', { clear: false })
